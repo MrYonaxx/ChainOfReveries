@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d1db5c43ecd7a47bfed3f23c297697, type: 3}
+  m_Name: EnemyWitch
+  m_EditorClassIdentifier: 
+  characterFace: {fileID: 0}
+  characterName: Witch
+  characterStat:
+    hp: 2000
+    HPMax:
+      baseValue: 2000
+      finalValue: 2000
+    Attack:
+      baseValue: 1
+      finalValue: 1
+    Defense:
+      baseValue: 1
+      finalValue: 1
+    Magic:
+      baseValue: 1
+      finalValue: 1
+    MagicDefense:
+      baseValue: 1
+      finalValue: 1
+    RevengeValue:
+      baseValue: 0
+      finalValue: 0
+    KnockbackTime:
+      baseValue: 1
+      finalValue: 1
+    ReloadAmount:
+      baseValue: 50
+      finalValue: 50
+    CardBreakTime:
+      baseValue: 2
+      finalValue: 2
+    CardBreakKnockback:
+      baseValue: 1
+      finalValue: 1
+    Speed:
+      baseValue: 2
+      finalValue: 2
+    Gravity:
+      baseValue: 25
+      finalValue: 25
+    GravityMax:
+      baseValue: 50
+      finalValue: 50
+    MotionSpeed:
+      baseValue: 0.9
+      finalValue: 0.9
+    Mass:
+      baseValue: 1
+      finalValue: 1
+    ElementalResistances:
+    - baseValue: -50
+      finalValue: -0
+      element: 2
+    - baseValue: -50
+      finalValue: -0
+      element: 3
+    - baseValue: -50
+      finalValue: -0
+      element: 4
+    StatusResistances: []
+  salut: 
+  initialDeck:
+  - cardData: {fileID: 11400000, guid: 9bb2870aac4b9594c97b838817d4ffde, type: 2}
+    baseCardValue: 6
+  - cardData: {fileID: 11400000, guid: 9bb2870aac4b9594c97b838817d4ffde, type: 2}
+    baseCardValue: 2
+  - cardData: {fileID: 11400000, guid: 9bb2870aac4b9594c97b838817d4ffde, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: f9311eab0df06b9479829da3da5ca9ae, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: f9311eab0df06b9479829da3da5ca9ae, type: 2}
+    baseCardValue: 6
+  - cardData: {fileID: 11400000, guid: f9311eab0df06b9479829da3da5ca9ae, type: 2}
+    baseCardValue: 2
+  - cardData: {fileID: 11400000, guid: 2e3b7ecfeb679184a8ee485ff6885ef4, type: 2}
+    baseCardValue: 2
+  - cardData: {fileID: 11400000, guid: 2e3b7ecfeb679184a8ee485ff6885ef4, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: 2e3b7ecfeb679184a8ee485ff6885ef4, type: 2}
+    baseCardValue: 6
+  - cardData: {fileID: 11400000, guid: 9bb2870aac4b9594c97b838817d4ffde, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: f9311eab0df06b9479829da3da5ca9ae, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: 2e3b7ecfeb679184a8ee485ff6885ef4, type: 2}
+    baseCardValue: 5
+  sleightDatabase: []
+  initialEquipment: []
+  hitVoice: []
+  deadVoice: []

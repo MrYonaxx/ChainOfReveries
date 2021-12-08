@@ -1,0 +1,91 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e6079dd8a46024986b2b65e7c5e737, type: 3}
+  m_Name: Status_Gauntlets
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: statusUpdates
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[VoiceActing.StatusEffectUpdate,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 1|VoiceActing.StatusEffectUpdateOnCardPlayed, Assembly-CSharp
+    - Name: playTime
+      Entry: 3
+      Data: 20
+    - Name: playCondition
+      Entry: 5
+      Data: true
+    - Name: cardType
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|VoiceActing.StatusEffectUpdateOnEndBattle, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: statusController
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[VoiceActing.StatusEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 4|VoiceActing.StatusEffectCardBreakComponent, Assembly-CSharp
+    - Name: cardBreakComponent
+      Entry: 7
+      Data: 5|VoiceActing.CardBreakType, Assembly-CSharp
+    - Name: unbreakableType
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  statusIconSprite: {fileID: 21300000, guid: eb17d8fac5c754e41b36871baf35aeb0, type: 3}
+  statusName: Attack Bracer
+  statusDescription: Prevent attack cards to be breaked.
+  hideStatus: 0
+  statusShowLabel: 1
+  statusConditionLabel: Attacks

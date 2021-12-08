@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e6079dd8a46024986b2b65e7c5e737, type: 3}
+  m_Name: StopStatusData
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: -628959329838418786, guid: 734251cd418c42946b79b2586c648edb, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: statusUpdates
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[VoiceActing.StatusEffectUpdate,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|VoiceActing.StatusEffectUpdateTime, Assembly-CSharp
+    - Name: timeData
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: statusController
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[VoiceActing.StatusEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 3|VoiceActing.StatusEffectStop, Assembly-CSharp
+    - Name: timeStop
+      Entry: 4
+      Data: 3
+    - Name: timeDamage
+      Entry: 4
+      Data: 1
+    - Name: stunAnimation
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  statusIconSprite: {fileID: 0}
+  statusName: Stop
+  statusDescription: 
+  statusTime: {x: 3, y: 5}
+  canRefresh: 0
+  canStack: 0
+  canAddMultiple: 0
+  statusPercentageBonus: 0
+  characterStatModifier:
+    hp: 0
+    HPMax:
+      baseValue: 0
+      finalValue: 0
+    Attack:
+      baseValue: 0
+      finalValue: 0
+    Defense:
+      baseValue: 0
+      finalValue: 0
+    Magic:
+      baseValue: 0
+      finalValue: 0
+    MagicDefense:
+      baseValue: 0
+      finalValue: 0
+    ReloadAmount:
+      baseValue: 0
+      finalValue: 0
+    CardBreakTime:
+      baseValue: 0
+      finalValue: 0
+    CardBreakKnockback:
+      baseValue: 0
+      finalValue: 0
+    Speed:
+      baseValue: 0
+      finalValue: 0
+    MotionSpeed:
+      baseValue: 0
+      finalValue: 0
+    Mass:
+      baseValue: 0
+      finalValue: 0
+    KnockbackTime:
+      baseValue: 0
+      finalValue: 0
+    ElementalResistances: []
+    StatusResistances: []

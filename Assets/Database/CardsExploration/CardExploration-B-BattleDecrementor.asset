@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aaaedca360f0e340996e82e36c3b4a0, type: 3}
+  m_Name: CardExploration-B-BattleDecrementor
+  m_EditorClassIdentifier: 
+  cardSprite: {fileID: 21300000, guid: 49712d34943692d4c8f86b36419863ae, type: 3}
+  cardName: "R\xEAve ennuyeux"
+  cardDescription: "Cr\xE9er une r\xEAverie o\xF9 la valeure de vos cartes diminuent
+    de 1."
+  cardType: 0
+  explorationEvent: {fileID: 8236675884287493958, guid: 7af8913c4d5614c4a8a6cda89a05c0ad,
+    type: 3}
+  battleModifiers:
+  - label: Card -1
+    battleModifierTargets: 0
+    statusEffect: {fileID: 11400000, guid: 4ccecb0b589e6e74ea57534c266ffdc4, type: 2}
+    nb: 2

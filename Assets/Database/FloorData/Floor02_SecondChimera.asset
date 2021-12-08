@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f6320daf9054a745b2c260b43626fe6, type: 3}
+  m_Name: Floor02_SecondChimera
+  m_EditorClassIdentifier: 
+  floorName: "Deuxi\xE8me chim\xE8re"
+  floorLevel: 2
+  firstRoom: {fileID: 11400000, guid: 79edeb956aaade04cb4e43f09113c6a8, type: 2}
+  floorLayout:
+  - {fileID: 11400000, guid: 5c1353acfbfea4f428db18f8cf4116ea, type: 2}
+  - {fileID: 11400000, guid: 5c1353acfbfea4f428db18f8cf4116ea, type: 2}
+  - {fileID: 11400000, guid: 5c1353acfbfea4f428db18f8cf4116ea, type: 2}
+  - {fileID: 11400000, guid: 5c1353acfbfea4f428db18f8cf4116ea, type: 2}
+  - {fileID: 11400000, guid: 5c1353acfbfea4f428db18f8cf4116ea, type: 2}
+  - {fileID: 11400000, guid: 5c1353acfbfea4f428db18f8cf4116ea, type: 2}
+  - {fileID: 11400000, guid: 5c1353acfbfea4f428db18f8cf4116ea, type: 2}
+  - {fileID: 11400000, guid: b2546843235a6494893db3a0a9a40d85, type: 2}
+  nextLevel: {fileID: 11400000, guid: 25fc0263439d80f4eb42fa7e16f582fe, type: 2}
+  cardBanlist: []
+  cardExplorationBanlist: []
+  bgm: {fileID: 8300000, guid: d271cb68cda38ca4a9c88171df573a58, type: 3}

@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1143755e476c13b4691405d1af62e3bf, type: 3}
+  m_Name: CardEquipmentDatabase
+  m_EditorClassIdentifier: 
+  maxProbability: 2100
+  equipmentDatabase:
+  - cardEquipment: {fileID: 11400000, guid: 9c5e6d2cdec20d04380cdfe43d54b5e9, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 1925ea5f24a57444f9aa690087949025, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: f9d806330b8b52b4c8fafa8071aefc6c, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: d731e8a71fa4ab047a519b271dec6a5f, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: d27fa7c0e89503a479797fe01e9cf892, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: f65d285594aa6ee4e85af4e90f60afa1, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 272d491b4a49bc74d92d57c76c8a27d1, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 75a504ee9acef2e458606394daacd5ce, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: db293d51953081a4e8edf165dbc162c3, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: d4787e042130f2544a2e1e7a5a32a0be, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 7979a3c4544c586419249a682308e5ca, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: a257d6fb9b290a04cb5bfa9d75acff1b, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: b9f7e9038916aa74581026945bb78e0b, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: e89ed8f463f467f46a866dae20095dcc, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 49bcfe4e76eadc94289a6179c96de79c, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 9a364f419e43abf4ba509d89d7cb8e74, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 4e296eb6386fac24a904ada7c37bfddb, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 6b4ffd30656ebad4fbe5d0471699cf7b, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: b0e50474174d7ad43bbf15b571f31a70, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: c05ba778d698ba243ba3d48c9f2cfbf8, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 1119497543f62ad4086564f7bf93d4f7, type: 2}
+    probability: 100
+  pathDatabase: Assets/Database/CardsEquipment

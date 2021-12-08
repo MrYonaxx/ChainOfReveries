@@ -1,0 +1,39 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02519ca1dddceb742b46951073eda492, type: 3}
+  m_Name: CardEquipment_A_MythrilArmor
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  cardSprite: {fileID: 21300000, guid: 9d662a5ebb2546a4ab0b2b4af38eaa44, type: 3}
+  cardName: Armure de Mythril
+  cardType: 1
+  cardDescription: 'Diminue la Revenge Value de 2.
+
+    Augmente les HP de 500.'
+  statsModifier:
+  - charStat: 15
+    modifierType: 0
+    value: -2
+  - charStat: 0
+    modifierType: 0
+    value: 500
+  statusEffectPassive: {fileID: 0}
+  equipmentAction: {fileID: 0}
+  statusEffectActive: {fileID: 0}
