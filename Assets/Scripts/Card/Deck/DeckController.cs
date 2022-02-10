@@ -142,6 +142,8 @@ namespace VoiceActing
             banned.Clear();
 
             currentIndex = 0;
+            reloadCurrentLevel = 1;
+            reloadCurrentMaxLevel = 2;
 
             // Ajoute la carte reload
             if (addReload)
@@ -222,7 +224,7 @@ namespace VoiceActing
         private void MoveHandLeft()
         {
             currentIndex -= 1;
-            if(currentIndex == -1)
+            if(currentIndex <= -1)
             {
                 currentIndex = deck.Count - 1;
             }
@@ -232,7 +234,7 @@ namespace VoiceActing
         private void MoveHandRight()
         {
             currentIndex += 1;
-            if (currentIndex == deck.Count)
+            if (currentIndex >= deck.Count)
             {
                 currentIndex = 0;
             }
@@ -320,7 +322,7 @@ namespace VoiceActing
             Card res = deck[currentIndex];
             cemetery.Add(deck[currentIndex]);
             deck.RemoveAt(currentIndex);
-            if (currentIndex == deck.Count)
+            if (currentIndex >= deck.Count)
             {
                 currentIndex = 0;
             }
@@ -351,6 +353,8 @@ namespace VoiceActing
                 }
                     
             }
+            // Si on a jamais trouvé, on replace à la toute fin
+            deck.Add(card);
         }
 
 
@@ -366,7 +370,14 @@ namespace VoiceActing
         }
 
 
-
+        public void Remove(int index)
+        {
+            deck.RemoveAt(index);
+            if (index <= currentIndex)
+                currentIndex -= 1;
+            if (currentIndex < 0)
+                currentIndex = 0;
+        }
 
 
 

@@ -13,9 +13,24 @@ namespace VoiceActing
         [SerializeField]
         float maxTrackingY = 0.5f;
 
+        bool once = false;
+
 
         public override void Execute(CharacterBase character)
         {
+            if(Frame == FrameEnd)
+            {
+                if (once == false)
+                {
+                    // TP Instant
+                    Vector3 distance = (character.LockController.TargetLocked.transform.position - character.transform.position);
+                    character.CharacterMovement.Move(distance.x / Time.deltaTime, distance.y / Time.deltaTime);
+                    StartCoroutine(ResetSpeed(character));
+                    once = true;
+                }
+                return;
+            }
+
             Vector3 direction = new Vector3(character.CharacterMovement.Direction, 0, 0);
             if (character.LockController.TargetLocked != null) 
             {
@@ -38,7 +53,12 @@ namespace VoiceActing
             }
         }
 
-
+        // Set la vitesse à zéro la frame suivante pour bien faire un seul déplacement
+        private IEnumerator ResetSpeed(CharacterBase character)
+        {
+            yield return null;
+            character.CharacterMovement.SetSpeed(0, 0);
+        }
 
         public override bool ShowSecondFrame()
         {

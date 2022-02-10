@@ -20,7 +20,7 @@ namespace VoiceActing
          *               ATTRIBUTES                 *
         \* ======================================== */
         [SerializeField]
-        bool destroyAnimation = false;
+        bool destroyWithAnimation = false;
 
         #endregion
 
@@ -39,10 +39,15 @@ namespace VoiceActing
         \* ======================================== */
         public void Destroy()
         {
-            if (destroyAnimation == true)
+            if (destroyWithAnimation == true)
                 GetComponent<Animator>().SetTrigger("Disappear");
             else
                 Destroy(this.gameObject);
+        }
+
+        public void DestroyObject()
+        {
+            Destroy(this.gameObject);
         }
 
         #endregion

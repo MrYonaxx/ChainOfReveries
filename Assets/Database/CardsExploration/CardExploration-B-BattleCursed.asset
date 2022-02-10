@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aaaedca360f0e340996e82e36c3b4a0, type: 3}
   m_Name: CardExploration-B-BattleCursed
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 2eadd056bb216bd41a559793748bc5a1, type: 3}
+  cardSprite: {fileID: 21300000, guid: 585c5d48f87da1a46ac85ea25e2b78a7, type: 3}
   cardName: "R\xEAve maudit"
   cardDescription: "Cr\xE9er une r\xEAverie o\xF9 il est impossible de voir le jeu
     adverse."
   cardType: 0
-  explorationEvent: {fileID: 8236675884287493958, guid: 7af8913c4d5614c4a8a6cda89a05c0ad,
+  explorationEvent: {fileID: 3513814409438483324, guid: ecaf036fbd3e36f43a7909fde1b2fa4d,
     type: 3}
   battleModifiers:
-  - label: Card +1
+  - label: Darkness
     battleModifierTargets: 0
-    statusEffect: {fileID: 11400000, guid: ebf1530a8785bd54da678ebd3f1014af, type: 2}
-    nb: 2
+    statusEffect: {fileID: 11400000, guid: 66bc06af869ab9945b794ec95fec2061, type: 2}
+    nb: 1

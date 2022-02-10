@@ -21,6 +21,11 @@ namespace VoiceActing
         [SerializeField]
         Feedbacks.GenericLerp lerpCombo = null;
 
+        [SerializeField]
+        CanvasGroup canvasCounter = null;
+        [SerializeField]
+        Feedbacks.GenericLerp lerpCounter = null;
+
         int comboCount = 0;
         CharacterBase characterComboed = null;
 
@@ -52,6 +57,12 @@ namespace VoiceActing
                 comboCount += 1;
                 if (comboCount >= 2)
                     DrawCombo();
+            }
+
+            // Counter hit
+            if(character.OldState.ID == CharacterStateID.Acting && comboCount <= 1)
+            {
+                lerpCounter.StartLerp(1, 1.5f, (start, t) => { canvasCounter.alpha = Mathf.Lerp(start, 0, t); });
             }
 
         }

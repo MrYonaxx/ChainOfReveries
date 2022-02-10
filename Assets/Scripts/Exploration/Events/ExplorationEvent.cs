@@ -20,34 +20,42 @@ namespace VoiceActing
         // On file une ref à exploration manager pour pouvoir a peu près tout faire
         public virtual void CreateEvent(ExplorationManager manager)
         {
-            explorationManager = manager;
+            explorationManager = manager;          
         }
 
         // L'event démarre
         public virtual void StartEvent()
         {
             ShowBackground(true);
+            DestroyPreviousRoom();
             EndEvent();
         }
 
         // L'event est fini on peut choisir des cartes
         public virtual void EndEvent()
         {
+            ShowBackground(false);
             explorationManager.CreateExplorationMenu();
         }
 
         // On a choisi un prochain event, on peut donc détruire l'event en cours
         public virtual void DestroyEvent()
         {
-            ShowBackground(false);
             StartCoroutine(AutoDestroyCoroutine());
         }
 
 
         protected void ShowBackground(bool b)
         {
-            animatorBackground.gameObject.SetActive(true);
+            if(b)
+                animatorBackground.gameObject.SetActive(true);
             animatorBackground.SetBool("Appear", b);
+        }
+
+        // Dis à exploration manager de détruire la room précédente, pas très smooth de le mettre là mais tant pis
+        protected void DestroyPreviousRoom()
+        {
+            explorationManager.DestroyPreviousRoom();
         }
 
         private IEnumerator AutoDestroyCoroutine()

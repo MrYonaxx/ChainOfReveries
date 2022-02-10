@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: EnemyData_Wolf
   m_EditorClassIdentifier: 
   characterFace: {fileID: 0}
-  characterName: 
+  characterName: Wolf
+  characterDescription: Wolves do not pose a serious threat. As long as you use a
+    card with a good value to start your combo, they will not be able to attack.
   characterStat:
     hp: 1000
     HPMax:
@@ -81,5 +83,6 @@ MonoBehaviour:
     baseCardValue: 7
   sleightDatabase: []
   initialEquipment: []
-  hitVoice: []
-  deadVoice: []
+  loreDescription: Monsters are used to create fear in the Reverie. Thanks to that,
+    people have developed a strong sense of solidarity in their hearts. This sentiment
+    is used to maintain the peace.

@@ -12,6 +12,8 @@ using Sirenix.OdinInspector;
 
 namespace VoiceActing
 {
+
+    // Ce truc est un échec tant pis
     public class CardBreakDrawer: MonoBehaviour
     {
         #region Attributes 
@@ -51,8 +53,8 @@ namespace VoiceActing
         CardController cardControllerPrefab = null;
 
         int indexCardControllers = 0;
-        List<CardController> cardControllers = new List<CardController>();
-        List<CardController> cardControllersActive = new List<CardController>();
+        public Queue<CardController> cardControllers = new Queue<CardController>();
+        public List<CardController> cardControllersActive = new List<CardController>();
 
         #endregion
 
@@ -74,8 +76,9 @@ namespace VoiceActing
         {
             for (int i = 0; i < maxNumberOfCardController; i++)
             {
-                cardControllers.Add(Instantiate(cardControllerPrefab, cardCenter));
-                cardControllers[i].HideCard();
+                CardController card = Instantiate(cardControllerPrefab, cardCenter);
+                cardControllers.Enqueue(card);
+                card.HideCard();
             }
             cardBreakManager.OnCardPlayed += CallbackPlayCard;
             cardBreakManager.OnCardBreak += CallbackCardBreak;
@@ -94,14 +97,25 @@ namespace VoiceActing
         }
 
 
+
+
+
+
         public void CallbackPlayCard(CharacterBase user, List<Card> cards)
         {
             DrawCardsPlayed(user.tag, cards);
         }
 
-        public void CallbackCardIneffective(CharacterBase user, List<Card> cards)
+        public void CallbackCardIneffective(CharacterBase currentCharacter, List<Card> currentCards, CharacterBase user, List<Card> cards)
         {
             DrawCardsIneffective(cards, user.tag);
+
+            // On check l'intégrité des cartes actuelles
+            int count = cardControllersActive.Count - currentCards.Count;
+            for (int i = 0; i < count; i++)
+            {
+                StartCoroutine(DrawCardIneffectiveCoroutine(cardControllersActive[cardControllersActive.Count-i-1], currentCharacter.tag));
+            }
         }
 
         public void CallbackCardBreakDraw(CharacterBase characterBreaked, List<Card> cardsBreaked, CharacterBase user, List<Card> cards)
@@ -129,24 +143,29 @@ namespace VoiceActing
 
 
 
+
         public void HideCard()
         {
             for (int i = 0; i < cardControllersActive.Count; i++)
             {
                 cardControllersActive[i].Disappear();
+                cardControllers.Enqueue(cardControllersActive[i]);
             }
             cardControllersActive.Clear();
         }
 
 
 
-
+        // ===========================================
+        //   C A R D   P L A Y E D
+        // ===========================================
 
         public void DrawCardsPlayed(string tag, List<Card> cards)
         {
             Vector2 offset = Vector2.zero;
             RectTransform origin = null;
 
+            // On calcule l'origin de la première carte
             if(cards.Count == 1)
             {
                 if (tag == "Player")
@@ -154,7 +173,7 @@ namespace VoiceActing
                 else if (tag == "Enemy")
                     origin = cardPosEnemy;
             }
-            else
+            else // Si on a une liste des cartes ça provient d'une sleight
             {
                 if (tag == "Player")
                     origin = sleightPlayer.SleightTransform[0];
@@ -162,46 +181,53 @@ namespace VoiceActing
                     origin = sleightEnemy.SleightTransform[0];
             }
 
-            for(int i = 0; i < cards.Count; i++)
+            // On joue les cartes
+            for(int i = cards.Count-1; i >= 0; i--)
             {
                 DrawCardPlayed(tag, cards[i], offset, origin);
-                cardControllersActive.Add(cardControllers[indexCardControllers]);
+                //cardControllersActive.Add(cardControllers.Dequeue());
+
                 offset += cardsOffset;
 
-                if(i<cards.Count-1)
-                {
-                    if (tag == "Player")
-                        origin = sleightPlayer.SleightTransform[i + 1];
-                    else if (tag == "Enemy")
-                        origin = sleightEnemy.SleightTransform[i + 1];
-                }
+                if (tag == "Player")
+                    origin = sleightPlayer.SleightTransform[(cards.Count - i)-1];
+                else if (tag == "Enemy")
+                    origin = sleightEnemy.SleightTransform[(cards.Count - i) - 1];
             }
         }
 
         public void DrawCardPlayed(string tag, Card card, Vector2 offset, RectTransform origin)
         {
-            indexCardControllers += 1;
-            if (indexCardControllers >= cardControllers.Count)
-                indexCardControllers = 0;
+            // On prend une carte
+            cardControllersActive.Add(cardControllers.Dequeue());
+            int index = cardControllersActive.Count - 1;
 
-            cardControllers[indexCardControllers].gameObject.name = card.CardData.name;
-            cardControllers[indexCardControllers].transform.position = origin.position;
+            cardControllersActive[index].gameObject.name = card.CardData.name;
+            cardControllersActive[index].transform.position = origin.position;
 
-            cardControllers[indexCardControllers].DrawCard(card, cardType);
-            cardControllers[indexCardControllers].MoveCard(cardCenter, 8, offset);
-            cardControllers[indexCardControllers].transform.SetSiblingIndex(maxNumberOfCardController);
+            cardControllersActive[index].DrawCard(card, cardType);
+            cardControllersActive[index].MoveCard(cardCenter, 8, offset);
+            cardControllersActive[index].transform.SetSiblingIndex(maxNumberOfCardController);
+
         }
 
 
 
+
+        // ===========================================
+        //   C A R D   B R E A K 
+        // ===========================================
 
         public void DrawCardBreaked(string tag)
         {
             for (int i = 0; i < cardControllersActive.Count; i++)
             {
-                StartCoroutine(CardBreakCoroutine(cardControllersActive[i], tag));
+                StartCoroutine(CardBreakCoroutine(cardControllersActive[i], tag));       
+                cardControllers.Enqueue(cardControllersActive[i]);
             }
+            cardControllersActive.Clear();
         }
+
         private IEnumerator CardBreakCoroutine(CardController card, string tag)
         {
             yield return new WaitForSeconds(0.05f);
@@ -213,6 +239,11 @@ namespace VoiceActing
 
         public void AnimationCardBreak(CharacterBase characterBreaked)
         {
+            if(characterBreaked == null)
+            {
+                Debug.Log("Allo?");
+                return;
+            }
             BattleFeedbackManager.Instance.RippleScreen(characterBreaked.transform.position.x, characterBreaked.transform.position.y);
 
             BattleFeedbackManager.Instance.SetBattleMotionSpeed(0, 0.22f);
@@ -235,8 +266,9 @@ namespace VoiceActing
 
 
 
-
-
+        // ===========================================
+        //   C A R D   I N E F F E C T I V E
+        // ===========================================
 
         public void DrawCardsIneffective(List<Card> cards, string tag)
         {
@@ -248,19 +280,19 @@ namespace VoiceActing
 
         public void DrawCardsIneffective(Card card, string tag)
         {
-            indexCardControllers += 1;
-            if (indexCardControllers >= cardControllers.Count)
-                indexCardControllers = 0;
-
+            // On prend une carte
+            CardController cardController = cardControllers.Dequeue();
 
             if (tag == "Player")
-                cardControllers[indexCardControllers].transform.position = cardPosPlayer.position;
+                cardController.transform.position = cardPosPlayer.position;
             else if (tag == "Enemy")
-                cardControllers[indexCardControllers].transform.position = cardPosEnemy.position;
+                cardController.transform.position = cardPosEnemy.position;
 
-            cardControllers[indexCardControllers].DrawCard(card, cardType);
-            cardControllers[indexCardControllers].MoveCard(cardCenter, 8);
-            StartCoroutine(DrawCardIneffectiveCoroutine(cardControllers[indexCardControllers], tag));
+            cardController.DrawCard(card, cardType);
+            cardController.MoveCard(cardCenter, 8);
+            StartCoroutine(DrawCardIneffectiveCoroutine(cardController, tag));
+
+            cardControllers.Enqueue(cardController);
         }
 
         private IEnumerator DrawCardIneffectiveCoroutine(CardController card, string tag)

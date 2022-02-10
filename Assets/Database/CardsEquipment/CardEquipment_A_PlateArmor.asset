@@ -21,7 +21,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  cardSprite: {fileID: 21300000, guid: 11b19518fc2aa454b9f3ce8973ba5509, type: 3}
+  cardSprite: {fileID: 21300000, guid: 3a4d039acc2220143972ba8c4a1f7a40, type: 3}
   cardName: PlateArmor
   cardType: 1
   cardDescription: '
@@ -29,4 +29,5 @@ MonoBehaviour:
 '
   statsModifier: []
   statusEffectPassive: {fileID: 0}
+  equipmentAction: {fileID: 0}
   statusEffectActive: {fileID: 0}

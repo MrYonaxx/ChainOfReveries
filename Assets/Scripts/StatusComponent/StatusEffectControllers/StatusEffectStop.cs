@@ -108,10 +108,10 @@ namespace VoiceActing
                     time -= Time.deltaTime;
                     character.SetCharacterMotionSpeed(0, 1);
                     character.CharacterMovement.SetSpeed(0, 0);
-                    character.CanPlay(true);
                 }
                 else
                 {
+                    character.CanPlay(true);
                     character.SetCharacterMotionSpeed(0, 0.01f);
                     character.CharacterKnockback.RemoveKnockbackCondition(conditionStop);
                     if (conditionStop.GetDamageRegisterLength() != 0)

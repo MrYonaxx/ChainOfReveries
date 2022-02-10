@@ -55,9 +55,14 @@ MonoBehaviour:
   cardPercentage:
     percentDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     debugDamage: {x: 100, y: 200}
+    maxHP: 0
   element:
     element: 0
     ignoreElementalStat: 0
+  damage:
+    baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
 --- !u!1 &382958743688636930
 GameObject:
   m_ObjectHideFlags: 0
@@ -5192,6 +5197,7 @@ MonoBehaviour:
   frame: 80
   frameEnd: 0
   fx: {fileID: 6206275155082899838}
+  appear: 1
 --- !u!114 &8630151085131517972
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5677,9 +5683,14 @@ MonoBehaviour:
   cardPercentage:
     percentDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     debugDamage: {x: 100, y: 200}
+    maxHP: 0
   element:
     element: 0
     ignoreElementalStat: 0
+  damage:
+    baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
 --- !u!1 &6206275155082899838
 GameObject:
   m_ObjectHideFlags: 0
@@ -6158,7 +6169,7 @@ MonoBehaviour:
   knockbackDurationMultiplier: 1
   knockbackX: 1
   knockbackZ: 10
-  revengeValue: 0
+  revengeValue: 3
   knockbackInvulnerability: 0.1
 --- !u!114 &4607447225039643303
 MonoBehaviour:
@@ -6184,7 +6195,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dad7e80ac0cdbd428606f8c14ac4bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dezoom: 0
+  zoomValue:
+  - -0.5
+  - -0.5
+  - 0
+  zoomTime:
+  - 6
+  - 12
+  - 6
+  smoothZoom: 0
 --- !u!1 &8270882896056627410
 GameObject:
   m_ObjectHideFlags: 0

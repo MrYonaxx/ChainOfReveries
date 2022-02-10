@@ -208,6 +208,7 @@ MonoBehaviour:
   knockbackDurationMultiplier: 0
   knockbackX: 0
   knockbackZ: 0
+  revengeValue: 1
   knockbackInvulnerability: 0.1
 --- !u!1 &4388082830208477171
 GameObject:
@@ -300,6 +301,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5275501194724317257}
   - component: {fileID: 8844804159753097120}
+  - component: {fileID: 7966104496513286874}
   m_Layer: 9
   m_Name: Lia_SleightM_Stopga
   m_TagString: Untagged
@@ -342,6 +344,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &7966104496513286874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4953855151383357891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9f669e28a9101a49bbb02ed4a4afad7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5842096757366747167
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,6 +409,8 @@ MonoBehaviour:
   attackAnimation: {fileID: 7400000, guid: 72783ae53eaa46f498aa3520b5d4c7f7, type: 2}
   characterAnimationData: {fileID: 4670453683040411876}
   linkToCharacter: 1
+  fixToGround: 0
+  subActionCardBreakable: 0
   atkControllers:
   - {fileID: 4733904636063077261}
 --- !u!1 &5922107211310395353
@@ -536,6 +552,10 @@ MonoBehaviour:
   element:
     element: 0
     ignoreElementalStat: 0
+  damage:
+    baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
 --- !u!1 &6664025316910145470
 GameObject:
   m_ObjectHideFlags: 0

@@ -107,6 +107,7 @@ namespace VoiceActing
         float timeMoveCard = 0f;
         bool active = false;
         ExplorationEvent explorationEvent;
+        ExplorationEvent previousExplorationEvent;
 
 
         #endregion
@@ -146,15 +147,17 @@ namespace VoiceActing
             player.SetState(stateExploration);
             inputController.SetControllable(this);
 
+            // On change d'étage
             if (runData.Room >= runData.LevelLayout.Count)
             {
                 // End Level
                 floorID = 0;
                 runData.NextZone();
                 AutoCreateRoom(runData.FloorLayout.FirstRoom);
+                cardController.gameObject.SetActive(false);
                 return;
             }    
-            else if (runData.LevelLayout[runData.Room].ExplorationEvent != null)
+            else if (runData.LevelLayout[runData.Room].ExplorationEvent != null) // On a une salle imposé, donc on la créer
             {
                 // Create Room
                 AutoCreateRoom(runData.LevelLayout[runData.Room]);
@@ -205,6 +208,7 @@ namespace VoiceActing
 
         public void UpdateControl(InputController inputs)
         {
+
             if (inputs.InputPadUp.InputValue == 1 || inputs.InputPadDown.InputValue == 1)
             {
                 inputs.ResetAllBuffer(true);
@@ -216,7 +220,11 @@ namespace VoiceActing
             if (active == false)
                 return;
 
-            if(inputs.InputRB.InputValue == 1)
+            // Fix du sheitan pour afficher les cartes obtenu dans le shop
+            if (runData.PlayerExplorationDeck.Count != deckExplorationDrawer.GetCardCount())
+                deckExplorationDrawer.CreateDeckExploration(runData.PlayerExplorationDeck);
+
+            if (inputs.InputRB.InputValue == 1)
             {
                 SelectRight();
             }
@@ -286,6 +294,7 @@ namespace VoiceActing
             cardC.GetRectTransform().localScale = Vector3.zero;
             cardC.HideCard();
 
+            // Drawing section
             Color color = deckExplorationDrawer.cardType.GetColorType(cardExplorationData.CardType);
             cardController.DrawCard(cardExplorationData.CardSprite, color);
             cardController.GetRectTransform().position = cardC.GetRectTransform().position;
@@ -299,8 +308,7 @@ namespace VoiceActing
 
         private IEnumerator RoomCreatorCoroutine(CardExplorationData cardExplorationData, float roomOffset = 0.5f)
         {
-            if(explorationEvent != null)
-                explorationEvent.DestroyEvent();
+            previousExplorationEvent = explorationEvent;
             yield return new WaitForSeconds(1f);
             CreateRoom(cardExplorationData, roomOffset);
             animatorDeckProgress.SetBool("Appear", false);
@@ -317,12 +325,26 @@ namespace VoiceActing
             explorationEvent.CreateEvent(this);
         }
 
+        // Appelé dans le startEvent de explorationEvent pour que la room précédente disparaisse uniquement quand
+        // on commence la nouvelle
+        public void DestroyPreviousRoom()
+        {
+            if (previousExplorationEvent != null)
+                previousExplorationEvent.DestroyEvent();
+        }
 
-        public void AutoCreateRoom(CardExplorationData cardExplorationData)
+
+        public void AutoCreateRoom(CardExplorationData cardExplorationData, float roomDistance = 1f)
         {
             active = false;
-            StartCoroutine(RoomCreatorCoroutine(cardExplorationData, 1f));
+            StartCoroutine(RoomCreatorCoroutine(cardExplorationData, roomDistance));
         }
+
+
+
+
+
+
 
 
 

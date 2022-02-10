@@ -39,6 +39,7 @@ namespace VoiceActing
         //MenuCursor menuCursor; // Remplacer le cursorSelection par MenuCursor
 
         int currentIndex = 0;
+        int size = 0;
         List<CardController> cardsList = new List<CardController>();
         IEnumerator cursorCoroutine = null;
 
@@ -64,13 +65,18 @@ namespace VoiceActing
             return cardsList[index];
         }
 
+        public int GetCardCount()
+        {
+            return size;
+        }
 
         public void CreateDeckExploration(List<CardExplorationData> deck)
         {
             currentIndex = 0;
+            size = deck.Count;
             for (int i = 0; i < deck.Count; i++)
             {
-                if(i >= cardsList.Count)
+                if (i >= cardsList.Count)
                     cardsList.Add(Instantiate(cardController, transformParent));
                 cardsList[i].DrawCard(deck[i].CardSprite, cardType.GetColorType(deck[i].CardType));
             }

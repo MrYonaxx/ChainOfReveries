@@ -14,6 +14,9 @@ namespace VoiceActing
 {
     public class Status
     {
+        /// <summary>
+        /// La data du status effect
+        /// </summary>
         public StatusEffectData StatusEffect;
         public List<StatusEffect> StatusController = new List<StatusEffect>();
         public List<StatusEffectUpdate> StatusUpdate = new List<StatusEffectUpdate>();

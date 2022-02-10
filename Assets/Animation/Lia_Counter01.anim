@@ -25,7 +25,7 @@ AnimationClip:
       value: {fileID: 21300000, guid: afcf2c298d6078a42885981cce70ab33, type: 3}
     - time: 0.1
       value: {fileID: 21300000, guid: 4cb0ab19d9ffb7140a4fb92ff4e5c0b4, type: 3}
-    - time: 0.5
+    - time: 0.9166667
       value: {fileID: 21300000, guid: afcf2c298d6078a42885981cce70ab33, type: 3}
     - time: 1.0833334
       value: {fileID: 21300000, guid: 2f24293dc98fe3d468aac5881c1d8463, type: 3}
@@ -83,18 +83,4 @@ AnimationClip:
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
   m_HasMotionFloatCurves: 0
-  m_Events:
-  - time: 0.51666665
-    functionName: RemoveCards
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
-  - time: 1.25
-    functionName: EndAction
-    data: 
-    objectReferenceParameter: {fileID: 0}
-    floatParameter: 0
-    intParameter: 0
-    messageOptions: 0
+  m_Events: []

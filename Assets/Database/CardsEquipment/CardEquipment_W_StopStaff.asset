@@ -21,7 +21,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  cardSprite: {fileID: 21300000, guid: 7c0f0a717b53a7449a360b4ac08b4df3, type: 3}
+  cardSprite: {fileID: 21300000, guid: 00dfccfdbeec1b445b561a80a6951b2a, type: 3}
   cardName: Stop Staff
   cardType: 0
   cardDescription: Increase damage dealt to ennemies stopped.

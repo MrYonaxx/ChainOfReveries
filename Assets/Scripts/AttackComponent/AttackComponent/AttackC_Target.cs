@@ -21,6 +21,15 @@ namespace VoiceActing
         \* ======================================== */
         [SerializeField]
         bool targetAtStart = true;
+        [SerializeField]
+        bool targetRandom = false;
+
+        [ShowIf("targetRandom")]
+        [SerializeField]
+        Vector2 randomX = new Vector2(-6, 6);
+        [ShowIf("targetRandom")]
+        [SerializeField]
+        Vector2 randomY = new Vector2(-1, 2);
 
         Transform target;
         Transform parent;
@@ -35,12 +44,28 @@ namespace VoiceActing
 
         public override void StartComponent(CharacterBase character, AttackController attack)
         {
-            if(character.LockController.TargetLocked)
+            parent = attack.transform.parent;
+
+            if (character.LockController.TargetLocked)
                 target = character.LockController.TargetLocked.transform;
 
-            parent = attack.transform.parent;
-            if (targetAtStart == true)
+            if (targetAtStart && targetRandom)
+            {
                 MoveToTarget();
+                float randX = Random.Range(randomX.x, randomX.y);
+                float randY = Random.Range(randomY.x, randomY.y);
+                parent.transform.position = parent.transform.position + new Vector3(randX, randY, randY);
+            }
+            else if (targetAtStart)
+            {
+                MoveToTarget();
+            }
+            else if (targetRandom)
+            {
+                float randX = Random.Range(randomX.x, randomX.y);
+                float randY = Random.Range(randomY.x, randomY.y);
+                parent.transform.position = BattleUtils.Instance.BattleCenter.position + new Vector3(randX, randY, randY);
+            }
         }
 
 

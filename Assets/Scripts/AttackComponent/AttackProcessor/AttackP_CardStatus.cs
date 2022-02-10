@@ -45,7 +45,10 @@ namespace VoiceActing
         // On ajoute statusDamage
         public override void ProcessAttack(CharacterBase user, CharacterBase target, AttackController attack, ref DamageMessage damageMessage)
         {
-            int cardValue = Mathf.Clamp(attack.Card.GetCardValue(), 0, 9);
+            int cardValue = 0;
+            if (attack.Card != null)
+                cardValue = Mathf.Clamp(attack.Card.GetCardValue(), 0, 9);
+
             if(damageMessage.statusEffects.Contains(status) == true)
             {
                 // C'est pas très opti tout ça

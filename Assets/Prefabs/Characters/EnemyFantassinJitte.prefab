@@ -50,7 +50,6 @@ MonoBehaviour:
   bufferTime: 0.25
   aiEnabled: 0
   character: {fileID: 8650268934820167184}
-  debugOn: 0
 --- !u!114 &1616671325388841640
 MonoBehaviour:
   m_ObjectHideFlags: 0

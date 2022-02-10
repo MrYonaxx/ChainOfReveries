@@ -28,24 +28,22 @@ namespace VoiceActing
         [Header("Debug")]
         [SerializeField]
         CharacterBase debugPlayer = null;
+        [SerializeField]
+        InputController inputPlayer = null;
 
         #region Functions 
 
         /* ======================================== *\
          *                FUNCTIONS                 *
         \* ======================================== */
-        private void Awake()
-        {
-            if (debugPlayer != null)
-                SetControllable(debugPlayer);
-        }
-        protected override void Start()
+        protected override void Awake()
         {
             if (debugPlayer != null)
                 SetControllable(debugPlayer);
             player = ReInput.players.GetPlayer(playerID);
-
-            base.Start();
+            if(inputPlayer != null)
+                inputPlayer.SetControllable(null);
+            base.Awake();
         }
 
         protected override void Update()
@@ -62,13 +60,10 @@ namespace VoiceActing
 
         private void UpdateInput()
         {
-            if (player.GetButton("RB"))
-            {
-                UpdateInputButton("A", inputA);
-                UpdateInputButton("B", inputB);
-                UpdateInputButton("X", inputX);
-                UpdateInputButton("Y", inputY);
-            }
+            UpdateInputButton("A", inputA);
+            UpdateInputButton("B", inputB);
+            UpdateInputButton("X", inputX);
+            UpdateInputButton("Y", inputY);
             UpdateInputButton("RT", inputLB);
             UpdateInputButton("LT", inputRB);
 

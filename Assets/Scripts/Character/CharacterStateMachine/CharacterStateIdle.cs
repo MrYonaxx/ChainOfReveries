@@ -33,14 +33,11 @@ namespace VoiceActing
         {
             character.CharacterMovement.ApplyGravity(character.MotionSpeed);
 
-
-
             InputMovement(character);
             InputDpad(character);
             InputCancelSleight(character);
             if (InputEvade(character))
                 return;
-
 
             if (character.CharacterEquipment.InEquipmentDeck)
             {

@@ -12,7 +12,10 @@ public class CharacterRigidbody : MonoBehaviour
     [Title("CharacterController")]
     [SerializeField]
     protected BoxCollider2D characterCollider;
-
+    public BoxCollider2D CharacterCollider
+    {
+        get { return characterCollider; }
+    }
 
     [Title("Collision")]
     [SerializeField]
@@ -94,7 +97,7 @@ public class CharacterRigidbody : MonoBehaviour
         if(b)
             this.gameObject.layer = 13;
         else
-            this.gameObject.layer = 0;
+            this.gameObject.layer = 17; // Le layer 17 est utilisé pour que le lock on voit quand même le personnage
     }
 
 

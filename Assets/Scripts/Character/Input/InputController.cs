@@ -14,8 +14,11 @@ using Rewired;
 
 namespace VoiceActing
 {
+
+
     /// <summary>
     /// Definition of the InputController class
+    /// /!\ La prochain fois faire un Circular buffer pour que inputController prenne moins d'espace
     /// </summary>
     public class InputController : MonoBehaviour
     {
@@ -31,7 +34,7 @@ namespace VoiceActing
         [SerializeField]
         protected float bufferTime = 0.25f;
 
-
+        
         protected int id;
         public int Id
         {
@@ -129,7 +132,7 @@ namespace VoiceActing
         /* ======================================== *\
          *                FUNCTIONS                 *
         \* ======================================== */
-        public void SetControllable(IControllable newControllable)
+        public virtual void SetControllable(IControllable newControllable, bool menu = false)
         {
             controllable = newControllable;
         }
@@ -139,7 +142,7 @@ namespace VoiceActing
             id = newId;
         }
 
-        protected virtual void Start()
+        protected virtual void Awake()
         {
             inputLeftStickX = new InputBuffer();
             inputLeftStickY = new InputBuffer();

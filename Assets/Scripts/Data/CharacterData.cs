@@ -34,6 +34,17 @@ namespace VoiceActing
             get { return characterName; }
         }
 
+        [HorizontalGroup("CharacterBasic", PaddingLeft = 10)]
+        [VerticalGroup("CharacterBasic/Right")]
+        [SerializeField]
+        [TextArea(4,4)]
+        [HideLabel]
+        string characterDescription;
+        public string CharacterDescription
+        {
+            get { return characterDescription; }
+        }
+
         [SerializeField]
         [HideLabel]
         CharacterStat characterStat;
@@ -82,18 +93,13 @@ namespace VoiceActing
         }
 
 
-        [Title("Audio")]
+        [Title("Lore")]
         [SerializeField]
-        private AudioClip[] hitVoice;
-        public AudioClip[] HitVoice
+        [TextArea(5,5)]
+        private string loreDescription;
+        public string LoreDescription
         {
-            get { return hitVoice; }
-        }
-        [SerializeField]
-        private AudioClip[] deadVoice;
-        public AudioClip[] DeadVoice
-        {
-            get { return deadVoice; }
+            get { return loreDescription; }
         }
 
 

@@ -271,6 +271,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: CharacterSpriteAfterImage
       objectReference: {fileID: 0}
+    - target: {fileID: 2743472470886863141, guid: 5046c71ee7ab2b845917bf77adba9be9,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.minScalar
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3011987554610024909, guid: 5046c71ee7ab2b845917bf77adba9be9,
         type: 3}
       propertyPath: m_Sprite

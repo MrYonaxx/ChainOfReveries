@@ -34,6 +34,7 @@ public class CameraBattleController : MonoBehaviour
     [SerializeField]
     float smoothTime = 0.5f;
 
+
     // Utiliser par l'animator (c'est un peu bizarre)
     [SerializeField]
     [ReadOnly]
@@ -61,9 +62,20 @@ public class CameraBattleController : MonoBehaviour
     }
 
 
+    // Les zoome animator c'est les zoom un peu stylé avec les courbes
+    Animator animator;
+    UnityEngine.U2D.PixelPerfectCamera pixelPerfectCamera;
+    float baseFov = 0;
+
+    private IEnumerator zoomCoroutine;
+
+
     private void Start()
     {
+        animator = GetComponent<Animator>();
         cam = GetComponent<Camera>();
+        baseFov = cam.orthographicSize;
+        pixelPerfectCamera = GetComponent<UnityEngine.U2D.PixelPerfectCamera>();
     }
 
 
@@ -159,10 +171,64 @@ public class CameraBattleController : MonoBehaviour
 
 
 
+    // ================================================================================
+
+    // zoom Time doit etre en frame
+    public void Zoom(float[] zoomValue, float[] zoomTime, bool smooth = false)
+    {
+        if (zoomCoroutine != null)
+            StopCoroutine(zoomCoroutine);
+        zoomCoroutine = ZoomCoroutine(zoomValue, zoomTime, smooth);
+        StartCoroutine(zoomCoroutine);
+    }
+
+    private IEnumerator ZoomCoroutine(float[] zoomValue, float[] zoomTime, bool smooth)
+    {
+        float value = 0;
+        float t = 0f;
+        float time = 0f;
+        float baseLerpValue = 0f;
+
+        animator.enabled = false;
+        bonusSmoothTime = -1; // Utilisé pour bien clamp la camera 
+        pixelPerfectCamera.enabled = false;
+
+        for (int i = 0; i < zoomValue.Length; i++)
+        {
+            t = 0f;
+            time = zoomTime[i] / 60f;
+            while (t < time)
+            {
+                if (smooth)
+                    baseLerpValue = value;
+                t += Time.deltaTime;
+                value = Mathf.Lerp(baseLerpValue, zoomValue[i], t / time);
+                cam.orthographicSize = baseFov + value;
+                yield return null;
+            }
+            cam.orthographicSize = baseFov + zoomValue[i];
+            baseLerpValue = zoomValue[i];
+        }
+
+        animator.enabled = true;
+        bonusSmoothTime = 0;
+        pixelPerfectCamera.enabled = true;
+    }
+
+    public void StopZoom()
+    {
+        if(zoomCoroutine != null)
+            StopCoroutine(zoomCoroutine);
+        zoomCoroutine = null;
+
+        animator.enabled = true;
+        bonusSmoothTime = 0;
+        pixelPerfectCamera.enabled = true;
+    }
 
 
 
-
+    // Fonction util pour ajouter des target à la camera
     public void AddTarget(Transform t, int priority)
     {
         targets.Add(new TargetsCamera(t, priority));

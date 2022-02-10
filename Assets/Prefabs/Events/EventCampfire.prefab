@@ -316,6 +316,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteReflection: {fileID: 2702705966199837403}
   spriteToReflect: {fileID: 2702705967230504269}
+  disappearTime: 5
 --- !u!1 &2702705966897183041
 GameObject:
   m_ObjectHideFlags: 0
@@ -518,7 +519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameRunData: {fileID: 11400000, guid: 1aae71d6d0b174646afb7b05a8a06b1f, type: 2}
-  hpRecover: 0.25
+  hpRecover: 0.4
   campAnimator: {fileID: 7323639844299401613}
   buttonPrompt: {fileID: 5012376098834127654}
 --- !u!95 &7323639844299401613
@@ -15152,13 +15153,14 @@ GameObject:
   - component: {fileID: 8926179808981160567}
   - component: {fileID: 9067556347861627064}
   - component: {fileID: 8873265450174375482}
+  - component: {fileID: 1897034540016407173}
   m_Layer: 11
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8926179808981160567
 Transform:
   m_ObjectHideFlags: 0
@@ -15244,3 +15246,15 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1897034540016407173
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8206159485311105924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 912d5028f52a473498673d8665a9bbf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

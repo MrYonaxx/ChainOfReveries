@@ -37,15 +37,16 @@ namespace VoiceActing
         int index = 0;
 
         public void DrawSleight(SleightData currentSleight, List<Card> sleightCards)
-        {
-           
+        {      
             if (sleightCards.Count == 0)
             {
-                DrawSleightText(currentSleight, sleightCards);
+                //DrawSleightText(currentSleight, sleightCards);
                 for (int i = 0; i < cardsControllers.Length; i++)
                 {
                     cardsControllers[i].HideCard();
                 }
+                textSleightName.text = "";
+                textSleightTotalValue.text = "";
             }
             else
             {

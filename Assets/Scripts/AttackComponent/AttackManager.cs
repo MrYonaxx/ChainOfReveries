@@ -116,9 +116,12 @@ namespace VoiceActing
         /* ======================================== *\
          *                FUNCTIONS                 *
         \* ======================================== */
+        bool noUpdate = false;
+        
         private void Update()
         {
-            characterAnimationData.UpdateAnimation(user, user.MotionSpeed);
+            if(!noUpdate) // Bug d'ordre d'éxécution peut etre donc petit pansement (je crois que ça change rien)
+                characterAnimationData.UpdateAnimation(user, user.MotionSpeed);
         }
 
 
@@ -162,6 +165,8 @@ namespace VoiceActing
 
             if (subActionCardBreakable)
                 user.CharacterAction.AddSubActionBreakable(this);
+
+            characterAnimationData.StartAnimationData();
         }
 
 
@@ -209,6 +214,7 @@ namespace VoiceActing
         public void CancelAction()
         {
             StopAllCoroutines();
+            noUpdate = true;
             for (int i = 0; i < atkControllers.Length; i++)
             {
                 if(atkControllers[i] != null)

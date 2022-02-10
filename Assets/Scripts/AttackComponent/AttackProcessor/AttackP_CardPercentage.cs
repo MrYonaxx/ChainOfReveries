@@ -34,11 +34,18 @@ namespace VoiceActing
         [OnValueChanged("CalculateCardDamage")]
         Vector2Int debugDamage = new Vector2Int(100, 200);
 
+        [HorizontalGroup("CardDamage", PaddingLeft = 10)]
+        [SerializeField]
+        [VerticalGroup("CardDamage/Right")]
+        bool maxHP = false;
+
         // On ajoute statusDamage
         public override void ProcessAttack(CharacterBase user, CharacterBase target, AttackController attack, ref DamageMessage damageMessage)
         {
             int cardValue = Mathf.Clamp(attack.Card.GetCardValue(), 0, 9);
             int damage = (int)(target.CharacterStat.HP * (percentDamage[cardValue] / 100f));
+            if(maxHP)
+                damage = (int)(target.CharacterStat.HPMax.Value * (percentDamage[cardValue] / 100f));
 
             damageMessage.damage += damage;
         }

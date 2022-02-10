@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 
+using TMPro;
+using UnityEngine.UI;
+
 namespace VoiceActing
 {
     public class ExplorationEventBoss : ExplorationEvent
@@ -13,36 +16,43 @@ namespace VoiceActing
         [Title("Data")]
         [SerializeField]
         GameRunData runData = null;
+        [SerializeField]
+        EncounterDatabaseBoss bossesData = null;
 
         [Title("Battle")] // Si soucis de perf injecter battleManager et battleReward dans CreateEvent
         [SerializeField]
         BattleManager battleManager = null;
         [SerializeField]
         BattleReward battleReward = null;
-        [SerializeField]
-        AIController[] bosses = null;
 
         [Title("Intro")]
         [SerializeField]
         CharacterState stateCinematic = null;
-        [SerializeField]
-        Transform playerPos = null;
-        [SerializeField]
-        Animator enemyCinematic = null;
-        [SerializeField]
-        Canvas canvasIntro = null;
 
-        [Title("Sound")]
-        [SerializeField]
-        AudioClip battleTheme = null;
+
+        EncounterData bossEncounter;
+        AIController[] bosses = null;
 
 
         public override void CreateEvent(ExplorationManager manager)
         {
             explorationManager = manager;
+
             battleManager.OnEventBattleEnd += EndBossBattle;
             battleReward.OnEventEnd += EndEvent;
+
             AudioManager.Instance?.StopMusic(6f);
+
+            // Instancie le boss
+            bossEncounter = Instantiate(bossesData.SelectBoss(runData.Floor-1), this.transform);
+            bosses = bossEncounter.Encounter;
+
+            // Détermine le background
+            Sprite background = bossEncounter.GetBackground();
+            for (int i = 0; i < backgroundSprites.Count; i++)
+            {
+                backgroundSprites[i].sprite = background;
+            }
         }
 
         public override void StartEvent()
@@ -52,40 +62,15 @@ namespace VoiceActing
 
         private IEnumerator BossIntroCoroutine()
         {
+            // Set le joueur en ciné
             explorationManager.Player.SetState(stateCinematic);
             explorationManager.InputController.SetControllable(explorationManager.Player);
-            explorationManager.Player.CanPlay(false);
-            explorationManager.Player.Inputs.InputLeftStickX.InputValue = 0;
-            explorationManager.Player.Inputs.InputLeftStickY.InputValue = 0;
-
-            float t = 0;
-            float time = 1;
-            while (t < time)
-            {
-                t += Time.deltaTime;
-                if(explorationManager.Player.CharacterMovement.MoveToPoint(playerPos.position, 2f))
-                {
-                    explorationManager.Player.CharacterMovement.InMovement = false;
-                    explorationManager.Player.CharacterMovement.Move(0, 0);
-                }
-                yield return null;
-            }
-            explorationManager.Player.CharacterMovement.InMovement = false;
-            explorationManager.Player.CharacterMovement.Move(0, 0);
-
-            yield return new WaitForSeconds(1f);
-
-            BattleFeedbackManager.Instance.CameraController.AddTarget(enemyCinematic.transform, 0);
-            AudioManager.Instance?.PlayMusic(battleTheme);
-            yield return new WaitForSeconds(3f);
-
             ShowBackground(true);
-            enemyCinematic.gameObject.SetActive(true);
-            yield return new WaitForSeconds(9f);
+            DestroyPreviousRoom();
 
-            canvasIntro.gameObject.SetActive(true);
-            yield return new WaitForSeconds(3f);
-            // Idéalement le combat doit commencer seconde 16
+            // Intro personnalisé du boss
+            yield return bossEncounter.IntroCinematic(explorationManager.Player);
+
 
             // START BOSS BATTLE
             for (int i = 0; i < bosses.Length; i++)
@@ -102,10 +87,6 @@ namespace VoiceActing
             {
                 bosses[i].Character.DeckController.ReloadDeck();
             }
-
-            BattleFeedbackManager.Instance.CameraController.RemoveTarget(enemyCinematic.transform);
-            enemyCinematic.gameObject.SetActive(false);
-
 
 
             // Initialize battle modifiers

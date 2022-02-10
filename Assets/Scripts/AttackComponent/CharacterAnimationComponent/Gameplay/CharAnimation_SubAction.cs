@@ -51,8 +51,11 @@ namespace VoiceActing
                 character.Animator.Play(action.AttackAnimation.name, 0, 0f);
             }
 
+            if(setTransform)
+                currentAction = Instantiate(action, spawnPoint.position, Quaternion.identity);
+            else
+                currentAction = Instantiate(action, this.transform.position, Quaternion.identity);
 
-            currentAction = Instantiate(action, this.transform.position, Quaternion.identity);
             currentAction.CreateAttack(character.CharacterAction.CurrentAttackCard, character);
 
             if (setRotation)

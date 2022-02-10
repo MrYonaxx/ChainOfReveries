@@ -22,8 +22,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5c1353acfbfea4f428db18f8cf4116ea, type: 2}
   - {fileID: 11400000, guid: 5c1353acfbfea4f428db18f8cf4116ea, type: 2}
   - {fileID: 11400000, guid: 5c1353acfbfea4f428db18f8cf4116ea, type: 2}
-  - {fileID: 11400000, guid: 5c1353acfbfea4f428db18f8cf4116ea, type: 2}
-  - {fileID: 11400000, guid: b2546843235a6494893db3a0a9a40d85, type: 2}
+  - {fileID: 11400000, guid: 1ef3bdcc98e7a5048aff360ba23e935b, type: 2}
   nextLevel: {fileID: 11400000, guid: 25fc0263439d80f4eb42fa7e16f582fe, type: 2}
   cardBanlist: []
   cardExplorationBanlist: []

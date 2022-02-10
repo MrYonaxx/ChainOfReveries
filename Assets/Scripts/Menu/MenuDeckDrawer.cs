@@ -31,14 +31,17 @@ namespace Menu
 		[SerializeField]
 		public MenuCursor menuCursor = null;
 
+		int cardsListSize = 0;
 		List<CardController> cardsList = new List<CardController>();
 
 
 
 		public void DrawDeck(List<Card> deck)
 		{
+			cardsListSize = deck.Count;
 			for (int i = 0; i < deck.Count; i++)
 			{
+				// On créer les cartes classiques
 				if (cardsList.Count > i)
 				{
 					cardsList[i].gameObject.SetActive(true);
@@ -49,6 +52,7 @@ namespace Menu
 				}
 				cardsList[i].DrawCard(deck[i], cardTypeData);
 
+				// ça se gâte, on calcule le nombre de ligne du deck et on set une liste de ce nombre de ligne
 				if (i % columnMax == 0)
 				{
 					// À optimiser pour que les liste puissent fonctionner sans forcément instancier 
@@ -60,6 +64,7 @@ namespace Menu
 						listEntry.ListItem[i / columnMax].gameObject.SetActive(false);
 				}
 			}
+			listEntry.SetItemCount(Mathf.CeilToInt(deck.Count / (float)columnMax));
 
 			for (int i = 0; i <= columnMax; i++)
 			{
@@ -111,8 +116,11 @@ namespace Menu
 
         protected override void SelectEntry(int id)
         {
-			if (id > cardsList.Count)
+			if (id >= cardsListSize)
+			{
 				SelectEntry(id - 1);
+				return;
+			}
             base.SelectEntry(id);
 			menuCursor.MoveCursor(new Vector2(cardsList[id].GetRectTransform().anchoredPosition.x, cardsList[id].GetRectTransform().anchoredPosition.y));
 

@@ -47,7 +47,7 @@ namespace VoiceActing
         private RippleEffect rippleEffect = null;
 
         [SerializeField]
-        GameObject animationDeath = null;
+        Animator animationDeath = null;
         [SerializeField]
         Animator postProcessDeath = null;
 
@@ -63,7 +63,8 @@ namespace VoiceActing
         [SerializeField]
         Animator animatorTextCardBreak = null;
 
-
+        [SerializeField]
+        RenderTexture renderTexture = null;
 
         List<IMotionSpeed> listMotionSpeed = new List<IMotionSpeed>();
 
@@ -94,9 +95,13 @@ namespace VoiceActing
                 instance = this;
             else
                 Destroy(this.gameObject);
+
+            // Rien à foutre là mais ok
+            renderTexture.width = Screen.width;
+            renderTexture.height = Screen.height;
         }
 
-        // Ajoute un IMotionSpeed à la liste de ceux qui subissent le hitstop
+        // Ajoute un IMotionSpeed à la liste de ceux qui subissent le hitstop global
         public void AddIMotionSpeed(IMotionSpeed character)
         {
             listMotionSpeed.Add(character);
@@ -106,26 +111,22 @@ namespace VoiceActing
             listMotionSpeed.Remove(character);
         }
 
-        /*public void AnimationDeath2(CharacterBase character)
-        {
-            Instantiate(animationDeath, character.transform.position, Quaternion.identity);
-            cameraShake.ShakeEffect(0.2f, 20);
-            zoom.SetTrigger("Zoom");
-            SetBattleMotionSpeed(0, 0.6f);
-        }*/
 
         public void AnimationDeath(CharacterBase character)
         {
-            Instantiate(animationDeath, character.transform.position, Quaternion.identity);
+            animationDeath.gameObject.SetActive(true);
+            animationDeath.SetTrigger("Feedback");
+            animationDeath.transform.position = character.ParticlePoint.transform.position;
+            //Instantiate(animationDeath, character.transform.position, Quaternion.identity);
             cameraShake.ShakeEffect(0.2f, 15);
             SetBattleMotionSpeed(0, 0.6f);
         }
 
 
-        public void EndBattleMotionSpeed()
+        /*public void EndBattleMotionSpeed()
         {
             cameraShake.ShakeEffect(0.2f, 25);
-            zoom.SetTrigger("BigZoom");
+            CameraBigZoom();
             for (int i = 0; i < listMotionSpeed.Count; i++)
             {
                 listMotionSpeed[i].SetCharacterMotionSpeed(0);
@@ -135,7 +136,7 @@ namespace VoiceActing
                 StopCoroutine(motionSpeedCoroutine);
             motionSpeedCoroutine = EndBattleCoroutine(0.6f);
             StartCoroutine(motionSpeedCoroutine);
-        }
+        }*/
         private IEnumerator EndBattleCoroutine(float time)
         {
             while (time > 0)
@@ -149,7 +150,13 @@ namespace VoiceActing
 
 
 
-
+        public void SetBattleMotionSpeed(float motionSpeed)
+        {
+            for (int i = 0; i < listMotionSpeed.Count; i++)
+            {
+                listMotionSpeed[i].SetCharacterMotionSpeed(motionSpeed);
+            }
+        }
 
         public void SetBattleMotionSpeed(float motionSpeed, float time)
         {
@@ -189,30 +196,43 @@ namespace VoiceActing
         {
             cameraShake.ShakeEffect();
         }
-
+        /// <summary>
+        /// Time en frame (mais à refactor)
+        /// </summary>
+        /// <param name="power"></param>
+        /// <param name="time"></param>
         public void ShakeScreen(float power, int time)
         {
             cameraShake.ShakeEffect(power, time);
         }
 
-        public void CameraZoom()
+        /*public void CameraZoom()
         {
             zoom.SetTrigger("Zoom");
         }
         public void CameraDeZoom()
         {
             zoom.SetTrigger("DeZoom");
+        }*/
+
+        public void CameraZoom(float[] zoomValue, float[] zoomTime, bool smooth = false)
+        {
+            cameraController.Zoom(zoomValue, zoomTime, smooth);
         }
+
         public void CameraBigZoom()
         {
+            cameraController.StopZoom();
             zoom.SetTrigger("BigZoom");
         }
         public void CameraBossZoom()
         {
+            cameraController.StopZoom();
             zoom.SetTrigger("BossZoom");
         }
         public void CameraSpecialZoom(int level)
         {
+            cameraController.StopZoom();
             zoom.SetTrigger("SpecialZoom");
             zoom.SetInteger("SpecialZoomLevel", level);
         }

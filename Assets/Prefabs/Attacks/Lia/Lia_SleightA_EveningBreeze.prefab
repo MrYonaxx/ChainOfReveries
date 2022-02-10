@@ -5029,9 +5029,10 @@ GameObject:
   - component: {fileID: 4670453683040411876}
   - component: {fileID: 6539683031015164416}
   - component: {fileID: 4461643240352555985}
-  - component: {fileID: 2524242894598313049}
   - component: {fileID: 1437928140413578904}
   - component: {fileID: 5762526565565802421}
+  - component: {fileID: 7631248315673244883}
+  - component: {fileID: 2524242894598313049}
   m_Layer: 0
   m_Name: AttackAnimationData
   m_TagString: Untagged
@@ -5093,6 +5094,8 @@ MonoBehaviour:
   - Frame: 105
     AnimationEvent: {fileID: 5762526565565802421}
   - Frame: 135
+    AnimationEvent: {fileID: 7631248315673244883}
+  - Frame: 155
     AnimationEvent: {fileID: 2524242894598313049}
 --- !u!114 &6539683031015164416
 MonoBehaviour:
@@ -5124,20 +5127,6 @@ MonoBehaviour:
   frame: 30
   frameEnd: 105
   attack: {fileID: 4733904636063077261}
---- !u!114 &2524242894598313049
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3720685875369100543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 620e0e815b2f5174f8b380210d9a19f2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  frame: 135
-  frameEnd: 0
 --- !u!114 &1437928140413578904
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5169,9 +5158,37 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame: 105
   frameEnd: 0
-  cancelItself: 1
+  cancelItself: 0
   cancelSpecial: 1
   cancelType: 
+--- !u!114 &7631248315673244883
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3720685875369100543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4f6a358ed9a7e144a09bd7df2c0bb63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 135
+  frameEnd: 0
+--- !u!114 &2524242894598313049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3720685875369100543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 620e0e815b2f5174f8b380210d9a19f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 155
+  frameEnd: 0
 --- !u!1 &3815728174841339602
 GameObject:
   m_ObjectHideFlags: 0
@@ -5493,6 +5510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteReflection: {fileID: 2966177909965339149}
   spriteToReflect: {fileID: 2672992684903435383}
+  disappearTime: 5
 --- !u!1 &5842096757366747167
 GameObject:
   m_ObjectHideFlags: 0
@@ -5609,6 +5627,10 @@ MonoBehaviour:
   element:
     element: 0
     ignoreElementalStat: 0
+  damage:
+    baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
 --- !u!1 &6664025316910145470
 GameObject:
   m_ObjectHideFlags: 0

@@ -88,6 +88,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetAtStart: 1
+  targetRandom: 0
+  randomX: {x: -6, y: 6}
+  randomY: {x: -1, y: 2}
 --- !u!1 &3218600688594464821
 GameObject:
   m_ObjectHideFlags: 0
@@ -261,6 +264,7 @@ MonoBehaviour:
   frame: 35
   frameEnd: 0
   fx: {fileID: 5258439217372881632}
+  appear: 1
 --- !u!114 &4461643240352555985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,6 +305,8 @@ GameObject:
   - component: {fileID: 6206706469227825445}
   - component: {fileID: 6024610480447657897}
   - component: {fileID: 4356828759491638365}
+  - component: {fileID: 3399200644522856201}
+  - component: {fileID: 7054287687542848084}
   m_Layer: 0
   m_Name: KnockbackComponents
   m_TagString: Untagged
@@ -335,10 +341,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onHitAnimation: {fileID: 0}
-  hitStop: 0
+  hitStop: 0.1
   knockbackDurationMultiplier: 3
   knockbackX: 0
   knockbackZ: 0
+  revengeValue: 1
   knockbackInvulnerability: 1
 --- !u!114 &4356828759491638365
 MonoBehaviour:
@@ -352,8 +359,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42ed201a95a344247b5b49eb202bf460, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeTransition: 1
+  timeTransition: 0.3
   timeFlat: 1
+--- !u!114 &3399200644522856201
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4114098666737907609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6f3494418f866a54c92b61f785283b9c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  shakePower: 0.2
+  shakeTime: 1
+--- !u!114 &7054287687542848084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4114098666737907609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02ecf05f0475bfb4aabad7005e11a042, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4388082830208477171
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,6 +479,7 @@ GameObject:
   - component: {fileID: 9140356595374314966}
   - component: {fileID: 6198941394003099928}
   - component: {fileID: 7659108915477353681}
+  - component: {fileID: 4798445030316397796}
   m_Layer: 9
   m_Name: Lia_SleightM_Graviga
   m_TagString: Untagged
@@ -502,6 +536,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   focusTarget: {fileID: 0}
   priority: 0
+--- !u!114 &4798445030316397796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5258439217372881632}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89b23d73ce351754da50bcf8a9bdf810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  animator: {fileID: 6198941394003099928}
+  animatorSpeed: 1
 --- !u!1 &5631872851655807992
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,6 +682,8 @@ MonoBehaviour:
   attackAnimation: {fileID: 7400000, guid: 72783ae53eaa46f498aa3520b5d4c7f7, type: 2}
   characterAnimationData: {fileID: 4670453683040411876}
   linkToCharacter: 0
+  fixToGround: 0
+  subActionCardBreakable: 0
   atkControllers:
   - {fileID: 4733904636063077261}
 --- !u!1 &6110435575002120153
@@ -685,14 +735,20 @@ MonoBehaviour:
     debugDamage: {x: 100, y: 200}
     ignoreStatsMultiplier: 0
   cardStatus:
-    status: {fileID: 0}
     statusDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+    status: {fileID: 0}
+    debugDamage: {x: 100, y: 200}
   cardPercentage:
-    percentDamage: 19000000190000001900000019000000190000001900000019000000190000001900000019000000
-    debugDamage: {x: 25, y: 25}
+    percentDamage: 14000000140000001400000014000000140000001400000014000000140000001400000014000000
+    debugDamage: {x: 20, y: 20}
+    maxHP: 1
   element:
     element: 0
     ignoreElementalStat: 0
+  damage:
+    baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
 --- !u!1 &6664025316910145470
 GameObject:
   m_ObjectHideFlags: 0
@@ -754,7 +810,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2, y: 1.6}
+  m_Size: {x: 2, y: 1.8}
   m_EdgeRadius: 0
 --- !u!114 &4733904636063077261
 MonoBehaviour:
@@ -775,10 +831,13 @@ MonoBehaviour:
   - {fileID: 1482784253457968358}
   attackComponents:
   - {fileID: 7659108915477353681}
+  - {fileID: 4798445030316397796}
   - {fileID: 3040624544842275496}
   - {fileID: 7355661675864923162}
   - {fileID: 6024610480447657897}
   - {fileID: 4356828759491638365}
+  - {fileID: 3399200644522856201}
+  - {fileID: 7054287687542848084}
 --- !u!1 &7345693785975693917
 GameObject:
   m_ObjectHideFlags: 0
@@ -1045,5 +1104,5 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.32, y: 1}
+  m_Size: {x: 0.32, y: 1.2}
   m_EdgeRadius: 0

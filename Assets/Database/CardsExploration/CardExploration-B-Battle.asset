@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aaaedca360f0e340996e82e36c3b4a0, type: 3}
   m_Name: CardExploration-B-Battle
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 422d2fa4b6483a148a7271c927a220fa, type: 3}
+  cardSprite: {fileID: 21300000, guid: 2f5605e2593cdc4459bc384c01417124, type: 3}
   cardName: "R\xEAve d'Ivoire"
   cardDescription: "Cr\xE9er une r\xEAverie pour combattre les doutes et l'infortune."
   cardType: 0
   explorationEvent: {fileID: 8236675884287493958, guid: 7af8913c4d5614c4a8a6cda89a05c0ad,
     type: 3}
+  battleModifiers: []

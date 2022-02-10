@@ -21,10 +21,10 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  cardSprite: {fileID: 21300000, guid: 37701ee610e87e147b68176da4ffad92, type: 3}
+  cardSprite: {fileID: 21300000, guid: 17da94fd5279ae64faa9d06a29b0072c, type: 3}
   cardName: Ice Staff
   cardType: 0
-  cardDescription: Increase Ice damage.
+  cardDescription: Increase Ice damage by 50%.
   statsModifier: []
   statusEffectPassive: {fileID: 0}
   equipmentAction: {fileID: 818057835518184039, guid: 971d891aa08a3d74baf5f67b6da459b8,

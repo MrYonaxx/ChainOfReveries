@@ -43,7 +43,13 @@ namespace VoiceActing
         private List<CharacterAnimationEvent> frameDataEvent;
 
         // Start is called before the first frame update
-        void Start()
+        /*void Start()
+        {
+            t = 0f;
+            frameDataEvent = new List<CharacterAnimationEvent>(frameData.Count);
+        }*/
+
+        public void StartAnimationData()
         {
             t = 0f;
             frameDataEvent = new List<CharacterAnimationEvent>(frameData.Count);

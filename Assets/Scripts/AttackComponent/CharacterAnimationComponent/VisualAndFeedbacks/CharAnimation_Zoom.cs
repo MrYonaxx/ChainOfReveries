@@ -10,12 +10,23 @@ namespace VoiceActing
         [SerializeField]
         bool zoomOnCharacter = false;
 
+        [HorizontalGroup]
+        [SerializeField]
+        float[] zoomValue = { -0.5f, -0.5f, 0 };
+
+        [HorizontalGroup]
+        [SerializeField]
+        [SuffixLabel("en frames")]
+        float[] zoomTime = { 6, 12, 6 };
+
+        [SerializeField]
+        bool smoothZoom = false;
+
         bool active = false;
 
         public override void Execute(CharacterBase character)
         {
-            BattleFeedbackManager.Instance?.CameraSpecialZoom(0);
-
+            BattleFeedbackManager.Instance?.CameraZoom(zoomValue, zoomTime, smoothZoom);
             if (zoomOnCharacter)
             {
                 BattleFeedbackManager.Instance?.CameraController.AddTarget(this.transform, 10);
@@ -38,7 +49,7 @@ namespace VoiceActing
             if (active)
             {
                 if (zoomOnCharacter)
-                    BattleFeedbackManager.Instance?.CameraController.AddTarget(this.transform, 10);
+                    BattleFeedbackManager.Instance?.CameraController.RemoveTarget(this.transform);
                 active = false;
             }
         }

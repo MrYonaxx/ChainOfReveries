@@ -25,6 +25,9 @@ namespace VoiceActing
         [SerializeField]
         CharacterState stateReversal;
 
+        [SerializeField]
+        float counterHitRevengeValue = -5;
+
         // Référence circulaire mais ça permet de tout simplifier
         CharacterBase character;
 
@@ -252,13 +255,14 @@ namespace VoiceActing
                 if (isDead == false)
                 {
                     isDead = true;
+                    ResetRevengeValue();
                     OnDeath?.Invoke(character, damageMessage);
                 }
             }
             else if(damageMessage.knockback > 0)
             {
                 // On ne mets pas le state knockback, c'est l'attaque qui doit le faire (certaines attaques font des dommages mais ne knockback pas)
-                // Mon moi du futur, C'est le spaghetti mais c'est le prix à payer fini le jeu au lieu de refactor
+                // Mon moi du futur, C'est le spaghetti mais c'est le prix à payer pour finir le jeu au lieu de refactor
                 Knockback(1, false);
             }
 
@@ -275,6 +279,12 @@ namespace VoiceActing
         public void Knockback(float multiplier = 1, bool setState = false)
         {
             knockbackTime = character.CharacterStat.KnockbackTime.Value * multiplier;
+
+            if(character.State.ID == CharacterStateID.Acting) // Counter Hit
+            {
+                AddRevengeValue(counterHitRevengeValue);
+            }
+
             if(setState)
                 character.SetState(stateKnockback);
         }

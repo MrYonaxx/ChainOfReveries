@@ -14,6 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterFace: {fileID: 0}
   characterName: Lizard
+  characterDescription: 'Lizards are fast and recover quickly from a Card Break.
+
+
+    Wait
+    for them to approach before Card breaking their attacks or use attacks with huge
+    range.'
   characterStat:
     hp: 1000
     HPMax:
@@ -94,5 +100,4 @@ MonoBehaviour:
     baseCardValue: 0
   sleightDatabase: []
   initialEquipment: []
-  hitVoice: []
-  deadVoice: []
+  loreDescription: 

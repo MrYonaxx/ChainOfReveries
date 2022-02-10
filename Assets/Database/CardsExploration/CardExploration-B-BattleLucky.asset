@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aaaedca360f0e340996e82e36c3b4a0, type: 3}
   m_Name: CardExploration-B-BattleLucky
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 5302cc7ce9f8b6646b780e97f8efc348, type: 3}
-  cardName: "R\xEAve chanceux"
+  cardSprite: {fileID: 21300000, guid: fc1522bfd04ecf742b719d2249db29cc, type: 3}
+  cardName: "R\xEAve premium"
   cardDescription: "Cr\xE9er une r\xEAverie aux r\xE9compenses g\xE9n\xE9reuses."
-  cardType: 0
-  explorationEvent: {fileID: 8236675884287493958, guid: 7af8913c4d5614c4a8a6cda89a05c0ad,
+  cardType: 2
+  explorationEvent: {fileID: 3513814409438483324, guid: cb42da33217e138459d886262ce7bca6,
     type: 3}
   battleModifiers:
-  - label: Card +1
+  - label: Premium
     battleModifierTargets: 0
-    statusEffect: {fileID: 11400000, guid: ebf1530a8785bd54da678ebd3f1014af, type: 2}
-    nb: 2
+    statusEffect: {fileID: 11400000, guid: 66bc06af869ab9945b794ec95fec2061, type: 2}
+    nb: 1

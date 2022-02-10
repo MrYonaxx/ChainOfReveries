@@ -58,6 +58,7 @@ namespace VoiceActing
             knockbackX = character.CharacterMovement.SpeedX;
             character.CharacterKnockback.ReversalTime = 0;
             inAir = character.CharacterMovement.InAir;
+
         }
 
         /// <summary>
@@ -67,6 +68,7 @@ namespace VoiceActing
         /// <param name="character"></param>
         public override void UpdateState(CharacterBase character)
         {
+            // On meurt si on touche le sol
             if (character.CharacterMovement.InAir == false && character.CharacterKnockback.IsDead)
             {
                 character.SetState(stateDeath);
@@ -102,8 +104,11 @@ namespace VoiceActing
             {
                 character.DeckController.MoveHand(character.Inputs.InputLB.InputValue == 1 ? true : false, character.Inputs.InputRB.InputValue == 1 ? true : false);
                 character.DeckController.MoveCategory(character.Inputs.InputLT.InputValue == 1 ? true : false, character.Inputs.InputRT.InputValue == 1 ? true : false);
+                InputSleight(character);
             }
             InputDpad(character);
+
+
 
             // Update Knockback Time
             character.CharacterKnockback.KnockbackTime -= Time.deltaTime * character.MotionSpeed;
@@ -111,12 +116,12 @@ namespace VoiceActing
             if (inAir == true && character.CharacterMovement.InAir == false) 
             {
                 inAir = false;
-                if (InputEvade(character))
+                if (InputEvade(character)) // On tech
                 {
                     character.CharacterKnockback.KnockbackTime = 0;
                     return;
                 }
-                if (character.CharacterKnockback.Knockdown)
+                if (character.CharacterKnockback.Knockdown) // On s'écrase
                 {
                     character.SetState(stateDown);
                     return;
@@ -173,31 +178,6 @@ namespace VoiceActing
         private void Revenge(CharacterBase character)
         {
             character.CharacterKnockback.CanRevenge = character.Inputs.InputA.InputValue == 1 ? true : false;
-
-
-           /* if (character.Inputs.InputA.Registered && character.CharacterKnockback.ReversalTime != 0)
-            {             
-                character.Inputs.InputA.ResetBuffer();
-                character.CharacterKnockback.ReversalTime = -0.5f;
-            }
-            else if (character.Inputs.InputA.Registered && character.CharacterKnockback.ReversalTime == 0)
-            {
-                character.Inputs.InputA.ResetBuffer();
-                character.CharacterKnockback.ReversalTime = 0.2f;
-            }
-
-            if (character.CharacterKnockback.ReversalTime < 0)
-            {
-                character.CharacterKnockback.ReversalTime += Time.deltaTime;
-                if (character.CharacterKnockback.ReversalTime > 0)
-                    character.CharacterKnockback.ReversalTime = 0;
-            }
-            else if (character.CharacterKnockback.ReversalTime > 0)
-            {
-                character.CharacterKnockback.ReversalTime -= Time.deltaTime;
-                if (character.CharacterKnockback.ReversalTime < 0)
-                    character.CharacterKnockback.ReversalTime = 0;
-            }*/
         }
 
         private bool InputDpad(CharacterBase character)
@@ -227,6 +207,16 @@ namespace VoiceActing
             character.CharacterMovement.TurnBack();
             knockbackX = -knockbackX;
             character.CharacterMovement.Jump(3f);
+        }
+
+        // Permet de préparer une sleight mais pas de la joueur
+        private void InputSleight(CharacterBase character)
+        {
+            if(character.Inputs.InputY.Registered)
+            {
+                character.Inputs.InputY.ResetBuffer();
+                character.CharacterAction.PlaySleight(false); // On stock une carte mais en aucun cas on joue une sleight
+            }
         }
 
     } 

@@ -10,8 +10,8 @@ namespace VoiceActing
     {
         [SerializeField]
         public SharedAIController sharedAIController;
-        [SerializeField]
-        public SharedSleightData sleightData;
+        //[SerializeField]
+        //public SharedSleightData sleightData;
 
         // Si null on prend la database par défaut
         [SerializeField]
@@ -44,7 +44,7 @@ namespace VoiceActing
 
         public override TaskStatus OnUpdate()
         {
-            if(sleightData.Value.Active())
+            if(sharedAIController.Value.SleightData.Active())
                 return TaskStatus.Failure;
 
             if(SleightDecision(sharedAIController.Value.Character))
@@ -63,11 +63,13 @@ namespace VoiceActing
 
             if (sleightDatabase == null)
                 return false;
+            else if (sleightDatabase.Length == 0)
+                return false;
 
             // Sleight sélectionné
             SleightData sleightSelected = sleightDatabase[Random.Range(0, sleightDatabase.Length)];
-            sleightData.Value.Sleight = sleightSelected;
-            sleightData.Value.SetActive();
+            sharedAIController.Value.SleightData.Sleight = sleightSelected;
+            sharedAIController.Value.SleightData.SetActive();
             return true;
         }
 

@@ -13,6 +13,13 @@ namespace VoiceActing
 
         public override TaskStatus OnUpdate()
         {
+            // Pour ne pas que l'ennemi revenge alors qu'il est dead
+            if (aiController.Value.Character.CharacterKnockback.IsDead)
+            {
+                aiController.Value.ReleaseButton(aiController.Value.InputA);
+                return TaskStatus.Success;
+            }
+
             aiController.Value.HoldButton(aiController.Value.InputA);
             if (aiController.Value.Character.State.ID != CharacterStateID.Hit)
                 return TaskStatus.Success;

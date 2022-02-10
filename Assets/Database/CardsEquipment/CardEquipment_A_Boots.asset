@@ -21,7 +21,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  cardSprite: {fileID: 21300000, guid: a3506dc1369560b4d85398f887b3d268, type: 3}
+  cardSprite: {fileID: 21300000, guid: 9bb4ec9dc2c5ec942a1a5a06087e41ce, type: 3}
   cardName: Bottes
   cardType: 1
   cardDescription: "Augmente la vitesse de d\xE9placement."
@@ -30,4 +30,5 @@ MonoBehaviour:
     modifierType: 0
     value: 0.5
   statusEffectPassive: {fileID: 0}
+  equipmentAction: {fileID: 0}
   statusEffectActive: {fileID: 0}

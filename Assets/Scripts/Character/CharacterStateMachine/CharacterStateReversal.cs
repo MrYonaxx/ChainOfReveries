@@ -24,9 +24,13 @@ namespace VoiceActing
         float timeReversal = 30f;
 
         float t = 0f;
+        float[] zoomValue;
+        float[] zoomTime;
 
         private void Start()
         {
+            zoomValue = new float[] { -0.5f, -0.5f, 0 };
+            zoomTime = new float[] { 6f, timeReversal - 6f, 6f};
             timeReversal /= 60f;
         }
 
@@ -39,7 +43,7 @@ namespace VoiceActing
 
 
             BattleFeedbackManager.Instance?.SetBattleMotionSpeed(0, timeReversal);
-            BattleFeedbackManager.Instance?.CameraZoom();
+            BattleFeedbackManager.Instance?.CameraZoom(zoomValue, zoomTime);
 
         }
 
@@ -52,7 +56,6 @@ namespace VoiceActing
         {
             character.DeckController.MoveHand(character.Inputs.InputLB.InputValue == 1 ? true : false, character.Inputs.InputRB.InputValue == 1 ? true : false);
 
-
             t += Time.deltaTime;
             if (t >= timeReversal)
             {
@@ -62,8 +65,6 @@ namespace VoiceActing
                 else
                     character.ResetToIdle();
             }
-
-
         }
 
         public override void EndState(CharacterBase character, CharacterState oldState)

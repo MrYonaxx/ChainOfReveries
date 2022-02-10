@@ -21,7 +21,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  cardSprite: {fileID: 21300000, guid: 149479b68c62a014eb401b32d94efb15, type: 3}
+  cardSprite: {fileID: 21300000, guid: d43802070c0ca8141bd520e783b910a2, type: 3}
   cardName: Armure d'Orichalque
   cardType: 1
   cardDescription: "R\xE9duit le temps de Break d'un Card Break."

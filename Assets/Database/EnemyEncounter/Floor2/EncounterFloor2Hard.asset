@@ -25,9 +25,6 @@ MonoBehaviour:
   - encounter: {fileID: 8782236304212188354, guid: 2f49e83f1f5bbb44b8729609ba2a65b3,
       type: 3}
     probability: 100
-  - encounter: {fileID: 8782236304212188354, guid: f61db6779043c6f49a56699bdbb493bb,
-      type: 3}
-    probability: 50
   - encounter: {fileID: 8782236304212188354, guid: 8d00fb487d7c89f45a768a373bd574dd,
       type: 3}
     probability: 100
@@ -37,3 +34,9 @@ MonoBehaviour:
   - encounter: {fileID: 8782236304212188354, guid: a544eb2e75dd8f447b8b80657412af5e,
       type: 3}
     probability: 50
+  - encounter: {fileID: 8782236304212188354, guid: 3826ffd3b5811db409b1a921e2d014c5,
+      type: 3}
+    probability: 100
+  - encounter: {fileID: 8782236304212188354, guid: f9c599c8167a16e4ea1a86c63b3bc424,
+      type: 3}
+    probability: 100

@@ -21,7 +21,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  cardSprite: {fileID: 21300000, guid: c54599d7b8ba2a048878d4c174ab8b99, type: 3}
+  cardSprite: {fileID: 21300000, guid: 09d985f3e7991e84d8379d234e34dc4f, type: 3}
   cardName: Thunder Staff
   cardType: 0
   cardDescription: Increase thunder damage.

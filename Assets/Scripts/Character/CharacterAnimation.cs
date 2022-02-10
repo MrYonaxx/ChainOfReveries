@@ -46,8 +46,12 @@ namespace VoiceActing
         {
             if (inReload)
                 UpdateReload();
-            characterBase.transform.localScale = new Vector3(characterBase.CharacterMovement.Direction, 1, 1);
-            animator.SetBool("Moving", characterBase.CharacterMovement.InMovement);
+
+            if (characterBase.MotionSpeed != 0)
+            {
+                characterBase.transform.localScale = new Vector3(characterBase.CharacterMovement.Direction, 1, 1);
+                animator.SetBool("Moving", characterBase.CharacterMovement.InMovement);
+            }
             animator.SetBool("Aerial", characterBase.CharacterMovement.InAir);
             if (characterBase.CharacterMovement.InAir)
             {
@@ -73,7 +77,7 @@ namespace VoiceActing
                 animator.SetTrigger("Down");
             else if (newState is CharacterStateDead)
                 animator.SetTrigger("Dead");
-            else if (newState is CharacterStateCardBreak)
+            else if (newState.ID == CharacterStateID.CardBreak)
                 animator.SetTrigger("CardBreaked");
             else if (newState is CharacterStateReversal)
                 animator.SetTrigger("Reversal");
@@ -82,6 +86,8 @@ namespace VoiceActing
                 animator.SetTrigger("Reload");
                 inReload = true;
             }
+            else if (newState.ID == CharacterStateID.Hit)
+                KnockbackAnimation();
 
         }
 

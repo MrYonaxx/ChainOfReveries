@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aaaedca360f0e340996e82e36c3b4a0, type: 3}
   m_Name: CardExploration-B-BattleChaos
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: ac04da9fe861e0d4db597988de9c385d, type: 3}
+  cardSprite: {fileID: 21300000, guid: 8aa4f0ed8e1b51c41af2440b1ee4e8f7, type: 3}
   cardName: "R\xEAve chaotique"
   cardDescription: "Cr\xE9er une r\xEAverie modifiant al\xE9atoirement les valeurs
     des cartes."
@@ -20,7 +20,7 @@ MonoBehaviour:
   explorationEvent: {fileID: 8236675884287493958, guid: 7af8913c4d5614c4a8a6cda89a05c0ad,
     type: 3}
   battleModifiers:
-  - label: Card +1
-    battleModifierTargets: 0
-    statusEffect: {fileID: 11400000, guid: ebf1530a8785bd54da678ebd3f1014af, type: 2}
-    nb: 2
+  - label: Chaos
+    battleModifierTargets: 2
+    statusEffect: {fileID: 11400000, guid: 1cc3ab3d058a5b24b81b201eba949b9f, type: 2}
+    nb: 1

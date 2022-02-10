@@ -30,7 +30,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  cardSprite: {fileID: 21300000, guid: 24e7d97e6a3334e4bac35720e1c0df6d, type: 3}
+  cardSprite: {fileID: 21300000, guid: d532967b9e89cd344a0ef43082bdb6a2, type: 3}
   cardName: Feu
   cardType: 1
   cardDescription: 

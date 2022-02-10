@@ -17,7 +17,8 @@ namespace VoiceActing
     {
         public override void StartState(CharacterBase character, CharacterState oldState)
         {
-            character.LockController.Targeting = false;
+            // Ajouter un flag pour signaler quand on est dans un slow mo de fin de combat pour enlever certains feedback
+            //character.LockController.Targeting = false;
         }
 
         /// <summary>
@@ -29,7 +30,11 @@ namespace VoiceActing
         {
 
             character.CharacterMovement.ApplyGravity(character.MotionSpeed);
-            if (character.CharacterEquipment.InEquipmentDeck)
+            if(InputCancelSleight(character))
+            {
+                return;
+            }
+            else if (character.CharacterEquipment.InEquipmentDeck)
             {
                 character.CharacterEquipment.DeckEquipmentController.MoveHand(character.Inputs.InputLB.InputValue == 1 ? true : false, character.Inputs.InputRB.InputValue == 1 ? true : false);
                 character.CharacterEquipment.DeckEquipmentController.MoveCategory(character.Inputs.InputLT.InputValue == 1 ? true : false, character.Inputs.InputRT.InputValue == 1 ? true : false);
@@ -47,7 +52,16 @@ namespace VoiceActing
 
         public override void EndState(CharacterBase character, CharacterState oldState)
         {
-            character.LockController.Targeting = true;
+            //character.LockController.Targeting = true;
+        }
+
+        private bool InputCancelSleight(CharacterBase character)
+        {
+            if (character.Inputs.InputB.Registered)
+            {
+                character.CharacterAction.CancelSleight();
+            }
+            return false;
         }
 
         private bool InputDpad(CharacterBase character)

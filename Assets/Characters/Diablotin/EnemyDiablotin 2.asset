@@ -14,6 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterFace: {fileID: 0}
   characterName: Diablotin
+  characterDescription: 'Diablotin have one move, but a deadly one.
+
+
+    Use zero
+    card or Sleight to card break them before they explode.'
   characterStat:
     hp: 1000
     HPMax:
@@ -73,5 +78,10 @@ MonoBehaviour:
     baseCardValue: 9
   sleightDatabase: []
   initialEquipment: []
-  hitVoice: []
-  deadVoice: []
+  loreDescription: 'Creatures appearing in nightmares, Diablotins only exist to interact
+    with the people inside the Reverie through their dreams.
+
+
+    Those nightmares,
+    created by the Reverie are used to prevent the dreamer from having malicious
+    intent.'

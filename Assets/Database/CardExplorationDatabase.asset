@@ -34,3 +34,19 @@ MonoBehaviour:
     probability: 100
   - cardExploration: {fileID: 11400000, guid: 9345cec710984544fb7d70877c67c3d3, type: 2}
     probability: 100
+  - cardExploration: {fileID: 11400000, guid: 473a3c5a2327bbb46a5008ccc0ffd104, type: 2}
+    probability: 50
+  - cardExploration: {fileID: 11400000, guid: 3557e536f3d4c1b44983f9077c9c3125, type: 2}
+    probability: 50
+  - cardExploration: {fileID: 11400000, guid: 0bf057dcf88ee0f42a70aa400d6235ff, type: 2}
+    probability: 50
+  - cardExploration: {fileID: 11400000, guid: 65eddfaefefa63e4485c829f2ca8fdaa, type: 2}
+    probability: 50
+  - cardExploration: {fileID: 11400000, guid: 73c5ffb0fa3abaf4c973b330651fcd73, type: 2}
+    probability: 50
+  - cardExploration: {fileID: 11400000, guid: af3f7a0ad05ec1540822aafddaa834f9, type: 2}
+    probability: 50
+  - cardExploration: {fileID: 11400000, guid: 73183a75d614d6e4a903685eeb459734, type: 2}
+    probability: 50
+  - cardExploration: {fileID: 11400000, guid: 7bf18b8981b6a4d4dba03fece3197c70, type: 2}
+    probability: 50

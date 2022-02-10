@@ -148,6 +148,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2520948011644738657}
   - component: {fileID: 3040624544842275496}
+  - component: {fileID: 1960147986929474217}
   m_Layer: 9
   m_Name: AttackMainComponents
   m_TagString: Untagged
@@ -182,6 +183,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keepMomentum: 0
+--- !u!114 &1960147986929474217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2469241746260582066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adb57c2f73562b84a954bce3a1d559bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  auraUnbreakable: 1
+  auraCounter: 0
+  custom: 0
 --- !u!1 &3720685875369100543
 GameObject:
   m_ObjectHideFlags: 0
@@ -409,7 +425,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dad7e80ac0cdbd428606f8c14ac4bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dezoom: 0
+  zoomValue:
+  - -0.5
+  - -0.5
+  - 0
+  zoomTime:
+  - 6
+  - 12
+  - 6
+  smoothZoom: 0
 --- !u!114 &1416903977868953654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -613,9 +637,14 @@ MonoBehaviour:
   cardPercentage:
     percentDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     debugDamage: {x: 100, y: 200}
+    maxHP: 0
   element:
     element: 0
     ignoreElementalStat: 0
+  damage:
+    baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
 --- !u!1 &6664025316910145470
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,6 +726,7 @@ MonoBehaviour:
   - {fileID: 7250548580918273285}
   attackComponents:
   - {fileID: 3040624544842275496}
+  - {fileID: 1960147986929474217}
   - {fileID: 6024610480447657897}
   - {fileID: 5485531285977804821}
   - {fileID: 7269996457261919905}

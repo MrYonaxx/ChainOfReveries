@@ -12,8 +12,8 @@ namespace VoiceActing
         public SharedAIController sharedAIController;
         [SerializeField]
         public SharedInt cardIndex;
-        [SerializeField]
-        public SharedSleightData sleightData;
+        //[SerializeField]
+        //public SharedSleightData sleightData;
 
 
         // On peut pas serializer des Vector2Int là dedans donc je passe par 2 float
@@ -44,7 +44,7 @@ namespace VoiceActing
         public override TaskStatus OnUpdate()
         {
             // On vérifie d'abord qu'une sleight est bien sélectionné
-            if(!sleightData.Value.Active())
+            if(!sharedAIController.Value.SleightData.Active())
                 return TaskStatus.Failure;
 
             // On vérifie que la sleight n'est pas déjà complète
@@ -53,7 +53,7 @@ namespace VoiceActing
                 return TaskStatus.Failure;
 
             DeckController deckController = sharedAIController.Value.Character.DeckController;
-            CardData cardToSearch = sleightData.Value.Sleight.SleightRecipe[sleightIndex];
+            CardData cardToSearch = sharedAIController.Value.SleightData.Sleight.SleightRecipe[sleightIndex];
 
             List<int> indexes = deckController.SearchCards(cardToSearch, deckController.currentIndex, searchRange);
             

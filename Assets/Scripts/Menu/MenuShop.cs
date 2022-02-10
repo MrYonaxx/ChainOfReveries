@@ -21,6 +21,10 @@ namespace Menu
         [SerializeField]
         int[] priceCards;
 
+        // Stock de carte toujours présent
+        [SerializeField]
+        List<CardExplorationData> stockExplorationCard = new List<CardExplorationData>();
+
         [FoldoutGroup("Menu Introduction")]
         [SerializeField]
         string[] dialogues = null;
@@ -69,7 +73,7 @@ namespace Menu
         List<bool> availability = new List<bool>();
 
         InputController inputController = null;
-
+        CharacterBase character = null; // pas le choix pour les stats
         int indexText = -1;
         int oldIndex = 0;
 
@@ -83,6 +87,10 @@ namespace Menu
             return equipmentsCards;
         }
 
+        public void SetCharacter(CharacterBase chara)
+        {
+            character = chara;
+        }
 
 
 
@@ -110,6 +118,14 @@ namespace Menu
 
             availability = new List<bool>(stockNumber * deckDrawers.Length);
 
+
+            // On ajoute le stock fixe en premier
+            for (int j = 0; j < stockExplorationCard.Count; j++)
+            {
+                explorationCards.Add(new CardExploration(stockExplorationCard[j]));
+            }
+
+            // On ajoute le stock random
             for (int i = 0; i < stockNumber; i++)
             {
                 int r = Random.Range(0, cardsBattleDatabase.Count);
@@ -117,12 +133,15 @@ namespace Menu
                 battleCards.Add(battleCard);
                 cardsBattleDatabase.RemoveAt(r);
 
-                r = Random.Range(0, cardsExplorationDatabase.Count);
-                CardExploration cardExploration = new CardExploration(cardsExplorationDatabase[r]);
-                explorationCards.Add(cardExploration);
-                cardsExplorationDatabase.RemoveAt(r);
+                if (i >= stockExplorationCard.Count)
+                {
+                    r = Random.Range(0, cardsExplorationDatabase.Count);
+                    CardExploration cardExploration = new CardExploration(cardsExplorationDatabase[r]);
+                    explorationCards.Add(cardExploration);
+                    cardsExplorationDatabase.RemoveAt(r);
+                }
 
-                r = Random.Range(0, cardsExplorationDatabase.Count);
+                r = Random.Range(0, cardsEquipmentDatabase.Count);
                 CardEquipment cardEquipment = new CardEquipment(cardsEquipmentDatabase[r]);
                 equipmentsCards.Add(cardEquipment);
                 cardsEquipmentDatabase.RemoveAt(r);
@@ -307,7 +326,8 @@ namespace Menu
 
             if (listEntry.IndexSelection == 0) // Battle Card
             {
-                runData.AddCard(new Card(battleCards[id].CardData, deckSelector.CardSelected.Peek().baseCardValue));
+                Card cardSelected = deckSelector.CardSelected.Peek();
+                runData.AddCard(new Card(battleCards[id].CardData, cardSelected.baseCardValue, cardSelected.CardPremium));
             }
             else if (listEntry.IndexSelection == 1) // Exploration Card
             {
@@ -315,8 +335,10 @@ namespace Menu
             }
             else if (listEntry.IndexSelection == 2) // Equipment Card
             {
-                // Add to player stats
+                CardEquipment cardEquipment = (CardEquipment)equipmentsCards[id];
 
+                // Add to player stats
+                character.CharacterEquipment.EquipCard(cardEquipment.CardEquipmentData, 0);
                 // Add to player deck
                 runData.AddEquipmentCard((CardEquipment)equipmentsCards[id]);
             }
@@ -353,7 +375,7 @@ namespace Menu
             {
                 Card cardCheckout = battleCards[deckDrawers[0].GetIndexHorizontal()];
                 Card cardSelected = runData.PlayerDeck[id];
-                cardToCheckout.DrawCard(cardCheckout.GetCardIcon(), deckDrawers[0].CardTypeData.GetColorType(cardCheckout.GetCardType()), cardSelected.GetCardValue());
+                cardToCheckout.DrawCard(cardCheckout.GetCardIcon(), deckDrawers[0].CardTypeData.GetColorType(cardCheckout.GetCardType()), cardSelected.GetCardValue(), cardSelected.CardPremium);
             }
         }
 

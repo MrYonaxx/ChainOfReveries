@@ -8,15 +8,18 @@ namespace VoiceActing
     public class CharAnimation_FX : CharacterAnimationEvent
     {
         [SerializeField]
-        GameObject fx;
+        [HorizontalGroup]
+        GameObject fx = null;
 
+        [SerializeField]
+        [HorizontalGroup]
+        [HideLabel]
+        bool appear = true;
 
 
         public override void Execute(CharacterBase character)
         {
-            fx.SetActive(true);
-
-
+            fx.SetActive(appear);
         }
 
     }

@@ -18,7 +18,7 @@ namespace VoiceActing
 
         public override void StartComponent(CharacterBase character, AttackController attack)
         {
-            
+            // à cache si ça pose problème
             afterImageEffect = character.FeedbacksComponents.GetComponent<AfterImageEffect>();
             afterImageEffect.StartAfterImage();
 

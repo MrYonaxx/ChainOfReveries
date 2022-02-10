@@ -12,7 +12,8 @@ namespace Menu
 		Image imageButton;
 		[SerializeField]
 		TextMeshProUGUI mainText;
-		[SerializeField]
+
+        [SerializeField]
 		TextMeshProUGUI subText;
 
 		[SerializeField]
@@ -22,6 +23,10 @@ namespace Menu
 		public RectTransform RectTransform
 		{
 			get { if (rectTransform == null) rectTransform = GetComponent<RectTransform>(); return rectTransform; } // A corriger quand j'aurai moins la flemme
+		}
+		public string Text
+		{
+			get { return mainText.text; }
 		}
 
 

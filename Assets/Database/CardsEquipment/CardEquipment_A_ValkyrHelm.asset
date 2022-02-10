@@ -21,7 +21,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  cardSprite: {fileID: 21300000, guid: bc3c2a1c03c4aa745bf7150e53c27571, type: 3}
+  cardSprite: {fileID: 21300000, guid: 33d5a5ca8014db5449757a87d8ac2d95, type: 3}
   cardName: Heaume de Valkyrie
   cardType: 1
   cardDescription: "R\xE9duit le temps de Knockback."

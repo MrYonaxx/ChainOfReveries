@@ -21,7 +21,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  cardSprite: {fileID: 21300000, guid: d799ee6f6f3583a49a88908b7f4b3cdb, type: 3}
+  cardSprite: {fileID: 21300000, guid: 9609a17e0336f39408a4d00f24c8437f, type: 3}
   cardName: Gants maudits
   cardType: 0
   cardDescription: "Recharge \xE0 chaque fois qu'une carte est jou\xE9."

@@ -56,11 +56,12 @@ namespace VoiceActing
         {
             stunObject = character.CreateAnimation(stunAnimation);
             stunObject.transform.SetParent(character.ParticlePoint);
+            character.CharacterKnockback.Knockback(1, true);
         }
 
         public override void UpdateEffect(CharacterBase character)
         {
-            character.CharacterKnockback.KnockbackTime = 0.1f;
+            character.CharacterKnockback.KnockbackTime = 1f;
             character.CharacterMovement.SetSpeed(0, 0);
         }
 

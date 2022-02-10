@@ -32,6 +32,8 @@ namespace VoiceActing
         int rewardNumber = 3;
         [SerializeField]
         bool rewardEquipment = false;
+        [SerializeField]
+        bool rewardPremium = false;
 
         [SerializeField]
         [ShowIf("rewardEquipment")]
@@ -55,6 +57,14 @@ namespace VoiceActing
         ButtonHoldController buttonHoldControllerY = null;
         [SerializeField] 
         ButtonHoldController buttonHoldControllerB = null;
+
+        [Title("Description")]
+        [SerializeField]
+        float deadzone = 0.5f;
+        [SerializeField]
+        GameObject cursor = null;
+        [SerializeField]
+        Menu.Textbox textbox = null;
 
         [Title("Animator")]
         [SerializeField]
@@ -113,7 +123,24 @@ namespace VoiceActing
             for(int i = 0; i < rewardNumber; i++)
             {
                 cardRewards.Add(gameRunData.PlayerCharacterData.CreateCharacterNewCard());
+                if (rewardPremium)
+                    cardRewards[i].CardPremium = true;
                 cardControllers[i].DrawCard(cardRewards[i], cardBattleType);
+            }
+
+            // sécurité pour que les cartes n'aient jamais la même valeur
+            for (int i = 0; i < cardRewards.Count - 1; i++)
+            {
+                for (int j = i+1; j < cardRewards.Count; j++)
+                {
+                    if (cardRewards[i].baseCardValue == cardRewards[j].baseCardValue)
+                    {
+                        cardRewards[i].baseCardValue += j;
+                    }
+                }
+                if (cardRewards[i].baseCardValue > 9)
+                    cardRewards[i].baseCardValue -= 10;
+                cardRewards[i].ResetCard();
             }
         }
 
@@ -144,6 +171,7 @@ namespace VoiceActing
             if (active == false)
                 return;
 
+            // Input pour valider
             if (buttonHoldControllerA.HoldButton(input.InputA.InputValue == 1 ? true : false)) 
                 AddReward(99); // Skip
             else if (buttonHoldControllerX.HoldButton(input.InputX.InputValue == 1 ? true : false))
@@ -152,6 +180,16 @@ namespace VoiceActing
                 AddReward(0);
             else if (buttonHoldControllerB.HoldButton(input.InputB.InputValue == 1 ? true : false))
                 AddReward(2);
+            else
+            {
+                // Input pour description
+                if (input.InputLeftStickX.InputValue < -deadzone && Mathf.Abs(input.InputLeftStickY.InputValue) < deadzone)
+                    DescriptionReward(1);
+                else if (input.InputLeftStickX.InputValue > deadzone && Mathf.Abs(input.InputLeftStickY.InputValue) < deadzone)
+                    DescriptionReward(2);
+                else if (input.InputLeftStickY.InputValue > deadzone && Mathf.Abs(input.InputLeftStickX.InputValue) < deadzone)
+                    DescriptionReward(0);
+            }
         }
 
 
@@ -169,6 +207,8 @@ namespace VoiceActing
             {
                 animatorBattleWin.SetTrigger("Feedback");
                 animatorCardControllers.SetInteger("Reward", index+1);
+
+                // Add reward
                 if (rewardEquipment)
                 {
                     CardEquipment reward = (CardEquipment)cardRewards[index];
@@ -180,9 +220,17 @@ namespace VoiceActing
                     gameRunData.AddCard(cardRewards[index]);
                 }
             }
+            cursor.gameObject.SetActive(false);
+            textbox.HideTextbox();
         }
 
-
+        public void DescriptionReward(int index)
+        {
+            textbox.gameObject.SetActive(true);
+            cursor.gameObject.SetActive(true);
+            cursor.transform.position = cardControllers[index].transform.position;
+            textbox.DrawTextbox(cardRewards[index].GetCardDescription());
+        }
 
         // Appelé à la fin de l'anim de animatorCardControllers
         public void AnimationGetoDaze()
@@ -198,7 +246,7 @@ namespace VoiceActing
 
         private IEnumerator BattleRewardEndCoroutine()
         {
-            yield return new WaitForSeconds(1.5f);
+            yield return new WaitForSeconds(1f);
             animatorBattleWin.gameObject.SetActive(false);
             canvasReward.gameObject.SetActive(false);
             OnEventEnd.Invoke();

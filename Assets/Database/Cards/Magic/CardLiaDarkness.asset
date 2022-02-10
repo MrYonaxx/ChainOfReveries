@@ -30,7 +30,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  cardSprite: {fileID: 21300000, guid: 45fe2c9eedf1da349954955e3652ffcc, type: 3}
+  cardSprite: {fileID: 21300000, guid: 1e8de721d73c549499400a02857adf21, type: 3}
   cardName: "T\xE9n\xE8bres"
   cardType: 1
   cardDescription: "Une attaque t\xE9l\xE9guid\xE9 infligeant des d\xE9g\xE2ts en

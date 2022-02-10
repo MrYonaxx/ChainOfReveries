@@ -1,0 +1,116 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d1db5c43ecd7a47bfed3f23c297697, type: 3}
+  m_Name: EnemyData_Lia1
+  m_EditorClassIdentifier: 
+  characterFace: {fileID: 0}
+  characterName: Lia
+  characterDescription: 'Lia use Counter card, meaning that if you try to card break
+    her action, she will retaliate with a powerful attack.
+
+
+'
+  characterStat:
+    hp: 4200
+    HPMax:
+      baseValue: 4200
+      finalValue: 4200
+    Attack:
+      baseValue: 1
+      finalValue: 1
+    Defense:
+      baseValue: 1
+      finalValue: 1
+    Magic:
+      baseValue: 1
+      finalValue: 1
+    MagicDefense:
+      baseValue: 1
+      finalValue: 1
+    RevengeValue:
+      baseValue: 15
+      finalValue: 15
+    KnockbackTime:
+      baseValue: 1
+      finalValue: 1
+    ReloadAmount:
+      baseValue: 100
+      finalValue: 100
+    CardBreakTime:
+      baseValue: 0.8
+      finalValue: 0.8
+    CardBreakKnockback:
+      baseValue: 1
+      finalValue: 1
+    Speed:
+      baseValue: 3
+      finalValue: 3
+    Gravity:
+      baseValue: 25
+      finalValue: 25
+    GravityMax:
+      baseValue: 50
+      finalValue: 50
+    MotionSpeed:
+      baseValue: 1
+      finalValue: 1
+    Mass:
+      baseValue: 1
+      finalValue: 1
+    ElementalResistances: []
+    StatusResistances: []
+  salut: 
+  initialDeck:
+  - cardData: {fileID: 11400000, guid: 74238e063424aac41ba71f65681afab8, type: 2}
+    baseCardValue: 1
+  - cardData: {fileID: 11400000, guid: ba00a2b9ad3321d489f066aefec00ffd, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: ba00a2b9ad3321d489f066aefec00ffd, type: 2}
+    baseCardValue: 6
+  - cardData: {fileID: 11400000, guid: ba00a2b9ad3321d489f066aefec00ffd, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: 063d9c558da3ee846a630adab660880f, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: ba00a2b9ad3321d489f066aefec00ffd, type: 2}
+    baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: ba00a2b9ad3321d489f066aefec00ffd, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: ba00a2b9ad3321d489f066aefec00ffd, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 74238e063424aac41ba71f65681afab8, type: 2}
+    baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: 063d9c558da3ee846a630adab660880f, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: ba00a2b9ad3321d489f066aefec00ffd, type: 2}
+    baseCardValue: 2
+  - cardData: {fileID: 11400000, guid: ba00a2b9ad3321d489f066aefec00ffd, type: 2}
+    baseCardValue: 3
+  - cardData: {fileID: 11400000, guid: 74238e063424aac41ba71f65681afab8, type: 2}
+    baseCardValue: 3
+  - cardData: {fileID: 11400000, guid: ba00a2b9ad3321d489f066aefec00ffd, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: ba00a2b9ad3321d489f066aefec00ffd, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: ba00a2b9ad3321d489f066aefec00ffd, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: 74238e063424aac41ba71f65681afab8, type: 2}
+    baseCardValue: 2
+  - cardData: {fileID: 11400000, guid: ba00a2b9ad3321d489f066aefec00ffd, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 063d9c558da3ee846a630adab660880f, type: 2}
+    baseCardValue: 8
+  sleightDatabase:
+  - {fileID: 11400000, guid: 6ef2b375a6e960f4e864ea4c880b027b, type: 2}
+  initialEquipment: []
+  loreDescription: "Once a normal girl in the previous fantasy, she became a Chim\xE8re
+    to maintain the Reverie of the new world. \n\nThe sadness of losing her own story
+    made her vows to protect the tales of others."

@@ -21,7 +21,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  cardSprite: {fileID: 21300000, guid: 449ed8cbd8e73ee449cd9540fbd661a6, type: 3}
+  cardSprite: {fileID: 21300000, guid: d556a14af3f5dc1439337872b26b414f, type: 3}
   cardName: Armure d'Orichalque
   cardType: 1
   cardDescription: Augmente les HP de 1000.

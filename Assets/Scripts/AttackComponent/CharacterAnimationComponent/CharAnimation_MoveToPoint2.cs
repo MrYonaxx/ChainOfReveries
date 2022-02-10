@@ -22,7 +22,8 @@ namespace VoiceActing
             float sign = (character.LockController.TargetLocked.transform.position.x - BattleUtils.Instance.BattleCenter.position.x);
             sign = Mathf.Sign(sign);
             character.CharacterMovement.SetDirection((int)sign);
-            point = BattleUtils.Instance.BattleCenter.position + (point * -sign);
+            point.x *= sign;
+            point = BattleUtils.Instance.BattleCenter.position + (point);
             tMax = (FrameEnd - Frame) / 60f;
             t = 0f;
         }

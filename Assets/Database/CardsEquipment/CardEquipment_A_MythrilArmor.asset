@@ -21,7 +21,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  cardSprite: {fileID: 21300000, guid: 9d662a5ebb2546a4ab0b2b4af38eaa44, type: 3}
+  cardSprite: {fileID: 21300000, guid: af758485ffba08549bc69f6e5b525861, type: 3}
   cardName: Armure de Mythril
   cardType: 1
   cardDescription: 'Diminue la Revenge Value de 2.

@@ -14,7 +14,9 @@ namespace VoiceActing
 {
     public class TargetController : MonoBehaviour
     {
-
+        /// <summary>
+        /// Permet de mettre en pause le système de target
+        /// </summary>
         protected bool targeting = true;
         public bool Targeting
         {

@@ -15,32 +15,44 @@ namespace VoiceActing
     [CreateAssetMenu(fileName = "DeckData", menuName = "Data/DeckData", order = 1)]
     public class DeckData: ScriptableObject
     {
-        #region Attributes 
-
-        /* ======================================== *\
-         *               ATTRIBUTES                 *
-        \* ======================================== */
         [SerializeField]
-        List<Card> deck;
+        private string deckName;
+        public string DeckName
+        {
+            get { return deckName; }
+            set { deckName = value; }
+        }
 
-        #endregion
-
-        #region GettersSetters 
-
-        /* ======================================== *\
-         *           GETTERS AND SETTERS            *
-        \* ======================================== */
-
-        #endregion
-
-        #region Functions 
-
-        /* ======================================== *\
-         *                FUNCTIONS                 *
-        \* ======================================== */
+        [TabGroup("Deck")]
+        [SerializeField]
+        private List<Card> initialDeck;
+        public List<Card> InitialDeck // Retourne une ref du deck
+        {
+            get { return initialDeck; }
+        }
 
 
-        #endregion
+        [TabGroup("Equip")]
+        [SerializeField]
+        private CardEquipmentProba[] initialEquipment;
+        public CardEquipmentProba[] InitialEquipment
+        {
+            get { return initialEquipment; }
+        }
+
+        /// <summary>
+        /// Crée une copie du deck
+        /// </summary>
+        /// <returns></returns>
+        public List<Card> CreateDeck()
+        {
+            List<Card> res = new List<Card>(initialDeck.Count);
+            for (int i = 0; i < initialDeck.Count; i++)
+            {
+                res.Add(new Card(initialDeck[i].CardData, initialDeck[i].baseCardValue));
+            }
+            return res;
+        }
 
     } 
 

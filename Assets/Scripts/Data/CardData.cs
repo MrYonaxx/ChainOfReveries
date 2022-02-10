@@ -57,6 +57,10 @@ namespace VoiceActing
         [TextArea(2, 2)]
         [LabelWidth(100)]
         string cardDescription;
+        public string CardDescription
+        {
+            get { return cardDescription; }
+        }
 
         [VerticalGroup("CardBasicInfo/Right")]
         [SerializeField]

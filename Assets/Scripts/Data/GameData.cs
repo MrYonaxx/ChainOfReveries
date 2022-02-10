@@ -2,9 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName = "GameData", menuName = "GameData", order = 1)]
+
+
+
+
+// Tout ce qu'on doit sauvegarder est là dedans
+[CreateAssetMenu(fileName = "GameData", menuName = "GameSystem/GameData", order = 1)]
 public class GameData : ScriptableObject
 {
+    [SerializeField]
+    bool firstTime = true;
     [SerializeField]
     int nbRun = 0;
     [SerializeField]
@@ -21,14 +28,32 @@ public class GameData : ScriptableObject
     // List int cardValue
     // List string cardEquipmentID
 
-    [SerializeField]
-    List<int> inputConfiguration;
 
-    // Versus Mode
+    [Header("Player Config")]
     [SerializeField]
-    int player1ID;
+    int P1ControllerID;
     [SerializeField]
-    int player2ID;
+    VoiceActing.InputConfig P1InputConfig;
+
+    [SerializeField]
+    int P2ControllerID;
+    [SerializeField]
+    VoiceActing.InputConfig P2InputConfig;
+
+    public int GetControllerID(int playerID)
+    {
+        if (playerID == 1)
+            return P1ControllerID;
+        else
+            return P2ControllerID;
+    }
+    public VoiceActing.InputConfig GetInputConfig(int playerID)
+    {
+        if (playerID <= 1)
+            return P1InputConfig;
+        else
+            return P2InputConfig;
+    }
 
     public void Save()
     {

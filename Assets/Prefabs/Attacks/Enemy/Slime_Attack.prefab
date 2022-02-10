@@ -136,6 +136,7 @@ GameObject:
   - component: {fileID: 2260525837532545912}
   - component: {fileID: 4670453683040411876}
   - component: {fileID: 4461643240352555985}
+  - component: {fileID: 810280154933344821}
   - component: {fileID: 2524242894598313049}
   - component: {fileID: 9147019452204060746}
   m_Layer: 0
@@ -200,7 +201,9 @@ MonoBehaviour:
     AnimationEvent: {fileID: 7406093635845558607}
   - Frame: 103
     AnimationEvent: {fileID: 4461643240352555985}
-  - Frame: 115
+  - Frame: 110
+    AnimationEvent: {fileID: 810280154933344821}
+  - Frame: 150
     AnimationEvent: {fileID: 2524242894598313049}
 --- !u!114 &4461643240352555985
 MonoBehaviour:
@@ -217,6 +220,20 @@ MonoBehaviour:
   frame: 103
   frameEnd: 106
   attack: {fileID: 4733904636063077261}
+--- !u!114 &810280154933344821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3720685875369100543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4f6a358ed9a7e144a09bd7df2c0bb63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 110
+  frameEnd: 0
 --- !u!114 &2524242894598313049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -229,7 +246,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620e0e815b2f5174f8b380210d9a19f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 115
+  frame: 150
   frameEnd: 0
 --- !u!114 &9147019452204060746
 MonoBehaviour:
@@ -300,6 +317,7 @@ MonoBehaviour:
   knockbackDurationMultiplier: 1
   knockbackX: 0
   knockbackZ: 7
+  revengeValue: 1
   knockbackInvulnerability: 0.2
 --- !u!114 &5485531285977804821
 MonoBehaviour:
@@ -397,7 +415,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5053397183770984521, guid: f7b96a57640097a4c80734605d727c5f,
+  m_Sprite: {fileID: 9152024166722576120, guid: 7a8d6ae40d16e62479511368216806fe,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -460,6 +478,8 @@ MonoBehaviour:
   attackAnimation: {fileID: 7400000, guid: e3d9fd967f1eb6443ac7708ec0c3bf2b, type: 2}
   characterAnimationData: {fileID: 4670453683040411876}
   linkToCharacter: 1
+  fixToGround: 0
+  subActionCardBreakable: 0
   atkControllers:
   - {fileID: 4733904636063077261}
 --- !u!1 &6110435575002120153
@@ -511,13 +531,20 @@ MonoBehaviour:
     debugDamage: {x: 100, y: 150}
     ignoreStatsMultiplier: 0
   cardStatus:
-    status: {fileID: 0}
     statusDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+    status: {fileID: 0}
+    debugDamage: {x: 100, y: 200}
   cardPercentage:
     percentDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+    debugDamage: {x: 100, y: 200}
+    maxHP: 0
   element:
     element: 0
     ignoreElementalStat: 0
+  damage:
+    baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
 --- !u!1 &6664025316910145470
 GameObject:
   m_ObjectHideFlags: 0

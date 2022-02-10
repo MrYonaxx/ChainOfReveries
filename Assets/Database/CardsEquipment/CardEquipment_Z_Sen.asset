@@ -21,11 +21,12 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  cardSprite: {fileID: 21300000, guid: 3bf58e19dadaecd4a92115d25a1128f8, type: 3}
+  cardSprite: {fileID: 21300000, guid: ae07e102a94137842a59eef27439ed6c, type: 3}
   cardName: Sen
   cardType: 0
-  cardDescription: "Retire instantan\xE9ment les cartes jou\xE9es"
+  cardDescription: Cards played are automatically removed from the field.
   statsModifier: []
   statusEffectPassive: {fileID: 0}
-  equipmentAction: {fileID: 0}
-  statusEffectActive: {fileID: 0}
+  equipmentAction: {fileID: 199252371479164363, guid: 591d76be0fef645449728e5c5282e13e,
+    type: 3}
+  statusEffectActive: {fileID: 11400000, guid: 0ab2389af03024c4c808ca31010a6d49, type: 2}

@@ -16,7 +16,8 @@ namespace VoiceActing
 
         public override TaskStatus OnUpdate()
         {
-            aiController.Value.Character.CharacterAction.Action(attack);
+            if(aiController.Value.Character.State.ID == CharacterStateID.Idle)
+                aiController.Value.Character.CharacterAction.Action(attack);
             return TaskStatus.Success;
         }
     }

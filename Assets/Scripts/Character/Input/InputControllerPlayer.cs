@@ -22,15 +22,28 @@ namespace VoiceActing
        
         Rewired.Player player;
 
+        [Header("Assign Settings")]
 
-        [SerializeField]
+        [SerializeField] // J1 ou J2, la variable id de inputController est l'id manette
         int playerID = 0;
         [SerializeField]
+        bool useGameSettings = false;
+        [SerializeField]
+        [ShowIf("useGameSettings")]
+        GameData gameSettings = null;
+
+        [Header("Gameplay")]
+        [SerializeField]
         bool leftPlayer = true;
+
 
         [Header("Debug")]
         [SerializeField]
         CharacterBase debugPlayer = null;
+
+        InputConfig inputConfigDefault = new InputConfig();
+        InputConfig inputConfig = new InputConfig();
+        int buttonId = 0;
 
         #region Functions 
 
@@ -38,13 +51,38 @@ namespace VoiceActing
          *                FUNCTIONS                 *
         \* ======================================== */
 
-        protected override void Start()
+        protected override void Awake()
         {
             if (debugPlayer != null)
                 SetControllable(debugPlayer);
 
-            SetID(playerID);
-            base.Start();
+            if (gameSettings != null)
+            {
+                SetID(gameSettings.GetControllerID(playerID)); // Set le controller pour qu'il ait l'ID correspondant
+                inputConfig = gameSettings.GetInputConfig(playerID);
+            }
+            else
+            {
+                SetID(playerID); // Sinon J1 = Manette1, J2 = Manette2 etc...
+            }
+
+            // Initialise les structures pour les inputs
+            base.Awake();
+        }
+
+        public override void SetControllable(IControllable newControllable, bool menu = false)
+        {
+            controllable = newControllable;
+
+            // Set les input config en fonction de si c'est un menu
+            if (menu)
+            {
+                inputConfig = inputConfigDefault;
+            }
+            else if (gameSettings != null)
+            {
+                inputConfig = gameSettings.GetInputConfig(playerID);
+            }
         }
 
         public override void SetID(int newId)
@@ -55,6 +93,7 @@ namespace VoiceActing
             else
                 player = ReInput.players.GetPlayer(id);
         }
+
 
         protected override void Update()
         {
@@ -74,88 +113,53 @@ namespace VoiceActing
 
         private void UpdateInput()
         {
-            UpdateInputButton("A", inputA);
-            UpdateInputButton("B", inputB);
-            UpdateInputButton("X", inputX);
-            UpdateInputButton("Y", inputY);
+            UpdateInputButton(InputEnum.A, inputA);
+            UpdateInputButton(InputEnum.B, inputB);
+            UpdateInputButton(InputEnum.X, inputX);
+            UpdateInputButton(InputEnum.Y, inputY);
             if(leftPlayer)
             {
-                UpdateInputButton("RB", inputRB);
-                UpdateInputButton("LB", inputLB);
+                UpdateInputButton(InputEnum.RB, inputRB);
+                UpdateInputButton(InputEnum.LB, inputLB);
             }
             else
             {
-                UpdateInputButton("LB", inputRB);
-                UpdateInputButton("RB", inputLB);
+                UpdateInputButton(InputEnum.LB, inputRB);
+                UpdateInputButton(InputEnum.RB, inputLB);
             }
-            UpdateInputButton("RT", inputRT);
-            UpdateInputButton("LT", inputLT);
+            UpdateInputButton(InputEnum.RT, inputRT);
+            UpdateInputButton(InputEnum.LT, inputLT);
 
-            UpdateInputButton("DpadDown", inputPadDown);
-            UpdateInputButton("DpadUp", inputPadUp);
+            UpdateInputButton(InputEnum.DPAD_DOWN, inputPadDown);
+            UpdateInputButton(InputEnum.DPAD_UP, inputPadUp);
 
+            // Stick
             if (Mathf.Abs(player.GetAxis("Vertical")) >= joystickThreshold)
-            {
                 inputLeftStickY.InputValue = player.GetAxis("Vertical");
-            }
             else
-            {
                 inputLeftStickY.InputValue = 0;
-            }
 
             if (Mathf.Abs(player.GetAxis("Horizontal")) >= joystickThreshold)
-            {
                 inputLeftStickX.InputValue = player.GetAxis("Horizontal");
-            }
             else
-            {
                 inputLeftStickX.InputValue = 0;
-            }
-
-
-           /* if (player.GetAxis("RT") < -triggerThreshold && inputRightTrigger == false)
-            {
-                inputRT.InputValue = (int)Mathf.Abs(Input.GetAxis("ControllerTriggers"));
-                inputRT.BufferDownInput(bufferTime);
-                inputRightTrigger = true;
-            }
-            else if (player.GetAxis("RT") < -triggerThreshold)
-            {
-                inputRT.InputValue = (int)Mathf.Abs(Input.GetAxis("ControllerTriggers"));
-            }
-            else if (player.GetAxis("RT") >= -triggerThreshold)
-            {
-                inputRightTrigger = false;
-            }
-
-
-            if (player.GetAxis("ControllerTriggers") > triggerThreshold && inputLeftTrigger == false)
-            {
-                inputLT.InputValue = (int)Mathf.Abs(Input.GetAxis("ControllerTriggers"));
-                inputLT.BufferDownInput(bufferTime);
-                inputLeftTrigger = true;
-            }
-            else if (player.GetAxis("ControllerTriggers") > triggerThreshold)
-            {
-                inputLT.InputValue = (int)Mathf.Abs(Input.GetAxis("ControllerTriggers"));
-            }
-            else if (player.GetAxis("ControllerTriggers") <= triggerThreshold)
-            {
-                inputLeftTrigger = false;
-            }*/
         }
 
-        private void UpdateInputButton(string buttonName, InputBuffer input)
+        private void UpdateInputButton(InputEnum input, InputBuffer inputBuffer)
         {
-            if (player.GetButtonDown(buttonName))
-                input.BufferDownInput(bufferTime);
-            else if (player.GetButtonUp(buttonName))
-                input.BufferUpInput(bufferTime);
+            buttonId = inputConfig.GetInput(input);
 
-            input.InputValue = 0;
-            if (player.GetButton(buttonName))
+            // Detection pression bouton
+            if (player.GetButtonDown(buttonId))
+                inputBuffer.BufferDownInput(bufferTime);
+            else if (player.GetButtonUp(buttonId))
+                inputBuffer.BufferUpInput(bufferTime);
+
+            // Detection bouton enfoncé
+            inputBuffer.InputValue = 0;
+            if (player.GetButton(buttonId))
             {
-                input.InputValue = 1;
+                inputBuffer.InputValue = 1;
             }
         }
 

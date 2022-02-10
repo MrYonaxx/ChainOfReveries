@@ -40,6 +40,7 @@ namespace VoiceActing
         public bool CardPremium
         {
             get { return cardPremium; }
+            set { cardPremium = value; }
         }
 
         private int cardID;
@@ -117,6 +118,8 @@ namespace VoiceActing
         {
             if (character.Inputs.InputA.Registered)
             {
+                if (character.MotionSpeed == 0)
+                    return;
                 if (character.CharacterAction.PlayCard() == true)
                 {
                     character.Inputs.ResetAllBuffer();
@@ -153,7 +156,7 @@ namespace VoiceActing
 
         public virtual string GetCardDescription()
         {
-            return "";
+            return cardData.CardDescription;
         }
 
         #endregion

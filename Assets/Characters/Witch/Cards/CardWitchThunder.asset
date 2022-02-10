@@ -30,7 +30,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  cardSprite: {fileID: 21300000, guid: 7d8a97bfa8f09d64b8c7e1ee264ab07a, type: 3}
+  cardSprite: {fileID: 21300000, guid: 1135b34d9a8093f4ea206dc16da524f1, type: 3}
   cardName: 
   cardType: 1
   cardDescription: 

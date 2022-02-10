@@ -27,6 +27,16 @@ namespace VoiceActing
             {
                 return base.CheckCardBreak(currentCharacter, cardsActive, challengerCharacter, newCards);
             }
+
+            int sum = 0;
+            for (int i = 0; i < newCards.Count; i++)
+            {
+                sum += newCards[i].GetCardValue();
+            }
+
+            if (sum == 0)
+                return 1;
+
             return -1;
         }
 
@@ -41,6 +51,8 @@ namespace VoiceActing
             {
                 return base.CheckCardBreak(cardActive, newCard);
             }
+            else if (newCard.GetCardValue() == 0)
+                return 1;
             return -1;
         }
 

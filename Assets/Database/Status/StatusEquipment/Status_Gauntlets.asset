@@ -33,7 +33,7 @@ MonoBehaviour:
       Data: 1|VoiceActing.StatusEffectUpdateOnCardPlayed, Assembly-CSharp
     - Name: playTime
       Entry: 3
-      Data: 20
+      Data: 10
     - Name: playCondition
       Entry: 5
       Data: true
@@ -83,7 +83,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  statusIconSprite: {fileID: 21300000, guid: eb17d8fac5c754e41b36871baf35aeb0, type: 3}
+  statusIconSprite: {fileID: 21300000, guid: 3a81c65ac05ceb04a80f39b71e4f0fbc, type: 3}
   statusName: Attack Bracer
   statusDescription: Prevent attack cards to be breaked.
   hideStatus: 0

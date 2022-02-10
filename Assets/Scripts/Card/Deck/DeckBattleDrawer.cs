@@ -177,6 +177,9 @@ namespace VoiceActing
 
         public void MoveHand(int index, List<Card> deck)
         {
+            if (deck.Count == 0)
+                return;
+
             if(index == ((currentIndex + 1) + deck.Count) % deck.Count)
             {
                 MoveHandRight(index, deck);

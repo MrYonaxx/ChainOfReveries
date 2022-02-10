@@ -14,13 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorName: "Derni\xE8re R\xEAverie"
   floorLevel: 0
+  firstRoom: {fileID: 0}
   floorLayout:
-  - {fileID: 11400000, guid: 1ef3bdcc98e7a5048aff360ba23e935b, type: 2}
+  - {fileID: 11400000, guid: 5c1353acfbfea4f428db18f8cf4116ea, type: 2}
   - {fileID: 11400000, guid: 5c1353acfbfea4f428db18f8cf4116ea, type: 2}
   - {fileID: 11400000, guid: 1ef3bdcc98e7a5048aff360ba23e935b, type: 2}
-  - {fileID: 11400000, guid: 5c1353acfbfea4f428db18f8cf4116ea, type: 2}
-  - {fileID: 11400000, guid: 1ef3bdcc98e7a5048aff360ba23e935b, type: 2}
-  - {fileID: 11400000, guid: 5c1353acfbfea4f428db18f8cf4116ea, type: 2}
-  - {fileID: 11400000, guid: 1ef3bdcc98e7a5048aff360ba23e935b, type: 2}
+  nextLevel: {fileID: 0}
   cardBanlist: []
   cardExplorationBanlist: []
+  bgm: {fileID: 0}

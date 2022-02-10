@@ -14,6 +14,9 @@ namespace VoiceActing {
         private IEnumerator fadeCoroutine;
 
 
+        //[SerializeField]
+        //Sprite spriteDeath = null;
+
         [SerializeField]
         bool debug = false;
         private void Start()
@@ -60,14 +63,14 @@ namespace VoiceActing {
             flash = 0;
             float t = 0f;
 
-
+            yield return new WaitForSeconds(1f);
             // Pour les spawn particules
             float previousT = 0f;
             SpriteRenderer spriteRender = spriteRenderer.GetComponent<SpriteRenderer>(); // à opti
 
             RenderTexture renderTex = RenderTexture.GetTemporary(
-                 spriteRender.sprite.texture.width,
-                 spriteRender.sprite.texture.height,
+                 (int)spriteRender.sprite.texture.width,
+                 (int)spriteRender.sprite.texture.height,
                  0,
                  RenderTextureFormat.Default,
                  RenderTextureReadWrite.Linear);
@@ -75,14 +78,14 @@ namespace VoiceActing {
             Graphics.Blit(spriteRender.sprite.texture, renderTex);
             RenderTexture previous = RenderTexture.active;
             RenderTexture.active = renderTex;
-            Texture2D readableText = new Texture2D(spriteRender.sprite.texture.width, spriteRender.sprite.texture.height);
-            readableText.ReadPixels(new Rect(0, 0, renderTex.width, renderTex.height), 0, 0);
+            Texture2D readableText = new Texture2D((int)spriteRender.sprite.rect.width, (int)spriteRender.sprite.rect.height);
+            readableText.ReadPixels(new Rect((int)spriteRender.sprite.rect.x, (int)spriteRender.sprite.rect.y, (int)spriteRender.sprite.rect.width, (int)spriteRender.sprite.rect.height), 0, 0);
             readableText.Apply();
             RenderTexture.active = previous;
             RenderTexture.ReleaseTemporary(renderTex);
 
             // Pour que ça marche cette ligne il faut que la texture soit readable (donc ça casse les reins c'est dangereux)
-            Color[] colors = readableText.GetPixels();
+            Color[] colors = readableText.GetPixels();// ((int)spriteRender.sprite.rect.x, (int)spriteRender.sprite.rect.y, (int)spriteRender.sprite.rect.width, (int)spriteRender.sprite.rect.height);
 
             while (t < time)
             {
@@ -106,14 +109,14 @@ namespace VoiceActing {
             {
                 if (colors[i].a > 0)
                 {
-                    float x = i % spriteRender.sprite.texture.width;
-                    float y = i / spriteRender.sprite.texture.width;
+                    float x = i % spriteRender.sprite.rect.width;
+                    float y = i / spriteRender.sprite.rect.width;
 
-                    float offsetX = x / spriteRender.sprite.texture.width - (spriteRender.sprite.pivot.x / spriteRender.sprite.texture.width); 
-                    float sizeX = spriteRender.transform.lossyScale.x * (spriteRender.sprite.texture.width / spriteRender.sprite.pixelsPerUnit);
+                    float offsetX = x / spriteRender.sprite.rect.width - (spriteRender.sprite.pivot.x / spriteRender.sprite.rect.width); 
+                    float sizeX = spriteRender.transform.lossyScale.x * (spriteRender.sprite.rect.width / spriteRender.sprite.pixelsPerUnit);
 
-                    float offsetY = y / spriteRender.sprite.texture.height - (spriteRender.sprite.pivot.y / spriteRender.sprite.texture.height);
-            float   sizeY = spriteRender.transform.lossyScale.y * (spriteRender.sprite.texture.height / spriteRender.sprite.pixelsPerUnit);
+                    float offsetY = y / spriteRender.sprite.rect.height - (spriteRender.sprite.pivot.y / spriteRender.sprite.rect.height);
+            float   sizeY = spriteRender.transform.lossyScale.y * (spriteRender.sprite.rect.height / spriteRender.sprite.pixelsPerUnit);
                     ParticleSystem.EmitParams emitParams = new ParticleSystem.EmitParams();
                     emitParams.position = new Vector3(sizeX * offsetX, sizeY * offsetY, 0);
                     emitParams.startSize = spriteRender.transform.lossyScale.x / spriteRender.sprite.pixelsPerUnit;
@@ -123,7 +126,7 @@ namespace VoiceActing {
             }
         }
 
-        private void SpawnParticle()
+        /*private void SpawnParticle()
         {
             SpriteRenderer spriteRender = GetComponent<SpriteRenderer>();
             Color[] colors = spriteRender.sprite.texture.GetPixels();
@@ -146,7 +149,7 @@ namespace VoiceActing {
                     particle.Emit(emitParams, 1);
                 }
             }
-        }
+        }*/
 
     }
 }

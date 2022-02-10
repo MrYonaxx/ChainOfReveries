@@ -29,9 +29,7 @@ namespace VoiceActing
 
         public override void OnHitComponent(CharacterBase character, CharacterBase target)
         {
-            // C'est pas encore opti opti mais ça pptimise un peu
-            if (shakeSprite == null)
-                shakeSprite = target.FeedbacksComponents.GetComponent<ShakeSprite>();
+            shakeSprite = target.FeedbacksComponents.GetComponent<ShakeSprite>();
 
             if (shakeTime > 0)
                 shakeSprite.Shake(shakePower, shakeTime);

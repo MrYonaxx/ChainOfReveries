@@ -59,6 +59,7 @@ namespace VoiceActing
         public override void StartEvent()
         {
             ShowBackground(true);
+            DestroyPreviousRoom();
             explorationManager.InputController.SetControllable(explorationManager.Player);
             battleManager.InitializeBattle(explorationManager.Player, encounter.Encounter);
             encounter.gameObject.SetActive(true);
@@ -93,7 +94,9 @@ namespace VoiceActing
             battleReward.InitializeBattleReward(explorationManager.Player);
 
             // Reward card
-            int reward = Random.Range(nbReward.x, nbReward.y);
+            // Plus on a de battle Modifiers, plus on a de cartes
+            float rewardChance = Random.Range(runData.BattleModifiers.Count * 0.5f, runData.BattleModifiers.Count * 1.1f);
+            int reward = (int)(nbReward.x + rewardChance);// Random.Range((float)nbReward.x, nbReward.y + runData.BattleModifiers.Count);
             for (int i = 0; i < reward; i++)
             {
                 CardExplorationData cardExploration = cardExplorationDatabase.GachaExploration();

@@ -1911,13 +1911,14 @@ GameObject:
   - component: {fileID: 1633746432695059909}
   - component: {fileID: 1196406037921310474}
   - component: {fileID: 1614603607350194568}
+  - component: {fileID: 1331357989532674271}
   m_Layer: 11
   m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1633746432695059909
 Transform:
   m_ObjectHideFlags: 0
@@ -2003,6 +2004,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &1331357989532674271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2066642149291879478}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 912d5028f52a473498673d8665a9bbf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2198147923285376236
 GameObject:
   m_ObjectHideFlags: 0
@@ -5460,7 +5473,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5246097933744336302
 RectTransform:
   m_ObjectHideFlags: 0
@@ -6058,6 +6071,7 @@ MonoBehaviour:
   cardTypeDictionary: {fileID: 11400000, guid: b0c9b38f7312ae84c8bf425733d9efa6, type: 2}
   cardPrefab: {fileID: 1742810711, guid: c4bb17fe596194144b3ace2df2751430, type: 3}
   cardReload: {fileID: 0}
+  cardReloadData: {fileID: 0}
   transformsHand:
   - {fileID: 28525853578123421}
   - {fileID: 1844546143621522785}
@@ -6074,6 +6088,8 @@ MonoBehaviour:
   deckParent: {fileID: 0}
   cardSpeed: 8
   transformCenterIndex: 4
+  cardCountScale: {fileID: 0}
+  textCardNumber: {fileID: 0}
   handLimitMin: 0
   handLimitMax: 12
 --- !u!1 &5246097934509251322
@@ -6203,7 +6219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameRunData: {fileID: 11400000, guid: 1aae71d6d0b174646afb7b05a8a06b1f, type: 2}
-  nbCard: 12
+  nbCard: 13
   equipmentDatabase: {fileID: 11400000, guid: 98652720399e7a24b9b95b1ee977fb91, type: 2}
   menuRoulette: {fileID: 5246097935114374673}
   chestAnimator: {fileID: 643690553456934463}
@@ -6349,7 +6365,6 @@ GameObject:
   - component: {fileID: 5246097934746994146}
   - component: {fileID: 5246097934746994151}
   - component: {fileID: 5246097934746994148}
-  - component: {fileID: 5246097934746994149}
   m_Layer: 5
   m_Name: CanvasTreasureChest
   m_TagString: Untagged
@@ -6420,23 +6435,6 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
---- !u!114 &5246097934746994149
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5246097934746994147}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_IgnoreReversedGraphics: 1
-  m_BlockingObjects: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 55
 --- !u!1 &5246097934846783219
 GameObject:
   m_ObjectHideFlags: 0

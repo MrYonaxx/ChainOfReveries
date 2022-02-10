@@ -21,8 +21,8 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  cardSprite: {fileID: 21300000, guid: 1c2f9e13da8c0c7449d922004f85b604, type: 3}
-  cardName: Epee Courte
+  cardSprite: {fileID: 21300000, guid: 82a61ca349fc2f245a6a2bf2e270ec4d, type: 3}
+  cardName: Shortsword
   cardType: 0
   cardDescription: 'Diminue de 1 la valeure des cartes.
 

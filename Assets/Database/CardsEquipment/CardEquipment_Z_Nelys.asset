@@ -21,12 +21,12 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  cardSprite: {fileID: 21300000, guid: 3bf58e19dadaecd4a92115d25a1128f8, type: 3}
+  cardSprite: {fileID: 21300000, guid: e1b20144fd7a15848976322578f4e8a8, type: 3}
   cardName: Nelys
   cardType: 0
-  cardDescription: Les 10 prochains Card Break (Tout card break confondu) banni les
-    cartes.
+  cardDescription: Your next Card Break banish the cards breaked.
   statsModifier: []
   statusEffectPassive: {fileID: 0}
-  equipmentAction: {fileID: 0}
-  statusEffectActive: {fileID: 0}
+  equipmentAction: {fileID: 199252371479164363, guid: a33b40e9fbedd174f89129f05d3d576e,
+    type: 3}
+  statusEffectActive: {fileID: 11400000, guid: 6df80aa8bbf8f0f45a1f80406fa8f564, type: 2}

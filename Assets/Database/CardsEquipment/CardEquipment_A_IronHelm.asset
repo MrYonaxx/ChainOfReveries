@@ -21,7 +21,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  cardSprite: {fileID: 21300000, guid: 0ec61c3c1b83ce148810afcdff22fa72, type: 3}
+  cardSprite: {fileID: 21300000, guid: c787ef280608ddf4fa6bcb0505cb6db9, type: 3}
   cardName: Heaume de fer
   cardType: 1
   cardDescription: Immunise au Stun.

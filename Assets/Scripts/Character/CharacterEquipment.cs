@@ -19,6 +19,14 @@ namespace VoiceActing
 
         List<CardEquipment> cardsEquipment = null;
 
+        // Variable pas très habile pour récupérer la carte qu'on vient d'équiper
+        CardEquipment latestCardEquipment;
+        public CardEquipment LatestCardEquipment
+        {
+            get { return latestCardEquipment; }
+        }
+
+
         public bool InEquipmentDeck = false;
 
         public void InitializeComponent(CharacterBase character)
@@ -48,7 +56,7 @@ namespace VoiceActing
             List<Card> cardPlayable = new List<Card>();
             for (int i = 0; i < deckEquipment.Count; i++)
             {
-                if(deckEquipment[i].CardEquipmentData.StatusEffectActive != null)
+                if(deckEquipment[i].CardEquipmentData.EquipmentAction != null)
                     cardPlayable.Add(deckEquipment[i]);
             }
             deckEquipmentController.SetDeck(cardPlayable);
@@ -73,8 +81,10 @@ namespace VoiceActing
         {
             // Supprime la carte du deck
             CardEquipment card = (CardEquipment)deckEquipmentController.SelectCard();
-            // Ajoute les effets de la carte
 
+            latestCardEquipment = card;
+
+            // Ajoute les effets de la carte
             if (card.CardEquipmentData.StatusEffectActive != null)
                 characterStatusController.ApplyStatus(card.CardEquipmentData.StatusEffectActive, 100);
         }

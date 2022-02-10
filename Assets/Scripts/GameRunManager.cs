@@ -20,26 +20,28 @@ namespace VoiceActing
          *               ATTRIBUTES                 *
         \* ======================================== */
         [SerializeField]
-        GameRunData runData;
+        GameRunData runData = null;
 
         [Title("Init Run")]
         [SerializeField]
-        InputController inputController;
+        InputController inputController = null;
         [SerializeField]
-        ExplorationManager explorationManager;
+        ExplorationManager explorationManager = null;
         [SerializeField]
-        HealthBarDrawer playerHealthBar;
+        HealthBarDrawer playerHealthBar = null;
 
 
         [Title("Placeholder")]
         [SerializeField]
-        CharacterBase player;
+        CharacterBase player = null;
 
         [Title("Debug")]
         [SerializeField]
-        BattleManager debugBattle;
+        BattleManager debugBattle = null;
         [SerializeField]
-        Transform debugParent;
+        Transform debugParent = null;
+
+        public bool instantExploration = false;
         #endregion
 
         #region Functions 
@@ -65,16 +67,32 @@ namespace VoiceActing
                 debugBattle.InitializeBattle(player, debugParent.GetComponentsInChildren<AIController>());
             }
             else
-                SetExplorationManager();
+            {
+#if UNITY_EDITOR
+                if (instantExploration)
+                {
+                    explorationManager.CreateExplorationMenu();
+                    inputController.SetControllable(explorationManager);
+                    return;
+                }
+#endif
+                Initialize();
+            }
+
+
+
         }
 
+        private void Initialize()
+        {
+            explorationManager.AutoCreateRoom(runData.FloorLayout.FirstRoom, 1f);
+        }
 
-
-        public void SetExplorationManager()
+        /*private void SetExplorationManager()
         {
             explorationManager.CreateExplorationMenu();
             inputController.SetControllable(explorationManager);
-        }
+        }*/
 
         private void OnDestroy()
         {

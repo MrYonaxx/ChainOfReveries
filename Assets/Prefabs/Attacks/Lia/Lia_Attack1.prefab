@@ -523,6 +523,10 @@ MonoBehaviour:
   element:
     element: 0
     ignoreElementalStat: 0
+  damage:
+    baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
 --- !u!114 &3874607487070562376
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -550,6 +554,10 @@ MonoBehaviour:
   element:
     element: 0
     ignoreElementalStat: 0
+  damage:
+    baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
 --- !u!1 &6664025316910145470
 GameObject:
   m_ObjectHideFlags: 0

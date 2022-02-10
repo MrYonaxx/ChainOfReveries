@@ -14,12 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCharacterData: {fileID: 11400000, guid: 02afca26a085403478824fba51632d71,
     type: 2}
+  playerDeckData: {fileID: 0}
   floorLayout: {fileID: 11400000, guid: 67146230d0b82684f91a3222012c3122, type: 2}
   playerDeck:
-  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
-    baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
-    baseCardValue: 8
   - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
     baseCardValue: 7
   - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
@@ -34,28 +31,19 @@ MonoBehaviour:
     baseCardValue: 2
   - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
     baseCardValue: 1
-  - cardData: {fileID: 11400000, guid: 51dba9fc2b28f8347a0e45427d1d22c8, type: 2}
-    baseCardValue: 6
-  - cardData: {fileID: 11400000, guid: b791867dff9a415489bdc1158e05c612, type: 2}
-    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: 8f96ebeb73ce975409f895a8921a6cdc, type: 2}
+    baseCardValue: 4
   - cardData: {fileID: 11400000, guid: b791867dff9a415489bdc1158e05c612, type: 2}
     baseCardValue: 6
   - cardData: {fileID: 11400000, guid: b791867dff9a415489bdc1158e05c612, type: 2}
     baseCardValue: 4
-  - cardData: {fileID: 11400000, guid: 4315a76c1c846b547808fcf93ff8a247, type: 2}
-    baseCardValue: 5
   - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
     baseCardValue: 0
-  - cardData: {fileID: 11400000, guid: 51dba9fc2b28f8347a0e45427d1d22c8, type: 2}
-    baseCardValue: 7
-  - cardData: {fileID: 11400000, guid: 51dba9fc2b28f8347a0e45427d1d22c8, type: 2}
-    baseCardValue: 1
-  - cardData: {fileID: 11400000, guid: c8c0b6a797a9c2d47a3290e52c4e3c2f, type: 2}
-    baseCardValue: 0
   playerExplorationDeck:
+  - {fileID: 11400000, guid: d15e3b90d2a853d48b4e6968f7d7f5a9, type: 2}
+  - {fileID: 11400000, guid: 8b387f445e481ed4a926ae009ec11175, type: 2}
   - {fileID: 11400000, guid: 428372b4353492a4992435ff672dd230, type: 2}
   - {fileID: 11400000, guid: ef8e00c5c175d844daebe5dcf2d8b07f, type: 2}
-  - {fileID: 11400000, guid: 44d7b7e69c371684a8bcda8858987fd1, type: 2}
   floor: 1
   room: 1
   money: 0

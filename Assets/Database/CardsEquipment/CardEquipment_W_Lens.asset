@@ -21,12 +21,12 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  cardSprite: {fileID: 21300000, guid: bf43e3a96e651db4e99d26a78e2bf068, type: 3}
+  cardSprite: {fileID: 21300000, guid: 8f012c1d920e7ea458d72053fb3e0901, type: 3}
   cardName: Loupe
   cardType: 0
   cardDescription: Octroie des informations sur les ennemis.
   statsModifier: []
   statusEffectPassive: {fileID: 0}
-  equipmentAction: {fileID: 818057835518184039, guid: 971d891aa08a3d74baf5f67b6da459b8,
+  equipmentAction: {fileID: 818057835518184039, guid: 622dd078e42162c4196d9afff7da84a0,
     type: 3}
   statusEffectActive: {fileID: 0}

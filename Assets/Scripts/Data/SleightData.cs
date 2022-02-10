@@ -122,6 +122,11 @@ namespace VoiceActing
             return true;
         }
 
+        /// <summary>
+        /// Retourne soit une carte représentant la sleight, soit les 3 cartes si on trouve aucune sleight associé
+        /// </summary>
+        /// <param name="cards"></param>
+        /// <returns></returns>
         public virtual List<Card> GetAttackData(List<Card> cards)
         {
             List<Card> res = new List<Card>();

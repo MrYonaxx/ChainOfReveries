@@ -83,9 +83,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  statusIconSprite: {fileID: 21300000, guid: 11559a4c3d19ea447a27eee45e8bf5a9, type: 3}
+  statusIconSprite: {fileID: 21300000, guid: ad61be2f4733cc8429b40301b0866ad9, type: 3}
   statusName: Lifesteal
-  statusDescription: Reduce all attacks cards by 1.
+  statusDescription: 
   hideStatus: 0
   statusShowLabel: 1
   statusConditionLabel: Cards

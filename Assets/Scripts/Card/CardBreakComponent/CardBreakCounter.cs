@@ -32,12 +32,12 @@ namespace VoiceActing
                 // CardBreak
                 return 0;
             }
-            if (sumNewCards == 0)
-            {
-                // Card Break
-                return 1;
-            }
-            else if (sumNewCards > sumActive)
+
+            currentCharacter.CharacterAction.CancelAction();
+            currentCharacter.CharacterAction.ForcePlayCard(new Card(counterAction, sumActive));
+
+            return -1;
+            /*else if (sumNewCards == 0 || sumNewCards > sumActive)
             {
                 // On se fait card break, mais du coup on contre
 
@@ -47,7 +47,7 @@ namespace VoiceActing
                 currentCharacter.CharacterAction.ForcePlayCard(new Card(counterAction, sumActive));
                 return -1;
             }
-            return -1;
+            return -1;*/
         }
 
     } 

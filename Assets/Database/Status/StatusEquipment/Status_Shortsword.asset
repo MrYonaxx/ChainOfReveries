@@ -77,7 +77,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  statusIconSprite: {fileID: 21300000, guid: 1c2f9e13da8c0c7449d922004f85b604, type: 3}
+  statusIconSprite: {fileID: 21300000, guid: 82a61ca349fc2f245a6a2bf2e270ec4d, type: 3}
   statusName: Attack Card -1
   statusDescription: Reduce all attacks cards by 1.
   hideStatus: 0

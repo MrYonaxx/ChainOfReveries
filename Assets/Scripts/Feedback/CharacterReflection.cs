@@ -44,7 +44,7 @@ namespace VoiceActing
 
         public void Update()
         {
-            this.transform.localPosition = new Vector3(spriteToReflect.transform.localPosition.x, 0, 0);
+            this.transform.localPosition = new Vector3(spriteToReflect.transform.localPosition.x, this.transform.localPosition.y, 0);
             spriteReflection.sprite = spriteToReflect.sprite;
             spriteReflection.flipX = spriteToReflect.flipX;
         }

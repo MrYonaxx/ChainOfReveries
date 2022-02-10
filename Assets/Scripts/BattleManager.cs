@@ -59,6 +59,9 @@ namespace VoiceActing
 
         List<CharacterBase> enemiesController;
 
+        [SerializeField]
+        CharacterBase zbla;
+
         public delegate void Action();
         public event Action OnEventBattleEnd;
 
@@ -97,8 +100,6 @@ namespace VoiceActing
             // Note au moi du futur : y'a un peu beaucoup d'event
             player.CharacterEquipment.DeckEquipmentController.OnDeckChanged += playerDeckDrawer.DrawHand;
             player.CharacterEquipment.DeckEquipmentController.OnCardMoved += playerDeckDrawer.MoveHand;
-            //player.CharacterEquipment.DeckEquipmentController.OnCardPlayed += playerDeckDrawer.PlayCard;
-            //player.CharacterEquipment.DeckEquipmentController.OnReload += playerDeckDrawer.HideCards;
 
             player.SleightController.OnSleightUpdate += playerSleightDrawer.DrawSleight;
 
@@ -118,6 +119,10 @@ namespace VoiceActing
                 enemiesController[i].CharacterKnockback.OnDeath += EnemyDead;
                 enemiesController[i].CharacterStatusController.OnStatusChanged += enemyStatusDrawer.DrawStatus;
                 enemiesController[i].SetCharacter();
+
+                // à virer après
+                enemiesController[i].CharacterEquipment.DeckEquipmentController.OnDeckChanged += enemyDeckDrawer.DrawHand;
+                enemiesController[i].CharacterEquipment.DeckEquipmentController.OnCardMoved += enemyDeckDrawer.MoveHand;
             }
 
             // Si c'est un 1v1 on lock tout le temps
@@ -125,6 +130,23 @@ namespace VoiceActing
             {
                 ForceLock();
             }*/
+
+
+            if(zbla)
+            {
+                /*zbla.DeckController.OnDeckChanged += enemyDeckDrawer.DrawHand;
+                zbla.DeckController.OnCardMoved += enemyDeckDrawer.MoveHand;
+                zbla.DeckController.OnCardPlayed += enemyDeckDrawer.PlayCard;
+                zbla.DeckController.OnReload += enemyDeckDrawer.HideCards;
+                zbla.DeckController.OnReloadChanged += enemyDeckDrawer.DrawReload;*/
+
+                zbla.CharacterEquipment.DeckEquipmentController.OnDeckChanged += enemyDeckDrawer.DrawHand;
+                zbla.CharacterEquipment.DeckEquipmentController.OnCardMoved += enemyDeckDrawer.MoveHand;
+
+                //zbla.SleightController.OnSleightUpdate += enemySleightDrawer.DrawSleight;
+
+                zbla.CharacterStatusController.OnStatusChanged += enemyStatusDrawer.DrawStatus;
+            }
 
             // Repasse en idle, permettant au player de taper
             player.ResetToIdle();
@@ -145,8 +167,6 @@ namespace VoiceActing
 
                 player.CharacterEquipment.DeckEquipmentController.OnDeckChanged -= playerDeckDrawer.DrawHand;
                 player.CharacterEquipment.DeckEquipmentController.OnCardMoved -= playerDeckDrawer.MoveHand;
-                //player.CharacterEquipment.DeckEquipmentController.OnCardPlayed -= playerDeckDrawer.PlayCard;
-                //player.CharacterEquipment.DeckEquipmentController.OnReload -= playerDeckDrawer.HideCards;
 
                 player.SleightController.OnSleightUpdate -= playerSleightDrawer.DrawSleight;
                 player.CharacterStatusController.OnStatusChanged -= playerStatusDrawer.DrawStatus;
@@ -184,12 +204,10 @@ namespace VoiceActing
 
         public void SetTarget(CharacterBase character)
         {
-            if (enemiesController.Count == 1 && character != null)
+            /*if (enemiesController.Count == 1 && character != null)
             {
-                //player.LockController.TargetLocked = enemiesController[0];
                 player.LockController.StopTargeting();
-                //return;
-            }
+            }*/
 
             if (enemyTarget != null)
             {
@@ -266,6 +284,7 @@ namespace VoiceActing
 
         private IEnumerator EndBattleCoroutine()
         {
+            player.LockController.Targeting = false;
             BattleFeedbackManager.Instance.BloomDeath();
             BattleFeedbackManager.Instance.CameraBigZoom();
             BattleFeedbackManager.Instance.ShakeScreen(0.2f, 25);
@@ -280,15 +299,18 @@ namespace VoiceActing
             OnEventBattleEnd.Invoke();
             player.CanPlay(true);
             SetTarget(null);
+            player.LockController.Targeting = true;
         }
 
         private IEnumerator EndBossCoroutine()
         {
+            player.LockController.Targeting = false;
             AudioManager.Instance.StopMusicWithScratch(12f);
             BattleFeedbackManager.Instance.RippleScreen(player.ParticlePoint.position.x, player.ParticlePoint.position.y);
             BattleFeedbackManager.Instance.SetBattleMotionSpeed(0f, 2f);
             BattleFeedbackManager.Instance.BackgroundFlash();
             BattleFeedbackManager.Instance.ShakeScreen(0.2f, 25);
+            BattleFeedbackManager.Instance.CameraController.StopZoom();
             yield return null;
             BattleFeedbackManager.Instance.SetBattleMotionSpeed(0f, 1f);
 
@@ -301,11 +323,14 @@ namespace VoiceActing
             BattleFeedbackManager.Instance.RippleScreen(player.ParticlePoint.position.x, player.ParticlePoint.position.y);
 
             yield return new WaitForSeconds(4);
+            SetTarget(null);
+            player.LockController.Targeting = true;
             yield return new WaitForSeconds(1);
             canvasBattle.SetActive(false);
             OnEventBattleEnd.Invoke();
             player.CanPlay(true);
-            SetTarget(null);
+
+
         }
 
         #endregion

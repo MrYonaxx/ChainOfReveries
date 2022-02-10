@@ -60,6 +60,7 @@ namespace VoiceActing
         Animator animatorHealthLost = null;
 
         int previousHealth = 0;
+        int previousHealthMax = 0;
         List<Image> healthBarList = new List<Image>();
 
 
@@ -96,6 +97,7 @@ namespace VoiceActing
             characterFaceOutline.sprite = characterFace.sprite;
 
             // Draw Health
+            previousHealthMax = (int)characterStat.HPMax.Value;
             CreateHealth((int)characterStat.HP, (int)characterStat.HPMax.Value);
             DrawHealth((int)characterStat.HP, (int)characterStat.HPMax.Value);
 
@@ -147,6 +149,9 @@ namespace VoiceActing
         // Vu que les stats sont des float pour être le plus "générique" possible je dois faire cette fonction un peu ghetto
         public void DrawHealth(float hp, float maxHp)
         {
+            if (previousHealthMax != (int)maxHp)
+                CreateHealth(hp, maxHp);
+
             DrawHealth((int)hp, (int)maxHp);
         }
 

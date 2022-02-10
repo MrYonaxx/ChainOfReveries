@@ -14,7 +14,7 @@ namespace VoiceActing
 {
     // Data de la run actuelle
     // C'est dans un SO pour gérer les transitions entre les scènes et garder le même inventaire
-    [CreateAssetMenu(fileName = "GameData", menuName = "GameData", order = 1)]
+    [CreateAssetMenu(fileName = "GameData", menuName = "GameSystem/GameRunData", order = 1)]
     public class GameRunData : ScriptableObject
     {
         #region Attributes 
@@ -22,13 +22,22 @@ namespace VoiceActing
         /* ======================================== *\
          *               ATTRIBUTES                 *
         \* ======================================== */
-        [Title("Current Player")]
+        [Title("Players Info")]
         [SerializeField]
         private PlayerData playerCharacterData = null;
         public PlayerData PlayerCharacterData
         {
             get { return playerCharacterData; }
+            set { playerCharacterData = value; }
         }
+        [SerializeField]
+        private DeckData playerDeckData = null;
+        public DeckData PlayerDeckData
+        {
+            get { return playerDeckData; }
+            set { playerDeckData = value; }
+        }
+
 
         // Le floor layout initial de la run
         [SerializeField]
@@ -191,8 +200,12 @@ namespace VoiceActing
 
         public void AddCard(Card c)
         {
+            // On ajoute les cartes 0 tout à la fin
             if (c.baseCardValue == 0)
+            {
                 playerDeck.Add(c);
+                return;
+            }
 
             bool addCard = false;
             bool addCategory = false;
@@ -235,6 +248,7 @@ namespace VoiceActing
         public void AddExplorationCard(CardExplorationData c)
         {
             playerExplorationDeck.Add(c);
+            playerExplorationDeck.Sort(SortExplorationCard);
         }
 
         public void AddEquipmentCard(CardEquipment c)
@@ -269,6 +283,16 @@ namespace VoiceActing
                 if (battleModifiers[i].nb <= 0)
                     battleModifiers.RemoveAt(i);
             }
+        }
+
+
+        // Sort par type
+        private int SortExplorationCard(CardExplorationData a, CardExplorationData b)
+        {
+            if (a.CardType < b.CardType)
+                return -1;
+            else
+                return 1;
         }
 
         #endregion

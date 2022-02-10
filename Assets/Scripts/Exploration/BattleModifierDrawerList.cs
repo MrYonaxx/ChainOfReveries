@@ -18,11 +18,13 @@ namespace VoiceActing
 
         List<BattleModifierDrawer> listBattleModifiers = new List<BattleModifierDrawer>();
         int maxIndex = 0;
+        int indexFloor = 0;
 
-
-        public void DrawBattleModifiers(List<BattleModifiers> battleModifiers, int indexFloor)
+        public void DrawBattleModifiers(List<BattleModifiers> battleModifiers, int floor)
         {
-            transformBattleModifier.sizeDelta = new Vector2(transformDeck.rect.width - ((143.5f+5) * indexFloor), transformBattleModifier.sizeDelta.y);
+            // 143.5 = La width d'une carte (à généraliser) 
+            transformBattleModifier.sizeDelta = new Vector2(transformDeck.rect.width - ((143.5f+5) * floor), transformBattleModifier.sizeDelta.y);
+            indexFloor = floor;
             maxIndex = battleModifiers.Count;
 
             // Dessine les battle Modifiers
@@ -58,6 +60,7 @@ namespace VoiceActing
 
         public void DrawBattleModifiersPreview(List<BattleModifiers> battleModifiers)
         {
+            transformBattleModifier.sizeDelta = new Vector2(transformDeck.rect.width - ((143.5f + 5) * indexFloor), transformBattleModifier.sizeDelta.y);
             for (int i = maxIndex; i < maxIndex + battleModifiers.Count; i++)
             {
                 DrawBattleModifier(battleModifiers[i - maxIndex], i);

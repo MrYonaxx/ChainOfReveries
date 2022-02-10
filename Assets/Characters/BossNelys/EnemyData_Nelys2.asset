@@ -1,0 +1,142 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d1db5c43ecd7a47bfed3f23c297697, type: 3}
+  m_Name: EnemyData_Nelys2
+  m_EditorClassIdentifier: 
+  characterFace: {fileID: 0}
+  characterName: Nelys
+  characterDescription: "She has high proficiency in fire magic, and her ability
+    Zantetsu can destroy and banish a card for the rest of the fight.\n\nTry to observe
+    her deck to know when she wants to use Zantetsu.\n "
+  characterStat:
+    hp: 6700
+    HPMax:
+      baseValue: 6700
+      finalValue: 6700
+    Attack:
+      baseValue: 1
+      finalValue: 1
+    Defense:
+      baseValue: 1
+      finalValue: 1
+    Magic:
+      baseValue: 1
+      finalValue: 1
+    MagicDefense:
+      baseValue: 1
+      finalValue: 1
+    RevengeValue:
+      baseValue: 15
+      finalValue: 15
+    KnockbackTime:
+      baseValue: 1
+      finalValue: 1
+    ReloadAmount:
+      baseValue: 100
+      finalValue: 100
+    CardBreakTime:
+      baseValue: 0.8
+      finalValue: 0.8
+    CardBreakKnockback:
+      baseValue: 1
+      finalValue: 1
+    Speed:
+      baseValue: 2.7
+      finalValue: 2.7
+    Gravity:
+      baseValue: 25
+      finalValue: 25
+    GravityMax:
+      baseValue: 45
+      finalValue: 45
+    MotionSpeed:
+      baseValue: 1
+      finalValue: 1
+    Mass:
+      baseValue: 1
+      finalValue: 1
+    ElementalResistances: []
+    StatusResistances: []
+  salut: 
+  initialDeck:
+  - cardData: {fileID: 11400000, guid: 93084acb116dd8140bb72457a7fcc899, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+    baseCardValue: 6
+  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: 622321ab569aee9459d136a5de49f228, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 622321ab569aee9459d136a5de49f228, type: 2}
+    baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: 622321ab569aee9459d136a5de49f228, type: 2}
+    baseCardValue: 3
+  - cardData: {fileID: 11400000, guid: 622321ab569aee9459d136a5de49f228, type: 2}
+    baseCardValue: 1
+  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: 93084acb116dd8140bb72457a7fcc899, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 622321ab569aee9459d136a5de49f228, type: 2}
+    baseCardValue: 1
+  - cardData: {fileID: 11400000, guid: 622321ab569aee9459d136a5de49f228, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: 622321ab569aee9459d136a5de49f228, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: 622321ab569aee9459d136a5de49f228, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+    baseCardValue: 2
+  - cardData: {fileID: 11400000, guid: 93084acb116dd8140bb72457a7fcc899, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: f7fd926a0ae25c74593e7315564bc6ad, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+    baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+    baseCardValue: 6
+  - cardData: {fileID: 11400000, guid: f7fd926a0ae25c74593e7315564bc6ad, type: 2}
+    baseCardValue: 3
+  - cardData: {fileID: 11400000, guid: 622321ab569aee9459d136a5de49f228, type: 2}
+    baseCardValue: 1
+  - cardData: {fileID: 11400000, guid: 622321ab569aee9459d136a5de49f228, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 622321ab569aee9459d136a5de49f228, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 93084acb116dd8140bb72457a7fcc899, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: f7fd926a0ae25c74593e7315564bc6ad, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+    baseCardValue: 3
+  - cardData: {fileID: 11400000, guid: f7fd926a0ae25c74593e7315564bc6ad, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 93084acb116dd8140bb72457a7fcc899, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 93084acb116dd8140bb72457a7fcc899, type: 2}
+    baseCardValue: 0
+  sleightDatabase:
+  - {fileID: 11400000, guid: c781ea238c8eca94f91a80d068278f9a, type: 2}
+  - {fileID: 11400000, guid: 1f263cf9ac3b65a42880c47832287f3b, type: 2}
+  initialEquipment:
+  - cardEquipment: {fileID: 11400000, guid: b9f7e9038916aa74581026945bb78e0b, type: 2}
+    probability: 100
+  loreDescription: Once Lia and Oneiros succesfully open the Ether Wells, Nelys intervene
+    and defeat Lia in order to protect the Reverie.

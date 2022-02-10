@@ -80,7 +80,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  statusIconSprite: {fileID: 21300000, guid: 6bcb9bf53aee6b94e967f34b76ecd2c7, type: 3}
+  statusIconSprite: {fileID: 21300000, guid: e464a7630c5d9d94aae3d716ec186417, type: 3}
   statusName: Fire Boost
   statusDescription: 
   hideStatus: 0

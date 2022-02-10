@@ -13,12 +13,16 @@ using Feedbacks;
 
 namespace VoiceActing
 {
+    // Projectile simple, préféré un animator si les mouvements du projectile sont complexes
     public class AttackC_Projectile: AttackComponent
     {
         [SerializeField]
         Vector2 speed = Vector2.zero;
         [SerializeField]
         bool fixedDirection = false;
+        [SerializeField]
+        [InfoBox("Speed X représente la vitesse", VisibleIf = "forwardDirection")]
+        bool forwardDirection = false;
 
         /* ======================================== *\
          *                FUNCTIONS                 *
@@ -27,12 +31,19 @@ namespace VoiceActing
 
         public override void UpdateComponent(CharacterBase character)
         {
-            int direction = 1;
+            Vector3 direction = new Vector3(1, 0, 0);
             if(fixedDirection == false)
             {
-                direction = (int) Mathf.Sign(this.transform.lossyScale.x);
+                direction.x = Mathf.Sign(this.transform.lossyScale.x);
             }
-            this.transform.position += new Vector3(speed.x * character.MotionSpeed * Time.deltaTime * direction , speed.y * character.MotionSpeed * Time.deltaTime, 0);// (speed * character.MotionSpeed);
+            if (forwardDirection)
+            {
+                direction = this.transform.right * direction.x;
+                this.transform.position += (direction * Time.deltaTime * character.MotionSpeed * speed.x);
+                return;
+            }
+
+            this.transform.position += new Vector3(speed.x * character.MotionSpeed * Time.deltaTime * direction.x , speed.y * character.MotionSpeed * Time.deltaTime * direction.y, 0);
         }
 
     } 

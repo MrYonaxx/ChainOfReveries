@@ -21,10 +21,11 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  cardSprite: {fileID: 21300000, guid: e7e78aff489731045af31a7a88153f5b, type: 3}
+  cardSprite: {fileID: 21300000, guid: fd047825b19a2354ba52f5375349a41a, type: 3}
   cardName: Shoulder Bag
   cardType: 1
   cardDescription: Permet de Reload en mouvement.
   statsModifier: []
   statusEffectPassive: {fileID: 0}
+  equipmentAction: {fileID: 0}
   statusEffectActive: {fileID: 0}

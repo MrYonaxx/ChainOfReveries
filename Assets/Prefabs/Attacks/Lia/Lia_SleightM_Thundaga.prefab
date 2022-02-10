@@ -89,6 +89,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetAtStart: 0
+  targetRandom: 0
+  randomX: {x: -6, y: 6}
+  randomY: {x: -1, y: 2}
 --- !u!114 &4194450173730419908
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -340,6 +343,7 @@ MonoBehaviour:
   knockbackDurationMultiplier: 1
   knockbackX: 0
   knockbackZ: 4.5
+  revengeValue: 1
   knockbackInvulnerability: 0.18
 --- !u!114 &5485531285977804821
 MonoBehaviour:
@@ -649,6 +653,8 @@ MonoBehaviour:
   attackAnimation: {fileID: 7400000, guid: 72783ae53eaa46f498aa3520b5d4c7f7, type: 2}
   characterAnimationData: {fileID: 4670453683040411876}
   linkToCharacter: 0
+  fixToGround: 0
+  subActionCardBreakable: 0
   atkControllers:
   - {fileID: 4733904636063077261}
 --- !u!1 &6110435575002120153
@@ -710,6 +716,10 @@ MonoBehaviour:
   element:
     element: 0
     ignoreElementalStat: 0
+  damage:
+    baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
 --- !u!114 &5330442720741822962
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -737,6 +747,10 @@ MonoBehaviour:
   element:
     element: 4
     ignoreElementalStat: 0
+  damage:
+    baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
 --- !u!1 &6501642363024947815
 GameObject:
   m_ObjectHideFlags: 0

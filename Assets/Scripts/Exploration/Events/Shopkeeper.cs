@@ -10,6 +10,8 @@ namespace VoiceActing
         [SerializeField]
         GameObject buttonPrompt = null;
         [SerializeField]
+        Transform cameraFocus = null;
+        [SerializeField]
         BattleReward battleReward = null;
         [SerializeField]
         MenuShop menuShop = null;
@@ -42,8 +44,11 @@ namespace VoiceActing
         public void Interact(CharacterBase character)
         {
             this.character = character;
+            character.CharacterMovement.InMovement = false; // hack pour que le perso arrête de bouger
+
             previousControllable = character.Inputs.Controllable;
-            BattleFeedbackManager.Instance?.CameraController.AddTarget(this.transform, 10);
+            
+
             if (!firstTime)
             {
                 character.Inputs.SetControllable(battleReward);
@@ -62,13 +67,15 @@ namespace VoiceActing
         public void Shop()
         {
             menuShop.InitializeMenu();
+            menuShop.SetCharacter(character);
             character.Inputs.SetControllable(menuShop);
+            BattleFeedbackManager.Instance?.CameraController.AddTarget(cameraFocus, 10);
         }
 
         public void QuitShop()
         {
             character.Inputs.SetControllable(previousControllable);
-            BattleFeedbackManager.Instance?.CameraController.RemoveTarget(this.transform);
+            BattleFeedbackManager.Instance?.CameraController.RemoveTarget(cameraFocus);
         }
     }
 }

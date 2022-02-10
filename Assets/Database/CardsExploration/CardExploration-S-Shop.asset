@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aaaedca360f0e340996e82e36c3b4a0, type: 3}
   m_Name: CardExploration-S-Shop
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: bbe3b9df71d076d41b96007dbc242bb7, type: 3}
+  cardSprite: {fileID: 21300000, guid: e74cd172aaa806546a0870f536bae12c, type: 3}
   cardName: Songe d'alchimiste
   cardDescription: "Cr\xE9er une r\xEAverie apportant opulence et abondance \xE0
     un marchand."

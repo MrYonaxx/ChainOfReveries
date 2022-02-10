@@ -15,7 +15,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 51dba9fc2b28f8347a0e45427d1d22c8, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -28,16 +29,17 @@ MonoBehaviour:
       Entry: 7
       Data: 0|VoiceActing.CardBreakCounter, Assembly-CSharp
     - Name: counterAction
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
-  cardSprite: {fileID: 21300000, guid: e7d0568ba1471934795576a6d0b0b661, type: 3}
+  cardSprite: {fileID: 21300000, guid: b35e7cb4761848c4492bf5252ad3c474, type: 3}
   cardName: Contre
   cardType: 0
   cardDescription: '[Counter]'
-  attackManager: {fileID: 0}
+  attackManager: {fileID: 5407148728326394564, guid: 7395105477ad9b04da51ccb944f76077,
+    type: 3}
   cardProbability: 64000000640000006400000064000000640000006400000064000000640000006400000064000000
   breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   maxProbability: 1000

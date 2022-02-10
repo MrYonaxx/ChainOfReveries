@@ -46,7 +46,7 @@ namespace Menu
 			return text[textBox.maxVisibleCharacters];
 		}
 
-		private void Start()
+		private void Awake()
 		{
 			timeInterval /= 60f;
 			timePause /= 60f;
@@ -62,10 +62,12 @@ namespace Menu
 			this.text = text;
 			textBox.text = text;
 			textBox.maxVisibleCharacters = 0;
+			if (timeInterval < 0)
+				textBox.maxVisibleCharacters = text.Length;
 			show = true;
 			DrawAnimator();
 		}
-		//yield return null;
+
 
 		public void UpdateControl(InputController input)
 		{
@@ -88,6 +90,13 @@ namespace Menu
 				textBox.maxVisibleCharacters = text.Length;
 			}
 
+		}
+
+        private void Update()
+        {
+			if (show == false)
+				return;
+
 			t += Time.deltaTime;
 			if (t > timeInterval)
 			{
@@ -106,10 +115,9 @@ namespace Menu
 
 
 
-		private void EndTextbox()
+        private void EndTextbox()
 		{
-			show = false;
-			DrawAnimator();
+			HideTextbox();
 			OnTextEnd.Invoke();
 		}
 
@@ -117,9 +125,19 @@ namespace Menu
 		{
 			if (textboxAnimator != null)
 			{
-				textboxAnimator.gameObject.SetActive(true);
+				if(show)
+					textboxAnimator.gameObject.SetActive(true);
 
 				textboxAnimator.SetBool("Appear", show);
+			}
+		}
+
+		public void HideTextbox()
+        {
+			if (show)
+			{
+				show = false;
+				DrawAnimator();
 			}
 		}
 	}

@@ -28,6 +28,11 @@ namespace VoiceActing
                 this.enabled = false;
                 return;
             }
+            /*else if ()
+            {
+                return;
+            }*/
+
             if(cardBreakController.GetActiveCharacter() == character)
             {
                 textMesh.enabled = true;

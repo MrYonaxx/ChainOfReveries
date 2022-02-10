@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frame: 10
-  frameEnd: 50
+  frameEnd: 60
   speed: 8
   maxTrackingY: 0.4
 --- !u!114 &7406093635845558607
@@ -77,7 +77,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf29bae8d6a9743927604b4178c1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 80
+  frame: 90
   frameEnd: 0
   moveForward: 0
   speed: {x: 0, y: 0}
@@ -208,11 +208,11 @@ MonoBehaviour:
     AnimationEvent: {fileID: 4044778688756817303}
   - Frame: 10
     AnimationEvent: {fileID: 1331581860605125141}
-  - Frame: 55
+  - Frame: 65
     AnimationEvent: {fileID: 4461643240352555985}
-  - Frame: 80
-    AnimationEvent: {fileID: 7406093635845558607}
   - Frame: 90
+    AnimationEvent: {fileID: 7406093635845558607}
+  - Frame: 100
     AnimationEvent: {fileID: 2524242894598313049}
 --- !u!114 &4461643240352555985
 MonoBehaviour:
@@ -226,8 +226,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de0fc71d353b8ef479aa0db3b846d0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 55
-  frameEnd: 75
+  frame: 65
+  frameEnd: 85
   attack: {fileID: 4733904636063077261}
 --- !u!114 &2524242894598313049
 MonoBehaviour:
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620e0e815b2f5174f8b380210d9a19f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 90
+  frame: 100
   frameEnd: 0
 --- !u!1 &4114098666737907609
 GameObject:
@@ -347,7 +347,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4388082830208477171}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.01274462, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6202298799396831511}
@@ -392,7 +392,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 6837581688451178668, guid: 09f7587736e904447847adff207189d0,
+  m_Sprite: {fileID: 1901477621183759695, guid: 98c08da731202184c9c48e6be4e37ac7,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -514,9 +514,14 @@ MonoBehaviour:
   cardPercentage:
     percentDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     debugDamage: {x: 100, y: 200}
+    maxHP: 0
   element:
     element: 0
     ignoreElementalStat: 0
+  damage:
+    baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
 --- !u!1 &6664025316910145470
 GameObject:
   m_ObjectHideFlags: 0

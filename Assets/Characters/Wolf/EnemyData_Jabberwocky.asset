@@ -14,8 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterFace: {fileID: 0}
   characterName: Jabberwocky
+  characterDescription: 'Jabberwock can summon phantom wolves to fight at his side.
+
+
+    The
+    phantom wolves can attack without using a card, so keep an eye on them even if
+    the jabberwock is in your combo.'
   characterStat:
-    hp: 4500
+    hp: 1
     HPMax:
       baseValue: 3400
       finalValue: 3400
@@ -87,5 +93,4 @@ MonoBehaviour:
     baseCardValue: 0
   sleightDatabase: []
   initialEquipment: []
-  hitVoice: []
-  deadVoice: []
+  loreDescription: 

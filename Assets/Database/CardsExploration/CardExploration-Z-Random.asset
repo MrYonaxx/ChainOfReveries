@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aaaedca360f0e340996e82e36c3b4a0, type: 3}
   m_Name: CardExploration-Z-Random
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: ba3d0026339af374c93e28623b8e7589, type: 3}
+  cardSprite: {fileID: 21300000, guid: 16d174e1223ed8e448b268a367b041e2, type: 3}
   cardName: "D\xE9lire"
   cardDescription: "Cr\xE9er une r\xEAverie al\xE9atoire."
   cardType: 2
   explorationEvent: {fileID: 0}
+  battleModifiers: []

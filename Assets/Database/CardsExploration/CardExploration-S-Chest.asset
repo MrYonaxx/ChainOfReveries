@@ -12,9 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aaaedca360f0e340996e82e36c3b4a0, type: 3}
   m_Name: CardExploration-S-Chest
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: bf15f23d9508d0a4e8c8c48ba78043cc, type: 3}
+  cardSprite: {fileID: 21300000, guid: 871e5ebdcff5af74ab60adf2fc1c2478, type: 3}
   cardName: Songe de richesse
   cardDescription: "Cr\xE9er une r\xEAverie pour obtenir des tr\xE9sors."
   cardType: 1
   explorationEvent: {fileID: 6310875253515177516, guid: b5727973ca558a74993c1382e29c1daf,
     type: 3}
+  battleModifiers: []

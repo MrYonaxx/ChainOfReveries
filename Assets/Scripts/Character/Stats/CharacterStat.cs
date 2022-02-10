@@ -223,11 +223,30 @@ namespace VoiceActing
 
         public void AddStat(StatModifier stat)
         {
-            GetStat(stat.CharStat).AddStatBonus(stat.Value, stat.ModifierType);
+            if (stat.CharStat == CharStatEnum.HPMax) // si on augmente les HPMax, on augmente les hp en conséquence
+            {
+                float ratio = HP / HPMax.Value;
+                HPMax.AddStatBonus(stat.Value, stat.ModifierType);
+                HP = HPMax.Value * ratio;
+            }
+            else
+            {
+                GetStat(stat.CharStat).AddStatBonus(stat.Value, stat.ModifierType);
+            }
+
         }
         public void RemoveStat(StatModifier stat)
         {
-            GetStat(stat.CharStat).AddStatBonus(-stat.Value, stat.ModifierType);
+            if (stat.CharStat == CharStatEnum.HPMax) // si on augmente les HPMax, on augmente les hp en conséquence
+            {
+                float ratio = HP / HPMax.Value;
+                HPMax.AddStatBonus(-stat.Value, stat.ModifierType);
+                HP = HPMax.Value * ratio;
+            }
+            else
+            {
+                GetStat(stat.CharStat).AddStatBonus(-stat.Value, stat.ModifierType);
+            }
         }
 
         public Stat GetStat(CharStatEnum charStat)

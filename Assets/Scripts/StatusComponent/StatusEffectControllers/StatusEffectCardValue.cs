@@ -30,6 +30,8 @@ namespace VoiceActing
         [SerializeField]
         public int CardType = -1;
 
+        List<Card> cardReferences;
+
         #endregion
 
         #region GettersSetters 
@@ -66,16 +68,21 @@ namespace VoiceActing
 
         public override void ApplyEffect(CharacterBase character)
         {
+            cardReferences = new List<Card>();
             for (int i = 0; i < character.DeckController.DeckData.Count; i++)
             {
                 if (BonusCondition)
                 {
-                    if(character.DeckController.DeckData[i].GetCardType() == CardType)
+                    if (character.DeckController.DeckData[i].GetCardType() == CardType)
+                    {
                         character.DeckController.DeckData[i].AddCardValue(BonusValue);
+                        cardReferences.Add(character.DeckController.DeckData[i]);
+                    }
                 }
                 else
                 {
                     character.DeckController.DeckData[i].AddCardValue(BonusValue);
+                    cardReferences.Add(character.DeckController.DeckData[i]);
                 }
             }
             character.DeckController.RefreshDeck();
@@ -84,17 +91,9 @@ namespace VoiceActing
 
         public override void RemoveEffect(CharacterBase character)
         {
-            for (int i = 0; i < character.DeckController.DeckData.Count; i++)
+            for (int i = 0; i < cardReferences.Count; i++)
             {
-                if (BonusCondition)
-                {
-                    if (character.DeckController.DeckData[i].GetCardType() == CardType)
-                        character.DeckController.DeckData[i].AddCardValue(-BonusValue);
-                }
-                else
-                {
-                    character.DeckController.DeckData[i].AddCardValue(-BonusValue);
-                }
+                cardReferences[i].AddCardValue(-BonusValue);
             }
         }
 

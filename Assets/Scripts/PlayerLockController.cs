@@ -96,6 +96,12 @@ namespace VoiceActing
         {
             while (targetInList == true)
             {
+                if (!targeting) // Met en pause le processus
+                {
+                    yield return null;
+                    continue;
+                }
+
                 float bestLength = 999;
                 int bestIndex = 0;
                 for (int i = 0; i < transformsLocked.Count; i++)
@@ -107,20 +113,23 @@ namespace VoiceActing
                         bestIndex = i;
                     }
                 }
-                if (targeting)
+                if (lockMarker)
                 {
                     lockMarker.gameObject.SetActive(true);
                     lockMarker.transform.SetParent(transformsLocked[bestIndex].transform);
                     lockMarker.transform.localPosition = new Vector3(0, 0.48f, 0);
                     lockMarker.transform.localScale = Vector3.one;
-                    TargetLocked = transformsLocked[bestIndex];
                 }
+                TargetLocked = transformsLocked[bestIndex];
                 yield return null;
             }
             yield return null;
             TargetLocked = null;
-            lockMarker.gameObject.SetActive(false);
-            lockMarker.transform.SetParent(this.transform);
+            if (lockMarker)
+            {
+                lockMarker.gameObject.SetActive(false);
+                lockMarker.transform.SetParent(this.transform);
+            }
         }
 
 
@@ -133,8 +142,11 @@ namespace VoiceActing
         {
             StopAllCoroutines();
             transformsLocked.Clear();
-            lockMarker.gameObject.SetActive(false);
-            lockMarker.transform.SetParent(this.transform);
+            if(lockMarker)
+            {
+                lockMarker.gameObject.SetActive(false);
+                lockMarker.transform.SetParent(this.transform);
+            }
             targetInList = false;
             this.transform.localScale = defaultSize;
             colliderEnabled = false;

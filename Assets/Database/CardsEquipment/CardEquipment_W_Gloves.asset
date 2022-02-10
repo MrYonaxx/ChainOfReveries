@@ -21,7 +21,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  cardSprite: {fileID: 21300000, guid: 71942adb262e02b46a01e36e0cf9bf6e, type: 3}
+  cardSprite: {fileID: 21300000, guid: 03adbf024fc8ec240a013fd2f33eb8c7, type: 3}
   cardName: Gloves
   cardType: 0
   cardDescription: "Les cartes magiques ne peuvent pas \xEAtre Card Break.\n"

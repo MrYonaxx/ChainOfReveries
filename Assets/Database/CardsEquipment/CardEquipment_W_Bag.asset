@@ -21,10 +21,10 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  cardSprite: {fileID: 21300000, guid: cf9d12eb2369e4d42a5632778dae1ff9, type: 3}
+  cardSprite: {fileID: 21300000, guid: b04f476c7e0a8dd4fa55b223840dfa50, type: 3}
   cardName: Shoulder Bag
   cardType: 0
-  cardDescription: "Reload instantan\xE9ment."
+  cardDescription: Reload instantly.
   statsModifier: []
   statusEffectPassive: {fileID: 0}
   equipmentAction: {fileID: 818057835518184039, guid: 971d891aa08a3d74baf5f67b6da459b8,

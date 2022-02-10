@@ -180,6 +180,16 @@ namespace VoiceActing
             get { return motionSpeed * characterStat.MotionSpeed.Value; }
         }
 
+
+
+        CharacterState oldState;
+        public CharacterState OldState
+        {
+            get { return oldState; }
+        }
+
+
+
         bool init = false;
         bool canPlay = true;
         IEnumerator motionSpeedCoroutine;
@@ -250,7 +260,7 @@ namespace VoiceActing
             if (currentState != null)
                 currentState.EndState(this, characterState);
 
-            CharacterState oldState = currentState;
+            oldState = currentState;
             currentState = characterState;
 
             currentState.StartState(this, oldState);
@@ -303,9 +313,9 @@ namespace VoiceActing
 
 
 
-        public void CreateAnimation(GameObject animation)
+        public GameObject CreateAnimation(GameObject animation)
         {
-            Instantiate(animation, particlePoint.transform.position, Quaternion.identity);
+            return Instantiate(animation, particlePoint.transform.position, Quaternion.identity);
         }
 
         public AnimationParticle CreateAnimation(AnimationParticle animation)

@@ -24,18 +24,27 @@ namespace VoiceActing
             set { character = value; }
         }
 
-
-
-
-        void Awake()
+        [SerializeField]
+        AISleightData aiSleightData;
+        public AISleightData SleightData
         {
+            get { return aiSleightData; }
+        }
+
+        protected override void Awake()
+        {
+            // Initialise les struct pour les inputs
+            base.Awake();
+            // Initialise le behavior tree
             behaviorTree = GetComponent<BehaviorTree>();
             behaviorTree.SetVariableValue("AI", this);
+            aiSleightData = new AISleightData();
             if (aiEnabled)
             {
                 StartBehavior();
             }
-            player = ReInput.players.GetPlayer(0);
+
+            // Set le character controll" par le behvior tree
             SetControllable(character);
         }
 
@@ -48,59 +57,10 @@ namespace VoiceActing
         protected override void Update()
         {
             UpdateBuffer();
-            if (debugOn)
-                UpdateInput();
             if (controllable != null)
                 controllable.UpdateControl(this);
         }
 
-
-
-
-        // =========================================================================
-        [Title("Debug")]
-        [SerializeField]
-        bool debugOn = false;
-
-        Player player;
-
-
-        private void UpdateInput()
-        {
-            UpdateInputButton("B", inputA);
-
-            if (Mathf.Abs(player.GetAxis("RightVertical")) >= joystickThreshold)
-            {
-                inputLeftStickY.InputValue = player.GetAxis("RightVertical");
-            }
-            else
-            {
-                inputLeftStickY.InputValue = 0;
-            }
-
-            if (Mathf.Abs(player.GetAxis("RightHorizontal")) >= joystickThreshold)
-            {
-                inputLeftStickX.InputValue = player.GetAxis("RightHorizontal");
-            }
-            else
-            {
-                inputLeftStickX.InputValue = 0;
-            }
-        }
-
-        private void UpdateInputButton(string buttonName, InputBuffer input)
-        {
-            if (player.GetButtonDown(buttonName))
-                input.BufferDownInput(bufferTime);
-            else if (player.GetButtonUp(buttonName))
-                input.BufferUpInput(bufferTime);
-
-            input.InputValue = 0;
-            if (player.GetButton(buttonName))
-            {
-                input.InputValue = 1;
-            }
-        }
 
 
     }

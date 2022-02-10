@@ -24,7 +24,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 5c1353acfbfea4f428db18f8cf4116ea, type: 2}
   - {fileID: 11400000, guid: 5c1353acfbfea4f428db18f8cf4116ea, type: 2}
   - {fileID: 11400000, guid: 5c1353acfbfea4f428db18f8cf4116ea, type: 2}
-  - {fileID: 11400000, guid: 5c1353acfbfea4f428db18f8cf4116ea, type: 2}
   - {fileID: 11400000, guid: 1ef3bdcc98e7a5048aff360ba23e935b, type: 2}
   nextLevel: {fileID: 11400000, guid: c486d5f701036d243a7e0c69b1ab680d, type: 2}
   cardBanlist: []

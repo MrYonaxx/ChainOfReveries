@@ -23,7 +23,7 @@ namespace VoiceActing
 
         [TabGroup("DeckExploration")]
         [SerializeField]
-        private CardExplorationData[] initialDeckExploration;
+        private CardExplorationData[] initialDeckExploration = null;
         public CardExplorationData[] InitialDeckExploration
         {
             get { return initialDeckExploration; }
@@ -33,7 +33,7 @@ namespace VoiceActing
         [TabGroup("CardDatabase")]
         [OnValueChanged("CalculateMaxProbability", true)]
         [SerializeField]
-        private List<Card> cardProbability;
+        private List<Card> cardProbability = null;
         public List<Card> CardProbability
         {
             get { return cardProbability; }
@@ -44,6 +44,13 @@ namespace VoiceActing
         [ReadOnly]
         private int maxProbability;
 
+
+        [SerializeField]
+        private Sprite spriteProfile = null;
+        public Sprite SpriteProfile
+        {
+            get { return spriteProfile; }
+        }
 
         #endregion
 
@@ -80,6 +87,8 @@ namespace VoiceActing
 
             return new Card(cardProbability[i].CardData, cardProbability[i].CardData.GetRandomCardValue(), isPremium);
         }
+
+
 
         private void CalculateMaxProbability()
         {

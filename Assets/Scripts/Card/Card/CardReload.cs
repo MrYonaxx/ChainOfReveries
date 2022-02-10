@@ -60,7 +60,8 @@ namespace VoiceActing
             if (character.CharacterAction.CurrentAttackCard != null)
                 return;
 
-            if (character.Inputs.InputA.InputValue == 1)
+            // On ne peut reload qu'en étant en idle
+            if (character.Inputs.InputA.InputValue == 1 && character.State.ID == CharacterStateID.Idle)
             {
                 character.SetState(character.DeckController.GetStateReload());
             }

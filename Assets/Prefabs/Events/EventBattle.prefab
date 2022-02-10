@@ -185,7 +185,6 @@ MonoBehaviour:
   battleReward: {fileID: 8236675884944672411}
   runData: {fileID: 11400000, guid: 1aae71d6d0b174646afb7b05a8a06b1f, type: 2}
   encounterDatabase: {fileID: 11400000, guid: 2861585ba5c1ed2489b9f77547c376e5, type: 2}
-  nbEnemies: {x: 1, y: 1}
   cardExplorationDatabase: {fileID: 11400000, guid: 18ffd259ad235184ca07b559eb5da117,
     type: 2}
   nbReward: {x: 1, y: 1}
@@ -358,6 +357,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8236675884287493957}
     m_Modifications:
+    - target: {fileID: 1987183374652999224, guid: b46ff84b6a41ec94e93c2ad750f66063,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987183374656592550, guid: b46ff84b6a41ec94e93c2ad750f66063,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1987183375011796841, guid: b46ff84b6a41ec94e93c2ad750f66063,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -417,6 +426,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: BattleManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 1987183375280391833, guid: b46ff84b6a41ec94e93c2ad750f66063,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6420078144082449446, guid: b46ff84b6a41ec94e93c2ad750f66063,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 32
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b46ff84b6a41ec94e93c2ad750f66063, type: 3}

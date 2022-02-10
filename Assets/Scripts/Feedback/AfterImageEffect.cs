@@ -30,11 +30,6 @@ namespace VoiceActing
         int index = 0;
         List<SpriteRenderer> afterImage = new List<SpriteRenderer>();
 
-        private void Start()
-        {
-            //StartAfterImage();
-        }
-
         // Update is called once per frame
         void Update()
         {

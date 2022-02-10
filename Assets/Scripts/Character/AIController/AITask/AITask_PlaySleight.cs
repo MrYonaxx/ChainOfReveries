@@ -10,8 +10,8 @@ namespace VoiceActing
     {
         [SerializeField]
         public SharedAIController aiController;
-        [SerializeField]
-        public SharedSleightData sleightData;
+        //[SerializeField]
+        //public SharedSleightData sleightData;
 
         [SerializeField]
         public bool playSleight = true;
@@ -36,7 +36,7 @@ namespace VoiceActing
             }
 
             //Debug.Log(sleightData.Value.Active());
-            if (!sleightData.Value.Active())
+            if (!aiController.Value.SleightData.Active())
             {
                 return TaskStatus.Failure;
             }
@@ -49,7 +49,7 @@ namespace VoiceActing
 
                 for (int i = 0; i < sleightCondition.Length; i++)
                 {
-                    if (sleightData.Value.Sleight == sleightCondition[i])
+                    if (aiController.Value.SleightData.Sleight == sleightCondition[i])
                     {
                         inArray = true;
                         break;
@@ -62,7 +62,7 @@ namespace VoiceActing
             if(aiController.Value.Character.CharacterAction.CanPlaySleight() && aiController.Value.Character.SleightController.CanPlaySleight())
             {
                 aiController.Value.PressButton(aiController.Value.InputY);
-                sleightData.Value.Reset();
+                aiController.Value.SleightData.Reset();
                 return TaskStatus.Success;
             }
             return TaskStatus.Failure;

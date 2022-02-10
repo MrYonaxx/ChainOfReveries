@@ -50,6 +50,8 @@ namespace VoiceActing
             {
                 if (ReInput.players.Players[i].controllers.hasKeyboard || ReInput.players.Players[i].controllers.joystickCount != 0)
                 {
+                    Debug.Log(ReInput.players.Players[i].controllers.hasKeyboard);
+                    // Ajoute le controller aux listes
                     cardControllers[i].gameObject.SetActive(true);
                     cardControllers[i].DrawCardValue(i+1);
                     inputControllers[i].SetID(i);
@@ -74,6 +76,7 @@ namespace VoiceActing
                 if (input.InputLeftStickX.InputValue == 0)
                     joystickInput[input.Id] = false;
             }
+
             if (joystickInput[input.Id] == false)
             {
                 if (input.InputLeftStickX.InputValue < 0 && player2ID == input.Id)

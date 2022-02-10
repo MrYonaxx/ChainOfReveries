@@ -49,16 +49,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 3|VoiceActing.StatusEffectCardValue, Assembly-CSharp
-    - Name: BonusValue
-      Entry: 3
-      Data: 1
-    - Name: BonusCondition
-      Entry: 5
-      Data: false
-    - Name: CardType
-      Entry: 3
-      Data: 1
+      Data: 3|VoiceActing.StatusEffectCardValueRandom, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -71,3 +62,6 @@ MonoBehaviour:
   statusIconSprite: {fileID: 0}
   statusName: 
   statusDescription: 
+  hideStatus: 1
+  statusShowLabel: 0
+  statusConditionLabel: 

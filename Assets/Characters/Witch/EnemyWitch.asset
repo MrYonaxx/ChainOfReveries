@@ -14,6 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterFace: {fileID: 0}
   characterName: Witch
+  characterDescription: 'The Witch can teleports herself making her hard to attack.
+
+
+    Rather
+    than running after her, wait and Card Break the moment she play a Card. Her long
+    Card Break recovery makes her vulnerable, and allow you to approach and start
+    a combo. '
   characterStat:
     hp: 2000
     HPMax:
@@ -100,5 +107,6 @@ MonoBehaviour:
     baseCardValue: 5
   sleightDatabase: []
   initialEquipment: []
-  hitVoice: []
-  deadVoice: []
+  loreDescription: "The witch possess a huge control on the Ether. Ether is what
+    link the world with the Reverie. By controling the Ether they allow the user
+    to manipulate a fragment of the Reverie. \n\nThis is what people call Magic."

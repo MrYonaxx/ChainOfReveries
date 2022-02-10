@@ -3,22 +3,22 @@ using System.Collections.Generic;
 using UnityEngine;
 using VoiceActing;
 
-namespace BehaviorDesigner.Runtime
+/*namespace BehaviorDesigner.Runtime
 {
     [System.Serializable]
     public class SharedSleightData : SharedVariable<AISleightData>
     {
         public static implicit operator SharedSleightData(AISleightData value) { return new SharedSleightData { mValue = value }; }
     }
-}
+}*/
 
 namespace VoiceActing 
 {
     public class AISleightData
     {
-        [HideInInspector]
+        //[HideInInspector]
         public SleightData Sleight = null;
-        bool active = false;
+        public bool active = false;
         //public int size = 0;
         //public List<int> cardsIndex;
 

@@ -79,14 +79,16 @@ namespace VoiceActing
         /// </summary>
         /// <param name="cards"></param>
         /// <returns></returns>
-        public List<Card> GetSleightAction(List<Card> cards)
+        public List<Card> GetSleightAction(List<Card> cards, out bool success)
         {
+            success = false;
             if (cards.Count <= 1)
                 return cards;
             else if (currentSleight == null)
                 return cards;
-            else
-                return currentSleight.GetAttackData(cards);
+
+            success = true;
+            return currentSleight.GetAttackData(cards);
         }
 
 

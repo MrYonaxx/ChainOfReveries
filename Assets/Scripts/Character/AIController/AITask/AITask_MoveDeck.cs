@@ -19,8 +19,8 @@ namespace VoiceActing
 
         [SerializeField]
         bool checkSleight = false;
-        [SerializeField]
-        public SharedSleightData sleightData;
+        //[SerializeField]
+        //public SharedSleightData sleightData;
 
         DeckController deckController;
         int direction = 0;
@@ -50,7 +50,7 @@ namespace VoiceActing
         public override TaskStatus OnUpdate()
         {          
             // Si out of range on dégage
-            if (cardIndex.Value > deckController.Deck.Count)
+            if (cardIndex.Value >= deckController.Deck.Count)
                 return TaskStatus.Failure;
 
             if (deckController.CurrentIndex == cardIndex.Value)
@@ -82,17 +82,23 @@ namespace VoiceActing
             return TaskStatus.Running;
         }
 
+        public override void OnEnd()
+        {
+            // Reset buffer 
+            aiController.Value.ReleaseButton(aiController.Value.InputY);
+        }
+
         private void CheckAddSleight(CharacterBase character)
         {    
             if (deckController.CurrentIndex == cardIndex.Value || checkSleight == false)
                 return;
 
             // On vérifie qu'une sleight a bien été choisi
-            if (!sleightData.Value.Active())
+            if (!aiController.Value.SleightData.Active())
                 return;
 
             // On check si on peut ajouter la carte
-            if (sleightData.Value.CheckAddCard(character.DeckController.GetCurrentCard(), character.SleightController.GetSleightCards()))
+            if (aiController.Value.SleightData.CheckAddCard(character.DeckController.GetCurrentCard(), character.SleightController.GetSleightCards()))
             {
                 aiController.Value.PressButton(aiController.Value.InputY);
             }
