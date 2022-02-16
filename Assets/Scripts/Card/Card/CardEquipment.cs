@@ -69,7 +69,7 @@ namespace VoiceActing
                     character.CharacterAction.Action(attackEquipment);
                     character.Inputs.ResetAllBuffer();
 
-                    character.CharacterEquipment.InEquipmentDeck = false;
+                    //character.CharacterEquipment.InEquipmentDeck = false;
                     character.DeckController.RefreshDeck();
                     return;
                 }

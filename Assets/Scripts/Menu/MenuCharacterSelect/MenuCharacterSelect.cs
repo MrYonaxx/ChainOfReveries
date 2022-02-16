@@ -18,18 +18,26 @@ namespace Menu
         [SerializeField]
         GameRunData gameRunData = null;
 
+        [Space]
+        [Space]
         [SerializeField]
+        [HorizontalGroup("Data")]
         List<PlayerData> playerDatas = new List<PlayerData>();
+
+        [Space]
+        [Space]
         [SerializeField]
+        [HorizontalGroup("Data")]
         List<CardController> playerCard;
-        [SerializeField]
-        MenuCursor cursor = null;
+
 
         [Title("Next Menu")]
         [SerializeField]
         MenuList nextMenu = null;
 
         [Title("UI")]
+        [SerializeField]
+        Animator animatorPanelPlayer = null;
         [SerializeField]
         TextMeshProUGUI nameCharacter = null;
         [SerializeField]
@@ -38,19 +46,14 @@ namespace Menu
         Image imageCharacterOutline = null;
 
         [SerializeField]
-        MenuSleightDrawer sleightDrawer = null;
+        MenuCursor cursor = null;
+
+        bool firstTime = true;
 
 
 
-
-
-        public override void InitializeMenu()
+        void Awake()
         {
-            inputController.SetControllable(this);
-            base.InitializeMenu();
-            DrawCards();
-            listEntry.SetItemCount(playerCard.Count);
-
             nextMenu.OnEnd += InitializeMenu;
         }
 
@@ -58,6 +61,38 @@ namespace Menu
         {
             nextMenu.OnEnd -= InitializeMenu;
         }
+
+        private IEnumerator InitializationCoroutine()
+        {
+            DrawCards();
+            listEntry.SetItemCount(playerCard.Count);
+            imageCharacter.enabled = false;
+            imageCharacterOutline.enabled = false;
+
+            yield return new WaitForSeconds(1.2f);
+            SelectEntry(listEntry.IndexSelection);
+            inputController.SetControllable(this, true);
+        }
+
+
+        public override void InitializeMenu()
+        { 
+            base.InitializeMenu();
+
+            if (firstTime)
+            {
+                StartCoroutine(InitializationCoroutine());
+                firstTime = false;
+            }
+            else
+            {
+                //SelectEntry(listEntry.IndexSelection);
+                inputController.SetControllable(this, true);
+                cursor.GetComponent<Animator>().SetTrigger("Appear");
+            }
+        }
+
+
 
 
         // Pour plus tard, automatiser la génération de playerCard
@@ -100,6 +135,10 @@ namespace Menu
         {
             // On set le perso
             gameRunData.PlayerCharacterData = playerDatas[id];
+            nextMenu.InitializeMenu();
+
+            cursor.GetComponent<Animator>().SetTrigger("Validate");
+
             base.ValidateEntry(id);
 
         }
@@ -108,11 +147,20 @@ namespace Menu
         {
             base.SelectEntry(id);
             cursor.MoveCursor(playerCard[id].GetRectTransform().anchoredPosition);
+            
 
             // Draw le perso
+            animatorPanelPlayer.SetTrigger("Feedback");
+
             nameCharacter.text = playerDatas[id].CharacterName;
+
+            imageCharacter.enabled = true;
             imageCharacter.sprite = playerDatas[id].SpriteProfile;
+            imageCharacter.SetNativeSize();
+
+            imageCharacterOutline.enabled = true;
             imageCharacterOutline.sprite = imageCharacter.sprite;
+            imageCharacterOutline.SetNativeSize();
         }
     }
 }

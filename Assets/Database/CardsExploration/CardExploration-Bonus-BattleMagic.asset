@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aaaedca360f0e340996e82e36c3b4a0, type: 3}
+  m_Name: CardExploration-Bonus-BattleMagic
+  m_EditorClassIdentifier: 
+  cardSprite: {fileID: 21300000, guid: a2726278593687745957efc48eac1cfe, type: 3}
+  cardName: "R\xEAve f\xE9\xE9rique"
+  cardDescription: "Cr\xE9er une r\xEAverie o\xF9 la valeure des cartes magiques
+    augmentent de 2"
+  cardType: 2
+  nbCardReward: 1
+  explorationEvent: {fileID: 8236675884287493958, guid: 7af8913c4d5614c4a8a6cda89a05c0ad,
+    type: 3}
+  battleModifiers:
+  - label: Magic Card +2
+    battleModifierTargets: 2
+    statusEffect: {fileID: 11400000, guid: 371381b70758c5748b28567429340647, type: 2}
+    nb: 2

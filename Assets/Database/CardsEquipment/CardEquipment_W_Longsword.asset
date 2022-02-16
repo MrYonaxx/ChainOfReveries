@@ -22,12 +22,11 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   cardSprite: {fileID: 21300000, guid: 6739e3f0ca1ce5641ab03b1347524cb3, type: 3}
-  cardName: Epee Longue
+  cardName: Longsword
   cardType: 0
-  cardDescription: 'Augmente de 1 la valeure des cartes.
+  cardDescription: 'Increase damage by 25%.
 
-    Les 9 deviennent des
-    0.'
+    (1 Reload)'
   statsModifier: []
   statusEffectPassive: {fileID: 0}
   equipmentAction: {fileID: 818057835518184039, guid: 971d891aa08a3d74baf5f67b6da459b8,

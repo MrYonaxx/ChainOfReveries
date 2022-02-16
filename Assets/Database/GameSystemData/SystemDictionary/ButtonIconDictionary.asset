@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41d2b8edaaa76d541993df549e6f8edb, type: 3}
+  m_Name: ButtonIconDictionary
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 8894201953851282084, guid: c69cd46499c4d6949a3c7c44e92cdabd, type: 3}
+  - {fileID: 7664807735657788756, guid: c69cd46499c4d6949a3c7c44e92cdabd, type: 3}
+  - {fileID: 2013261503205373015, guid: c69cd46499c4d6949a3c7c44e92cdabd, type: 3}
+  - {fileID: -5402412272178277761, guid: c69cd46499c4d6949a3c7c44e92cdabd, type: 3}
+  - {fileID: 3760674464881954987, guid: c69cd46499c4d6949a3c7c44e92cdabd, type: 3}
+  - {fileID: 3760674464881954987, guid: c69cd46499c4d6949a3c7c44e92cdabd, type: 3}
+  - {fileID: -7811504096720598664, guid: c69cd46499c4d6949a3c7c44e92cdabd, type: 3}
+  - {fileID: -7811504096720598664, guid: c69cd46499c4d6949a3c7c44e92cdabd, type: 3}

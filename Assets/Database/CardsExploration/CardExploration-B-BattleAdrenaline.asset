@@ -16,10 +16,11 @@ MonoBehaviour:
   cardName: "R\xEAve fantaisiste"
   cardDescription: "Cr\xE9er une r\xEAverie o\xF9 tout va plus vite"
   cardType: 0
+  nbCardReward: 2
   explorationEvent: {fileID: 8236675884287493958, guid: 7af8913c4d5614c4a8a6cda89a05c0ad,
     type: 3}
   battleModifiers:
   - label: Fast
     battleModifierTargets: 2
-    statusEffect: {fileID: 11400000, guid: b90aed71fa3486045984ae605e691c84, type: 2}
+    statusEffect: {fileID: 11400000, guid: e8656760fd5776040938ace916d58dda, type: 2}
     nb: 1

@@ -58,16 +58,22 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 4|VoiceActing.StatusEffectCardValue, Assembly-CSharp
-    - Name: BonusValue
+      Data: 4|VoiceActing.StatusEffectStat, Assembly-CSharp
+    - Name: StatModifier
+      Entry: 7
+      Data: 5|VoiceActing.StatModifier, Assembly-CSharp
+    - Name: charStat
       Entry: 3
       Data: 1
-    - Name: BonusCondition
-      Entry: 5
-      Data: true
-    - Name: CardType
+    - Name: modifierType
       Entry: 3
       Data: 0
+    - Name: value
+      Entry: 4
+      Data: 0.25
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -78,8 +84,8 @@ MonoBehaviour:
       Entry: 8
       Data: 
   statusIconSprite: {fileID: 21300000, guid: 6739e3f0ca1ce5641ab03b1347524cb3, type: 3}
-  statusName: Attack Card +1
-  statusDescription: Increase all attacks card by 1.
+  statusName: Damage up
+  statusDescription: Increase physical damage by 25%.
   hideStatus: 0
   statusShowLabel: 1
   statusConditionLabel: Reload

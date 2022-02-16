@@ -59,6 +59,13 @@ namespace VoiceActing
         [Space]
         [Title("Events")]
         [SerializeField]
+        int nbCardReward;
+        public int NbCardReward
+        {
+            get { return nbCardReward; }
+        }
+
+        [SerializeField]
         ExplorationEvent explorationEvent = null;
         public ExplorationEvent ExplorationEvent
         {

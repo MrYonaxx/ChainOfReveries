@@ -48,27 +48,13 @@ namespace VoiceActing
             }
 
             // Inputs
-            if (character.CharacterEquipment.InEquipmentDeck)
-            {
-                character.CharacterEquipment.DeckEquipmentController.MoveHand(character.Inputs.InputLB.InputValue == 1 ? true : false, character.Inputs.InputRB.InputValue == 1 ? true : false);
-                character.CharacterEquipment.DeckEquipmentController.MoveCategory(character.Inputs.InputLT.InputValue == 1 ? true : false, character.Inputs.InputRT.InputValue == 1 ? true : false);
-            }
-            else
-            {
-                character.DeckController.MoveHand(character.Inputs.InputLB.InputValue == 1 ? true : false, character.Inputs.InputRB.InputValue == 1 ? true : false);
-                character.DeckController.MoveCategory(character.Inputs.InputLT.InputValue == 1 ? true : false, character.Inputs.InputRT.InputValue == 1 ? true : false);
-            }
-            InputDpad(character);
+            character.DeckController.MoveHand(character.Inputs.InputLB.InputValue == 1 ? true : false, character.Inputs.InputRB.InputValue == 1 ? true : false);
+            character.DeckController.MoveCategory(character.Inputs.InputLT.InputValue == 1 ? true : false, character.Inputs.InputRT.InputValue == 1 ? true : false);
 
             character.DeckController.UpdateCard(character);
  
         }
 
-
-        // Wall bounce
-        public override void LateUpdateState(CharacterBase character)
-        {
-        }
 
         public override void EndState(CharacterBase character, CharacterState oldState)
         {
@@ -78,29 +64,6 @@ namespace VoiceActing
                 character.Animator.transform.localRotation = Quaternion.identity;
             }
         }
-
-
-
-        private bool InputDpad(CharacterBase character)
-        {
-            if (character.Inputs.InputPadDown.Registered || character.Inputs.InputPadUp.Registered)
-            {
-                character.Inputs.InputPadDown.ResetBuffer();
-                character.Inputs.InputPadUp.ResetBuffer();
-                character.CharacterEquipment.SwitchToEquipmentDeck(!character.CharacterEquipment.InEquipmentDeck);
-                if (character.CharacterEquipment.InEquipmentDeck == true)
-                {
-                    character.CharacterEquipment.DeckEquipmentController.RefreshDeck();
-                }
-                else
-                {
-                    character.DeckController.RefreshDeck();
-                }
-                return true;
-            }
-            return false;
-        }
-
 
     } 
 

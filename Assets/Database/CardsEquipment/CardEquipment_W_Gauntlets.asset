@@ -22,9 +22,11 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   cardSprite: {fileID: 21300000, guid: 3a81c65ac05ceb04a80f39b71e4f0fbc, type: 3}
-  cardName: Gantelets
+  cardName: Gauntlets.
   cardType: 0
-  cardDescription: "Les cartes attaques ne peuvent pas \xEAtre Card Break.\n"
+  cardDescription: 'Attack cards cannot be Card Break.
+
+    (10 Attacks)'
   statsModifier: []
   statusEffectPassive: {fileID: 0}
   equipmentAction: {fileID: 818057835518184039, guid: 971d891aa08a3d74baf5f67b6da459b8,

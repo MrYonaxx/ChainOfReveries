@@ -46,6 +46,10 @@ namespace VoiceActing
         RectTransform rVMaxGauge = null;
         [SerializeField]
         GaugeDrawer rVGauge = null;
+        [SerializeField]
+        Feedbacks.GenericLerp lerpRV = null;
+        [SerializeField]
+        CanvasGroup canvasRV = null;
 
         [Title("Parameter")]
         [SerializeField]
@@ -59,6 +63,7 @@ namespace VoiceActing
         [SerializeField]
         Animator animatorHealthLost = null;
 
+        bool showRV = false;
         int previousHealth = 0;
         int previousHealthMax = 0;
         List<Image> healthBarList = new List<Image>();
@@ -198,6 +203,25 @@ namespace VoiceActing
             float sizeRatio = maxRV / rVAmount;
             rVMaxGauge.sizeDelta = new Vector2(sizeRVGauge.x + (sizeRVGauge.y - sizeRVGauge.x) * sizeRatio, rVMaxGauge.sizeDelta.y);
             rVGauge.DrawGauge(rV, maxRV);
+
+            if(rV <= 0)
+            {
+                // Hide Revenge value gauge
+                if (showRV)
+                {
+                    showRV = false;
+                    lerpRV.StartLerp(canvasRV.alpha, 1f, (startValue, t) => { canvasRV.alpha = Mathf.Lerp(startValue, 0, t); });
+                }
+            }
+            else
+            {
+                // Show Revenge value gauge
+                if (!showRV)
+                {
+                    showRV = true;
+                    lerpRV.StartLerp(canvasRV.alpha, 1f, (startValue, t) => { canvasRV.alpha = Mathf.Lerp(startValue, 1, t); });
+                }
+            }
         }
 
 

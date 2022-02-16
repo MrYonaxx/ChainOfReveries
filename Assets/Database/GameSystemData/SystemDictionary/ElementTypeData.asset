@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: ElementTypeData
   m_EditorClassIdentifier: 
   cardTypeName:
-  - Physiquess
+  - Physiques
   - 
   - Feu
   - Glace
   - Foudre
+  - Gravity
   cardTypeColor: []

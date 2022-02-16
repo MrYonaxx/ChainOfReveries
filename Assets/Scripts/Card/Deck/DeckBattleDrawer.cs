@@ -83,6 +83,9 @@ namespace VoiceActing
         \* ======================================== */
         private void Start()
         {
+            if (cardPrefab == null)
+                return;
+
             for (int i = 0; i < transformsHand.Length; i++)
             {
                 if (i >= cardControllers.Count)
@@ -90,6 +93,10 @@ namespace VoiceActing
             }
         }
 
+        public void SetCardControllers(List<CardController> controllers)
+        {
+            cardControllers = controllers;
+        }
 
         public void ShowDeck(bool b)
         {
@@ -154,7 +161,7 @@ namespace VoiceActing
                 cardReload.transform.localScale = Vector3.one;
                 cardReload.transform.localRotation = Quaternion.identity;
             }
-            else if (cardID == 0 && deck[cardID].CardData != cardReloadData) 
+            else if (cardID == 0 && cardReload != null && deck[cardID].CardData != cardReloadData) 
             {
                 cardReload.HideReload();
             }

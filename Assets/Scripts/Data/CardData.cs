@@ -243,17 +243,6 @@ namespace VoiceActing
             maxProbability = sum;
         }
 
-
-        public bool IsElement(string element)
-        {
-            /*for(int i = 0; i < cardElement.Length; i++)
-            {
-                if (cardElement[i] == element)
-                    return true;
-            }*/
-            return false;
-        }
-
     } 
 
 } // #PROJECTNAME# namespace

@@ -182,7 +182,11 @@ namespace VoiceActing
             }
 
             // On joue les cartes
-            for(int i = cards.Count-1; i >= 0; i--)
+
+            if(cards.Count == 3)
+                offset -= cardsOffset; // manip pour centrer sur l'écran
+
+            for (int i = cards.Count-1; i >= 0; i--)
             {
                 DrawCardPlayed(tag, cards[i], offset, origin);
                 //cardControllersActive.Add(cardControllers.Dequeue());

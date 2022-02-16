@@ -103,7 +103,7 @@ MonoBehaviour:
       Data: 0
     - Name: value
       Entry: 4
-      Data: -0.5
+      Data: -1
     - Name: 
       Entry: 8
       Data: 
@@ -124,7 +124,7 @@ MonoBehaviour:
       Data: 0
     - Name: value
       Entry: 4
-      Data: -0.5
+      Data: -1
     - Name: 
       Entry: 8
       Data: 

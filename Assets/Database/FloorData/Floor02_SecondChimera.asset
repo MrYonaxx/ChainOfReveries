@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6320daf9054a745b2c260b43626fe6, type: 3}
   m_Name: Floor02_SecondChimera
   m_EditorClassIdentifier: 
-  floorName: "Deuxi\xE8me chim\xE8re"
+  floorName: Second Chimera
   floorLevel: 2
   firstRoom: {fileID: 11400000, guid: 79edeb956aaade04cb4e43f09113c6a8, type: 2}
   floorLayout:

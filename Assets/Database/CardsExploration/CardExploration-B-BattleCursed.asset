@@ -17,6 +17,7 @@ MonoBehaviour:
   cardDescription: "Cr\xE9er une r\xEAverie o\xF9 il est impossible de voir le jeu
     adverse."
   cardType: 0
+  nbCardReward: 2
   explorationEvent: {fileID: 3513814409438483324, guid: ecaf036fbd3e36f43a7909fde1b2fa4d,
     type: 3}
   battleModifiers:

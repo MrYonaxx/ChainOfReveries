@@ -50,7 +50,8 @@ namespace VoiceActing
 
         public override void OnHitComponent(CharacterBase character, CharacterBase target)
         {
-            ZoomScreen();
+            if(target.CharacterStat.HP > 0)
+                ZoomScreen();
             base.OnHitComponent(character, target);
         }
 

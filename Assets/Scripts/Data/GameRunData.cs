@@ -22,6 +22,8 @@ namespace VoiceActing
         /* ======================================== *\
          *               ATTRIBUTES                 *
         \* ======================================== */
+
+        // Info pour setup la run
         [Title("Players Info")]
         [SerializeField]
         private PlayerData playerCharacterData = null;
@@ -38,6 +40,27 @@ namespace VoiceActing
             set { playerDeckData = value; }
         }
 
+        /// <summary>
+        /// Data pour setup la run
+        /// </summary>
+        [SerializeField]
+        private List<CardEquipmentData> playerEquipmentData = new List<CardEquipmentData>();
+        public List<CardEquipmentData> PlayerEquipmentData
+        {
+            get { return playerEquipmentData; }
+            set { playerEquipmentData = value; }
+        }
+
+        /// <summary>
+        /// Data pour setup la run
+        /// </summary>
+        [SerializeField]
+        private List<CardExplorationData> playerExplorationData = new List<CardExplorationData>();
+        public List<CardExplorationData> PlayerExplorationData
+        {
+            get { return playerExplorationData; }
+            set { playerExplorationData = value; }
+        }
 
         // Le floor layout initial de la run
         [SerializeField]
@@ -47,6 +70,15 @@ namespace VoiceActing
             get { return floorLayout.GetFloor(floor); }
         }
 
+        [SerializeField] // Difficulty Level
+        int reverieLevel = 0;
+        public int ReverieLevel
+        {
+            get { return reverieLevel; }
+        }
+
+
+        // Info de la run en cours
         [Space]
         [Title("Current Equipment")]
         [SerializeField]
@@ -87,35 +119,23 @@ namespace VoiceActing
             get { return room; }
         }
 
-
-        [SerializeField]
-        int money;
+        int roomExplored;
+        public int RoomExplored
+        {
+            get { return roomExplored; }
+        }
+        public int killCount;
+        public int KillCount
+        {
+            get { return killCount; }
+            set { killCount = value; }
+        }
 
         [SerializeField]
         List<CardExplorationData> levelLayout = new List<CardExplorationData>();
         public List<CardExplorationData> LevelLayout
         {
             get { return levelLayout; }
-        }
-
-
-
-
-        [Title("Modifiers")]
-        [SerializeField]
-        [ReadOnly] // Nombre de carte equipement obtenu en fin de combat
-        Vector2Int battleEquipmentReward = Vector2Int.zero;
-        public Vector2Int BattleEquipmentReward
-        {
-            get { return battleEquipmentReward; }
-        }
-
-        [SerializeField]
-        [ReadOnly] // Nombre de carte exploration obtenu en fin de combat
-        Vector2Int battleExplorationReward = Vector2Int.one;
-        public Vector2Int BattleExplorationReward
-        {
-            get { return battleExplorationReward; }
         }
 
 
@@ -153,23 +173,26 @@ namespace VoiceActing
         public void CreateRunData(PlayerData playerInitialData)
         {
             playerCharacterData = playerInitialData;
-            //playerStats.CreateStatController(playerInitialData);
 
             playerDeck.Clear();
-            playerDeck = playerInitialData.InitialDeck;
+            playerDeck = playerDeckData.CreateDeck();
 
+            // Setup le deck exploration
             playerExplorationDeck.Clear();
-            for (int i = 0; i < playerInitialData.InitialDeckExploration.Length; i++)
+            for (int i = 0; i < playerExplorationData.Count; i++)
             {
-                playerExplorationDeck.Add(playerInitialData.InitialDeckExploration[i]);
+                playerExplorationDeck.Add(playerExplorationData[i]);
             }
 
+            // Setup le deck equipment
             playerEquipmentDeck.Clear();
-            for (int i = 0; i < playerInitialData.InitialEquipment.Length; i++)
+            for (int i = 0; i < playerEquipmentData.Count; i++)
             {
-                playerEquipmentDeck.Add(new CardEquipment(playerInitialData.InitialEquipment[i].cardEquipment));
+                playerEquipmentDeck.Add(new CardEquipment(playerEquipmentData[i]));
             }
 
+            roomExplored = 0;
+            killCount = 0;
             floor = floorLayout.FloorLevel;
             SetLayout(floorLayout.FloorLayout);
         }
@@ -189,6 +212,7 @@ namespace VoiceActing
             playerExplorationDeck.Remove(newCard);
             levelLayout[room] = newCard;
             room += 1;
+            roomExplored += 1;
         }
 
         public void NextZone()
@@ -255,7 +279,14 @@ namespace VoiceActing
         {
             playerEquipmentDeck.Add(c);
         }
-
+        public void RemoveEquipmentCard(CardEquipmentData c)
+        {
+            for (int i = 0; i < playerEquipmentDeck.Count; i++)
+            {
+                if (playerEquipmentDeck[i].CardEquipmentData == c)
+                    playerEquipmentDeck.RemoveAt(i);
+            }
+        }
 
 
 
@@ -294,6 +325,8 @@ namespace VoiceActing
             else
                 return 1;
         }
+
+
 
         #endregion
 

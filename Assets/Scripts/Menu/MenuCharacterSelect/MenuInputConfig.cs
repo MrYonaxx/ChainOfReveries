@@ -15,6 +15,7 @@ namespace Menu
         [SerializeField]
         int configID = 0; // Si c'est la config du J1 ou J2
 
+        [Title("Buttons")]
         [SerializeField] // Pour check les id dans l'éditeur
         InputEnum debugEnum;
         [SerializeField]  // On ne peut que modifier les boutons A,B,X,Y RB,LB,RT,LT actuellement
@@ -25,20 +26,31 @@ namespace Menu
         SpriteDictionary buttonSpriteDictionary = null;
         [SerializeField]
         MenuCursor cursor = null;
+        [SerializeField]
+        Animator animatorMenu = null;
+
+
+        bool inInput = false;
 
 
         public override void InitializeMenu()
         {
             base.InitializeMenu();
             DrawConfig();
-            //listEntry.SetItemCount(buttonModifiable.Count);
+            inInput = false;
+
+            animatorMenu.gameObject.SetActive(true);
+            animatorMenu.SetBool("Appear", true);
+            //listEntry.SetItemCount(buttonModifiable.Length + 2);
         }
 
         private void DrawConfig()
         {
             for (int i = 0; i < buttonModifiable.Length; i++)
             {
-                listEntry.DrawItemList(i, buttonSpriteDictionary.GetSprite(i), listEntry.ListItem[i].Text);
+                InputConfig config = gameData.GetInputConfig(configID);
+                int id = config.GetInput((InputEnum)buttonModifiable[i]);
+                listEntry.DrawItemList(i, buttonSpriteDictionary.GetSprite(id), listEntry.ListItem[i].Text);
             }
         }
 
@@ -47,21 +59,68 @@ namespace Menu
 
         public override void UpdateControl(InputController input)
         {
-            if (listEntry.InputListHorizontal(input.InputLeftStickX.InputValue) == true) // On s'est déplacé dans la liste
+            if (inInput) // En input pour changer un bouton
             {
-                SelectEntry(listEntry.IndexSelection);
+                if (listEntry.InputListVertical(input.InputLeftStickY.InputValue) == true) // On s'est déplacé dans la liste
+                {
+                    SelectEntry(listEntry.IndexSelection);
+                    DrawConfig();
+                    inInput = false;
+                }
+                if (ModifyInput(input))
+                {
+                    input.ResetAllBuffer();
+                    DrawConfig();
+                    listEntry.SelectDown();
+                    SelectEntry(listEntry.IndexSelection);
+
+                    if(listEntry.IndexSelection >= buttonModifiable.Length)
+                    {
+                        inInput = false;
+                    }
+                    else
+                    {
+                        listEntry.DrawItemList(listEntry.IndexSelection, null, listEntry.ListItem[listEntry.IndexSelection].Text);
+                    }
+                }
             }
-            else if (input.InputA.Registered)
+            else
             {
-                input.InputA.ResetBuffer();
-                ValidateEntry(listEntry.IndexSelection);
-            }
-            else if (input.InputB.Registered)
-            {
-                input.InputB.ResetBuffer();
-                QuitMenu();
+                if (listEntry.InputListVertical(input.InputLeftStickY.InputValue) == true) // On s'est déplacé dans la liste
+                {
+                    SelectEntry(listEntry.IndexSelection);
+                }
+                else if (input.InputA.Registered)
+                {
+                    input.InputA.ResetBuffer();
+                    ValidateEntry(listEntry.IndexSelection);
+                }
+                else if (input.InputB.Registered)
+                {
+                    input.InputB.ResetBuffer();
+                    QuitMenu();
+                }
             }
 
+        }
+
+        protected override void ValidateEntry(int id)
+        {
+            base.ValidateEntry(id);
+            if(id == buttonModifiable.Length) // Save
+            {
+                QuitMenu();
+            }
+            else if (id == (buttonModifiable.Length+1)) // Default
+            {
+                gameData.GetInputConfig(configID).Reset();
+                DrawConfig();
+            }
+            else
+            {
+                inInput = true;
+                listEntry.DrawItemList(id, null, listEntry.ListItem[id].Text);
+            }
         }
 
         protected override void SelectEntry(int id)
@@ -70,10 +129,14 @@ namespace Menu
             cursor.MoveCursor(listEntry.ListItem[id].RectTransform.anchoredPosition);
         }
 
- 
+        protected override void QuitMenu()
+        {
+            base.QuitMenu();
+            animatorMenu.SetBool("Appear", false);
+        }
+
         public bool ModifyInput(InputController input)
         {
-            //switch()
             InputConfig config = gameData.GetInputConfig(configID);
 
             // C'est là que ne pas avoir un circular buffer fais mal

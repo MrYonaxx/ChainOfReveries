@@ -85,7 +85,7 @@ MonoBehaviour:
       Data: 
   statusIconSprite: {fileID: 21300000, guid: 03adbf024fc8ec240a013fd2f33eb8c7, type: 3}
   statusName: Magic Bracer
-  statusDescription: Prevent magic cards to be breaked.
+  statusDescription: Prevent Magic cards to be Card Break.
   hideStatus: 0
   statusShowLabel: 1
   statusConditionLabel: Magics

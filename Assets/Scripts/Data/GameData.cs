@@ -11,11 +11,11 @@ using UnityEngine;
 public class GameData : ScriptableObject
 {
     [SerializeField]
-    bool firstTime = true;
+    public bool FirstTime = true;
     [SerializeField]
-    int nbRun = 0;
+    public int NbRun = 0;
     [SerializeField]
-    int nbRunCompleted = 0;
+    public int NbRunCompleted = 0;
 
     [SerializeField]
     List<int> charactersUnlocked;
@@ -53,6 +53,14 @@ public class GameData : ScriptableObject
             return P1InputConfig;
         else
             return P2InputConfig;
+    }
+
+    public void SetControllerID(int playerID, int controllerID)
+    {
+        if (playerID == 1)
+            P1ControllerID = controllerID;
+        else
+            P2ControllerID = controllerID;
     }
 
     public void Save()

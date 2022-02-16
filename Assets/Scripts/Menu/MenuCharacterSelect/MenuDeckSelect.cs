@@ -15,13 +15,12 @@ namespace Menu
         InputController inputController = null;
         [SerializeField]
         GameData gameData = null;
-
         [SerializeField] // Placer le runData du J1 ou du J2 pour set le bon
         GameRunData gameRunData = null;
 
         [Title("Database")]
         [SerializeField]
-        List<DeckData> deckDatas;
+        DeckDatabase deckDatabase = null;
 
 
         [Title("UI")]
@@ -29,26 +28,61 @@ namespace Menu
         MenuCursor cursor = null;
         [SerializeField]
         MenuDeckDrawer deckDrawer = null;
+        [SerializeField]
+        TextMeshProUGUI textDeckName = null;
+        [SerializeField]
+        Animator animatorMenu = null;
 
         [Title("")]
         [SerializeField]
         MenuList nextMenu = null;
+
+        List<DeckData> decks = new List<DeckData>();
+
+
+
+        void Awake()
+        {
+            nextMenu.OnEnd += InitializeMenu;
+        }
+        void OnDestroy()
+        {
+            nextMenu.OnEnd -= InitializeMenu;
+        }
+
+
 
 
 
         public override void InitializeMenu()
         {
             inputController.SetControllable(this);
+            DrawDecks();
+
+            listEntry.SelectIndex(0);
+            SelectEntry(0);
+
+            cursor.GetComponent<Animator>().SetTrigger("Appear");
+
+            ShowMenu(true);
             base.InitializeMenu();
-            //listEntry.SetItemCount(playerCard.Count);
         }
 
-        void OnDestroy()
+
+
+        private void DrawDecks()
         {
-            nextMenu.OnStart -= InitializeMenu;
+            PlayerData playerData = gameRunData.PlayerCharacterData;
+            decks = deckDatabase.GetDeck(playerData);
+
+            for (int i = 0; i < decks.Count; i++)
+            {
+                listEntry.DrawItemList(i, "- " + decks[i].DeckName);
+            }
+            listEntry.SetItemCount(decks.Count);
+
+            textDeckName.text = "";
         }
-
-
 
 
 
@@ -67,14 +101,23 @@ namespace Menu
             {
                 input.InputB.ResetBuffer();
                 QuitMenu();
+                ShowMenu(false);
             }
 
         }
 
         protected override void ValidateEntry(int id)
         {
-            // On set le perso
-            gameRunData.PlayerDeckData = deckDatas[id];
+            // On set le deck
+            gameRunData.PlayerDeckData = decks[id];
+            textDeckName.text = "DECK : " + decks[id].DeckName;
+            ShowMenu(false);
+
+            cursor.GetComponent<Animator>().SetTrigger("Validate");
+
+            inputController.SetControllable(nextMenu);
+            nextMenu.InitializeMenu();
+
             base.ValidateEntry(id);
 
         }
@@ -82,8 +125,15 @@ namespace Menu
         protected override void SelectEntry(int id)
         {
             base.SelectEntry(id);
-            deckDrawer.DrawDeck(deckDatas[id].InitialDeck);
+            decks[id].SetValue();
+            deckDrawer.DrawDeck(decks[id].InitialDeck);
             cursor.MoveCursor(listEntry.ListItem[id].RectTransform.anchoredPosition);
+        }
+
+        private void ShowMenu(bool b)
+        {
+            animatorMenu.gameObject.SetActive(true);
+            animatorMenu.SetBool("Appear", b);
         }
     }
 }

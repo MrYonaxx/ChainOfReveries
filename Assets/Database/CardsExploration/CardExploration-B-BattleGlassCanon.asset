@@ -16,6 +16,7 @@ MonoBehaviour:
   cardName: "R\xEAve de verre"
   cardDescription: "Cr\xE9er une r\xEAverie o\xF9 tout les d\xE9g\xE2ts sont doubl\xE9s"
   cardType: 0
+  nbCardReward: 2
   explorationEvent: {fileID: 8236675884287493958, guid: 7af8913c4d5614c4a8a6cda89a05c0ad,
     type: 3}
   battleModifiers:

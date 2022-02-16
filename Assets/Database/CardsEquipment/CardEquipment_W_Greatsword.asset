@@ -24,7 +24,10 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: d113fb2355bbbd44299534dd3d162eb9, type: 3}
   cardName: Greatsword
   cardType: 0
-  cardDescription: Reverse all the cards values. (1 becomes 9, 2 becomes 8 etc...)
+  cardDescription: 'Reverse all the cards values. (1 becomes 9, 2 becomes 8 etc...)
+
+    (3
+    Reload)'
   statsModifier: []
   statusEffectPassive: {fileID: 0}
   equipmentAction: {fileID: 818057835518184039, guid: 971d891aa08a3d74baf5f67b6da459b8,

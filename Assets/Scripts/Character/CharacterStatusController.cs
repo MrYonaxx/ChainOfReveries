@@ -21,7 +21,7 @@ namespace VoiceActing
          *               ATTRIBUTES                 *
         \* ======================================== */
 
-        CharacterBase character;
+        CharacterBase character = null;
 
         List<Status> characterStatusEffect = new List<Status>();
         public List<Status> CharacterStatusEffect
@@ -100,7 +100,7 @@ namespace VoiceActing
                 {
                     if(characterStatusEffect[i].StatusUpdate[j].Update() == false)
                     {
-                        RemoveStatus(character, i);
+                        RemoveStatus(i);
                         break;
                     }
                 }
@@ -108,7 +108,7 @@ namespace VoiceActing
         }
 
 
-        private void RemoveStatus(CharacterBase character, int statusIndex)
+        private void RemoveStatus(int statusIndex)
         {
             // Remove le update behavior
             for (int j = 0; j < characterStatusEffect[statusIndex].StatusUpdate.Count; j++)
@@ -128,13 +128,23 @@ namespace VoiceActing
         }
 
 
-
-
-        public void RemoveAllStatus(CharacterBase character)
+        public void RemoveStatus(StatusEffectData statusToRemove)
         {
             for (int i = 0; i < characterStatusEffect.Count; i++)
             {
-                RemoveStatus(character, i);
+                if (characterStatusEffect[i].StatusEffect == statusToRemove)
+                {
+                    RemoveStatus(i);
+                    return;
+                }
+            }
+        }
+
+        public void RemoveAllStatus()
+        {
+            for (int i = 0; i < characterStatusEffect.Count; i++)
+            {
+                RemoveStatus(i);
             }
         }
 

@@ -100,11 +100,9 @@ namespace VoiceActing
             if (indexSleightCard == 3)
                 return;
             sleightCards.Add(card);
-            //DrawCard(card, handTransform);
             indexSleightCard += 1;
             CheckSleight();
             OnSleightUpdate?.Invoke(currentSleight, sleightCards);
-            //DrawSleight();
         }
 
         public void ResetSleightCard()

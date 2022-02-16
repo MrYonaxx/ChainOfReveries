@@ -12,7 +12,15 @@ namespace VoiceActing
         int player2ID;
 
         [SerializeField]
+        GameData gameData = null;
+
+        [SerializeField]
         bool onlySlot1 = false;
+        public bool OnlySlot1
+        {
+            set { onlySlot1 = value; }
+        }
+
         [SerializeField]
         float timeCardMove = 1;
 
@@ -31,17 +39,26 @@ namespace VoiceActing
         [SerializeField]
         List<InputController> inputControllers = null;
 
+        [SerializeField]
+        Animator animatorMenu = null;
+
+
         List<bool> joystickInput;
+        bool ready = false;
 
-        void Start()
-        {
-            Setup();
-        }
+        public delegate void EventVoid();
+        public event EventVoid OnStart;
+        public event EventVoid OnEnd;
 
-        void Setup()
+
+
+        public void Setup()
         {
+            ActivateInput(true);
+
             player1ID = -1;
             player2ID = -1;
+            ready = false;
 
             buttonStart.gameObject.SetActive(false);
 
@@ -50,7 +67,6 @@ namespace VoiceActing
             {
                 if (ReInput.players.Players[i].controllers.hasKeyboard || ReInput.players.Players[i].controllers.joystickCount != 0)
                 {
-                    Debug.Log(ReInput.players.Players[i].controllers.hasKeyboard);
                     // Ajoute le controller aux listes
                     cardControllers[i].gameObject.SetActive(true);
                     cardControllers[i].DrawCardValue(i+1);
@@ -66,6 +82,8 @@ namespace VoiceActing
                     inputControllers[i].SetControllable(null);
                 }
             }
+
+            slot2.gameObject.SetActive(!onlySlot1);
         }
 
         // Update is called once per frame
@@ -79,12 +97,13 @@ namespace VoiceActing
 
             if (joystickInput[input.Id] == false)
             {
-                if (input.InputLeftStickX.InputValue < 0 && player2ID == input.Id)
+                if (input.InputLeftStickX.InputValue < 0 && player2ID == input.Id && !onlySlot1)
                 {
                     // Reset Player 2
                     cardControllers[input.Id].MoveCard(cardSlots[input.Id], timeCardMove);
                     player2ID = -1;
                     joystickInput[input.Id] = true;
+                    CheckNextButton();
                 }
                 else if (input.InputLeftStickX.InputValue < 0 && player1ID == -1)
                 {
@@ -100,8 +119,9 @@ namespace VoiceActing
                     cardControllers[input.Id].MoveCard(cardSlots[input.Id], timeCardMove);
                     player1ID = -1;
                     joystickInput[input.Id] = true;
+                    CheckNextButton();
                 }
-                else if (input.InputLeftStickX.InputValue > 0 && player2ID == -1)
+                else if (input.InputLeftStickX.InputValue > 0 && player2ID == -1 && !onlySlot1)
                 {
                     // Set player 2
                     cardControllers[input.Id].MoveCard(slot2, timeCardMove);
@@ -111,13 +131,23 @@ namespace VoiceActing
                 }
             }
 
-            if(player1ID != -1 && player2ID != -1 && input.InputA.Registered)
+            if(ready && input.InputA.Registered)
             {
-                // Go versus
+                input.ResetAllBuffer();
+                ActivateInput(false);
+
+                // Set Input ID
+                gameData.SetControllerID(1, player1ID);
+                gameData.SetControllerID(2, player2ID);
+
+                OnStart?.Invoke();
             } 
             else if (input.InputB.Registered)
             {
                 // Return
+                input.ResetAllBuffer();
+                ActivateInput(false);
+                OnEnd?.Invoke();
             }
         }
 
@@ -125,14 +155,29 @@ namespace VoiceActing
         {
             if (onlySlot1)
             {
-
+                ready = (player1ID != -1);
+                if (player1ID != -1)
+                    buttonStart.gameObject.SetActive(true);
+                else
+                    buttonStart.gameObject.SetActive(false);
             }
             else
             {
+                ready = (player1ID != -1 && player2ID != -1);
                 if (player1ID != -1 && player2ID != -1)
                     buttonStart.gameObject.SetActive(true);
                 else
                     buttonStart.gameObject.SetActive(false);
+            }
+        }
+
+        private void ActivateInput(bool b)
+        {
+            animatorMenu.gameObject.SetActive(true);
+            animatorMenu.SetBool("Appear", b);
+            for (int i = 0; i < inputControllers.Count; i++)
+            {
+                inputControllers[i].enabled = b;
             }
         }
     }

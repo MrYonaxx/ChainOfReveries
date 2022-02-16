@@ -28,6 +28,10 @@ namespace VoiceActing
         [SerializeField]
         bool boss = false;
 
+        [Title("Reverie Level")]
+        [SerializeField]
+        StatusEffectData[] reverieStatus;
+
 
         [Title("UI")]
         [SerializeField]
@@ -41,6 +45,8 @@ namespace VoiceActing
         [SerializeField]
         DeckBattleDrawer playerDeckDrawer = null;
         [SerializeField]
+        EquipmentDrawer playerEquipmentDrawer = null;
+        [SerializeField]
         StatusDrawer playerStatusDrawer = null;
 
         [Title("UI - Enemies")]
@@ -51,6 +57,8 @@ namespace VoiceActing
         [SerializeField]
         DeckBattleDrawer enemyDeckDrawer = null;
         [SerializeField]
+        EquipmentDrawer enemyEquipmentDrawer = null;
+        [SerializeField]
         StatusDrawer enemyStatusDrawer = null;
 
 
@@ -58,9 +66,6 @@ namespace VoiceActing
         CharacterBase enemyTarget = null;
 
         List<CharacterBase> enemiesController;
-
-        [SerializeField]
-        CharacterBase zbla;
 
         public delegate void Action();
         public event Action OnEventBattleEnd;
@@ -87,7 +92,6 @@ namespace VoiceActing
             // Initialize Player
             player = character;
             player.DeckController.SetDeck(runData.PlayerDeck);
-            player.CharacterEquipment.SetEquipmentDeck(runData.PlayerEquipmentDeck);
             player.SleightController.ResetSleightCard();
 
             // ON le fait à chaque début de combat, si c'est trop relou, garder une référence des drawer sur la scene
@@ -97,17 +101,19 @@ namespace VoiceActing
             player.DeckController.OnReload += playerDeckDrawer.HideCards;
             player.DeckController.OnReloadChanged += playerDeckDrawer.DrawReload;
 
-            // Note au moi du futur : y'a un peu beaucoup d'event
-            player.CharacterEquipment.DeckEquipmentController.OnDeckChanged += playerDeckDrawer.DrawHand;
-            player.CharacterEquipment.DeckEquipmentController.OnCardMoved += playerDeckDrawer.MoveHand;
-
             player.SleightController.OnSleightUpdate += playerSleightDrawer.DrawSleight;
+
+            // Note au moi du futur : y'a un peu beaucoup d'event
+            player.CharacterEquipment.OnEquipWeapon += playerEquipmentDrawer.DrawEquipments;
 
             // Note au moi du futur futur : y'en a vraiment beaucoup
             player.CharacterStatusController.OnStatusChanged += playerStatusDrawer.DrawStatus;
 
             player.LockController.OnTargetLock += SetTarget;
+
             player.LockController.StartTargeting();
+            player.CharacterEquipment.SetWeaponDeck(runData.PlayerEquipmentDeck);
+
 
 
             // Initialize enemies
@@ -118,35 +124,18 @@ namespace VoiceActing
                 enemiesController.Add(enemies[i].Character);
                 enemiesController[i].CharacterKnockback.OnDeath += EnemyDead;
                 enemiesController[i].CharacterStatusController.OnStatusChanged += enemyStatusDrawer.DrawStatus;
+                enemiesController[i].CharacterEquipment.OnEquipWeapon += enemyEquipmentDrawer.DrawEquipments;
                 enemiesController[i].SetCharacter();
-
-                // à virer après
-                enemiesController[i].CharacterEquipment.DeckEquipmentController.OnDeckChanged += enemyDeckDrawer.DrawHand;
-                enemiesController[i].CharacterEquipment.DeckEquipmentController.OnCardMoved += enemyDeckDrawer.MoveHand;
+                SetReverieStatus(enemiesController[i]);
             }
 
             // Si c'est un 1v1 on lock tout le temps
-           /* if (enemiesController.Count == 1)
-            {
-                ForceLock();
-            }*/
+            /* if (enemiesController.Count == 1)
+             {
+                 ForceLock();
+             }*/
 
 
-            if(zbla)
-            {
-                /*zbla.DeckController.OnDeckChanged += enemyDeckDrawer.DrawHand;
-                zbla.DeckController.OnCardMoved += enemyDeckDrawer.MoveHand;
-                zbla.DeckController.OnCardPlayed += enemyDeckDrawer.PlayCard;
-                zbla.DeckController.OnReload += enemyDeckDrawer.HideCards;
-                zbla.DeckController.OnReloadChanged += enemyDeckDrawer.DrawReload;*/
-
-                zbla.CharacterEquipment.DeckEquipmentController.OnDeckChanged += enemyDeckDrawer.DrawHand;
-                zbla.CharacterEquipment.DeckEquipmentController.OnCardMoved += enemyDeckDrawer.MoveHand;
-
-                //zbla.SleightController.OnSleightUpdate += enemySleightDrawer.DrawSleight;
-
-                zbla.CharacterStatusController.OnStatusChanged += enemyStatusDrawer.DrawStatus;
-            }
 
             // Repasse en idle, permettant au player de taper
             player.ResetToIdle();
@@ -165,8 +154,7 @@ namespace VoiceActing
                 player.DeckController.OnReload -= playerDeckDrawer.HideCards;
                 player.DeckController.OnReloadChanged -= playerDeckDrawer.DrawReload;
 
-                player.CharacterEquipment.DeckEquipmentController.OnDeckChanged -= playerDeckDrawer.DrawHand;
-                player.CharacterEquipment.DeckEquipmentController.OnCardMoved -= playerDeckDrawer.MoveHand;
+                player.CharacterEquipment.OnEquipWeapon -= playerEquipmentDrawer.DrawEquipments;
 
                 player.SleightController.OnSleightUpdate -= playerSleightDrawer.DrawSleight;
                 player.CharacterStatusController.OnStatusChanged -= playerStatusDrawer.DrawStatus;
@@ -182,6 +170,7 @@ namespace VoiceActing
                 // Faudrait le mettre dans event mais grosse flemme là de chercher partout et normalement y'a que les
                 // boss qui ont des cartes equipement donc ils sont solo
                 enemiesController[i].CharacterStatusController.OnStatusChanged -= enemyStatusDrawer.DrawStatus;
+                enemiesController[i].CharacterEquipment.OnEquipWeapon -= enemyEquipmentDrawer.DrawEquipments;
             }
 
             if (enemyTarget != null)
@@ -256,6 +245,7 @@ namespace VoiceActing
 
         public void EnemyDead(CharacterBase enemy, DamageMessage dmgMsg)
         {
+            runData.KillCount++;
             enemy.CharacterKnockback.OnDeath -= EnemyDead;
             enemiesController.Remove(enemy);
 
@@ -265,11 +255,6 @@ namespace VoiceActing
             }
         }
 
-
-        public void GameOver()
-        {
-
-        }
 
         public void EndBattle()
         {
@@ -331,6 +316,16 @@ namespace VoiceActing
             player.CanPlay(true);
 
 
+        }
+
+
+
+        private void SetReverieStatus(CharacterBase enemy)
+        {
+            for (int i = 0; i < runData.ReverieLevel; i++)
+            {
+                enemy.CharacterStatusController.ApplyStatus(reverieStatus[i], 100);
+            }
         }
 
         #endregion

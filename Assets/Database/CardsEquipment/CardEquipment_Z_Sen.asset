@@ -24,7 +24,10 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: ae07e102a94137842a59eef27439ed6c, type: 3}
   cardName: Sen
   cardType: 0
-  cardDescription: Cards played are automatically removed from the field.
+  cardDescription: 'Cards played are automatically removed from the field.
+
+    (30
+    Cards)'
   statsModifier: []
   statusEffectPassive: {fileID: 0}
   equipmentAction: {fileID: 199252371479164363, guid: 591d76be0fef645449728e5c5282e13e,

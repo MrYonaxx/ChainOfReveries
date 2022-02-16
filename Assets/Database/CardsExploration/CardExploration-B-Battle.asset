@@ -16,6 +16,7 @@ MonoBehaviour:
   cardName: "R\xEAve d'Ivoire"
   cardDescription: "Cr\xE9er une r\xEAverie pour combattre les doutes et l'infortune."
   cardType: 0
+  nbCardReward: 2
   explorationEvent: {fileID: 8236675884287493958, guid: 7af8913c4d5614c4a8a6cda89a05c0ad,
     type: 3}
   battleModifiers: []

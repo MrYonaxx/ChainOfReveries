@@ -24,8 +24,9 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: fd047825b19a2354ba52f5375349a41a, type: 3}
   cardName: Shoulder Bag
   cardType: 1
-  cardDescription: Permet de Reload en mouvement.
+  cardDescription: Allow to reload while moving.
   statsModifier: []
-  statusEffectPassive: {fileID: 0}
+  statusEffectPassive: {fileID: 11400000, guid: 281d7714003170243b3f470ad42781d9,
+    type: 2}
   equipmentAction: {fileID: 0}
   statusEffectActive: {fileID: 0}

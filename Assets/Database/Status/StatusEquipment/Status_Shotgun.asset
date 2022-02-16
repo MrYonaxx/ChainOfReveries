@@ -33,7 +33,7 @@ MonoBehaviour:
       Data: 1|VoiceActing.StatusEffectUpdateOnReload, Assembly-CSharp
     - Name: NumberOfReload
       Entry: 3
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 8
       Data: 
@@ -80,9 +80,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  statusIconSprite: {fileID: 21300000, guid: e35c3e679ea54d14c84b55e610d4784a, type: 3}
+  statusIconSprite: {fileID: 21300000, guid: 683c4fb8a389a3d4ebe37c5bf087127e, type: 3}
   statusName: Double-barreled
-  statusDescription: Reduce all attacks cards by 1.
+  statusDescription: 
   hideStatus: 0
   statusShowLabel: 1
   statusConditionLabel: Reload

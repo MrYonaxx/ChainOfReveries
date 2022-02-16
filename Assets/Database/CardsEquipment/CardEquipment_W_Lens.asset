@@ -22,9 +22,9 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   cardSprite: {fileID: 21300000, guid: 8f012c1d920e7ea458d72053fb3e0901, type: 3}
-  cardName: Loupe
+  cardName: Magic Lens
   cardType: 0
-  cardDescription: Octroie des informations sur les ennemis.
+  cardDescription: Show enemy information and weakness.
   statsModifier: []
   statusEffectPassive: {fileID: 0}
   equipmentAction: {fileID: 818057835518184039, guid: 622dd078e42162c4196d9afff7da84a0,

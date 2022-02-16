@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6320daf9054a745b2c260b43626fe6, type: 3}
   m_Name: Floor01_FirstFantasy
   m_EditorClassIdentifier: 
-  floorName: "Premi\xE8re fantaisie"
+  floorName: First Fantasy
   floorLevel: 1
   firstRoom: {fileID: 11400000, guid: d15e3b90d2a853d48b4e6968f7d7f5a9, type: 2}
   floorLayout:

@@ -22,9 +22,9 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   cardSprite: {fileID: 21300000, guid: d556a14af3f5dc1439337872b26b414f, type: 3}
-  cardName: Armure d'Orichalque
+  cardName: Orichalcum Armor
   cardType: 1
-  cardDescription: Augmente les HP de 1000.
+  cardDescription: Increase max health by 1000.
   statsModifier:
   - charStat: 0
     modifierType: 0

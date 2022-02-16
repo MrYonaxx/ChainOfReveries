@@ -26,7 +26,8 @@ namespace VoiceActing
         [Title("Parameter")]
         [SerializeField]
         GameRunData runData = null;
-
+        [SerializeField]
+        CardExplorationDatabase cardExplorationDatabase = null;
 
         [Title("Composants")]
         [SerializeField]
@@ -48,9 +49,12 @@ namespace VoiceActing
         [SerializeField]
         DeckExplorationDrawer deckExplorationLayout = null;
         [SerializeField]
-        TextMeshProUGUI textExplorationLevel = null;
-        [SerializeField]
         BattleModifierDrawerList battleModifierDrawerList = null;
+
+        [SerializeField]
+        int nbCardSupport = 2;
+        [SerializeField]
+        List<CardExplorationData> poolCardSupport = null;
 
         [Title("Level Introduction")]
         [SerializeField]
@@ -86,7 +90,8 @@ namespace VoiceActing
         Animator animatorFloorIntroduction = null;
         [SerializeField]
         Animator animatorGround = null;
-
+        [SerializeField]
+        List<Animator> animatorGetNewCard = null;
 
 
 
@@ -108,6 +113,8 @@ namespace VoiceActing
         bool active = false;
         ExplorationEvent explorationEvent;
         ExplorationEvent previousExplorationEvent;
+
+        List<CardExplorationData> newCardGet = new List<CardExplorationData>();
 
 
         #endregion
@@ -153,6 +160,7 @@ namespace VoiceActing
                 // End Level
                 floorID = 0;
                 runData.NextZone();
+                AddCardLayout();
                 AutoCreateRoom(runData.FloorLayout.FirstRoom);
                 cardController.gameObject.SetActive(false);
                 return;
@@ -162,6 +170,14 @@ namespace VoiceActing
                 // Create Room
                 AutoCreateRoom(runData.LevelLayout[runData.Room]);
                 runData.AddRoomToLayout(runData.LevelLayout[runData.Room]);
+
+                if (runData.Room < runData.LevelLayout.Count-1) // Ce n'est pas une room de boss donc on dessine
+                {
+                    floorID += 1;
+                    animatorDeckProgress.SetBool("Appear", true);
+                    battleModifierDrawerList.DrawBattleModifiers(runData.BattleModifiers, floorID);
+                    deckExplorationLayout.CreateDeckExploration(runData.LevelLayout);
+                }
                 return;
             }
 
@@ -176,6 +192,7 @@ namespace VoiceActing
             deckExplorationDrawer.CreateDeckExploration(runData.PlayerExplorationDeck);
             deckExplorationLayout.CreateDeckExploration(runData.LevelLayout);
 
+            DrawNewCard();
             DrawCardDescription();
 
 
@@ -209,7 +226,7 @@ namespace VoiceActing
         public void UpdateControl(InputController inputs)
         {
 
-            if (inputs.InputPadUp.InputValue == 1 || inputs.InputPadDown.InputValue == 1)
+            if (inputs.InputStart.Registered)
             {
                 inputs.ResetAllBuffer(true);
                 GoToMenuStatus();
@@ -302,6 +319,8 @@ namespace VoiceActing
             cardController.GetRectTransform().anchorMin = new Vector2(0.5f, 0.5f);
             cardController.GetRectTransform().anchorMax = new Vector2(0.5f, 0.5f);
 
+            AddCardExploration(cardExplorationData.NbCardReward);
+
             runData.AddRoomToLayout(cardExplorationData);
             StartCoroutine(RoomCreatorCoroutine(cardExplorationData));
         }
@@ -341,11 +360,40 @@ namespace VoiceActing
         }
 
 
+        // à remplir jsp comment
+        int maxFloor = 3;
+        // Ajoute de manière random des cartes au layout d'exploration
+        public void AddCardLayout()
+        {
+            int rand = maxFloor - nbCardSupport;
+
+            if (rand > 0)
+                rand = Random.Range(0, nbCardSupport);
+
+            if (rand <= 0)
+            {
+                int position = Random.Range(1, runData.LevelLayout.Count - 1);
+                runData.LevelLayout.Insert(position, poolCardSupport[Random.Range(0, poolCardSupport.Count)]);
+            }
+            else
+            {
+                maxFloor--;
+            }
+        }
 
 
-
-
-
+        // Donne des cartes explorations en fonction de la carte utilisé
+        private void AddCardExploration(int nbReward)
+        {
+            if (runData.PlayerExplorationDeck.Count >= 12)
+                return;
+            for (int i = 0; i < nbReward; i++)
+            {
+                CardExplorationData cardExploration = cardExplorationDatabase.GachaExploration();
+                runData.AddExplorationCard(cardExploration);
+                newCardGet.Add(cardExploration);
+            }
+        }
 
 
 
@@ -357,7 +405,17 @@ namespace VoiceActing
             textLevelName2.text = name;
         }
 
-
+        private void DrawNewCard()
+        {
+            for (int i = 0; i < newCardGet.Count; i++)
+            {
+                int pos = runData.PlayerExplorationDeck.IndexOf(newCardGet[i]);
+                animatorGetNewCard[i].gameObject.SetActive(true);
+                animatorGetNewCard[i].transform.position = deckExplorationDrawer.GetCardController(pos).transform.position;
+                animatorGetNewCard[i].SetTrigger("Feedback");
+            }
+            newCardGet.Clear();
+        }
 
         public void ChangeLevelBackground()
         {

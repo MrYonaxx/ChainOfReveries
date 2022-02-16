@@ -12,21 +12,9 @@ namespace VoiceActing
         [SerializeField]
         AttackManager attack = null;
 
-        CharacterBase user = null;
-
         public override void Execute(CharacterBase character)
         {
-            user = character;
             attack.CancelAction();
-        }
-
-        private void Update()
-        {
-            if(user != null)
-            {
-                if (user.CharacterKnockback.IsDead)
-                    attack.CancelAction();
-            }
         }
     }
 }

@@ -62,6 +62,9 @@ namespace VoiceActing
         }
         public CardController GetCardController(int index)
         {
+            // jsp j'ai eu un out of range une fois donc on secure
+            if(index >= cardsList.Count)
+                return cardsList[cardsList.Count-1];
             return cardsList[index];
         }
 

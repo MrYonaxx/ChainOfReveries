@@ -54,6 +54,15 @@ namespace VoiceActing
             return res;
         }
 
+        // Utilisé pour bien afficher les bonnes valeurs dans les UI quand on utilise la ref directe de initial deck
+        public void SetValue()
+        {
+            for (int i = 0; i < initialDeck.Count; i++)
+            {
+                initialDeck[i].ResetCard();
+            }
+        }
+
     } 
 
 } // #PROJECTNAME# namespace

@@ -130,8 +130,6 @@ MonoBehaviour:
     baseCardValue: 9
   - cardData: {fileID: 11400000, guid: 93084acb116dd8140bb72457a7fcc899, type: 2}
     baseCardValue: 0
-  - cardData: {fileID: 11400000, guid: 93084acb116dd8140bb72457a7fcc899, type: 2}
-    baseCardValue: 0
   sleightDatabase:
   - {fileID: 11400000, guid: c781ea238c8eca94f91a80d068278f9a, type: 2}
   - {fileID: 11400000, guid: 1f263cf9ac3b65a42880c47832287f3b, type: 2}

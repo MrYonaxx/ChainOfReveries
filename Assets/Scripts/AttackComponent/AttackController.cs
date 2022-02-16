@@ -224,6 +224,11 @@ namespace VoiceActing
             }
         }
 
+        public bool IsUserDead()
+        {
+            return user.CharacterKnockback.IsDead;
+        }
+
 
         #endregion
 

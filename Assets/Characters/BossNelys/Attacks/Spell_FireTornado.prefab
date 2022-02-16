@@ -264,6 +264,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2520948011644738657}
   - component: {fileID: 3040624544842275496}
+  - component: {fileID: 8216074266627012256}
   m_Layer: 9
   m_Name: AttackMainComponents
   m_TagString: Untagged
@@ -298,6 +299,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keepMomentum: 0
+--- !u!114 &8216074266627012256
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2469241746260582066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b69432050c0523a458fd56ac19ec772d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackM: {fileID: 818057835518184039}
 --- !u!1 &3720685875369100543
 GameObject:
   m_ObjectHideFlags: 0
@@ -5487,6 +5501,7 @@ MonoBehaviour:
   cardPercentage:
     percentDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     debugDamage: {x: 100, y: 200}
+    maxHP: 0
   element:
     element: 0
     ignoreElementalStat: 0
@@ -5518,6 +5533,7 @@ MonoBehaviour:
   cardPercentage:
     percentDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     debugDamage: {x: 100, y: 200}
+    maxHP: 0
   element:
     element: 2
     ignoreElementalStat: 0
@@ -5582,6 +5598,7 @@ MonoBehaviour:
   attackComponents:
   - {fileID: 7113571748977003591}
   - {fileID: 3040624544842275496}
+  - {fileID: 8216074266627012256}
   - {fileID: 6024610480447657897}
   - {fileID: 5485531285977804821}
   - {fileID: 5015708165920889845}

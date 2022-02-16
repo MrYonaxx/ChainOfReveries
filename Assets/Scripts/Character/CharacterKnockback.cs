@@ -201,6 +201,9 @@ namespace VoiceActing
             if (CheckRevenge(attack))
                 return false;
 
+            if (attack.IsUserDead()) // Pour pas créer de bug de double ko
+                return false;
+
             return true;
         }
 
@@ -296,6 +299,8 @@ namespace VoiceActing
 
         public void AddRevengeValue(float value)
         {
+            if (isDead)
+                return;
             revengeValue += value;
             revengeValue = Mathf.Clamp(revengeValue, 0, character.CharacterStat.RevengeValue.Value);
             OnRVChanged?.Invoke(revengeValue, character.CharacterStat.RevengeValue.Value);

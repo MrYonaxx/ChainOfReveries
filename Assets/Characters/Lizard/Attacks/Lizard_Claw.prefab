@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 6411736251875354926}
   - component: {fileID: 2848281455982765570}
   - component: {fileID: 2244025159141660639}
-  - component: {fileID: 4832652108889046153}
+  - component: {fileID: 4360480746540756023}
+  - component: {fileID: 6289517734088994247}
   m_Layer: 0
   m_Name: Movement
   m_TagString: Untagged
@@ -99,7 +100,7 @@ MonoBehaviour:
   frameEnd: 0
   direction: 0
   turnToTarget: 1
---- !u!114 &4832652108889046153
+--- !u!114 &4360480746540756023
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -108,13 +109,30 @@ MonoBehaviour:
   m_GameObject: {fileID: 565687993561507469}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b84027daab854e84c91bd87b8553c72d, type: 3}
+  m_Script: {fileID: 11500000, guid: 6101a393351ed0c478d7962e583305cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 73
-  frameEnd: 135
+  frame: 60
+  frameEnd: 75
   speed: 5
-  maxTrackingY: 0.5
+  maxTrackingY: 0.3
+--- !u!114 &6289517734088994247
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565687993561507469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56bf29bae8d6a9743927604b4178c1b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 135
+  frameEnd: 0
+  moveForward: 0
+  speed: {x: 0, y: 0}
+  jumpImpulsion: 0
 --- !u!1 &2469241746260582066
 GameObject:
   m_ObjectHideFlags: 0
@@ -232,12 +250,14 @@ MonoBehaviour:
     AnimationEvent: {fileID: 2848281455982765570}
   - Frame: 60
     AnimationEvent: {fileID: 2244025159141660639}
-  - Frame: 73
-    AnimationEvent: {fileID: 4832652108889046153}
+  - Frame: 60
+    AnimationEvent: {fileID: 4360480746540756023}
   - Frame: 75
     AnimationEvent: {fileID: 4461643240352555985}
   - Frame: 135
     AnimationEvent: {fileID: 2524242894598313049}
+  - Frame: 135
+    AnimationEvent: {fileID: 6289517734088994247}
 --- !u!114 &4461643240352555985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -538,9 +558,14 @@ MonoBehaviour:
   cardPercentage:
     percentDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     debugDamage: {x: 100, y: 200}
+    maxHP: 0
   element:
     element: 0
     ignoreElementalStat: 0
+  damage:
+    baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
 --- !u!1 &6664025316910145470
 GameObject:
   m_ObjectHideFlags: 0

@@ -58,16 +58,17 @@ namespace VoiceActing
                 i += 1;
                 sum += explorationDatabase[i].probability;
             }
-            /*if(explorationDatabase[i].cardExploration.CardType == TriggerForceDrawType)
+
+            if(explorationDatabase[i].cardExploration.CardType == TriggerForceDrawType)
             {
                 forceDrawCount += 1;
-                if(forceDrawCount == numberToTriggerForceDraw)
-                    return GachaExploration() 
+                if (forceDrawCount == numberToTriggerForceDraw)
+                    return GachaExploration();
             }
             else
             {
                 forceDrawCount = 0;
-            }*/
+            }
 
             return explorationDatabase[i].cardExploration;
         }

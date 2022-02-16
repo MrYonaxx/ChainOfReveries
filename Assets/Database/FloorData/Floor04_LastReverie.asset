@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6320daf9054a745b2c260b43626fe6, type: 3}
   m_Name: Floor04_LastReverie
   m_EditorClassIdentifier: 
-  floorName: "Derni\xE8re R\xEAverie"
+  floorName: Last Reverie
   floorLevel: 0
   firstRoom: {fileID: 0}
   floorLayout:

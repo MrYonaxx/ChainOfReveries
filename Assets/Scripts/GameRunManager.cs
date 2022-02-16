@@ -49,14 +49,19 @@ namespace VoiceActing
         /* ======================================== *\
          *                FUNCTIONS                 *
         \* ======================================== */
-        private void Start()
+        private void Awake()
         {
+            // On créer les data de la run
             runData.CreateRunData();
             inputController.SetControllable(player);
+
+            // On setup le perso et son deck équipement
             player.SetCharacter(runData.PlayerCharacterData);
+            player.CharacterEquipment.SetEquipmentDeck(runData.PlayerEquipmentDeck);
 
             explorationManager.Initialize(player, inputController);
 
+            // On setup le HUD du perso
             playerHealthBar.DrawCharacter(runData.PlayerCharacterData, player.CharacterStat);
             player.CharacterStat.OnHPChanged += playerHealthBar.DrawHealth;
             player.CharacterKnockback.OnRVChanged += playerHealthBar.DrawRevengeValue;
@@ -71,6 +76,7 @@ namespace VoiceActing
 #if UNITY_EDITOR
                 if (instantExploration)
                 {
+                    explorationManager.AddCardLayout(); // Appel la fonction pour ajouter de manière random des cartes support au layout du level 1
                     explorationManager.CreateExplorationMenu();
                     inputController.SetControllable(explorationManager);
                     return;
@@ -85,14 +91,10 @@ namespace VoiceActing
 
         private void Initialize()
         {
+            explorationManager.AddCardLayout(); // Appel la fonction pour ajouter de manière random des cartes support au layout du level 1
             explorationManager.AutoCreateRoom(runData.FloorLayout.FirstRoom, 1f);
         }
 
-        /*private void SetExplorationManager()
-        {
-            explorationManager.CreateExplorationMenu();
-            inputController.SetControllable(explorationManager);
-        }*/
 
         private void OnDestroy()
         {

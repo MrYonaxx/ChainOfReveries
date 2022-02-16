@@ -102,8 +102,6 @@ MonoBehaviour:
     baseCardValue: 1
   - cardData: {fileID: 11400000, guid: 622321ab569aee9459d136a5de49f228, type: 2}
     baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: 93084acb116dd8140bb72457a7fcc899, type: 2}
-    baseCardValue: 0
   - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
     baseCardValue: 9
   - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}

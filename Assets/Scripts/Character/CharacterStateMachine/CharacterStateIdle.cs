@@ -34,27 +34,15 @@ namespace VoiceActing
             character.CharacterMovement.ApplyGravity(character.MotionSpeed);
 
             InputMovement(character);
-            InputDpad(character);
             InputCancelSleight(character);
+            if (InputDpad(character))
+                return;
             if (InputEvade(character))
                 return;
 
-            if (character.CharacterEquipment.InEquipmentDeck)
-            {
-                character.CharacterEquipment.DeckEquipmentController.MoveHand(character.Inputs.InputLB.InputValue == 1 ? true : false, character.Inputs.InputRB.InputValue == 1 ? true : false);
-                character.CharacterEquipment.DeckEquipmentController.MoveCategory(character.Inputs.InputLT.InputValue == 1 ? true : false, character.Inputs.InputRT.InputValue == 1 ? true : false);
-                character.CharacterEquipment.DeckEquipmentController.UpdateCard(character);
-            }
-            else
-            {
-                character.DeckController.MoveHand(character.Inputs.InputLB.InputValue == 1 ? true : false, character.Inputs.InputRB.InputValue == 1 ? true : false);
-                character.DeckController.MoveCategory(character.Inputs.InputLT.InputValue == 1 ? true : false, character.Inputs.InputRT.InputValue == 1 ? true : false);
-                character.DeckController.UpdateCard(character);
-            }
-
-
-
-
+            character.DeckController.MoveHand(character.Inputs.InputLB.InputValue == 1 ? true : false, character.Inputs.InputRB.InputValue == 1 ? true : false);
+            character.DeckController.MoveCategory(character.Inputs.InputLT.InputValue == 1 ? true : false, character.Inputs.InputRT.InputValue == 1 ? true : false);
+            character.DeckController.UpdateCard(character);
         }
 
         private void InputMovement(CharacterBase character)
@@ -90,21 +78,23 @@ namespace VoiceActing
             }
             return false;
         }
-
         private bool InputDpad(CharacterBase character)
         {
-            if (character.Inputs.InputPadDown.Registered || character.Inputs.InputPadUp.Registered)
+            CardEquipment card = null;
+
+            if (character.Inputs.InputPadDown.Registered)
+                card = character.CharacterEquipment.PlayCard(2);
+            else if (character.Inputs.InputPadUp.Registered)
+                card = character.CharacterEquipment.PlayCard(8);
+            else if (character.Inputs.InputPadLeft.Registered)
+                card = character.CharacterEquipment.PlayCard(4);
+            else if (character.Inputs.InputPadRight.Registered)
+                card = character.CharacterEquipment.PlayCard(6);
+
+            if (card != null)
             {
+                character.CharacterAction.Action(card.CardEquipmentData.EquipmentAction);
                 character.Inputs.ResetAllBuffer();
-                character.CharacterEquipment.SwitchToEquipmentDeck(!character.CharacterEquipment.InEquipmentDeck);
-                if(character.CharacterEquipment.InEquipmentDeck == true)
-                {
-                    character.CharacterEquipment.DeckEquipmentController.RefreshDeck();
-                }
-                else
-                {
-                    character.DeckController.RefreshDeck();
-                }
                 return true;
             }
             return false;

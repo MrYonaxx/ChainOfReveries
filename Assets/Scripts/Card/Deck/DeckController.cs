@@ -64,6 +64,13 @@ namespace VoiceActing
         int reloadCurrentMaxLevel = 2;
         int reloadCurrentLevel = 1;
         float reloadCurrentAmount = 0;
+        private bool reloadInMovement = false; // flag pour reload en mouvement
+        public bool ReloadInMovement
+        {
+            get { return reloadInMovement; }
+            set { reloadInMovement = value; }
+        }
+
 
         [ReadOnly]
         public int currentIndex = 1;

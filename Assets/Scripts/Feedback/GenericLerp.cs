@@ -7,6 +7,8 @@ namespace Feedbacks
 
     public delegate void ActionGeneric<T>(T a, float t);
 
+    // C'est un échec, il faudrait en faire un script static mais c'est incompatible avec le Monobehaviour
+    // (à ne pas reprendre dans de futur projet)
     public class GenericLerp : MonoBehaviour
     {
         private IEnumerator lerpCoroutine;

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f6320daf9054a745b2c260b43626fe6, type: 3}
   m_Name: Floor03_ThirdDelirium
   m_EditorClassIdentifier: 
-  floorName: "Troisi\xE8me d\xE9lire"
+  floorName: Third Delirium
   floorLevel: 4
   firstRoom: {fileID: 11400000, guid: 79edeb956aaade04cb4e43f09113c6a8, type: 2}
   floorLayout:

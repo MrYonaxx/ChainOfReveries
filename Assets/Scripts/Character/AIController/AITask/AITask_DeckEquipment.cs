@@ -13,36 +13,56 @@ namespace VoiceActing
 
         [SerializeField]
         List<CardEquipmentData> equipmentDatas;
-        [SerializeField]
+        /*[SerializeField]
         float initialWait = 0.1f;
         [SerializeField]
         Vector2 intervalPress = new Vector2(0.1f, 0.2f);
 
         DeckController deckEquipment;
         bool inDeck = false;
-        float t = 0f;
+        float t = 0f;*/
         public override void OnStart()
         {
             base.OnStart();
 
-            aiController.Value.PressButton(aiController.Value.InputPadUp);
-            deckEquipment = aiController.Value.Character.CharacterEquipment.DeckEquipmentController;
-            t = initialWait;
+            CharacterEquipment equipment = aiController.Value.Character.CharacterEquipment;
 
-            // Si il n'y a pas de deck data on utilise celui possédé par le joueur
-            if (equipmentDatas == null)
+            for (int i = 0; i < equipment.CardsEquipmentWeapon.Length; i++)
             {
-                equipmentDatas.Add(((CardEquipment)deckEquipment.Deck[Random.Range(0, deckEquipment.Deck.Count)]).CardEquipmentData);
-            }
-            else if (equipmentDatas.Count == 0)
-            {
-                equipmentDatas.Add(((CardEquipment)deckEquipment.Deck[Random.Range(0, deckEquipment.Deck.Count)]).CardEquipmentData);
+                for (int j = 0; j < equipmentDatas.Count; j++)
+                {
+                    if (equipment.CardsEquipmentWeapon[i] == null)
+                        continue;
+
+                    if (equipment.CardsEquipmentWeapon[i].CardEquipmentData == equipmentDatas[j])
+                    {
+                        switch(i+1)
+                        {
+                            // Dpad 2 = down, 4 = left, 6 = right, 8 = up
+                            case 1:
+                                aiController.Value.PressButton(aiController.Value.InputPadDown);
+                                break;
+                            case 2:
+                                aiController.Value.PressButton(aiController.Value.InputPadLeft);
+                                break;
+                            case 3:
+                                aiController.Value.PressButton(aiController.Value.InputPadRight);
+                                break;
+                            case 4:
+                                aiController.Value.PressButton(aiController.Value.InputPadUp);
+                                break;
+                        }
+                        return;
+                    }
+                }
             }
         }
 
         public override TaskStatus OnUpdate()
         {
-            t -= Time.deltaTime;
+            return TaskStatus.Success;
+
+            /*t -= Time.deltaTime;
             if (t < 0)
             {
                 CardEquipment card = (CardEquipment) deckEquipment.Deck[deckEquipment.currentIndex];
@@ -62,14 +82,8 @@ namespace VoiceActing
                 //aiController.Value.PressButton(aiController.Value.InputLB);
                 t = Random.Range(intervalPress.x, intervalPress.y);
             }     
-            return TaskStatus.Running;
+            return TaskStatus.Running;*/
         }
 
-        public override void OnConditionalAbort()
-        {
-            base.OnConditionalAbort();
-
-            aiController.Value.PressButton(aiController.Value.InputPadUp);
-        }
     }
 }

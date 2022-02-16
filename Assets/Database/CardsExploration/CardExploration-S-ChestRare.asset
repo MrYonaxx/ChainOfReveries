@@ -17,6 +17,7 @@ MonoBehaviour:
   cardDescription: "Cr\xE9er une r\xEAverie pour obtenir des tr\xE9sors de grandes
     valeures."
   cardType: 1
-  explorationEvent: {fileID: 6310875253515177516, guid: b5727973ca558a74993c1382e29c1daf,
+  nbCardReward: 0
+  explorationEvent: {fileID: 6310875253515177516, guid: 09f256c00f1edd746bd1d020d8e2d173,
     type: 3}
   battleModifiers: []

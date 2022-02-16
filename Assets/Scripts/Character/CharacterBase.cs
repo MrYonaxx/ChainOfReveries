@@ -253,6 +253,7 @@ namespace VoiceActing
         protected virtual void OnDestroy()
         {
             BattleFeedbackManager.Instance.RemoveIMotionSpeed(this);
+            characterStatusController.RemoveAllStatus();
         }
 
         public void SetState(CharacterState characterState)

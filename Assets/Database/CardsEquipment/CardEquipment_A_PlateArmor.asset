@@ -22,12 +22,15 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   cardSprite: {fileID: 21300000, guid: 3a4d039acc2220143972ba8c4a1f7a40, type: 3}
-  cardName: PlateArmor
+  cardName: Plate Armor
   cardType: 1
-  cardDescription: '
+  cardDescription: 'Reduce physical damage by 30%.
 
 '
-  statsModifier: []
+  statsModifier:
+  - charStat: 2
+    modifierType: 0
+    value: 0.3
   statusEffectPassive: {fileID: 0}
   equipmentAction: {fileID: 0}
   statusEffectActive: {fileID: 0}

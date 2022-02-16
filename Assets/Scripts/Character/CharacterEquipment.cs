@@ -17,7 +17,13 @@ namespace VoiceActing
         CharacterStat characterStat = null;
         CharacterStatusController characterStatusController = null;
 
-        List<CardEquipment> cardsEquipment = null;
+        List<CardEquipment> cardsEquipment = null; // Liste comprenant tout les équipements
+        CardEquipment[] cardsEquipmentWeapon; // Liste comprenant uniquement les equipements weapon
+        public CardEquipment[] CardsEquipmentWeapon
+        {
+            get { return cardsEquipmentWeapon; }
+        }
+
 
         // Variable pas très habile pour récupérer la carte qu'on vient d'équiper
         CardEquipment latestCardEquipment;
@@ -27,55 +33,78 @@ namespace VoiceActing
         }
 
 
-        public bool InEquipmentDeck = false;
+        public delegate void ActionCharacterEquipment(CardEquipment[] equipments);
+        public event ActionCharacterEquipment OnEquipWeapon;
 
         public void InitializeComponent(CharacterBase character)
         {
             characterStat = character.CharacterStat;
             characterStatusController = character.CharacterStatusController;
 
-            // Créer automatiquement un deck à partir du deck initial
+            // Créer automatiquement un deck à partir du deck initial et équipe les cartes
             cardsEquipment = new List<CardEquipment>(character.CharacterData.InitialEquipment.Length);
             for (int i = 0; i < character.CharacterData.InitialEquipment.Length; i++)
             {
                 cardsEquipment.Add(new CardEquipment(character.CharacterData.InitialEquipment[i].cardEquipment));
+                EquipCard(character.CharacterData.InitialEquipment[i].cardEquipment);
             }
 
             // On set le deck du character pour bénéficier des effets actifs
-            SetEquipmentDeck(cardsEquipment);
-
-            // On équipe les cartes équipements pour bénéficier des effets passifs
-            EquipAll();
+            SetWeaponDeck(cardsEquipment);
         }
 
+
+        /// <summary>
+        /// Créer le deck équipement
+        /// </summary>
+        /// <param name="deckEquipment"></param>
         public void SetEquipmentDeck(List<CardEquipment> deckEquipment)
         {
-            cardsEquipment = deckEquipment;
+            UnequipAll();
 
-            // Seul les cartes équipement avec un status actif peuvent être joué
-            List<Card> cardPlayable = new List<Card>();
+            cardsEquipment = new List<CardEquipment>(deckEquipment.Count);
             for (int i = 0; i < deckEquipment.Count; i++)
             {
-                if(deckEquipment[i].CardEquipmentData.EquipmentAction != null)
-                    cardPlayable.Add(deckEquipment[i]);
+                cardsEquipment.Add(deckEquipment[i]);
+                EquipCard(deckEquipment[i].CardEquipmentData);
             }
-            deckEquipmentController.SetDeck(cardPlayable);
         }
 
-
-
-
-
-        public void SwitchToEquipmentDeck(bool b)
+        /// </summary>
+        /// Créer un deck de carte équipement Arme pour les utiliser en combat, à partir d'une liste de carte 
+        /// </summary>
+        /// /// <param name="deckEquipment"></param>
+        public void SetWeaponDeck(List<CardEquipment> deckEquipment)
         {
-            InEquipmentDeck = b;
+            cardsEquipment = deckEquipment;
+            cardsEquipmentWeapon = new CardEquipment[4];
+            int index = 0;
+
+            // Seul les cartes équipement avec un status actif peuvent être joué
+            for (int i = 0; i < deckEquipment.Count; i++)
+            {
+                if (index >= cardsEquipmentWeapon.Length)
+                    break;
+                if (deckEquipment[i].CardEquipmentData.EquipmentAction != null) 
+                {
+                    cardsEquipmentWeapon[index] = deckEquipment[i];
+                    index++;
+                    Debug.Log("Ouais?");
+                }
+            }
+            OnEquipWeapon?.Invoke(cardsEquipmentWeapon);
         }
+
+
+
+
 
         // Check si on peut jouer les cartes équipements
         public bool CanAct()
         {
             return true;
         }
+
 
         public void PlayCard()
         {
@@ -88,6 +117,30 @@ namespace VoiceActing
             if (card.CardEquipmentData.StatusEffectActive != null)
                 characterStatusController.ApplyStatus(card.CardEquipmentData.StatusEffectActive, 100);
         }
+
+        // En utilisant le pavé numérique 2 = bas, 4 = gauche, 6 = droite, 8 = haut
+        public CardEquipment PlayCard(int input)
+        {
+            input /= 2;
+            input--;
+
+            if (cardsEquipmentWeapon[input] == null)
+                return null;
+
+            CardEquipment card = cardsEquipmentWeapon[input];
+            cardsEquipmentWeapon[input] = null;
+
+            latestCardEquipment = card;
+
+            // Ajoute les effets de la carte
+            if (card.CardEquipmentData.StatusEffectActive != null)
+                characterStatusController.ApplyStatus(card.CardEquipmentData.StatusEffectActive, 100);
+
+            OnEquipWeapon?.Invoke(cardsEquipmentWeapon);
+            return card;
+        }
+
+
 
 
 
@@ -102,7 +155,7 @@ namespace VoiceActing
             }
         }
 
-        public void EquipCard(CardEquipmentData cardData, int level)
+        public void EquipCard(CardEquipmentData cardData, int level = 0)
         {
             for (int i = 0; i < cardData.StatsModifier.Count; i++)
             {
@@ -112,13 +165,21 @@ namespace VoiceActing
                 characterStatusController.ApplyStatus(cardData.StatusEffectPassive, 100);
         }
 
+        private void UnequipAll()
+        {
+            for (int i = 0; i < cardsEquipment.Count; i++)
+            {
+                UnequipCard(cardsEquipment[i].CardEquipmentData, 0);
+            }
+        }
         public void UnequipCard(CardEquipmentData cardData, int level)
         {
             for (int i = 0; i < cardData.StatsModifier.Count; i++)
             {
                 characterStat.RemoveStat(cardData.StatsModifier[i]);
             }
-            //characterStatusController.RemoveStatus(cardData.StatusEffectPassive, 100);
+            if (cardData.StatusEffectPassive != null)
+                characterStatusController.RemoveStatus(cardData.StatusEffectPassive);
         }
 
     }

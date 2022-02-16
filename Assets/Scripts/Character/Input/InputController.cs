@@ -117,6 +117,23 @@ namespace VoiceActing
             get { return inputPadUp; }
         }
 
+        protected InputBuffer inputPadLeft;
+        public InputBuffer InputPadLeft
+        {
+            get { return inputPadLeft; }
+        }
+
+        protected InputBuffer inputPadRight;
+        public InputBuffer InputPadRight
+        {
+            get { return inputPadRight; }
+        }
+
+        protected InputBuffer inputStart;
+        public InputBuffer InputStart
+        {
+            get { return inputStart; }
+        }
 
         protected IControllable controllable;
         public IControllable Controllable
@@ -161,6 +178,10 @@ namespace VoiceActing
 
             inputPadDown = new InputBuffer();
             inputPadUp = new InputBuffer();
+            inputPadLeft = new InputBuffer();
+            inputPadRight = new InputBuffer();
+
+            inputStart = new InputBuffer();
         }
 
         protected virtual void Update()
@@ -186,6 +207,10 @@ namespace VoiceActing
 
             inputPadDown.BufferTime -= Time.deltaTime;
             inputPadUp.BufferTime -= Time.deltaTime;
+            inputPadLeft.BufferTime -= Time.deltaTime;
+            inputPadRight.BufferTime -= Time.deltaTime;
+
+            inputStart.BufferTime -= Time.deltaTime;
         }
 
         public void ResetAllBuffer(bool joystickOff = false)
@@ -203,6 +228,10 @@ namespace VoiceActing
 
             inputPadDown.ResetBuffer();
             inputPadUp.ResetBuffer();
+            inputPadLeft.ResetBuffer();
+            inputPadRight.ResetBuffer();
+
+            inputStart.ResetBuffer();
 
             if (joystickOff)
             {

@@ -719,6 +719,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3933365873575352637}
   - component: {fileID: 6866105136518696230}
+  - component: {fileID: 911406104369000145}
   m_Layer: 0
   m_Name: AttackProcssor
   m_TagString: Untagged
@@ -767,6 +768,38 @@ MonoBehaviour:
     maxHP: 0
   element:
     element: 0
+    ignoreElementalStat: 0
+  damage:
+    baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
+--- !u!114 &911406104369000145
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6110435575002120153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e38b2d8b367794490600c90e07eae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackProcessor: 3
+  cardDamage:
+    cardDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+    debugDamage: {x: 100, y: 200}
+    ignoreStatsMultiplier: 0
+  cardStatus:
+    statusDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+    status: {fileID: 0}
+    debugDamage: {x: 100, y: 200}
+  cardPercentage:
+    percentDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+    debugDamage: {x: 100, y: 200}
+    maxHP: 0
+  element:
+    element: 5
     ignoreElementalStat: 0
   damage:
     baseDamage: 100
@@ -852,6 +885,7 @@ MonoBehaviour:
   linkHitboxYToAttack: 1
   attackProcessorsComponents:
   - {fileID: 6866105136518696230}
+  - {fileID: 911406104369000145}
   attackComponents:
   - {fileID: 2084498871816984702}
   - {fileID: 8365313438279936552}

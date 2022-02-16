@@ -132,6 +132,11 @@ namespace VoiceActing
 
             UpdateInputButton(InputEnum.DPAD_DOWN, inputPadDown);
             UpdateInputButton(InputEnum.DPAD_UP, inputPadUp);
+            UpdateInputButton(InputEnum.DPAD_LEFT, inputPadLeft);
+            UpdateInputButton(InputEnum.DPAD_RIGHT, inputPadRight);
+
+
+            UpdateInputButton(InputEnum.START, inputStart);
 
             // Stick
             if (Mathf.Abs(player.GetAxis("Vertical")) >= joystickThreshold)

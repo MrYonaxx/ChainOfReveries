@@ -95,20 +95,9 @@ namespace VoiceActing
                 return;
 
             // Inputs
-            if (character.CharacterEquipment.InEquipmentDeck)
-            {
-                character.CharacterEquipment.DeckEquipmentController.MoveHand(character.Inputs.InputLB.InputValue == 1 ? true : false, character.Inputs.InputRB.InputValue == 1 ? true : false);
-                character.CharacterEquipment.DeckEquipmentController.MoveCategory(character.Inputs.InputLT.InputValue == 1 ? true : false, character.Inputs.InputRT.InputValue == 1 ? true : false);
-            }
-            else
-            {
-                character.DeckController.MoveHand(character.Inputs.InputLB.InputValue == 1 ? true : false, character.Inputs.InputRB.InputValue == 1 ? true : false);
-                character.DeckController.MoveCategory(character.Inputs.InputLT.InputValue == 1 ? true : false, character.Inputs.InputRT.InputValue == 1 ? true : false);
-                InputSleight(character);
-            }
-            InputDpad(character);
-
-
+            character.DeckController.MoveHand(character.Inputs.InputLB.InputValue == 1 ? true : false, character.Inputs.InputRB.InputValue == 1 ? true : false);
+            character.DeckController.MoveCategory(character.Inputs.InputLT.InputValue == 1 ? true : false, character.Inputs.InputRT.InputValue == 1 ? true : false);
+            InputSleight(character);
 
             // Update Knockback Time
             character.CharacterKnockback.KnockbackTime -= Time.deltaTime * character.MotionSpeed;
@@ -180,7 +169,7 @@ namespace VoiceActing
             character.CharacterKnockback.CanRevenge = character.Inputs.InputA.InputValue == 1 ? true : false;
         }
 
-        private bool InputDpad(CharacterBase character)
+        /*private bool InputDpad(CharacterBase character)
         {
             if (character.Inputs.InputPadDown.Registered || character.Inputs.InputPadUp.Registered)
             {
@@ -198,7 +187,7 @@ namespace VoiceActing
                 return true;
             }
             return false;
-        }
+        }*/
 
         private void WallBounce(CharacterBase character)
         {

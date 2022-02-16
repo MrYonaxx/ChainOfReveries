@@ -114,6 +114,9 @@ namespace VoiceActing
         public delegate void ActionCharacterAttack(AttackManager attack, Card card);
         public event ActionCharacterAttack OnAction;
 
+        // Mouais
+        public event ActionCharacterAttack OnSleightPlayed;
+
         public delegate void ActionCharacterAttackHit(AttackController attack, CharacterBase character);
         public event ActionCharacterAttackHit OnAttackHit;
 
@@ -239,6 +242,7 @@ namespace VoiceActing
 
                 if (cardBreakController.PlayCard(character, cards, sleight[0].CardData.CardBreakComponent) == true)
                 {
+                    OnSleightPlayed?.Invoke(sleight[0].CardData.AttackManager, sleight[0]);
                     Action(sleight);
                 }
 

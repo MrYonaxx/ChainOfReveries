@@ -80,7 +80,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  statusIconSprite: {fileID: 21300000, guid: c54599d7b8ba2a048878d4c174ab8b99, type: 3}
+  statusIconSprite: {fileID: 21300000, guid: 09d985f3e7991e84d8379d234e34dc4f, type: 3}
   statusName: Thunder Boost
   statusDescription: Reduce all attacks cards by 1.
   hideStatus: 0

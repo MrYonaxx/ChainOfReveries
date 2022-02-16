@@ -5097,6 +5097,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2993736704012603865}
+  animatorSpeed: 1
 --- !u!114 &8339638180368584644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5202,6 +5203,7 @@ MonoBehaviour:
   frame: 32
   frameEnd: 0
   fx: {fileID: 3278388281015905367}
+  appear: 1
 --- !u!114 &5493015938890063566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5311,7 +5313,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dad7e80ac0cdbd428606f8c14ac4bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dezoom: 0
+  zoomValue:
+  - -0.5
+  - -0.5
+  - 0
+  zoomTime:
+  - 6
+  - 12
+  - 6
+  smoothZoom: 0
 --- !u!114 &1134361686230697172
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5785,6 +5795,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3933365873575352637}
   - component: {fileID: 2624587826181560284}
+  - component: {fileID: 2742231728614673807}
   m_Layer: 0
   m_Name: AttackProcessor
   m_TagString: Untagged
@@ -5830,9 +5841,46 @@ MonoBehaviour:
   cardPercentage:
     percentDamage: 0f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f0000000f000000
     debugDamage: {x: 15, y: 15}
+    maxHP: 0
   element:
     element: 0
     ignoreElementalStat: 0
+  damage:
+    baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
+--- !u!114 &2742231728614673807
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6110435575002120153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e38b2d8b367794490600c90e07eae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackProcessor: 3
+  cardDamage:
+    cardDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+    debugDamage: {x: 100, y: 200}
+    ignoreStatsMultiplier: 0
+  cardStatus:
+    statusDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+    status: {fileID: 0}
+    debugDamage: {x: 100, y: 200}
+  cardPercentage:
+    percentDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+    debugDamage: {x: 100, y: 200}
+    maxHP: 0
+  element:
+    element: 5
+    ignoreElementalStat: 0
+  damage:
+    baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
 --- !u!1 &6206275155082899838
 GameObject:
   m_ObjectHideFlags: 0
@@ -5994,6 +6042,7 @@ MonoBehaviour:
   linkHitboxYToAttack: 0
   attackProcessorsComponents:
   - {fileID: 2624587826181560284}
+  - {fileID: 2742231728614673807}
   attackComponents:
   - {fileID: 7551450669341146340}
   - {fileID: 4105374039008972274}
