@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02519ca1dddceb742b46951073eda492, type: 3}
+  m_Name: CardEquipment_W_52___Hourglass
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  cardSprite: {fileID: 21300000, guid: a7bcab522851cf64dab3de5a93c38357, type: 3}
+  cardName: Blameable Gear
+  cardType: 0
+  cardDescription: Stop time.
+  statsModifier: []
+  statusEffectPassive: {fileID: 0}
+  equipmentAction: {fileID: 818057835518184039, guid: 9a5e83288e7fcab4cbe74abf9c483c12,
+    type: 3}
+  statusEffectActive: {fileID: 0}

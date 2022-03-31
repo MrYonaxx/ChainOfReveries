@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9215f13be507224cb16827db2798625, type: 3}
+  m_Name: EncounterDatabaseBoss
+  m_EditorClassIdentifier: 
+  bosses:
+  - Character: {fileID: 11400000, guid: 02afca26a085403478824fba51632d71, type: 2}
+    BossEvents:
+    - {fileID: 1053828776339861690, guid: 8e66ffc8f0b3d654f8e7d0cd03dddb01, type: 3}
+    - {fileID: 6371470327710494762, guid: d2becff46de1f854ea3f94130280e645, type: 3}
+    - {fileID: 4891703483128983185, guid: 1809fce73a6e73f419295b45a9f03919, type: 3}
+  - Character: {fileID: 11400000, guid: aba76329a080111419f5cd9df7ffd119, type: 2}
+    BossEvents:
+    - {fileID: 1053828776339861690, guid: 99524214c683be04dbe8b9e4799709c4, type: 3}
+    - {fileID: 5675438349594716413, guid: d484e2ca801642b47802fc21e1a7bf98, type: 3}
+    - {fileID: 7493919658437583892, guid: 5b1f65d7d19677b43932307d9e4d16c1, type: 3}
+  - Character: {fileID: 11400000, guid: b2b36011f1c8ed947aa42203acf2994b, type: 2}
+    BossEvents:
+    - {fileID: 9219024559366097419, guid: 0c8a573567cb81740916761e2d5cca9f, type: 3}
+    - {fileID: 6623165270138681543, guid: 98e8bfee52d53d84c9c7493f3fcc913b, type: 3}
+    - {fileID: 2952716009354312899, guid: c7ad6c6455c1c7447b8d52e7b2de66d8, type: 3}
+  LastBossSelected: {fileID: 11400000, guid: 02afca26a085403478824fba51632d71, type: 2}

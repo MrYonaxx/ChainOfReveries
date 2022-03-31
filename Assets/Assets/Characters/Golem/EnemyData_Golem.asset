@@ -1,0 +1,119 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d1db5c43ecd7a47bfed3f23c297697, type: 3}
+  m_Name: EnemyData_Golem
+  m_EditorClassIdentifier: 
+  characterFace: {fileID: 0}
+  characterName: Golem
+  characterDescription: 'Golem will try to stun you and then use his magic card to
+    deal damage. Card Break everyone one of his move and do not let him play.
+
+
+'
+  characterStat:
+    hp: 7499
+    HPMax:
+      baseValue: 7499
+      finalValue: 7499
+    Attack:
+      baseValue: 1
+      finalValue: 1
+    Defense:
+      baseValue: 1
+      finalValue: 1
+    Magic:
+      baseValue: 1
+      finalValue: 1
+    MagicDefense:
+      baseValue: 1
+      finalValue: 1
+    RevengeValue:
+      baseValue: 0
+      finalValue: 0
+    RevengeValueRate:
+      baseValue: 0
+      finalValue: 0
+    KnockbackTime:
+      baseValue: 0
+      finalValue: 0
+    ReloadAmount:
+      baseValue: 100
+      finalValue: 100
+    CardBreakTime:
+      baseValue: 2
+      finalValue: 2
+    Speed:
+      baseValue: 0
+      finalValue: 0
+    Gravity:
+      baseValue: 25
+      finalValue: 25
+    GravityMax:
+      baseValue: 50
+      finalValue: 50
+    MotionSpeed:
+      baseValue: 1
+      finalValue: 1
+    Mass:
+      baseValue: 0
+      finalValue: 0
+    ElementalResistances:
+    - baseValue: -100
+      finalValue: -0
+      element: 4
+    StatusResistances: []
+  salut: 
+  initialDeck:
+  - cardData: {fileID: 11400000, guid: 92e0a698c0f1aa54bb2aa71d4fb6ed65, type: 2}
+    baseCardValue: 3
+  - cardData: {fileID: 11400000, guid: 778b86ac4d3ebb045a8edcbefea96b5f, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: 92e0a698c0f1aa54bb2aa71d4fb6ed65, type: 2}
+    baseCardValue: 6
+  - cardData: {fileID: 11400000, guid: 92e0a698c0f1aa54bb2aa71d4fb6ed65, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: 778b86ac4d3ebb045a8edcbefea96b5f, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 92e0a698c0f1aa54bb2aa71d4fb6ed65, type: 2}
+    baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: 92e0a698c0f1aa54bb2aa71d4fb6ed65, type: 2}
+    baseCardValue: 1
+  - cardData: {fileID: 11400000, guid: 92e0a698c0f1aa54bb2aa71d4fb6ed65, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: 778b86ac4d3ebb045a8edcbefea96b5f, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: 92e0a698c0f1aa54bb2aa71d4fb6ed65, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 778b86ac4d3ebb045a8edcbefea96b5f, type: 2}
+    baseCardValue: 2
+  - cardData: {fileID: 11400000, guid: 92e0a698c0f1aa54bb2aa71d4fb6ed65, type: 2}
+    baseCardValue: 2
+  - cardData: {fileID: 11400000, guid: 778b86ac4d3ebb045a8edcbefea96b5f, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 92e0a698c0f1aa54bb2aa71d4fb6ed65, type: 2}
+    baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: 92e0a698c0f1aa54bb2aa71d4fb6ed65, type: 2}
+    baseCardValue: 6
+  - cardData: {fileID: 11400000, guid: 778b86ac4d3ebb045a8edcbefea96b5f, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: 92e0a698c0f1aa54bb2aa71d4fb6ed65, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 92e0a698c0f1aa54bb2aa71d4fb6ed65, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 92e0a698c0f1aa54bb2aa71d4fb6ed65, type: 2}
+    baseCardValue: 7
+  sleightDatabase:
+  - {fileID: 11400000, guid: 6dc2ef74f0117bc4d92f648a18fe62fc, type: 2}
+  - {fileID: 11400000, guid: 599a3295575c564418256002044e206a, type: 2}
+  initialEquipment: []
+  loreDescription: Strong creature living in Swamps, Golem are a threat for the inhabitant
+    of Mynsa.

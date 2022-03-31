@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0d50e517eba5d4dba18568d80634f5, type: 3}
+  m_Name: SleightSen_Thundaga
+  m_EditorClassIdentifier: 
+  sleightName: Thundaga
+  sleightDescription: A fast and powerful lightning strike on an enemy.
+  sleightValue: {x: 0, y: 27}
+  sleightRecipe:
+  - {fileID: 11400000, guid: 79f2f5ec3896dac4b9eee571b53ae8f7, type: 2}
+  - {fileID: 11400000, guid: 79f2f5ec3896dac4b9eee571b53ae8f7, type: 2}
+  - {fileID: 11400000, guid: 79f2f5ec3896dac4b9eee571b53ae8f7, type: 2}
+  sleightAttackData: {fileID: 11400000, guid: 27e457c28714f0f47bf6df1b9c148dc1, type: 2}

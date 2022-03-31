@@ -1,0 +1,58 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 837a7caded1401f49aa34a77c3bbbaac, type: 3}
+  m_Name: CardExplorationDatabase
+  m_EditorClassIdentifier: 
+  TriggerForceDrawType: 1
+  numberToTriggerForceDraw: 2
+  forceDrawType: 0
+  explorationDatabase:
+  - cardExploration: {fileID: 11400000, guid: d15e3b90d2a853d48b4e6968f7d7f5a9, type: 2}
+    probability: 300
+  - cardExploration: {fileID: 11400000, guid: b985e450346c92c459b185d18ea04bf4, type: 2}
+    probability: 100
+  - cardExploration: {fileID: 11400000, guid: af3f7a0ad05ec1540822aafddaa834f9, type: 2}
+    probability: 50
+  - cardExploration: {fileID: 11400000, guid: 7bf18b8981b6a4d4dba03fece3197c70, type: 2}
+    probability: 50
+  - cardExploration: {fileID: 11400000, guid: 9fe4caa26c9c3844bac46c1ca3678b08, type: 2}
+    probability: 50
+  - cardExploration: {fileID: 11400000, guid: 3557e536f3d4c1b44983f9077c9c3125, type: 2}
+    probability: 50
+  - cardExploration: {fileID: 11400000, guid: 73c5ffb0fa3abaf4c973b330651fcd73, type: 2}
+    probability: 50
+  - cardExploration: {fileID: 11400000, guid: 0bf057dcf88ee0f42a70aa400d6235ff, type: 2}
+    probability: 50
+  - cardExploration: {fileID: 11400000, guid: 8b387f445e481ed4a926ae009ec11175, type: 2}
+    probability: 100
+  - cardExploration: {fileID: 11400000, guid: eaecc4cb77e55834e8a72aba9181cbfb, type: 2}
+    probability: 100
+  - cardExploration: {fileID: 11400000, guid: 44d7b7e69c371684a8bcda8858987fd1, type: 2}
+    probability: 100
+  - cardExploration: {fileID: 11400000, guid: 23abbd3569efad04dbc1cd6f0c8742f8, type: 2}
+    probability: 100
+  - cardExploration: {fileID: 11400000, guid: 73183a75d614d6e4a903685eeb459734, type: 2}
+    probability: 50
+  - cardExploration: {fileID: 11400000, guid: 65eddfaefefa63e4485c829f2ca8fdaa, type: 2}
+    probability: 50
+  - cardExploration: {fileID: 11400000, guid: 428372b4353492a4992435ff672dd230, type: 2}
+    probability: 100
+  - cardExploration: {fileID: 11400000, guid: ef8e00c5c175d844daebe5dcf2d8b07f, type: 2}
+    probability: 100
+  - cardExploration: {fileID: 11400000, guid: 90879803b45f72c47a1444f8be4b23c4, type: 2}
+    probability: 50
+  - cardExploration: {fileID: 11400000, guid: 9345cec710984544fb7d70877c67c3d3, type: 2}
+    probability: 100
+  - cardExploration: {fileID: 11400000, guid: 473a3c5a2327bbb46a5008ccc0ffd104, type: 2}
+    probability: 50
+  - cardExploration: {fileID: 11400000, guid: aa05097adfc732d4bb75dc77fe28e1a5, type: 2}
+    probability: 10

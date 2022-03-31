@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0d50e517eba5d4dba18568d80634f5, type: 3}
+  m_Name: Sleight_MidnightMowing
+  m_EditorClassIdentifier: 
+  sleightName: Midnight Mowing
+  sleightDescription: After a long startup, dash through enemies and deal massive
+    damage
+  sleightValue: {x: 1, y: 9}
+  sleightRecipe:
+  - {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+  - {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+  - {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+  sleightAttackData: {fileID: 11400000, guid: 2db8272ab99a0804dbf790338522edd1, type: 2}

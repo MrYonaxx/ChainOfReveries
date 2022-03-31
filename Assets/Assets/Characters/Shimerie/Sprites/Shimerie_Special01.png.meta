@@ -1,0 +1,668 @@
+fileFormatVersion: 2
+guid: 7061239f78fd75d4599808d286325f86
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 3529473648593212987
+    second: Shimerie_Special01_0
+  - first:
+      213: 7173331469057662487
+    second: Shimerie_Special01_1
+  - first:
+      213: -472065925588422053
+    second: Shimerie_Special01_2
+  - first:
+      213: 4330192882614168899
+    second: Shimerie_Special01_3
+  - first:
+      213: -2481666271808755880
+    second: Shimerie_Special01_4
+  - first:
+      213: 3776414834061044424
+    second: Shimerie_Special01_5
+  - first:
+      213: -6092727071927040126
+    second: Shimerie_Special01_6
+  - first:
+      213: 5844265102731095425
+    second: Shimerie_Special01_7
+  - first:
+      213: 1663719625486788771
+    second: Shimerie_Special01_8
+  - first:
+      213: 5639816756217234165
+    second: Shimerie_Special01_9
+  - first:
+      213: -2386574918884482551
+    second: Shimerie_Special01_10
+  - first:
+      213: 2289055214986238704
+    second: Shimerie_Special01_11
+  - first:
+      213: 3402950295624782353
+    second: Shimerie_Special01_12
+  - first:
+      213: 681337720212944137
+    second: Shimerie_Special01_13
+  - first:
+      213: -8603835781638770033
+    second: Shimerie_Special01_14
+  - first:
+      213: -369387081401324653
+    second: Shimerie_Special01_15
+  - first:
+      213: -4209014354890823825
+    second: Shimerie_Special01_16
+  - first:
+      213: 1708774523548933517
+    second: Shimerie_Special01_17
+  - first:
+      213: -2161442425725622260
+    second: Shimerie_Special01_18
+  - first:
+      213: 4915223807138492183
+    second: Shimerie_Special01_19
+  - first:
+      213: -5275511424958394990
+    second: Shimerie_Special01_0
+  - first:
+      213: -7525165738740894524
+    second: Shimerie_Special01_1
+  - first:
+      213: 6649187055956602564
+    second: Shimerie_Special01_2
+  - first:
+      213: 2811255302017893541
+    second: Shimerie_Special01_3
+  - first:
+      213: -5911679592185821159
+    second: Shimerie_Special01_4
+  - first:
+      213: -3990698245260582530
+    second: Shimerie_Special01_5
+  - first:
+      213: -2593480127737060934
+    second: Shimerie_Special01_6
+  - first:
+      213: 7844059996253096767
+    second: Shimerie_Special01_7
+  - first:
+      213: -8144913472938858425
+    second: Shimerie_Special01_8
+  - first:
+      213: -8914850578414778952
+    second: Shimerie_Special01_9
+  - first:
+      213: -2274852702459191518
+    second: Shimerie_Special01_10
+  - first:
+      213: -8815963663643687591
+    second: Shimerie_Special01_11
+  - first:
+      213: 6725524224821100835
+    second: Shimerie_Special01_12
+  - first:
+      213: 3558252900806130911
+    second: Shimerie_Special01_13
+  - first:
+      213: 7667858615236211742
+    second: Shimerie_Special01_14
+  - first:
+      213: 6687140106787243400
+    second: Shimerie_Special01_15
+  - first:
+      213: 7237077491385160284
+    second: Shimerie_Special01_16
+  - first:
+      213: 2953775771781029566
+    second: Shimerie_Special01_17
+  - first:
+      213: 842235507629550563
+    second: Shimerie_Special01_18
+  - first:
+      213: 2646271827670803647
+    second: Shimerie_Special01_19
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Shimerie_Special01_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 165
+        width: 45
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29d07d25f4e99c6b0800000000000000
+      internalID: -5275511424958394990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shimerie_Special01_1
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 165
+        width: 45
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4c4b86271ad319790800000000000000
+      internalID: -7525165738740894524
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shimerie_Special01_2
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 165
+        width: 45
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ce2b630668a64c50800000000000000
+      internalID: 6649187055956602564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shimerie_Special01_3
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 165
+        width: 45
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a4c5b17dc5930720800000000000000
+      internalID: 2811255302017893541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shimerie_Special01_4
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 165
+        width: 45
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91886d97bbe75fda0800000000000000
+      internalID: -5911679592185821159
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shimerie_Special01_5
+      rect:
+        serializedVersion: 2
+        x: 225
+        y: 165
+        width: 45
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e71e77de6113e98c0800000000000000
+      internalID: -3990698245260582530
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shimerie_Special01_6
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 165
+        width: 45
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab1a23e809b120cd0800000000000000
+      internalID: -2593480127737060934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shimerie_Special01_7
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 165
+        width: 45
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3b8489c103bbdc60800000000000000
+      internalID: 7844059996253096767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shimerie_Special01_8
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 165
+        width: 45
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 748af27995477fe80800000000000000
+      internalID: -8144913472938858425
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shimerie_Special01_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 110
+        width: 45
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b5c6efb1a6184480800000000000000
+      internalID: -8914850578414778952
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shimerie_Special01_10
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 110
+        width: 45
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22f159115891e60e0800000000000000
+      internalID: -2274852702459191518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shimerie_Special01_11
+      rect:
+        serializedVersion: 2
+        x: 90
+        y: 110
+        width: 45
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95544c3c1c767a580800000000000000
+      internalID: -8815963663643687591
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shimerie_Special01_12
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 110
+        width: 45
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3210fbc26acd55d50800000000000000
+      internalID: 6725524224821100835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shimerie_Special01_13
+      rect:
+        serializedVersion: 2
+        x: 270
+        y: 110
+        width: 45
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fdc7d8d2924716130800000000000000
+      internalID: 3558252900806130911
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shimerie_Special01_14
+      rect:
+        serializedVersion: 2
+        x: 315
+        y: 110
+        width: 45
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e14b215d8c4b96a60800000000000000
+      internalID: 7667858615236211742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shimerie_Special01_15
+      rect:
+        serializedVersion: 2
+        x: 360
+        y: 110
+        width: 45
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88542544f7e7dcc50800000000000000
+      internalID: 6687140106787243400
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shimerie_Special01_16
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 55
+        width: 45
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c52dcfd72a34f6460800000000000000
+      internalID: 7237077491385160284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shimerie_Special01_17
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 55
+        width: 45
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ebed9272a6bedf820800000000000000
+      internalID: 2953775771781029566
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shimerie_Special01_18
+      rect:
+        serializedVersion: 2
+        x: 45
+        y: 0
+        width: 45
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ebea795bb830bb00800000000000000
+      internalID: 842235507629550563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Shimerie_Special01_19
+      rect:
+        serializedVersion: 2
+        x: 180
+        y: 0
+        width: 45
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5, y: 0.13}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fb4217be43279b420800000000000000
+      internalID: 2646271827670803647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

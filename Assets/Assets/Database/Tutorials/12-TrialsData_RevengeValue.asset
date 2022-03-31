@@ -1,0 +1,118 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3477117ff54f7d45a683b3e8c794b3c, type: 3}
+  m_Name: 12-TrialsData_RevengeValue
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 818057835518184039, guid: 1302f6a66fef67e489d7e73ddd721e4e, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: missions
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Tutorial.TutorialCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 1|Tutorial.TutorialConditionState, Assembly-CSharp
+    - Name: isPlayer
+      Entry: 5
+      Data: true
+    - Name: stateID
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|Tutorial.TutorialConditionRV, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|Tutorial.TutorialConditionAction, Assembly-CSharp
+    - Name: action
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: failConditions
+      Entry: 7
+      Data: 4|System.Collections.Generic.List`1[[Tutorial.TutorialCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 5|Tutorial.TutorialConditionState, Assembly-CSharp
+    - Name: isPlayer
+      Entry: 5
+      Data: true
+    - Name: stateID
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  trialsName: 12 - Revenge Value
+  trialsDescription: Learn what the Revenge Value is.
+  deckPlayer: {fileID: 11400000, guid: 6f4c134a24ba94f48a31fb8522fbfe6e, type: 2}
+  deckEnemy: {fileID: 11400000, guid: 2733f11e888062d47841f1f009414eba, type: 2}
+  dummyBehavior: {fileID: 11400000, guid: d528b8c4778043e4ab0fa60fa7c3ab2e, type: 2}
+  osef: 
+  textboxStart:
+  - 'When you get hit, a blue gauge fills itself at the bottom of the screen '
+  - This is the Revenge Value gauge.
+  - Once full, and if you are getting hit by a combo, you can burst and cancel the
+    opponent combo.
+  textboxEnd:
+  - Note that when someone stop you mid-combo, you are put in a Card Break state.
+  - This means that the defensive options available to you are the same as a regular
+    Card Break.
+  comboNotes:
+  - Get Hit
+  - RV Gauge full
+  - '[Hold] Revenge'
+  trialsDisplay:
+  - showInput: 0
+    input: 0
+    SleightData: {fileID: 0}
+  - showInput: 0
+    input: 0
+    SleightData: {fileID: 0}
+  - showInput: 1
+    input: 2
+    SleightData: {fileID: 0}

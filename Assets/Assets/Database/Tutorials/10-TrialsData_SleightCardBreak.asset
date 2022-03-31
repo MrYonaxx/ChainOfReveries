@@ -1,0 +1,131 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3477117ff54f7d45a683b3e8c794b3c, type: 3}
+  m_Name: 10-TrialsData_SleightCardBreak
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 818057835518184039, guid: 735b98d3e701b3b4db7f2eb8ba52bd6d, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: missions
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Tutorial.TutorialCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 4
+    - Name: 
+      Entry: 7
+      Data: 1|Tutorial.TutorialConditionSleight, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|Tutorial.TutorialConditionPlayCard, Assembly-CSharp
+    - Name: nbToPlay
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|Tutorial.TutorialConditionState, Assembly-CSharp
+    - Name: isPlayer
+      Entry: 5
+      Data: true
+    - Name: stateID
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|Tutorial.TutorialConditionAction, Assembly-CSharp
+    - Name: action
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: failConditions
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[Tutorial.TutorialCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 6|Tutorial.TutorialConditionState, Assembly-CSharp
+    - Name: isPlayer
+      Entry: 5
+      Data: true
+    - Name: stateID
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  trialsName: 10 - Sleight Card Break
+  trialsDescription: Learn a defensive way to use your Sleight.
+  deckPlayer: {fileID: 11400000, guid: d6d5007736698ce438d8375880778f5b, type: 2}
+  deckEnemy: {fileID: 11400000, guid: 7c4900c1ee298f84a8c5c1362f3bf5a1, type: 2}
+  dummyBehavior: {fileID: 11400000, guid: 16bfa958f62135043ababdce03b32bda, type: 2}
+  osef: 
+  textboxStart:
+  - If you get Card Break, you're character is stunned for a short amount of time.
+  - You can cancel this stun time by playing a Sleight.
+  - Ready a Sleight and get Card Break by your opponent.
+  - This will be your moment to Sleight cancel the Card Break
+  textboxEnd:
+  - If you don't have a Sleight ready the moment you're getting Card Break, you can't
+    cancel the Card Break with your special moves.
+  - So prepare your Sleight in advance if you want to defend yourself.
+  comboNotes:
+  - Combine 3 cards
+  - Play a Card
+  - Get Card Break
+  - Cancel with a Sleight
+  trialsDisplay:
+  - showInput: 1
+    input: 5
+    SleightData: {fileID: 0}
+  - showInput: 1
+    input: 2
+    SleightData: {fileID: 0}
+  - showInput: 0
+    input: 0
+    SleightData: {fileID: 0}
+  - showInput: 1
+    input: 5
+    SleightData: {fileID: 0}

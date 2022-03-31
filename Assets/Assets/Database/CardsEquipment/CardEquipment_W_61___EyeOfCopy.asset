@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02519ca1dddceb742b46951073eda492, type: 3}
+  m_Name: CardEquipment_W_61___EyeOfCopy
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  cardSprite: {fileID: 21300000, guid: 7c6eea56af4318441878195c3e5def53, type: 3}
+  cardName: Mask of Reflexion
+  cardType: 0
+  cardDescription: Copy one of the enemy Equipment card.
+  statsModifier: []
+  statusEffectPassive: {fileID: 0}
+  equipmentAction: {fileID: 818057835518184039, guid: df8d67c2ed062fa43a527f5ade8d8d9b,
+    type: 3}
+  statusEffectActive: {fileID: 0}

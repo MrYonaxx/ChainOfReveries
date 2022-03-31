@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e7a8eb1f43aeedf4dae525f18600a49d, type: 3}
+  m_Name: EncounterFloor1
+  m_EditorClassIdentifier: 
+  levelEncounter: 2
+  levelUpCount: 2
+  nextLevelEncounter: {fileID: 11400000, guid: 960cf8d408f85e34e9de250a9a8697e6, type: 2}
+  encounterDatabase:
+  - encounter: {fileID: 8782236304212188354, guid: cf6125f7c3a95a548838f71ad5cdd0a6,
+      type: 3}
+    probability: 100
+  - encounter: {fileID: 8782236304212188354, guid: 5ecc2adf12a80d8479553ff7d3b19477,
+      type: 3}
+    probability: 100
+  - encounter: {fileID: 8782236304212188354, guid: efd1adf46e00abd488a9ed91a4ea6162,
+      type: 3}
+    probability: 100
+  - encounter: {fileID: 8782236304212188354, guid: d600a727f124bfc428b802e10960c69d,
+      type: 3}
+    probability: 50
+  - encounter: {fileID: 8782236304212188354, guid: 655c36f91b6081e41a2aff4e05d6957e,
+      type: 3}
+    probability: 50
+  - encounter: {fileID: 8782236304212188354, guid: 7f41ff6d3ef90174f98ac330098b64bb,
+      type: 3}
+    probability: 50
+  - encounter: {fileID: 8782236304212188354, guid: 0b55ff13ad35fef47a2b4bf75070692c,
+      type: 3}
+    probability: 100
+  - encounter: {fileID: 8782236304212188354, guid: b5ed119f563dad84287cb0134f64332a,
+      type: 3}
+    probability: 100
+  - encounter: {fileID: 8782236304212188354, guid: dc536d238b132564b9e62ae5a1655b33,
+      type: 3}
+    probability: 100

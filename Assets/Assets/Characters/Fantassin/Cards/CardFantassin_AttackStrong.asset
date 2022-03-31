@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 317806353b7288b4cb30da061d383f0e, type: 3}
+  m_Name: CardFantassin_AttackStrong
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: cardController
+      Entry: 6
+      Data: 
+    - Name: cardBreakComponent
+      Entry: 7
+      Data: 0|VoiceActing.CardBreakUnbreakable, Assembly-CSharp
+    - Name: trueUnbreakable
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+  cardSprite: {fileID: 21300000, guid: c72e41b103ef86d4993fa380b4ec1054, type: 3}
+  cardName: Strong Attack
+  cardType: 0
+  cardDescription: '[Unbreakable] Backdash then charge to deal a very powerful strike.'
+  attackManager: {fileID: 818057835518184039, guid: a4ef8625c8785574daccca77da7bf064,
+    type: 3}
+  cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  maxProbability: 0

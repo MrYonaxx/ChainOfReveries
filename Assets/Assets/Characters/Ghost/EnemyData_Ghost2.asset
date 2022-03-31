@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d1db5c43ecd7a47bfed3f23c297697, type: 3}
+  m_Name: EnemyData_Ghost2
+  m_EditorClassIdentifier: 
+  characterFace: {fileID: 0}
+  characterName: Ghost
+  characterDescription: 'Ghosts are weak to magic attack but resist physical one.
+
+
+    Their
+    attack Ghost Touch is tough to challenge so try to avoid it. '
+  characterStat:
+    hp: 1500
+    HPMax:
+      baseValue: 1500
+      finalValue: 1500
+    Attack:
+      baseValue: 1
+      finalValue: 1
+    Defense:
+      baseValue: 1
+      finalValue: 1
+    Magic:
+      baseValue: 1
+      finalValue: 1
+    MagicDefense:
+      baseValue: 1
+      finalValue: 1
+    RevengeValue:
+      baseValue: 0
+      finalValue: 0
+    KnockbackTime:
+      baseValue: 1
+      finalValue: 1
+    ReloadAmount:
+      baseValue: 100
+      finalValue: 100
+    CardBreakTime:
+      baseValue: 1
+      finalValue: 1
+    CardBreakKnockback:
+      baseValue: 3
+      finalValue: 3
+    Speed:
+      baseValue: 1.9
+      finalValue: 1.9
+    Gravity:
+      baseValue: 20
+      finalValue: 20
+    GravityMax:
+      baseValue: 40
+      finalValue: 40
+    MotionSpeed:
+      baseValue: 1
+      finalValue: 1
+    Mass:
+      baseValue: 1
+      finalValue: 1
+    ElementalResistances:
+    - baseValue: -50
+      finalValue: -0
+      element: 0
+    - baseValue: 200
+      finalValue: 0
+      element: 2
+    - baseValue: 200
+      finalValue: 0
+      element: 3
+    - baseValue: 200
+      finalValue: 0
+      element: 4
+    StatusResistances: []
+  salut: 
+  initialDeck:
+  - cardData: {fileID: 11400000, guid: 509489e5db6c60d4bb942697f5a8abdc, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: 509489e5db6c60d4bb942697f5a8abdc, type: 2}
+    baseCardValue: 2
+  - cardData: {fileID: 11400000, guid: 509489e5db6c60d4bb942697f5a8abdc, type: 2}
+    baseCardValue: 6
+  - cardData: {fileID: 11400000, guid: 509489e5db6c60d4bb942697f5a8abdc, type: 2}
+    baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: 509489e5db6c60d4bb942697f5a8abdc, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: 509489e5db6c60d4bb942697f5a8abdc, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: 509489e5db6c60d4bb942697f5a8abdc, type: 2}
+    baseCardValue: 3
+  sleightDatabase: []
+  initialEquipment: []
+  loreDescription: "Weird situations can appear because of the nature of the Reverie.
+    In order to explain them while hiding the Reverie, Chim\xE8res sometimes make
+    it look like a paranormal activity.\n\nThe ghost is the manifestation of those
+    paranormal events."

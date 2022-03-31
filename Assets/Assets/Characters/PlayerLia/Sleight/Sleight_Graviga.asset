@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0d50e517eba5d4dba18568d80634f5, type: 3}
+  m_Name: Sleight_Graviga
+  m_EditorClassIdentifier: 
+  sleightName: Graviga
+  sleightDescription: Create a huge sphere above the enemy dealing percentage damage
+    based on his max health.
+  sleightValue: {x: 0, y: 27}
+  sleightRecipe:
+  - {fileID: 11400000, guid: c8c0b6a797a9c2d47a3290e52c4e3c2f, type: 2}
+  - {fileID: 11400000, guid: c8c0b6a797a9c2d47a3290e52c4e3c2f, type: 2}
+  - {fileID: 11400000, guid: c8c0b6a797a9c2d47a3290e52c4e3c2f, type: 2}
+  sleightAttackData: {fileID: 11400000, guid: 0c04a9108a11b874b8428efa74d4fa48, type: 2}

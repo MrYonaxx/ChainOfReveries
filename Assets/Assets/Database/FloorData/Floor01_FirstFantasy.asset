@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f6320daf9054a745b2c260b43626fe6, type: 3}
+  m_Name: Floor01_FirstFantasy
+  m_EditorClassIdentifier: 
+  floorName: First Fantasy
+  floorLevel: 1
+  firstRoom: {fileID: 11400000, guid: d15e3b90d2a853d48b4e6968f7d7f5a9, type: 2}
+  floorLayout:
+  - {fileID: 11400000, guid: 5c1353acfbfea4f428db18f8cf4116ea, type: 2}
+  - {fileID: 11400000, guid: 5c1353acfbfea4f428db18f8cf4116ea, type: 2}
+  - {fileID: 11400000, guid: 5c1353acfbfea4f428db18f8cf4116ea, type: 2}
+  - {fileID: 11400000, guid: 5c1353acfbfea4f428db18f8cf4116ea, type: 2}
+  - {fileID: 11400000, guid: 5c1353acfbfea4f428db18f8cf4116ea, type: 2}
+  - {fileID: 11400000, guid: 1ef3bdcc98e7a5048aff360ba23e935b, type: 2}
+  nextLevel: {fileID: 11400000, guid: 37e2825ba2bcb2843bc8e6fe8ebd15dc, type: 2}
+  cardBanlist: []
+  cardExplorationBanlist: []
+  bgm: {fileID: 8300000, guid: 36db8a3a653488b45a86426f8eadcc84, type: 3}

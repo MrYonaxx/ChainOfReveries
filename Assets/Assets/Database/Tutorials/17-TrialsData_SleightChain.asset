@@ -1,0 +1,166 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3477117ff54f7d45a683b3e8c794b3c, type: 3}
+  m_Name: 17-TrialsData_SleightChain
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 818057835518184039, guid: d4142f37c91adb143bc545edc49d6bec, type: 3}
+    - {fileID: 818057835518184039, guid: 7d16b3774da0e1443abafda3560d6797, type: 3}
+    - {fileID: 818057835518184039, guid: f29c4e4c430b1d049adbabd1cb0981a7, type: 3}
+    - {fileID: 818057835518184039, guid: a3965abbc8a9740429fa872ee1785b89, type: 3}
+    - {fileID: 818057835518184039, guid: 735b98d3e701b3b4db7f2eb8ba52bd6d, type: 3}
+    - {fileID: 818057835518184039, guid: 0b7e9301425c0004586db7146388060c, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: missions
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Tutorial.TutorialCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 6
+    - Name: 
+      Entry: 7
+      Data: 1|Tutorial.TutorialConditionActionHit, Assembly-CSharp
+    - Name: action
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|Tutorial.TutorialConditionActionHit, Assembly-CSharp
+    - Name: action
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|Tutorial.TutorialConditionActionHit, Assembly-CSharp
+    - Name: action
+      Entry: 10
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|Tutorial.TutorialConditionActionHit, Assembly-CSharp
+    - Name: action
+      Entry: 10
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|Tutorial.TutorialConditionActionHit, Assembly-CSharp
+    - Name: action
+      Entry: 10
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 6|Tutorial.TutorialConditionActionHit, Assembly-CSharp
+    - Name: action
+      Entry: 10
+      Data: 5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: failConditions
+      Entry: 7
+      Data: 7|System.Collections.Generic.List`1[[Tutorial.TutorialCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 8|Tutorial.TutorialConditionState, Assembly-CSharp
+    - Name: isPlayer
+      Entry: 5
+      Data: false
+    - Name: stateID
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  trialsName: 17 - Sleight Chain
+  trialsDescription: Learn what Sleight Chaining is.
+  deckPlayer: {fileID: 11400000, guid: 4c01866fc89d8c242835f0a9fc3d0103, type: 2}
+  deckEnemy: {fileID: 11400000, guid: 1ab145676a20364469b068469819d2e5, type: 2}
+  dummyBehavior: {fileID: 11400000, guid: 6e731847cb35366439f0539fd1420e80, type: 2}
+  osef: 
+  textboxStart:
+  - A good way to deal damage is by playing single card, and if the action hit the
+    opponent, continue the combo with a Sleight.
+  - The next step is using another Sleight after the Sleight.
+  - A Sleight can be chained by any other Sleight as long as it have a different
+    name.
+  textboxEnd:
+  - Each time you cancel a action during a combo, the enemy stay more time in hit
+    stun.
+  - This means that attack with a long startup like Midnight Mowing, can combo if
+    used after multiple Sleight.
+  - Lia basic chain is easy with a good deck, but more complicated combo will require
+    you to search for cards in a limited amount of time.
+  comboNotes:
+  - Attack
+  - Attack 2
+  - Attack 3
+  - Dusk Spiral
+  - Evening Breeze
+  - Midnight Mowing
+  trialsDisplay:
+  - showInput: 1
+    input: 2
+    SleightData: {fileID: 0}
+  - showInput: 1
+    input: 2
+    SleightData: {fileID: 0}
+  - showInput: 1
+    input: 2
+    SleightData: {fileID: 0}
+  - showInput: 1
+    input: 5
+    SleightData: {fileID: 11400000, guid: 5cfe2dbe609cf1049923b0066bacb8e3, type: 2}
+  - showInput: 1
+    input: 5
+    SleightData: {fileID: 11400000, guid: c195deef9db30a547a7afc7d66860c8d, type: 2}
+  - showInput: 1
+    input: 5
+    SleightData: {fileID: 11400000, guid: b7f4cc15beb7423419b74db47eab6601, type: 2}

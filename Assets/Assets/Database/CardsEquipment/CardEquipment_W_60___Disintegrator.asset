@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02519ca1dddceb742b46951073eda492, type: 3}
+  m_Name: CardEquipment_W_60___Disintegrator
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  cardSprite: {fileID: 21300000, guid: 15f844a9ab964dd4a9cae7cafc714dd0, type: 3}
+  cardName: Disintegrator
+  cardType: 0
+  cardDescription: Desactive all the opponent Equipment Cards.
+  statsModifier: []
+  statusEffectPassive: {fileID: 0}
+  equipmentAction: {fileID: 818057835518184039, guid: c7bcdb03336eb6c478e404e541c6f118,
+    type: 3}
+  statusEffectActive: {fileID: 0}

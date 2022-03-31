@@ -1,0 +1,94 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3477117ff54f7d45a683b3e8c794b3c, type: 3}
+  m_Name: 02-TrialsData_MoveDeck
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: missions
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Tutorial.TutorialCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 1|Tutorial.TutorialConditionInput, Assembly-CSharp
+    - Name: input
+      Entry: 3
+      Data: 6
+    - Name: nbInput
+      Entry: 3
+      Data: 40
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|Tutorial.TutorialConditionInput, Assembly-CSharp
+    - Name: input
+      Entry: 3
+      Data: 7
+    - Name: nbInput
+      Entry: 3
+      Data: 40
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: failConditions
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[Tutorial.TutorialCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  trialsName: 02 - Move Deck
+  trialsDescription: Learn how to navigate through your Deck.
+  deckPlayer: {fileID: 11400000, guid: 2d189fa3043448043975a111c4df4d2d, type: 2}
+  deckEnemy: {fileID: 11400000, guid: 2d189fa3043448043975a111c4df4d2d, type: 2}
+  dummyBehavior: {fileID: 11400000, guid: 6e731847cb35366439f0539fd1420e80, type: 2}
+  osef: 
+  textboxStart:
+  - Each character on the battlefield possess a Deck of card.
+  - Before learning to use the cards, try to cycle through them.
+  textboxEnd:
+  - Cards are always sorted from the highest value to the lowest.
+  comboNotes:
+  - Cycle cards right
+  - Cycle cards left
+  trialsDisplay:
+  - showInput: 1
+    input: 6
+    SleightData: {fileID: 0}
+  - showInput: 1
+    input: 7
+    SleightData: {fileID: 0}

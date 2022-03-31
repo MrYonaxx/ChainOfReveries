@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0d50e517eba5d4dba18568d80634f5, type: 3}
+  m_Name: SleightNelys_Aeroga
+  m_EditorClassIdentifier: 
+  sleightName: Aeroga
+  sleightDescription: '[Discard] Create a powerfull storm the size of the entire
+    battlefied.
+
+    Discard two cards. The discarded cards are banish.'
+  sleightValue: {x: 0, y: 27}
+  sleightRecipe:
+  - {fileID: 11400000, guid: 5401ed1ff54670541bbcd13d44a37836, type: 2}
+  - {fileID: 11400000, guid: 5401ed1ff54670541bbcd13d44a37836, type: 2}
+  - {fileID: 11400000, guid: 5401ed1ff54670541bbcd13d44a37836, type: 2}
+  sleightAttackData: {fileID: 11400000, guid: 81d5b89aa36b28640b6e418cf686d5d4, type: 2}

@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3477117ff54f7d45a683b3e8c794b3c, type: 3}
+  m_Name: 06-TrialsData_CardBreakZero
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: missions
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Tutorial.TutorialCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 1|Tutorial.TutorialConditionState, Assembly-CSharp
+    - Name: isPlayer
+      Entry: 5
+      Data: false
+    - Name: stateID
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|Tutorial.TutorialConditionState, Assembly-CSharp
+    - Name: isPlayer
+      Entry: 5
+      Data: false
+    - Name: stateID
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|Tutorial.TutorialConditionState, Assembly-CSharp
+    - Name: isPlayer
+      Entry: 5
+      Data: false
+    - Name: stateID
+      Entry: 3
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: failConditions
+      Entry: 7
+      Data: 4|System.Collections.Generic.List`1[[Tutorial.TutorialCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  trialsName: 06 - Card Break 0
+  trialsDescription: Learn the property of the 0 value.
+  deckPlayer: {fileID: 11400000, guid: 5e9aa682300bcaa4eb4357dfcab15002, type: 2}
+  deckEnemy: {fileID: 11400000, guid: 7c4900c1ee298f84a8c5c1362f3bf5a1, type: 2}
+  dummyBehavior: {fileID: 11400000, guid: 99175dd61f15b1c4886ae80b197754b6, type: 2}
+  osef: 
+  textboxStart:
+  - You may have noticed, but if a character play a card with a value of 9, you can't
+    Card Break him.
+  - That's where the 0 value comes to play.
+  - When a Card with a value of 0 is played, you automatically Card Break the current
+    action.
+  - But when the 0 card become the current card, it can be Card Break by any card.
+  - Try to Card Break the opponent Card with a 0.
+  textboxEnd:
+  - A card with a value of 0 is strong for defense but not for offense.
+  - They are best used when the opponent play a Sleight.
+  - Also 0 cards are always placed at the end of a deck.
+  comboNotes:
+  - Card Break opponent
+  - Card Break opponent
+  - Card Break opponent
+  trialsDisplay:
+  - showInput: 0
+    input: 0
+    SleightData: {fileID: 0}
+  - showInput: 0
+    input: 0
+    SleightData: {fileID: 0}
+  - showInput: 0
+    input: 0
+    SleightData: {fileID: 0}

@@ -1,0 +1,135 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 434bf688527fc654fb1aaf31068428ae, type: 3}
+  m_Name: PlayerLiaData
+  m_EditorClassIdentifier: 
+  characterFace: {fileID: 21300000, guid: 86aeee93ce9dcfc4e8786eb34741dc44, type: 3}
+  characterName: Lia
+  characterDescription: 'An easy to use, all rounder character. '
+  characterStat:
+    hp: 5000
+    HPMax:
+      baseValue: 5000
+      finalValue: 5000
+    Attack:
+      baseValue: 1
+      finalValue: 1
+    Defense:
+      baseValue: 1
+      finalValue: 1
+    Magic:
+      baseValue: 1
+      finalValue: 1
+    MagicDefense:
+      baseValue: 1
+      finalValue: 1
+    RevengeValue:
+      baseValue: 15
+      finalValue: 15
+    RevengeValueRate:
+      baseValue: 1
+      finalValue: 1
+    KnockbackTime:
+      baseValue: 0.8
+      finalValue: 0.8
+    ReloadAmount:
+      baseValue: 100
+      finalValue: 100
+    CardBreakTime:
+      baseValue: 0.8
+      finalValue: 0.8
+    Speed:
+      baseValue: 3
+      finalValue: 3
+    Gravity:
+      baseValue: 25
+      finalValue: 25
+    GravityMax:
+      baseValue: 50
+      finalValue: 50
+    MotionSpeed:
+      baseValue: 1
+      finalValue: 1
+    Mass:
+      baseValue: 1
+      finalValue: 1
+    ElementalResistances: []
+    StatusResistances: []
+  salut: 
+  initialDeck:
+  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+    baseCardValue: 6
+  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+    baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+    baseCardValue: 3
+  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+    baseCardValue: 2
+  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+    baseCardValue: 1
+  - cardData: {fileID: 11400000, guid: 51dba9fc2b28f8347a0e45427d1d22c8, type: 2}
+    baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: b791867dff9a415489bdc1158e05c612, type: 2}
+    baseCardValue: 6
+  - cardData: {fileID: 11400000, guid: b791867dff9a415489bdc1158e05c612, type: 2}
+    baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+    baseCardValue: 0
+  sleightDatabase:
+  - {fileID: 11400000, guid: 5cfe2dbe609cf1049923b0066bacb8e3, type: 2}
+  - {fileID: 11400000, guid: c195deef9db30a547a7afc7d66860c8d, type: 2}
+  - {fileID: 11400000, guid: b7f4cc15beb7423419b74db47eab6601, type: 2}
+  - {fileID: 11400000, guid: a503cbea85762bf45b60b0b85f22479b, type: 2}
+  - {fileID: 11400000, guid: 143459ed733b7fa4b87587edf16f1555, type: 2}
+  - {fileID: 11400000, guid: d4876df5e3e33a248a36e878ccedd0a7, type: 2}
+  - {fileID: 11400000, guid: e326380fd5ce36f498f141c9b047cfc4, type: 2}
+  - {fileID: 11400000, guid: feb4b03a364300941990c40c9e30fd80, type: 2}
+  - {fileID: 11400000, guid: 5223877fda9037f4189cef704ff8ee8e, type: 2}
+  - {fileID: 11400000, guid: 1a9b34c567b1f4f4eb58a0148f225379, type: 2}
+  - {fileID: 11400000, guid: dcb209832ec610d40b1808f512ed6775, type: 2}
+  initialEquipment:
+  - cardEquipment: {fileID: 11400000, guid: 49bcfe4e76eadc94289a6179c96de79c, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 1119497543f62ad4086564f7bf93d4f7, type: 2}
+    probability: 100
+  loreDescription: "Once a normal girl in the previous fantasy, she became a Chim\xE8re
+    to maintain the Reverie of the new world. \n\nThe sadness of losing her own story
+    made her vows to protect the tales of others."
+  initialDeckExploration:
+  - {fileID: 11400000, guid: d15e3b90d2a853d48b4e6968f7d7f5a9, type: 2}
+  - {fileID: 11400000, guid: d15e3b90d2a853d48b4e6968f7d7f5a9, type: 2}
+  - {fileID: 11400000, guid: 8b387f445e481ed4a926ae009ec11175, type: 2}
+  - {fileID: 11400000, guid: 428372b4353492a4992435ff672dd230, type: 2}
+  - {fileID: 11400000, guid: ef8e00c5c175d844daebe5dcf2d8b07f, type: 2}
+  cardProbability:
+  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+    baseCardValue: 700
+  - cardData: {fileID: 11400000, guid: 51dba9fc2b28f8347a0e45427d1d22c8, type: 2}
+    baseCardValue: 100
+  - cardData: {fileID: 11400000, guid: 8f96ebeb73ce975409f895a8921a6cdc, type: 2}
+    baseCardValue: 100
+  - cardData: {fileID: 11400000, guid: 4315a76c1c846b547808fcf93ff8a247, type: 2}
+    baseCardValue: 100
+  - cardData: {fileID: 11400000, guid: b791867dff9a415489bdc1158e05c612, type: 2}
+    baseCardValue: 100
+  - cardData: {fileID: 11400000, guid: 6365e3a9920ff124481de91a70f61f00, type: 2}
+    baseCardValue: 100
+  - cardData: {fileID: 11400000, guid: c8c0b6a797a9c2d47a3290e52c4e3c2f, type: 2}
+    baseCardValue: 100
+  - cardData: {fileID: 11400000, guid: 3452fe8437a72fd4f8a2c76779779134, type: 2}
+    baseCardValue: 100
+  maxProbability: 1400
+  spriteProfile: {fileID: 21300000, guid: 0d51ccc4e6987134291044931094571a, type: 3}

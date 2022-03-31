@@ -1,0 +1,99 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3477117ff54f7d45a683b3e8c794b3c, type: 3}
+  m_Name: 08-TrialsData_Equipment
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: missions
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Tutorial.TutorialCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 1|Tutorial.TutorialConditionEquip, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|Tutorial.TutorialConditionEquip, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|Tutorial.TutorialConditionEquip, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: failConditions
+      Entry: 7
+      Data: 4|System.Collections.Generic.List`1[[Tutorial.TutorialCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  trialsName: 08 - Equipment
+  trialsDescription: Learn how works the Equipment cards.
+  deckPlayer: {fileID: 11400000, guid: ada882efd2837da4cb03d24ad4761e38, type: 2}
+  deckEnemy: {fileID: 11400000, guid: 1ab145676a20364469b068469819d2e5, type: 2}
+  dummyBehavior: {fileID: 11400000, guid: 6e731847cb35366439f0539fd1420e80, type: 2}
+  osef: 
+  textboxStart:
+  - In reality, your character actually possess two decks.
+  - One is for Battle cards, the other is for Equipment card.
+  - There is two type of Equipment card, Armor cards and Weapon cards
+  - Armor cards are passive bonus.
+  - Weapon cards are active bonus you need to play during a battle.
+  - You can have up to 4 Weapon cards with you and a weapon card can only be played
+    once per battle.
+  textboxEnd:
+  - Weapon cards if used at the right time can be devastating.
+  - Some can alter the rules of the battle drastically, so pay attention to their
+    effect.
+  comboNotes:
+  - Equip Weapon
+  - Equip Weapon
+  - Equip Weapon
+  trialsDisplay:
+  - showInput: 1
+    input: 14
+    SleightData: {fileID: 0}
+  - showInput: 1
+    input: 12
+    SleightData: {fileID: 0}
+  - showInput: 1
+    input: 15
+    SleightData: {fileID: 0}

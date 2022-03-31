@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0d50e517eba5d4dba18568d80634f5, type: 3}
+  m_Name: Sleight_Dropshot
+  m_EditorClassIdentifier: 
+  sleightName: Dropshot
+  sleightDescription: Teleport yourself above the targeted enemy and deals heavy
+    damage. Has a very long recovery.
+  sleightValue: {x: 0, y: 27}
+  sleightRecipe:
+  - {fileID: 11400000, guid: 51dba9fc2b28f8347a0e45427d1d22c8, type: 2}
+  - {fileID: 11400000, guid: 51dba9fc2b28f8347a0e45427d1d22c8, type: 2}
+  - {fileID: 11400000, guid: 51dba9fc2b28f8347a0e45427d1d22c8, type: 2}
+  sleightAttackData: {fileID: 11400000, guid: 5db7198d9ad1efd4fb4889c5e0eaf860, type: 2}

@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3477117ff54f7d45a683b3e8c794b3c, type: 3}
+  m_Name: 01-TrialsData_Movement
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 818057835518184039, guid: 02ab222937c07fc4ca2deb9b17d73e69, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: missions
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Tutorial.TutorialCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 1|Tutorial.TutorialConditionMove, Assembly-CSharp
+    - Name: moveTime
+      Entry: 4
+      Data: 2
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|Tutorial.TutorialConditionAction, Assembly-CSharp
+    - Name: action
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 3|Tutorial.TutorialConditionAction, Assembly-CSharp
+    - Name: action
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: failConditions
+      Entry: 7
+      Data: 4|System.Collections.Generic.List`1[[Tutorial.TutorialCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  trialsName: 01 - Movements
+  trialsDescription: Learn the basic way of moving your character.
+  deckPlayer: {fileID: 11400000, guid: 6f4c134a24ba94f48a31fb8522fbfe6e, type: 2}
+  deckEnemy: {fileID: 11400000, guid: 6f4c134a24ba94f48a31fb8522fbfe6e, type: 2}
+  dummyBehavior: {fileID: 11400000, guid: 6e731847cb35366439f0539fd1420e80, type: 2}
+  osef: 
+  textboxStart:
+  - You can move your character around and perform an evasive movement.
+  textboxEnd:
+  - Note that the evasive movement is different for each character.
+  - Lia evasive movement will always make her dash away from her opponent.
+  comboNotes:
+  - Move
+  - Evade
+  - Evade
+  trialsDisplay:
+  - showInput: 1
+    input: 0
+    SleightData: {fileID: 0}
+  - showInput: 1
+    input: 4
+    SleightData: {fileID: 0}
+  - showInput: 1
+    input: 4
+    SleightData: {fileID: 0}

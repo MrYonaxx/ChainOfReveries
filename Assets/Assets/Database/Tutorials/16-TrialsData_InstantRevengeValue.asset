@@ -1,0 +1,123 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3477117ff54f7d45a683b3e8c794b3c, type: 3}
+  m_Name: 16-TrialsData_InstantRevengeValue
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 818057835518184039, guid: 438300d29159c5847ba4a51521c62f10, type: 3}
+    - {fileID: 818057835518184039, guid: 650b6067191c1124095244326195d70a, type: 3}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: missions
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[Tutorial.TutorialCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 1|Tutorial.TutorialConditionState, Assembly-CSharp
+    - Name: isPlayer
+      Entry: 5
+      Data: true
+    - Name: stateID
+      Entry: 3
+      Data: 3
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|Tutorial.TutorialConditionAction, Assembly-CSharp
+    - Name: action
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: failConditions
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[Tutorial.TutorialCondition, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 4|Tutorial.TutorialConditionState, Assembly-CSharp
+    - Name: isPlayer
+      Entry: 5
+      Data: true
+    - Name: stateID
+      Entry: 3
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|Tutorial.TutorialConditionActionHit, Assembly-CSharp
+    - Name: action
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  trialsName: 16 - Instant Revenge Value
+  trialsDescription: Learn another way to use the Revenge attack.
+  deckPlayer: {fileID: 11400000, guid: 5e9aa682300bcaa4eb4357dfcab15002, type: 2}
+  deckEnemy: {fileID: 11400000, guid: 2733f11e888062d47841f1f009414eba, type: 2}
+  dummyBehavior: {fileID: 11400000, guid: d528b8c4778043e4ab0fa60fa7c3ab2e, type: 2}
+  osef: 
+  textboxStart:
+  - Sometimes the Revenge Value gauge takes too long to fill.
+  - If you really want your opponent to stop his combo as soon as possible, you can
+    perform a Instant Revenge.
+  - To do this, you need to hold the Rapid Break button with a card in hand capable
+    of Card Breaking the card of your opponent.
+  - Try to Instant Revenge right after the enemy Sleight
+  textboxEnd:
+  - Obviously there is a drawback.
+  - The cards used to perform the Instant Revenge is removed from play for the rest
+    of the battle.
+  - And while you're opponent is put in a Card Break State, the recovery of you're
+    revenge doesn't allow you to play a card before him.
+  - Use this technique wisely.
+  comboNotes:
+  - Get hit
+  - '[Hold] Instant Revenge'
+  trialsDisplay:
+  - showInput: 0
+    input: 0
+    SleightData: {fileID: 0}
+  - showInput: 1
+    input: 3
+    SleightData: {fileID: 0}
