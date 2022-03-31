@@ -56,7 +56,7 @@ namespace Menu
 
         public override void InitializeMenu()
         {
-            inputController.SetControllable(this);
+            inputController.SetControllable(this, true);
             DrawDecks();
 
             listEntry.SelectIndex(0);
@@ -115,7 +115,7 @@ namespace Menu
 
             cursor.GetComponent<Animator>().SetTrigger("Validate");
 
-            inputController.SetControllable(nextMenu);
+            inputController.SetControllable(nextMenu, true);
             nextMenu.InitializeMenu();
 
             base.ValidateEntry(id);

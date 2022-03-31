@@ -27,7 +27,7 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 7
       Data: 1|VoiceActing.StatusEffectUpdateOnCardPlayed, Assembly-CSharp
@@ -50,6 +50,12 @@ MonoBehaviour:
       Entry: 8
       Data: 
     - Name: 
+      Entry: 7
+      Data: 3|VoiceActing.StatusEffectUpdateOnDeath, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
       Entry: 13
       Data: 
     - Name: 
@@ -57,17 +63,17 @@ MonoBehaviour:
       Data: 
     - Name: statusController
       Entry: 7
-      Data: 3|System.Collections.Generic.List`1[[VoiceActing.StatusEffect, Assembly-CSharp]],
+      Data: 4|System.Collections.Generic.List`1[[VoiceActing.StatusEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 4|VoiceActing.StatusEffectCardBreakComponent, Assembly-CSharp
+      Data: 5|VoiceActing.StatusEffectCardBreakComponent, Assembly-CSharp
     - Name: cardBreakComponent
       Entry: 7
-      Data: 5|VoiceActing.CardBreakType, Assembly-CSharp
+      Data: 6|VoiceActing.CardBreakType, Assembly-CSharp
     - Name: unbreakableType
       Entry: 3
       Data: 0

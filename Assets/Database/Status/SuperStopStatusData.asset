@@ -37,10 +37,10 @@ MonoBehaviour:
       Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 8
     - Name: 
       Entry: 3
-      Data: 9
+      Data: 8
     - Name: 
       Entry: 8
       Data: 
@@ -59,7 +59,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 3|VoiceActing.StatusEffectStop, Assembly-CSharp
@@ -68,10 +68,31 @@ MonoBehaviour:
       Data: 7
     - Name: timeDamage
       Entry: 4
-      Data: 2
+      Data: 1
     - Name: stunAnimation
       Entry: 10
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 4|VoiceActing.StatusEffectStat, Assembly-CSharp
+    - Name: StatModifier
+      Entry: 7
+      Data: 5|VoiceActing.StatModifier, Assembly-CSharp
+    - Name: charStat
+      Entry: 3
+      Data: 16
+    - Name: modifierType
+      Entry: 3
+      Data: 0
+    - Name: value
+      Entry: 4
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -82,50 +103,8 @@ MonoBehaviour:
       Entry: 8
       Data: 
   statusIconSprite: {fileID: 0}
-  statusName: Stop
+  statusName: Super stop
   statusDescription: 
-  statusTime: {x: 3, y: 5}
-  canRefresh: 0
-  canStack: 0
-  canAddMultiple: 0
-  statusPercentageBonus: 0
-  characterStatModifier:
-    hp: 0
-    HPMax:
-      baseValue: 0
-      finalValue: 0
-    Attack:
-      baseValue: 0
-      finalValue: 0
-    Defense:
-      baseValue: 0
-      finalValue: 0
-    Magic:
-      baseValue: 0
-      finalValue: 0
-    MagicDefense:
-      baseValue: 0
-      finalValue: 0
-    ReloadAmount:
-      baseValue: 0
-      finalValue: 0
-    CardBreakTime:
-      baseValue: 0
-      finalValue: 0
-    CardBreakKnockback:
-      baseValue: 0
-      finalValue: 0
-    Speed:
-      baseValue: 0
-      finalValue: 0
-    MotionSpeed:
-      baseValue: 0
-      finalValue: 0
-    Mass:
-      baseValue: 0
-      finalValue: 0
-    KnockbackTime:
-      baseValue: 0
-      finalValue: 0
-    ElementalResistances: []
-    StatusResistances: []
+  hideStatus: 1
+  statusShowLabel: 0
+  statusConditionLabel: 

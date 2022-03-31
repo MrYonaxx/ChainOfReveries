@@ -7,19 +7,18 @@ namespace VoiceActing
 {
     public class GameOverController : MonoBehaviour
     {
-        [SerializeField] // à virer quand on fera spawn le prefab d'un perso en début de run
-        CharacterBase player = null;
-
         [SerializeField]
         Animator gameOverAnimator = null;
         [SerializeField]
         Menu.MenuBase menuGameOver = null;
 
+        CharacterBase player = null;
 
-        // Start is called before the first frame update
-        void Start()
+
+        public void InitializeGameOver(CharacterBase character)
         {
-            InitializeGameOver(player);
+            player = character;
+            player.CharacterKnockback.OnDeath += GameOver;
         }
 
         private void OnDestroy()
@@ -27,11 +26,7 @@ namespace VoiceActing
             player.CharacterKnockback.OnDeath -= GameOver;
         }
 
-        public void InitializeGameOver(CharacterBase character)
-        {
-            player = character;
-            player.CharacterKnockback.OnDeath += GameOver;
-        }
+
 
         void GameOver(CharacterBase character, DamageMessage msg)
         {

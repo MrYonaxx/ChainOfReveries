@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SleightGolem_Tremor
   m_EditorClassIdentifier: 
   sleightName: Earthga
-  sleightDescription: Capture the opponent and deal massive damage.
+  sleightDescription: Create multiple earth pillars underneath the opponent.
   sleightValue: {x: 0, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: 778b86ac4d3ebb045a8edcbefea96b5f, type: 2}

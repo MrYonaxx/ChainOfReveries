@@ -31,10 +31,10 @@ MonoBehaviour:
       Entry: 8
       Data: 
   cardSprite: {fileID: 21300000, guid: 1135b34d9a8093f4ea206dc16da524f1, type: 3}
-  cardName: 
+  cardName: Thundara
   cardType: 1
-  cardDescription: Lightning magic that summoned multiple thunder at the position
-    of the enemy.
+  cardDescription: Lightning magic that summon multiple thunder at the position of
+    the enemy.
   attackManager: {fileID: 818057835518184039, guid: f96972afb4833674a80563d5eef1c0e4,
     type: 3}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

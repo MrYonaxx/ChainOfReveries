@@ -44,6 +44,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 15
       finalValue: 15
+    RevengeValueRate:
+      baseValue: 1
+      finalValue: 1
     KnockbackTime:
       baseValue: 1
       finalValue: 1
@@ -51,9 +54,6 @@ MonoBehaviour:
       baseValue: 100
       finalValue: 100
     CardBreakTime:
-      baseValue: 1
-      finalValue: 1
-    CardBreakKnockback:
       baseValue: 1
       finalValue: 1
     Speed:
@@ -137,7 +137,6 @@ MonoBehaviour:
   initialEquipment:
   - cardEquipment: {fileID: 11400000, guid: f510f131a53f3ed42b200526fcf7bfb8, type: 2}
     probability: 100
-  loreDescription: "Once Sen learnt the true intent of Lia, he tried to stop her
-    and Oneiros from breaking the Reverie. He defeat Lia with the help of Nelys and
-    the power that the Reverie's Chim\xE8re herself bestowed upon him.\n\nOneiros
-    do not care about the fate of this world, he only want to see a interesting story."
+  loreDescription: "Lia may be the Reverie's Chim\xE8re, she still belongs to the
+    Fantasy, and therefore cannot destroy the Reverie. That's why she used Sen, in
+    order to exist and destroy the Reverie from inside the Reality."

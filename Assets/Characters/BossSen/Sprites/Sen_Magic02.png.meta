@@ -8,6 +8,12 @@ TextureImporter:
   - first:
       213: -3156894844859898297
     second: Sen_Magic02_1
+  - first:
+      213: 3243368880046458786
+    second: Sen_Magic02_0
+  - first:
+      213: -5019564013942515822
+    second: Sen_Magic02_1
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -124,15 +130,15 @@ TextureImporter:
         y: 0
         width: 100
         height: 100
-      alignment: 9
-      pivot: {x: 0.5, y: 0.01}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f3ff7cd9740aa20c0800000000000000
-      internalID: -4599687839955288257
+      spriteID: 2a7c9b2ffc2c20d20800000000000000
+      internalID: 3243368880046458786
       vertices: []
       indices: 
       edges: []
@@ -145,15 +151,15 @@ TextureImporter:
         y: 0
         width: 100
         height: 100
-      alignment: 9
-      pivot: {x: 0.5, y: 0.01}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7462dd25dd47034d0800000000000000
-      internalID: -3156894844859898297
+      spriteID: 2975f95cf1de65ab0800000000000000
+      internalID: -5019564013942515822
       vertices: []
       indices: 
       edges: []

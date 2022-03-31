@@ -37,6 +37,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 20
       finalValue: 20
+    RevengeValueRate:
+      baseValue: 1
+      finalValue: 1
     KnockbackTime:
       baseValue: 1
       finalValue: 1
@@ -44,9 +47,6 @@ MonoBehaviour:
       baseValue: 100
       finalValue: 100
     CardBreakTime:
-      baseValue: 1
-      finalValue: 1
-    CardBreakKnockback:
       baseValue: 1
       finalValue: 1
     Speed:
@@ -92,4 +92,4 @@ MonoBehaviour:
   initialEquipment: []
   loreDescription: Peacekeepers of Mynsa, the role of the Jittes (named after their
     weapon), is to maintain order in the city of Mynsa. Since they need to assured
-    the security of citizens, they are the ones the most to be monitored by the Reverie.
+    the security of citizens, they are the ones the most monitored by the Reverie.

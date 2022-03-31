@@ -31,9 +31,9 @@ MonoBehaviour:
       Entry: 8
       Data: 
   cardSprite: {fileID: 21300000, guid: 5a7e1c28a7318144fa0c70f3949c499a, type: 3}
-  cardName: 
+  cardName: Attack
   cardType: 0
-  cardDescription: 
+  cardDescription: '[Combo] Basic attack in front of you.'
   attackManager: {fileID: 818057835518184039, guid: f0d8f2b0581ff054eb194b6b443258d2,
     type: 3}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

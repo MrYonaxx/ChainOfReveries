@@ -42,6 +42,7 @@ namespace VoiceActing
         float tFriction = 0;
         float knockbackX = 0;
         bool inAir = false;
+        int bounceCount = 0;
 
         private void Start()
         {
@@ -54,7 +55,8 @@ namespace VoiceActing
             character.CharacterAction.RemoveCards();
             character.CharacterAction.CancelAction();
 
-            tFriction = 0f;
+            tFriction = 0f; 
+            bounceCount = 0;
             knockbackX = character.CharacterMovement.SpeedX;
             character.CharacterKnockback.ReversalTime = 0;
             inAir = character.CharacterMovement.InAir;
@@ -137,10 +139,10 @@ namespace VoiceActing
         // Wall bounce
         public override void LateUpdateState(CharacterBase character)
         {
-            if(character.CharacterKnockback.Knockdown && character.CharacterRigidbody.WallHorizontalCollision && character.CharacterMovement.InAir)
+            if(character.CharacterKnockback.Knockdown && character.CharacterRigidbody.WallHorizontalCollision && character.CharacterMovement.InAir && bounceCount < 2)
             {
                 WallBounce(character);
-
+                bounceCount += 1;
             }
         }
 
@@ -148,6 +150,8 @@ namespace VoiceActing
         {
             inAir = false;
             character.CharacterKnockback.ReversalTime = 0;
+            character.CharacterKnockback.CanInstantRevenge = false;
+            character.CharacterKnockback.CannotTech = false;
         }
 
 
@@ -155,7 +159,7 @@ namespace VoiceActing
 
         private bool InputEvade(CharacterBase character)
         {
-            if (character.Inputs.InputX.Registered)
+            if (character.Inputs.InputX.Registered && !character.CharacterKnockback.CannotTech)
             {
                 character.CharacterAction.Action(evadeAction);
                 return true;
@@ -167,27 +171,12 @@ namespace VoiceActing
         private void Revenge(CharacterBase character)
         {
             character.CharacterKnockback.CanRevenge = character.Inputs.InputA.InputValue == 1 ? true : false;
-        }
 
-        /*private bool InputDpad(CharacterBase character)
-        {
-            if (character.Inputs.InputPadDown.Registered || character.Inputs.InputPadUp.Registered)
+            if(character.Inputs.InputB.InputValue == 1)
             {
-                character.Inputs.InputPadDown.ResetBuffer();
-                character.Inputs.InputPadUp.ResetBuffer();
-                character.CharacterEquipment.SwitchToEquipmentDeck(!character.CharacterEquipment.InEquipmentDeck);
-                if (character.CharacterEquipment.InEquipmentDeck == true)
-                {
-                    character.CharacterEquipment.DeckEquipmentController.RefreshDeck();
-                }
-                else
-                {
-                    character.DeckController.RefreshDeck();
-                }
-                return true;
+                character.CharacterKnockback.CanInstantRevenge = character.CharacterAction.CanCardBreakActiveCards();
             }
-            return false;
-        }*/
+        }
 
         private void WallBounce(CharacterBase character)
         {

@@ -11,7 +11,9 @@ namespace VoiceActing
         CardStatus,
         CardPercentage,
         Element,
-        Damage
+        Damage,
+        BackDamage,
+        BanDamage
     }
 
     // Comme Attack Processor Mono est un échec, je fais un nouveau attack processor qui hérite de monobehaviour et qui contient un enum pour parameter 
@@ -54,6 +56,18 @@ namespace VoiceActing
         [ShowIf("attackProcessor", AttackProcessorEnum.Damage)]
         AttackP_Damage damage = null;
 
+        [Space]
+        [SerializeField]
+        [HideLabel]
+        [ShowIf("attackProcessor", AttackProcessorEnum.BackDamage)]
+        AttackP_BackDamage backdamage = null;
+
+        [Space]
+        [SerializeField]
+        [HideLabel]
+        [ShowIf("attackProcessor", AttackProcessorEnum.BanDamage)]
+        AttackP_BanDamage banDamage = null;
+
         public AttackProcessor GetAttackProcessor()
         {
             switch(attackProcessor)
@@ -68,6 +82,10 @@ namespace VoiceActing
                     return element;
                 case AttackProcessorEnum.Damage:
                     return damage;
+                case AttackProcessorEnum.BackDamage:
+                    return backdamage;
+                case AttackProcessorEnum.BanDamage:
+                    return banDamage;
             }
             return null;
         }
@@ -80,6 +98,8 @@ namespace VoiceActing
             cardPercentage = null;
             element = null;
             damage = null;
+            backdamage = null; 
+            banDamage = null;
         }
     }
 }

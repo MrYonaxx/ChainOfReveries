@@ -85,6 +85,7 @@ namespace Menu
         public override void InitializeMenu()
         {
             base.InitializeMenu();
+            holdController.ResetButton();
             deckDrawer.DrawDeck(runData.PlayerDeck);
             deckDrawer.Select(0);
         }
@@ -142,6 +143,7 @@ namespace Menu
             // Feedback si c'est bon
             if (cardSelected.Count == nbToSelect)
             {
+                //deckDrawer.menuCursor.GetComponent<Animator>().SetTrigger("Validate");
                 buttonSynthesize.gameObject.SetActive(true);
             }
 

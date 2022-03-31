@@ -35,9 +35,9 @@ MonoBehaviour:
       Entry: 8
       Data: 
   cardSprite: {fileID: 21300000, guid: b35e7cb4761848c4492bf5252ad3c474, type: 3}
-  cardName: 
+  cardName: Counter
   cardType: 0
-  cardDescription: 
+  cardDescription: '[Counter] Immobilize the enemy.'
   attackManager: {fileID: 818057835518184039, guid: 09a3f3a288a84ba40b3e387ad8c1abcc,
     type: 3}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

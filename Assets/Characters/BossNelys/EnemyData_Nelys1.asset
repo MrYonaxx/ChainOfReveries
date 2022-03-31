@@ -37,6 +37,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 15
       finalValue: 15
+    RevengeValueRate:
+      baseValue: 1
+      finalValue: 1
     KnockbackTime:
       baseValue: 1
       finalValue: 1
@@ -46,9 +49,6 @@ MonoBehaviour:
     CardBreakTime:
       baseValue: 0.8
       finalValue: 0.8
-    CardBreakKnockback:
-      baseValue: 1
-      finalValue: 1
     Speed:
       baseValue: 2.7
       finalValue: 2.7
@@ -80,8 +80,6 @@ MonoBehaviour:
     baseCardValue: 3
   - cardData: {fileID: 11400000, guid: 622321ab569aee9459d136a5de49f228, type: 2}
     baseCardValue: 1
-  - cardData: {fileID: 11400000, guid: 93084acb116dd8140bb72457a7fcc899, type: 2}
-    baseCardValue: 0
   - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
     baseCardValue: 9
   - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
@@ -112,7 +110,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1f263cf9ac3b65a42880c47832287f3b, type: 2}
   initialEquipment: []
   loreDescription: "Friend of Yonax and L\xE9mina, she abandon them to became the
-    Ether's Chim\xE8re, in order to save her love, the one who taught her the sentiment
-    of happiness. \n\nBut because of her selfishness, she feels remorses to her previous
-    friend. That's why she still try to helps them, even if the only way of interacting
-    with them, is with the Reverie."
+    Ether's Chim\xE8re, in order to save her loved one.\n\nBut because of her selfishness,
+    she feels remorses to her previous friend. That's why she still try to helps
+    them, even if the only way of interacting with them, is with the Reverie."

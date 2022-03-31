@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 855764348832698737}
   - component: {fileID: 855764348832698738}
   - component: {fileID: -628959329838418786}
+  - component: {fileID: 230606627875716208}
   m_Layer: 0
   m_Name: AttackParticle
   m_TagString: Untagged
@@ -114,4 +115,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5c643757e58e844d9e6a69b3729d41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyAnimation: 0
+  destroyWithAnimation: 0
+--- !u!114 &230606627875716208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855764348832698739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4960093bb8a6c9e4389f5dadcd7dc0b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundStart:
+    sound: {fileID: 8300000, guid: 183365fff9af63d47ad012c061da5e4e, type: 3}
+    volume: 1
+    pitch: {x: 1, y: 1}

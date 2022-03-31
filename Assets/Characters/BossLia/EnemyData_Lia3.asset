@@ -41,6 +41,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 15
       finalValue: 15
+    RevengeValueRate:
+      baseValue: 1
+      finalValue: 1
     KnockbackTime:
       baseValue: 1
       finalValue: 1
@@ -50,9 +53,6 @@ MonoBehaviour:
     CardBreakTime:
       baseValue: 0.8
       finalValue: 0.8
-    CardBreakKnockback:
-      baseValue: 1
-      finalValue: 1
     Speed:
       baseValue: 3.2
       finalValue: 3.2
@@ -159,11 +159,9 @@ MonoBehaviour:
     probability: 100
   - cardEquipment: {fileID: 11400000, guid: 9e076760a1b048848bb51d96d5c57806, type: 2}
     probability: 100
-  loreDescription: 'During her journey with Sen to open the Ether wells, she begin
-    to feel doubt about her goal to shatter the Reverie.
-
-
-    After being defeated
-    by Nelys and understanding Oneiros true intentions, she resolve herself to help
-    the people inside the Reverie, meaning that she first has to defeat Oneiros,
-    and then let the world decide if they want to live under the Reverie or not.'
+  loreDescription: "The Reverie, and Lia's role is to regulate and modify the thought
+    and goals in the Fantasy before they reach the Reality. Censoring anything threatening
+    the peace of the Reality or altering people objective to match the need of the
+    Reality. In short the Reverie try to make an Utopia.\n\nOther Chim\xE8re can
+    use the Reverie to some extend, like Morph\xE9e or Phob\xE9ta, but Lia is the
+    main entity controlling the Reverie. "

@@ -61,6 +61,8 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Floats:
     - PixelSnap: 0
+    - _AtlasEndHeight: 1
+    - _AtlasStartHeight: 0
     - _Blue: 0
     - _Brightness: 1
     - _BumpScale: 1

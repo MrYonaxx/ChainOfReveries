@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Sleight_Ragnarok
   m_EditorClassIdentifier: 
   sleightName: Ragnarok
-  sleightDescription: 
+  sleightDescription: Step back and shoot multiple fireball in front of you.
   sleightValue: {x: 0, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}

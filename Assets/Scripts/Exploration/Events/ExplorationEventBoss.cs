@@ -109,6 +109,16 @@ namespace VoiceActing
                     }
                 }
             }
+
+            // Si c'est un match miroir on colorie le boss
+            if(runData.PlayerCharacterData == bossesData.LastBossSelected)
+            {
+                for (int i = 0; i < bosses.Length; i++)
+                {
+                    Debug.Log("On a un problème !!!");
+                    bosses[i].Character.SpriteRenderer.color = new Color(0.2f, 0.2f, 0.2f);
+                }
+            }
         }
 
 
@@ -116,7 +126,7 @@ namespace VoiceActing
 
         public void EndBossBattle()
         {
-            explorationManager.InputController.SetControllable(battleReward);
+            explorationManager.InputController.SetControllable(battleReward, true);
             battleReward.InitializeBattleReward(explorationManager.Player);
         }
 

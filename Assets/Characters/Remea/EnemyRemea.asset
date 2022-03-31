@@ -40,6 +40,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 14
       finalValue: 14
+    RevengeValueRate:
+      baseValue: 1
+      finalValue: 1
     KnockbackTime:
       baseValue: 1
       finalValue: 1
@@ -49,9 +52,6 @@ MonoBehaviour:
     CardBreakTime:
       baseValue: 0.8
       finalValue: 0.8
-    CardBreakKnockback:
-      baseValue: 1
-      finalValue: 1
     Speed:
       baseValue: 3.1
       finalValue: 3.1

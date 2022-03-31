@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Sleight_RagingStorm
   m_EditorClassIdentifier: 
   sleightName: Raging Storm
-  sleightDescription: 
+  sleightDescription: '[Scatter] Create two tornados, a big one scattering the enemy
+    Deck, and a small one following the target around.'
   sleightValue: {x: 0, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: 622321ab569aee9459d136a5de49f228, type: 2}

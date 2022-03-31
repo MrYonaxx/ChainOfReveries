@@ -54,6 +54,12 @@ MonoBehaviour:
   - {fileID: 21300000, guid: d8005ce718d753442a919f2d366004c2, type: 3}
   - {fileID: 21300000, guid: c0e6e8634badd2b4cb3264cec7a537e0, type: 3}
   - {fileID: 21300000, guid: 293bd1ceab809754c84b9f5e2b6b03b3, type: 3}
+  - {fileID: 21300000, guid: 6061ed821a5ca4c428b0d1efc0251bf4, type: 3}
+  BattleTheme: {fileID: 0}
+  HasIntro: 0
+  playerPos: {fileID: 0}
+  enemyCinematic: {fileID: 0}
+  introDrawer: {fileID: 0}
 --- !u!1001 &1931728141504032341
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -179,6 +185,11 @@ PrefabInstance:
     - target: {fileID: 3952013738179234451, guid: 446ade35b15b99043a814940c89056e7,
         type: 3}
       propertyPath: cardsControllers.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6496429205356115435, guid: 446ade35b15b99043a814940c89056e7,
+        type: 3}
+      propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8189315928038439181, guid: 446ade35b15b99043a814940c89056e7,
@@ -333,6 +344,11 @@ PrefabInstance:
       propertyPath: cardsControllers.Array.data[2]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 6496429205356115435, guid: 446ade35b15b99043a814940c89056e7,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 8189315928038439181, guid: 446ade35b15b99043a814940c89056e7,
         type: 3}
       propertyPath: aiEnabled
@@ -483,6 +499,11 @@ PrefabInstance:
     - target: {fileID: 3952013738179234451, guid: 446ade35b15b99043a814940c89056e7,
         type: 3}
       propertyPath: cardsControllers.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 6496429205356115435, guid: 446ade35b15b99043a814940c89056e7,
+        type: 3}
+      propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 8189315928038439181, guid: 446ade35b15b99043a814940c89056e7,

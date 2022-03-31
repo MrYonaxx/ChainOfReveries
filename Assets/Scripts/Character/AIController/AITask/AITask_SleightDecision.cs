@@ -44,7 +44,12 @@ namespace VoiceActing
 
         public override TaskStatus OnUpdate()
         {
-            if(sharedAIController.Value.SleightData.Active())
+            // Fix pour quand l'IA se larde (je ne sais toujours pas pourquoi d'ailleurs)
+            if (sharedAIController.Value.Character.SleightController.GetCurrentSleight() == null && 
+                sharedAIController.Value.Character.SleightController.CanPlaySleight())
+                sharedAIController.Value.PressButton(sharedAIController.Value.InputB);
+
+            if (sharedAIController.Value.SleightData.Active())
                 return TaskStatus.Failure;
 
             if(SleightDecision(sharedAIController.Value.Character))

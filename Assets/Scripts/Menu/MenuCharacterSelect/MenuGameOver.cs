@@ -56,13 +56,18 @@ namespace Menu
 
         public override void InitializeMenu()
         {
-            inputController.SetControllable(this);
+            inputController.SetControllable(this, true);
 
             DrawBattleReport();
 
             gameData.NbRun += 1;
-            if(gameRunData.Floor > 3)
+            if (gameRunData.Floor > 3) 
+            {
                 gameData.NbRunCompleted += 1;
+                if (gameRunData.ReverieLevel == gameData.MaxReverieLevel && gameData.MaxReverieLevel < 9)
+                    gameData.MaxReverieLevel += 1;
+            }
+            gameData.NbRunCharacters[gameRunData.CharacterID] += 1;
             gameData.Save();
 
             ShowMenu(true);

@@ -33,7 +33,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: a04b097b57c8e5a41a7b7cab5e4d3c9a, type: 3}
   cardName: Confusion
   cardType: 1
-  cardDescription: 
+  cardDescription: Confuse the enemy, reversing the way to shuffle through a deck.
   attackManager: {fileID: 818057835518184039, guid: 832ca35eace15984c988e50690bad703,
     type: 3}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

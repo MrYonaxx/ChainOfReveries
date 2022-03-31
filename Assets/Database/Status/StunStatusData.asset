@@ -37,10 +37,10 @@ MonoBehaviour:
       Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 3
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -48,11 +48,11 @@ MonoBehaviour:
       Entry: 5
       Data: false
     - Name: cardType
-      Entry: 6
-      Data: 
+      Entry: 3
+      Data: 0
     - Name: attackElement
-      Entry: 6
-      Data: 
+      Entry: 3
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -90,11 +90,11 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 4|VoiceActing.StatusEffectStun, Assembly-CSharp
+    - Name: stunTime
+      Entry: 4
+      Data: 3
     - Name: stunAnimation
       Entry: 10
-      Data: 0
-    - Name: animationTime
-      Entry: 4
       Data: 0
     - Name: 
       Entry: 8
@@ -108,25 +108,6 @@ MonoBehaviour:
   statusIconSprite: {fileID: 0}
   statusName: 
   statusDescription: 
-  statusTime: {x: 0, y: 0}
-  canRefresh: 0
-  canStack: 0
-  canAddMultiple: 0
-  statusPercentageBonus: 0
-  characterStatModifier:
-    hp: 0
-    HpMax: 0
-    Attack: 0
-    Magic: 0
-    Defense: 0
-    MotionSpeed: 0
-    ReloadAmount: 0
-    Recovery: 0
-    RecoveryKnockbackPower: 0
-    Speed: 0
-    Gravity: 0
-    GravityMax: 0
-    Mass: 0
-    KnockbackTime: 0
-    ElementalResistances: []
-    StatusResistances: []
+  hideStatus: 1
+  statusShowLabel: 0
+  statusConditionLabel: 

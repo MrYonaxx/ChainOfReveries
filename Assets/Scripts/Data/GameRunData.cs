@@ -22,6 +22,12 @@ namespace VoiceActing
         /* ======================================== *\
          *               ATTRIBUTES                 *
         \* ======================================== */
+        private int characterID = 0;
+        public int CharacterID
+        {
+            get { return characterID; }
+            set { characterID = value; }
+        }
 
         // Info pour setup la run
         [Title("Players Info")]
@@ -75,6 +81,7 @@ namespace VoiceActing
         public int ReverieLevel
         {
             get { return reverieLevel; }
+            set { reverieLevel = value; }
         }
 
 
@@ -148,6 +155,8 @@ namespace VoiceActing
             get { return battleModifiers; }
         }
 
+        int weaponCardCount = 0;
+
         #endregion
 
         #region GettersSetters 
@@ -184,11 +193,14 @@ namespace VoiceActing
                 playerExplorationDeck.Add(playerExplorationData[i]);
             }
 
+            weaponCardCount = 0;
             // Setup le deck equipment
             playerEquipmentDeck.Clear();
             for (int i = 0; i < playerEquipmentData.Count; i++)
             {
                 playerEquipmentDeck.Add(new CardEquipment(playerEquipmentData[i]));
+                if (playerEquipmentData[i].CardType == 0)
+                    weaponCardCount += 1;
             }
 
             roomExplored = 0;
@@ -275,9 +287,17 @@ namespace VoiceActing
             playerExplorationDeck.Sort(SortExplorationCard);
         }
 
-        public void AddEquipmentCard(CardEquipment c)
+        public bool AddEquipmentCard(CardEquipment c)
         {
+            if(c.CardEquipmentData.CardType == 0)
+            {
+                if (weaponCardCount >= 4)
+                    return false;
+                weaponCardCount++;
+            }
+
             playerEquipmentDeck.Add(c);
+            return true;
         }
         public void RemoveEquipmentCard(CardEquipmentData c)
         {

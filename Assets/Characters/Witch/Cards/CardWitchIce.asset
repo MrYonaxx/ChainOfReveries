@@ -31,9 +31,9 @@ MonoBehaviour:
       Entry: 8
       Data: 
   cardSprite: {fileID: 21300000, guid: aa518f9354d6f754a98a2df9cc8d30ab, type: 3}
-  cardName: 
+  cardName: Ice
   cardType: 1
-  cardDescription: 
+  cardDescription: A slow projectile exploding in front of you.
   attackManager: {fileID: 818057835518184039, guid: 2a5c4a1aaeeb2fb479065ae2ef353761,
     type: 3}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

@@ -38,6 +38,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 0
       finalValue: 0
+    RevengeValueRate:
+      baseValue: 0
+      finalValue: 0
     KnockbackTime:
       baseValue: 1
       finalValue: 1
@@ -47,9 +50,6 @@ MonoBehaviour:
     CardBreakTime:
       baseValue: 0.9
       finalValue: 0.9
-    CardBreakKnockback:
-      baseValue: 1
-      finalValue: 1
     Speed:
       baseValue: 3
       finalValue: 3
@@ -115,6 +115,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3d496646f292924459dc764f0befa3e3, type: 2}
   - {fileID: 11400000, guid: 54e66f0945c8a9f4aa4900c48420bfaf, type: 2}
   initialEquipment: []
-  loreDescription: "Phoenix is a fictional creature created by the Chim\xE8res to
-    help manipulate the Reverie. They are used as pretext, for covering the weird
-    scenario, sometimes caused by the Reverie."
+  loreDescription: "Phoenix is a fictional creature created by the Chim\xE8re Phob\xE9ta
+    in order to help the manipulation of the Reality's inhabitant. They are used
+    as pretext, for covering the weird scenarios, sometimes caused by the Reverie."

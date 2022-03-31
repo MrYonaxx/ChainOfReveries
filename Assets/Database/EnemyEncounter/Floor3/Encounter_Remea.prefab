@@ -47,8 +47,13 @@ MonoBehaviour:
   encounter:
   - {fileID: 2889731334588808048}
   encounterBackground:
-  - {fileID: 21300000, guid: b38a427e504e35b49b511a7129b7c744, type: 3}
-  - {fileID: 21300000, guid: 532ad0acbdf716e4c8376b854b6ad572, type: 3}
+  - {fileID: 21300000, guid: 13bd5fec9db284346972d4ffdd28cd93, type: 3}
+  - {fileID: 21300000, guid: ee9ff77f2af3d8743bc7b0052d557a7a, type: 3}
+  BattleTheme: {fileID: 0}
+  HasIntro: 0
+  playerPos: {fileID: 0}
+  enemyCinematic: {fileID: 0}
+  introDrawer: {fileID: 0}
 --- !u!1001 &3749162431715535468
 PrefabInstance:
   m_ObjectHideFlags: 0

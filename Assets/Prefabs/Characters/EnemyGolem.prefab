@@ -50,7 +50,6 @@ MonoBehaviour:
   bufferTime: 0.25
   aiEnabled: 0
   character: {fileID: 8977850914624633216}
-  debugOn: 0
 --- !u!114 &1365650708900881720
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,6 +138,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 782597946672036746, guid: 7c56ef123a7bd564fa0f79108422bce0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 782597946672036746, guid: 7c56ef123a7bd564fa0f79108422bce0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.55
       objectReference: {fileID: 0}
     - target: {fileID: 2083834313609334125, guid: 7c56ef123a7bd564fa0f79108422bce0,
         type: 3}
@@ -336,8 +345,13 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2249079383216680613, guid: b5ecdafc42fba6e4f80754395c212d38,
+      objectReference: {fileID: 3372009722796764144, guid: b5ecdafc42fba6e4f80754395c212d38,
         type: 3}
+    - target: {fileID: 5230426284488749445, guid: 7c56ef123a7bd564fa0f79108422bce0,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5542107751620278316, guid: 7c56ef123a7bd564fa0f79108422bce0,
         type: 3}
       propertyPath: m_Mesh

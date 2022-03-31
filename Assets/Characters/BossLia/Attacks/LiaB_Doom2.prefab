@@ -5403,10 +5403,13 @@ MonoBehaviour:
   cardStatus:
     statusDamage: c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000
     status: {fileID: 11400000, guid: 6a18df02feff33f46a222dd4f8f0f3ac, type: 2}
+    canApplyMultipleTime: 1
+    canApplyOnKnockback: 1
     debugDamage: {x: 200, y: 200}
   cardPercentage:
     percentDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     debugDamage: {x: 100, y: 200}
+    maxHP: 0
   element:
     element: 0
     ignoreElementalStat: 0
@@ -5554,6 +5557,7 @@ MonoBehaviour:
   linkToCharacter: 0
   fixToGround: 0
   subActionCardBreakable: 1
+  canPlayerCorrectDirection: 1
   atkControllers:
   - {fileID: 4943613325957753701}
   - {fileID: 280613260755670810}
@@ -5798,6 +5802,7 @@ MonoBehaviour:
   frame: 0
   frameEnd: 0
   offset: {x: -1, y: 0, z: 0}
+  useCharacterDirection: 0
   layerMask:
     serializedVersion: 2
     m_Bits: 0
@@ -5814,8 +5819,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frame: 0
-  frameEnd: 0
+  frameEnd: 300
   zoomOnCharacter: 0
+  zoomCamera: 1
   zoomValue:
   - -0.3
   - -0.8

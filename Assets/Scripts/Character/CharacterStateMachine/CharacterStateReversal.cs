@@ -40,7 +40,7 @@ namespace VoiceActing
             character.FeedbacksComponents.GetComponent<Feedbacks.ShakeSprite>().Shake(0.1f, timeReversal);
             character.CharacterKnockback.IsInvulnerable = true;
             character.CharacterMovement.SetSpeed(0, 0);
-
+            character.CharacterAction.Action(actionReversal);
 
             BattleFeedbackManager.Instance?.SetBattleMotionSpeed(0, timeReversal);
             BattleFeedbackManager.Instance?.CameraZoom(zoomValue, zoomTime);
@@ -54,7 +54,7 @@ namespace VoiceActing
         /// <param name="character"></param>
         public override void UpdateState(CharacterBase character)
         {
-            character.DeckController.MoveHand(character.Inputs.InputLB.InputValue == 1 ? true : false, character.Inputs.InputRB.InputValue == 1 ? true : false);
+            /*character.DeckController.MoveHand(character.Inputs.InputLB.InputValue == 1 ? true : false, character.Inputs.InputRB.InputValue == 1 ? true : false);
 
             t += Time.deltaTime;
             if (t >= timeReversal)
@@ -64,12 +64,12 @@ namespace VoiceActing
                     character.CharacterAction.Action(actionReversal);
                 else
                     character.ResetToIdle();
-            }
+            }*/
         }
 
         public override void EndState(CharacterBase character, CharacterState oldState)
         {
-            character.CharacterKnockback.IsInvulnerable = false;
+            //character.CharacterKnockback.IsInvulnerable = false;
         }
 
     } 

@@ -53,7 +53,7 @@ namespace Menu
 
         public override void InitializeMenu()
         {
-            inputController.SetControllable(this);
+            inputController.SetControllable(this, true);
             DrawDecks();
 
             listEntry.SelectIndex(0);
@@ -74,7 +74,7 @@ namespace Menu
                 if(i <= gameData.NbRun) // Plus on a fait de run plus on débloque de deck exploration
                     listEntry.DrawItemList(i, "- " + deckDatabase.DeckProfiles[i].DeckName);
             }
-            listEntry.SetItemCount(Mathf.Min(gameData.NbRun, deckDatabase.DeckProfiles.Length));
+            listEntry.SetItemCount(Mathf.Min(gameData.NbRun+1, deckDatabase.DeckProfiles.Length));
 
             textDeckName.text = "";
         }
@@ -115,7 +115,7 @@ namespace Menu
 
             cursor.GetComponent<Animator>().SetTrigger("Validate");
 
-            inputController.SetControllable(nextMenu);
+            inputController.SetControllable(nextMenu, true);
             nextMenu.InitializeMenu();
 
             base.ValidateEntry(id);

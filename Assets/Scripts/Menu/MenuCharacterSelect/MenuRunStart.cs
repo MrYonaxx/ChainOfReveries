@@ -31,6 +31,10 @@ namespace Menu
         [SerializeField]
         TextMeshProUGUI textReverie = null;
         [SerializeField]
+        Image arrowLeft = null;
+        [SerializeField]
+        Image arrowRight = null;
+        [SerializeField]
         Animator animatorMenu = null;
 
 
@@ -43,7 +47,8 @@ namespace Menu
         Animator animatorCharacterSelect = null;
         [SerializeField]
         Animator animatorTransition = null;
-
+        [SerializeField]
+        Animator animatorFirstRun = null;
 
 
         bool active = true;
@@ -51,10 +56,12 @@ namespace Menu
 
         public override void InitializeMenu()
         {
-            inputController.SetControllable(this);
+            inputController.SetControllable(this, true);
             DrawRecap();
 
-            listEntry.SetItemCount(gameData.NbRunCompleted);
+            listEntry.SetItemCount(gameData.MaxReverieLevel+1);
+            listEntry.SelectIndex(0);
+            SelectEntry(0);
 
             ShowMenu(true);
             base.InitializeMenu();
@@ -107,6 +114,27 @@ namespace Menu
         protected override void SelectEntry(int id)
         {
             base.SelectEntry(id);
+            textReverie.text = (id+1) + "e";
+            gameRunData.ReverieLevel = id;
+
+            if (gameData.MaxReverieLevel > 0)
+            {
+                if (id == 0)
+                {
+                    arrowLeft.gameObject.SetActive(false);
+                    arrowRight.gameObject.SetActive(true);
+                }
+                else if (id == gameData.MaxReverieLevel)
+                {
+                    arrowLeft.gameObject.SetActive(true);
+                    arrowRight.gameObject.SetActive(false);
+                }
+                else
+                {
+                    arrowLeft.gameObject.SetActive(true);
+                    arrowRight.gameObject.SetActive(true);
+                }
+            }
         }
 
         private void ShowMenu(bool b)
@@ -129,6 +157,12 @@ namespace Menu
             yield return new WaitForSeconds(1f);
             fade.SetActive(true);
             yield return new WaitForSeconds(1f);
+
+            if(gameData.NbRun == 0)
+            {
+                animatorFirstRun.gameObject.SetActive(true);
+                yield return new WaitForSeconds(7f);
+            }
             UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
         }
     }

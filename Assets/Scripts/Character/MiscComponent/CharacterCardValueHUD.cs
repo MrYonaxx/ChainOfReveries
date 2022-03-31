@@ -5,6 +5,13 @@ using TMPro;
 
 namespace VoiceActing
 {
+    enum CardValueHUDType
+    {
+        Player,
+        Boss,
+        Enemy
+    }
+
     public class CharacterCardValueHUD : MonoBehaviour
     {
         [SerializeField]
@@ -15,9 +22,52 @@ namespace VoiceActing
         TextMeshPro textMesh = null;
 
         [SerializeField]
+        CardValueHUDType characterType;
+        [SerializeField]
         Color colorPlay;
         [SerializeField]
         Color colorHand;
+
+        private void Start()
+        {
+            character.OnBattleStart += Initialize;
+            character.OnBattleEnd += Hide;
+            Initialize();
+        }
+
+        private void OnDestroy()
+        {
+            character.OnBattleStart -= Initialize;
+            character.OnBattleEnd -= Hide;
+        }
+
+
+        private void Initialize()
+        {
+            int setting = PlayerPrefs.GetInt("CardValue", 1);
+            if(setting <= 2 && characterType == CardValueHUDType.Player)
+            {
+                Hide();
+            }
+            else if (setting <= 1 && characterType == CardValueHUDType.Boss)
+            {
+                Hide();
+            }
+            else if (setting == 0 && characterType == CardValueHUDType.Enemy)
+            {
+                Hide();
+            }
+            else
+            {
+                textMesh.enabled = true;
+                this.enabled = true;
+            }
+        }
+        private void Hide()
+        {
+            textMesh.enabled = false;
+            this.enabled = false;
+        }
 
         // Update is called once per frame
         void Update()
@@ -28,10 +78,6 @@ namespace VoiceActing
                 this.enabled = false;
                 return;
             }
-            /*else if ()
-            {
-                return;
-            }*/
 
             if(cardBreakController.GetActiveCharacter() == character)
             {

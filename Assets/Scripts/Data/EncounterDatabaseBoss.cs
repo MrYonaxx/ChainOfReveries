@@ -19,10 +19,8 @@ namespace VoiceActing
         [SerializeField]
         EncounterDataBoss[] bosses = null;
 
+        public CharacterData LastBossSelected = null;
         List<EncounterDataBoss> bossesPool = null;
-
-        // Hack pour l'editeur pour auto reset l'objet
-        CheckInitialize checkInitialize = null;
 
         public void Reset()
         {
@@ -32,9 +30,10 @@ namespace VoiceActing
 
         public EncounterData SelectBoss(int difficultyLevel)
         {
-            if (checkInitialize == null)
+            // Si difficulty level == 0 c'est qu'on pioche un boss pour la première fois
+            // Attention c'est possible dans le futur que ce ne soit pas toujours vrai
+            if (difficultyLevel == 0)
             {
-                checkInitialize = new CheckInitialize();
                 Reset();
                 Debug.Log("I reset");
             }
@@ -43,8 +42,11 @@ namespace VoiceActing
             EncounterData bossRoom;
             int r = Random.Range(0, bossesPool.Count);
             bossRoom = bossesPool[r].BossEvents[difficultyLevel];
+            LastBossSelected = bossesPool[r].Character;
+
             // Retire ce boss du pool
             bossesPool.Remove(bossesPool[r]);
+
             return bossRoom;
         }
 

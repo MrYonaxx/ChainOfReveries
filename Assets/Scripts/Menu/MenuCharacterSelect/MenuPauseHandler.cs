@@ -17,7 +17,7 @@ namespace Menu
 
         void Awake()
         {
-            inputController.SetControllable(this);
+            inputController.SetControllable(this, true);
             menuPause.OnEnd += BackToPreviousMenu;
         }
         void OnDestroy()

@@ -33,7 +33,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 0d623b541aa7d7147b4a0f44eca18c8b, type: 3}
   cardName: Earth Glaive
   cardType: 1
-  cardDescription: 
+  cardDescription: Create an earth pillar underneath the opponent.
   attackManager: {fileID: 818057835518184039, guid: bc04bc127304a1543b3fb9618c2473ae,
     type: 3}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

@@ -31,9 +31,9 @@ MonoBehaviour:
       Entry: 8
       Data: 
   cardSprite: {fileID: 21300000, guid: 1135b34d9a8093f4ea206dc16da524f1, type: 3}
-  cardName: 
+  cardName: Thunder
   cardType: 1
-  cardDescription: 
+  cardDescription: A fast lightning strike on an enemy.
   attackManager: {fileID: 818057835518184039, guid: 932b7bacd0f47e04c827f03ac0289b0f,
     type: 3}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

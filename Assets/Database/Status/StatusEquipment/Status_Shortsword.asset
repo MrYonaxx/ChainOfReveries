@@ -55,7 +55,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 4|VoiceActing.StatusEffectStat, Assembly-CSharp
@@ -71,6 +71,27 @@ MonoBehaviour:
     - Name: value
       Entry: 4
       Data: 0.4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 6|VoiceActing.StatusEffectStat, Assembly-CSharp
+    - Name: StatModifier
+      Entry: 7
+      Data: 7|VoiceActing.StatModifier, Assembly-CSharp
+    - Name: charStat
+      Entry: 3
+      Data: 10
+    - Name: modifierType
+      Entry: 3
+      Data: 1
+    - Name: value
+      Entry: 4
+      Data: -0.4
     - Name: 
       Entry: 8
       Data: 

@@ -46,6 +46,10 @@ namespace Menu
 				subText.text = text2;
 		}
 
+		public void SetTextColor(Color c)
+		{
+			mainText.color = c;
+		}
 		public virtual void DrawSubText(string text2)
 		{
 			if(subText != null)

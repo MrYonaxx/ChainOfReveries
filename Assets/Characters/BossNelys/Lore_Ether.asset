@@ -37,6 +37,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 15
       finalValue: 15
+    RevengeValueRate:
+      baseValue: 0
+      finalValue: 0
     KnockbackTime:
       baseValue: 1
       finalValue: 1
@@ -46,9 +49,6 @@ MonoBehaviour:
     CardBreakTime:
       baseValue: 0.8
       finalValue: 0.8
-    CardBreakKnockback:
-      baseValue: 1
-      finalValue: 1
     Speed:
       baseValue: 2.7
       finalValue: 2.7
@@ -140,8 +140,7 @@ MonoBehaviour:
   initialEquipment:
   - cardEquipment: {fileID: 11400000, guid: b9f7e9038916aa74581026945bb78e0b, type: 2}
     probability: 100
-  loreDescription: "The Ether is a particle constituting the Unreal. The Ether's
-    Chim\xE8re role is to transfer a tiny amount of Ether into the reality to create
-    a link between the unreal and the real.\n\nThe results of this, is that people
-    can use a tiny bit of the \"Magic\" used by the Chim\xE8re, but this also means
-    that they are affected by the Reverie."
+  loreDescription: "Ether is a particle linking the Fantasy and the Reality. Ether
+    is monitored by the Ether's Chim\xE8re, Nelys. \n\nWhile Ether transfer thought
+    and imagination to the Reality, it also allow people to use a tiny bit of what
+    we call \"Magic\". The same Magic used by the Chim\xE8re."

@@ -44,6 +44,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 15
       finalValue: 15
+    RevengeValueRate:
+      baseValue: 1
+      finalValue: 1
     KnockbackTime:
       baseValue: 1
       finalValue: 1
@@ -51,9 +54,6 @@ MonoBehaviour:
       baseValue: 100
       finalValue: 100
     CardBreakTime:
-      baseValue: 1
-      finalValue: 1
-    CardBreakKnockback:
       baseValue: 1
       finalValue: 1
     Speed:
@@ -113,6 +113,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 3186fd934a3de304f89356ab7db277fd, type: 2}
   initialEquipment: []
   loreDescription: Sen was a normal boy from a small town in Mynsa. When Lia was
-    on Oneiros side, she used him to interact directly with the real world. By doing
-    so, Lia has shared a part of her powers with Sen, giving him the ability to break
-    free from the Reverie.
+    on Oneiros side, she used him to interact directly with the Reality without passing
+    by the Reverie. By doing so, Lia has shared a part of her powers with Sen, giving
+    him the ability to break free from the Reverie.

@@ -39,6 +39,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 0
       finalValue: 0
+    RevengeValueRate:
+      baseValue: 0
+      finalValue: 0
     KnockbackTime:
       baseValue: 0
       finalValue: 0
@@ -48,9 +51,6 @@ MonoBehaviour:
     CardBreakTime:
       baseValue: 2
       finalValue: 2
-    CardBreakKnockback:
-      baseValue: 1
-      finalValue: 1
     Speed:
       baseValue: 0
       finalValue: 0
@@ -115,4 +115,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6dc2ef74f0117bc4d92f648a18fe62fc, type: 2}
   - {fileID: 11400000, guid: 599a3295575c564418256002044e206a, type: 2}
   initialEquipment: []
-  loreDescription: 
+  loreDescription: Strong creature living in Swamps, Golem are a threat for the inhabitant
+    of Mynsa.

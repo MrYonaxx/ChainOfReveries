@@ -31,7 +31,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   cardSprite: {fileID: 21300000, guid: d707e4981e93a8449850cf0d0229e25f, type: 3}
-  cardName: 
+  cardName: Raigeki
   cardType: 1
   cardDescription: 
   attackManager: {fileID: 818057835518184039, guid: 1485faeb517e41e43bf989753346007b,

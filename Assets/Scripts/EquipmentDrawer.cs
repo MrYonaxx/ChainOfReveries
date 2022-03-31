@@ -49,6 +49,20 @@ namespace VoiceActing
 
         public void DrawEquipments(CardEquipment[] cardEquipments)
         {
+            // à opti dans les boucles en dessous parce qu'on double les appel actuellement
+            int isEmpty = 0;
+            for (int i = 0; i < cardControllers.Length; i++)
+            {
+                if (cardEquipments[i] == null)
+                    isEmpty++;
+            }
+            if (isEmpty == cardControllers.Length)
+                cardControllers[0].transform.parent.gameObject.SetActive(false);
+            else
+                cardControllers[0].transform.parent.gameObject.SetActive(true);
+
+
+
             if (FirstTime)
             {
                 for (int i = 0; i < cardControllers.Length; i++)

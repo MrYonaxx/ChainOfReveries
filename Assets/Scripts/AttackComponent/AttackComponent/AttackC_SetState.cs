@@ -17,20 +17,22 @@ namespace VoiceActing
         [SerializeField]
         CharacterState state = null;
 
+        CharacterBase target;
+
         /* ======================================== *\
          *                FUNCTIONS                 *
         \* ======================================== */
         public override void StartComponent(CharacterBase character, AttackController attack)
         {
             base.StartComponent(character, attack);
-
-            character.LockController.TargetLocked.SetState(state);
+            target = character.LockController.TargetLocked;
+            target.SetState(state);
         }
 
         public override void EndComponent(CharacterBase character)
         {
-            if (character.State == state)
-                character.ResetToIdle();
+            if (target.State == state)
+                target.ResetToIdle();
         }
 
     } 

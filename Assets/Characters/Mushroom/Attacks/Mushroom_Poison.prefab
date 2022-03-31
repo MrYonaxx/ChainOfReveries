@@ -176,9 +176,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame: 40
   frameEnd: 360
-  attackController: {fileID: 4733904636063077261}
+  attackController: {fileID: 6664025316910145470}
   speed: 2
   rotateSpeed: 2
+  rotate: 0
 --- !u!114 &4461643240352555985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -423,6 +424,7 @@ MonoBehaviour:
   linkToCharacter: 0
   fixToGround: 0
   subActionCardBreakable: 0
+  canPlayerCorrectDirection: 1
   atkControllers:
   - {fileID: 4733904636063077261}
 --- !u!1 &6110435575002120153
@@ -480,6 +482,7 @@ MonoBehaviour:
   cardPercentage:
     percentDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     debugDamage: {x: 100, y: 200}
+    maxHP: 0
   element:
     element: 0
     ignoreElementalStat: 0

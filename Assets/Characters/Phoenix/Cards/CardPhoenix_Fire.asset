@@ -31,9 +31,9 @@ MonoBehaviour:
       Entry: 8
       Data: 
   cardSprite: {fileID: 21300000, guid: d532967b9e89cd344a0ef43082bdb6a2, type: 3}
-  cardName: 
+  cardName: Fire rain
   cardType: 1
-  cardDescription: Pluie de boule de feu
+  cardDescription: Fly in the air and shoot down multiple fire balls.
   attackManager: {fileID: 818057835518184039, guid: 77ea89f828800044e8e5fda602a928a0,
     type: 3}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

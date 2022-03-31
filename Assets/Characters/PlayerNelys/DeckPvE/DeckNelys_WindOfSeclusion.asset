@@ -14,26 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deckName: Wind of Seclusion
   initialDeck:
-  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 6
-  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 5
-  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 4
-  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 3
-  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 2
-  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 1
-  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 1
-  - cardData: {fileID: 11400000, guid: 9d3a8e533d6a0f741bc42e9ea9a81429, type: 2}
+  - cardData: {fileID: 11400000, guid: 8c69639166f1c244dae55e8837d1036f, type: 2}
     baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: 9d3a8e533d6a0f741bc42e9ea9a81429, type: 2}
+  - cardData: {fileID: 11400000, guid: 8c69639166f1c244dae55e8837d1036f, type: 2}
     baseCardValue: 8
-  - cardData: {fileID: 11400000, guid: 9d3a8e533d6a0f741bc42e9ea9a81429, type: 2}
+  - cardData: {fileID: 11400000, guid: 8c69639166f1c244dae55e8837d1036f, type: 2}
     baseCardValue: 7
-  - cardData: {fileID: 11400000, guid: 93084acb116dd8140bb72457a7fcc899, type: 2}
+  - cardData: {fileID: 11400000, guid: 01329ed212cb45f4bbadd2cabd790778, type: 2}
     baseCardValue: 0
   initialEquipment: []

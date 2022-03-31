@@ -31,7 +31,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   cardSprite: {fileID: 21300000, guid: a4dd159cf476f744da72565dfdd8bbd8, type: 3}
-  cardName: 
+  cardName: Southern Gust
   cardType: 0
   cardDescription: 
   attackManager: {fileID: 818057835518184039, guid: ed6c6a5ffe80d6e4db01f51438f06898,

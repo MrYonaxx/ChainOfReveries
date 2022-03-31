@@ -14,26 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deckName: Graceful Assassin
   initialDeck:
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
+  - cardData: {fileID: 11400000, guid: 2e9796802cc52d74e9d955381b7a3b16, type: 2}
     baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
+  - cardData: {fileID: 11400000, guid: 2e9796802cc52d74e9d955381b7a3b16, type: 2}
     baseCardValue: 8
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
+  - cardData: {fileID: 11400000, guid: 2e9796802cc52d74e9d955381b7a3b16, type: 2}
     baseCardValue: 7
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
+  - cardData: {fileID: 11400000, guid: 2e9796802cc52d74e9d955381b7a3b16, type: 2}
     baseCardValue: 3
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
+  - cardData: {fileID: 11400000, guid: 2e9796802cc52d74e9d955381b7a3b16, type: 2}
     baseCardValue: 2
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
+  - cardData: {fileID: 11400000, guid: 2e9796802cc52d74e9d955381b7a3b16, type: 2}
     baseCardValue: 1
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
+  - cardData: {fileID: 11400000, guid: 2e9796802cc52d74e9d955381b7a3b16, type: 2}
     baseCardValue: 1
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
+  - cardData: {fileID: 11400000, guid: 2e9796802cc52d74e9d955381b7a3b16, type: 2}
     baseCardValue: 1
-  - cardData: {fileID: 11400000, guid: 212f871f769bdcc40af74024b22f7935, type: 2}
+  - cardData: {fileID: 11400000, guid: 770608292eee0504c84f95cc7ebe9c71, type: 2}
     baseCardValue: 5
-  - cardData: {fileID: 11400000, guid: 212f871f769bdcc40af74024b22f7935, type: 2}
+  - cardData: {fileID: 11400000, guid: c5d797646f04a9a42be28a4e47bf0fc9, type: 2}
     baseCardValue: 3
-  - cardData: {fileID: 11400000, guid: 55a7dfae1df812b48bdade438ab2e7fa, type: 2}
+  - cardData: {fileID: 11400000, guid: fe98327cbffa1e647988c16b690275c5, type: 2}
     baseCardValue: 9
   initialEquipment: []

@@ -36,6 +36,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 0
       finalValue: 0
+    RevengeValueRate:
+      baseValue: 0
+      finalValue: 0
     KnockbackTime:
       baseValue: 1
       finalValue: 1
@@ -43,9 +46,6 @@ MonoBehaviour:
       baseValue: 100
       finalValue: 100
     CardBreakTime:
-      baseValue: 1
-      finalValue: 1
-    CardBreakKnockback:
       baseValue: 1
       finalValue: 1
     Speed:
@@ -83,6 +83,6 @@ MonoBehaviour:
     baseCardValue: 7
   sleightDatabase: []
   initialEquipment: []
-  loreDescription: Monsters are used to create fear in the Reverie. Thanks to that,
+  loreDescription: Monsters are used to create fear in the Reality. Thanks to that,
     people have developed a strong sense of solidarity in their hearts. This sentiment
     is used to maintain the peace.

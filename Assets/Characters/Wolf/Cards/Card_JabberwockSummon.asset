@@ -33,7 +33,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 9688cf87a51fe514cb896a5bd4a23f91, type: 3}
   cardName: Summon
   cardType: 1
-  cardDescription: 
+  cardDescription: Summon a ghost wolf, attacking independently of you.
   attackManager: {fileID: 818057835518184039, guid: 42006b2c012309f4ebda3e0e8abc2287,
     type: 3}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

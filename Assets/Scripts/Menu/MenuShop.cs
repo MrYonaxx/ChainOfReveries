@@ -35,6 +35,8 @@ namespace Menu
 
         [Title("Menu Checkout")]
         [SerializeField]
+        MenuWeaponSelection weaponSelection = null;
+        [SerializeField]
         MenuDeckSelector deckSelector = null;
         [SerializeField]
         CardController cardToCheckout = null;
@@ -48,6 +50,8 @@ namespace Menu
         MenuCursor menuCursor = null;
         [SerializeField]
         TextMeshProUGUI textDescription = null;
+        [SerializeField]
+        TextMeshProUGUI textName = null;
 
         [Title("UI Feedback")]
         [SerializeField]
@@ -76,7 +80,7 @@ namespace Menu
         CharacterBase character = null; // pas le choix pour les stats
         int indexText = -1;
         int oldIndex = 0;
-
+        bool inventoryFull = false;
 
         private List<Card> GetCards(int index)
         {
@@ -114,7 +118,7 @@ namespace Menu
             // On copie les databases puisqu'on veut piocher sans remise
             List<CardData> cardsBattleDatabase = runData.PlayerCharacterData.CopyCardDatabase();
             List<CardExplorationData> cardsExplorationDatabase = explorationDatabase.CopyCardDatabase();
-            List<CardEquipmentData> cardsEquipmentDatabase = equipmentDatabase.CopyCardDatabase();
+            List<CardEquipmentData> cardsEquipmentDatabase = equipmentDatabase.CopyCardDatabase(false);
 
             availability = new List<bool>(stockNumber * deckDrawers.Length);
 
@@ -213,25 +217,28 @@ namespace Menu
 
             listEntry.SetItemCount(deckDrawers.Length);
 
-            if (indexText == dialogues.Length)
+            textbox.gameObject.SetActive(false);
+            lerpCanvasShop.StartLerp(canvasShop.alpha, 0.3f, (start, t) => { canvasShop.alpha = Mathf.Lerp(start, 1, t); });
+            SelectEntry(0);
+            /*if (indexText == dialogues.Length)
             {
                 textbox.gameObject.SetActive(false);
                 lerpCanvasShop.StartLerp(canvasShop.alpha, 0.3f, (start, t) => { canvasShop.alpha = Mathf.Lerp(start, 1, t); });
                 SelectEntry(0);
             }
             else
-                UpdateTextbox();
+                UpdateTextbox();*/
         }
 
         public override void UpdateControl(InputController input)
         {
             inputController = input; // ?
 
-            if(indexText < dialogues.Length) // Update la textbox
+            /*if(indexText < dialogues.Length) // Update la textbox
             {
                 textbox.UpdateControl(input);
                 return;
-            }
+            }*/
 
             if (listEntry.InputListVertical(input.InputLeftStickY.InputValue))
             {
@@ -263,6 +270,7 @@ namespace Menu
 
             Card c = GetCards(listEntry.IndexSelection)[id];
             textDescription.text = c.GetCardDescription();
+            textName.text = c.GetCardName();
         }
 
 
@@ -287,7 +295,7 @@ namespace Menu
             deckSelector.SetSlots(priceCards[listEntry.IndexSelection]);
             deckSelector.InitializeMenu();
 
-            inputController.SetControllable(deckSelector);
+            inputController.SetControllable(deckSelector, true);
 
 
             cardToCheckout.DrawCard(GetCards(listEntry.IndexSelection)[id], deckDrawers[listEntry.IndexSelection].CardTypeData);
@@ -303,7 +311,7 @@ namespace Menu
         // Called by menu checkout
         public void QuitCheckout()
         {
-            inputController.SetControllable(this);
+            inputController.SetControllable(this, true);
 
             int id = deckDrawers[listEntry.IndexSelection].GetIndexHorizontal();
             cardToCheckout.DrawCard(GetCards(listEntry.IndexSelection)[id], deckDrawers[listEntry.IndexSelection].CardTypeData);
@@ -324,6 +332,11 @@ namespace Menu
             int id = deckDrawers[listEntry.IndexSelection].GetIndexHorizontal();
             lerpCanvasCheckout.StartLerp(canvasCheckout.alpha, 0.3f, (start, t) => { canvasCheckout.alpha = Mathf.Lerp(start, 0, t); });
 
+            // La carte n'est plus achetable
+            availability[listEntry.IndexSelection * stockNumber + id] = false;
+            DrawAvailability();
+
+            // Ajoute la carte
             if (listEntry.IndexSelection == 0) // Battle Card
             {
                 Card cardSelected = deckSelector.CardSelected.Peek();
@@ -336,22 +349,30 @@ namespace Menu
             else if (listEntry.IndexSelection == 2) // Equipment Card
             {
                 CardEquipment cardEquipment = (CardEquipment)equipmentsCards[id];
-
+                // Add to player deck
+                if(!runData.AddEquipmentCard(cardEquipment))
+                {
+                    // Impossible d'ajouter la carte, inventaire plein
+                    // On va au menu de résolution de conflit
+                    weaponSelection.SetCard(character, cardEquipment);
+                    weaponSelection.InitializeMenu();
+                    weaponSelection.OnEnd += FeedbackGetCard;
+                    inputController.SetControllable(weaponSelection, true);
+                    inventoryFull = true;
+                    return;
+                }
                 // Add to player stats
                 character.CharacterEquipment.EquipCard(cardEquipment.CardEquipmentData, 0);
-                // Add to player deck
-                runData.AddEquipmentCard((CardEquipment)equipmentsCards[id]);
             }
-
-            // La carte n'est plus achetable
-            availability[listEntry.IndexSelection * stockNumber + id] = false;
-            DrawAvailability();
 
             FeedbackGetCard();
         }
 
         private void FeedbackGetCard()
         {
+            if(inventoryFull)
+                weaponSelection.OnEnd -= FeedbackGetCard;
+            inventoryFull = false;
             StartCoroutine(GetCardCoroutine());
         }
 
@@ -361,7 +382,7 @@ namespace Menu
             animatorGetCard.SetTrigger("Feedback");
             yield return new WaitForSeconds(1.5f);
             cardToCheckout.gameObject.SetActive(false);
-            inputController.SetControllable(this);
+            inputController.SetControllable(this, true);
             lerpCanvasShop.StartLerp(canvasShop.alpha, 0.3f, (startValue, t) => { canvasShop.alpha = Mathf.Lerp(startValue, 1, t); });
         }
 

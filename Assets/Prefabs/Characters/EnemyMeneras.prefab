@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 2248001671791688467}
   - component: {fileID: 8394442752404858858}
   - component: {fileID: 6729897415912846093}
+  - component: {fileID: 4968430984294363088}
   m_Layer: 0
   m_Name: EnemyMeneras
   m_TagString: Untagged
@@ -50,7 +51,6 @@ MonoBehaviour:
   bufferTime: 0.25
   aiEnabled: 0
   character: {fileID: 3675247124298870709}
-  debugOn: 0
 --- !u!114 &6729897415912846093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -123,6 +123,22 @@ MonoBehaviour:
       Version: 1.6.4
   gizmoViewMode: 2
   showBehaviorDesignerGizmo: 1
+--- !u!114 &4968430984294363088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1195417568013061238}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01cbd98e3f755d24299b99c9a5cdc2b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  character: {fileID: 3675247124298870709}
+  nelys: {fileID: 11400000, guid: b2b36011f1c8ed947aa42203acf2994b, type: 2}
+  introNelys: {fileID: 818057835518184039, guid: a9faff72f29a56843b721b08b3a7da71,
+    type: 3}
 --- !u!114 &5343969597869587536
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -159,6 +175,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.x
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 782597946672036746, guid: 7c56ef123a7bd564fa0f79108422bce0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2083834313609334125, guid: 7c56ef123a7bd564fa0f79108422bce0,
         type: 3}
@@ -343,6 +364,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -7968879185091319647, guid: 48eeff45e8e986147aeb7ee4abc05c53,
         type: 3}
+    - target: {fileID: 5230426284488749445, guid: 7c56ef123a7bd564fa0f79108422bce0,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5542107751620278316, guid: 7c56ef123a7bd564fa0f79108422bce0,
         type: 3}
       propertyPath: m_Mesh

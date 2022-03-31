@@ -16,12 +16,20 @@ namespace VoiceActing
     {
         [SerializeField]
         bool banish = false;
+        [ShowIf("banish")]
+        [SerializeField]
+        bool keepPremiumSafe = false;
 
         [Space]
         [SerializeField]
         CardController cardController = null;
         [SerializeField]
+        CardController cardControllerEnemy = null;
+        [SerializeField]
         CardType cardType = null;
+
+        [SerializeField]
+        RectTransform posEnemy = null;
 
 
         public override void OnHitComponent(CharacterBase character, CharacterBase target)
@@ -30,12 +38,23 @@ namespace VoiceActing
             if (target.DeckController.currentIndex != 0)
             {
                 Card c = target.DeckController.SelectCard();
-                if(banish)
-                    target.DeckController.BanishCard(c);
+                if (banish)
+                {
+                    if(!(keepPremiumSafe && c.CardPremium))
+                        target.DeckController.BanishCard(c);
+                }
 
-                //Debug
-                cardController.gameObject.transform.parent.gameObject.SetActive(true);
-                cardController.DrawCard(c, cardType);
+                if (target.tag == "Enemy")
+                {
+                    cardControllerEnemy.gameObject.transform.parent.gameObject.SetActive(true);
+                    cardControllerEnemy.DrawCard(c, cardType);
+                }
+                else
+                {
+                    cardController.gameObject.transform.parent.gameObject.SetActive(true);
+                    cardController.DrawCard(c, cardType);
+                }
+
             }
         }
 

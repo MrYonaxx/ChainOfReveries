@@ -134,7 +134,15 @@ namespace VoiceActing
         {
             return deck;
         }
+        public List<Card> GetBanDeck()
+        {
+            return banned;
+        }
 
+        public bool IsOnReload()
+        {
+            return (deck[currentIndex].CardData == cardReload);
+        }
         #endregion
 
         #region Functions 
@@ -184,6 +192,8 @@ namespace VoiceActing
         public void UpdateCard(CharacterBase character)
         {
             if (deck.Count == 0)
+                return;
+            if (inReload)
                 return;
             deck[currentIndex].UpdateCard(character);
         }
@@ -371,10 +381,15 @@ namespace VoiceActing
             banned.Add(card);
         }
 
+        public void UnbanishCard()
+        {
+            banned.Clear();
+        }
         public void UnbanishCard(Card card)
         {
             banned.Remove(card);
         }
+
 
 
         public void Remove(int index)
@@ -388,7 +403,10 @@ namespace VoiceActing
 
 
 
-
+        public void ResetReloadCounter()
+        {
+            reloadCurrentLevel = 1;
+        }
 
 
 
@@ -453,8 +471,8 @@ namespace VoiceActing
             OnReload?.Invoke();
             while (shuffleTime > 0)
             {
-                yield return new WaitForSeconds(0.05f);
                 MoveHandLeft();
+                yield return new WaitForSeconds(0.04f);
                 shuffleTime -= 1;
             }
             inReload = false;

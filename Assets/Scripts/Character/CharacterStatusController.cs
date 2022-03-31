@@ -148,10 +148,24 @@ namespace VoiceActing
             }
         }
 
+
         // Called when status neeed to refresh UI (more simple this way)
+        // pourquoi c'est en angais j'suis éclaté
         public void RefreshStatus()
         {
             OnStatusChanged?.Invoke(characterStatusEffect);
+        }
+
+        public bool ContainStatus(StatusEffectData status)
+        {
+            for (int i = 0; i < characterStatusEffect.Count; i++)
+            {
+                if (characterStatusEffect[i].StatusEffect == status)
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         #endregion

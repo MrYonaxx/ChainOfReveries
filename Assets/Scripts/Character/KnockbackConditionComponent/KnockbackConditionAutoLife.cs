@@ -20,10 +20,6 @@ namespace VoiceActing
         [SerializeField]
         AttackManager autoLifeAction = null;
 
-        //[SerializeField]
-        //GameRunData gameData = null;
-        [SerializeField]
-        CardEquipmentData cardToRemove = null;
 
         #region Functions 
 
@@ -39,12 +35,6 @@ namespace VoiceActing
                 user.CharacterAction.Action(autoLifeAction);
                 damageMessage.damage = 1;
                 damageMessage.knockback = 0;
-
-                // Faut que je fasse un truc y'a beaucoup d'indirections et de truc a setup pour les equipements
-                //gameData.RemoveEquipmentCard(cardToRemove);
-                user.CharacterEquipment.UnequipCard(cardToRemove, 0);
-
-                //return true;
             }
 
             return false;

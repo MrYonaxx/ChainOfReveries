@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: SleightPhoenix_GustOfRenewal
   m_EditorClassIdentifier: 
   sleightName: Gust of Renewal
-  sleightDescription: A powerful wind blade that scatter the deck on hit. The wind
-    blade is followed up by the Resurrection. This move has a huge startup time but
-    restore your entire health.
+  sleightDescription: '[Scatter] A powerful wind blade. The wind blade is followed
+    up by the Resurrection. This move has a huge startup time but restore your entire
+    health.'
   sleightValue: {x: 0, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: 7df6ae7e49567e3448fb19a4b04e9e74, type: 2}

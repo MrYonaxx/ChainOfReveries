@@ -50,7 +50,6 @@ MonoBehaviour:
   bufferTime: 0.25
   aiEnabled: 1
   character: {fileID: 1269937160370089409}
-  debugOn: 0
 --- !u!114 &4058591706002736741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,6 +101,16 @@ PrefabInstance:
         type: 3}
       propertyPath: afterImageTime
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 313052177286017454, guid: 5046c71ee7ab2b845917bf77adba9be9,
+        type: 3}
+      propertyPath: soundMove.sound
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 966571401761443344, guid: 5046c71ee7ab2b845917bf77adba9be9,
+        type: 3}
+      propertyPath: characterType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3011987554610024909, guid: 5046c71ee7ab2b845917bf77adba9be9,
         type: 3}
@@ -280,6 +289,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Enabled
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4705319995522355120, guid: 5046c71ee7ab2b845917bf77adba9be9,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     - target: {fileID: 6254006597094737864, guid: 5046c71ee7ab2b845917bf77adba9be9,
         type: 3}

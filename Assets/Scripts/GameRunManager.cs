@@ -29,18 +29,28 @@ namespace VoiceActing
         ExplorationManager explorationManager = null;
         [SerializeField]
         HealthBarDrawer playerHealthBar = null;
-
-
-        [Title("Placeholder")]
         [SerializeField]
-        CharacterBase player = null;
+        ComboCountDrawer hitHud = null;
+        [SerializeField]
+        DataCollector dataCollector = null;
+        [SerializeField]
+        GameOverController gameOverController = null;
+
+        [Title("Database")]
+        [SerializeField]
+        PlayerData[] playerData = null;
+        [SerializeField]
+        CharacterBase[] playerDatabase = null;
 
         [Title("Debug")]
+        [SerializeField]
+        InfiniteCorridor infiniteCorridor = null;
         [SerializeField]
         BattleManager debugBattle = null;
         [SerializeField]
         Transform debugParent = null;
 
+        CharacterBase player = null;
         public bool instantExploration = false;
         #endregion
 
@@ -53,6 +63,9 @@ namespace VoiceActing
         {
             // On créer les data de la run
             runData.CreateRunData();
+            player = Instantiate(SpawnCharacter(), Vector3.zero, Quaternion.identity);
+            BattleFeedbackManager.Instance?.CameraController.AddTarget(player.transform, 0);
+            infiniteCorridor.focusCorridor = player.transform;
             inputController.SetControllable(player);
 
             // On setup le perso et son deck équipement
@@ -65,9 +78,13 @@ namespace VoiceActing
             playerHealthBar.DrawCharacter(runData.PlayerCharacterData, player.CharacterStat);
             player.CharacterStat.OnHPChanged += playerHealthBar.DrawHealth;
             player.CharacterKnockback.OnRVChanged += playerHealthBar.DrawRevengeValue;
+            hitHud.SetCharacter(player);
 
+            gameOverController.InitializeGameOver(player);
+            dataCollector.Initialize(player);
+                
 
-            if(debugBattle.isActiveAndEnabled)
+            if (debugBattle.isActiveAndEnabled)
             {
                 debugBattle.InitializeBattle(player, debugParent.GetComponentsInChildren<AIController>());
             }
@@ -78,7 +95,7 @@ namespace VoiceActing
                 {
                     explorationManager.AddCardLayout(); // Appel la fonction pour ajouter de manière random des cartes support au layout du level 1
                     explorationManager.CreateExplorationMenu();
-                    inputController.SetControllable(explorationManager);
+                    inputController.SetControllable(explorationManager, true);
                     return;
                 }
 #endif
@@ -87,6 +104,17 @@ namespace VoiceActing
 
 
 
+        }
+
+        // Plus simple de faire une boucle pour setup une run dans l'editeur plutot que d'utiliser l'ID
+        CharacterBase SpawnCharacter()
+        {
+            for (int i = 0; i < playerData.Length; i++)
+            {
+                if (playerData[i] == runData.PlayerCharacterData)
+                    return playerDatabase[i];
+            }
+            return null;
         }
 
         private void Initialize()

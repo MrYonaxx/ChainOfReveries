@@ -7,6 +7,10 @@
         _FlashAmount("Flash Amount",Range(0.0,1.0)) = 0.0
         _DisappearRange("Disappear Range",Int) = 1
         _Disappear("Disappear Amount",Range(0.0,1.0)) = 0.0
+
+        _AtlasStartHeight("AtlasStartHeight",Range(0.0,1.0)) = 0.0
+        _AtlasEndHeight("AtlasEndHeight",Range(0.0,1.0)) = 1.0
+
         _Color("Tint", Color) = (1,1,1,1)
 
         _Red("Red Shift", Range(-2.0, 2.0)) = 0.0
@@ -94,6 +98,8 @@
                 fixed _Contrast;
                 fixed _Brightness;
                 fixed _SwapColorRatio;
+                float _AtlasStartHeight;
+                float _AtlasEndHeight;
 
                 fixed4 SampleSpriteTexture(float2 uv)
                 {
@@ -118,19 +124,13 @@
                     
                     fixed4 swapC = tex2D(_ColorPalette, float2(c.r, c.g));
                     c.rgb = lerp(c.rgb, swapC.rgb, _SwapColorRatio);
-                    /*half3 rgb = AdjustContrast(
-                        half3(
-                            c.r - _Red * (2 * c.r - c.g - c.b),
-                            c.g - _Green * (2 * c.g - c.r - c.b),
-                            c.b - _Blue * (2 * c.b - c.r - c.g)
-                            ),
-                        _Contrast
-                    );
-                    c.rgb = fixed4(rgb.rgb * _Brightness, c.a) * IN.color;*/
 
                     c.rgb = lerp(c.rgb, _Color, _FlashAmount);
                     c.rgb *= c.a;
-                    c.a *= clamp((((1 - _Disappear) - IN.texcoord.y) * 1000), 0, 1);
+
+                    // Si In.texcoord.Y < ratioDisappearence alors on désaffiche
+                    float ratioDisappearence = (1 - _Disappear *( _AtlasEndHeight - _AtlasStartHeight)) - _AtlasStartHeight;
+                    c.a *= clamp((ratioDisappearence - IN.texcoord.y) * 1000, 0, 1);
                     //c.a -= ((IN.texcoord.y * _Disappear * _DisappearRange) + ((1 / _DisappearRange) * _Disappear * _DisappearRange));//(_Disappear * (IN.texcoord.y)); IN.texcoord.y + 1 * _Disappear;
                     return c;
                 }

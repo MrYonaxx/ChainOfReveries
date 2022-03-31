@@ -62,6 +62,8 @@ namespace VoiceActing
         [Title("Health Feedback")]
         [SerializeField]
         Animator animatorHealthLost = null;
+        [SerializeField]
+        Animator animatorRevengeValue = null;
 
         bool showRV = false;
         int previousHealth = 0;
@@ -86,6 +88,8 @@ namespace VoiceActing
         \* ======================================== */
         public void DrawCharacter(CharacterData characterData, CharacterStat characterStat)
         {
+            this.gameObject.SetActive(true);
+
             // Draw data
             textCharacterName.text = characterData.CharacterName;
             if (characterData.CharacterFace == null)
@@ -219,9 +223,12 @@ namespace VoiceActing
                 if (!showRV)
                 {
                     showRV = true;
+                    rVMaxGauge.gameObject.SetActive(true);
                     lerpRV.StartLerp(canvasRV.alpha, 1f, (startValue, t) => { canvasRV.alpha = Mathf.Lerp(startValue, 1, t); });
                 }
+                animatorRevengeValue.SetBool("Appear", rV == maxRV); 
             }
+
         }
 
 

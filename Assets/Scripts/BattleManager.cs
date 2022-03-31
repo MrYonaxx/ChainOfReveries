@@ -62,6 +62,7 @@ namespace VoiceActing
         StatusDrawer enemyStatusDrawer = null;
 
 
+
         CharacterBase player = null;
         CharacterBase enemyTarget = null;
 
@@ -129,22 +130,18 @@ namespace VoiceActing
                 SetReverieStatus(enemiesController[i]);
             }
 
-            // Si c'est un 1v1 on lock tout le temps
-            /* if (enemiesController.Count == 1)
-             {
-                 ForceLock();
-             }*/
-
-
+            enemyDeckDrawer.ShowDeck(false);
+            enemyHealthBar.gameObject.SetActive(false);
 
             // Repasse en idle, permettant au player de taper
             player.ResetToIdle();
             player.DeckController.ReloadDeck();
+            player.StartBattle();
 
             canvasBattle.SetActive(true);
         }
 
-        private void UninitializeBattle()
+        public void UninitializeBattle()
         {
             if (player != null)
             {
@@ -260,6 +257,7 @@ namespace VoiceActing
         {
             player.CanPlay(false);
             player.EndBattle(); // Appel l'event de fin de combat
+            player.CharacterKnockback.ResetRevengeValue();
 
             if (boss)
                 StartCoroutine(EndBossCoroutine());
@@ -318,11 +316,16 @@ namespace VoiceActing
 
         }
 
-
+        public void ShowBattleHud()
+        {
+            canvasBattle.SetActive(true);
+            GetComponentInChildren<CardBreakDrawer>().DisableCards(); // aïe j'ai si mal, je souffre
+        }
 
         private void SetReverieStatus(CharacterBase enemy)
         {
-            for (int i = 0; i < runData.ReverieLevel; i++)
+            int max = Mathf.Min(runData.ReverieLevel, reverieStatus.Length);
+            for (int i = 0; i < max; i++)
             {
                 enemy.CharacterStatusController.ApplyStatus(reverieStatus[i], 100);
             }

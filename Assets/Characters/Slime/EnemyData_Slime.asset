@@ -40,6 +40,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 0
       finalValue: 0
+    RevengeValueRate:
+      baseValue: 0
+      finalValue: 0
     KnockbackTime:
       baseValue: 1
       finalValue: 1
@@ -47,9 +50,6 @@ MonoBehaviour:
       baseValue: 100
       finalValue: 100
     CardBreakTime:
-      baseValue: 1
-      finalValue: 1
-    CardBreakKnockback:
       baseValue: 1
       finalValue: 1
     Speed:
@@ -89,6 +89,7 @@ MonoBehaviour:
   loreDescription: 'Formed by accumulation of Ether in Water, the slimes can be found
     everywhere and often after the rain.
 
+
     While they can damage people, they
-    are not a serious threat. In fact, childrens sometimes play a game where they
-    splash slimes.'
+    are not a serious threat. In fact, childrens consider them like toys and like
+    to splash them.'

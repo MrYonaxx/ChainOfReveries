@@ -31,7 +31,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   cardSprite: {fileID: 0}
-  cardName: 
+  cardName: Doom
   cardType: 0
   cardDescription: 
   attackManager: {fileID: 818057835518184039, guid: b0f115551b9b4e64691271a0fd270e4a,

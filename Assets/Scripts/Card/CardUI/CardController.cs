@@ -76,7 +76,7 @@ namespace VoiceActing
             cardOutline.color = cardTypeDictionary.GetColorType(card.CardData.CardType);
             cardValueOutline.color = cardOutline.color;*/
 
-            if(animator != null)
+            if(animator != null && animator.isActiveAndEnabled)
                 animator.SetTrigger("Appear");
         }
 
@@ -164,7 +164,7 @@ namespace VoiceActing
             Vector2 finalPosition = Vector2.zero;
             Vector3 finalScale = Vector3.one;
 
-            while (t < 1f && time != 0)
+            while (t < 1f && time > 0)
             {
                 t += Time.deltaTime / time;
                 //blend = 1f - Mathf.Pow(1f - speed, Time.deltaTime * 60);

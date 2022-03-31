@@ -42,15 +42,9 @@ namespace VoiceActing
         float t = 0f;
         private List<CharacterAnimationEvent> frameDataEvent;
 
-        // Start is called before the first frame update
-        /*void Start()
-        {
-            t = 0f;
-            frameDataEvent = new List<CharacterAnimationEvent>(frameData.Count);
-        }*/
-
         public void StartAnimationData()
         {
+            id = 0;
             t = 0f;
             frameDataEvent = new List<CharacterAnimationEvent>(frameData.Count);
         }
@@ -66,9 +60,9 @@ namespace VoiceActing
             int timeInFrame = (int)(t * 60f);
 
             // Update
-            for (int i = 0; i < frameDataEvent.Count; i++)
+            for (int j = 0; j < frameDataEvent.Count; j++)
             {
-                frameDataEvent[i].UpdateComponent(character, timeInFrame);
+                frameDataEvent[j].UpdateComponent(character, timeInFrame);
             }
 
             // Start new Event
@@ -76,13 +70,30 @@ namespace VoiceActing
             {
                 if(timeInFrame >= frameData[i].AnimationEvent.Frame)
                 {
-                    id++;
+                    id+=1;
                     frameData[i].AnimationEvent.Execute(character);
                     frameDataEvent.Add(frameData[i].AnimationEvent);
                 }
             }
 
             return true;
+        }
+
+        public void SkipToEvent(CharacterAnimationEvent animationEvent)
+        {
+            for (int i = id; i < frameData.Count; i++)
+            {
+                if (frameData[i].AnimationEvent == animationEvent)
+                {
+                    t = (frameData[i].AnimationEvent.Frame / 60f);
+                    return;
+                }
+                else
+                {
+                    id += 1;
+                    frameDataEvent.Add(frameData[i].AnimationEvent);
+                }
+            }
         }
 
         [Button]

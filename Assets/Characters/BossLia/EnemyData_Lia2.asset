@@ -39,6 +39,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 15
       finalValue: 15
+    RevengeValueRate:
+      baseValue: 1
+      finalValue: 1
     KnockbackTime:
       baseValue: 1
       finalValue: 1
@@ -48,9 +51,6 @@ MonoBehaviour:
     CardBreakTime:
       baseValue: 0.8
       finalValue: 0.8
-    CardBreakKnockback:
-      baseValue: 1
-      finalValue: 1
     Speed:
       baseValue: 3
       finalValue: 3
@@ -134,10 +134,8 @@ MonoBehaviour:
   initialEquipment:
   - cardEquipment: {fileID: 11400000, guid: be3c3bc1437ed45468ec623e75dc7c43, type: 2}
     probability: 100
-  loreDescription: "Ally of Oneiros, she wants to release the people from the Reverie
-    to grant them a more interesting and real life, even if its a more shorter one.
-    Killing herself would destroy the Reverie, but Lennya can find an replacement
-    at any moment. They need to get around the system.\n\nShe decide to use a human
-    inside the Reverie to open the Ether Wells. By doing so a huge amount of Ether
-    will pour inside the Reverie and allow the Chim\xE8re to\nuse a part of their
-    power inside the reality. "
+  loreDescription: "The Reverie is the frontier between two planes, the Reality and
+    the Fantasy. The Fantasy represents the thoughts, the dreams and the imagination
+    of people living inside the Reality.\n\nChim\xE8res like Lia lives inside the
+    Fantasy. They are forced by Lennya, to maintain and preserve the Reality from
+    destruction."

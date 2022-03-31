@@ -35,7 +35,7 @@ namespace VoiceActing
             BattleFeedbackManager.Instance?.SetBattleMotionSpeed(0);
 
             character.SetCharacterMotionSpeed(0);
-            character.Inputs.SetControllable(menuScan);
+            character.Inputs.SetControllable(menuScan, true);
 
             menuScan.DrawCharacter(character.LockController.TargetLocked.CharacterData);
             menuScan.InitializeMenu();

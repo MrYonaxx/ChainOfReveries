@@ -20,12 +20,20 @@ namespace VoiceActing
          *               ATTRIBUTES                 *
         \* ======================================== */
         [SerializeField]
+        float stunTime;
+        public float StunTime
+        {
+            get { return stunTime; }
+        }
+
+        [SerializeField]
         AnimationParticle stunAnimation;
         public AnimationParticle StunAnimation
         {
             get { return stunAnimation; }
         }
 
+        bool once = true;
         AnimationParticle stunObject;
         #endregion
 
@@ -45,6 +53,7 @@ namespace VoiceActing
         public StatusEffectStun(StatusEffectStun data)
         {
             stunAnimation = data.StunAnimation;
+            stunTime = data.StunTime;
         }
 
         public override StatusEffect Copy()
@@ -54,6 +63,7 @@ namespace VoiceActing
 
         public override void ApplyEffect(CharacterBase character)
         {
+            once = true;
             stunObject = character.CreateAnimation(stunAnimation);
             stunObject.transform.SetParent(character.ParticlePoint);
             character.CharacterKnockback.Knockback(1, true);
@@ -61,7 +71,8 @@ namespace VoiceActing
 
         public override void UpdateEffect(CharacterBase character)
         {
-            character.CharacterKnockback.KnockbackTime = 1f;
+            stunTime -= Time.deltaTime * character.MotionSpeed;
+            character.CharacterKnockback.KnockbackTime = stunTime;
             character.CharacterMovement.SetSpeed(0, 0);
         }
 

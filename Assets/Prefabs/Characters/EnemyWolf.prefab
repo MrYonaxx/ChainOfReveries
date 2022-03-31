@@ -50,7 +50,6 @@ MonoBehaviour:
   bufferTime: 0.25
   aiEnabled: 0
   character: {fileID: 3952013737543627090}
-  debugOn: 0
 --- !u!114 &6394021084535041514
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,6 +129,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1939863810508383732}
     m_Modifications:
+    - target: {fileID: 782597946672036746, guid: 7c56ef123a7bd564fa0f79108422bce0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 782597946672036746, guid: 7c56ef123a7bd564fa0f79108422bce0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.35
+      objectReference: {fileID: 0}
     - target: {fileID: 2312081484070342877, guid: 7c56ef123a7bd564fa0f79108422bce0,
         type: 3}
       propertyPath: deckDrawer
@@ -250,6 +259,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Size.x
       value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5230426284488749445, guid: 7c56ef123a7bd564fa0f79108422bce0,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c56ef123a7bd564fa0f79108422bce0, type: 3}

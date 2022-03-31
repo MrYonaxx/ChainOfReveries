@@ -97,7 +97,15 @@ namespace VoiceActing
             }
             return res;
         }
-
+        public List<Card> CopyCardDatabaseListCard()
+        {
+            List<Card> res = new List<Card>(explorationDatabase.Count);
+            for (int i = 0; i < explorationDatabase.Count; i++)
+            {
+                res.Add(new CardExploration(explorationDatabase[i].cardExploration));
+            }
+            return res;
+        }
 
 
 #if UNITY_EDITOR

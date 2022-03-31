@@ -31,9 +31,9 @@ MonoBehaviour:
       Entry: 8
       Data: 
   cardSprite: {fileID: 21300000, guid: 4b51e2d46b98f6548be9b6aaadbea48d, type: 3}
-  cardName: 
+  cardName: Thorn
   cardType: 0
-  cardDescription: 
+  cardDescription: Create thorn underneath the enemy launching him in the air.
   attackManager: {fileID: 818057835518184039, guid: 098756332353cb04bae73895b2b7c00c,
     type: 3}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

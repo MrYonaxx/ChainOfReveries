@@ -93,7 +93,8 @@ namespace VoiceActing
         {
             for (int i = 0; i < afterImage.Count; i++)
             {
-                Destroy(afterImage[i].gameObject);
+                if(afterImage[i] != null)
+                    Destroy(afterImage[i].gameObject);
             }
 
         }

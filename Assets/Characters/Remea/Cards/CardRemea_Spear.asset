@@ -31,7 +31,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   cardSprite: {fileID: 21300000, guid: 9c9c464ecc7c86c41a7ec4eabafa577f, type: 3}
-  cardName: 
+  cardName: Spear
   cardType: 0
   cardDescription: A fast charge with a spear.
   attackManager: {fileID: 818057835518184039, guid: f43a7b92a441be94fbf67fe92c7b7046,

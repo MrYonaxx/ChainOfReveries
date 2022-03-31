@@ -47,6 +47,7 @@ namespace VoiceActing
         // Renvois vrai si l'attaque ne connecte pas
         public override bool CheckCondition(CharacterBase user, AttackController attack, DamageMessage damageMessage)
         {
+            user.CharacterKnockback.NoKnockback = true;
             attack.HasHit(user);
             user.CharacterMovement.SetSpeed(0, 0);
             user.CharacterMovement.SetSpeedZ(0);

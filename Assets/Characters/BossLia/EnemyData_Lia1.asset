@@ -39,6 +39,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 15
       finalValue: 15
+    RevengeValueRate:
+      baseValue: 1
+      finalValue: 1
     KnockbackTime:
       baseValue: 1
       finalValue: 1
@@ -48,9 +51,6 @@ MonoBehaviour:
     CardBreakTime:
       baseValue: 0.8
       finalValue: 0.8
-    CardBreakKnockback:
-      baseValue: 1
-      finalValue: 1
     Speed:
       baseValue: 3
       finalValue: 3
@@ -112,5 +112,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6ef2b375a6e960f4e864ea4c880b027b, type: 2}
   initialEquipment: []
   loreDescription: "Once a normal girl in the previous fantasy, she became a Chim\xE8re
-    to maintain the Reverie of the new world. \n\nThe sadness of losing her own story
-    made her vows to protect the tales of others."
+    to maintain the Reverie of the new Reality. \n\nThe sadness of losing her own
+    story made her vows to protect the tales of others."

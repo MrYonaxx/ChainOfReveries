@@ -31,7 +31,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   cardSprite: {fileID: 21300000, guid: a4dd159cf476f744da72565dfdd8bbd8, type: 3}
-  cardName: 
+  cardName: Northen Gust
   cardType: 0
   cardDescription: 
   attackManager: {fileID: 818057835518184039, guid: 4cd1d9a3fde01fd4ab30557c75d7824e,

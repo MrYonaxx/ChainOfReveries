@@ -40,6 +40,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 0
       finalValue: 0
+    RevengeValueRate:
+      baseValue: 0
+      finalValue: 0
     KnockbackTime:
       baseValue: 1
       finalValue: 1
@@ -49,9 +52,6 @@ MonoBehaviour:
     CardBreakTime:
       baseValue: 0.5
       finalValue: 0.5
-    CardBreakKnockback:
-      baseValue: 1
-      finalValue: 1
     Speed:
       baseValue: 3.3
       finalValue: 3.3
@@ -90,10 +90,7 @@ MonoBehaviour:
   sleightDatabase:
   - {fileID: 11400000, guid: 72982fef0d994d243943308fc70eb4c7, type: 2}
   initialEquipment: []
-  loreDescription: 'Creatures appearing in nightmares, Diablotins only exist to interact
-    with the people inside the Reverie through their dreams.
-
-
-    Those nightmares,
-    created by the Reverie are used to prevent the dreamer from having malicious
-    intent.'
+  loreDescription: "Creatures appearing in nightmares, and created by Phob\xE9ta.
+    Diablotins only exist to interact with the people from the Reality through their
+    dreams.\n\nThe dreams and nightmares, caused by Morph\xE9e, are part of the Reverie,
+    and are used to prevent the dreamer from having malicious intent."

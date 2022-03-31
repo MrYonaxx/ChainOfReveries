@@ -21,9 +21,11 @@ namespace VoiceActing
         \* ======================================== */
 
         [SerializeField]
-        CharacterState stateKnockback;
+        CharacterState stateKnockback = null;
         [SerializeField]
-        CharacterState stateReversal;
+        AttackManager actionReversal = null;
+        [SerializeField]
+        AttackManager actionInstantReversal = null;
 
         [SerializeField]
         float counterHitRevengeValue = -5;
@@ -79,6 +81,27 @@ namespace VoiceActing
         {
             get { return canRevenge; }
             set { canRevenge = value; }
+        }
+
+        protected bool canInstantRevenge = false;
+        public bool CanInstantRevenge
+        {
+            get { return canInstantRevenge; }
+            set { canInstantRevenge = value; }
+        }
+
+        CharacterBase characterToReversal;
+        public CharacterBase CharacterToReversal
+        {
+            get { return characterToReversal; }
+            set { characterToReversal = value; }
+        }
+
+        protected bool cannotTech = false;
+        public bool CannotTech
+        {
+            get { return cannotTech; }
+            set { cannotTech = value; }
         }
 
 
@@ -211,7 +234,7 @@ namespace VoiceActing
         {
             if (!col.IsTouchingLayers(LayerMask.GetMask("CharacterHitbox")))
                 return;
-            if ((col.tag == "Enemy" || col.tag == "Player") && this.tag != col.tag)
+            if ((col.tag == "Enemy" || col.tag == "Player") && character.tag != col.tag)
             {
                 AttackController attackIncoming = col.GetComponent<IAttack>().GetAttack();
                 Hit(attackIncoming);
@@ -251,10 +274,11 @@ namespace VoiceActing
 
         public void Hit(DamageMessage damageMessage)
         {
+            noKnockback = false;
             character.CharacterStat.HP -= (int)damageMessage.damage;
             if (character.CharacterStat.HP <= 0)
             {
-                Knockback(1, false);
+                Knockback(1, true);
                 if (isDead == false)
                 {
                     isDead = true;
@@ -262,21 +286,16 @@ namespace VoiceActing
                     OnDeath?.Invoke(character, damageMessage);
                 }
             }
-            else if(damageMessage.knockback > 0)
-            {
-                // On ne mets pas le state knockback, c'est l'attaque qui doit le faire (certaines attaques font des dommages mais ne knockback pas)
-                // Mon moi du futur, C'est le spaghetti mais c'est le prix à payer pour finir le jeu au lieu de refactor
-                Knockback(1, false);
+            else if(damageMessage.knockback <= 0)
+            { 
+                // Pour le stop, la carte equipement Aegis, la Reverie cross et d'autre
+                // On set le flag no Knockback
+                noKnockback = true;
             }
 
             OnHit?.Invoke(damageMessage);
         }
 
-
-        public void Death()
-        {
-
-        }
 
 
         public void Knockback(float multiplier = 1, bool setState = false)
@@ -301,7 +320,7 @@ namespace VoiceActing
         {
             if (isDead)
                 return;
-            revengeValue += value;
+            revengeValue += value * character.CharacterStat.RevengeValueRate.Value;
             revengeValue = Mathf.Clamp(revengeValue, 0, character.CharacterStat.RevengeValue.Value);
             OnRVChanged?.Invoke(revengeValue, character.CharacterStat.RevengeValue.Value);
         }
@@ -316,7 +335,8 @@ namespace VoiceActing
         {
             if(knockbackTime <= 0 && revengeValue > 0)
             {
-                AddRevengeValue(-0.5f * Time.deltaTime);
+                // Serializer la valeur de reduction
+                AddRevengeValue(-0.8f * Time.deltaTime);
             }
         }
 
@@ -325,12 +345,21 @@ namespace VoiceActing
             if (character.CharacterStat.RevengeValue.Value <= 0)
                 return false;
 
-            if (canRevenge && revengeValue >= character.CharacterStat.RevengeValue.Value)
+            if ((canRevenge && revengeValue >= character.CharacterStat.RevengeValue.Value) || canInstantRevenge)
             {
-                //character.DeckController.SelectCard();
-                //reversalAttack = attackManager;
                 ResetRevengeValue();
-                character.SetState(stateReversal);
+                characterToReversal = attackManager.User;
+
+                if (characterToReversal.transform.position.x < character.transform.position.x)
+                    character.CharacterMovement.SetDirection(-1);
+                else
+                    character.CharacterMovement.SetDirection(1);
+
+                if(canInstantRevenge)
+                    character.CharacterAction.Action(actionInstantReversal);
+                else
+                    character.CharacterAction.Action(actionReversal);
+
                 return true;
             }
             return false;
@@ -348,29 +377,6 @@ namespace VoiceActing
             set { reversalTime = value; }
         }
 
-       /* private AttackController reversalAttack;
-        public AttackController ReversalAttack
-        {
-            get { return reversalAttack; }
-        }
-
-
-        public bool CheckReversal(AttackController attackManager)
-        {
-            if(reversalTime > 0)
-            {
-                if (attackManager.Card.CardData.CardBreakComponent.CheckCardBreak(attackManager.Card, character.DeckController.GetCurrentCard()) == 1)
-                {
-                    character.DeckController.SelectCard();
-                    reversalAttack = attackManager;
-                    character.SetState(stateReversal);
-                    return true;
-                }
-            }
-            return false;
-        }*/
-
-        // ============================================================
 
         #endregion
 

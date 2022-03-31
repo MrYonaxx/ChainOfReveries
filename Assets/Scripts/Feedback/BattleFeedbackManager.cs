@@ -47,7 +47,10 @@ namespace VoiceActing
         private RippleEffect rippleEffect = null;
 
         [SerializeField]
-        Animator animationDeath = null;
+        ParticleSystem speedlines = null;
+
+        [SerializeField]
+        Animator[] animationDeath = null;
         [SerializeField]
         Animator postProcessDeath = null;
 
@@ -66,9 +69,15 @@ namespace VoiceActing
         [SerializeField]
         RenderTexture renderTexture = null;
 
+        [Title("Sound")] 
+        [SerializeField]
+        SoundParameter soundDeath = null;
+        [SerializeField]
+        SoundParameter soundCardBreak = null;
+
         List<IMotionSpeed> listMotionSpeed = new List<IMotionSpeed>();
 
-
+        int indexAnimationDeath = 0;
         private IEnumerator motionSpeedCoroutine;
 
         #endregion
@@ -99,6 +108,7 @@ namespace VoiceActing
             // Rien à foutre là mais ok
             renderTexture.width = Screen.width;
             renderTexture.height = Screen.height;
+
         }
 
         // Ajoute un IMotionSpeed à la liste de ceux qui subissent le hitstop global
@@ -114,12 +124,20 @@ namespace VoiceActing
 
         public void AnimationDeath(CharacterBase character)
         {
-            animationDeath.gameObject.SetActive(true);
-            animationDeath.SetTrigger("Feedback");
-            animationDeath.transform.position = character.ParticlePoint.transform.position;
+            indexAnimationDeath++;
+            if (indexAnimationDeath >= animationDeath.Length)
+                indexAnimationDeath = 0;
+
+            animationDeath[indexAnimationDeath].gameObject.SetActive(true);
+            animationDeath[indexAnimationDeath].SetTrigger("Feedback");
+            animationDeath[indexAnimationDeath].transform.position = character.ParticlePoint.transform.position;
             //Instantiate(animationDeath, character.transform.position, Quaternion.identity);
             cameraShake.ShakeEffect(0.2f, 15);
             SetBattleMotionSpeed(0, 0.6f);
+
+
+            Speedlines(0.3f, Color.white, character.ParticlePoint.position);
+            soundDeath.PlaySound();
         }
 
 
@@ -137,7 +155,7 @@ namespace VoiceActing
             motionSpeedCoroutine = EndBattleCoroutine(0.6f);
             StartCoroutine(motionSpeedCoroutine);
         }*/
-        private IEnumerator EndBattleCoroutine(float time)
+        /*private IEnumerator EndBattleCoroutine(float time)
         {
             while (time > 0)
             {
@@ -145,7 +163,7 @@ namespace VoiceActing
                 yield return null;
             }
             SetBattleMotionSpeed(0.2f, 2f);
-        }
+        }*/
 
 
 
@@ -238,11 +256,20 @@ namespace VoiceActing
         }
 
 
+        public void Speedlines(float time, Color c, Vector3 position)
+        {
+            speedlines.time = time;
+            var particleColor = speedlines.main;
+            particleColor.startColor = new ParticleSystem.MinMaxGradient(c);
+            speedlines.transform.position = position;
+            speedlines.Play();
+        }
 
         public void BloomDeath()
         {
             postProcessDeath.SetTrigger("Distortion");
         }
+
         public void BloomDeathBoss()
         {
             postProcessDeath.SetTrigger("Distortion2");
@@ -258,7 +285,14 @@ namespace VoiceActing
            // Instantiate(cardBreakAnimation, characterBreaked.transform.position, Quaternion.identity);
 
             animatorPixelize.gameObject.SetActive(true);
-            animatorPixelize.SetTrigger("CardBreak");
+            animatorPixelize.SetTrigger("CardBreak"); 
+            soundCardBreak.PlaySound();
+        }
+
+        public void CardBreakParticle(Vector3 pos)
+        {
+            cardBreakAnimation.transform.position = pos;
+            cardBreakAnimation.SetTrigger("Feedback");
         }
 
         public void BackgroundFlash()

@@ -24,6 +24,7 @@ namespace VoiceActing
 
 
         RectTransform rectTransform;
+        private IEnumerator shakeCoroutine;
 
         #endregion
 
@@ -60,7 +61,10 @@ namespace VoiceActing
 
         public void ShakeEffect(float power, int time)
         {
-            StartCoroutine(ShakeCoroutine(power, time));
+            if (shakeCoroutine != null)
+                StopCoroutine(shakeCoroutine);
+            shakeCoroutine = ShakeCoroutine(power, time);
+            StartCoroutine(shakeCoroutine);
         }
         
         private IEnumerator ShakeCoroutine(float power, int time)

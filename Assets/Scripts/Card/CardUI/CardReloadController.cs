@@ -50,7 +50,8 @@ namespace VoiceActing
             textReloadLevel.text = reloadLevel.ToString();
             transformReloadAmount.localScale = new Vector3(1, reloadAmount / reloadAmountMax, 1);
             cardOutline.color = Color.white;
-            animatorReload.SetTrigger("Feedback");
+            if(animatorReload.isActiveAndEnabled)
+                animatorReload.SetTrigger("Feedback");
         }
         public void ShowReload()
         {

@@ -37,6 +37,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 14
       finalValue: 14
+    RevengeValueRate:
+      baseValue: 1
+      finalValue: 1
     KnockbackTime:
       baseValue: 1
       finalValue: 1
@@ -46,9 +49,6 @@ MonoBehaviour:
     CardBreakTime:
       baseValue: 0.8
       finalValue: 0.8
-    CardBreakKnockback:
-      baseValue: 1
-      finalValue: 1
     Speed:
       baseValue: 2.6
       finalValue: 2.6
@@ -109,5 +109,5 @@ MonoBehaviour:
 
 
     The
-    consciousness of Meneras now live inside Nelys, and only one person inside the
-    Reverie still remember his existence.'
+    consciousness of Meneras now live inside Nelys, and only one person in the Reality
+    still remember his existence.'

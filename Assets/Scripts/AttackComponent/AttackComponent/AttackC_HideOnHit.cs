@@ -14,6 +14,7 @@ namespace VoiceActing
 {
     public class AttackC_HideOnHit: AttackComponent
     {
+
         public override void OnHitComponent(CharacterBase character, CharacterBase target)
         {
             base.OnHitComponent(character, target);

@@ -30,7 +30,14 @@ namespace VoiceActing
         [SerializeField]
         public int CardType = -1;
 
+        [SerializeField]
+        public bool ClampValue = false;
+        
+        [SerializeField]
+        public bool IgnoreZero = false;
+
         List<Card> cardReferences;
+        List<int> bonusValues;
 
         #endregion
 
@@ -56,6 +63,8 @@ namespace VoiceActing
         {
             BonusValue = data.BonusValue;
             BonusCondition = data.BonusCondition;
+            ClampValue = data.ClampValue; 
+            IgnoreZero = data.IgnoreZero;
             CardType = data.CardType;
         }
 
@@ -69,20 +78,23 @@ namespace VoiceActing
         public override void ApplyEffect(CharacterBase character)
         {
             cardReferences = new List<Card>();
+            bonusValues = new List<int>();
             for (int i = 0; i < character.DeckController.DeckData.Count; i++)
             {
                 if (BonusCondition)
                 {
                     if (character.DeckController.DeckData[i].GetCardType() == CardType)
                     {
-                        character.DeckController.DeckData[i].AddCardValue(BonusValue);
-                        cardReferences.Add(character.DeckController.DeckData[i]);
+                        AddCard(character, i);
+                        /*character.DeckController.DeckData[i].AddCardValue(BonusValue);
+                        cardReferences.Add(character.DeckController.DeckData[i]);*/
                     }
                 }
                 else
                 {
-                    character.DeckController.DeckData[i].AddCardValue(BonusValue);
-                    cardReferences.Add(character.DeckController.DeckData[i]);
+                    AddCard(character, i);
+                    /*character.DeckController.DeckData[i].AddCardValue(BonusValue);
+                    cardReferences.Add(character.DeckController.DeckData[i]);*/
                 }
             }
             character.DeckController.RefreshDeck();
@@ -93,11 +105,41 @@ namespace VoiceActing
         {
             for (int i = 0; i < cardReferences.Count; i++)
             {
-                cardReferences[i].AddCardValue(-BonusValue);
+                cardReferences[i].AddCardValue(-bonusValues[i]);
             }
         }
 
+        private void AddCard(CharacterBase character, int i)
+        {
+            if (IgnoreZero && character.DeckController.DeckData[i].baseCardValue == 0)
+                return;
 
+            if(ClampValue)
+            {
+                int value = character.DeckController.DeckData[i].GetCardValue() + BonusValue;
+                if(value < 0)
+                {
+                    value = BonusValue - value;
+                }
+                else if (value > 9)
+                {
+                    value = 9 - value + BonusValue;
+                }
+                else
+                {
+                    value = BonusValue;
+                }
+                bonusValues.Add(value);
+            }
+            else
+            {
+                bonusValues.Add(BonusValue);
+            }
+
+
+            character.DeckController.DeckData[i].AddCardValue(bonusValues[bonusValues.Count - 1]);
+            cardReferences.Add(character.DeckController.DeckData[i]);
+        }
 
 
 #if UNITY_EDITOR

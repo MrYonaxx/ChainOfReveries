@@ -37,6 +37,14 @@ namespace VoiceActing
         [SerializeField]
         RectTransform cardPosEnemy = null;
 
+        [Title("Sleight")]
+        [SerializeField]
+        TMPro.TextMeshProUGUI textSleightName = null;
+        [SerializeField]
+        TMPro.TextMeshProUGUI textSleightChain = null;
+        [SerializeField]
+        Animator animatorSleightName = null;
+
         [Space]
         // Utilisé pour retrouver les positions des cartes sleight
         [SerializeField]
@@ -52,6 +60,7 @@ namespace VoiceActing
         [SerializeField]
         CardController cardControllerPrefab = null;
 
+        int showSleight = 0;
         int indexCardControllers = 0;
         public Queue<CardController> cardControllers = new Queue<CardController>();
         public List<CardController> cardControllersActive = new List<CardController>();
@@ -85,6 +94,8 @@ namespace VoiceActing
             cardBreakManager.OnCardBreakDraw += CallbackCardBreakDraw;
             cardBreakManager.OnCardIneffective += CallbackCardIneffective;
             cardBreakManager.OnCardRemove += CallbackHideCard;
+
+            showSleight = PlayerPrefs.GetInt("SleightName");
         }
 
         private void OnDestroy()
@@ -99,11 +110,28 @@ namespace VoiceActing
 
 
 
+        public void DisableCards()
+        {
+            HideCard();
+            // Le truc le plus compliqué de l'histoire juste pour fix un bug visuel durant le Megido de shimérie
+            for (int i = 0; i < cardControllers.Count; i++)
+            {
+                CardController c = cardControllers.Dequeue();
+                c.gameObject.SetActive(false);
+                cardControllers.Enqueue(c);
+            }
+        }
+
 
 
         public void CallbackPlayCard(CharacterBase user, List<Card> cards)
         {
             DrawCardsPlayed(user.tag, cards);
+
+            if (cards.Count > 1)
+                DrawSleight(user);
+            else
+                HideSleight();
         }
 
         public void CallbackCardIneffective(CharacterBase currentCharacter, List<Card> currentCards, CharacterBase user, List<Card> cards)
@@ -125,17 +153,27 @@ namespace VoiceActing
             {
                 StartCoroutine(DrawCardIneffectiveCoroutine(cardControllersActive[i], characterBreaked.tag));
             }
+            HideSleight();
         }
 
         public void CallbackCardBreak(CharacterBase characterBreaked, List<Card> cardsBreaked, CharacterBase user, List<Card> cards)
         {
             DrawCardBreaked(user.tag);
             AnimationCardBreak(characterBreaked);
+
+            if (cards != null)
+            {
+                if (cards.Count > 1)
+                    DrawSleight(user);
+                else
+                    HideSleight();
+            }
         }
 
         public void CallbackHideCard()
         {
             HideCard();
+            HideSleight();
         }
 
 
@@ -309,6 +347,32 @@ namespace VoiceActing
         }
 
 
+
+
+        private void DrawSleight(CharacterBase character)
+        {
+            if (showSleight == 0)
+                return;
+            animatorSleightName.gameObject.SetActive(true);
+            textSleightName.text = character.CharacterAction.CurrentAttackCard.GetCardName();
+
+            if (character.CharacterAction.CanSpecialCancel || character.CharacterAction.SpecialCancelCount > 0)
+            {
+                textSleightChain.text = (character.CharacterAction.SpecialCancelCount+1).ToString();
+                textSleightChain.transform.parent.gameObject.SetActive(true);
+            }
+            else
+            {
+                textSleightChain.transform.parent.gameObject.SetActive(false);
+            }
+            animatorSleightName.SetBool("Appear", true);
+        }
+
+        private void HideSleight()
+        {
+            if(animatorSleightName.isActiveAndEnabled)
+                animatorSleightName.SetBool("Appear", false);
+        }
 
 
         #endregion

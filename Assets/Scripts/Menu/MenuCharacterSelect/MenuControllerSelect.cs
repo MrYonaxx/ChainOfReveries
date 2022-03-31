@@ -71,7 +71,7 @@ namespace VoiceActing
                     cardControllers[i].gameObject.SetActive(true);
                     cardControllers[i].DrawCardValue(i+1);
                     inputControllers[i].SetID(i);
-                    inputControllers[i].SetControllable(this);
+                    inputControllers[i].SetControllable(this, true);
                     joystickInput.Add(false);
                 }
                 else
@@ -79,7 +79,7 @@ namespace VoiceActing
                     cardControllers[i].gameObject.SetActive(false);
                     cardSlots[i].gameObject.SetActive(false);
                     inputControllers[i].SetID(-1);
-                    inputControllers[i].SetControllable(null);
+                    inputControllers[i].SetControllable(null, true);
                 }
             }
 

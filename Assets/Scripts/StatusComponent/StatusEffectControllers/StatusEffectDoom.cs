@@ -34,7 +34,7 @@ namespace VoiceActing
         CharacterBase enemy = null;
         TMPro.TextMeshPro doomCounter = null;
         bool action = false;
-
+        bool disappear = false;
         #endregion
 
         #region GettersSetters 
@@ -69,7 +69,8 @@ namespace VoiceActing
 
         public override void ApplyEffect(CharacterBase character)
         {
-            owner = character;
+            disappear = false;
+               owner = character;
             CardBreakController.OnCardBreak += DoomDecrement;
 
             doomCounter = character.CreateAnimation(TextPrefab).GetComponent<TMPro.TextMeshPro>();
@@ -114,14 +115,20 @@ namespace VoiceActing
             if(action)
             {
                 enemy.CharacterAction.Action(new Card(AttackDoom, 6));
-                action = false;
+                action = false; 
+                CardBreakController.OnCardBreak -= DoomDecrement;
+                GameObject.Destroy(doomCounter.gameObject);
+                disappear = true;
             }
         }
 
         public override void RemoveEffect(CharacterBase character)
         {
-            CardBreakController.OnCardBreak -= DoomDecrement;
-            GameObject.Destroy(doomCounter.gameObject);
+            if (disappear == false)
+            {
+                CardBreakController.OnCardBreak -= DoomDecrement;
+                GameObject.Destroy(doomCounter.gameObject);
+            }
         }
 
         #endregion

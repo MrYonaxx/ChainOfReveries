@@ -7,8 +7,7 @@ namespace VoiceActing
     // Collecte des données de combat, principalement utilisé par le Menu Game Over 
     public class DataCollector : MonoBehaviour
     {
-        [SerializeField]
-        CharacterBase character = null;
+
         [SerializeField]
         CardBreakController cardBreakController = null;
 
@@ -18,12 +17,16 @@ namespace VoiceActing
         public int EnemyDefeated;
         [HideInInspector]
         public float Timer;
+
+        CharacterBase character = null;
         List<CardData> sleightData = new List<CardData>();
         List<int> sleightUsage = new List<int>();
 
-        // Start is called before the first frame update
-        void Start()
+
+
+        public void Initialize(CharacterBase newCharacter)
         {
+            character = newCharacter;
             cardBreakController.OnCardBreak += CountCardBreak;
             character.CharacterAction.OnSleightPlayed += CountSleight;
             character.CharacterAction.OnAttackHit += CountKill;

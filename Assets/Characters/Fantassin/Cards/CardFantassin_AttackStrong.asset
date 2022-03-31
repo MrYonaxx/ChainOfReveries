@@ -34,9 +34,9 @@ MonoBehaviour:
       Entry: 8
       Data: 
   cardSprite: {fileID: 21300000, guid: c72e41b103ef86d4993fa380b4ec1054, type: 3}
-  cardName: 
+  cardName: Strong Attack
   cardType: 0
-  cardDescription: 
+  cardDescription: '[Unbreakable] Backdash then charge to deal a very powerful strike.'
   attackManager: {fileID: 818057835518184039, guid: a4ef8625c8785574daccca77da7bf064,
     type: 3}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

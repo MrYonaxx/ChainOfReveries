@@ -37,6 +37,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 15
       finalValue: 15
+    RevengeValueRate:
+      baseValue: 1
+      finalValue: 1
     KnockbackTime:
       baseValue: 1
       finalValue: 1
@@ -46,9 +49,6 @@ MonoBehaviour:
     CardBreakTime:
       baseValue: 0.8
       finalValue: 0.8
-    CardBreakKnockback:
-      baseValue: 1
-      finalValue: 1
     Speed:
       baseValue: 2.7
       finalValue: 2.7
@@ -136,5 +136,7 @@ MonoBehaviour:
   initialEquipment:
   - cardEquipment: {fileID: 11400000, guid: b9f7e9038916aa74581026945bb78e0b, type: 2}
     probability: 100
-  loreDescription: Once Lia and Oneiros succesfully open the Ether Wells, Nelys intervene
-    and defeat Lia in order to protect the Reverie.
+  loreDescription: "When Oneiros and Lia tried to shatter the Reverie, Nelys was
+    the only Chim\xE8re to stand against them. With the help of Sen she eventually
+    manage to defeat Lia.\n\nThe Reverie's goal is to maintain peace inside the Reality,
+    by destroying the Reverie, the Reality could one day disappear"

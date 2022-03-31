@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 786742768810625737}
   - component: {fileID: 786742768810625736}
   m_Layer: 0
-  m_Name: BossNelys2
+  m_Name: BossNelys1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50,7 +50,6 @@ MonoBehaviour:
   bufferTime: 0.25
   aiEnabled: 0
   character: {fileID: 2533178961972815959}
-  debugOn: 0
 --- !u!114 &786742768810625736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102,6 +101,16 @@ PrefabInstance:
         type: 3}
       propertyPath: afterImageTime
       value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 313052177286017454, guid: 5046c71ee7ab2b845917bf77adba9be9,
+        type: 3}
+      propertyPath: soundMove.sound
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 966571401761443344, guid: 5046c71ee7ab2b845917bf77adba9be9,
+        type: 3}
+      propertyPath: characterType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3011987555238584207, guid: 5046c71ee7ab2b845917bf77adba9be9,
         type: 3}
@@ -276,6 +285,16 @@ PrefabInstance:
       propertyPath: m_Controller
       value: 
       objectReference: {fileID: 9100000, guid: 828348dc744cf9f4583d077c822cc875, type: 2}
+    - target: {fileID: 4705319995522355120, guid: 5046c71ee7ab2b845917bf77adba9be9,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5826636302344172812, guid: 5046c71ee7ab2b845917bf77adba9be9,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6254006597094737864, guid: 5046c71ee7ab2b845917bf77adba9be9,
         type: 3}
       propertyPath: actionReversal

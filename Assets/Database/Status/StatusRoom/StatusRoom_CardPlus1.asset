@@ -71,3 +71,6 @@ MonoBehaviour:
   statusIconSprite: {fileID: 0}
   statusName: 
   statusDescription: 
+  hideStatus: 1
+  statusShowLabel: 0
+  statusConditionLabel: 

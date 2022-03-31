@@ -54,16 +54,27 @@ namespace VoiceActing
             maxProbability = sum;
         }
 
-        public List<CardEquipmentData> CopyCardDatabase()
+        public List<CardEquipmentData> CopyCardDatabase(bool all = true)
         {
             List<CardEquipmentData> res = new List<CardEquipmentData>(equipmentDatabase.Count);
             for (int i = 0; i < equipmentDatabase.Count; i++)
             {
+                if (!all && equipmentDatabase[i].probability == 0)
+                    continue;
                 res.Add(equipmentDatabase[i].cardEquipment);
             }
             return res;
         }
 
+        public List<Card> CopyCardDatabaseListCard()
+        {
+            List<Card> res = new List<Card>(equipmentDatabase.Count);
+            for (int i = 0; i < equipmentDatabase.Count; i++)
+            {
+                res.Add(new CardEquipment(equipmentDatabase[i].cardEquipment));
+            }
+            return res;
+        }
 
 
         [Title("Editor")]

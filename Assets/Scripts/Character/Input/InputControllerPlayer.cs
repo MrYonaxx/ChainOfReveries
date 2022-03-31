@@ -121,14 +121,16 @@ namespace VoiceActing
             {
                 UpdateInputButton(InputEnum.RB, inputRB);
                 UpdateInputButton(InputEnum.LB, inputLB);
+                UpdateInputButton(InputEnum.RT, inputRT);
+                UpdateInputButton(InputEnum.LT, inputLT);
             }
             else
             {
                 UpdateInputButton(InputEnum.LB, inputRB);
                 UpdateInputButton(InputEnum.RB, inputLB);
+                UpdateInputButton(InputEnum.RT, inputLT);
+                UpdateInputButton(InputEnum.LT, inputRT);
             }
-            UpdateInputButton(InputEnum.RT, inputRT);
-            UpdateInputButton(InputEnum.LT, inputLT);
 
             UpdateInputButton(InputEnum.DPAD_DOWN, inputPadDown);
             UpdateInputButton(InputEnum.DPAD_UP, inputPadUp);

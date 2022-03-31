@@ -51,16 +51,22 @@ MonoBehaviour:
   cardStatus:
     statusDamage: 64000000c8000000be000000b4000000aa000000a0000000960000008c0000008200000078000000
     status: {fileID: 11400000, guid: 67f41f4ce108bc943bf7670831ec5ad4, type: 2}
+    canApplyMultipleTime: 1
+    canApplyOnKnockback: 1
     debugDamage: {x: 100, y: 200}
   cardPercentage:
     percentDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     debugDamage: {x: 100, y: 200}
+    maxHP: 0
   element:
     element: 0
     ignoreElementalStat: 0
   damage:
     baseDamage: 100
     attackType: 0
+    ignoreStatsMultiplier: 0
+  backdamage:
+    baseDamage: 100
     ignoreStatsMultiplier: 0
 --- !u!1 &1083372529134149949
 GameObject:
@@ -108,12 +114,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onHitAnimation: {fileID: 855764348832698739, guid: 734251cd418c42946b79b2586c648edb,
     type: 3}
+  onlyHitStopOpponent: 0
   hitStop: 0.2
   knockbackDurationMultiplier: 1
   knockbackX: -3
   knockbackZ: 0
-  revengeValue: 3
   knockbackInvulnerability: 1
+  revengeValue: 3
 --- !u!114 &935918521860393099
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,6 +329,8 @@ MonoBehaviour:
   frameData:
   - Frame: 0
     AnimationEvent: {fileID: 714956832288177373}
+  - Frame: 0
+    AnimationEvent: {fileID: 1594035792079647298}
   - Frame: 80
     AnimationEvent: {fileID: 4461643240352555985}
   - Frame: 80
@@ -358,7 +367,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frame: 82
-  frameEnd: 100
+  frameEnd: 85
   attack: {fileID: 814046338364315953}
 --- !u!114 &2524242894598313049
 MonoBehaviour:
@@ -438,12 +447,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onHitAnimation: {fileID: 855764348832698739, guid: 734251cd418c42946b79b2586c648edb,
     type: 3}
+  onlyHitStopOpponent: 0
   hitStop: 0.4
   knockbackDurationMultiplier: 1
   knockbackX: 0
   knockbackZ: 1
-  revengeValue: 10
   knockbackInvulnerability: 1
+  revengeValue: 10
 --- !u!114 &5485531285977804821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,7 +492,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dad7e80ac0cdbd428606f8c14ac4bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dezoom: 0
+  zoomValue:
+  - -0.5
+  - -0.5
+  - 0
+  zoomTime:
+  - 6
+  - 12
+  - 6
+  smoothZoom: 0
 --- !u!1 &4388082830208477171
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,6 +694,7 @@ MonoBehaviour:
   linkToCharacter: 1
   fixToGround: 0
   subActionCardBreakable: 0
+  canPlayerCorrectDirection: 1
   atkControllers:
   - {fileID: 4733904636063077261}
   - {fileID: 814046338364315953}
@@ -730,16 +749,22 @@ MonoBehaviour:
   cardStatus:
     statusDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     status: {fileID: 0}
+    canApplyMultipleTime: 1
+    canApplyOnKnockback: 1
     debugDamage: {x: 100, y: 200}
   cardPercentage:
     percentDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     debugDamage: {x: 100, y: 200}
+    maxHP: 0
   element:
     element: 0
     ignoreElementalStat: 0
   damage:
     baseDamage: 100
     attackType: 0
+    ignoreStatsMultiplier: 0
+  backdamage:
+    baseDamage: 100
     ignoreStatsMultiplier: 0
 --- !u!1 &6664025316910145470
 GameObject:
@@ -836,6 +861,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6170470185010184287}
   - component: {fileID: 714956832288177373}
+  - component: {fileID: 1594035792079647298}
   m_Layer: 0
   m_Name: Movement
   m_TagString: Untagged
@@ -874,6 +900,22 @@ MonoBehaviour:
   moveForward: 1
   speed: {x: 0, y: 0}
   jumpImpulsion: 0
+--- !u!114 &1594035792079647298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7197704365641121891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ca1047c5907ce4c851d7349dcd44a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 0
+  frameEnd: 0
+  direction: 0
+  turnToTarget: 1
 --- !u!1 &7345693785975693917
 GameObject:
   m_ObjectHideFlags: 0

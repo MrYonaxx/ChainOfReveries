@@ -40,6 +40,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 0
       finalValue: 0
+    RevengeValueRate:
+      baseValue: 0
+      finalValue: 0
     KnockbackTime:
       baseValue: 1
       finalValue: 1
@@ -47,9 +50,6 @@ MonoBehaviour:
       baseValue: 100
       finalValue: 100
     CardBreakTime:
-      baseValue: 1
-      finalValue: 1
-    CardBreakKnockback:
       baseValue: 1
       finalValue: 1
     Speed:
@@ -93,4 +93,5 @@ MonoBehaviour:
     baseCardValue: 0
   sleightDatabase: []
   initialEquipment: []
-  loreDescription: 
+  loreDescription: "Jabberwocky are mythical creatures created by Phob\xE9ta. The
+    legend say that they eat people's worst memories to lift them from their burdens."

@@ -31,6 +31,13 @@ namespace VoiceActing
             get { return initialDeck; }
         }
 
+        [TabGroup("Deck")]
+        [SerializeField]
+        private List<int> premiumCardID;
+        public List<int> PremiumCardID // Retourne une ref du deck
+        {
+            get { return premiumCardID; }
+        }
 
         [TabGroup("Equip")]
         [SerializeField]
@@ -50,6 +57,12 @@ namespace VoiceActing
             for (int i = 0; i < initialDeck.Count; i++)
             {
                 res.Add(new Card(initialDeck[i].CardData, initialDeck[i].baseCardValue));
+            }
+
+            // Set si il y a des cartes premium
+            for (int i = 0; i < premiumCardID.Count; i++)
+            {
+                res[premiumCardID[i]].CardPremium = true;
             }
             return res;
         }

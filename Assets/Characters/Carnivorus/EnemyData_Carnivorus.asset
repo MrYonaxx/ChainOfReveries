@@ -40,6 +40,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 0
       finalValue: 0
+    RevengeValueRate:
+      baseValue: 0
+      finalValue: 0
     KnockbackTime:
       baseValue: 0
       finalValue: 0
@@ -47,9 +50,6 @@ MonoBehaviour:
       baseValue: 100
       finalValue: 100
     CardBreakTime:
-      baseValue: 1
-      finalValue: 1
-    CardBreakKnockback:
       baseValue: 1
       finalValue: 1
     Speed:
@@ -92,4 +92,5 @@ MonoBehaviour:
     baseCardValue: 6
   sleightDatabase: []
   initialEquipment: []
-  loreDescription: 
+  loreDescription: Carnivorus are ferocious monster inside the Reality. Their poison
+    thorns can make people hallucinate.

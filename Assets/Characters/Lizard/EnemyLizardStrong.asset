@@ -40,6 +40,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 0
       finalValue: 0
+    RevengeValueRate:
+      baseValue: 0
+      finalValue: 0
     KnockbackTime:
       baseValue: 1
       finalValue: 1
@@ -49,9 +52,6 @@ MonoBehaviour:
     CardBreakTime:
       baseValue: 0.5
       finalValue: 0.5
-    CardBreakKnockback:
-      baseValue: 1
-      finalValue: 1
     Speed:
       baseValue: 4
       finalValue: 4
@@ -100,4 +100,5 @@ MonoBehaviour:
     baseCardValue: 1
   sleightDatabase: []
   initialEquipment: []
-  loreDescription: 
+  loreDescription: Creatures roaming all around Mynsa, Lizards are not really dangerous.
+    They only attacks people when they feel threatened.

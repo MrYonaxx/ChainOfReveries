@@ -30,10 +30,16 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 1|VoiceActing.StatusEffectUpdateOnEndBattle, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|VoiceActing.StatusEffectUpdateOnDeath, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -45,14 +51,14 @@ MonoBehaviour:
       Data: 
     - Name: statusController
       Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[VoiceActing.StatusEffect, Assembly-CSharp]],
+      Data: 3|System.Collections.Generic.List`1[[VoiceActing.StatusEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 3|VoiceActing.StatusEffectDoom, Assembly-CSharp
+      Data: 4|VoiceActing.StatusEffectDoom, Assembly-CSharp
     - Name: Counter
       Entry: 3
       Data: 50

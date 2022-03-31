@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SleightData_DimReflection
   m_EditorClassIdentifier: 
   sleightName: Dim Reflection
-  sleightDescription: 
+  sleightDescription: Teleport and deal succive attacks on the enemy in both direction.
   sleightValue: {x: 0, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}

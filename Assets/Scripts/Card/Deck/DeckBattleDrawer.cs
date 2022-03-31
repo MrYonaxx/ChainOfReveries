@@ -81,7 +81,7 @@ namespace VoiceActing
         /* ======================================== *\
          *                FUNCTIONS                 *
         \* ======================================== */
-        private void Start()
+        private void Awake()
         {
             if (cardPrefab == null)
                 return;
@@ -109,7 +109,8 @@ namespace VoiceActing
             handLimitMin = 0;
             handLimitMax = transformsHand.Length;
 
-            if (handLimited == true && deck.Count < transformsHand.Length) // Si la main est limité on ressers la taille de la main de jeu
+            // Si la main est limité on ressers la taille de la main de jeu
+            if (handLimited == true && deck.Count < transformsHand.Length) 
             {
                 int sizeLeft = 0;
                 int sizeRight = 0;
@@ -130,11 +131,10 @@ namespace VoiceActing
                 }
             }
 
-            /*if (cardReload != null)
-                cardReload.HideReload();*/
             for (int i = handLimitMin; i < handLimitMax; i++)
             {
                 DrawCard(i, deck);
+                cardControllers[i].MoveCard(transformsHand[i], 0);
             }
 
             if (maxCard == -1)

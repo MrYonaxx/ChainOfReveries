@@ -177,7 +177,7 @@ namespace VoiceActing
         private float motionSpeed = 1;
         public float MotionSpeed
         {
-            get { return motionSpeed * characterStat.MotionSpeed.Value; }
+            get { return Mathf.Max(motionSpeed * characterStat.MotionSpeed.Value, 0); }
         }
 
 
@@ -196,6 +196,7 @@ namespace VoiceActing
 
         public delegate void Action();
         public delegate void ActionSetState(CharacterState oldState, CharacterState newState);
+
 
         public event ActionSetState OnStateChanged;
         public event Action OnBattleStart;
@@ -253,7 +254,7 @@ namespace VoiceActing
         protected virtual void OnDestroy()
         {
             BattleFeedbackManager.Instance.RemoveIMotionSpeed(this);
-            characterStatusController.RemoveAllStatus();
+            characterStatusController?.RemoveAllStatus();
         }
 
         public void SetState(CharacterState characterState)
@@ -289,7 +290,7 @@ namespace VoiceActing
             characterStatusController.UpdateController(this);
 
             currentState.UpdateState(this);
-            characterRigidbody.UpdateCollision(characterMovement.SpeedX * motionSpeed, characterMovement.SpeedY * motionSpeed, characterMovement.InAir);
+            characterRigidbody.UpdateCollision(characterMovement.SpeedX * MotionSpeed, characterMovement.SpeedY * MotionSpeed, characterMovement.InAir);
             currentState.LateUpdateState(this);
 
         }
@@ -330,12 +331,15 @@ namespace VoiceActing
         {
             motionSpeed = newSpeed;
             animator.speed = MotionSpeed;
-            characterAction.SetAttackMotionSpeed(MotionSpeed);
+            characterAction.SetAttackMotionSpeed(MotionSpeed); 
+
+            if (motionSpeedCoroutine != null)
+                StopCoroutine(motionSpeedCoroutine);
 
             if (time > 0 && this.gameObject.activeInHierarchy == true)
             {
-                if (motionSpeedCoroutine != null)
-                    StopCoroutine(motionSpeedCoroutine);
+                /*if (motionSpeedCoroutine != null)
+                    StopCoroutine(motionSpeedCoroutine);*/
                 motionSpeedCoroutine = MotionSpeedCoroutine(time);
                 StartCoroutine(motionSpeedCoroutine);
             }

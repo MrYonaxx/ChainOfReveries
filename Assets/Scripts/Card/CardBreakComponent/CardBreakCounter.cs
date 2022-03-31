@@ -37,17 +37,6 @@ namespace VoiceActing
             currentCharacter.CharacterAction.ForcePlayCard(new Card(counterAction, sumActive));
 
             return -1;
-            /*else if (sumNewCards == 0 || sumNewCards > sumActive)
-            {
-                // On se fait card break, mais du coup on contre
-
-                //challengerCharacter.CardBreak();
-                //currentCharacter.CharacterAction.RemoveCards();
-                currentCharacter.CharacterAction.CancelAction();
-                currentCharacter.CharacterAction.ForcePlayCard(new Card(counterAction, sumActive));
-                return -1;
-            }
-            return -1;*/
         }
 
     } 

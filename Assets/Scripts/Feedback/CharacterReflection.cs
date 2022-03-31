@@ -26,6 +26,8 @@ namespace VoiceActing
         [SerializeField]
         float disappearTime = 5f;
 
+        Color baseColor;
+        Color finalColor;
         #endregion
 
         #region GettersSetters 
@@ -41,26 +43,33 @@ namespace VoiceActing
         /* ======================================== *\
          *                FUNCTIONS                 *
         \* ======================================== */
+        private void Start()
+        {
+            baseColor = spriteReflection.color;
+            finalColor = spriteReflection.color;
+            finalColor.a = 0;
+        }
 
         public void Update()
         {
             this.transform.localPosition = new Vector3(spriteToReflect.transform.localPosition.x, this.transform.localPosition.y, 0);
             spriteReflection.sprite = spriteToReflect.sprite;
             spriteReflection.flipX = spriteToReflect.flipX;
+
+            spriteReflection.color = Color.Lerp(finalColor, baseColor, spriteToReflect.color.a);
         }
 
 
         public void Disappear()
         {
-            StartCoroutine(LerpAlpha(disappearTime));
+            if(isActiveAndEnabled)
+                StartCoroutine(LerpAlpha(disappearTime)); 
+            enabled = false;
         }
 
         IEnumerator LerpAlpha(float time)
         {
             float t = 0f;
-            Color baseColor = spriteReflection.color;
-            Color finalColor = spriteReflection.color;
-            finalColor.a = 0;
             while (t < time)
             {
                 t += Time.deltaTime;

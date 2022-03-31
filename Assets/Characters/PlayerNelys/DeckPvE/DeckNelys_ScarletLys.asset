@@ -14,28 +14,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deckName: Scarlet Lys
   initialDeck:
-  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 7
-  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 5
-  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 3
-  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 2
-  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 1
-  - cardData: {fileID: 11400000, guid: 622321ab569aee9459d136a5de49f228, type: 2}
+  - cardData: {fileID: 11400000, guid: 9dba2c554978cc54cb7f9f02f714327b, type: 2}
     baseCardValue: 8
-  - cardData: {fileID: 11400000, guid: 622321ab569aee9459d136a5de49f228, type: 2}
+  - cardData: {fileID: 11400000, guid: 9dba2c554978cc54cb7f9f02f714327b, type: 2}
     baseCardValue: 6
-  - cardData: {fileID: 11400000, guid: 622321ab569aee9459d136a5de49f228, type: 2}
+  - cardData: {fileID: 11400000, guid: 9dba2c554978cc54cb7f9f02f714327b, type: 2}
     baseCardValue: 4
-  - cardData: {fileID: 11400000, guid: 622321ab569aee9459d136a5de49f228, type: 2}
+  - cardData: {fileID: 11400000, guid: 9dba2c554978cc54cb7f9f02f714327b, type: 2}
     baseCardValue: 2
-  - cardData: {fileID: 11400000, guid: 622321ab569aee9459d136a5de49f228, type: 2}
+  - cardData: {fileID: 11400000, guid: 9dba2c554978cc54cb7f9f02f714327b, type: 2}
     baseCardValue: 1
-  - cardData: {fileID: 11400000, guid: 622321ab569aee9459d136a5de49f228, type: 2}
+  - cardData: {fileID: 11400000, guid: 9dba2c554978cc54cb7f9f02f714327b, type: 2}
     baseCardValue: 0
   initialEquipment: []

@@ -33,7 +33,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 75634b92b48e9e045a2542f3faf9c8e7, type: 3}
   cardName: Fist
   cardType: 0
-  cardDescription: A big attack on the ground stunning every ennemies.
+  cardDescription: A big attack on the ground stunning every enemies.
   attackManager: {fileID: 818057835518184039, guid: ba4de924a5829e346b4185059601c5aa,
     type: 3}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

@@ -50,7 +50,6 @@ MonoBehaviour:
   bufferTime: 0.25
   aiEnabled: 0
   character: {fileID: 1526495897418689931}
-  debugOn: 0
 --- !u!114 &8884278445260583219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -130,6 +129,16 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 4115352983192467757}
     m_Modifications:
+    - target: {fileID: 782597946672036746, guid: 7c56ef123a7bd564fa0f79108422bce0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 782597946672036746, guid: 7c56ef123a7bd564fa0f79108422bce0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.25
+      objectReference: {fileID: 0}
     - target: {fileID: 2083834313609334125, guid: 7c56ef123a7bd564fa0f79108422bce0,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -288,6 +297,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: -1927673137098258308, guid: 2a29002e2e0eb9f4095b62b482304907,
         type: 3}
+    - target: {fileID: 5230426284488749445, guid: 7c56ef123a7bd564fa0f79108422bce0,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5542107751620278316, guid: 7c56ef123a7bd564fa0f79108422bce0,
         type: 3}
       propertyPath: m_Mesh

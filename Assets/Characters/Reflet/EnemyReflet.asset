@@ -35,6 +35,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 14
       finalValue: 14
+    RevengeValueRate:
+      baseValue: 0
+      finalValue: 0
     KnockbackTime:
       baseValue: 1
       finalValue: 1
@@ -44,9 +47,6 @@ MonoBehaviour:
     CardBreakTime:
       baseValue: 0.8
       finalValue: 0.8
-    CardBreakKnockback:
-      baseValue: 1
-      finalValue: 1
     Speed:
       baseValue: 2.6
       finalValue: 2.6
@@ -102,7 +102,7 @@ MonoBehaviour:
   initialEquipment:
   - cardEquipment: {fileID: 11400000, guid: d731e8a71fa4ab047a519b271dec6a5f, type: 2}
     probability: 100
-  loreDescription: "Chim\xE8re cannot exist inside the reality. But Lia and Oneiros
+  loreDescription: "Chim\xE8re cannot exist inside the Reality. But Lia and Oneiros
     used the Reverie and the Ether to find a human, serving as an avatar to them
-    in order to interact with the real world.\n\nBut Chim\xE8re do not possess a
-    visual representation, that's why they create a Reflet, to talk to their host."
+    in order to interact with the Reality.\n\nBut Chim\xE8re do not possess a visual
+    representation, that's why they create a Reflet, to talk to their host."

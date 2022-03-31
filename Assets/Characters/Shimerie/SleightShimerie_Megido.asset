@@ -15,5 +15,8 @@ MonoBehaviour:
   sleightName: Megido
   sleightDescription: Massive ball of light. Need to be card breaked three times.
   sleightValue: {x: 0, y: 0}
-  sleightRecipe: []
+  sleightRecipe:
+  - {fileID: 11400000, guid: eee648fa28340954d8acea01d30e26bd, type: 2}
+  - {fileID: 11400000, guid: eee648fa28340954d8acea01d30e26bd, type: 2}
+  - {fileID: 11400000, guid: eee648fa28340954d8acea01d30e26bd, type: 2}
   sleightAttackData: {fileID: 0}

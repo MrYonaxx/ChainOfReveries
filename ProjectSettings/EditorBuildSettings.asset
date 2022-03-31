@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/SampleScene.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/ScenePvP.unity
+    guid: 091467f2964aec2479ae062126bb5201
+  - enabled: 1
+    path: Assets/Scenes/SceneTutorial.unity
+    guid: 2dcd0226d10642b4e950029613e9f6ed
   m_configObjects: {}

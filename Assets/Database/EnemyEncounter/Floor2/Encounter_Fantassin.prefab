@@ -48,6 +48,15 @@ MonoBehaviour:
   - {fileID: 5510276027376435826}
   encounterBackground:
   - {fileID: 21300000, guid: b38a427e504e35b49b511a7129b7c744, type: 3}
+  - {fileID: 21300000, guid: 26447446f8f13b243a4a0ad0c336a576, type: 3}
+  - {fileID: 21300000, guid: a5357479992f69a4da1dbc17508376bd, type: 3}
+  - {fileID: 21300000, guid: 1e92c5843c41caf4aac3f929356ce01a, type: 3}
+  - {fileID: 21300000, guid: 8d266e04ef4461348afdc0bb5ade4562, type: 3}
+  BattleTheme: {fileID: 0}
+  HasIntro: 0
+  playerPos: {fileID: 0}
+  enemyCinematic: {fileID: 0}
+  introDrawer: {fileID: 0}
 --- !u!1001 &5236176600425304006
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -55,6 +64,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8704374475148254651}
     m_Modifications:
+    - target: {fileID: 3410197684158136658, guid: a5cc03febcf66fc488e43400e0226129,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4876510844174861806, guid: a5cc03febcf66fc488e43400e0226129,
         type: 3}
       propertyPath: m_LocalPosition.x

@@ -38,7 +38,8 @@ namespace VoiceActing
 
         MotionSpeed,
 
-        RevengeValue
+        RevengeValue,
+        RevengeValueRate
     }
 
     [System.Serializable]
@@ -108,6 +109,11 @@ namespace VoiceActing
         [VerticalGroup("Stat/Center")]
         [InlineProperty(LabelWidth = 100)]
         [SerializeField]
+        public Stat RevengeValueRate;
+
+        [VerticalGroup("Stat/Center")]
+        [InlineProperty(LabelWidth = 100)]
+        [SerializeField]
         public Stat KnockbackTime;
 
         [VerticalGroup("Stat/Center")]
@@ -120,10 +126,10 @@ namespace VoiceActing
         [SerializeField]
         public Stat CardBreakTime;
 
-        [VerticalGroup("Stat/Center")]
+        /*[VerticalGroup("Stat/Center")]
         [InlineProperty(LabelWidth = 100)]
         [SerializeField]
-        public Stat CardBreakKnockback;
+        public Stat CardBreakKnockback;*/
 
 
         [HorizontalGroup("Stat", LabelWidth = 100, PaddingLeft = 10, PaddingRight = 10)]
@@ -200,10 +206,11 @@ namespace VoiceActing
             MagicDefense = new Stat(characterStat.MagicDefense.Value);
 
             RevengeValue = new Stat(characterStat.RevengeValue.Value);
+            RevengeValueRate = new Stat(characterStat.RevengeValueRate.Value);
             KnockbackTime = new Stat(characterStat.KnockbackTime.Value);
             ReloadAmount = new Stat(characterStat.ReloadAmount.Value);
             CardBreakTime = new Stat(characterStat.CardBreakTime.Value);
-            CardBreakKnockback = new Stat(characterStat.CardBreakKnockback.Value);
+           // CardBreakKnockback = new Stat(characterStat.CardBreakKnockback.Value);
 
             Speed = new Stat(characterStat.Speed.Value);
             Gravity = new Stat(characterStat.Gravity.Value);
@@ -268,11 +275,13 @@ namespace VoiceActing
                     return ReloadAmount;
                 case CharStatEnum.CardBreakTime:
                     return CardBreakTime;
-                case CharStatEnum.CardBreakKnockback:
-                    return CardBreakKnockback;
+               /* case CharStatEnum.CardBreakKnockback:
+                    return CardBreakKnockback;*/
 
                 case CharStatEnum.RevengeValue:
                     return RevengeValue;
+                case CharStatEnum.RevengeValueRate:
+                    return RevengeValueRate;
                 case CharStatEnum.KnockbackTime:
                     return KnockbackTime;
 

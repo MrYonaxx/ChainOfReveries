@@ -40,6 +40,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 0
       finalValue: 0
+    RevengeValueRate:
+      baseValue: 0
+      finalValue: 0
     KnockbackTime:
       baseValue: 1.5
       finalValue: 1.5
@@ -47,9 +50,6 @@ MonoBehaviour:
       baseValue: 100
       finalValue: 100
     CardBreakTime:
-      baseValue: 1
-      finalValue: 1
-    CardBreakKnockback:
       baseValue: 1
       finalValue: 1
     Speed:
@@ -85,4 +85,5 @@ MonoBehaviour:
     baseCardValue: 2
   sleightDatabase: []
   initialEquipment: []
-  loreDescription: 'Dragons are hostile creature living around '
+  loreDescription: Dragons are hostile creature living around the city of Mynsa.
+    Fortunately, the forces of Mynsa manage to drive off their attacks.

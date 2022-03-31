@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SleightLiaB_SpiralOfIllusion
   m_EditorClassIdentifier: 
   sleightName: Spiral of Illusion
-  sleightDescription: 
+  sleightDescription: Dash toward the enemy while spinning. Bounce off the walls.
   sleightValue: {x: 0, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: ba00a2b9ad3321d489f066aefec00ffd, type: 2}

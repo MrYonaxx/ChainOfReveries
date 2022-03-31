@@ -31,7 +31,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   cardSprite: {fileID: 0}
-  cardName: 
+  cardName: Shining Veil
   cardType: 0
   cardDescription: 
   attackManager: {fileID: 818057835518184039, guid: a510dafe6abceaa49a5d0a3382184e0e,

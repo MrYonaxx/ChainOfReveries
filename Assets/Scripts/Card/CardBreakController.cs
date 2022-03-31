@@ -173,10 +173,10 @@ namespace VoiceActing
 
 
 
-        public void ForceCardBreak(CharacterBase character = null)
+        public void ForceCardBreak(CharacterBase characterToCardBreak, CharacterBase character = null)
         {
-            OnCardBreak.Invoke(currentCharacter, cardsActive, character, null);
-            currentCharacter.CharacterAction.CardBreak(character);
+            OnCardBreak.Invoke(characterToCardBreak, cardsActive, character, null);
+            characterToCardBreak.CharacterAction.CardBreak(character);
 
             currentCharacter = null;
             cardsActive.Clear();

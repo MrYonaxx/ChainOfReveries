@@ -31,9 +31,9 @@ MonoBehaviour:
       Entry: 8
       Data: 
   cardSprite: {fileID: 0}
-  cardName: 
+  cardName: Gravity Field
   cardType: 1
-  cardDescription: 
+  cardDescription: Shoot a bullet of gravity at the position of the enemy.
   attackManager: {fileID: 818057835518184039, guid: f798d5f098e549a47afd4de0715cd26e,
     type: 3}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

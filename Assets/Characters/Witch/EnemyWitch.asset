@@ -41,6 +41,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 0
       finalValue: 0
+    RevengeValueRate:
+      baseValue: 0
+      finalValue: 0
     KnockbackTime:
       baseValue: 1
       finalValue: 1
@@ -50,9 +53,6 @@ MonoBehaviour:
     CardBreakTime:
       baseValue: 2
       finalValue: 2
-    CardBreakKnockback:
-      baseValue: 1
-      finalValue: 1
     Speed:
       baseValue: 2
       finalValue: 2
@@ -108,5 +108,5 @@ MonoBehaviour:
   sleightDatabase: []
   initialEquipment: []
   loreDescription: "The witch possess a huge control on the Ether. Ether is what
-    link the world with the Reverie. By controling the Ether they allow the user
-    to manipulate a fragment of the Reverie. \n\nThis is what people call Magic."
+    link the Reality with the Fantasy. By controling the Ether they allow the user
+    to manipulate a fragment of the Fantasy. \n\nThis is what people call Magic."

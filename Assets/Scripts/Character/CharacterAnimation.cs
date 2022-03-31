@@ -25,6 +25,7 @@ namespace VoiceActing
 
         int knockbackAnimation = 0;
         bool inReload = false;
+        bool inTheAir = false;
         float tReload = 0f;
 
         private void Start()
@@ -47,21 +48,30 @@ namespace VoiceActing
             if (inReload)
                 UpdateReload();
 
+            // Set direction
             if (characterBase.MotionSpeed != 0)
             {
                 characterBase.transform.localScale = new Vector3(characterBase.CharacterMovement.Direction, 1, 1);
                 animator.SetBool("Moving", characterBase.CharacterMovement.InMovement);
             }
+
+            // Set si on est dans les airs
             animator.SetBool("Aerial", characterBase.CharacterMovement.InAir);
+
             if (characterBase.CharacterMovement.InAir)
             {
                 animator.SetBool("Fall", characterBase.CharacterMovement.SpeedZ < 0 && characterBase.CharacterMovement.PosZ > 0.2f);
                 animator.transform.localPosition = new Vector3(0, characterBase.CharacterMovement.PosZ, 0);
+                inTheAir = true;
             }
             else
             {
                 animator.SetBool("Fall", false);
-                animator.transform.localPosition = new Vector3(0, 0, 0);
+                if (inTheAir)
+                {
+                    animator.transform.localPosition = new Vector3(0, 0, 0);
+                    inTheAir = false;
+                }
             }
         }
 
@@ -76,11 +86,12 @@ namespace VoiceActing
             else if (newState is CharacterStateDown)
                 animator.SetTrigger("Down");
             else if (newState is CharacterStateDead)
+            {
                 animator.SetTrigger("Dead");
+                animator.ResetTrigger("Hit");
+            }
             else if (newState.ID == CharacterStateID.CardBreak)
                 animator.SetTrigger("CardBreaked");
-            else if (newState is CharacterStateReversal)
-                animator.SetTrigger("Reversal");
             else if (newState is CharacterStateReload)
             {
                 animator.SetTrigger("Reload");

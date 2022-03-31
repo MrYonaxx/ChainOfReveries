@@ -31,9 +31,10 @@ MonoBehaviour:
       Entry: 8
       Data: 
   cardSprite: {fileID: 21300000, guid: 6aabcee3e6e04ae4590061373bde1515, type: 3}
-  cardName: 
+  cardName: Erupt
   cardType: 0
-  cardDescription: 
+  cardDescription: Goes into the ground and move toward the enemy, then strike, and
+    launch the target in the air.
   attackManager: {fileID: 818057835518184039, guid: 363d6a47ea091b44aa444de47de0973a,
     type: 3}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

@@ -50,7 +50,6 @@ MonoBehaviour:
   bufferTime: 0.25
   aiEnabled: 0
   character: {fileID: 1093417986299463683}
-  debugOn: 0
 --- !u!114 &7010105841151300795
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -139,6 +138,16 @@ PrefabInstance:
         type: 3}
       propertyPath: m_AnchoredPosition.x
       value: 0.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 782597946672036746, guid: 7c56ef123a7bd564fa0f79108422bce0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 782597946672036746, guid: 7c56ef123a7bd564fa0f79108422bce0,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0.25
       objectReference: {fileID: 0}
     - target: {fileID: 2083834313609334125, guid: 7c56ef123a7bd564fa0f79108422bce0,
         type: 3}
@@ -290,7 +299,7 @@ PrefabInstance:
     - target: {fileID: 2312081485353122971, guid: 7c56ef123a7bd564fa0f79108422bce0,
         type: 3}
       propertyPath: m_Size.x
-      value: 1
+      value: 0.75
       objectReference: {fileID: 0}
     - target: {fileID: 2312081485443982444, guid: 7c56ef123a7bd564fa0f79108422bce0,
         type: 3}
@@ -313,6 +322,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 4459812597537182971, guid: cedab6fd7cd2fd4439208b88f9febd03,
         type: 3}
+    - target: {fileID: 5230426284488749445, guid: 7c56ef123a7bd564fa0f79108422bce0,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5542107751620278316, guid: 7c56ef123a7bd564fa0f79108422bce0,
         type: 3}
       propertyPath: m_Mesh

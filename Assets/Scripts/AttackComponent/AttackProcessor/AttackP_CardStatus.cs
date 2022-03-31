@@ -34,6 +34,15 @@ namespace VoiceActing
         [VerticalGroup("CardDamage/Right")]
         StatusEffectData status = null;
 
+        [HorizontalGroup("CardDamage", PaddingLeft = 10)]
+        [SerializeField]
+        [VerticalGroup("CardDamage/Right")]
+        bool canApplyMultipleTime = true;
+
+        [HorizontalGroup("CardDamage", PaddingLeft = 10)]
+        [SerializeField]
+        [VerticalGroup("CardDamage/Right")]
+        bool canApplyOnKnockback = true;
 
         [HorizontalGroup("CardDamage", PaddingLeft = 10)]
         [SerializeField]
@@ -45,6 +54,15 @@ namespace VoiceActing
         // On ajoute statusDamage
         public override void ProcessAttack(CharacterBase user, CharacterBase target, AttackController attack, ref DamageMessage damageMessage)
         {
+            if (!canApplyOnKnockback && target.CharacterKnockback.KnockbackTime > 0)
+                return;
+
+            if (!canApplyMultipleTime) 
+            {
+                if (target.CharacterStatusController.ContainStatus(status))
+                    return;
+            }
+
             int cardValue = 0;
             if (attack.Card != null)
                 cardValue = Mathf.Clamp(attack.Card.GetCardValue(), 0, 9);

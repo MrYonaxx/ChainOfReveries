@@ -73,6 +73,10 @@ namespace VoiceActing
         {
             return sleightCards;
         }
+        public SleightData GetCurrentSleight()
+        {
+            return currentSleight;
+        }
 
         /// <summary>
         /// Transform the list of cards into its sleight equivalent

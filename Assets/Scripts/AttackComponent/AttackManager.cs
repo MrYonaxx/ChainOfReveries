@@ -71,6 +71,13 @@ namespace VoiceActing
             get { return subActionCardBreakable; }
         }
 
+        [SerializeField]
+        private bool canPlayerCorrectDirection = true;
+        public bool CanPlayerCorrectDirection
+        {
+            get { return canPlayerCorrectDirection; }
+        }
+
         [Title("Attack Controllers")]
         [SerializeField]
         [ListDrawerSettings(Expanded = true)]
@@ -133,7 +140,7 @@ namespace VoiceActing
         public void CreateAttack(Card attack, CharacterBase cUser)
         {
             // Auto correct direction pour QoL
-            if (cUser.Inputs.InputLeftStickX.InputValue != 0)
+            if (cUser.Inputs.InputLeftStickX.InputValue != 0 && canPlayerCorrectDirection)
                 cUser.CharacterMovement.SetDirection((int)Mathf.Sign(cUser.Inputs.InputLeftStickX.InputValue));
 
             user = cUser;

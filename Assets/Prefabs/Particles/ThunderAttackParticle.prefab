@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 855764348832698737}
   - component: {fileID: 855764348832698738}
   - component: {fileID: -628959329838418786}
+  - component: {fileID: 6406876420919583713}
   m_Layer: 0
   m_Name: ThunderAttackParticle
   m_TagString: Untagged
@@ -28,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 855764348832698739}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 2, y: 0.4, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.2, y: 1.2, z: 1.2}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -91,7 +92,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 20
-  m_Sprite: {fileID: 21300000, guid: a012165af00d5ca4b90e3d8294cb21cc, type: 3}
+  m_Sprite: {fileID: -4481701969095578137, guid: ebf931d3f28a4db4a9811face041af55,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -114,4 +116,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5c643757e58e844d9e6a69b3729d41f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  destroyAnimation: 0
+  destroyWithAnimation: 0
+--- !u!114 &6406876420919583713
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855764348832698739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4960093bb8a6c9e4389f5dadcd7dc0b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundStart:
+    sound: {fileID: 8300000, guid: c39bdda275521074b884d4d9523fa542, type: 3}
+    volume: 1
+    pitch: {x: 1, y: 1}

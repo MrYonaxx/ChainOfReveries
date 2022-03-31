@@ -227,8 +227,8 @@ namespace VoiceActing
             int sum = cardProbability[i];
             while (r >= sum && i < cardProbability.Length)
             {
-                sum += cardProbability[i];
                 i += 1;
+                sum += cardProbability[i];
             }         
             return i;
         }

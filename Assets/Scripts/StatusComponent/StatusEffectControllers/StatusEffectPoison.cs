@@ -77,8 +77,6 @@ namespace VoiceActing
         public override void ApplyEffect(CharacterBase character)
         {
             t = 0f;
-            /*poisonObject = character.CreateAnimation(poisonAnimation);
-            poisonObject.transform.SetParent(character.ParticlePoint);*/
         }
 
         public override void UpdateEffect(CharacterBase character)
@@ -87,16 +85,11 @@ namespace VoiceActing
             if(t >= timeInterval)
             {
                 t = 0f;
-                character.CharacterStat.HP -= damagePoison;
+                if(character.CharacterStat.HP > damagePoison)
+                    character.CharacterStat.HP -= damagePoison;
                 AnimationParticle poisonObject = character.CreateAnimation(poisonAnimation);
                 poisonObject.transform.SetParent(character.ParticlePoint);
-                //character.CreateAnimation(poisonAnimation);
             }
-        }
-
-        public override void RemoveEffect(CharacterBase character)
-        {
-            //poisonObject.Destroy();
         }
 
         #endregion

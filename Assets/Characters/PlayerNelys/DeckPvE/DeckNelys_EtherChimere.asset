@@ -14,26 +14,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   deckName: "Ether's Chim\xE8re"
   initialDeck:
-  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 7
-  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 6
-  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 5
-  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 4
-  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 3
-  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 2
-  - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 1
-  - cardData: {fileID: 11400000, guid: f7fd926a0ae25c74593e7315564bc6ad, type: 2}
+  - cardData: {fileID: 11400000, guid: 5401ed1ff54670541bbcd13d44a37836, type: 2}
     baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: 93084acb116dd8140bb72457a7fcc899, type: 2}
+  - cardData: {fileID: 11400000, guid: 01329ed212cb45f4bbadd2cabd790778, type: 2}
     baseCardValue: 0
-  - cardData: {fileID: 11400000, guid: 93084acb116dd8140bb72457a7fcc899, type: 2}
+  - cardData: {fileID: 11400000, guid: 01329ed212cb45f4bbadd2cabd790778, type: 2}
     baseCardValue: 0
-  - cardData: {fileID: 11400000, guid: 93084acb116dd8140bb72457a7fcc899, type: 2}
+  - cardData: {fileID: 11400000, guid: 01329ed212cb45f4bbadd2cabd790778, type: 2}
     baseCardValue: 0
   initialEquipment: []

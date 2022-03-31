@@ -33,7 +33,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 5930f5c376cd8a049b0a3b872a21a1d9, type: 3}
   cardName: 
   cardType: 0
-  cardDescription: 
+  cardDescription: Charge towards the enemy.
   attackManager: {fileID: 818057835518184039, guid: 89da3f89f17de66468a69f4ceaab91e2,
     type: 3}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

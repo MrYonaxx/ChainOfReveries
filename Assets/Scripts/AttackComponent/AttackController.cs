@@ -52,10 +52,10 @@ namespace VoiceActing
 
 
         CharacterBase user = null;
-        /*public CharacterBase User
+        public CharacterBase User
         {
             get { return user; }
-        }*/
+        }
 
         private int direction;
         public int Direction

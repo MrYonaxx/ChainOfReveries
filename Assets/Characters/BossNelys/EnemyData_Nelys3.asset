@@ -37,6 +37,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 15
       finalValue: 15
+    RevengeValueRate:
+      baseValue: 1
+      finalValue: 1
     KnockbackTime:
       baseValue: 1
       finalValue: 1
@@ -46,9 +49,6 @@ MonoBehaviour:
     CardBreakTime:
       baseValue: 0.8
       finalValue: 0.8
-    CardBreakKnockback:
-      baseValue: 1
-      finalValue: 1
     Speed:
       baseValue: 3
       finalValue: 3
@@ -149,4 +149,7 @@ MonoBehaviour:
     probability: 100
   - cardEquipment: {fileID: 11400000, guid: 71df775cf044f724590c9fd860c75335, type: 2}
     probability: 100
-  loreDescription: 
+  loreDescription: "Ether is a particle linking the Fantasy and the Reality. Ether
+    is monitored by the Ether's Chim\xE8re, Nelys. \n\nWhile Ether transfer thought
+    and imagination to the Reality, it also allow people to use a tiny bit of what
+    we call \"Magic\". The same Magic used by the Chim\xE8re."

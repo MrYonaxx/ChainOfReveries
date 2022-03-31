@@ -308,12 +308,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onHitAnimation: {fileID: 855764348832698739, guid: 734251cd418c42946b79b2586c648edb,
     type: 3}
+  onlyHitStopOpponent: 0
   hitStop: 0.15
-  knockbackDurationMultiplier: 0.5
+  knockbackDurationMultiplier: 1
   knockbackX: 2
   knockbackZ: 5
-  revengeValue: 3
   knockbackInvulnerability: 0.1
+  revengeValue: 3
 --- !u!114 &5485531285977804821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -462,6 +463,7 @@ MonoBehaviour:
   linkToCharacter: 1
   fixToGround: 0
   subActionCardBreakable: 0
+  canPlayerCorrectDirection: 1
   atkControllers:
   - {fileID: 4733904636063077261}
 --- !u!1 &6110435575002120153
@@ -516,6 +518,8 @@ MonoBehaviour:
   cardStatus:
     statusDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     status: {fileID: 0}
+    canApplyMultipleTime: 1
+    canApplyOnKnockback: 1
     debugDamage: {x: 100, y: 200}
   cardPercentage:
     percentDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -527,6 +531,9 @@ MonoBehaviour:
   damage:
     baseDamage: 100
     attackType: 0
+    ignoreStatsMultiplier: 0
+  backdamage:
+    baseDamage: 100
     ignoreStatsMultiplier: 0
 --- !u!114 &3874607487070562376
 MonoBehaviour:
@@ -548,6 +555,8 @@ MonoBehaviour:
   cardStatus:
     statusDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     status: {fileID: 0}
+    canApplyMultipleTime: 1
+    canApplyOnKnockback: 1
     debugDamage: {x: 100, y: 200}
   cardPercentage:
     percentDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -559,6 +568,9 @@ MonoBehaviour:
   damage:
     baseDamage: 100
     attackType: 0
+    ignoreStatsMultiplier: 0
+  backdamage:
+    baseDamage: 100
     ignoreStatsMultiplier: 0
 --- !u!1 &6664025316910145470
 GameObject:

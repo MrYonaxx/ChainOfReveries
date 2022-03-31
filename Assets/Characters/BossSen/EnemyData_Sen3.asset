@@ -44,6 +44,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 15
       finalValue: 15
+    RevengeValueRate:
+      baseValue: 1
+      finalValue: 1
     KnockbackTime:
       baseValue: 1
       finalValue: 1
@@ -51,9 +54,6 @@ MonoBehaviour:
       baseValue: 100
       finalValue: 100
     CardBreakTime:
-      baseValue: 1
-      finalValue: 1
-    CardBreakKnockback:
       baseValue: 1
       finalValue: 1
     Speed:
@@ -163,6 +163,9 @@ MonoBehaviour:
     probability: 100
   - cardEquipment: {fileID: 11400000, guid: 93c96cf8179666a4cb68c844e8b7c0ba, type: 2}
     probability: 100
-  loreDescription: First mourning his life inside the Reverie, Sen and his group
-    found positive side to the Reverie. Oneiros representing a threat, they decide
-    to first eliminate him and decide afterward the fate of their world.
+  loreDescription: "Once Sen learnt the true intent of Lia, he tried to stop her
+    and Oneiros from breaking the Reverie. He defeat Lia with the help of Nelys and
+    the power that the Reverie's Chim\xE8re herself bestowed upon him.\n\nBut at
+    the time, they didn't know that Lia was trying to destroy the Reverie to free
+    the Reality from it, and that Oneiros true objective was to destroy the current
+    Reverie to create his own."

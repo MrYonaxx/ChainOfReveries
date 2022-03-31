@@ -31,9 +31,9 @@ MonoBehaviour:
       Entry: 8
       Data: 
   cardSprite: {fileID: 21300000, guid: dafb524bfa1d5cc4e93820695cc1b5fc, type: 3}
-  cardName: 
+  cardName: Silk touch
   cardType: 1
-  cardDescription: Discard Hand
+  cardDescription: '[Discard] Attack by disappearing and reappearing above the opponent.'
   attackManager: {fileID: 818057835518184039, guid: 01906e003bd534343800786dd3a541db,
     type: 3}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

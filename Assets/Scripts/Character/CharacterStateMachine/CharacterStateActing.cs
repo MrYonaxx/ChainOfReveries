@@ -37,7 +37,7 @@ namespace VoiceActing
             character.DeckController.MoveHand(character.Inputs.InputLB.InputValue == 1 ? true : false, character.Inputs.InputRB.InputValue == 1 ? true : false);
             character.DeckController.MoveCategory(character.Inputs.InputLT.InputValue == 1 ? true : false, character.Inputs.InputRT.InputValue == 1 ? true : false);
             character.DeckController.UpdateCard(character);
-            InputDpad(character);
+            //InputDpad(character);
             /*else if (character.CharacterEquipment.InEquipmentDeck)
             {
                 character.CharacterEquipment.DeckEquipmentController.MoveHand(character.Inputs.InputLB.InputValue == 1 ? true : false, character.Inputs.InputRB.InputValue == 1 ? true : false);
@@ -67,8 +67,11 @@ namespace VoiceActing
             return false;
         }
 
-        private bool InputDpad(CharacterBase character)
+        /*private bool InputDpad(CharacterBase character)
         {
+            if (character.MotionSpeed == 0)
+                return false;
+
             CardEquipment card = null;
 
             if (character.Inputs.InputPadDown.Registered)
@@ -82,12 +85,13 @@ namespace VoiceActing
 
             if(card != null)
             {
+
                 character.CharacterAction.Action(card.CardEquipmentData.EquipmentAction);
                 character.Inputs.ResetAllBuffer();
                 return true;
             }
             return false;
-        }
+        }*/
 
     } 
 

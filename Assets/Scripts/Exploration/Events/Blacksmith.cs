@@ -10,65 +10,81 @@ namespace VoiceActing
         [SerializeField]
         GameObject buttonPrompt = null;
         [SerializeField]
-        BattleReward battleReward = null;
-        [SerializeField]
-        MenuShop menuShop = null;
+        MenuBase menu = null;
 
-        bool firstTime = false;
-
+        bool active = true;
         CharacterBase character = null;
         IControllable previousControllable = null; // Généralement l'exploration manager
 
 
         void Start()
         {
-            battleReward.OnEventEnd += Shop;
-            menuShop.OnEnd += QuitShop;
+            menu.OnEnd += Quit;
         }
 
         void OnDestroy()
         {
-            battleReward.OnEventEnd -= Shop;
-            menuShop.OnEnd += QuitShop;
+            menu.OnEnd += Quit;
         }
 
 
 
         public void CanInteract(bool b)
         {
+            if (!active)
+                b = false;
             buttonPrompt.gameObject.SetActive(b);
         }
 
         public void Interact(CharacterBase character)
         {
+            if (!active)
+                return;
+
             this.character = character;
             previousControllable = character.Inputs.Controllable;
             BattleFeedbackManager.Instance?.CameraController.AddTarget(this.transform, 10);
-            if (!firstTime)
-            {
-                character.Inputs.SetControllable(battleReward);
-                battleReward.InitializeBattleReward(character);
-                firstTime = true;
-            }
-            else
-            {
-                Shop();
-            }
+
+            GoToMenu();
             CanInteract(false);
-
-
         }
 
-        public void Shop()
+        public void GoToMenu()
         {
-            menuShop.InitializeMenu();
-            character.Inputs.SetControllable(menuShop);
+            menu.InitializeMenu();
+            character.Inputs.SetControllable(menu, true);
+            CountPremium();
         }
 
-        public void QuitShop()
+        public void Quit()
         {
             character.Inputs.SetControllable(previousControllable);
             BattleFeedbackManager.Instance?.CameraController.RemoveTarget(this.transform);
+            CheckPremium();
+            CanInteract(true);
+        }
+
+        // C'est inutilement compliqué pour rien j'en peux plus 
+        // Tout était si générique jusqu'à ce problème
+        [SerializeField]
+        GameRunData runData = null;
+        int nbPremium = 0;
+
+        private void CountPremium()
+        {
+            for (int i = 0; i < runData.PlayerDeck.Count; i++)
+            {
+                if (runData.PlayerDeck[i].CardPremium)
+                    nbPremium++;
+            }
+        }
+
+        private void CheckPremium()
+        {
+            int previousNbPremium = nbPremium;
+            CountPremium();
+            if (previousNbPremium != nbPremium)
+                active = false;
         }
     }
 }

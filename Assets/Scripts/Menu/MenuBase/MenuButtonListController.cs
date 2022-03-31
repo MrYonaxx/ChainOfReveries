@@ -59,6 +59,9 @@ namespace Menu
 
 
         [Title("Input")]
+
+        [SerializeField]
+        protected bool listLoop = true;
         [SerializeField]
         protected float stickThreshold = 0.8f;
 
@@ -98,7 +101,8 @@ namespace Menu
         protected virtual void Awake()
         {
             indexLimit = scrollSize;
-            listIndexCount = listItem.Count;
+            if(listItem.Count != 0)
+                listIndexCount = listItem.Count;
         }
 
         // Génère la liste
@@ -186,7 +190,10 @@ namespace Menu
             indexSelection -= 1;
             if (indexSelection <= -1)
             {
-                indexSelection = listIndexCount - 1;
+                if (listLoop)
+                    indexSelection = listIndexCount - 1;
+                else
+                    indexSelection = 0;
             }
             if (isDataList == false)
                 listItem[indexSelection].SelectButton();
@@ -215,7 +222,10 @@ namespace Menu
             indexSelection += 1;
             if (indexSelection >= listIndexCount)
             {
-                indexSelection = 0;
+                if (listLoop)
+                    indexSelection = 0;
+                else
+                    indexSelection = listIndexCount - 1;
             }
             if (isDataList == false)
                 listItem[indexSelection].SelectButton();

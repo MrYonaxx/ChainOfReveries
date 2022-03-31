@@ -253,6 +253,38 @@ namespace VoiceActing
             input.InputValue = 0;
         }
 
+        public bool GetInput(InputEnum inputEnum)
+        {
+            switch(inputEnum)
+            {
+                case InputEnum.A:
+                    return inputA.Registered;
+                case InputEnum.B:
+                    return inputB.Registered;
+                case InputEnum.X:
+                    return inputX.Registered;
+                case InputEnum.Y:
+                    return inputY.Registered;
+                case InputEnum.RB:
+                    return inputRB.Registered;
+                case InputEnum.RT:
+                    return inputRT.Registered;
+                case InputEnum.LB:
+                    return inputLB.Registered;
+                case InputEnum.LT:
+                    return inputLT.Registered;
+                case InputEnum.DPAD_DOWN:
+                    return inputPadDown.Registered;
+                case InputEnum.DPAD_UP:
+                    return inputPadUp.Registered;
+                case InputEnum.DPAD_LEFT:
+                    return inputPadLeft.Registered;
+                case InputEnum.DPAD_RIGHT:
+                    return inputPadRight.Registered;
+            }
+            return false;
+        }
+
         #endregion
 
     } // InputController class

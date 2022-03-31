@@ -128,7 +128,8 @@ namespace Menu
 				if(show)
 					textboxAnimator.gameObject.SetActive(true);
 
-				textboxAnimator.SetBool("Appear", show);
+				if(textboxAnimator.isActiveAndEnabled)
+					textboxAnimator.SetBool("Appear", show);
 			}
 		}
 

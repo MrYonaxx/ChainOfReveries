@@ -31,7 +31,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   cardSprite: {fileID: 0}
-  cardName: 
+  cardName: Spiral of Illusion
   cardType: 0
   cardDescription: 
   attackManager: {fileID: 818057835518184039, guid: 46b52ad92d85a0740b33d2fed3a6ded4,

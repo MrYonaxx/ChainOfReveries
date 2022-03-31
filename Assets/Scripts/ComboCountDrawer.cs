@@ -10,7 +10,7 @@ namespace VoiceActing
 {
     public class ComboCountDrawer : MonoBehaviour
     {
-        [SerializeField]
+
         CharacterBase player = null;
 
         [Title("UI")]
@@ -21,23 +21,41 @@ namespace VoiceActing
         [SerializeField]
         Feedbacks.GenericLerp lerpCombo = null;
 
+       /* [SerializeField]
+        TextMeshProUGUI textSleightChain = null;
+        [SerializeField]
+        CanvasGroup canvasSleightChain = null;
+        [SerializeField]
+        Feedbacks.GenericLerp lerpSleightChain = null;*/
+
         [SerializeField]
         CanvasGroup canvasCounter = null;
         [SerializeField]
         Feedbacks.GenericLerp lerpCounter = null;
 
         int comboCount = 0;
+       // int sleightChain = 0;
         CharacterBase characterComboed = null;
 
         // Start is called before the first frame update
-        void Start()
+        public void SetCharacter(CharacterBase character)
         {
+            // si y'a un problème de perf, go stocker ça ailleurs
+            int option = PlayerPrefs.GetInt("ComboCount", 1);
+            if (option == 0)
+                return;
+
+            player = character;
             player.CharacterAction.OnAttackHit += UpdateCombo;
         }
 
         void OnDestroy()
         {
-            player.CharacterAction.OnAttackHit -= UpdateCombo;
+            if (player != null)
+            {
+                player.CharacterAction.OnAttackHit -= UpdateCombo;
+            }
+
             if (characterComboed != null)
             {
                 characterComboed.OnStateChanged -= CharacterChangeState;
@@ -68,7 +86,7 @@ namespace VoiceActing
         }
 
         void DrawCombo()
-        {
+        {            
             if (comboCount == 2)
                 lerpCombo.StartLerp(0, 0.4f, (start, t) => { canvasCombo.alpha = Mathf.Lerp(start, 1, t); });
             textComboDigit.text = comboCount.ToString();
@@ -78,6 +96,8 @@ namespace VoiceActing
         {
             lerpCombo.StartLerp(1, 3f, (start, t) => { canvasCombo.alpha = Mathf.Lerp(start, 0, t); });
         }
+
+
 
         void CharacterChangeState(CharacterState oldState, CharacterState newState)
         {
@@ -89,5 +109,6 @@ namespace VoiceActing
                 HideCombo();
             }
         }
+
     }
 }

@@ -80,12 +80,15 @@ namespace VoiceActing
         public override void ApplyEffect(CharacterBase character)
         {
             time = timeStop;
-            intervalBetweenAttack = 0f;
+            timeInterval = 0f;
+            intervalBetweenAttack = 0f; 
             conditionStop = new KnockbackConditionStop();
 
-            character.SetCharacterMotionSpeed(0, 1);
+            character.CharacterStat.MotionSpeed.AddStatBonus(-9999, Stats.StatBonusType.Flat);
+            character.SetCharacterMotionSpeed(0, timeStop);
             character.CanPlay(false); // a changer
             character.CharacterKnockback.AddKnockbackCondition(conditionStop);
+ 
         }
 
 
@@ -94,10 +97,12 @@ namespace VoiceActing
             if(intervalBetweenAttack > 0) // Période dégats
             {
                 timeInterval -= Time.deltaTime;
-                if(timeInterval < 0)
+                if (timeInterval < 0)
                 {
                     timeInterval += intervalBetweenAttack;
                     conditionStop.SetDamage(character);
+                    if(!character.CharacterKnockback.NoKnockback)
+                        character.CharacterKnockback.Knockback(1, true);
                     character.CreateAnimation(stunAnimation);
                 }
             }
@@ -106,17 +111,18 @@ namespace VoiceActing
                 if (time >= 0)
                 {
                     time -= Time.deltaTime;
-                    character.SetCharacterMotionSpeed(0, 1);
                     character.CharacterMovement.SetSpeed(0, 0);
-                }
-                else
-                {
-                    character.CanPlay(true);
-                    character.SetCharacterMotionSpeed(0, 0.01f);
-                    character.CharacterKnockback.RemoveKnockbackCondition(conditionStop);
-                    if (conditionStop.GetDamageRegisterLength() != 0)
-                        intervalBetweenAttack = timeDamage / conditionStop.GetDamageRegisterLength();
 
+                    if(time < 0)
+                    {
+                        character.CanPlay(true);
+                        character.CharacterStat.MotionSpeed.AddStatBonus(9999, Stats.StatBonusType.Flat);
+                        character.CharacterKnockback.RemoveKnockbackCondition(conditionStop);
+                        if (conditionStop.GetDamageRegisterLength() != 0)
+                        {
+                            intervalBetweenAttack = (timeDamage+0.01f) / conditionStop.GetDamageRegisterLength();
+                        }
+                    }
                 }
             }
 
@@ -125,8 +131,11 @@ namespace VoiceActing
 
         public override void RemoveEffect(CharacterBase character)
         {
-            character.SetCharacterMotionSpeed(0, 0.01f);
-            character.CharacterKnockback.RemoveKnockbackCondition(conditionStop);
+            if (time >= 0)
+            {
+                character.CharacterStat.MotionSpeed.AddStatBonus(9999, Stats.StatBonusType.Flat);
+                character.CharacterKnockback.RemoveKnockbackCondition(conditionStop);
+            }
         }
 
 

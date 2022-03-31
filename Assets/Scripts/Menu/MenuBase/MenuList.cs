@@ -8,6 +8,7 @@ using VoiceActing;
 namespace Menu
 {
 	//jsp si ça hérite de MenuBase, est-ce que c'est pas plus confus ?
+	// réponse du futur : ça aurait du hériter de MenuBase mais bon trop tard pour tout refactor
     public class MenuList : MonoBehaviour, IControllable
     {
 		[SerializeField]

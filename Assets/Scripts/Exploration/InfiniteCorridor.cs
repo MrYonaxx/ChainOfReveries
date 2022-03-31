@@ -13,7 +13,7 @@ namespace VoiceActing
 
         [Title("Camera Focus")]
         [SerializeField]
-        Transform focusCorridor = null;
+        public Transform focusCorridor = null;
         [SerializeField]
         BoxCollider focusLevel = null;
 
@@ -61,7 +61,7 @@ namespace VoiceActing
         {
             if (transition)
             {
-                if (focusCorridor.transform.position.x + 1 > nextArea.x) // Le +1 c'est pour que ça marche mieux
+                if (focusCorridor.transform.position.x + 2f > nextArea.x) // Le +2 c'est pour que ça marche mieux
                 {
                     CloseArea();
                 }

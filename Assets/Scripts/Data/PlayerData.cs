@@ -21,13 +21,13 @@ namespace VoiceActing
          *               ATTRIBUTES                 *
         \* ======================================== */
 
-        [TabGroup("DeckExploration")]
+        /*[TabGroup("DeckExploration")]
         [SerializeField]
         private CardExplorationData[] initialDeckExploration = null;
         public CardExplorationData[] InitialDeckExploration
         {
             get { return initialDeckExploration; }
-        }
+        }*/
 
 
         [TabGroup("CardDatabase")]
@@ -73,7 +73,7 @@ namespace VoiceActing
             int r = Random.Range(0, maxProbability);
             int i = 0;
             int sum = cardProbability[i].baseCardValue;
-            while (r >= sum && i < cardProbability.Count)
+            while (r >= sum && i < cardProbability.Count-1)
             {              
                 i += 1;
                 sum += cardProbability[i].baseCardValue;
@@ -82,12 +82,11 @@ namespace VoiceActing
             // Check si c'est premium 
             bool isPremium = false;
             r = Random.Range(0, 100);
-            if (r < 3) // 3% de chance de gacha une carte premium
+            if (r < 2) // 2% de chance de gacha une carte premium
                 isPremium = true;
 
             return new Card(cardProbability[i].CardData, cardProbability[i].CardData.GetRandomCardValue(), isPremium);
         }
-
 
 
         private void CalculateMaxProbability()

@@ -31,9 +31,9 @@ MonoBehaviour:
       Entry: 8
       Data: 
   cardSprite: {fileID: 21300000, guid: 4b97a05962ee4f64b9955db1f1806412, type: 3}
-  cardName: 
+  cardName: Poison Mist
   cardType: 1
-  cardDescription: 
+  cardDescription: Emit Poison spore around you.
   attackManager: {fileID: 818057835518184039, guid: 16db0edf4b66202439bea1bd6603c21d,
     type: 3}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

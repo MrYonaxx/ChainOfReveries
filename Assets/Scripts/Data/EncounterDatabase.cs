@@ -58,6 +58,12 @@ namespace VoiceActing
         // Hack pour l'editeur pour auto reset l'objet
         CheckInitialize checkInitialize = null;
 
+        public void HardReset()
+        {
+            Reset();
+            nextLevelEncounter.Reset();
+        }
+
         // ! \ Ce truc est jamais appelé si on refait une run donc c'est pas bon, à refaire
         public void Reset()
         {

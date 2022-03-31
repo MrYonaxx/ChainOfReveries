@@ -90,7 +90,7 @@ namespace VoiceActing
 
             if (cursorCoroutine != null)
                 StopCoroutine(cursorCoroutine);
-            cursorCoroutine = MoveCursorCoroutine(new Vector2(cardsList[currentIndex].transform.position.x, cardsList[currentIndex].transform.position.y));
+            cursorCoroutine = MoveCursorCoroutineIntro();
             StartCoroutine(cursorCoroutine);
         }
 
@@ -106,6 +106,14 @@ namespace VoiceActing
                 StopCoroutine(cursorCoroutine);
             cursorCoroutine = MoveCursorCoroutine(new Vector2(cardsList[currentIndex].transform.position.x, cardsList[currentIndex].transform.position.y));
             StartCoroutine(cursorCoroutine);
+        }
+
+        // patch pour gérer les layout group de Unity qui s'initialise au start, donc on attend une frame pour déplace le curseur
+        private IEnumerator MoveCursorCoroutineIntro()
+        {
+            yield return null;
+            yield return null;
+            yield return MoveCursorCoroutine(new Vector2(cardsList[currentIndex].transform.position.x, cardsList[currentIndex].transform.position.y));
         }
 
         private IEnumerator MoveCursorCoroutine(Vector2 finalPos)

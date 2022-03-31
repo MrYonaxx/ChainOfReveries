@@ -31,7 +31,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   cardSprite: {fileID: 0}
-  cardName: 
+  cardName: Lethal Frame
   cardType: 0
   cardDescription: 
   attackManager: {fileID: 818057835518184039, guid: f1dfd18a4f360b8449a8eb499ef1ff98,

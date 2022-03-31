@@ -33,7 +33,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 9c9c464ecc7c86c41a7ec4eabafa577f, type: 3}
   cardName: Attack
   cardType: 0
-  cardDescription: 
+  cardDescription: '[Combo] A basic attack in front of you. Combo into a charge.'
   attackManager: {fileID: 818057835518184039, guid: afe9d0b755fda804aa520f79f49dca03,
     type: 3}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

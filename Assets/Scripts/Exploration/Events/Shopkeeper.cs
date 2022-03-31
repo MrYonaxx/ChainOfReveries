@@ -51,7 +51,7 @@ namespace VoiceActing
 
             if (!firstTime)
             {
-                character.Inputs.SetControllable(battleReward);
+                character.Inputs.SetControllable(battleReward, true);
                 battleReward.InitializeBattleReward(character);
                 firstTime = true;
             }
@@ -68,7 +68,7 @@ namespace VoiceActing
         {
             menuShop.InitializeMenu();
             menuShop.SetCharacter(character);
-            character.Inputs.SetControllable(menuShop);
+            character.Inputs.SetControllable(menuShop, true);
             BattleFeedbackManager.Instance?.CameraController.AddTarget(cameraFocus, 10);
         }
 

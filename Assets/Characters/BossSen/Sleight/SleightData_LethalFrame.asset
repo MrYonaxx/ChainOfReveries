@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: SleightData_LethalFrame
   m_EditorClassIdentifier: 
   sleightName: Lethal Frame
-  sleightDescription: Stop the time and deal massive damage to the enemy. Need to
-    be Card Breaked 3 times.
+  sleightDescription: '[Throw] Stop the time and deal massive damage to the enemy.'
   sleightValue: {x: 0, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: 55a7dfae1df812b48bdade438ab2e7fa, type: 2}

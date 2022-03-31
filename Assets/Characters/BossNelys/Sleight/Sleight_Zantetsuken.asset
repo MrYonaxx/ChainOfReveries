@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: Sleight_Zantetsuken
   m_EditorClassIdentifier: 
   sleightName: Zantetsuken
-  sleightDescription: 
+  sleightDescription: '[Banish] A slash attack banishing the cards of a Card Break.'
   sleightValue: {x: 0, y: 0}
   sleightRecipe:
   - {fileID: 11400000, guid: 93084acb116dd8140bb72457a7fcc899, type: 2}
   - {fileID: 11400000, guid: 93084acb116dd8140bb72457a7fcc899, type: 2}
   - {fileID: 11400000, guid: 93084acb116dd8140bb72457a7fcc899, type: 2}
-  sleightAttackData: {fileID: 11400000, guid: 93084acb116dd8140bb72457a7fcc899, type: 2}
+  sleightAttackData: {fileID: 11400000, guid: 444b3fb969c6d3c4cbec946f338f80ad, type: 2}

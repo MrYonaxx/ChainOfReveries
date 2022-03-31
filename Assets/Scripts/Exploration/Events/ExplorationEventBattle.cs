@@ -10,7 +10,7 @@ namespace VoiceActing
         [SerializeField]
         List<SpriteRenderer> backgroundSprites = null;
 
-        [Title("Battle")] // Si soucis de perf injecter battleManager et battleReward dans CreateEvent
+        [Title("Battle")] // Si soucis de perf injecter battleManager et battleReward dans CreateEvent et mettre un battleManager dans la scène direct
         [SerializeField]
         BattleManager battleManager = null;
         [SerializeField]
@@ -25,20 +25,19 @@ namespace VoiceActing
         [SerializeField]
         EncounterDatabase encounterDatabase = null;
 
-
-        /*[Space]
-        [SerializeField]
-        CardExplorationDatabase cardExplorationDatabase = null;
-        [SerializeField]
-        Vector2Int nbReward = Vector2Int.one;*/
-
-
-
         EncounterData encounter = null;
+        public EncounterData Encounter
+        {
+            get { return encounter; }
+        }
+
 
         public override void CreateEvent(ExplorationManager manager)
         {
             explorationManager = manager;
+
+            if (runData.KillCount <= 0) // C'est vraiment la marouflerie, si on a tué personne, c'est notre premier combat et donc on reset
+                encounterDatabase.HardReset();
 
             // Détermine la rencontre
             encounter = Instantiate(encounterDatabase.GachaEncounter(runData.Floor), this.transform);
@@ -90,19 +89,8 @@ namespace VoiceActing
 
         public void InitializeBattleReward()
         {
-            explorationManager.InputController.SetControllable(battleReward);
+            explorationManager.InputController.SetControllable(battleReward, true);
             battleReward.InitializeBattleReward(explorationManager.Player);
-
-            // Reward card
-            // Plus on a de battle Modifiers, plus on a de cartes
-           /* float rewardChance = Random.Range(runData.BattleModifiers.Count * 0.5f, runData.BattleModifiers.Count * 1.1f);
-            int reward = (int)(nbReward.x + rewardChance);// Random.Range((float)nbReward.x, nbReward.y + runData.BattleModifiers.Count);
-            for (int i = 0; i < reward; i++)
-            {
-                CardExplorationData cardExploration = cardExplorationDatabase.GachaExploration();
-                runData.AddExplorationCard(cardExploration);
-            }*/
-
         }
 
 

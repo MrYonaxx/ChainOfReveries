@@ -18,14 +18,17 @@ namespace VoiceActing
         private GameObject onHitAnimation;
 
         [Space]
-        [HorizontalGroup("Knockback")]
+        [SerializeField]
+        bool onlyHitStopOpponent = false;
+
+        [HorizontalGroup("HitStop")]
         [SerializeField]
         private float hitStop = 0.15f;
 
-        [Space]
-        [HorizontalGroup("Knockback")]
+        [HorizontalGroup("HitStop")]
         [SerializeField]
         float knockbackDurationMultiplier = 1;
+
 
         [HorizontalGroup("KnockbackPower")]
         [SerializeField]
@@ -35,9 +38,7 @@ namespace VoiceActing
         [SerializeField]
         float knockbackZ = 1;
 
-        [HorizontalGroup("Revenge Value")]
-        [SerializeField]
-        float revengeValue = 1;
+
 
 
 
@@ -49,6 +50,9 @@ namespace VoiceActing
             get { return knockbackInvulnerability; }
         }
 
+        [HorizontalGroup("Revenge Value")]
+        [SerializeField]
+        float revengeValue = 1;
 
         public override void OnHitComponent(CharacterBase character, CharacterBase target)
         {
@@ -61,24 +65,23 @@ namespace VoiceActing
 
             if (hitStop > 0 && target.CharacterKnockback.IsDead == false)
             {
-                BattleFeedbackManager.Instance?.SetBattleMotionSpeed(0f, hitStop);
+                if(onlyHitStopOpponent)
+                    target.SetCharacterMotionSpeed(0f, hitStop);
+                else
+                    BattleFeedbackManager.Instance?.SetBattleMotionSpeed(0f, hitStop);
             }
 
-            if (target.CharacterKnockback.KnockbackTime > 0 || target.CharacterKnockback.IsDead)
-            {
-                if (knockbackX != 0)
-                {
-                    target.CharacterMovement.Move(knockbackX * attackController.Direction, 0);
-                }
-                if (knockbackZ != 0)
-                {
-                    target.CharacterMovement.Jump(knockbackZ);
-                }
 
-                if (knockbackDurationMultiplier > 0)
-                {
-                    target.CharacterKnockback.Knockback(knockbackDurationMultiplier, true);
-                }
+
+            if (knockbackDurationMultiplier > 0 && !target.CharacterKnockback.NoKnockback)
+            {
+                // Mouvement du knockback
+                if (knockbackX != 0)
+                    target.CharacterMovement.Move(knockbackX * attackController.Direction, 0);
+                if (knockbackZ != 0)
+                    target.CharacterMovement.Jump(knockbackZ);
+
+                target.CharacterKnockback.Knockback(knockbackDurationMultiplier, true);
             }
 
             if (revengeValue >= 0)

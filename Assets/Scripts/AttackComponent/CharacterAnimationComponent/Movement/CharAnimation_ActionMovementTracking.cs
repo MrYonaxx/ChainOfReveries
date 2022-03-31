@@ -9,18 +9,26 @@ namespace VoiceActing
     public class CharAnimation_ActionMovementTracking : CharacterAnimationEvent
     {
         [SerializeField]
-        AttackController attackController = null;
+        GameObject attackController = null;
 
         [SerializeField]
         float speed = 1f;
         [SerializeField]
         float rotateSpeed = 1f;
+        [SerializeField]
+        bool rotate = false;
 
 
         Vector3 direction;
+        private void Start()
+        {
+            direction = transform.right * attackController.transform.lossyScale.x;
+        }
 
         public override void Execute(CharacterBase character)
         {
+            if (character.LockController.TargetLocked == null)
+                return;
             Vector3 directionTarget = character.LockController.TargetLocked.transform.position - attackController.transform.position;
             //float turnDirection = Vector3.Dot(Vector2.Perpendicular(direction), directionTarget);
 
@@ -31,7 +39,10 @@ namespace VoiceActing
             direction *= speed;
             direction *= Time.deltaTime;
             attackController.transform.position += new Vector3(direction.x, direction.y, direction.y);
-
+            if (rotate)
+            {
+                attackController.transform.localEulerAngles = new Vector3(0, 0, -Vector2.SignedAngle(direction, Vector2.right * attackController.transform.lossyScale.x));
+            }
 
         }
         public override void UpdateComponent(CharacterBase character, int frame)

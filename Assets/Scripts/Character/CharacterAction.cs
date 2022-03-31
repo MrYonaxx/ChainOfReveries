@@ -240,10 +240,15 @@ namespace VoiceActing
                     deckController.UnbanishCard(cards[i]);
                 }
 
+                currentAttackCard = sleight[0]; // Manoeuvre un peu patchwork pour le DrawName du CardBreakDrawer
                 if (cardBreakController.PlayCard(character, cards, sleight[0].CardData.CardBreakComponent) == true)
                 {
                     OnSleightPlayed?.Invoke(sleight[0].CardData.AttackManager, sleight[0]);
                     Action(sleight);
+                }
+                else
+                {
+                    currentAttackCard = null;
                 }
 
                 sleightController.ResetSleightCard();
@@ -265,10 +270,10 @@ namespace VoiceActing
 
 
         // Replace les cartes en préparation d'un sleight dans le deck
-        public void CancelSleight()
+        public bool CancelSleight()
         {
             if (sleightController.GetIndexSleightCard() == 0)
-                return;
+                return false;
             List<Card> cards = new List<Card>(sleightController.GetSleightCards());
             deckController.ReplaceCard(cards);
             sleightController.ResetSleightCard();
@@ -278,10 +283,55 @@ namespace VoiceActing
             {
                 deckController.UnbanishCard(cards[i]);
             }
+            return true;
         }
 
+        // Joue une carte dans le cardbreakController sans lancer d'action
+        public bool RapidBreak()
+        {
+            if (character.MotionSpeed == 0)
+                return false;
+            if(deckController.CurrentIndex == 0)
+                return false;
+            if (cardBreakController.GetActiveCards() == null)
+                return false;
+            if (cardBreakController.GetActiveCards().Count == 0)
+                return false;
 
+            // Joue la carte
+            List<Card> cards = new List<Card>(0);
+            cards.Add(deckController.SelectCard());
 
+            if(cardBreakController.PlayCard(character, cards))
+            {
+                cardBreakController.RemoveCurrentCards();
+                character.SetCharacterMotionSpeed(1f);
+                return true;
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Check si on peut card break les cartes en jeu
+        /// </summary>
+        /// <returns></returns>
+        public bool CanCardBreakActiveCards()
+        {
+            if (deckController.CurrentIndex == 0)
+                return false;
+            if (cardBreakController.GetActiveCards() == null)
+                return false;
+            if (cardBreakController.GetActiveCards().Count == 0)
+                return false;
+
+            // Joue la carte
+            List<Card> cards = new List<Card>(0);
+            cards.Add(deckController.GetCurrentCard());
+
+            // Card Break Component
+            CardBreakComponent cardBreakComponent = cardBreakController.GetActiveCards()[0].CardData.CardBreakComponent;
+            return cardBreakComponent.CheckCardBreak(cardBreakController.GetActiveCards(), cards) >= 0;
+        }
 
         public void RemoveCards()
         {
@@ -299,7 +349,7 @@ namespace VoiceActing
                 return false;
 
             // Check au niveau des flags de cancel si on peut jouer la sleight
-            if(action != null && currentAttackManager != null && canMoveCancel)
+            if(action != null && currentAttackManager != null && currentAttackCard != null && canMoveCancel)
             {
                 if (CanMoveCancelItself == false && currentAttackCard.CardData.Equals(action.CardData))
                 {
@@ -360,7 +410,6 @@ namespace VoiceActing
         //          A C T I O N
         // =============================== //
         // Rework le truc un jour pour pooler les prefabs d'attaques des cartes
-
         public void Action(List<Card> cards)
         {
             cardsCombo = cards;

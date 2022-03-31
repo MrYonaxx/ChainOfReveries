@@ -39,7 +39,7 @@ namespace VoiceActing
 
             battleReward.InitializeBattleReward(character);
             battleReward.OnEventEnd += EndChest;
-            character.Inputs.SetControllable(battleReward);
+            character.Inputs.SetControllable(battleReward, true);
 
             isOpen = true;
             chestAnimator.SetTrigger("Feedback");

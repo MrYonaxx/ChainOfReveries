@@ -38,6 +38,12 @@ namespace Menu
         [SerializeField]
         TextMeshProUGUI textDescription = null;
 
+        [Title("Scroll")]
+        [SerializeField]
+        UnityEngine.UI.Scrollbar scrollDescription = null;
+        [SerializeField]
+        UnityEngine.UI.Scrollbar scrollTips = null;
+
         CharacterData data;
         IControllable activeMenu;
 
@@ -67,7 +73,10 @@ namespace Menu
             // Draw Resistances
             for (int i = 0; i < characterData.CharacterStat.ElementalResistances.Count; i++)
             {
-                textResistances[i].text = characterData.CharacterStat.GetElementalResistance(i).ToString();
+                int element = characterData.CharacterStat.ElementalResistances[i].Element;
+                if (element >= 2 && element <= 4)
+                    element -= 1;
+                textResistances[element].text = characterData.CharacterStat.ElementalResistances[i].BaseValue.ToString() + "%";
             }
 
             panelDeck.gameObject.SetActive(true); // Hack pour appeler le awake des objets de panel Deck
@@ -107,6 +116,18 @@ namespace Menu
                 activeMenu = null;
                 input.ResetAllBuffer();
                 QuitMenu();
+            }
+            else if (input.InputPadDown.InputValue == 1 || input.InputX.InputValue == 1)
+            {
+                // scroll down
+                scrollDescription.value -= Time.deltaTime * scrollDescription.size;
+                scrollTips.value -= Time.deltaTime * scrollTips.size;
+            }
+            else if (input.InputPadUp.InputValue == 1 || input.InputY.InputValue == 1)
+            {
+                // scroll up
+                scrollDescription.value += Time.deltaTime * scrollDescription.size;
+                scrollTips.value += Time.deltaTime * scrollTips.size;
             }
 
             if (activeMenu != null)

@@ -109,6 +109,7 @@ namespace Menu
             base.ValidateEntry(id);
             if(id == buttonModifiable.Length) // Save
             {
+                gameData.Save();
                 QuitMenu();
             }
             else if (id == (buttonModifiable.Length+1)) // Default

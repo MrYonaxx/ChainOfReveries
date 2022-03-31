@@ -24,6 +24,16 @@ namespace VoiceActing
         [SerializeField]
         bool custom = false;
 
+        [ShowIf("custom")]
+        [SerializeField]
+        float time = 1f;
+        [ShowIf("custom")]
+        [SerializeField]
+        float scale = 1.5f;
+        [ShowIf("custom")]
+        [SerializeField]
+        Color color = Color.green;
+
         public override void StartComponent(CharacterBase character, AttackController attack)
         {
             // à cache si ça pose problème
@@ -33,6 +43,8 @@ namespace VoiceActing
                 auraEffect.AuraFeedbackReverse(0.2f, 1.2f, Color.red, true);
             else if (auraCounter)
                 auraEffect.AuraFeedbackReverse(0.2f, 1.2f, Color.white, true);
+            else if (custom)
+                auraEffect.AuraFeedback(time, scale, color);
         }
 
         /*public override void UpdateComponent(CharacterBase character)

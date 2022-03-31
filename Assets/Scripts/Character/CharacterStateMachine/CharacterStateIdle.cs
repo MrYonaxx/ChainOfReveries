@@ -22,6 +22,7 @@ namespace VoiceActing
         {
             character.CharacterKnockback.Knockdown = false;
             character.CharacterAction.SpecialCancelCount = 0;
+            character.CharacterAction.CanSpecialCancel = false;
         }
 
         /// <summary>
@@ -74,12 +75,20 @@ namespace VoiceActing
         {
             if (character.Inputs.InputB.Registered)
             {
-                character.CharacterAction.CancelSleight();
+                character.Inputs.InputB.ResetBuffer();
+                if (!character.CharacterAction.CancelSleight())
+                {
+                    // Si on a rien à cancel, on peut rapid break
+                    character.CharacterAction.RapidBreak();
+                }
             }
             return false;
         }
         private bool InputDpad(CharacterBase character)
         {
+            if (character.MotionSpeed == 0)
+                return false;
+
             CardEquipment card = null;
 
             if (character.Inputs.InputPadDown.Registered)

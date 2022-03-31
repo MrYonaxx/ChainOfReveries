@@ -17,6 +17,8 @@ namespace VoiceActing
         CardEquipmentDatabase equipmentDatabase = null;
         [SerializeField]
         MenuRoulette menuRoulette = null;
+        [SerializeField]
+        Menu.MenuWeaponSelection menuWeaponSelection = null;
 
         [Title("UI")]
         [SerializeField]
@@ -44,7 +46,7 @@ namespace VoiceActing
             menuRoulette.CreateRoulette(cardsGacha);
             menuRoulette.OnCardSelected += GetEquipmentCard;
             previousControllable = character.Inputs.Controllable;
-            character.Inputs.SetControllable(menuRoulette);
+            character.Inputs.SetControllable(menuRoulette, true);
             isOpen = true;
             chestAnimator.SetTrigger("Feedback");
             // Flemme detecte
@@ -66,15 +68,28 @@ namespace VoiceActing
 
             CardEquipment reward = (CardEquipment)cardsGacha[index];
             // On ajoute la carte équipement au deck du joueur
-            gameRunData.AddEquipmentCard(reward);
+            if(!gameRunData.AddEquipmentCard(reward))
+            {
+                // Inventaire plein
+                menuWeaponSelection.SetCard(characterToInteract, reward);
+                menuWeaponSelection.InitializeMenu();
+                menuWeaponSelection.OnEnd += BackToPlayer;
+                characterToInteract.Inputs.SetControllable(menuWeaponSelection, true);
+                return;
+            }
             // On applique les effets de la carte équipement au joueur
             characterToInteract.CharacterEquipment.EquipCard(reward.CardEquipmentData, 1);
             // (Note : ça se fait en 2 appel de fonction le fait de gagner une carte équipement c'est un peu spaghetti)
             // (Une alternative serait que GameRunData ait une référence du player de la scène)
-            // (Mais à chaque changement de scène il faudra re assginer la ref du player à Game Run Data)
-
+            // (Mais à chaque changement de scène (s'il y'en a) il faudra re assginer la ref du player à Game Run Data)
             characterToInteract.Inputs.SetControllable(previousControllable);
+        }
 
+
+        private void BackToPlayer()
+        {
+            menuWeaponSelection.OnEnd -= BackToPlayer;
+            characterToInteract.Inputs.SetControllable(previousControllable);
         }
     }
 }

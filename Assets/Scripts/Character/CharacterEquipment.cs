@@ -89,7 +89,6 @@ namespace VoiceActing
                 {
                     cardsEquipmentWeapon[index] = deckEquipment[i];
                     index++;
-                    Debug.Log("Ouais?");
                 }
             }
             OnEquipWeapon?.Invoke(cardsEquipmentWeapon);
@@ -155,6 +154,7 @@ namespace VoiceActing
             }
         }
 
+        // Ajoute les effets passives de l'équipement au character
         public void EquipCard(CardEquipmentData cardData, int level = 0)
         {
             for (int i = 0; i < cardData.StatsModifier.Count; i++)

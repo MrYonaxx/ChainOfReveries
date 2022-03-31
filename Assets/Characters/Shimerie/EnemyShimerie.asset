@@ -21,8 +21,8 @@ MonoBehaviour:
   characterStat:
     hp: 8999
     HPMax:
-      baseValue: 8999
-      finalValue: 8999
+      baseValue: 1
+      finalValue: 1
     Attack:
       baseValue: 1
       finalValue: 1
@@ -36,8 +36,11 @@ MonoBehaviour:
       baseValue: 1
       finalValue: 1
     RevengeValue:
-      baseValue: 14
-      finalValue: 14
+      baseValue: 25
+      finalValue: 25
+    RevengeValueRate:
+      baseValue: 0
+      finalValue: 0
     KnockbackTime:
       baseValue: 1
       finalValue: 1
@@ -47,12 +50,9 @@ MonoBehaviour:
     CardBreakTime:
       baseValue: 0.8
       finalValue: 0.8
-    CardBreakKnockback:
+    Speed:
       baseValue: 1
       finalValue: 1
-    Speed:
-      baseValue: 3.1
-      finalValue: 3.1
     Gravity:
       baseValue: 25
       finalValue: 25
@@ -69,45 +69,30 @@ MonoBehaviour:
     StatusResistances: []
   salut: 
   initialDeck:
-  - cardData: {fileID: 11400000, guid: 8d54e6378770372479e25a94c3c6e458, type: 2}
-    baseCardValue: 5
-  - cardData: {fileID: 11400000, guid: b920cadb90aa92f428c5c33ac54f6dfc, type: 2}
-    baseCardValue: 7
-  - cardData: {fileID: 11400000, guid: 8d54e6378770372479e25a94c3c6e458, type: 2}
-    baseCardValue: 3
-  - cardData: {fileID: 11400000, guid: 8d54e6378770372479e25a94c3c6e458, type: 2}
-    baseCardValue: 8
-  - cardData: {fileID: 11400000, guid: b920cadb90aa92f428c5c33ac54f6dfc, type: 2}
-    baseCardValue: 6
-  - cardData: {fileID: 11400000, guid: 8d54e6378770372479e25a94c3c6e458, type: 2}
-    baseCardValue: 0
-  - cardData: {fileID: 11400000, guid: b920cadb90aa92f428c5c33ac54f6dfc, type: 2}
-    baseCardValue: 7
-  - cardData: {fileID: 11400000, guid: b920cadb90aa92f428c5c33ac54f6dfc, type: 2}
-    baseCardValue: 4
-  - cardData: {fileID: 11400000, guid: 8d54e6378770372479e25a94c3c6e458, type: 2}
-    baseCardValue: 2
-  - cardData: {fileID: 11400000, guid: b920cadb90aa92f428c5c33ac54f6dfc, type: 2}
+  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
     baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: b920cadb90aa92f428c5c33ac54f6dfc, type: 2}
-    baseCardValue: 5
-  - cardData: {fileID: 11400000, guid: 8d54e6378770372479e25a94c3c6e458, type: 2}
-    baseCardValue: 8
-  - cardData: {fileID: 11400000, guid: b920cadb90aa92f428c5c33ac54f6dfc, type: 2}
+  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: f1e02254eb2210f47a8ce113ebc1dfc5, type: 2}
     baseCardValue: 0
-  - cardData: {fileID: 11400000, guid: 8d54e6378770372479e25a94c3c6e458, type: 2}
-    baseCardValue: 6
-  - cardData: {fileID: 11400000, guid: 8d54e6378770372479e25a94c3c6e458, type: 2}
-    baseCardValue: 1
-  - cardData: {fileID: 11400000, guid: 8d54e6378770372479e25a94c3c6e458, type: 2}
+  - cardData: {fileID: 11400000, guid: eee648fa28340954d8acea01d30e26bd, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: 26a51e7aebc9b1746a9b2c5075535079, type: 2}
     baseCardValue: 5
-  sleightDatabase:
-  - {fileID: 11400000, guid: b04bbe3cb64303941bc124703e8909c2, type: 2}
-  - {fileID: 11400000, guid: 30812baefcbba9c4483834241eec23cd, type: 2}
-  - {fileID: 11400000, guid: 30812baefcbba9c4483834241eec23cd, type: 2}
-  initialEquipment:
-  - cardEquipment: {fileID: 11400000, guid: d27fa7c0e89503a479797fe01e9cf892, type: 2}
-    probability: 100
+  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
+    baseCardValue: 6
+  sleightDatabase: []
+  initialEquipment: []
   loreDescription: "Champion of Oneiros, and an artificial Chim\xE8re, he is the
-    final marker of the Chain of Reveries. Destroying him will restore the Reverie
-    to its original state, but is it for the better ?"
+    final marker of the Chain of Reveries. Destroying him will destroy the false
+    Reverie of Oneiros."

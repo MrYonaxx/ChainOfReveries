@@ -28,7 +28,7 @@ MonoBehaviour:
       Entry: 6
       Data: 
   cardSprite: {fileID: 0}
-  cardName: 
+  cardName: After Image
   cardType: 0
   cardDescription: 
   attackManager: {fileID: 818057835518184039, guid: e3e529e8fea76a44e870ed5e2a63dc34,

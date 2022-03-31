@@ -112,6 +112,8 @@ MonoBehaviour:
   frameData:
   - Frame: 0
     AnimationEvent: {fileID: 714956832288177373}
+  - Frame: 1
+    AnimationEvent: {fileID: 358562089477105312}
   - Frame: 5
     AnimationEvent: {fileID: 4461643240352555985}
   - Frame: 30
@@ -340,6 +342,7 @@ MonoBehaviour:
   linkToCharacter: 1
   fixToGround: 0
   subActionCardBreakable: 0
+  canPlayerCorrectDirection: 1
   atkControllers:
   - {fileID: 4733904636063077261}
 --- !u!1 &6110435575002120153
@@ -463,6 +466,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6170470185010184287}
   - component: {fileID: 714956832288177373}
+  - component: {fileID: 358562089477105312}
   m_Layer: 0
   m_Name: Movement
   m_TagString: Untagged
@@ -501,6 +505,22 @@ MonoBehaviour:
   moveForward: 1
   speed: {x: 0, y: 0}
   jumpImpulsion: 0
+--- !u!114 &358562089477105312
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7197704365641121891}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ca1047c5907ce4c851d7349dcd44a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 1
+  frameEnd: 0
+  direction: 0
+  turnToTarget: 1
 --- !u!1 &7345693785975693917
 GameObject:
   m_ObjectHideFlags: 0

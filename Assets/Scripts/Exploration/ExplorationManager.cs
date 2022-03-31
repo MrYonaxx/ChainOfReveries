@@ -55,6 +55,8 @@ namespace VoiceActing
         int nbCardSupport = 2;
         [SerializeField]
         List<CardExplorationData> poolCardSupport = null;
+        [SerializeField]
+        CardExplorationData lastResortCard = null;
 
         [Title("Level Introduction")]
         [SerializeField]
@@ -72,6 +74,13 @@ namespace VoiceActing
         [Title("Menu Status")]
         [SerializeField]
         MenuStatus menuStatus = null;
+
+
+        [Title("Ending")]
+        [SerializeField]
+        Animator animatorEnding = null;
+        [SerializeField]
+        MenuGameOver gameOver = null;
 
         [Title("Canvas")]
         [SerializeField]
@@ -92,7 +101,8 @@ namespace VoiceActing
         Animator animatorGround = null;
         [SerializeField]
         List<Animator> animatorGetNewCard = null;
-
+        [SerializeField]
+        GameObject buttonHud = null;
 
 
 
@@ -152,7 +162,7 @@ namespace VoiceActing
 
             // Set player in state exploration
             player.SetState(stateExploration);
-            inputController.SetControllable(this);
+            inputController.SetControllable(this, true);
 
             // On change d'étage
             if (runData.Room >= runData.LevelLayout.Count)
@@ -160,6 +170,12 @@ namespace VoiceActing
                 // End Level
                 floorID = 0;
                 runData.NextZone();
+                if(runData.Floor >= 4 && runData.ReverieLevel == 0)
+                {
+                    // Fin normal du jeu
+                    EndGame();
+                    return;
+                }
                 AddCardLayout();
                 AutoCreateRoom(runData.FloorLayout.FirstRoom);
                 cardController.gameObject.SetActive(false);
@@ -179,6 +195,12 @@ namespace VoiceActing
                     deckExplorationLayout.CreateDeckExploration(runData.LevelLayout);
                 }
                 return;
+            }
+
+            if(runData.PlayerExplorationDeck.Count == 0)
+            {
+                // Le deck est vide c'est pas bon faut empêcher le soft lock
+                runData.AddExplorationCard(lastResortCard);
             }
 
             // Affiche le menu
@@ -217,7 +239,7 @@ namespace VoiceActing
         public void DrawCardDescription()
         {
             CardExplorationData cardExplorationData = runData.PlayerExplorationDeck[deckExplorationDrawer.GetCurrentIndex()];
-            textDescriptionExplorationCard.text = cardExplorationData.CardName + " : " + cardExplorationData.CardDescription;
+            textDescriptionExplorationCard.text = cardExplorationData.CardDescription;//cardExplorationData.CardName + " : " + cardExplorationData.CardDescription;
         }
 
 
@@ -323,6 +345,16 @@ namespace VoiceActing
 
             runData.AddRoomToLayout(cardExplorationData);
             StartCoroutine(RoomCreatorCoroutine(cardExplorationData));
+
+            // buttonHud
+            buttonHud.gameObject.SetActive(false);
+        }
+
+        public void HideExplorationMenu()
+        {
+            animatorDeckExploration.SetBool("Appear", false);
+            textFeedback.SetBool("Appear", false);
+            animatorDeckProgress.SetBool("Appear", false);
         }
 
         private IEnumerator RoomCreatorCoroutine(CardExplorationData cardExplorationData, float roomOffset = 0.5f)
@@ -425,15 +457,40 @@ namespace VoiceActing
 
         public void GoToMenuStatus()
         {
-            inputController.SetControllable(menuStatus);
+            inputController.SetControllable(menuStatus, true);
             menuStatus.InitializeMenu();
         }
 
         public void QuitMenuStatus()
         {
-            inputController.SetControllable(this);
+            inputController.SetControllable(this, true);
         }
 
+
+
+        private void EndGame()
+        {
+            StartCoroutine(NormalEndingCoroutine());
+        }
+
+        private IEnumerator NormalEndingCoroutine()
+        {
+            inputController.SetControllable(null, true);
+            animatorEnding.transform.position = player.transform.position;
+            BattleFeedbackManager.Instance.CameraController.AddTarget(animatorEnding.transform, 999);
+            animatorEnding.gameObject.SetActive(true); 
+            yield return new WaitForSeconds(5f);
+            float t = 0f;
+            Vector3 traveling = new Vector3(0, 0.5f, 0);
+            while (t < 10f) 
+            {
+                animatorEnding.transform.position += traveling * Time.deltaTime;
+                t += Time.deltaTime;
+                yield return null;
+            }
+            yield return new WaitForSeconds(21f);
+            gameOver.InitializeMenu();
+        }
 
         #endregion
 

@@ -40,6 +40,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 14
       finalValue: 14
+    RevengeValueRate:
+      baseValue: 0
+      finalValue: 0
     KnockbackTime:
       baseValue: 1
       finalValue: 1
@@ -49,9 +52,6 @@ MonoBehaviour:
     CardBreakTime:
       baseValue: 0.8
       finalValue: 0.8
-    CardBreakKnockback:
-      baseValue: 0
-      finalValue: 0
     Speed:
       baseValue: 2.7
       finalValue: 2.7
@@ -113,7 +113,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 1a033ff9ea7bb6a4a972e9b5923a2fdb, type: 2}
   - {fileID: 11400000, guid: 7c5f1c9dd1ec7cb4f811a32a65ec7154, type: 2}
   - {fileID: 11400000, guid: 886e9d36498fafd418517becadf51d7a, type: 2}
-  initialEquipment: []
+  initialEquipment:
+  - cardEquipment: {fileID: 11400000, guid: f65d285594aa6ee4e85af4e90f60afa1, type: 2}
+    probability: 100
   loreDescription: "Chancelor of Altya, Valenn, manipulated by Oneiros, tried to
     shatter the Reverie. To prevent that, the Reverie's Chim\xE8re used Yonax and
     his group to stop the machination of Valenn.\n\nBeing deceased, he now only exist

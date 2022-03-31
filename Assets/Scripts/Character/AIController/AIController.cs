@@ -50,9 +50,16 @@ namespace VoiceActing
 
         public void StartBehavior()
         {
+            if(behaviorTree == null)
+                behaviorTree = GetComponent<BehaviorTree>();
             behaviorTree.enabled = true;
         }
 
+        public void StopBehavior()
+        {
+            behaviorTree.enabled = false;
+            behaviorTree.DisableBehavior();
+        }
 
         protected override void Update()
         {
@@ -61,7 +68,13 @@ namespace VoiceActing
                 controllable.UpdateControl(this);
         }
 
+        public void SetNewBehavior(ExternalBehavior newBehavior)
+        {
+            behaviorTree.ExternalBehavior = newBehavior;
+            behaviorTree.SetVariableValue("AI", this);
 
+            behaviorTree.DisableBehavior();
+        }
 
     }
 }

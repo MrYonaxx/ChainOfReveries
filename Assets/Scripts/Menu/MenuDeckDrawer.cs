@@ -32,6 +32,8 @@ namespace Menu
 		public MenuCursor menuCursor = null;
 
 		int cardsListSize = 0;
+		bool moveCursorAtStart = false;
+		bool firstTime = false;
 		List<CardController> cardsList = new List<CardController>();
 
 
@@ -82,18 +84,35 @@ namespace Menu
 			{
 				cardsList[i].gameObject.SetActive(false);
 			}
+
+			menuCursor.transform.SetSiblingIndex(9999);
+			if(!firstTime)
+			{
+				firstTime = false;
+				moveCursorAtStart = true;
+				if (isActiveAndEnabled)
+					StartCoroutine(OneFrameStart());
+            }
 		}
 
-
-
-		/*public override void InitializeMenu()
+		void Start()
         {
-            base.InitializeMenu();
-		}*/
+			if (moveCursorAtStart)
+			{
+				StartCoroutine(OneFrameStart());
+			}
+		}
+
+		// On attend que le layout group s'actualise pour ensuite bouger le curseur
+		private IEnumerator OneFrameStart()
+        {
+			yield return null; yield return null;
+			menuCursor.MoveCursor(new Vector2(cardsList[0].GetRectTransform().anchoredPosition.x, cardsList[0].GetRectTransform().anchoredPosition.y));
+
+		}
 
 		public override void UpdateControl(InputController input)
 		{
-
 			if (listEntry.InputListVertical(input.InputLeftStickY.InputValue)) // On s'est déplacé dans la liste
 			{
 				SelectEntry(listEntry.IndexSelection * columnMax + listEntryHorizontal.IndexSelection);
@@ -121,7 +140,9 @@ namespace Menu
 				SelectEntry(id - 1);
 				return;
 			}
-            base.SelectEntry(id);
+			listEntry.SelectIndex(id / columnMax);
+			listEntryHorizontal.SelectIndex(id % columnMax);
+			base.SelectEntry(id);
 			menuCursor.MoveCursor(new Vector2(cardsList[id].GetRectTransform().anchoredPosition.x, cardsList[id].GetRectTransform().anchoredPosition.y));
 
 		}
