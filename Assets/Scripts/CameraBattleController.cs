@@ -26,7 +26,10 @@ public class CameraBattleController : MonoBehaviour
     [Title("Object Reference")]
     [SerializeField]
     BoxCollider focusLevel;
-
+    public BoxCollider FocusLevel
+    {
+        get { return focusLevel; }
+    }
 
     [Title("Parameter")]
     [SerializeField]

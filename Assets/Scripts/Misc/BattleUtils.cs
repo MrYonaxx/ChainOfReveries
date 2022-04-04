@@ -27,6 +27,19 @@ public class BattleUtils : MonoBehaviour
         get { return borderSprites; }
     }
 
+    [SerializeField]
+    private ParticleSystem explorationParticle;
+    public ParticleSystem ExplorationParticle
+    {
+        get { return explorationParticle; }
+    }
+    [SerializeField]
+    private ParticleSystem battleParticle;
+    public ParticleSystem BattleParticle
+    {
+        get { return battleParticle; }
+    }
+
     public void Awake()
     {
         if (instance == null)

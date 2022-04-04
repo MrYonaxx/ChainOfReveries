@@ -164,19 +164,26 @@ namespace VoiceActing
 
         private IEnumerator TransitionP2Coroutine()
         {
+            explorationManager.Player.CanPlay(false);
             yield return new WaitForSeconds(2f);
             fakeoutTransition.gameObject.SetActive(true);
-            yield return new WaitForSeconds(6f);
-
-            BattleFeedbackManager.Instance.Speedlines(1f, Color.white, characterTransition.ParticlePoint.position);
-            BattleFeedbackManager.Instance.RippleScreen(characterTransition.ParticlePoint.position.x, characterTransition.ParticlePoint.position.y);
+            yield return new WaitForSeconds(6f); 
+            
+            characterTransition.transform.parent.gameObject.SetActive(true); // L'input controller
             characterTransition.gameObject.SetActive(true);
             characterTransition.SetCharacter();
             characterTransition.LockController.TargetLocked = explorationManager.Player;
+
+            yield return null; yield return null;
+
+            BattleFeedbackManager.Instance.Speedlines(1f, Color.white, characterTransition.ParticlePoint.position);
+            BattleFeedbackManager.Instance.RippleScreen(characterTransition.ParticlePoint.position.x, characterTransition.ParticlePoint.position.y);
+
             characterTransition.CharacterAction.Action(cardTransition);
             explorationManager.Player.CanPlay(true);
             battleManager.ShowBattleHud();
 
+            explorationManager.Player.CharacterAction.CancelSleight();
 
             AudioManager.Instance.PlaySound(transitionTheme, 1);
             BattleUtils.Instance.BorderSprites.gameObject.SetActive(false);

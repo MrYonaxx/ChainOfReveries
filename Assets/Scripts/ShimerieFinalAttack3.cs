@@ -35,8 +35,14 @@ namespace VoiceActing
         [SerializeField]
         ParticleSystem particleSystemParry2;
 
+        [SerializeField]
+        ParticleSystem particleSystemParry3;
+        [SerializeField]
+        ParticleSystem particleSystemParry4;
+
         List<Card> card;
         bool cardBreak = false;
+        bool moreFeedback = false;
         public override void StartComponent(CharacterBase character, AttackController attack)
         {
             base.StartComponent(character, attack);
@@ -52,12 +58,15 @@ namespace VoiceActing
             characterToBreak.CharacterKnockback.InitializeComponent(characterToBreak);
             charactersSequence[runData.CharacterID].gameObject.SetActive(true);
 
+            BattleFeedbackManager.Instance.CameraController.FocusLevel.transform.localScale = new Vector3(1, 1, 1);
+
             cardBreakController.OnCardBreak += CardBreak;
             StartCoroutine(FinalAttackCoroutine());
         }
 
         private IEnumerator FinalAttackCoroutine()
         {
+            BattleUtils.Instance.BattleParticle.Play();
             yield return new WaitForSeconds(3f);
             player.CanPlay(true);
             player.SetCharacterMotionSpeed(1);
@@ -67,13 +76,19 @@ namespace VoiceActing
 
             float timeInBetween = 1;
             ParticleSystem.EmissionModule particleDome = particleSystemDome.emission;
-            for (int i = 0; i < 130; i++)
+            for (int i = 0; i < 149; i++)
             {
                 cardBreak = false;
                 cardBreakController.PlayCard(characterToBreak, card);
-                if(i >= 5)
-                    particleDome.rateOverTime = (i-5)*1.5f;
-                 
+                if (i >= 5)
+                {
+                    particleDome.rateOverTime = (i - 4) * 2;
+                }
+                if(i >= 18)
+                {
+                    moreFeedback = true;
+                }
+
                 if (i == 0)
                     timeInBetween = 1.5f;
                 else
@@ -100,6 +115,12 @@ namespace VoiceActing
                 charactersSequence[runData.CharacterID].SetTrigger("Break");
                 particleSystemParry1.Play();
                 particleSystemParry2.Play();
+
+                if (moreFeedback)
+                {
+                    particleSystemParry3.Play();
+                    particleSystemParry4.Play();
+                }
             }
         }
  

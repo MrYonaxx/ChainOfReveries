@@ -5220,7 +5220,6 @@ GameObject:
   - component: {fileID: 248121844606041498}
   - component: {fileID: 2260525837532545912}
   - component: {fileID: 4670453683040411876}
-  - component: {fileID: 812316641364959760}
   - component: {fileID: 3265159803105804545}
   - component: {fileID: 9075991325977470916}
   - component: {fileID: 5119861149005123232}
@@ -5278,8 +5277,6 @@ MonoBehaviour:
   AnimationClipDebug: {fileID: 7400000, guid: 22212631836746240a4090c63b23cbf8, type: 2}
   frameData:
   - Frame: 0
-    AnimationEvent: {fileID: 812316641364959760}
-  - Frame: 0
     AnimationEvent: {fileID: 3265159803105804545}
   - Frame: 0
     AnimationEvent: {fileID: 9075991325977470916}
@@ -5289,23 +5286,6 @@ MonoBehaviour:
     AnimationEvent: {fileID: 1295362733159471713}
   - Frame: 600
     AnimationEvent: {fileID: 8082661333377722507}
---- !u!114 &812316641364959760
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3720685875369100543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4533fb92284c33345860cfb32ca78147, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  frame: 0
-  frameEnd: 0
-  point: {x: 0, y: 0, z: 0}
-  pointMax: {x: 0, y: 0}
-  randomPoint: 0
 --- !u!114 &3265159803105804545
 MonoBehaviour:
   m_ObjectHideFlags: 0

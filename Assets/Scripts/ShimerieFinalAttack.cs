@@ -15,6 +15,8 @@ namespace VoiceActing
         ParticleSystem particleBladeBeam;
         [SerializeField]
         ParticleSystem particleBladeCircle;
+        [SerializeField]
+        Feedbacks.AuraSpriteEffect aura;
 
         [Title("Blade Attack")]
         [SerializeField]
@@ -40,6 +42,7 @@ namespace VoiceActing
             player.CharacterStatusController.RemoveAllStatus();
             player.CharacterEquipment.UnequipAll();
 
+            shimerie.CanPlay(false);
             shimerie.CharacterAction.CancelSleight();
             shimerie.DeckController.SetIndex(0);
             player.DeckController.SetIndex(1);
@@ -50,12 +53,15 @@ namespace VoiceActing
 
         private IEnumerator FinalAttackCoroutine()
         {
+            yield return null;
+
             yield return new WaitForSeconds(7f);
 
             particleBladeBeam.transform.SetParent(player.ParticlePoint);
 
 
             AudioManager.Instance.StopMusic(15f);
+            BattleUtils.Instance.BattleParticle.Stop();
             float timeInBetween = 1;
             for (int i = 0; i < 99; i++)
             {
@@ -63,6 +69,9 @@ namespace VoiceActing
                 yield return new WaitForSeconds(0.05f);
                 player.CharacterKnockback.Hit(attackController);
 
+                // Augmente le reload à chaque hit
+                player.DeckController.SetReloadMax((i+4)/2);
+                player.DeckController.AddReload(0);
 
                 if (i == 0)
                     timeInBetween = 1;
@@ -75,6 +84,9 @@ namespace VoiceActing
             particleBladeCircle.Stop();
             player.CharacterKnockback.Hit(attackBladeKnockdown);
             player.OnStateChanged += HardKnockdown;
+
+            yield return new WaitForSeconds(7f);
+            aura.AuraFeedback(12, 1.2f, Color.white, true);
         }
 
         private void HardKnockdown(CharacterState oldState, CharacterState newState)

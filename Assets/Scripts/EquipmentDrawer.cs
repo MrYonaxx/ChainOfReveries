@@ -93,6 +93,14 @@ namespace VoiceActing
 
         }
 
+        public void Hide()
+        {
+            for (int i = 0; i < cardControllers.Length; i++)
+            {
+                cardControllers[i].gameObject.SetActive(false);
+            }
+        }
+
 
 
 

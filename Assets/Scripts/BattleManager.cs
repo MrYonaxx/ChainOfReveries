@@ -320,6 +320,7 @@ namespace VoiceActing
         {
             canvasBattle.SetActive(true);
             GetComponentInChildren<CardBreakDrawer>().DisableCards(); // aïe j'ai si mal, je souffre
+            enemyEquipmentDrawer.Hide();
         }
 
         private void SetReverieStatus(CharacterBase enemy)

@@ -36,6 +36,7 @@ public class EasterEggMeneras : MonoBehaviour
         if(target.CharacterData == nelys)
         {
             target.CharacterAction.Action(introNelys);
+            target.LockController.TargetLocked = character;
             target.LockController.OnTargetLock -= CheckNelys;
             intro = true;
             character.SetCharacterMotionSpeed(0, 3f);

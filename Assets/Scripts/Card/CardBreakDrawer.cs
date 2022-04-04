@@ -120,6 +120,7 @@ namespace VoiceActing
                 c.gameObject.SetActive(false);
                 cardControllers.Enqueue(c);
             }
+            HideSleight();
         }
 
 
