@@ -38,7 +38,7 @@ MonoBehaviour:
   cardType: 0
   cardDescription: '[Unbreakable] A dash followed by a powerfull slash. The Unbreakable
     effect disappear after the dash. '
-  attackManager: {fileID: 818057835518184039, guid: 24b39d9017e27fe49a3d25dd08565607,
+  attackManager: {fileID: 818057835518184039, guid: 658d27d6d72ea794095ab70d01e9b967,
     type: 3}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

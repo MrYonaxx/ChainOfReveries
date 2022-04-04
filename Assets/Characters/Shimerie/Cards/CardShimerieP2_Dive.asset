@@ -25,14 +25,18 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: cardBreakComponent
-      Entry: 6
+      Entry: 7
+      Data: 0|VoiceActing.CardBreakBestValue, Assembly-CSharp
+    - Name: 
+      Entry: 8
       Data: 
-  cardSprite: {fileID: 0}
-  cardName: 
+  cardSprite: {fileID: 21300000, guid: 75634b92b48e9e045a2542f3faf9c8e7, type: 3}
+  cardName: Dive into dreams
   cardType: 0
   cardDescription: '[Phantom] Dive attack at the position of the player unleashing
     4 blade diaognally or horizontally.'
-  attackManager: {fileID: 0}
+  attackManager: {fileID: 818057835518184039, guid: a84b6e98101a3934fb078ff435d8f5c5,
+    type: 3}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   maxProbability: 0

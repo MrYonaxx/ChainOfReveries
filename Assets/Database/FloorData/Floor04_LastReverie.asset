@@ -13,12 +13,10 @@ MonoBehaviour:
   m_Name: Floor04_LastReverie
   m_EditorClassIdentifier: 
   floorName: Last Reverie
-  floorLevel: 0
-  firstRoom: {fileID: 0}
+  floorLevel: 5
+  firstRoom: {fileID: 11400000, guid: 79edeb956aaade04cb4e43f09113c6a8, type: 2}
   floorLayout:
-  - {fileID: 11400000, guid: 5c1353acfbfea4f428db18f8cf4116ea, type: 2}
-  - {fileID: 11400000, guid: 5c1353acfbfea4f428db18f8cf4116ea, type: 2}
-  - {fileID: 11400000, guid: 1ef3bdcc98e7a5048aff360ba23e935b, type: 2}
+  - {fileID: 11400000, guid: c701f688fc82e22438d1f67ca6cd552c, type: 2}
   nextLevel: {fileID: 0}
   cardBanlist: []
   cardExplorationBanlist: []

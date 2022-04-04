@@ -410,6 +410,7 @@ MonoBehaviour:
   linkToCharacter: 1
   fixToGround: 0
   subActionCardBreakable: 0
+  canPlayerCorrectDirection: 0
   atkControllers:
   - {fileID: 8440826200284809737}
 --- !u!1 &7197704365641121891

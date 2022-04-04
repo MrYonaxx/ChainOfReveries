@@ -240,6 +240,33 @@ namespace VoiceActing
             }      
         }
 
+        public void ResetAllValue(bool joystickOff = false)
+        {
+            inputA.ResetValue();
+            inputB.ResetValue();
+            inputX.ResetValue();
+            inputY.ResetValue();
+
+            inputRB.ResetValue();
+            inputLB.ResetValue();
+
+            inputRT.ResetValue();
+            inputLT.ResetValue();
+
+            inputPadDown.ResetValue();
+            inputPadUp.ResetValue();
+            inputPadLeft.ResetValue();
+            inputPadRight.ResetValue();
+
+            inputStart.ResetValue();
+
+            if (joystickOff)
+            {
+                inputLeftStickX.InputValue = 0;
+                inputLeftStickY.InputValue = 0;
+            }
+        }
+
         public void PressButton(InputBuffer input)
         {
             input.BufferDownInput(bufferTime);

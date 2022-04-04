@@ -288,7 +288,9 @@ namespace VoiceActing
 
             if (cardCountScale)
             {
-                cardCountScale.localScale = new Vector3(deck.Count / (float)maxCard, deck.Count / (float)maxCard, 1);
+                float size = deck.Count / (float)maxCard;
+                size = Mathf.Min(size, 1);
+                cardCountScale.localScale = new Vector3(size, size, 1);
                 textCardNumber.text = deck.Count.ToString();
             }
         }

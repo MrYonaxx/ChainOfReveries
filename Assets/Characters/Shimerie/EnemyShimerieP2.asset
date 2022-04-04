@@ -19,10 +19,10 @@ MonoBehaviour:
     still be Card breaked. Use everything you've learn and observe his attack to
     find how to Card break him. \n\nIt's the final battle, shatter the last Reverie."
   characterStat:
-    hp: 10499
+    hp: 13499
     HPMax:
-      baseValue: 10499
-      finalValue: 10499
+      baseValue: 12000
+      finalValue: 12000
     Attack:
       baseValue: 1
       finalValue: 1
@@ -36,11 +36,11 @@ MonoBehaviour:
       baseValue: 1
       finalValue: 1
     RevengeValue:
-      baseValue: 25
-      finalValue: 25
+      baseValue: 18
+      finalValue: 18
     RevengeValueRate:
-      baseValue: 0
-      finalValue: 0
+      baseValue: 1
+      finalValue: 1
     KnockbackTime:
       baseValue: 1
       finalValue: 1
@@ -51,8 +51,8 @@ MonoBehaviour:
       baseValue: 0.8
       finalValue: 0.8
     Speed:
-      baseValue: 1
-      finalValue: 1
+      baseValue: 2
+      finalValue: 2
     Gravity:
       baseValue: 25
       finalValue: 25
@@ -69,30 +69,98 @@ MonoBehaviour:
     StatusResistances: []
   salut: 
   initialDeck:
-  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
+  - cardData: {fileID: 11400000, guid: 4679407b8475b014a91d73524e8b30d6, type: 2}
     baseCardValue: 9
   - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
     baseCardValue: 9
   - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
-    baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
-    baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
-    baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
-    baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: f1e02254eb2210f47a8ce113ebc1dfc5, type: 2}
-    baseCardValue: 0
-  - cardData: {fileID: 11400000, guid: eee648fa28340954d8acea01d30e26bd, type: 2}
-    baseCardValue: 7
-  - cardData: {fileID: 11400000, guid: 26a51e7aebc9b1746a9b2c5075535079, type: 2}
-    baseCardValue: 5
+    baseCardValue: 8
   - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
     baseCardValue: 7
   - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
     baseCardValue: 6
-  sleightDatabase: []
-  initialEquipment: []
+  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: 4679407b8475b014a91d73524e8b30d6, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 4679407b8475b014a91d73524e8b30d6, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 1c59b2c39b5f96443937e6c0b590ad5f, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: 10827aee6ee1ffb419d65dedb82fb749, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 75d088314a7a46644b62bb19ae403f0d, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 10827aee6ee1ffb419d65dedb82fb749, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
+    baseCardValue: 6
+  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
+    baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: 1c59b2c39b5f96443937e6c0b590ad5f, type: 2}
+    baseCardValue: 6
+  - cardData: {fileID: 11400000, guid: 1c59b2c39b5f96443937e6c0b590ad5f, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 75d088314a7a46644b62bb19ae403f0d, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
+    baseCardValue: 6
+  - cardData: {fileID: 11400000, guid: 4679407b8475b014a91d73524e8b30d6, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 10827aee6ee1ffb419d65dedb82fb749, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: 4679407b8475b014a91d73524e8b30d6, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
+    baseCardValue: 6
+  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: 1c59b2c39b5f96443937e6c0b590ad5f, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: 10827aee6ee1ffb419d65dedb82fb749, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 75d088314a7a46644b62bb19ae403f0d, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 4679407b8475b014a91d73524e8b30d6, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 75d088314a7a46644b62bb19ae403f0d, type: 2}
+    baseCardValue: 0
+  sleightDatabase:
+  - {fileID: 11400000, guid: 735d31e25655e2144a3814df649511be, type: 2}
+  - {fileID: 11400000, guid: c0c8f39270aa795428e404a73f18453e, type: 2}
+  - {fileID: 11400000, guid: 5a1f81958a9b02a4ba4dd1b2fab6d22b, type: 2}
+  - {fileID: 11400000, guid: bd7fe57425d06eb4e9b9f2f94aae40b3, type: 2}
+  initialEquipment:
+  - cardEquipment: {fileID: 11400000, guid: 13e4e02aebdbd374aaacc70a160947a1, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 1b03fd04e185d14499a7b84ed08d0aa9, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 654cb63eab4fb2f479ee741c099ebe4c, type: 2}
+    probability: 100
   loreDescription: "Champion of Oneiros, and an artificial Chim\xE8re, he is the
     final marker of the Chain of Reveries. Destroying him will destroy the false
     Reverie of Oneiros."

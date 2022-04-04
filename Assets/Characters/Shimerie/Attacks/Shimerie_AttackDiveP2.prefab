@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 2520948011644738657}
   - component: {fileID: 3040624544842275496}
   - component: {fileID: 6085763767083533517}
-  - component: {fileID: 3524891248770400664}
   m_Layer: 9
   m_Name: AttackMainComponents
   m_TagString: Untagged
@@ -58,20 +57,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d857a73791bd677459a2f0ff570cde4a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &3524891248770400664
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2469241746260582066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e9f5bb6b602f0e4e84ed7b7edc5d0af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  focusTarget: {fileID: 2520948011644738657}
-  priority: 1
 --- !u!1 &3720685875369100543
 GameObject:
   m_ObjectHideFlags: 0
@@ -143,14 +128,16 @@ MonoBehaviour:
     AnimationEvent: {fileID: 1207110519311360454}
   - Frame: 0
     AnimationEvent: {fileID: 3467270024188063017}
-  - Frame: 30
+  - Frame: 40
     AnimationEvent: {fileID: 5372169655405766964}
   - Frame: 40
     AnimationEvent: {fileID: 789164099390318850}
   - Frame: 100
     AnimationEvent: {fileID: 4399833597863534583}
   - Frame: 160
-    AnimationEvent: {fileID: 3448007115868816117}
+    AnimationEvent: {fileID: 7901915431663335110}
+  - Frame: 210
+    AnimationEvent: {fileID: 1956998498540393367}
   - Frame: 300
     AnimationEvent: {fileID: 2524242894598313049}
 --- !u!114 &1207110519311360454
@@ -197,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4f6a358ed9a7e144a09bd7df2c0bb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 30
+  frame: 40
   frameEnd: 0
 --- !u!114 &2524242894598313049
 MonoBehaviour:
@@ -332,7 +319,7 @@ Transform:
   m_GameObject: {fileID: 4388082830208477171}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 2.25, y: 1.5, z: 2}
+  m_LocalScale: {x: 0, y: 4, z: 2}
   m_Children: []
   m_Father: {fileID: 6202298799396831511}
   m_RootOrder: 0
@@ -376,9 +363,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2151096725133549178, guid: 14902f27c99767746bc32a7c80c2b1f0,
+  m_Sprite: {fileID: -7334304472027324090, guid: 85ce3d0ef4a8fec4ba6e1fd54b3ba4b7,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -399,7 +386,8 @@ GameObject:
   - component: {fileID: 769280749541201499}
   - component: {fileID: 789164099390318850}
   - component: {fileID: 4399833597863534583}
-  - component: {fileID: 3448007115868816117}
+  - component: {fileID: 7901915431663335110}
+  - component: {fileID: 1956998498540393367}
   m_Layer: 0
   m_Name: SubAction
   m_TagString: Untagged
@@ -435,7 +423,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame: 40
   frameEnd: 0
-  action: {fileID: 818057835518184039, guid: f40b3cfc739a14f46a576cb7bc9be487, type: 3}
+  action: {fileID: 8274958919831047329, guid: 5a97214ed497dd04486999470830afad, type: 3}
   setTransform: 0
   setRotation: 0
   spawnPoint: {fileID: 0}
@@ -454,12 +442,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame: 100
   frameEnd: 0
-  action: {fileID: 818057835518184039, guid: f40b3cfc739a14f46a576cb7bc9be487, type: 3}
+  action: {fileID: 8274958919831047329, guid: 5a97214ed497dd04486999470830afad, type: 3}
   setTransform: 0
   setRotation: 0
   spawnPoint: {fileID: 0}
   rotationZ: 0
---- !u!114 &3448007115868816117
+--- !u!114 &7901915431663335110
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -473,11 +461,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame: 160
   frameEnd: 0
-  action: {fileID: 818057835518184039, guid: f40b3cfc739a14f46a576cb7bc9be487, type: 3}
+  action: {fileID: 8274958919831047329, guid: 5a97214ed497dd04486999470830afad, type: 3}
   setTransform: 0
   setRotation: 0
   spawnPoint: {fileID: 0}
   rotationZ: 0
+--- !u!114 &1956998498540393367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4505465660794256491}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b23116954a1e2d45b5b1f5baf42a4c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 210
+  frameEnd: 0
+  action: {fileID: 818057835518184039, guid: def3a8fc8d0774846ac3854457520b0c, type: 3}
 --- !u!1 &5842096757366747167
 GameObject:
   m_ObjectHideFlags: 0
@@ -731,7 +734,6 @@ MonoBehaviour:
   attackComponents:
   - {fileID: 3040624544842275496}
   - {fileID: 6085763767083533517}
-  - {fileID: 3524891248770400664}
   - {fileID: 6024610480447657897}
   - {fileID: 5485531285977804821}
   - {fileID: 2312309614290861051}

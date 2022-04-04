@@ -25,14 +25,17 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: cardBreakComponent
-      Entry: 6
+      Entry: 7
+      Data: 0|VoiceActing.CardBreakBestValue, Assembly-CSharp
+    - Name: 
+      Entry: 8
       Data: 
   cardSprite: {fileID: 21300000, guid: 790a5caaa3e047745b4c43ee271da194, type: 3}
   cardName: Holy
   cardType: 1
   cardDescription: '[Discard] A projectile of Ether that tracks and predict the opponent
     movement unless he doesn''t move.'
-  attackManager: {fileID: 818057835518184039, guid: 0854dec05bf8fd64d92fbff9c3590564,
+  attackManager: {fileID: 818057835518184039, guid: 0ac43e9453018a946ab3ad91ac1bfe51,
     type: 3}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

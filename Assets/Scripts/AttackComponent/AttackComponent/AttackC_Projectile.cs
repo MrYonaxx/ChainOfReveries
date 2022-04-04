@@ -31,7 +31,7 @@ namespace VoiceActing
 
         public override void UpdateComponent(CharacterBase character)
         {
-            Vector3 direction = new Vector3(1, 0, 0);
+            Vector3 direction = new Vector3(1, 1, 0);
             if(fixedDirection == false)
             {
                 direction.x = Mathf.Sign(this.transform.lossyScale.x);
@@ -42,7 +42,6 @@ namespace VoiceActing
                 this.transform.position += (direction * Time.deltaTime * character.MotionSpeed * speed.x);
                 return;
             }
-
             this.transform.position += new Vector3(speed.x * character.MotionSpeed * Time.deltaTime * direction.x , speed.y * character.MotionSpeed * Time.deltaTime * direction.y, 0);
         }
 

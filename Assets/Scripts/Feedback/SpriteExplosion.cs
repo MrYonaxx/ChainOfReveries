@@ -16,6 +16,8 @@ namespace VoiceActing
 
         [SerializeField]
         float timeBeforeExplosion = 0.4f;
+        [SerializeField]
+        bool noColor = false;
 
         private void OnEnable()
         {
@@ -45,9 +47,8 @@ namespace VoiceActing
             RenderTexture.active = previous;
             RenderTexture.ReleaseTemporary(renderTex);
 
-            // Tout ça juste pour récupérer la couleur de n'importe quel sprite
-            Color32[] colors = readableText.GetPixels32();
 
+            Color32[] colors = readableText.GetPixels32();
             // Et on spawn
             SpawnParticle(spriteRenderer, colors);
             spriteRenderer.enabled = false;
@@ -79,7 +80,8 @@ namespace VoiceActing
                     ParticleSystem.EmitParams emitParams = new ParticleSystem.EmitParams();
                     emitParams.position = new Vector3(sizeX * offsetX, sizeY * offsetY, 0);
                     emitParams.startSize = spriteRender.transform.lossyScale.x / spriteRender.sprite.pixelsPerUnit;
-                    emitParams.startColor = colors[i];
+                    if(!noColor) // So pas opti
+                        emitParams.startColor = colors[i];
                     particle.Emit(emitParams, 1);
                 }
             }

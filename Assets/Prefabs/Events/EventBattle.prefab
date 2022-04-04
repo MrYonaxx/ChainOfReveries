@@ -17,7 +17,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &8236675884085944588
 Transform:
   m_ObjectHideFlags: 0
@@ -185,9 +185,6 @@ MonoBehaviour:
   battleReward: {fileID: 8236675884944672411}
   runData: {fileID: 11400000, guid: 1aae71d6d0b174646afb7b05a8a06b1f, type: 2}
   encounterDatabase: {fileID: 11400000, guid: 2861585ba5c1ed2489b9f77547c376e5, type: 2}
-  cardExplorationDatabase: {fileID: 11400000, guid: 18ffd259ad235184ca07b559eb5da117,
-    type: 2}
-  nbReward: {x: 1, y: 1}
 --- !u!1 &8236675885139427110
 GameObject:
   m_ObjectHideFlags: 0

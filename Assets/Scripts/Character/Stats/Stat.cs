@@ -31,7 +31,7 @@ namespace Stats
         public float BaseValue
         {
             get { return baseValue; }
-            set { baseValue = value; }
+            set { baseValue = value; CalculateFinalValue(); }
         }
 
         [HorizontalGroup("Stat", Width = 0.4f)]
@@ -77,6 +77,8 @@ namespace Stats
         {
             finalValue = (baseValue + flatBonus) * multiplierBonus;
         }
+
+
 
     } 
 

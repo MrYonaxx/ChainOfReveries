@@ -403,7 +403,7 @@ MonoBehaviour:
     AnimationEvent: {fileID: 7284589822210834423}
   - Frame: 45
     AnimationEvent: {fileID: 357035589550638310}
-  - Frame: 80
+  - Frame: 82
     AnimationEvent: {fileID: 2524242894598313049}
 --- !u!114 &4461643240352555985
 MonoBehaviour:
@@ -464,7 +464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620e0e815b2f5174f8b380210d9a19f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 80
+  frame: 82
   frameEnd: 0
 --- !u!1 &4114098666737907609
 GameObject:
@@ -603,7 +603,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f250ef29dcbdee24dbaa6ee36118f39c, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2f24293dc98fe3d468aac5881c1d8463, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

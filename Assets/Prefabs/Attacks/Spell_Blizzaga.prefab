@@ -1198,7 +1198,7 @@ MonoBehaviour:
   nameID: Lia_Spell_Ice2
   attackAnimation: {fileID: 0}
   characterAnimationData: {fileID: 4670453683040411876}
-  linkToCharacter: 1
+  linkToCharacter: 0
   fixToGround: 0
   subActionCardBreakable: 1
   canPlayerCorrectDirection: 1

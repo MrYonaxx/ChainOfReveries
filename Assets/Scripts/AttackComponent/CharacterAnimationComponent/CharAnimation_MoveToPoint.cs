@@ -32,6 +32,9 @@ namespace VoiceActing
             point = BattleUtils.Instance.BattleCenter.position + point;
             tMax = (FrameEnd - Frame) / 60f;
             t = 0f;
+
+            if(Frame == FrameEnd)
+                character.transform.position = point;
         }
 
         public override void UpdateComponent(CharacterBase character, int frame)

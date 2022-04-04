@@ -54,6 +54,10 @@ namespace VoiceActing
         {
             bufferTime = 0;
         }
+        public void ResetValue()
+        {
+            inputValue = 0;
+        }
 
     } 
 

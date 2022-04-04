@@ -202,21 +202,21 @@ MonoBehaviour:
     AnimationEvent: {fileID: 6548060126528745650}
   - Frame: 10
     AnimationEvent: {fileID: 4200970828337729809}
-  - Frame: 12
+  - Frame: 24
     AnimationEvent: {fileID: 4461643240352555985}
-  - Frame: 12
+  - Frame: 24
     AnimationEvent: {fileID: 489082575426589747}
-  - Frame: 18
-    AnimationEvent: {fileID: 7600066220938434708}
-  - Frame: 22
-    AnimationEvent: {fileID: 7284589822210834423}
-  - Frame: 22
-    AnimationEvent: {fileID: 827539092617962118}
   - Frame: 30
+    AnimationEvent: {fileID: 7600066220938434708}
+  - Frame: 34
+    AnimationEvent: {fileID: 7284589822210834423}
+  - Frame: 34
+    AnimationEvent: {fileID: 827539092617962118}
+  - Frame: 42
     AnimationEvent: {fileID: 2174779412733851940}
-  - Frame: 40
+  - Frame: 52
     AnimationEvent: {fileID: 4850912587898369132}
-  - Frame: 50
+  - Frame: 62
     AnimationEvent: {fileID: 2524242894598313049}
 --- !u!114 &4461643240352555985
 MonoBehaviour:
@@ -230,8 +230,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de0fc71d353b8ef479aa0db3b846d0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 12
-  frameEnd: 18
+  frame: 24
+  frameEnd: 30
   attack: {fileID: 4733904636063077261}
 --- !u!114 &7284589822210834423
 MonoBehaviour:
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30aa148586dde644daf200dde6eea4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 22
+  frame: 34
   frameEnd: 0
   cancelItself: 1
   cancelSpecial: 1
@@ -262,7 +262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620e0e815b2f5174f8b380210d9a19f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 50
+  frame: 62
   frameEnd: 0
 --- !u!1 &4114098666737907609
 GameObject:
@@ -515,8 +515,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackProcessor: 0
   cardDamage:
-    cardDamage: fa000000fa000000fa000000fa000000fa000000fa000000fa000000fa000000fa000000fa000000
-    debugDamage: {x: 250, y: 250}
+    cardDamage: 96000000960000009600000096000000960000009600000096000000960000009600000096000000
+    debugDamage: {x: 150, y: 150}
     ignoreStatsMultiplier: 0
   cardStatus:
     statusDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -632,7 +632,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.4, y: 0}
+  m_Offset: {x: 0.5, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}
@@ -643,7 +643,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.8, y: 1.5}
+  m_Size: {x: 0.8, y: 1.2}
   m_EdgeRadius: 0
 --- !u!114 &4733904636063077261
 MonoBehaviour:
@@ -779,7 +779,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf29bae8d6a9743927604b4178c1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 12
+  frame: 24
   frameEnd: 0
   moveForward: 1
   speed: {x: 10, y: 0}
@@ -796,7 +796,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf29bae8d6a9743927604b4178c1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 18
+  frame: 30
   frameEnd: 0
   moveForward: 1
   speed: {x: 4, y: 0}
@@ -813,7 +813,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf29bae8d6a9743927604b4178c1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 22
+  frame: 34
   frameEnd: 0
   moveForward: 1
   speed: {x: 2, y: 0}
@@ -830,7 +830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf29bae8d6a9743927604b4178c1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 30
+  frame: 42
   frameEnd: 0
   moveForward: 1
   speed: {x: 1, y: 0}
@@ -847,7 +847,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf29bae8d6a9743927604b4178c1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 40
+  frame: 52
   frameEnd: 0
   moveForward: 1
   speed: {x: 0, y: 0}
@@ -907,7 +907,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.32, y: 1.5}
+  m_Size: {x: 0.32, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &9067015742152356998
 GameObject:

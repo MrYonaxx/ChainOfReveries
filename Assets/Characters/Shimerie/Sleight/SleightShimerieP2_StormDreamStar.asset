@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 317806353b7288b4cb30da061d383f0e, type: 3}
+  m_Name: SleightShimerieP2_StormDreamStar
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: cardController
+      Entry: 6
+      Data: 
+    - Name: cardBreakComponent
+      Entry: 7
+      Data: 0|VoiceActing.CardBreakBestValue, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+  cardSprite: {fileID: 21300000, guid: 19aba0581a9c04842bdbb7f0dd812ddc, type: 3}
+  cardName: Star
+  cardType: 4
+  cardDescription: 
+  attackManager: {fileID: 818057835518184039, guid: dd3f7f4e3a1464b449d7427ca10f5c39,
+    type: 3}
+  cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  maxProbability: 0

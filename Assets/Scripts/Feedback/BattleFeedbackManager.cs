@@ -80,6 +80,8 @@ namespace VoiceActing
         int indexAnimationDeath = 0;
         private IEnumerator motionSpeedCoroutine;
 
+        public bool DesactivateCardBreakFeedback = false;
+
         #endregion
 
         #region GettersSetters 
@@ -277,15 +279,18 @@ namespace VoiceActing
 
         public void CardBreakAnimation(CharacterBase characterBreaked)
         {
-            animatorTextCardBreak.transform.position = characterBreaked.transform.position;
-            animatorTextCardBreak.SetTrigger("Feedback");
+            if (!DesactivateCardBreakFeedback)
+            {
+                animatorTextCardBreak.transform.position = characterBreaked.transform.position;
+                animatorTextCardBreak.SetTrigger("Feedback");
 
+                // Instantiate(cardBreakAnimation, characterBreaked.transform.position, Quaternion.identity);
+
+                animatorPixelize.gameObject.SetActive(true);
+                animatorPixelize.SetTrigger("CardBreak");
+            }
             cardBreakAnimation.transform.position = characterBreaked.transform.position;
             cardBreakAnimation.SetTrigger("Feedback");
-           // Instantiate(cardBreakAnimation, characterBreaked.transform.position, Quaternion.identity);
-
-            animatorPixelize.gameObject.SetActive(true);
-            animatorPixelize.SetTrigger("CardBreak"); 
             soundCardBreak.PlaySound();
         }
 

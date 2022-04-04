@@ -57,7 +57,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.24, y: 0.32}
+  m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
 --- !u!114 &6598879238594377134
 MonoBehaviour:
@@ -74,6 +74,7 @@ MonoBehaviour:
   cardSprite: {fileID: 6598879240132343995}
   cardOutline: {fileID: 6598879238996103130}
   timeAirborne: 2
+  GetNewcard: 0
 --- !u!1 &6598879238607728141
 GameObject:
   m_ObjectHideFlags: 0
@@ -367,6 +368,6 @@ SpriteRenderer:
   m_Size: {x: 5.12, y: 5.12}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0

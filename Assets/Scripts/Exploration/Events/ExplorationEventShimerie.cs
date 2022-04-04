@@ -179,7 +179,7 @@ namespace VoiceActing
 
 
             AudioManager.Instance.PlaySound(transitionTheme, 1);
-
+            BattleUtils.Instance.BorderSprites.gameObject.SetActive(false);
             // Event si le character Transition repasse en idle, on initialise la P2
             characterTransition.OnStateChanged += BossBattleP2;
         }
@@ -207,7 +207,7 @@ namespace VoiceActing
             yield return null;
             bossShimerieP2.Character.CharacterAction.Action(attackIntroP2);
 
-            yield return new WaitForSeconds(6f);
+            yield return new WaitForSeconds(8f);
 
             AudioManager.Instance.PlayMusic(p2Theme);
             AIController[] bosses = { bossShimerieP2 };
@@ -217,6 +217,8 @@ namespace VoiceActing
             bossShimerieP2.Character.DeckController.ReloadDeck();
             healthShimerie.gameObject.SetActive(true);
             battleManager.SetTarget(bossShimerieP2.Character);
+
+            explorationManager.Player.transform.position = BattleUtils.Instance.BattleCenter.position - new Vector3(2, 0, 0);
         }
 
         private void OnDestroy()

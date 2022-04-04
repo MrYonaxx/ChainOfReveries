@@ -183,11 +183,19 @@ MonoBehaviour:
     AnimationEvent: {fileID: 6548060126528745650}
   - Frame: 10
     AnimationEvent: {fileID: 4200970828337729809}
-  - Frame: 12
-    AnimationEvent: {fileID: 4461643240352555985}
   - Frame: 22
+    AnimationEvent: {fileID: 9128897809974610865}
+  - Frame: 24
+    AnimationEvent: {fileID: 4461643240352555985}
+  - Frame: 26
+    AnimationEvent: {fileID: 6594396671800199014}
+  - Frame: 30
+    AnimationEvent: {fileID: 7387831790856027133}
+  - Frame: 34
     AnimationEvent: {fileID: 7284589822210834423}
-  - Frame: 40
+  - Frame: 34
+    AnimationEvent: {fileID: 7581409514917095934}
+  - Frame: 52
     AnimationEvent: {fileID: 2524242894598313049}
 --- !u!114 &4461643240352555985
 MonoBehaviour:
@@ -201,8 +209,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de0fc71d353b8ef479aa0db3b846d0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 12
-  frameEnd: 18
+  frame: 24
+  frameEnd: 30
   attack: {fileID: 4733904636063077261}
 --- !u!114 &7284589822210834423
 MonoBehaviour:
@@ -216,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30aa148586dde644daf200dde6eea4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 22
+  frame: 34
   frameEnd: 0
   cancelItself: 1
   cancelSpecial: 1
@@ -233,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620e0e815b2f5174f8b380210d9a19f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 40
+  frame: 52
   frameEnd: 0
 --- !u!1 &4114098666737907609
 GameObject:
@@ -284,8 +292,8 @@ MonoBehaviour:
   onlyHitStopOpponent: 0
   hitStop: 0.2
   knockbackDurationMultiplier: 1
-  knockbackX: 5
-  knockbackZ: 0
+  knockbackX: 3
+  knockbackZ: 5
   knockbackInvulnerability: 0.3
   revengeValue: 3
 --- !u!114 &5485531285977804821
@@ -372,7 +380,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5783999226134319645, guid: ac53e98acc716b24eafe342e66572db3,
+  m_Sprite: {fileID: 7161644265044542691, guid: f2e4f95b6e3f7d34aaf6e6680a174220,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -486,8 +494,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackProcessor: 0
   cardDamage:
-    cardDamage: fa000000fa000000fa000000fa000000fa000000fa000000fa000000fa000000fa000000fa000000
-    debugDamage: {x: 250, y: 250}
+    cardDamage: 96000000960000009600000096000000960000009600000096000000960000009600000096000000
+    debugDamage: {x: 150, y: 150}
     ignoreStatsMultiplier: 0
   cardStatus:
     statusDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -614,7 +622,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.5}
+  m_Size: {x: 0.8, y: 1.2}
   m_EdgeRadius: 0
 --- !u!114 &4733904636063077261
 MonoBehaviour:
@@ -711,6 +719,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4606112463397650937}
+  - component: {fileID: 9128897809974610865}
+  - component: {fileID: 6594396671800199014}
+  - component: {fileID: 7387831790856027133}
+  - component: {fileID: 7581409514917095934}
   m_Layer: 0
   m_Name: Movement
   m_TagString: Untagged
@@ -732,6 +744,74 @@ Transform:
   m_Father: {fileID: 248121844606041498}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9128897809974610865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7876823786177431065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56bf29bae8d6a9743927604b4178c1b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 22
+  frameEnd: 0
+  moveForward: 1
+  speed: {x: 10, y: 0}
+  jumpImpulsion: 0
+--- !u!114 &6594396671800199014
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7876823786177431065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56bf29bae8d6a9743927604b4178c1b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 26
+  frameEnd: 0
+  moveForward: 1
+  speed: {x: 3, y: 0}
+  jumpImpulsion: 0
+--- !u!114 &7387831790856027133
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7876823786177431065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56bf29bae8d6a9743927604b4178c1b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 30
+  frameEnd: 0
+  moveForward: 1
+  speed: {x: 1, y: 0}
+  jumpImpulsion: 0
+--- !u!114 &7581409514917095934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7876823786177431065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56bf29bae8d6a9743927604b4178c1b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 34
+  frameEnd: 0
+  moveForward: 1
+  speed: {x: 0, y: 0}
+  jumpImpulsion: 0
 --- !u!1 &8868023440971872186
 GameObject:
   m_ObjectHideFlags: 0
@@ -787,7 +867,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.32, y: 1.5}
+  m_Size: {x: 0.32, y: 1}
   m_EdgeRadius: 0
 --- !u!1 &9067015742152356998
 GameObject:

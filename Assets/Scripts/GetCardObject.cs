@@ -6,7 +6,6 @@ namespace VoiceActing
 {
     public class GetCardObject : MonoBehaviour
     {
-
         [SerializeField]
         SpriteRenderer cardSprite = null;
         [SerializeField]
@@ -14,7 +13,7 @@ namespace VoiceActing
 
         [SerializeField]
         float timeAirborne = 3;
-
+        
 
         Card card = null;
         CharacterBase character = null;
@@ -22,6 +21,7 @@ namespace VoiceActing
         Vector3 startPos;
         Vector3 endPos;
         float t = 0f;
+        public bool GetNewcard = false; // Si faux on récupère une deck qui provient du deck, si true c'est une carte inédite
 
         public void Initialize(CharacterBase owner, Card c, Color color, float posX, float posY)
         {
@@ -34,7 +34,8 @@ namespace VoiceActing
 
             DrawCard(c, color);
 
-            character.OnBattleEnd += RetrieveCard;
+            if (!GetNewcard)
+                character.OnBattleEnd += RetrieveCard;
         }
 
 
@@ -53,11 +54,6 @@ namespace VoiceActing
                 Vector3 pos = Vector3.Lerp(startPos, endPos, t / timeAirborne);
                 pos.z = pos.y;
                 this.transform.position = pos;
-
-                /*float posY = Mathf.PingPong(t, timeAirborne * 0.5f);
-                posY = (posY / (timeAirborne * 0.5f)) * height;
-                transformCard.transform.localPosition = new Vector3(transformCard.transform.localPosition.x, posY, transformCard.transform.localPosition.z);
-            */
             }
         }
 
@@ -66,7 +62,10 @@ namespace VoiceActing
         {
             if(collision.gameObject == character.gameObject && t >= timeAirborne)
             {
-                RetrieveCard();
+                if (GetNewcard)
+                    AddCard();
+                else
+                    RetrieveCard();
             }
         }
 
@@ -77,6 +76,13 @@ namespace VoiceActing
             character.DeckController.UnbanishCard(card);
             character.DeckController.ReplaceCard(card);
             character.DeckController.RefreshDeck();
+            Destroy(this.gameObject);
+        }
+
+        private void AddCard()
+        {
+            character.DeckController.Deck.Insert(1, card);
+            character.DeckController.RefreshDeck(); 
             Destroy(this.gameObject);
         }
 

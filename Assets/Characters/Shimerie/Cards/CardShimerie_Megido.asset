@@ -26,7 +26,7 @@ MonoBehaviour:
       Data: 
     - Name: cardBreakComponent
       Entry: 7
-      Data: 0|VoiceActing.CardBreakBestValue, Assembly-CSharp
+      Data: 0|VoiceActing.CardBreakBestValueNoEqual, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 

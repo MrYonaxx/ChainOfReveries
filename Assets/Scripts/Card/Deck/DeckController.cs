@@ -188,6 +188,15 @@ namespace VoiceActing
             OnDeckChanged?.Invoke(currentIndex, deck);
         }
 
+        public void SetIndex(int newIndex)
+        {
+            currentIndex = newIndex;
+            if (currentIndex >= deck.Count)
+            {
+                currentIndex = deck.Count-1;
+            }
+            RefreshDeck();
+        }
 
         public void UpdateCard(CharacterBase character)
         {
@@ -408,6 +417,10 @@ namespace VoiceActing
             reloadCurrentLevel = 1;
         }
 
+        public void SetReloadMax(int newMax)
+        {
+            reloadCurrentMaxLevel = newMax;
+        }
 
 
 

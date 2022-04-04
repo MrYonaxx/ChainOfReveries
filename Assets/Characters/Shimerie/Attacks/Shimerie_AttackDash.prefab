@@ -72,7 +72,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   focusTarget: {fileID: 2520948011644738657}
-  priority: 1
+  priority: 0
 --- !u!114 &3125487127256250549
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105,6 +105,7 @@ GameObject:
   - component: {fileID: 4461643240352555985}
   - component: {fileID: 3467270024188063017}
   - component: {fileID: 1616956830870139672}
+  - component: {fileID: 955198340819609998}
   - component: {fileID: 2524242894598313049}
   m_Layer: 0
   m_Name: AttackAnimationData
@@ -158,8 +159,10 @@ MonoBehaviour:
   AnimatorDebug: {fileID: 677981557941761528}
   AnimationClipDebug: {fileID: 7400000, guid: 59a73345e53b66e4a9a7a4fbcd0c66aa, type: 2}
   frameData:
-  - Frame: 100
+  - Frame: 104
     AnimationEvent: {fileID: 1616956830870139672}
+  - Frame: 104
+    AnimationEvent: {fileID: 955198340819609998}
   - Frame: 110
     AnimationEvent: {fileID: 5975666561339688349}
   - Frame: 115
@@ -223,8 +226,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4f6a358ed9a7e144a09bd7df2c0bb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 100
+  frame: 104
   frameEnd: 0
+--- !u!114 &955198340819609998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3720685875369100543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 115e45dd4eee7e34d8123bad1d50771b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 104
+  frameEnd: 0
+  cardBreakController: {fileID: 11400000, guid: cf99f13ec9b16ff459f0a38e0953f0d1,
+    type: 2}
+  c: {fileID: 0}
+  cardToPlay: {fileID: 11400000, guid: 790ee7d975de1a9458bf1a664794b3a9, type: 2}
+  randomValue: 0
+  sameValue: 1
+  setValue: 0
+  cardValue: 0
 --- !u!114 &2524242894598313049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -357,7 +382,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4388082830208477171}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.041816324, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6202298799396831511}
@@ -402,7 +427,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 944566462951780539, guid: 895536ee66b168f479c237bf02e73b58, type: 3}
+  m_Sprite: {fileID: -1335857306722401352, guid: c1a8b06ee66dce646bd4bc2495d82926,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

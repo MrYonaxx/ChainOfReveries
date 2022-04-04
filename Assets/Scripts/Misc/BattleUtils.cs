@@ -20,6 +20,12 @@ public class BattleUtils : MonoBehaviour
         get { return battleCenter; }
     }
 
+    [SerializeField]
+    private GameObject borderSprites;
+    public GameObject BorderSprites
+    {
+        get { return borderSprites; }
+    }
 
     public void Awake()
     {

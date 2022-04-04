@@ -30,13 +30,13 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  cardSprite: {fileID: 21300000, guid: bb7e41b51405cd641a99fe82d221507d, type: 3}
+  cardSprite: {fileID: 21300000, guid: 75634b92b48e9e045a2542f3faf9c8e7, type: 3}
   cardName: Dive into dreams
   cardType: 0
   cardDescription: '[Phantom] Dive attack at the position of the player unleashing
     4 blade diaognally or horizontally. Can be Card Break right before the ground
     impact.'
-  attackManager: {fileID: 818057835518184039, guid: a84b6e98101a3934fb078ff435d8f5c5,
+  attackManager: {fileID: 818057835518184039, guid: 2ef8a84567f3e96419190b2f66dd5e3f,
     type: 3}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

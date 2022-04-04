@@ -15,6 +15,8 @@ namespace VoiceActing
     public class AfterImageEffect : MonoBehaviour
     {
         [SerializeField]
+        bool autoStart = false;
+        [SerializeField]
         SpriteRenderer imageToCopy;
         [SerializeField]
         int afterImageNumber = 4;
@@ -29,6 +31,12 @@ namespace VoiceActing
         float t = 0f;
         int index = 0;
         List<SpriteRenderer> afterImage = new List<SpriteRenderer>();
+
+        private void Start()
+        {
+            if (autoStart)
+                StartAfterImage();
+        }
 
         // Update is called once per frame
         void Update()

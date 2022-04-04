@@ -23,6 +23,8 @@ namespace VoiceActing
         bool targetAtStart = true;
         [SerializeField]
         bool targetRandom = false;
+        [SerializeField]
+        bool targetAtUpdate = false;
 
         [ShowIf("targetRandom")]
         [SerializeField]
@@ -44,6 +46,8 @@ namespace VoiceActing
 
         public override void StartComponent(CharacterBase character, AttackController attack)
         {
+            base.StartComponent(character, attack);
+
             parent = attack.transform.parent;
 
             if (character.LockController.TargetLocked)
@@ -68,7 +72,12 @@ namespace VoiceActing
             }
         }
 
-
+        public override void UpdateComponent(CharacterBase character)
+        {
+            base.UpdateComponent(character);
+            if(targetAtUpdate)
+                attackController.transform.position = character.LockController.TargetLocked.transform.position;
+        }
 
         // Appelé par les anims
         public void MoveToTarget()

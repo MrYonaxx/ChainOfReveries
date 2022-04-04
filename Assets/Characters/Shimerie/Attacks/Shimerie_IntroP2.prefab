@@ -64,7 +64,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Shatter the Reverie
+  m_text: Shatter the Final Reverie
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4c93190297100cf4e9ab814cd8888521, type: 2}
   m_sharedMaterial: {fileID: 3021222138225422579, guid: 4c93190297100cf4e9ab814cd8888521,
@@ -134,10 +134,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 3722249780470956643}
-    characterCount: 19
+    characterCount: 25
     spriteCount: 0
-    spaceCount: 2
-    wordCount: 3
+    spaceCount: 3
+    wordCount: 4
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -187,6 +187,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 6257144862528511808}
+  - {fileID: 3438464562837519869}
   m_Father: {fileID: 2917755026358873579}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -233,7 +234,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2520948011644738657}
   - component: {fileID: 3040624544842275496}
-  - component: {fileID: 2911642890647886050}
+  - component: {fileID: 2939086541270144932}
+  - component: {fileID: 4593915366876806787}
+  - component: {fileID: 3107111780957049265}
   m_Layer: 9
   m_Name: AttackMainComponents
   m_TagString: Untagged
@@ -268,7 +271,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keepMomentum: 0
---- !u!114 &2911642890647886050
+--- !u!114 &2939086541270144932
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -277,11 +280,43 @@ MonoBehaviour:
   m_GameObject: {fileID: 2469241746260582066}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e9f5bb6b602f0e4e84ed7b7edc5d0af, type: 3}
+  m_Script: {fileID: 11500000, guid: af7556a111ed01343a7e8beb7c542896, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  focusTarget: {fileID: 2520948011644738657}
-  priority: 999
+  state: {fileID: 4593915366876806787}
+--- !u!114 &4593915366876806787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2469241746260582066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: af2185c51ad3f8d4daa1cb9997990121, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  stateID: 0
+  throwTransform: {fileID: 0}
+  canMove: 0
+--- !u!114 &3107111780957049265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2469241746260582066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: adb57c2f73562b84a954bce3a1d559bf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  auraUnbreakable: 0
+  auraCounter: 1
+  custom: 0
+  time: 1
+  scale: 1.5
+  color: {r: 0, g: 1, b: 0, a: 1}
 --- !u!1 &2607954328065455024
 GameObject:
   m_ObjectHideFlags: 0
@@ -309,7 +344,7 @@ RectTransform:
   m_GameObject: {fileID: 2607954328065455024}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 0, z: 1}
   m_Children:
   - {fileID: 7581436546016591022}
   - {fileID: 6565440657294445604}
@@ -369,7 +404,8 @@ GameObject:
   - component: {fileID: 248121844606041498}
   - component: {fileID: 2260525837532545912}
   - component: {fileID: 4670453683040411876}
-  - component: {fileID: 2524242894598313049}
+  - component: {fileID: 6264479581214944808}
+  - component: {fileID: 422043204435950550}
   m_Layer: 0
   m_Name: AttackAnimationData
   m_TagString: Untagged
@@ -421,9 +457,11 @@ MonoBehaviour:
   AnimatorDebug: {fileID: 677981557941761528}
   AnimationClipDebug: {fileID: 7400000, guid: 5f7e7b6aa42f39241b1ecf329aba78f0, type: 2}
   frameData:
-  - Frame: 2000
-    AnimationEvent: {fileID: 2524242894598313049}
---- !u!114 &2524242894598313049
+  - Frame: 0
+    AnimationEvent: {fileID: 6264479581214944808}
+  - Frame: 1800
+    AnimationEvent: {fileID: 422043204435950550}
+--- !u!114 &6264479581214944808
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -432,11 +470,26 @@ MonoBehaviour:
   m_GameObject: {fileID: 3720685875369100543}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 620e0e815b2f5174f8b380210d9a19f2, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f9d04c6280504b44ba0bce2a46a66c8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 2000
+  frame: 0
+  frameEnd: 1800
+--- !u!114 &422043204435950550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3720685875369100543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b23116954a1e2d45b5b1f5baf42a4c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 1800
   frameEnd: 0
+  action: {fileID: 818057835518184039, guid: 2a31f47ca7eae4042876ef357592b3c7, type: 3}
 --- !u!1 &4114098666737907609
 GameObject:
   m_ObjectHideFlags: 0
@@ -676,7 +729,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Shatter the Reverie
+  m_text: Shatter the Final Reverie
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 4c93190297100cf4e9ab814cd8888521, type: 2}
   m_sharedMaterial: {fileID: 3021222138225422579, guid: 4c93190297100cf4e9ab814cd8888521,
@@ -746,10 +799,10 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: 0, w: 0}
   m_textInfo:
     textComponent: {fileID: 6866844875808704681}
-    characterCount: 19
+    characterCount: 25
     spriteCount: 0
-    spaceCount: 2
-    wordCount: 3
+    spaceCount: 3
+    wordCount: 4
     linkCount: 0
     lineCount: 1
     pageCount: 1
@@ -820,7 +873,7 @@ MonoBehaviour:
   attackAnimation: {fileID: 7400000, guid: 5f7e7b6aa42f39241b1ecf329aba78f0, type: 2}
   characterAnimationData: {fileID: 4670453683040411876}
   linkToCharacter: 1
-  fixToGround: 0
+  fixToGround: 1
   subActionCardBreakable: 0
   canPlayerCorrectDirection: 0
   atkControllers:
@@ -987,8 +1040,10 @@ MonoBehaviour:
   attackProcessorsComponents: []
   attackComponents:
   - {fileID: 8375931428238251901}
+  - {fileID: 3691386089024948626}
   - {fileID: 3040624544842275496}
-  - {fileID: 2911642890647886050}
+  - {fileID: 2939086541270144932}
+  - {fileID: 3107111780957049265}
   - {fileID: 6024610480447657897}
   - {fileID: 5485531285977804821}
   - {fileID: 8464140138466597420}
@@ -1113,6 +1168,51 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 912d5028f52a473498673d8665a9bbf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &8716324901933634972
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3438464562837519869}
+  - component: {fileID: 3691386089024948626}
+  m_Layer: 0
+  m_Name: FocusCamera
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3438464562837519869
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8716324901933634972}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5835417763471239392}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3691386089024948626
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8716324901933634972}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e9f5bb6b602f0e4e84ed7b7edc5d0af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  focusTarget: {fileID: 3438464562837519869}
+  priority: 999
 --- !u!1 &8868023440971872186
 GameObject:
   m_ObjectHideFlags: 0
@@ -1258,7 +1358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_RaycastTarget: 0
   m_Maskable: 1
   m_OnCullStateChanged:

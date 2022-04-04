@@ -14488,9 +14488,9 @@ MonoBehaviour:
   cardBreakController: {fileID: 11400000, guid: cf99f13ec9b16ff459f0a38e0953f0d1,
     type: 2}
   cardsToBreak:
-  - {fileID: 11400000, guid: 9bee02e63637a2c40908b67b312ae141, type: 2}
-  - {fileID: 11400000, guid: 9bee02e63637a2c40908b67b312ae141, type: 2}
-  - {fileID: 11400000, guid: 9bee02e63637a2c40908b67b312ae141, type: 2}
+  - {fileID: 11400000, guid: 61ae46b01b381184aafc9d1503b5b520, type: 2}
+  - {fileID: 11400000, guid: 61ae46b01b381184aafc9d1503b5b520, type: 2}
+  - {fileID: 11400000, guid: 61ae46b01b381184aafc9d1503b5b520, type: 2}
   timeMaxForCardBreak: 1100
   characterAnimationData: {fileID: 4670453683040411876}
   goToEvent: {fileID: 7561624109708350399}
@@ -14598,9 +14598,11 @@ MonoBehaviour:
   cardBreakController: {fileID: 11400000, guid: cf99f13ec9b16ff459f0a38e0953f0d1,
     type: 2}
   c: {fileID: 1107216930286083245}
-  cardToPlay: {fileID: 11400000, guid: 9bee02e63637a2c40908b67b312ae141, type: 2}
+  cardToPlay: {fileID: 11400000, guid: 61ae46b01b381184aafc9d1503b5b520, type: 2}
   randomValue: 1
   sameValue: 0
+  setValue: 0
+  cardValue: 0
 --- !u!114 &5787807073622459920
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -25,14 +25,18 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: cardBreakComponent
-      Entry: 6
+      Entry: 7
+      Data: 0|VoiceActing.CardBreakBestValue, Assembly-CSharp
+    - Name: 
+      Entry: 8
       Data: 
-  cardSprite: {fileID: 0}
+  cardSprite: {fileID: 21300000, guid: 5b1533643cf61af448afb81946d1798b, type: 3}
   cardName: Severance
-  cardType: 0
-  cardDescription: Separate his sword into tiny blade Imbue with physical strenght
-    that will attack the opponent. Can ony be Card Break by Attack cards.
-  attackManager: {fileID: 0}
+  cardType: 1
+  cardDescription: Separate his sword into tiny blade Imbue with magical strenght
+    that will attack the opponent. Can ony be Card Break by Magic cards.
+  attackManager: {fileID: 818057835518184039, guid: 9d9015b781470a54a8c35a075a1258fe,
+    type: 3}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   maxProbability: 0

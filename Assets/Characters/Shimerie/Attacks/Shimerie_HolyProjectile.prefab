@@ -5531,7 +5531,7 @@ MonoBehaviour:
   characterAnimationData: {fileID: 4670453683040411876}
   linkToCharacter: 0
   fixToGround: 0
-  subActionCardBreakable: 1
+  subActionCardBreakable: 0
   canPlayerCorrectDirection: 0
   atkControllers:
   - {fileID: 4733904636063077261}

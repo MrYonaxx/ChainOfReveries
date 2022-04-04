@@ -23,15 +23,24 @@ namespace VoiceActing
                 Vector3 newOffset = offset;
                 if (useCharacterDirection)
                     newOffset *= character.CharacterMovement.Direction;
-                RaycastHit2D hit = Physics2D.Raycast(character.LockController.TargetLocked.transform.position, newOffset, offset.magnitude - (character.CharacterRigidbody.CharacterCollider.size.x * 0.5f), layerMask);
-                if (hit)
+
+                if (offset.sqrMagnitude > 0)
                 {
-                    character.transform.position = character.LockController.TargetLocked.transform.position;
-                    character.transform.position += new Vector3(hit.distance * Mathf.Sign(newOffset.x), 0, 0);
+                    RaycastHit2D hit = Physics2D.Raycast(character.LockController.TargetLocked.transform.position, newOffset, offset.magnitude - (character.CharacterRigidbody.CharacterCollider.size.x * 0.5f), layerMask);
+                    if (hit)
+                    {
+                        character.transform.position = character.LockController.TargetLocked.transform.position;
+                        character.transform.position += new Vector3(hit.distance * Mathf.Sign(newOffset.x), 0, 0);
+                    }
+                    else
+                    {
+                        character.transform.position = character.LockController.TargetLocked.transform.position + newOffset;
+                    }
                 }
                 else
                 {
-                    character.transform.position = character.LockController.TargetLocked.transform.position + newOffset;
+
+                    character.transform.position = character.LockController.TargetLocked.transform.position;
                 }
             }
         }

@@ -30,11 +30,13 @@ namespace VoiceActing
         {
             if (damageMessage.damage >= user.CharacterStat.HP)
             {
-                user.CharacterStat.HP = user.CharacterStat.HPMax.Value * hpPercent;
+                float value = Mathf.Max(2, user.CharacterStat.HPMax.Value * hpPercent);
+                user.CharacterStat.HP = value;
                 user.CharacterAction.CancelAction();
                 user.CharacterAction.Action(autoLifeAction);
                 damageMessage.damage = 1;
                 damageMessage.knockback = 0;
+                damageMessage.statusEffects.Clear();
             }
 
             return false;

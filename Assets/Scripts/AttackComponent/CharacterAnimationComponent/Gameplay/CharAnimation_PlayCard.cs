@@ -18,7 +18,12 @@ namespace VoiceActing
         bool randomValue = false;
         [SerializeField]
         bool sameValue = true;
+        [SerializeField]
+        bool setValue = false;
 
+        [ShowIf("setValue")]
+        [SerializeField]
+        int cardValue = 0;
 
         public override void Execute(CharacterBase character)
         {
@@ -30,6 +35,8 @@ namespace VoiceActing
             int value = Random.Range(0, 9);
             if (sameValue)
                 value = character.CharacterAction.CurrentAttackCard.baseCardValue;
+            if (setValue)
+                value = cardValue;
 
             cards.Add(new Card(cardToPlay, value));
 

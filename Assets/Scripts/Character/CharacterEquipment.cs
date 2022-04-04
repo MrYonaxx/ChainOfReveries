@@ -165,7 +165,7 @@ namespace VoiceActing
                 characterStatusController.ApplyStatus(cardData.StatusEffectPassive, 100);
         }
 
-        private void UnequipAll()
+        public void UnequipAll()
         {
             for (int i = 0; i < cardsEquipment.Count; i++)
             {

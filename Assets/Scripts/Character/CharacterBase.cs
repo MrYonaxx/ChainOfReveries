@@ -232,15 +232,17 @@ namespace VoiceActing
             characterData = data;
             characterStat = new CharacterStat(characterData.CharacterStat);
 
+            // On initialise le deck
+            sleightController.SetSleightDatabase(data.SleightDatabase);
+            deckController.SetDeck(data.InitialDeck);
+
             characterMovement.InitializeComponent(characterStat);
             characterAction.InitializeComponent(this);
             characterKnockback.InitializeComponent(this);
             characterStatusController.InitializeComponent(this);
             characterEquipment.InitializeComponent(this);
 
-            // On initialise le deck
-            sleightController.SetSleightDatabase(data.SleightDatabase);
-            deckController.SetDeck(data.InitialDeck);
+
 
         }
 
@@ -285,7 +287,11 @@ namespace VoiceActing
             if (canPlay)
                 inputController = inputs;
             else
+            {
                 inputController.ResetAllBuffer();
+                inputController.ResetAllValue();
+
+            }
 
             characterStatusController.UpdateController(this);
 

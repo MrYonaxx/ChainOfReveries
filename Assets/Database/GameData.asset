@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FirstTime: 1
   Timer: 0
-  NbRun: 0
+  NbRun: 1
   NbRunCompleted: 5
   MaxReverieLevel: 0
-  NbRunCharacters: 020000000000000000000000
+  NbRunCharacters: 030000000000000000000000
   charactersUnlocked: 
   customDecks: 
   P1ControllerID: 0

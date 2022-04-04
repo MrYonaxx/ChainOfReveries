@@ -140,6 +140,9 @@ namespace VoiceActing
                 transformBarNumber.gameObject.SetActive(false);
             previousHealth = (int)hp;
 
+            if (healthBarList.Count > 8)
+                textCharacterName.rectTransform.anchoredPosition += new Vector2(0, 20);
+
             // Affiche la première barre de vie un peu différemment
             healthBarHidden.gameObject.SetActive(false);
             firstHealthBar.gameObject.SetActive(false);

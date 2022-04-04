@@ -186,8 +186,10 @@ MonoBehaviour:
     AnimationEvent: {fileID: 5204836230715212925}
   - Frame: 0
     AnimationEvent: {fileID: 7790224010318279963}
-  - Frame: 45
-    AnimationEvent: {fileID: 7643688446079672935}
+  - Frame: 50
+    AnimationEvent: {fileID: 7655140222310416522}
+  - Frame: 51
+    AnimationEvent: {fileID: 3159757881091136371}
   - Frame: 75
     AnimationEvent: {fileID: 2524242894598313049}
 --- !u!114 &398121542171573784
@@ -699,9 +701,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4606112463397650937}
   - component: {fileID: 489082575426589747}
-  - component: {fileID: 7643688446079672935}
+  - component: {fileID: 7655140222310416522}
   - component: {fileID: 5204836230715212925}
   - component: {fileID: 7790224010318279963}
+  - component: {fileID: 3159757881091136371}
   m_Layer: 0
   m_Name: Movement
   m_TagString: Untagged
@@ -740,7 +743,7 @@ MonoBehaviour:
   moveForward: 1
   speed: {x: 0, y: 0}
   jumpImpulsion: 0
---- !u!114 &7643688446079672935
+--- !u!114 &7655140222310416522
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -749,12 +752,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7876823786177431065}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aaa9c9b27a4c3954fa73d54ebe76f548, type: 3}
+  m_Script: {fileID: 11500000, guid: 5a799ce4cc021b34a9b19b1c8221cfe4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 45
-  frameEnd: 50
-  point: {x: 3, y: 0, z: 0}
+  frame: 50
+  frameEnd: 0
+  distance: 2.4
+  arenaBoundX: {x: -4, y: 4}
 --- !u!114 &5204836230715212925
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -787,6 +791,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame: 0
   frameEnd: 55
+--- !u!114 &3159757881091136371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7876823786177431065}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ca1047c5907ce4c851d7349dcd44a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 51
+  frameEnd: 0
+  direction: 0
+  turnToTarget: 1
 --- !u!1 &8868023440971872186
 GameObject:
   m_ObjectHideFlags: 0
