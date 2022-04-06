@@ -310,7 +310,7 @@ namespace VoiceActing
             player.LockController.Targeting = true;
             yield return new WaitForSeconds(1);
             canvasBattle.SetActive(false);
-            OnEventBattleEnd.Invoke();
+            OnEventBattleEnd?.Invoke();
             player.CanPlay(true);
 
 
@@ -321,6 +321,7 @@ namespace VoiceActing
             canvasBattle.SetActive(true);
             GetComponentInChildren<CardBreakDrawer>().DisableCards(); // aïe j'ai si mal, je souffre
             enemyEquipmentDrawer.Hide();
+            enemyStatusDrawer.DrawStatus(new List<Status>());
         }
 
         private void SetReverieStatus(CharacterBase enemy)

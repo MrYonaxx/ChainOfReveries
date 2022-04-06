@@ -111,6 +111,7 @@ namespace VoiceActing
         {
             for (int i = 0; i < playerData.Length; i++)
             {
+                runData.CharacterID = i;
                 if (playerData[i] == runData.PlayerCharacterData)
                     return playerDatabase[i];
             }

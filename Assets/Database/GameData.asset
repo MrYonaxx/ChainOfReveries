@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: GameData
   m_EditorClassIdentifier: 
   FirstTime: 1
-  Timer: 0
-  NbRun: 1
-  NbRunCompleted: 5
-  MaxReverieLevel: 0
-  NbRunCharacters: 030000000000000000000000
+  Timer: 2101.4805
+  NbRun: 2
+  NbRunCompleted: 6
+  MaxReverieLevel: 1
+  NbRunCharacters: 030000000100000000000000
   charactersUnlocked: 
   customDecks: 
   P1ControllerID: 0

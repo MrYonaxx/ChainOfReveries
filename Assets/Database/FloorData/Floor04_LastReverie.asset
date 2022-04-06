@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   floorName: Last Reverie
   floorLevel: 5
-  firstRoom: {fileID: 11400000, guid: 79edeb956aaade04cb4e43f09113c6a8, type: 2}
+  firstRoom: {fileID: 11400000, guid: 7b09ded4c4b835a4aadb692a528265a4, type: 2}
   floorLayout:
   - {fileID: 11400000, guid: c701f688fc82e22438d1f67ca6cd552c, type: 2}
   nextLevel: {fileID: 0}

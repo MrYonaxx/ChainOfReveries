@@ -78,5 +78,13 @@ namespace VoiceActing
             }
         }
 
+
+
+
+        // :shrug: Maximal
+        public void ChangeLevelBackground()
+        {
+            explorationManager.ChangeLevelBackground();
+        }
     }
 }

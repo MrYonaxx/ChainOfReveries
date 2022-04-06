@@ -22,7 +22,7 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   cardSprite: {fileID: 21300000, guid: f81d40d552f473a47976552822dfb045, type: 3}
-  cardName: Helm
+  cardName: Dragon Helm
   cardType: 1
   cardDescription: Reduce Knockback Time.
   statsModifier:

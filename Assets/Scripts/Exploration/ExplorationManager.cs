@@ -81,6 +81,11 @@ namespace VoiceActing
         Animator animatorEnding = null;
         [SerializeField]
         MenuGameOver gameOver = null;
+        public MenuGameOver GameOver
+        {
+            get { return gameOver; }
+        }
+
 
         [Title("Canvas")]
         [SerializeField]
@@ -104,7 +109,8 @@ namespace VoiceActing
         [SerializeField]
         GameObject buttonHud = null;
 
-
+        [SerializeField]
+        AudioClip music = null;
 
         private InputController inputController = null;
         public InputController InputController
@@ -148,6 +154,7 @@ namespace VoiceActing
             this.player = player;
             inputController = inputs;
             menuStatus.OnEnd += QuitMenuStatus;
+            AudioManager.Instance.PlayMusic(music);
         }
 
         void OnDestroy()
@@ -452,7 +459,8 @@ namespace VoiceActing
         public void ChangeLevelBackground()
         {
             levelBackgrounds[runData.Floor - 2].gameObject.SetActive(false);
-            levelBackgrounds[runData.Floor - 1].gameObject.SetActive(true);
+            if(levelBackgrounds.Length >= runData.Floor-1)
+                levelBackgrounds[runData.Floor - 1].gameObject.SetActive(true);
         }
 
         public void GoToMenuStatus()

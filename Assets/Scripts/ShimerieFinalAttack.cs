@@ -30,7 +30,10 @@ namespace VoiceActing
             player = character.LockController.TargetLocked;
             shimerie = character;
 
+            shimerie.CharacterAction.CancelSleight();
+            shimerie.DeckController.SetIndex(0);
             shimerie.SetCharacterMotionSpeed(1f);
+
             player.SetCharacterMotionSpeed(1f);
             player.CharacterAction.EndAction();
             player.CharacterAction.CancelAction();
@@ -43,8 +46,6 @@ namespace VoiceActing
             player.CharacterEquipment.UnequipAll();
 
             shimerie.CanPlay(false);
-            shimerie.CharacterAction.CancelSleight();
-            shimerie.DeckController.SetIndex(0);
             player.DeckController.SetIndex(1);
             player.CanPlay(false);
 
@@ -53,10 +54,9 @@ namespace VoiceActing
 
         private IEnumerator FinalAttackCoroutine()
         {
-            yield return null;
-
             yield return new WaitForSeconds(7f);
 
+            shimerie.DeckController.SetIndex(0);
             particleBladeBeam.transform.SetParent(player.ParticlePoint);
 
 

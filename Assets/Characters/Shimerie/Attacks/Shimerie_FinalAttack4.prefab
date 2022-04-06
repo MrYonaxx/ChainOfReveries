@@ -193,11 +193,14 @@ MonoBehaviour:
   runData: {fileID: 11400000, guid: 1aae71d6d0b174646afb7b05a8a06b1f, type: 2}
   charactersSequence:
   - {fileID: 7992540995189529229}
+  - {fileID: 7992540995189529229}
   cardBreakController: {fileID: 11400000, guid: cf99f13ec9b16ff459f0a38e0953f0d1,
     type: 2}
   characterToBreak: {fileID: 7539218269784988748}
   cardShimerieBlade: {fileID: 11400000, guid: 790ee7d975de1a9458bf1a664794b3a9, type: 2}
   attackHit: {fileID: 4733904636063077261}
+  attackFinal5: {fileID: 818057835518184039, guid: e8c45f0bf010a4a478da1911cae584f0,
+    type: 3}
   particleSystemDome: {fileID: 6288977915251601341}
   particleSystemParry1: {fileID: 5398626797182640843}
   particleSystemParry2: {fileID: 1781925842264807002}
@@ -10515,7 +10518,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frame: 0
-  frameEnd: 2800
+  frameEnd: 1000
 --- !u!114 &422043204435950550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -25384,7 +25387,7 @@ MonoBehaviour:
   characterAnimationData: {fileID: 4670453683040411876}
   linkToCharacter: 1
   fixToGround: 1
-  subActionCardBreakable: 0
+  subActionCardBreakable: 1
   canPlayerCorrectDirection: 0
   atkControllers:
   - {fileID: 4733904636063077261}

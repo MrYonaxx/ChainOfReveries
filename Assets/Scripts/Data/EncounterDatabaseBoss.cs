@@ -20,7 +20,7 @@ namespace VoiceActing
         EncounterDataBoss[] bosses = null;
 
         public CharacterData LastBossSelected = null;
-        List<EncounterDataBoss> bossesPool = null;
+        List<EncounterDataBoss> bossesPool = new List<EncounterDataBoss>();
 
         public void Reset()
         {

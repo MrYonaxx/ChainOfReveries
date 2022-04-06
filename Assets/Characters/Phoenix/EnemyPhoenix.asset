@@ -19,10 +19,10 @@ MonoBehaviour:
     damage but scatter your deck if hit. If you don't card break him afterward, he
     will restore his health to the maximum."
   characterStat:
-    hp: 6000
+    hp: 5200
     HPMax:
-      baseValue: 6000
-      finalValue: 6000
+      baseValue: 5200
+      finalValue: 5200
     Attack:
       baseValue: 1
       finalValue: 1

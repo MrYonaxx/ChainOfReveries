@@ -43,6 +43,9 @@ namespace VoiceActing
 
             AudioManager.Instance?.StopMusic(6f);
 
+
+            Debug.LogError("Ayo");
+
             // Instancie le boss
             bossEncounter = Instantiate(bossesData.SelectBoss(runData.Floor-1), this.transform);
             bosses = bossEncounter.Encounter;

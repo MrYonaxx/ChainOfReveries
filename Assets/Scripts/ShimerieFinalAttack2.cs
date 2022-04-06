@@ -104,6 +104,7 @@ namespace VoiceActing
         private void Reload()
         {
             player.DeckController.OnReload -= Reload;
+            player.DeckController.OnReloadChanged -= ReloadChanged;
             shimerie.CharacterAction.CancelAction();
             shimerie.CharacterAction.Action(nextAction);
             player.CanPlay(false);

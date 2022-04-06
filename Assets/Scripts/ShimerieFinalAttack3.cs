@@ -27,6 +27,9 @@ namespace VoiceActing
         [SerializeField]
         AttackController attackHit;
 
+        [SerializeField]
+        AttackManager attackFinal5;
+
         [Title("Particle")]
         [SerializeField]
         ParticleSystem particleSystemDome;
@@ -104,6 +107,20 @@ namespace VoiceActing
 
   
             }
+
+            yield return new WaitForSeconds(3f);
+            shimerie.CharacterStat.HP = 2;
+            shimerie.CharacterEquipment.UnequipAll();
+            player.LockController.StartTargeting();
+            player.LockController.Targeting = true;
+            player.LockController.TargetLocked = shimerie;
+            player.CharacterMovement.SetDirection(1);
+            shimerie.CharacterMovement.SetDirection(-1);
+            player.SpriteRenderer.enabled = true;
+            player.SpriteRenderer.color = new Color(player.SpriteRenderer.color.r, player.SpriteRenderer.color.g, player.SpriteRenderer.color.b, 1);
+            player.DeckController.SetDeck(runData.PlayerDeck);
+            player.DeckController.ReloadDeck();
+            player.CharacterAction.Action(attackFinal5);
 
         }
 

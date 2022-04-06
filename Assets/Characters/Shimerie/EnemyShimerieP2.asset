@@ -19,10 +19,10 @@ MonoBehaviour:
     still be Card breaked. Use everything you've learn and observe his attack to
     find how to Card break him. \n\nIt's the final battle, shatter the last Reverie."
   characterStat:
-    hp: 13499
+    hp: 10500
     HPMax:
-      baseValue: 2
-      finalValue: 2
+      baseValue: 10500
+      finalValue: 10500
     Attack:
       baseValue: 1
       finalValue: 1

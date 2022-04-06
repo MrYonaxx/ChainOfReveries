@@ -4962,7 +4962,7 @@ MonoBehaviour:
     AnimationEvent: {fileID: 4330823922755122192}
   - Frame: 110
     AnimationEvent: {fileID: 6437026456829446776}
-  - Frame: 120
+  - Frame: 150
     AnimationEvent: {fileID: 2524242894598313049}
 --- !u!114 &4461643240352555985
 MonoBehaviour:
@@ -5022,7 +5022,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620e0e815b2f5174f8b380210d9a19f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 120
+  frame: 150
   frameEnd: 0
 --- !u!1 &4114098666737907609
 GameObject:
@@ -5073,7 +5073,7 @@ MonoBehaviour:
     type: 3}
   onlyHitStopOpponent: 0
   hitStop: 0
-  knockbackDurationMultiplier: 1.6
+  knockbackDurationMultiplier: 2
   knockbackX: 0
   knockbackZ: 0
   knockbackInvulnerability: 1
@@ -5287,8 +5287,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackProcessor: 0
   cardDamage:
-    cardDamage: 2c0100002c0100002c0100002c0100002c0100002c0100002c0100002c0100002c0100002c010000
-    debugDamage: {x: 300, y: 300}
+    cardDamage: 90010000900100009001000090010000900100009001000090010000900100009001000090010000
+    debugDamage: {x: 400, y: 400}
     ignoreStatsMultiplier: 0
   cardStatus:
     statusDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -5309,6 +5309,10 @@ MonoBehaviour:
     ignoreStatsMultiplier: 0
   backdamage:
     baseDamage: 100
+    ignoreStatsMultiplier: 0
+  banDamage:
+    damagePerBan: 100
+    attackType: 0
     ignoreStatsMultiplier: 0
 --- !u!1 &6664025316910145470
 GameObject:

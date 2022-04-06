@@ -17,6 +17,6 @@ MonoBehaviour:
   cardDescription: 
   cardType: 0
   nbCardReward: 0
-  explorationEvent: {fileID: 4240324989005109662, guid: 73980039ec7958f4c94d8244736a0baa,
+  explorationEvent: {fileID: 3092287285884964664, guid: c335686fc2bb3db4d94eb6d263127219,
     type: 3}
   battleModifiers: []

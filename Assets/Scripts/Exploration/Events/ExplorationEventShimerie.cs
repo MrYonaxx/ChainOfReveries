@@ -61,15 +61,24 @@ namespace VoiceActing
         [SerializeField]
         AttackManager attackIntroP2;
 
+        [Title("Ending")]
+        [SerializeField]
+        ParticleSystem particleDeath = null;
+        [SerializeField]
+        Animator animatorEnding = null;
+
         [Title("Debug")]
         [SerializeField]
         ExplorationManager debugExploration;
 
         private void Start()
         {
-            debugExploration.Player.transform.position += new Vector3(-5, 0, 0);
-            debugExploration.HideExplorationMenu();
-            CreateEvent(debugExploration);
+            if (debugExploration != null)
+            {
+                debugExploration.Player.transform.position += new Vector3(-5, 0, 0);
+                debugExploration.HideExplorationMenu();
+                CreateEvent(debugExploration);
+            }
             AudioManager.Instance.StopMusic();
         }
 
@@ -159,6 +168,7 @@ namespace VoiceActing
 
         public void EndBossBattle()
         {
+            battleManager.OnEventBattleEnd -= EndBossBattle;
             StartCoroutine(TransitionP2Coroutine());
         }
 
@@ -221,11 +231,45 @@ namespace VoiceActing
             explorationManager.InputController.SetControllable(explorationManager.Player);
             battleManager.InitializeBattle(explorationManager.Player, bosses);
 
+            explorationManager.Player.CanPlay(false);
             bossShimerieP2.Character.DeckController.ReloadDeck();
             healthShimerie.gameObject.SetActive(true);
             battleManager.SetTarget(bossShimerieP2.Character);
 
             explorationManager.Player.transform.position = BattleUtils.Instance.BattleCenter.position - new Vector3(2, 0, 0);
+
+
+            bossShimerieP2.Character.CharacterKnockback.OnDeath += Ending;
+
+
+            yield return new WaitForSeconds(10f);
+            explorationManager.Player.CanPlay(true);
+        }
+
+        private void Ending(CharacterBase c, DamageMessage msg)
+        {
+            bossShimerieP2.Character.CharacterKnockback.OnDeath -= Ending;
+
+
+            particleDeath.gameObject.SetActive(true);
+            particleDeath.transform.SetParent(bossShimerieP2.Character.ParticlePoint);
+            particleDeath.transform.localPosition = Vector3.zero;
+            particleDeath.Play();
+
+
+            animatorEnding.gameObject.SetActive(true);
+            StartCoroutine(EndingCoroutine());
+        }
+
+        private IEnumerator EndingCoroutine()
+        {
+
+            yield return new WaitForSeconds(10f);
+            explorationManager.Player.Inputs.enabled = false;
+            explorationManager.Player.CanPlay(false);
+            yield return new WaitForSeconds(27f);
+            explorationManager.Player.Inputs.enabled = true;
+            explorationManager.GameOver.InitializeMenu();
         }
 
         private void OnDestroy()

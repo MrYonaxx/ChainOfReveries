@@ -65,11 +65,11 @@ MonoBehaviour:
   AnimatorDebug: {fileID: 677981557941761528}
   AnimationClipDebug: {fileID: 7400000, guid: 5bccf077e7ad7454a8825984a0827b7c, type: 2}
   frameData:
-  - Frame: 20
+  - Frame: 35
     AnimationEvent: {fileID: 3250917157316429144}
-  - Frame: 30
+  - Frame: 45
     AnimationEvent: {fileID: 7284589822210834423}
-  - Frame: 40
+  - Frame: 60
     AnimationEvent: {fileID: 2524242894598313049}
 --- !u!114 &3250917157316429144
 MonoBehaviour:
@@ -83,9 +83,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea6e2188cc64ea48aef29aadefc1f15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 20
+  frame: 35
   frameEnd: 0
   action: {fileID: 818057835518184039, guid: f3a4117907ca9264da594ef6a7ff8a0c, type: 3}
+  setTransform: 0
+  setRotation: 0
+  spawnPoint: {fileID: 0}
+  rotationZ: 0
 --- !u!114 &7284589822210834423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30aa148586dde644daf200dde6eea4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 30
+  frame: 45
   frameEnd: 0
   cancelItself: 1
   cancelSpecial: 1
@@ -115,7 +119,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620e0e815b2f5174f8b380210d9a19f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 40
+  frame: 60
   frameEnd: 0
 --- !u!1 &4388082830208477171
 GameObject:
@@ -142,7 +146,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4388082830208477171}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.063884445, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6202298799396831511}
@@ -187,7 +191,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 664d4bd4842e877498fed53c10059332, type: 3}
+  m_Sprite: {fileID: -4308915464193131497, guid: 6a8a44372dbce534eb2769521f6a610f,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -250,6 +255,7 @@ MonoBehaviour:
   linkToCharacter: 1
   fixToGround: 0
   subActionCardBreakable: 0
+  canPlayerCorrectDirection: 1
   atkControllers: []
 --- !u!1 &7345693785975693917
 GameObject:
