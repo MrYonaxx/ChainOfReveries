@@ -240,6 +240,16 @@ PrefabInstance:
       propertyPath: m_WasSpriteAssigned
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3308274972262838116, guid: 7c56ef123a7bd564fa0f79108422bce0,
+        type: 3}
+      propertyPath: soundFirstDown.sound
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3308274972262838116, guid: 7c56ef123a7bd564fa0f79108422bce0,
+        type: 3}
+      propertyPath: soundSecondDown.sound
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5230426284488749445, guid: 7c56ef123a7bd564fa0f79108422bce0,
         type: 3}
       propertyPath: m_Mesh

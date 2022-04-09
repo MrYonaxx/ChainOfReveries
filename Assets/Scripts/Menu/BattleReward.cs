@@ -83,6 +83,17 @@ namespace VoiceActing
         [SerializeField]
         Animator animatorCardControllers = null;
 
+
+        [Title("Sounds")]
+        [SerializeField]
+        SoundParameter soundVictory = null;
+       /* [SerializeField]
+        SoundParameter soundSelect = null;*/
+        [SerializeField]
+        SoundParameter soundValidate = null;
+        [SerializeField]
+        SoundParameter soundCardGet = null;
+
         private CharacterBase player;
         public delegate void Action();
         public event Action OnEventEnd;
@@ -186,6 +197,7 @@ namespace VoiceActing
 
         private IEnumerator BattleRewardCoroutine()
         {
+            soundVictory.PlaySound();
             yield return new WaitForSeconds(1f);
             animatorCardControllers.gameObject.SetActive(true);
             //yield return new WaitForSeconds(1f);
@@ -260,6 +272,7 @@ namespace VoiceActing
                 }
             }
             animatorBattleWin.SetTrigger("Feedback");
+            soundValidate.PlaySound();
         }
 
         private void BackToReward()
@@ -282,7 +295,7 @@ namespace VoiceActing
         {
             // Joue animation carte
             player.Animator.Play("GetCard");
-
+            soundCardGet.PlaySound();
             animatorBattleWin.SetBool("Appear", false);
             animatorCardControllers.SetInteger("Reward", 0);
             animatorCardControllers.gameObject.SetActive(false);

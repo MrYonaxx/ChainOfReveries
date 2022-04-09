@@ -1,5 +1,54 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &385769832172414791
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1583805000340576649}
+  - component: {fileID: 8610491858968298958}
+  m_Layer: 0
+  m_Name: Sounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1583805000340576649
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385769832172414791}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 248121844606041498}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8610491858968298958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 385769832172414791}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 55
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 766e557cca6dedf459b14714d6107256, type: 3}
+    volume: 0.8
+    pitch: {x: 0.9, y: 1.1}
 --- !u!1 &565687993561507469
 GameObject:
   m_ObjectHideFlags: 0
@@ -106,6 +155,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3033484806284040124}
+  - {fileID: 1583805000340576649}
   m_Father: {fileID: 5842096757366747166}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -139,6 +189,8 @@ MonoBehaviour:
   AnimatorDebug: {fileID: 677981557941761528}
   AnimationClipDebug: {fileID: 7400000, guid: e3d9fd967f1eb6443ac7708ec0c3bf2b, type: 2}
   frameData:
+  - Frame: 55
+    AnimationEvent: {fileID: 8610491858968298958}
   - Frame: 65
     AnimationEvent: {fileID: 4461643240352555985}
   - Frame: 100
@@ -219,11 +271,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onHitAnimation: {fileID: 855764348832698739, guid: 734251cd418c42946b79b2586c648edb,
     type: 3}
+  onlyHitStopOpponent: 0
   hitStop: 0.2
   knockbackDurationMultiplier: 1
   knockbackX: 0
   knockbackZ: 8
   knockbackInvulnerability: 0.2
+  revengeValue: 1
 --- !u!114 &5485531285977804821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -320,9 +374,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5053397183770984521, guid: f7b96a57640097a4c80734605d727c5f,
+  m_Sprite: {fileID: -7681764668016165844, guid: a23827852e2dd174e94acb44c52c1d32,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -466,6 +520,9 @@ MonoBehaviour:
   attackAnimation: {fileID: 7400000, guid: e3d9fd967f1eb6443ac7708ec0c3bf2b, type: 2}
   characterAnimationData: {fileID: 4670453683040411876}
   linkToCharacter: 0
+  fixToGround: 0
+  subActionCardBreakable: 0
+  canPlayerCorrectDirection: 1
   atkControllers:
   - {fileID: 4733904636063077261}
 --- !u!1 &6110435575002120153
@@ -517,13 +574,29 @@ MonoBehaviour:
     debugDamage: {x: 100, y: 200}
     ignoreStatsMultiplier: 0
   cardStatus:
-    status: {fileID: 0}
     statusDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+    status: {fileID: 0}
+    canApplyMultipleTime: 1
+    canApplyOnKnockback: 1
+    debugDamage: {x: 100, y: 200}
   cardPercentage:
     percentDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+    debugDamage: {x: 100, y: 200}
+    maxHP: 0
   element:
     element: 0
     ignoreElementalStat: 0
+  damage:
+    baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
+  backdamage:
+    baseDamage: 100
+    ignoreStatsMultiplier: 0
+  banDamage:
+    damagePerBan: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
 --- !u!1 &6664025316910145470
 GameObject:
   m_ObjectHideFlags: 0
@@ -677,6 +750,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 5220906522094568337}
+  animatorSpeed: 1
 --- !u!114 &6962274560077492094
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -690,6 +764,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   targetAtStart: 1
+  targetRandom: 0
+  targetAtUpdate: 0
+  randomX: {x: -6, y: 6}
+  randomY: {x: -1, y: 2}
 --- !u!1 &7345693785975693917
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 2260525837532545912}
   - component: {fileID: 4670453683040411876}
   - component: {fileID: 3250917157316429144}
-  - component: {fileID: 7284589822210834423}
   - component: {fileID: 2524242894598313049}
   m_Layer: 0
   m_Name: AttackAnimationData
@@ -31,7 +30,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 7063238220564912572}
   m_Father: {fileID: 5842096757366747166}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -65,11 +65,11 @@ MonoBehaviour:
   AnimatorDebug: {fileID: 677981557941761528}
   AnimationClipDebug: {fileID: 7400000, guid: 5bccf077e7ad7454a8825984a0827b7c, type: 2}
   frameData:
-  - Frame: 20
-    AnimationEvent: {fileID: 3250917157316429144}
   - Frame: 30
-    AnimationEvent: {fileID: 7284589822210834423}
-  - Frame: 40
+    AnimationEvent: {fileID: 5750266869717551283}
+  - Frame: 35
+    AnimationEvent: {fileID: 3250917157316429144}
+  - Frame: 70
     AnimationEvent: {fileID: 2524242894598313049}
 --- !u!114 &3250917157316429144
 MonoBehaviour:
@@ -83,26 +83,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea6e2188cc64ea48aef29aadefc1f15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 20
+  frame: 35
   frameEnd: 0
   action: {fileID: 818057835518184039, guid: 2ae0e9bb3c6578d4aaa852cf1ea8bec9, type: 3}
---- !u!114 &7284589822210834423
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3720685875369100543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30aa148586dde644daf200dde6eea4c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  frame: 30
-  frameEnd: 0
-  cancelItself: 1
-  cancelSpecial: 1
-  cancelType: 000000000100000003000000
+  setTransform: 0
+  setRotation: 0
+  spawnPoint: {fileID: 0}
+  rotationZ: 0
 --- !u!114 &2524242894598313049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,7 +102,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620e0e815b2f5174f8b380210d9a19f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 40
+  frame: 70
   frameEnd: 0
 --- !u!1 &4388082830208477171
 GameObject:
@@ -142,7 +129,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4388082830208477171}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.06904, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6202298799396831511}
@@ -187,7 +174,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 664d4bd4842e877498fed53c10059332, type: 3}
+  m_Sprite: {fileID: -4308915464193131497, guid: 6a8a44372dbce534eb2769521f6a610f,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -198,6 +186,55 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &4788518480513705239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7063238220564912572}
+  - component: {fileID: 5750266869717551283}
+  m_Layer: 0
+  m_Name: Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7063238220564912572
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4788518480513705239}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 248121844606041498}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5750266869717551283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4788518480513705239}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 30
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 10f4b4c33804ff743bb57f58d0498a99, type: 3}
+    volume: 0.8
+    pitch: {x: 0.9, y: 1.1}
 --- !u!1 &5842096757366747167
 GameObject:
   m_ObjectHideFlags: 0
@@ -250,6 +287,7 @@ MonoBehaviour:
   linkToCharacter: 1
   fixToGround: 0
   subActionCardBreakable: 0
+  canPlayerCorrectDirection: 1
   atkControllers: []
 --- !u!1 &7345693785975693917
 GameObject:

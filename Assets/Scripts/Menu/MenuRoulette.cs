@@ -24,6 +24,13 @@ namespace VoiceActing
         [SerializeField]
         TextMeshProUGUI textCardDescription = null;
 
+        [SerializeField]
+        SoundParameter soundShuffle = null;
+        [SerializeField]
+        SoundParameter soundValidate = null;
+        [SerializeField]
+        SoundParameter soundQuit = null;
+
         int index = 0; 
 
         bool active = false;
@@ -55,7 +62,8 @@ namespace VoiceActing
             {
                 if (input.InputA.Registered)
                 {
-                    input.InputA.ResetBuffer();
+                    input.InputA.ResetBuffer(); 
+                    soundQuit.PlaySound();
                     QuitMenu();
                     return;
                 }
@@ -67,6 +75,7 @@ namespace VoiceActing
                 if (input.InputA.Registered)
                 {
                     input.InputA.ResetBuffer();
+                    soundValidate.PlaySound();
                     DrawCardSelectedMenu();
                     reward = true;
                     return;
@@ -80,6 +89,7 @@ namespace VoiceActing
                     if (index >= deck.Count)
                         index = 0;
                     deckDrawer.MoveHand(index, deck);
+                    soundShuffle.PlaySound();
                     t = rouletteSpeed;
                 }
             }

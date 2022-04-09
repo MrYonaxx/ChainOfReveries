@@ -39,6 +39,11 @@ namespace Menu
         GameObject buttonSynthesize = null;
 
 
+        [Title("Sounds")]
+        [SerializeField]
+        SoundParameter soundValidate = null;
+
+
         Stack<Card> cardSelected = new Stack<Card>();
         public Stack<Card> CardSelected
         {
@@ -96,6 +101,7 @@ namespace Menu
             {
                 if (holdController.HoldButton(input.InputY.InputValue == 1))
                 {
+                    soundValidate.PlaySound();
                     buttonSynthesize.gameObject.SetActive(false);
                     OnSelected.Invoke();
                     cardSelected.Clear();

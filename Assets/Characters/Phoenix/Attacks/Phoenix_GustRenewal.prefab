@@ -1,5 +1,54 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1223710480557772924
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6855426866494531473}
+  - component: {fileID: 1320285246689241129}
+  m_Layer: 0
+  m_Name: Sounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6855426866494531473
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223710480557772924}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 248121844606041498}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1320285246689241129
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1223710480557772924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 0
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 8b0b28ad82662c04ab96628d75772c64, type: 3}
+    volume: 1
+    pitch: {x: 0.9, y: 1.1}
 --- !u!1 &2469241746260582066
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,6 +154,7 @@ Transform:
   m_Children:
   - {fileID: 918291568869460778}
   - {fileID: 6170470185010184287}
+  - {fileID: 6855426866494531473}
   m_Father: {fileID: 5842096757366747166}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -142,6 +192,8 @@ MonoBehaviour:
     AnimationEvent: {fileID: 1910362814696548456}
   - Frame: 0
     AnimationEvent: {fileID: 7806274829508832256}
+  - Frame: 0
+    AnimationEvent: {fileID: 1320285246689241129}
   - Frame: 60
     AnimationEvent: {fileID: 2801548838166731099}
   - Frame: 200
@@ -5130,6 +5182,7 @@ MonoBehaviour:
   linkToCharacter: 1
   fixToGround: 0
   subActionCardBreakable: 0
+  canPlayerCorrectDirection: 1
   atkControllers:
   - {fileID: 4733904636063077261}
 --- !u!1 &6110435575002120153
@@ -5183,15 +5236,25 @@ MonoBehaviour:
   cardStatus:
     statusDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     status: {fileID: 0}
+    canApplyMultipleTime: 1
+    canApplyOnKnockback: 1
     debugDamage: {x: 100, y: 200}
   cardPercentage:
     percentDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     debugDamage: {x: 100, y: 200}
+    maxHP: 0
   element:
     element: 0
     ignoreElementalStat: 0
   damage:
     baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
+  backdamage:
+    baseDamage: 100
+    ignoreStatsMultiplier: 0
+  banDamage:
+    damagePerBan: 100
     attackType: 0
     ignoreStatsMultiplier: 0
 --- !u!1 &6664025316910145470

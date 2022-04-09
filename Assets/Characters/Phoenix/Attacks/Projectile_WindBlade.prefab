@@ -104,7 +104,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1611531884834580167}
   m_Father: {fileID: 5842096757366747166}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -140,6 +141,8 @@ MonoBehaviour:
   frameData:
   - Frame: 0
     AnimationEvent: {fileID: 4461643240352555985}
+  - Frame: 0
+    AnimationEvent: {fileID: 3976305454979193472}
   - Frame: 60
     AnimationEvent: {fileID: 8812296902967884034}
 --- !u!114 &4461643240352555985
@@ -218,12 +221,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onHitAnimation: {fileID: 855764348832698739, guid: 734251cd418c42946b79b2586c648edb,
     type: 3}
+  onlyHitStopOpponent: 0
   hitStop: 0.2
   knockbackDurationMultiplier: 1
   knockbackX: 6
   knockbackZ: 0
-  revengeValue: 3
   knockbackInvulnerability: 0.5
+  revengeValue: 3
 --- !u!114 &5485531285977804821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -319,6 +323,55 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &4458888635480537339
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1611531884834580167}
+  - component: {fileID: 3976305454979193472}
+  m_Layer: 0
+  m_Name: Sounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1611531884834580167
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4458888635480537339}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.40000004, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 248121844606041498}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3976305454979193472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4458888635480537339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 0
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: d8f1019c9d368564bbe6a1ab4e88f407, type: 3}
+    volume: 1
+    pitch: {x: 0.9, y: 1.1}
 --- !u!1 &5324746140653630324
 GameObject:
   m_ObjectHideFlags: 0
@@ -454,6 +507,7 @@ MonoBehaviour:
   linkToCharacter: 0
   fixToGround: 0
   subActionCardBreakable: 1
+  canPlayerCorrectDirection: 1
   atkControllers:
   - {fileID: 4733904636063077261}
 --- !u!1 &6110435575002120153
@@ -507,15 +561,25 @@ MonoBehaviour:
   cardStatus:
     statusDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     status: {fileID: 0}
+    canApplyMultipleTime: 1
+    canApplyOnKnockback: 1
     debugDamage: {x: 100, y: 200}
   cardPercentage:
     percentDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     debugDamage: {x: 100, y: 200}
+    maxHP: 0
   element:
     element: 0
     ignoreElementalStat: 0
   damage:
     baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
+  backdamage:
+    baseDamage: 100
+    ignoreStatsMultiplier: 0
+  banDamage:
+    damagePerBan: 100
     attackType: 0
     ignoreStatsMultiplier: 0
 --- !u!1 &6664025316910145470

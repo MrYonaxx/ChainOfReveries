@@ -466,6 +466,131 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &1212186808330436690
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7925698543236868636}
+  - component: {fileID: 4488691855678979902}
+  - component: {fileID: 7742863699599101178}
+  - component: {fileID: 16239741959497731}
+  - component: {fileID: 6372417461862084800}
+  - component: {fileID: 842903162858114032}
+  m_Layer: 0
+  m_Name: Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7925698543236868636
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212186808330436690}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 248121844606041498}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4488691855678979902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212186808330436690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 52
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 113e5eb13afc6ac4dbbe4b668edec963, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
+--- !u!114 &7742863699599101178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212186808330436690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 55
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 3e38345d43720d446a7491d3d2b967e6, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
+--- !u!114 &16239741959497731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212186808330436690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 52
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 9da2f0a8d4d11d84aa78cdd6cf166e92, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
+--- !u!114 &6372417461862084800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212186808330436690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 85
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 9da2f0a8d4d11d84aa78cdd6cf166e92, type: 3}
+    volume: 1
+    pitch: {x: 1, y: 1}
+--- !u!114 &842903162858114032
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1212186808330436690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 10
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 98ac731827c4582408e3aa8bb9de92ec, type: 3}
+    volume: 0.8
+    pitch: {x: 0.8, y: 0.8}
 --- !u!1 &1862234112059066701
 GameObject:
   m_ObjectHideFlags: 0
@@ -1326,12 +1451,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onHitAnimation: {fileID: 855764348832698739, guid: 734251cd418c42946b79b2586c648edb,
     type: 3}
+  onlyHitStopOpponent: 0
   hitStop: 0.3
   knockbackDurationMultiplier: 1
   knockbackX: 7
   knockbackZ: 1
-  revengeValue: 3
   knockbackInvulnerability: 0.1
+  revengeValue: 3
 --- !u!114 &6025014680465541833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1370,7 +1496,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dad7e80ac0cdbd428606f8c14ac4bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dezoom: 0
+  zoomValue:
+  - -0.5
+  - -0.5
+  - 0
+  zoomTime:
+  - 6
+  - 12
+  - 6
+  smoothZoom: 0
 --- !u!1 &3720685875369100543
 GameObject:
   m_ObjectHideFlags: 0
@@ -1408,6 +1542,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 7923213433310778786}
+  - {fileID: 7925698543236868636}
   m_Father: {fileID: 5842096757366747166}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1447,6 +1582,8 @@ MonoBehaviour:
     AnimationEvent: {fileID: 8323006924474913636}
   - Frame: 1
     AnimationEvent: {fileID: 4689905395784803237}
+  - Frame: 10
+    AnimationEvent: {fileID: 842903162858114032}
   - Frame: 11
     AnimationEvent: {fileID: 5793871829644042148}
   - Frame: 13
@@ -1455,10 +1592,18 @@ MonoBehaviour:
     AnimationEvent: {fileID: 365633531737073657}
   - Frame: 45
     AnimationEvent: {fileID: 5726066158223875471}
+  - Frame: 52
+    AnimationEvent: {fileID: 4488691855678979902}
+  - Frame: 52
+    AnimationEvent: {fileID: 16239741959497731}
+  - Frame: 55
+    AnimationEvent: {fileID: 7742863699599101178}
   - Frame: 65
     AnimationEvent: {fileID: 4461643240352555985}
   - Frame: 80
     AnimationEvent: {fileID: 3062944890540664850}
+  - Frame: 85
+    AnimationEvent: {fileID: 6372417461862084800}
   - Frame: 100
     AnimationEvent: {fileID: 159302594812856131}
   - Frame: 145
@@ -1510,6 +1655,7 @@ MonoBehaviour:
   frame: 45
   frameEnd: 0
   fx: {fileID: 8222886816646404730}
+  appear: 1
 --- !u!114 &4461643240352555985
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1540,6 +1686,7 @@ MonoBehaviour:
   frame: 80
   frameEnd: 0
   fx: {fileID: 5003928161949460182}
+  appear: 1
 --- !u!114 &159302594812856131
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1861,12 +2008,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onHitAnimation: {fileID: 855764348832698739, guid: 734251cd418c42946b79b2586c648edb,
     type: 3}
+  onlyHitStopOpponent: 0
   hitStop: 0.1
   knockbackDurationMultiplier: 0.5
   knockbackX: 2
   knockbackZ: 4
-  revengeValue: 3
   knockbackInvulnerability: 0.1
+  revengeValue: 3
 --- !u!114 &5485531285977804821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2581,7 +2729,7 @@ GameObject:
   - component: {fileID: 5842096757366747166}
   - component: {fileID: 818057835518184039}
   m_Layer: 9
-  m_Name: Nelys_AttackFollowUpThunder
+  m_Name: NelysB_AttackFollowUpThunder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2624,6 +2772,7 @@ MonoBehaviour:
   linkToCharacter: 1
   fixToGround: 0
   subActionCardBreakable: 0
+  canPlayerCorrectDirection: 1
   atkControllers:
   - {fileID: 4733904636063077261}
   - {fileID: 5362598612968110090}
@@ -2678,15 +2827,25 @@ MonoBehaviour:
   cardStatus:
     statusDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     status: {fileID: 0}
+    canApplyMultipleTime: 1
+    canApplyOnKnockback: 1
     debugDamage: {x: 100, y: 200}
   cardPercentage:
     percentDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     debugDamage: {x: 100, y: 200}
+    maxHP: 0
   element:
     element: 0
     ignoreElementalStat: 0
   damage:
     baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
+  backdamage:
+    baseDamage: 100
+    ignoreStatsMultiplier: 0
+  banDamage:
+    damagePerBan: 100
     attackType: 0
     ignoreStatsMultiplier: 0
 --- !u!1 &6132381176784471700
@@ -3400,15 +3559,25 @@ MonoBehaviour:
   cardStatus:
     statusDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     status: {fileID: 0}
+    canApplyMultipleTime: 1
+    canApplyOnKnockback: 1
     debugDamage: {x: 100, y: 200}
   cardPercentage:
     percentDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     debugDamage: {x: 100, y: 200}
+    maxHP: 0
   element:
     element: 0
     ignoreElementalStat: 0
   damage:
     baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
+  backdamage:
+    baseDamage: 100
+    ignoreStatsMultiplier: 0
+  banDamage:
+    damagePerBan: 100
     attackType: 0
     ignoreStatsMultiplier: 0
 --- !u!1 &8222886816646404730

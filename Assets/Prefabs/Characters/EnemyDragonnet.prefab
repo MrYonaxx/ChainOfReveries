@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateID: 0
   evadeAction: {fileID: 0}
-  flyHeight: {x: 0.7, y: 0.8}
-  speedZ: 0.5
+  flyHeight: {x: 0.6, y: 0.7}
+  speedZ: 0.4
 --- !u!1 &3524539374360354612
 GameObject:
   m_ObjectHideFlags: 0
@@ -66,7 +66,6 @@ MonoBehaviour:
   bufferTime: 0.25
   aiEnabled: 0
   character: {fileID: 1224843031718512110}
-  debugOn: 0
 --- !u!114 &3524539374360354614
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -364,6 +363,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2614562310532105280, guid: fe4013b5abaa9e7409e90a947e327e0e,
         type: 3}
+    - target: {fileID: 5230426284488749445, guid: 7c56ef123a7bd564fa0f79108422bce0,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 5542107751620278316, guid: 7c56ef123a7bd564fa0f79108422bce0,
         type: 3}
       propertyPath: m_Mesh

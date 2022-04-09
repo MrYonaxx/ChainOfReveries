@@ -19,6 +19,8 @@ namespace VoiceActing
         Animator chestAnimator = null;
         [SerializeField]
         GameObject buttonPrompt = null;
+        [SerializeField]
+        SoundParameter soundChestOpen = null;
 
         bool isOpen = false;
         CharacterBase characterToInteract = null;
@@ -43,6 +45,7 @@ namespace VoiceActing
 
             isOpen = true;
             chestAnimator.SetTrigger("Feedback");
+            soundChestOpen.PlaySound();
 
             // Flemme detecté
             GetComponent<BoxCollider2D>().enabled = false;

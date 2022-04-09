@@ -463,6 +463,7 @@ Transform:
   m_Children:
   - {fileID: 6170470185010184287}
   - {fileID: 1892709327003173457}
+  - {fileID: 8186534133240006550}
   m_Father: {fileID: 5842096757366747166}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -498,24 +499,38 @@ MonoBehaviour:
   frameData:
   - Frame: 0
     AnimationEvent: {fileID: 714956832288177373}
+  - Frame: 60
+    AnimationEvent: {fileID: 7923229096860619055}
   - Frame: 61
     AnimationEvent: {fileID: 2420666930332643398}
   - Frame: 61
     AnimationEvent: {fileID: 9045210711854858479}
+  - Frame: 140
+    AnimationEvent: {fileID: 7075007097669619612}
   - Frame: 141
     AnimationEvent: {fileID: 8847576116670135290}
   - Frame: 141
     AnimationEvent: {fileID: 6323951280609322601}
-  - Frame: 181
-    AnimationEvent: {fileID: 8403555689245310505}
+  - Frame: 180
+    AnimationEvent: {fileID: 3278240538099824911}
   - Frame: 181
     AnimationEvent: {fileID: 2821921690115969637}
+  - Frame: 181
+    AnimationEvent: {fileID: 8403555689245310505}
+  - Frame: 220
+    AnimationEvent: {fileID: 1208361053320156050}
   - Frame: 240
     AnimationEvent: {fileID: 6328656298854878864}
   - Frame: 300
     AnimationEvent: {fileID: 598343725437263120}
+  - Frame: 300
+    AnimationEvent: {fileID: 1694850517243589550}
   - Frame: 301
     AnimationEvent: {fileID: 8244509979863671000}
+  - Frame: 340
+    AnimationEvent: {fileID: 7272397628223761424}
+  - Frame: 380
+    AnimationEvent: {fileID: 1305869775144406474}
   - Frame: 390
     AnimationEvent: {fileID: 3317581432022458506}
   - Frame: 420
@@ -5466,6 +5481,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateID: 3
   throwTransform: {fileID: 193219379497197201}
+  canMove: 0
 --- !u!1 &4114098666737907609
 GameObject:
   m_ObjectHideFlags: 0
@@ -5512,12 +5528,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   onHitAnimation: {fileID: 0}
+  onlyHitStopOpponent: 0
   hitStop: 0
   knockbackDurationMultiplier: 1
   knockbackX: 5
   knockbackZ: 6
-  revengeValue: 0
   knockbackInvulnerability: 1
+  revengeValue: 0
 --- !u!114 &2566786319279307654
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5626,6 +5643,169 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &4520304822746823066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8186534133240006550}
+  - component: {fileID: 7923229096860619055}
+  - component: {fileID: 7075007097669619612}
+  - component: {fileID: 3278240538099824911}
+  - component: {fileID: 1208361053320156050}
+  - component: {fileID: 1694850517243589550}
+  - component: {fileID: 7272397628223761424}
+  - component: {fileID: 1305869775144406474}
+  m_Layer: 0
+  m_Name: Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8186534133240006550
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4520304822746823066}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 248121844606041498}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7923229096860619055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4520304822746823066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 60
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: a534bdccbcbcb9f48aa281faee816700, type: 3}
+    volume: 0.8
+    pitch: {x: 0.9, y: 1.1}
+--- !u!114 &7075007097669619612
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4520304822746823066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 140
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: a534bdccbcbcb9f48aa281faee816700, type: 3}
+    volume: 0.8
+    pitch: {x: 0.9, y: 1.1}
+--- !u!114 &3278240538099824911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4520304822746823066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 180
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: a534bdccbcbcb9f48aa281faee816700, type: 3}
+    volume: 0.8
+    pitch: {x: 0.9, y: 1.1}
+--- !u!114 &1208361053320156050
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4520304822746823066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 220
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: c8d262a3e24d4fe459c6c0a1334773cf, type: 3}
+    volume: 1
+    pitch: {x: 0.8, y: 0.9}
+--- !u!114 &1694850517243589550
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4520304822746823066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 300
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: a4726d5e19287fb4ba353e26908560db, type: 3}
+    volume: 0.8
+    pitch: {x: 0.9, y: 1.1}
+--- !u!114 &7272397628223761424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4520304822746823066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 340
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 98ac731827c4582408e3aa8bb9de92ec, type: 3}
+    volume: 0.8
+    pitch: {x: 0.8, y: 0.9}
+--- !u!114 &1305869775144406474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4520304822746823066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 380
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: d8f1019c9d368564bbe6a1ab4e88f407, type: 3}
+    volume: 0.8
+    pitch: {x: 0.8, y: 0.9}
 --- !u!1 &5842096757366747167
 GameObject:
   m_ObjectHideFlags: 0
@@ -6037,12 +6217,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onHitAnimation: {fileID: 855764348832698739, guid: 734251cd418c42946b79b2586c648edb,
     type: 3}
+  onlyHitStopOpponent: 0
   hitStop: 0.3
   knockbackDurationMultiplier: 0
   knockbackX: 0
   knockbackZ: 0
-  revengeValue: 0
   knockbackInvulnerability: 0.1
+  revengeValue: 0
 --- !u!114 &8021114785954082282
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6373,6 +6554,13 @@ MonoBehaviour:
     baseDamage: 100
     attackType: 0
     ignoreStatsMultiplier: 1
+  backdamage:
+    baseDamage: 100
+    ignoreStatsMultiplier: 0
+  banDamage:
+    damagePerBan: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
 --- !u!1 &8868023440971872186
 GameObject:
   m_ObjectHideFlags: 0
@@ -6495,6 +6683,13 @@ MonoBehaviour:
     baseDamage: 1000
     attackType: 0
     ignoreStatsMultiplier: 1
+  backdamage:
+    baseDamage: 100
+    ignoreStatsMultiplier: 0
+  banDamage:
+    damagePerBan: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
 --- !u!1 &8946934196563594140
 GameObject:
   m_ObjectHideFlags: 0
@@ -6652,12 +6847,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onHitAnimation: {fileID: 855764348832698739, guid: 734251cd418c42946b79b2586c648edb,
     type: 3}
+  onlyHitStopOpponent: 0
   hitStop: 0.2
   knockbackDurationMultiplier: 0
   knockbackX: 0
   knockbackZ: 0
-  revengeValue: 0
   knockbackInvulnerability: 0.1
+  revengeValue: 0
 --- !u!114 &6593307066571553562
 MonoBehaviour:
   m_ObjectHideFlags: 0

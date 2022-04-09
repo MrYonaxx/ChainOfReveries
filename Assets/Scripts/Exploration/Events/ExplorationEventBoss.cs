@@ -43,9 +43,6 @@ namespace VoiceActing
 
             AudioManager.Instance?.StopMusic(6f);
 
-
-            Debug.LogError("Ayo");
-
             // Instancie le boss
             bossEncounter = Instantiate(bossesData.SelectBoss(runData.Floor-1), this.transform);
             bosses = bossEncounter.Encounter;
@@ -78,8 +75,8 @@ namespace VoiceActing
             // START BOSS BATTLE
             for (int i = 0; i < bosses.Length; i++)
             {
-                bosses[i].gameObject.SetActive(true);
                 bosses[i].Character.CharacterMovement.SetDirection(-1);
+                bosses[i].gameObject.SetActive(true);
             }
 
             explorationManager.InputController.SetControllable(explorationManager.Player);
@@ -118,7 +115,6 @@ namespace VoiceActing
             {
                 for (int i = 0; i < bosses.Length; i++)
                 {
-                    Debug.Log("On a un problème !!!");
                     bosses[i].Character.SpriteRenderer.color = new Color(0.2f, 0.2f, 0.2f);
                 }
             }

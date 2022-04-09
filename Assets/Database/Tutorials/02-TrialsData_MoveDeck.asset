@@ -81,7 +81,7 @@ MonoBehaviour:
   - Each character on the battlefield possess a Deck of card.
   - Before learning to use the cards, try to cycle through them.
   textboxEnd:
-  - Cards are always sorted from the highest value to the lowest.
+  - Cards are always sorted by category, then from the highest value to the lowest.
   comboNotes:
   - Cycle cards right
   - Cycle cards left

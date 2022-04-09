@@ -33,6 +33,9 @@ namespace VoiceActing
             characterBase.OnStateChanged += StateChanged;
             characterBase.CharacterKnockback.OnDeath += DeathAnimation;
             characterBase.DeckController.OnReload += ReloadAnimation;
+
+            // Set direction
+            characterBase.transform.localScale = new Vector3(characterBase.CharacterMovement.Direction, 1, 1);
         }
         private void OnDestroy()
         {

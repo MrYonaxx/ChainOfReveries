@@ -75,7 +75,7 @@ MonoBehaviour:
     AnimationEvent: {fileID: 462657761471701193}
   - Frame: 11
     AnimationEvent: {fileID: 4393789991878858937}
-  - Frame: 30
+  - Frame: 35
     AnimationEvent: {fileID: 2524242894598313049}
 --- !u!114 &2053188037539799472
 MonoBehaviour:
@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620e0e815b2f5174f8b380210d9a19f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 30
+  frame: 35
   frameEnd: 0
 --- !u!1 &4388082830208477171
 GameObject:
@@ -289,6 +289,7 @@ MonoBehaviour:
   linkToCharacter: 1
   fixToGround: 0
   subActionCardBreakable: 0
+  canPlayerCorrectDirection: 1
   atkControllers: []
 --- !u!1 &7345693785975693917
 GameObject:

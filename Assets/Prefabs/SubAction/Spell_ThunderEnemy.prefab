@@ -45,6 +45,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetAtStart: 1
   targetRandom: 0
+  targetAtUpdate: 0
   randomX: {x: -6, y: 6}
   randomY: {x: -1, y: 2}
 --- !u!1 &3445337554323196874
@@ -141,6 +142,7 @@ GameObject:
   - component: {fileID: 4670453683040411876}
   - component: {fileID: 4461643240352555985}
   - component: {fileID: 604340032123671447}
+  - component: {fileID: 5616394851480177175}
   m_Layer: 0
   m_Name: AttackAnimationData
   m_TagString: Untagged
@@ -192,6 +194,8 @@ MonoBehaviour:
   AnimatorDebug: {fileID: 677981557941761528}
   AnimationClipDebug: {fileID: 0}
   frameData:
+  - Frame: 15
+    AnimationEvent: {fileID: 5616394851480177175}
   - Frame: 20
     AnimationEvent: {fileID: 4461643240352555985}
   - Frame: 50
@@ -226,6 +230,24 @@ MonoBehaviour:
   frame: 50
   frameEnd: 0
   attack: {fileID: 818057835518184039}
+--- !u!114 &5616394851480177175
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3720685875369100543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 15
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 9da2f0a8d4d11d84aa78cdd6cf166e92, type: 3}
+    volume: 1
+    pitch: {x: 1, y: 1}
 --- !u!1 &4114098666737907609
 GameObject:
   m_ObjectHideFlags: 0
@@ -563,6 +585,13 @@ MonoBehaviour:
     baseDamage: 100
     attackType: 0
     ignoreStatsMultiplier: 0
+  backdamage:
+    baseDamage: 100
+    ignoreStatsMultiplier: 0
+  banDamage:
+    damagePerBan: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
 --- !u!114 &5041682679050981933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -595,6 +624,13 @@ MonoBehaviour:
     ignoreElementalStat: 0
   damage:
     baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
+  backdamage:
+    baseDamage: 100
+    ignoreStatsMultiplier: 0
+  banDamage:
+    damagePerBan: 100
     attackType: 0
     ignoreStatsMultiplier: 0
 --- !u!1 &6664025316910145470

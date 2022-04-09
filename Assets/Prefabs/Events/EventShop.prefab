@@ -1071,6 +1071,10 @@ MonoBehaviour:
   - {fileID: 5550693479157898295}
   - {fileID: 5550693477734321905}
   buttonSynthesize: {fileID: 5550693477887693363}
+  soundValidate:
+    sound: {fileID: 8300000, guid: 57fad3fb9289685438a07735b3f75d9a, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
 --- !u!225 &5550693477337394281
 CanvasGroup:
   m_ObjectHideFlags: 0

@@ -217,6 +217,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe6b137803a60294cbe52433577017a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoStart: 0
   imageToCopy: {fileID: 1063159378469573554}
   afterImageNumber: 4
   afterImageTime: 0.1
@@ -5067,7 +5068,7 @@ SpriteRenderer:
   m_SortingOrder: 10
   m_Sprite: {fileID: 4983092548810462725, guid: 8e245e2580c97a8438b63264269fa2d2,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -5202,7 +5203,7 @@ SpriteRenderer:
   m_SortingOrder: 10
   m_Sprite: {fileID: 8214605887863837299, guid: 6742e1ca2c7123d46b20aede5e6d71ff,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

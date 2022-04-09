@@ -194,6 +194,7 @@ MonoBehaviour:
   charactersSequence:
   - {fileID: 7992540995189529229}
   - {fileID: 7992540995189529229}
+  - {fileID: 2547329147196440852}
   cardBreakController: {fileID: 11400000, guid: cf99f13ec9b16ff459f0a38e0953f0d1,
     type: 2}
   characterToBreak: {fileID: 7539218269784988748}
@@ -10154,8 +10155,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2346211366866597275}
+  - component: {fileID: 2547329147196440852}
   m_Layer: 0
-  m_Name: NelysSave
+  m_Name: NelysReflect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -10177,6 +10179,25 @@ Transform:
   m_Father: {fileID: 2849602624121028193}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &2547329147196440852
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2352601580854470013}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8bf942b8cfa82d94f98930bc5718d416, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &2469241746260582066
 GameObject:
   m_ObjectHideFlags: 0
@@ -10276,7 +10297,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2509083385585235617}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.2, y: 0, z: 0}
   m_LocalScale: {x: -1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2346211366866597275}
@@ -10321,7 +10342,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -1972816924527364374, guid: 343dcb9a819c98c4a980b190c6e563af,
+  m_Sprite: {fileID: 1105211972141651919, guid: 6171b185ea8903e449736309ea6e6785,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -15430,7 +15451,7 @@ GameObject:
   - component: {fileID: 1118783181566699352}
   - component: {fileID: 6650911328741014008}
   m_Layer: 0
-  m_Name: NelysAssist
+  m_Name: Meneras
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15444,8 +15465,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4198618189301894706}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.6, y: 0, z: 0}
-  m_LocalScale: {x: -1, y: 1, z: 1}
+  m_LocalPosition: {x: 0.2, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 2346211366866597275}
   m_RootOrder: 1
@@ -15489,7 +15510,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 7085224567532948268, guid: f5131bb906d26bf4a83d18c0ad70cc2f,
+  m_Sprite: {fileID: 5241445259864185526, guid: 32caf6531b0b43d40b02138e68042d5b,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -54904,7 +54925,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7211852542027738488
 Transform:
   m_ObjectHideFlags: 0

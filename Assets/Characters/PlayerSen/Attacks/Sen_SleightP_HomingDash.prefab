@@ -5073,7 +5073,7 @@ MonoBehaviour:
     type: 3}
   onlyHitStopOpponent: 0
   hitStop: 0
-  knockbackDurationMultiplier: 1.6
+  knockbackDurationMultiplier: 2
   knockbackX: 0
   knockbackZ: 0
   knockbackInvulnerability: 1
@@ -5310,6 +5310,10 @@ MonoBehaviour:
     ignoreStatsMultiplier: 0
   backdamage:
     baseDamage: 100
+    ignoreStatsMultiplier: 0
+  banDamage:
+    damagePerBan: 100
+    attackType: 0
     ignoreStatsMultiplier: 0
 --- !u!1 &6664025316910145470
 GameObject:

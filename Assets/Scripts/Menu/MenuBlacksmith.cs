@@ -35,6 +35,7 @@ namespace Menu
         Animator animatorGetCard = null;
 
 
+
         bool active = true;
 
 

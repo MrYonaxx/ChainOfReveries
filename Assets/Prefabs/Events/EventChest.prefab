@@ -6221,6 +6221,10 @@ MonoBehaviour:
   battleReward: {fileID: 6931194993688484723}
   chestAnimator: {fileID: 643690553456934463}
   buttonPrompt: {fileID: 2937361833757330580}
+  soundChestOpen:
+    sound: {fileID: 8300000, guid: 7ae2431b4dd5ba24085d7ce7db7b092e, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
 --- !u!95 &643690553456934463
 Animator:
   serializedVersion: 3

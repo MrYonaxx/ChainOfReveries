@@ -21,6 +21,9 @@ namespace Menu
         [SerializeField]
         ButtonHoldController holdController;
 
+        [SerializeField]
+        StatusEffectData[] statusReverie = null;
+
         [Title("UI")]
         [SerializeField]
         MenuDeckDrawer deckDrawer = null;
@@ -30,6 +33,8 @@ namespace Menu
         DeckExplorationDrawer deckExplorationDrawer = null;
         [SerializeField]
         TextMeshProUGUI textReverie = null;
+        [SerializeField]
+        TextMeshProUGUI textReverieDescription = null;
         [SerializeField]
         Image arrowLeft = null;
         [SerializeField]
@@ -117,6 +122,16 @@ namespace Menu
             textReverie.text = (id+1) + "e";
             gameRunData.ReverieLevel = id;
 
+            if(id > 0)
+            {
+                textReverieDescription.gameObject.SetActive(true);
+                textReverieDescription.text = statusReverie[id - 1].StatusDescription;
+            }
+            else
+            {
+                textReverieDescription.gameObject.SetActive(false);
+            }
+
             if (gameData.MaxReverieLevel > 0)
             {
                 if (id == 0)
@@ -134,7 +149,9 @@ namespace Menu
                     arrowLeft.gameObject.SetActive(true);
                     arrowRight.gameObject.SetActive(true);
                 }
+
             }
+
         }
 
         private void ShowMenu(bool b)

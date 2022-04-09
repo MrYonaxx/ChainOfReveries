@@ -97,7 +97,7 @@ MonoBehaviour:
       Data: 
   statusIconSprite: {fileID: 0}
   statusName: 
-  statusDescription: HP UP
+  statusDescription: Damage +15%
   hideStatus: 1
   statusShowLabel: 0
   statusConditionLabel: 

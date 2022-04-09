@@ -76,7 +76,7 @@ MonoBehaviour:
       Data: 
   statusIconSprite: {fileID: 0}
   statusName: 
-  statusDescription: Reload UP
+  statusDescription: Reload Instant
   hideStatus: 1
   statusShowLabel: 0
   statusConditionLabel: 

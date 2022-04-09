@@ -1080,9 +1080,9 @@ MonoBehaviour:
     type: 3}
   onlyHitStopOpponent: 0
   hitStop: 0.3
-  knockbackDurationMultiplier: 1
+  knockbackDurationMultiplier: 1.1
   knockbackX: 0
-  knockbackZ: 13
+  knockbackZ: 12
   knockbackInvulnerability: 0.4
   revengeValue: 5
 --- !u!114 &9158596426514695405

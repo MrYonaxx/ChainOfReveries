@@ -6308,6 +6308,10 @@ MonoBehaviour:
   menuWeaponSelection: {fileID: 245970617809468036}
   chestAnimator: {fileID: 643690553456934463}
   buttonPrompt: {fileID: 2937361833757330580}
+  soundChestOpen:
+    sound: {fileID: 8300000, guid: 7ae2431b4dd5ba24085d7ce7db7b092e, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
 --- !u!95 &643690553456934463
 Animator:
   serializedVersion: 3
@@ -6852,6 +6856,18 @@ MonoBehaviour:
   animatorRoulette: {fileID: 7026294880057212875}
   textCardName: {fileID: 5246097934876077110}
   textCardDescription: {fileID: 5246097934297394622}
+  soundShuffle:
+    sound: {fileID: 8300000, guid: e48e6b9b83ab10a4297469811a19ddaf, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
+  soundValidate:
+    sound: {fileID: 8300000, guid: 72765b0033b93fc4d8af75aa9aeb1c63, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
+  soundQuit:
+    sound: {fileID: 8300000, guid: c140d7b3c7a6f604ba1b4f5f9350ebef, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
 --- !u!1 &5246097935419416202
 GameObject:
   m_ObjectHideFlags: 0

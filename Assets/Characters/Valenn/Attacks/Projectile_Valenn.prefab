@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 8515715391470529832}
+  animatorSpeed: 1
 --- !u!1 &1485846608183108422
 GameObject:
   m_ObjectHideFlags: 0
@@ -351,6 +352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 7165880166527460441}
+  animatorSpeed: 1
 --- !u!114 &4048585754765200443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,6 +365,55 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 038ac04a72758f443ab000c031462258, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &3386617598951113165
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4077964686456883884}
+  - component: {fileID: 7855300305482221894}
+  m_Layer: 0
+  m_Name: Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4077964686456883884
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3386617598951113165}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 248121844606041498}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7855300305482221894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3386617598951113165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 0
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 217224b0e1a20204c8f31657c55a27a8, type: 3}
+    volume: 0.8
+    pitch: {x: 0.9, y: 1.1}
 --- !u!1 &3720685875369100543
 GameObject:
   m_ObjectHideFlags: 0
@@ -395,6 +446,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 633282683788148771}
+  - {fileID: 4077964686456883884}
   m_Father: {fileID: 5842096757366747166}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -428,6 +480,8 @@ MonoBehaviour:
   AnimatorDebug: {fileID: 677981557941761528}
   AnimationClipDebug: {fileID: 0}
   frameData:
+  - Frame: 0
+    AnimationEvent: {fileID: 7855300305482221894}
   - Frame: 30
     AnimationEvent: {fileID: 116629114865319824}
   - Frame: 60
@@ -522,12 +576,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onHitAnimation: {fileID: 855764348832698739, guid: 734251cd418c42946b79b2586c648edb,
     type: 3}
+  onlyHitStopOpponent: 0
   hitStop: 0
   knockbackDurationMultiplier: 1
   knockbackX: 6
   knockbackZ: 0
-  revengeValue: 0
   knockbackInvulnerability: 1.2
+  revengeValue: 0
 --- !u!114 &3881154881565701503
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -674,6 +729,7 @@ MonoBehaviour:
   frame: 60
   frameEnd: 0
   fx: {fileID: 8552707718994439792}
+  appear: 1
 --- !u!114 &1813312926694079722
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -689,6 +745,7 @@ MonoBehaviour:
   frame: 70
   frameEnd: 0
   fx: {fileID: 2614181290405064962}
+  appear: 1
 --- !u!114 &8086270605201763348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -704,6 +761,7 @@ MonoBehaviour:
   frame: 80
   frameEnd: 0
   fx: {fileID: 5389573976675547638}
+  appear: 1
 --- !u!114 &6273466006659575105
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -719,6 +777,7 @@ MonoBehaviour:
   frame: 90
   frameEnd: 0
   fx: {fileID: 8425410949591439352}
+  appear: 1
 --- !u!114 &2679210587145194882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -734,6 +793,7 @@ MonoBehaviour:
   frame: 100
   frameEnd: 0
   fx: {fileID: 6833067111486215307}
+  appear: 1
 --- !u!1 &5389573976675547638
 GameObject:
   m_ObjectHideFlags: 0
@@ -877,6 +937,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 7419920914977588628}
+  animatorSpeed: 1
 --- !u!114 &7810911526723043611
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -942,6 +1003,7 @@ MonoBehaviour:
   linkToCharacter: 0
   fixToGround: 0
   subActionCardBreakable: 0
+  canPlayerCorrectDirection: 1
   atkControllers:
   - {fileID: 4733904636063077261}
 --- !u!1 &6110435575002120153
@@ -995,15 +1057,25 @@ MonoBehaviour:
   cardStatus:
     statusDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     status: {fileID: 0}
+    canApplyMultipleTime: 1
+    canApplyOnKnockback: 1
     debugDamage: {x: 100, y: 200}
   cardPercentage:
     percentDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     debugDamage: {x: 100, y: 200}
+    maxHP: 0
   element:
     element: 0
     ignoreElementalStat: 0
   damage:
     baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
+  backdamage:
+    baseDamage: 100
+    ignoreStatsMultiplier: 0
+  banDamage:
+    damagePerBan: 100
     attackType: 0
     ignoreStatsMultiplier: 0
 --- !u!1 &6664025316910145470
@@ -1242,6 +1314,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4778532982105640176}
+  animatorSpeed: 1
 --- !u!114 &2623573963044017263
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1461,6 +1534,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1067117870902261485}
+  animatorSpeed: 1
 --- !u!114 &3023073287521167406
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1616,6 +1690,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 2488430421236717289}
+  animatorSpeed: 1
 --- !u!114 &7695884514168167777
 MonoBehaviour:
   m_ObjectHideFlags: 0

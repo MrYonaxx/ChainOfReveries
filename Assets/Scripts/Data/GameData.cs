@@ -74,6 +74,15 @@ public class GameData : ScriptableObject
             P2ControllerID = controllerID;
     }
 
+    public void ResetSave()
+    {
+        FirstTime = true;
+        Timer = 0;
+        NbRun = 0;
+        NbRunCompleted = 0;
+        MaxReverieLevel = 0;
+        NbRunCharacters = new int[]{ 0, 0, 0, 0, 0 };
+    }
 
     public void Save()
     {

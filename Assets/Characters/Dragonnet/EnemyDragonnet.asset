@@ -21,10 +21,10 @@ MonoBehaviour:
     to catch them with a Card Break or use a move like Thunder to slam them on the
     ground.'
   characterStat:
-    hp: 2400
+    hp: 2200
     HPMax:
-      baseValue: 2400
-      finalValue: 2400
+      baseValue: 2200
+      finalValue: 2200
     Attack:
       baseValue: 1
       finalValue: 1

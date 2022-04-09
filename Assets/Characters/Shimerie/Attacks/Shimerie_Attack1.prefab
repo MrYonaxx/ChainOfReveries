@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 8
+  frame: 17
   frameEnd: 0
   sound:
     sound: {fileID: 8300000, guid: 113e5eb13afc6ac4dbbe4b668edec963, type: 3}
@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 10
+  frame: 20
   frameEnd: 0
   sound:
     sound: {fileID: 8300000, guid: 2accb501d7f2e524994d32a4ce9d3ec5, type: 3}
@@ -198,9 +198,9 @@ MonoBehaviour:
   AnimatorDebug: {fileID: 677981557941761528}
   AnimationClipDebug: {fileID: 7400000, guid: 0dec908a358ad094f8dd815399e61c71, type: 2}
   frameData:
-  - Frame: 8
+  - Frame: 17
     AnimationEvent: {fileID: 6548060126528745650}
-  - Frame: 10
+  - Frame: 20
     AnimationEvent: {fileID: 4200970828337729809}
   - Frame: 24
     AnimationEvent: {fileID: 4461643240352555985}

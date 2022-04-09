@@ -77,14 +77,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4166811470578154309}
   - component: {fileID: 6548060126528745650}
-  - component: {fileID: 4200970828337729809}
   m_Layer: 0
   m_Name: Sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4166811470578154309
 Transform:
   m_ObjectHideFlags: 0
@@ -111,29 +110,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 8
+  frame: 14
   frameEnd: 0
   sound:
-    sound: {fileID: 8300000, guid: 113e5eb13afc6ac4dbbe4b668edec963, type: 3}
+    sound: {fileID: 8300000, guid: 292bff1a563229c4d8d2e2ab822f9046, type: 3}
     volume: 0.8
-    pitch: {x: 1, y: 1}
---- !u!114 &4200970828337729809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1276642471486333604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  frame: 10
-  frameEnd: 0
-  sound:
-    sound: {fileID: 8300000, guid: 2accb501d7f2e524994d32a4ce9d3ec5, type: 3}
-    volume: 0.6
     pitch: {x: 1, y: 1}
 --- !u!1 &2469241746260582066
 GameObject:
@@ -458,6 +439,8 @@ MonoBehaviour:
     AnimationEvent: {fileID: 5573582705772059836}
   - Frame: 14
     AnimationEvent: {fileID: 3910211874227727455}
+  - Frame: 14
+    AnimationEvent: {fileID: 6548060126528745650}
   - Frame: 40
     AnimationEvent: {fileID: 216332918076528504}
   - Frame: 40
@@ -808,7 +791,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 944566462951780539, guid: 895536ee66b168f479c237bf02e73b58, type: 3}
+  m_Sprite: {fileID: 19431648924658259, guid: 6ac844d3e64785c4ca753582481f91c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -30,28 +30,32 @@ namespace VoiceActing
                 int cancel = character.CharacterAction.SpecialCancelCount;
                 cancel = Mathf.Min(cancel, maxCancel);
 
-                character.SetCharacterMotionSpeed(0.2f, 0.4f);
                 if(character.State.ID != CharacterStateID.CardBreak) // pas de zoom quand on cancel
                     BattleFeedbackManager.Instance.CameraSpecialZoom(character.CharacterAction.SpecialCancelCount);
 
                 if (cancel == 1)
                 {
                     BattleFeedbackManager.Instance.SetBattleMotionSpeed(0.1f, 0.6f);
+                    character.SetCharacterMotionSpeed(0.2f, 0.4f);
                     aura.AuraFeedback(0.6f, 1.5f, c);
                     BattleFeedbackManager.Instance.Speedlines(0.3f, c, character.ParticlePoint.position);
                 }
                 else if (cancel == 2)
                 {
                     BattleFeedbackManager.Instance.SetBattleMotionSpeed(0.1f, 1f);
+                    character.SetCharacterMotionSpeed(0.2f, 0.5f);
                     aura.AuraFeedback(1f, 1.6f, c);
                     BattleFeedbackManager.Instance.Speedlines(0.5f, c, character.ParticlePoint.position);
                 }
-                else if (cancel == 3)
+                else if (cancel >= 3)
                 {
                     BattleFeedbackManager.Instance.SetBattleMotionSpeed(0.1f, 1.5f);
+                    character.SetCharacterMotionSpeed(0.2f, 0.6f);
                     aura.AuraFeedback(1.5f, 1.7f, c);
                     BattleFeedbackManager.Instance.Speedlines(0.75f, c, character.ParticlePoint.position);
                 }
+
+
             }
             else
             {

@@ -2001,7 +2001,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2702705967230504264}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: 1.5, y: 0.5, z: 0.5}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children:
   - {fileID: 7295721710401844884}
@@ -3002,7 +3002,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3551725144304672937}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -1, y: 0.5, z: 0.5}
+  m_LocalPosition: {x: -1.5, y: 0.5, z: 0.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5778643552142696966}
@@ -4598,6 +4598,10 @@ MonoBehaviour:
   - {fileID: 5594312747648653143}
   - {fileID: 6892894756159103938}
   buttonSynthesize: {fileID: 1854572556299283299}
+  soundValidate:
+    sound: {fileID: 8300000, guid: 69b1df64a0f1a074d87100ac209d89b4, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
 --- !u!225 &8547806962400955435
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -20318,6 +20322,10 @@ MonoBehaviour:
   - {fileID: 3341463853373354233}
   - {fileID: 1966245859966875425}
   buttonSynthesize: {fileID: 7818276288994136336}
+  soundValidate:
+    sound: {fileID: 8300000, guid: 57fad3fb9289685438a07735b3f75d9a, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
 --- !u!225 &142792378362736818
 CanvasGroup:
   m_ObjectHideFlags: 0

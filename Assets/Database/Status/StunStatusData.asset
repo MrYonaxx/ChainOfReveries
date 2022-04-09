@@ -17,6 +17,7 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: 6329109260187363157, guid: 43b82a00a358ffd48beb3ce0e60cdc5a, type: 3}
+    - {fileID: 11400000, guid: 70a22e5a594c44c41a9a377e1f4b4ea8, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -86,7 +87,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 4|VoiceActing.StatusEffectStun, Assembly-CSharp
@@ -96,6 +97,15 @@ MonoBehaviour:
     - Name: stunAnimation
       Entry: 10
       Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|VoiceActing.StatusEffectAddStatus, Assembly-CSharp
+    - Name: Status
+      Entry: 10
+      Data: 1
     - Name: 
       Entry: 8
       Data: 

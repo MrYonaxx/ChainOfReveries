@@ -40,3 +40,5 @@ MonoBehaviour:
   - encounter: {fileID: 8782236304212188354, guid: 0b55ff13ad35fef47a2b4bf75070692c,
       type: 3}
     probability: 100
+  - encounter: {fileID: 0}
+    probability: 100

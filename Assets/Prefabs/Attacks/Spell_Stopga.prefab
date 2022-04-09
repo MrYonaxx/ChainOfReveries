@@ -116,7 +116,7 @@ MonoBehaviour:
   frame: 0
   frameEnd: 0
   sound:
-    sound: {fileID: 8300000, guid: ab8774655ab43254cb3de3856a24583c, type: 3}
+    sound: {fileID: 8300000, guid: 7dfc4752dd52f06428562c4e8ce58c1c, type: 3}
     volume: 1
     pitch: {x: 1, y: 1}
 --- !u!1 &4114098666737907609
@@ -521,6 +521,10 @@ MonoBehaviour:
     ignoreStatsMultiplier: 0
   backdamage:
     baseDamage: 100
+    ignoreStatsMultiplier: 0
+  banDamage:
+    damagePerBan: 100
+    attackType: 0
     ignoreStatsMultiplier: 0
 --- !u!1 &6664025316910145470
 GameObject:

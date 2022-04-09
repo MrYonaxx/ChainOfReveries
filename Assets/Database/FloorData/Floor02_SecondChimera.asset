@@ -26,4 +26,4 @@ MonoBehaviour:
   nextLevel: {fileID: 11400000, guid: 25fc0263439d80f4eb42fa7e16f582fe, type: 2}
   cardBanlist: []
   cardExplorationBanlist: []
-  bgm: {fileID: 8300000, guid: d271cb68cda38ca4a9c88171df573a58, type: 3}
+  bgm: {fileID: 8300000, guid: 8a5b16cde02e5224db7f87f08027ee2d, type: 3}

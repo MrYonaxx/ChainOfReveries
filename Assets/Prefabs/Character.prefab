@@ -1762,6 +1762,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   timeFriction: 30
   timeParticleDeath: 60
+  timeFade: 10
   reflection: {fileID: 3011987554610024908}
 --- !u!1 &3011987556501813603
 GameObject:
@@ -1975,7 +1976,7 @@ MonoBehaviour:
   deckController: {fileID: 3011987556090982120}
   soundMove:
     sound: {fileID: 8300000, guid: 84116321d876ae6438c3d48e88a3d0fb, type: 3}
-    volume: 0.75
+    volume: 0.7
     pitch: {x: 0.8, y: 1.2}
   soundReload:
     sound: {fileID: 8300000, guid: 46fa49702d5586042ab5a61467d9efab, type: 3}
@@ -2485,6 +2486,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe6b137803a60294cbe52433577017a2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  autoStart: 0
   imageToCopy: {fileID: 3011987555608669702}
   afterImageNumber: 4
   afterImageTime: 0.1

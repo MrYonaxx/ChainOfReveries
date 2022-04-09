@@ -236,7 +236,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2520948011644738657}
-  - component: {fileID: 3040624544842275496}
+  - component: {fileID: 944457454637388785}
   m_Layer: 9
   m_Name: AttackMainComponents
   m_TagString: Untagged
@@ -258,7 +258,7 @@ Transform:
   m_Father: {fileID: 2917755026358873579}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &3040624544842275496
+--- !u!114 &944457454637388785
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -267,10 +267,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 2469241746260582066}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c8f7a5240f464884dbe0190e5bcbfa93, type: 3}
+  m_Script: {fileID: 11500000, guid: 4f17cec14b6d89b4c889c8fe1c8ec737, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  keepMomentum: 0
+  runData: {fileID: 11400000, guid: 1aae71d6d0b174646afb7b05a8a06b1f, type: 2}
+  charactersSequence:
+  - {fileID: 1828744727798468565}
+  - {fileID: 6601932334385952995}
+  - {fileID: 8826346473140480464}
 --- !u!1 &3720685875369100543
 GameObject:
   m_ObjectHideFlags: 0
@@ -5287,13 +5291,14 @@ GameObject:
   m_Component:
   - component: {fileID: 4752585316532186411}
   - component: {fileID: 3123587491162558743}
+  - component: {fileID: 6601932334385952995}
   m_Layer: 0
   m_Name: Lia
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4752585316532186411
 Transform:
   m_ObjectHideFlags: 0
@@ -5358,6 +5363,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &6601932334385952995
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5648708274110847712}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5842096757366747167
 GameObject:
   m_ObjectHideFlags: 0
@@ -5397,6 +5421,7 @@ Transform:
   - {fileID: 3277253818427673820}
   - {fileID: 3735741558163538458}
   - {fileID: 4752585316532186411}
+  - {fileID: 3001312784910729636}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5419,7 +5444,110 @@ MonoBehaviour:
   fixToGround: 1
   subActionCardBreakable: 0
   canPlayerCorrectDirection: 0
-  atkControllers: []
+  atkControllers:
+  - {fileID: 4733904636063077261}
+--- !u!1 &6287075251539305979
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3001312784910729636}
+  - component: {fileID: 5947664865600792505}
+  - component: {fileID: 8826346473140480464}
+  m_Layer: 0
+  m_Name: Meneras
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &3001312784910729636
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6287075251539305979}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -1.2, y: 0.16, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 5842096757366747166}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!212 &5947664865600792505
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6287075251539305979}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 0
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 10
+  m_Sprite: {fileID: 5241445259864185526, guid: 32caf6531b0b43d40b02138e68042d5b,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_FlipX: 0
+  m_FlipY: 0
+  m_DrawMode: 0
+  m_Size: {x: 1, y: 1}
+  m_AdaptiveModeThreshold: 0.5
+  m_SpriteTileMode: 0
+  m_WasSpriteAssigned: 1
+  m_MaskInteraction: 0
+  m_SpriteSortPoint: 0
+--- !u!95 &8826346473140480464
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6287075251539305979}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &6316961515734549779
 GameObject:
   m_ObjectHideFlags: 0
@@ -5518,7 +5646,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2917755026358873579
 Transform:
   m_ObjectHideFlags: 0
@@ -5581,7 +5709,7 @@ MonoBehaviour:
   attackProcessorsComponents:
   - {fileID: 117210980697779395}
   attackComponents:
-  - {fileID: 3040624544842275496}
+  - {fileID: 944457454637388785}
   - {fileID: 6024610480447657897}
   - {fileID: 5485531285977804821}
   - {fileID: 56531963563253934}
@@ -5767,6 +5895,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3735741558163538458}
   - component: {fileID: 1848274912469993553}
+  - component: {fileID: 1828744727798468565}
   m_Layer: 0
   m_Name: Sen
   m_TagString: Untagged
@@ -5839,6 +5968,25 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &1828744727798468565
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8911535203718936535}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &9011518671758959096
 GameObject:
   m_ObjectHideFlags: 0

@@ -28,4 +28,4 @@ MonoBehaviour:
   nextLevel: {fileID: 11400000, guid: c486d5f701036d243a7e0c69b1ab680d, type: 2}
   cardBanlist: []
   cardExplorationBanlist: []
-  bgm: {fileID: 8300000, guid: c8f67d99d4c5c7a4a84c4e148faece67, type: 3}
+  bgm: {fileID: 8300000, guid: 642b951d2a2f6254e89449029164ff2c, type: 3}

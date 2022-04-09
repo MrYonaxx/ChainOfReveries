@@ -265,7 +265,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 248121844606041498}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &604818545891759567
 MonoBehaviour:
@@ -625,6 +625,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 5766111841170918709}
   - {fileID: 7923213433310778786}
   m_Father: {fileID: 5842096757366747166}
   m_RootOrder: 0
@@ -659,6 +660,8 @@ MonoBehaviour:
   AnimatorDebug: {fileID: 677981557941761528}
   AnimationClipDebug: {fileID: 7400000, guid: 96b4c6e0eef06fc48b0a23b564047206, type: 2}
   frameData:
+  - Frame: 39
+    AnimationEvent: {fileID: 5635727280944225884}
   - Frame: 40
     AnimationEvent: {fileID: 7604005236909913241}
   - Frame: 40
@@ -671,6 +674,8 @@ MonoBehaviour:
     AnimationEvent: {fileID: 4320432194472121391}
   - Frame: 70
     AnimationEvent: {fileID: 2675027706761103925}
+  - Frame: 93
+    AnimationEvent: {fileID: 4437825204170597152}
   - Frame: 94
     AnimationEvent: {fileID: 7663569900583738503}
   - Frame: 99
@@ -941,7 +946,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -6349642103893007617, guid: cc29f7cf82f762649b26adcfb2021201,
+  m_Sprite: {fileID: -1726794496026357506, guid: a3726e37e1c7976478a04cbffdc1a873,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -953,6 +958,74 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &4848750080764031024
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 5766111841170918709}
+  - component: {fileID: 5635727280944225884}
+  - component: {fileID: 4437825204170597152}
+  m_Layer: 0
+  m_Name: Sounds
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &5766111841170918709
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4848750080764031024}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 248121844606041498}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5635727280944225884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4848750080764031024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 39
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: d1f103f016c96e147b92b4277002db0b, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
+--- !u!114 &4437825204170597152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4848750080764031024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 93
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 905279e4ee7d4f54c8b1daa0fd004c8f, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
 --- !u!1 &5842096757366747167
 GameObject:
   m_ObjectHideFlags: 0
@@ -1081,6 +1154,10 @@ MonoBehaviour:
     ignoreStatsMultiplier: 0
   backdamage:
     baseDamage: 100
+    ignoreStatsMultiplier: 0
+  banDamage:
+    damagePerBan: 100
+    attackType: 0
     ignoreStatsMultiplier: 0
 --- !u!1 &6217762127390549089
 GameObject:
@@ -6143,6 +6220,10 @@ MonoBehaviour:
     ignoreStatsMultiplier: 0
   backdamage:
     baseDamage: 100
+    ignoreStatsMultiplier: 0
+  banDamage:
+    damagePerBan: 100
+    attackType: 0
     ignoreStatsMultiplier: 0
 --- !u!1 &8512295513669630368
 GameObject:

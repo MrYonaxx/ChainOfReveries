@@ -6205,6 +6205,18 @@ MonoBehaviour:
   canvasReward: {fileID: 1792792097071338178}
   animatorBattleWin: {fileID: 1792792095631576770}
   animatorCardControllers: {fileID: 1792792096838053060}
+  soundVictory:
+    sound: {fileID: 8300000, guid: 58d52c89d27ae8f498c2bc63563109f9, type: 3}
+    volume: 1
+    pitch: {x: 1, y: 1}
+  soundValidate:
+    sound: {fileID: 8300000, guid: c140d7b3c7a6f604ba1b4f5f9350ebef, type: 3}
+    volume: 1
+    pitch: {x: 1, y: 1}
+  soundCardGet:
+    sound: {fileID: 8300000, guid: 72765b0033b93fc4d8af75aa9aeb1c63, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
 --- !u!1 &1792792097127804519
 GameObject:
   m_ObjectHideFlags: 0

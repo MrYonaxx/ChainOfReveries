@@ -109,8 +109,13 @@ namespace VoiceActing
         [SerializeField]
         GameObject buttonHud = null;
 
+        [Title("Sounds")]
         [SerializeField]
         AudioClip music = null;
+        [SerializeField]
+        SoundParameter soundSelect = null;
+        [SerializeField]
+        SoundParameter soundCreateRoom = null;
 
         private InputController inputController = null;
         public InputController InputController
@@ -280,6 +285,7 @@ namespace VoiceActing
             }
             else if (buttonHoldController.HoldButton(inputs.InputY.InputValue == 1 ? true : false))
             {
+                soundCreateRoom.PlaySound();
                 UseCard();
                 return;
             }
@@ -293,6 +299,7 @@ namespace VoiceActing
         {
             if (timeMoveCard <= 0)
             {
+                soundSelect.PlaySound();
                 battleModifierDrawerList.HideBattleModifiersPreview(runData.PlayerExplorationDeck[deckExplorationDrawer.GetCurrentIndex()].BattleModifiers);
 
                 timeMoveCard = timeMoveCardInterval;
@@ -309,6 +316,7 @@ namespace VoiceActing
         {
             if (timeMoveCard <= 0)
             {
+                soundSelect.PlaySound();
                 battleModifierDrawerList.HideBattleModifiersPreview(runData.PlayerExplorationDeck[deckExplorationDrawer.GetCurrentIndex()].BattleModifiers);
 
                 timeMoveCard = timeMoveCardInterval;
@@ -459,7 +467,7 @@ namespace VoiceActing
         public void ChangeLevelBackground()
         {
             levelBackgrounds[runData.Floor - 2].gameObject.SetActive(false);
-            if(levelBackgrounds.Length >= runData.Floor-1)
+            if(levelBackgrounds.Length > runData.Floor-1)
                 levelBackgrounds[runData.Floor - 1].gameObject.SetActive(true);
         }
 

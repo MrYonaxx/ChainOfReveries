@@ -200,12 +200,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onHitAnimation: {fileID: 855764348832698739, guid: 734251cd418c42946b79b2586c648edb,
     type: 3}
+  onlyHitStopOpponent: 0
   hitStop: 0.4
   knockbackDurationMultiplier: 1
   knockbackX: 0
   knockbackZ: 1
-  revengeValue: 10
   knockbackInvulnerability: 1
+  revengeValue: 10
 --- !u!114 &5485531285977804821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -244,7 +245,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dad7e80ac0cdbd428606f8c14ac4bae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dezoom: 0
+  zoomValue:
+  - -0.5
+  - -0.5
+  - 0
+  zoomTime:
+  - 6
+  - 12
+  - 6
+  smoothZoom: 0
 --- !u!1 &4388082830208477171
 GameObject:
   m_ObjectHideFlags: 0
@@ -380,6 +389,7 @@ MonoBehaviour:
   linkToCharacter: 1
   fixToGround: 0
   subActionCardBreakable: 0
+  canPlayerCorrectDirection: 1
   atkControllers: []
 --- !u!1 &5996502215578249892
 GameObject:
@@ -522,15 +532,25 @@ MonoBehaviour:
   cardStatus:
     statusDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     status: {fileID: 0}
+    canApplyMultipleTime: 1
+    canApplyOnKnockback: 1
     debugDamage: {x: 100, y: 200}
   cardPercentage:
     percentDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     debugDamage: {x: 100, y: 200}
+    maxHP: 0
   element:
     element: 0
     ignoreElementalStat: 0
   damage:
     baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
+  backdamage:
+    baseDamage: 100
+    ignoreStatsMultiplier: 0
+  banDamage:
+    damagePerBan: 100
     attackType: 0
     ignoreStatsMultiplier: 0
 --- !u!1 &6664025316910145470

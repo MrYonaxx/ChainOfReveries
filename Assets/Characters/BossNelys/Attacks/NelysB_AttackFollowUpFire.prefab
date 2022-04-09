@@ -1,5 +1,130 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &2445864910713252
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6055558828860651366}
+  - component: {fileID: 860489349488534666}
+  - component: {fileID: 222080126471578}
+  - component: {fileID: 930754050859333571}
+  - component: {fileID: 4102989262188303463}
+  - component: {fileID: 600394970693886253}
+  m_Layer: 0
+  m_Name: Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6055558828860651366
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2445864910713252}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.6, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 248121844606041498}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &860489349488534666
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2445864910713252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 38
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 113e5eb13afc6ac4dbbe4b668edec963, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
+--- !u!114 &222080126471578
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2445864910713252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 40
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: dec089f52b918d94dbe771f38c3ae167, type: 3}
+    volume: 0.6
+    pitch: {x: 1, y: 1}
+--- !u!114 &930754050859333571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2445864910713252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 52
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 113e5eb13afc6ac4dbbe4b668edec963, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
+--- !u!114 &4102989262188303463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2445864910713252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 55
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 3e38345d43720d446a7491d3d2b967e6, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
+--- !u!114 &600394970693886253
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2445864910713252}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 20
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 98ac731827c4582408e3aa8bb9de92ec, type: 3}
+    volume: 0.8
+    pitch: {x: 0.8, y: 0.8}
 --- !u!1 &579621279420317887
 GameObject:
   m_ObjectHideFlags: 0
@@ -226,12 +351,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onHitAnimation: {fileID: 855764348832698739, guid: d1446e138d0131c418b07cecd7e0f937,
     type: 3}
+  onlyHitStopOpponent: 0
   hitStop: 0.3
   knockbackDurationMultiplier: 1
   knockbackX: 7
   knockbackZ: 1
-  revengeValue: 3
   knockbackInvulnerability: 0.1
+  revengeValue: 3
 --- !u!114 &6025014680465541833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -314,6 +440,7 @@ Transform:
   - {fileID: 7923213433310778786}
   - {fileID: 7736934380396935790}
   - {fileID: 6170470185010184287}
+  - {fileID: 6055558828860651366}
   m_Father: {fileID: 5842096757366747166}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -351,14 +478,24 @@ MonoBehaviour:
     AnimationEvent: {fileID: 4689905395784803237}
   - Frame: 20
     AnimationEvent: {fileID: 5793871829644042148}
+  - Frame: 20
+    AnimationEvent: {fileID: 600394970693886253}
+  - Frame: 38
+    AnimationEvent: {fileID: 860489349488534666}
   - Frame: 39
     AnimationEvent: {fileID: 2340339298497957769}
+  - Frame: 40
+    AnimationEvent: {fileID: 222080126471578}
   - Frame: 43
     AnimationEvent: {fileID: 4461643240352555985}
   - Frame: 47
     AnimationEvent: {fileID: 3418712900553406799}
+  - Frame: 52
+    AnimationEvent: {fileID: 930754050859333571}
   - Frame: 53
     AnimationEvent: {fileID: 7960384092787149481}
+  - Frame: 55
+    AnimationEvent: {fileID: 4102989262188303463}
   - Frame: 56
     AnimationEvent: {fileID: 714956832288177373}
   - Frame: 58
@@ -459,12 +596,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onHitAnimation: {fileID: 855764348832698739, guid: 734251cd418c42946b79b2586c648edb,
     type: 3}
+  onlyHitStopOpponent: 0
   hitStop: 0.1
   knockbackDurationMultiplier: 0.5
   knockbackX: 2
   knockbackZ: 4
-  revengeValue: 3
   knockbackInvulnerability: 0.1
+  revengeValue: 3
 --- !u!114 &5485531285977804821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -682,6 +820,13 @@ MonoBehaviour:
     ignoreElementalStat: 0
   damage:
     baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
+  backdamage:
+    baseDamage: 100
+    ignoreStatsMultiplier: 0
+  banDamage:
+    damagePerBan: 100
     attackType: 0
     ignoreStatsMultiplier: 0
 --- !u!1 &6664025316910145470
@@ -979,6 +1124,13 @@ MonoBehaviour:
     ignoreElementalStat: 0
   damage:
     baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
+  backdamage:
+    baseDamage: 100
+    ignoreStatsMultiplier: 0
+  banDamage:
+    damagePerBan: 100
     attackType: 0
     ignoreStatsMultiplier: 0
 --- !u!1 &8512295513669630368

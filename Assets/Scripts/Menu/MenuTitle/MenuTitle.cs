@@ -67,6 +67,13 @@ namespace Menu
         [SerializeField]
         GameObject fade = null;
 
+
+        [Title("Sounds")]
+        [SerializeField]
+        SoundParameter soundSelect;
+        [SerializeField]
+        SoundParameter soundValidate;
+
         bool firstTimePopup = false;
         InputController currentInput = null;
 
@@ -75,6 +82,7 @@ namespace Menu
         {
             if(!gameData.Load()) // On a pas réussi à load quoi que ce soit donc c'est un nouveau
             {
+                gameData.ResetSave();
                 gameData.Save();
                 firstTimePopup = true;
                 menuFirstTime.OnEnd += BackToTitle;
@@ -130,6 +138,7 @@ namespace Menu
 
             if (listEntry.InputListVertical(inputs.InputLeftStickY.InputValue))
             {
+                soundSelect.PlaySound();
                 deckBattleDrawer.MoveHand(listEntry.IndexSelection, cardSprites);
                 animatorOptionsName.SetTrigger("Feedback");
             }
@@ -188,6 +197,9 @@ namespace Menu
                     menuCredits.InitializeMenu();
                     break;
             }
+
+
+            soundValidate.PlaySound();
         }
 
         public void BackToMenu()
@@ -207,6 +219,7 @@ namespace Menu
 
         private void GoToScene()
         {
+            soundValidate.PlaySound();
             StartCoroutine(ChangeSceneCoroutine());
         }
 
@@ -244,6 +257,7 @@ namespace Menu
                 listEntry.SelectIndex((listEntry.IndexSelection + 1) % cardSprites.Count);
                 deckBattleDrawer.MoveHandRight(listEntry.IndexSelection, cardSprites);
                 shuffleTime -= 1;
+                soundSelect.PlaySound();
             }
 
             if (firstTimePopup)

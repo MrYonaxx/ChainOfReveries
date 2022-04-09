@@ -42,6 +42,9 @@ namespace VoiceActing
         [SerializeField]
         Animator animatorMenu = null;
 
+        [Title("Sounds")]
+        [SerializeField]
+        SoundParameter soundSelect;
 
         List<bool> joystickInput;
         bool ready = false;
@@ -169,6 +172,7 @@ namespace VoiceActing
                 else
                     buttonStart.gameObject.SetActive(false);
             }
+            soundSelect.PlaySound();
         }
 
         private void ActivateInput(bool b)

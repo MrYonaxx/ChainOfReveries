@@ -33,11 +33,11 @@ MonoBehaviour:
       baseValue: 1
       finalValue: 1
     RevengeValue:
-      baseValue: 14
-      finalValue: 14
+      baseValue: 15
+      finalValue: 15
     RevengeValueRate:
-      baseValue: 0
-      finalValue: 0
+      baseValue: 1
+      finalValue: 1
     KnockbackTime:
       baseValue: 1
       finalValue: 1

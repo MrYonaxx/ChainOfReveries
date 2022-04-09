@@ -88,10 +88,13 @@ namespace VoiceActing
                 cardsList[i].gameObject.SetActive(false);
             }
 
-            if (cursorCoroutine != null)
-                StopCoroutine(cursorCoroutine);
-            cursorCoroutine = MoveCursorCoroutineIntro();
-            StartCoroutine(cursorCoroutine);
+            if (isActiveAndEnabled)
+            {
+                if (cursorCoroutine != null)
+                    StopCoroutine(cursorCoroutine);
+                cursorCoroutine = MoveCursorCoroutineIntro();
+                StartCoroutine(cursorCoroutine);
+            }
         }
 
         public void MoveCursor(int direction)

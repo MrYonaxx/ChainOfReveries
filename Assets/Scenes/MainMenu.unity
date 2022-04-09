@@ -3087,7 +3087,12 @@ MonoBehaviour:
   textNbRun: {fileID: 866945479}
   textRunCompleted: {fileID: 1796035312}
   textMaxReverieLevel: {fileID: 1632590700}
-  nbRun: []
+  nbRun:
+  - {fileID: 1368400146}
+  - {fileID: 978027366}
+  - {fileID: 944693108}
+  - {fileID: 888689001}
+  - {fileID: 591406787}
 --- !u!1 &156095548
 GameObject:
   m_ObjectHideFlags: 0
@@ -16593,6 +16598,14 @@ MonoBehaviour:
   textOptionsName: {fileID: 994134155}
   deckBattleDrawer: {fileID: 120498683}
   fade: {fileID: 444453129}
+  soundSelect:
+    sound: {fileID: 8300000, guid: 84116321d876ae6438c3d48e88a3d0fb, type: 3}
+    volume: 0.6
+    pitch: {x: 0.9, y: 1.1}
+  soundValidate:
+    sound: {fileID: 8300000, guid: c140d7b3c7a6f604ba1b4f5f9350ebef, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
 --- !u!4 &663917613
 Transform:
   m_ObjectHideFlags: 0
@@ -32503,6 +32516,10 @@ MonoBehaviour:
   - {fileID: 890320307}
   - {fileID: 1136696748}
   animatorMenu: {fileID: 254900431}
+  soundSelect:
+    sound: {fileID: 8300000, guid: e48e6b9b83ab10a4297469811a19ddaf, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
 --- !u!4 &1365445242
 Transform:
   m_ObjectHideFlags: 0

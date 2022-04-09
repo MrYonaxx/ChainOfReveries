@@ -26,6 +26,9 @@ namespace VoiceActing
         [SerializeField]
         GameObject buttonPrompt = null;
 
+        [SerializeField]
+        SoundParameter soundChestOpen = null;
+
         bool isOpen = false;
         CharacterBase characterToInteract = null;
         List<Card> cardsGacha = new List<Card>();
@@ -49,6 +52,8 @@ namespace VoiceActing
             character.Inputs.SetControllable(menuRoulette, true);
             isOpen = true;
             chestAnimator.SetTrigger("Feedback");
+            soundChestOpen.PlaySound();
+
             // Flemme detecte
             GetComponent<BoxCollider2D>().enabled = false;
         }
