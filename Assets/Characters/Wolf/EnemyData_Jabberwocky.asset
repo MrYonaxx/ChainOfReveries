@@ -21,10 +21,10 @@ MonoBehaviour:
     phantom wolves can attack without using a card, so keep an eye on them even if
     the jabberwock is in your combo.'
   characterStat:
-    hp: 1
+    hp: 2700
     HPMax:
-      baseValue: 3400
-      finalValue: 3400
+      baseValue: 2700
+      finalValue: 2700
     Attack:
       baseValue: 1
       finalValue: 1

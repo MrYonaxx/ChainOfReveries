@@ -24,7 +24,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 6739e3f0ca1ce5641ab03b1347524cb3, type: 3}
   cardName: Longsword
   cardType: 0
-  cardDescription: 'Increase damage by 25%.
+  cardDescription: 'Increase damage dealt by 25%.
 
     (1 Reload)'
   statsModifier: []

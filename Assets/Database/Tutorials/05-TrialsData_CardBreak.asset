@@ -104,8 +104,8 @@ MonoBehaviour:
   - But be careful, as you too, will not be able to put a fight if you can't Card
     Break the opponent cards.
   - Note that some cards have special Card Break rules.
-  - And don't forget that you're not forced to Card Break a action, you can simply
-    evade the attack.
+  - And don't forget that you're not forced to always Card Break a action, you can
+    simply evade the attack.
   comboNotes:
   - Card Break opponent
   - Card Break opponent

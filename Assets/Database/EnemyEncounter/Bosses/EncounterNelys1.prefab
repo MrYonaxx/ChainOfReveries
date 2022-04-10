@@ -5295,7 +5295,7 @@ MonoBehaviour:
   - {fileID: 2319365304817455065}
   encounterBackground:
   - {fileID: 21300000, guid: d78eedcd5aab83b49b807e194608e39d, type: 3}
-  BattleTheme: {fileID: 8300000, guid: 515db29dbb197334c9a85ed8d041a0ac, type: 3}
+  BattleTheme: {fileID: 8300000, guid: 3c73790d871cbac4fab09aae7c110646, type: 3}
   HasIntro: 1
   playerPos: {fileID: 9219024560538013594}
   enemyCinematic: {fileID: 1063159378548566093}

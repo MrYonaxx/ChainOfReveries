@@ -21,7 +21,7 @@ MonoBehaviour:
   - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
     baseCardValue: 9
   - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
-    baseCardValue: 1
+    baseCardValue: 4
   - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
     baseCardValue: 1
   - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
@@ -32,4 +32,7 @@ MonoBehaviour:
     baseCardValue: 1
   - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
     baseCardValue: 1
+  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+    baseCardValue: 1
+  premiumCardID: 
   initialEquipment: []

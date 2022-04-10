@@ -20,8 +20,8 @@ MonoBehaviour:
   characterStat:
     hp: 3900
     HPMax:
-      baseValue: 3900
-      finalValue: 3900
+      baseValue: 3750
+      finalValue: 3750
     Attack:
       baseValue: 1
       finalValue: 1

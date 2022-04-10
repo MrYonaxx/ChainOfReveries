@@ -61,7 +61,8 @@ namespace VoiceActing
         public void HardReset()
         {
             Reset();
-            nextLevelEncounter.Reset();
+            if(nextLevelEncounter != null)
+                nextLevelEncounter.HardReset();
         }
 
         // ! \ Ce truc est jamais appelé si on refait une run donc c'est pas bon, à refaire

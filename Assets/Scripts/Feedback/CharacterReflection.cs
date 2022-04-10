@@ -64,11 +64,11 @@ namespace VoiceActing
         {
             if(isActiveAndEnabled)
                 StartCoroutine(LerpAlpha(disappearTime)); 
-            enabled = false;
         }
 
         IEnumerator LerpAlpha(float time)
         {
+            enabled = false;
             float t = 0f;
             while (t < time)
             {

@@ -22,8 +22,8 @@ MonoBehaviour:
   characterStat:
     hp: 1500
     HPMax:
-      baseValue: 1500
-      finalValue: 1500
+      baseValue: 1200
+      finalValue: 1200
     Attack:
       baseValue: 1
       finalValue: 1
@@ -39,6 +39,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 0
       finalValue: 0
+    RevengeValueRate:
+      baseValue: 0
+      finalValue: 0
     KnockbackTime:
       baseValue: 1
       finalValue: 1
@@ -48,9 +51,6 @@ MonoBehaviour:
     CardBreakTime:
       baseValue: 1
       finalValue: 1
-    CardBreakKnockback:
-      baseValue: 3
-      finalValue: 3
     Speed:
       baseValue: 1.9
       finalValue: 1.9

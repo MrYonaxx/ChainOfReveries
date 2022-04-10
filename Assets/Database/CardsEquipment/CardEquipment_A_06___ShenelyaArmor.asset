@@ -24,9 +24,10 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: d337872d88b3b9f4f9a2a72617681d8b, type: 3}
   cardName: Shenelya's Armor
   cardType: 1
-  cardDescription: 'Reduce all damages by 25%.
+  cardDescription: 'Reduce all damages received by 25%.
 
-    Lower maximum HP by 1000.
+    Lower maximum HP by
+    1000.
 
 '
   statsModifier:

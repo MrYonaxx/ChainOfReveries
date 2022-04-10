@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 178eb1b213c518446b61a1240e1f7051, type: 3}
   m_Name: DeckSen_SavageNymph
   m_EditorClassIdentifier: 
-  deckName: Savage Nymph
+  deckName: "\xC9clair"
   initialDeck:
   - cardData: {fileID: 11400000, guid: 2e9796802cc52d74e9d955381b7a3b16, type: 2}
     baseCardValue: 6
@@ -36,4 +36,5 @@ MonoBehaviour:
     baseCardValue: 4
   - cardData: {fileID: 11400000, guid: 2e9796802cc52d74e9d955381b7a3b16, type: 2}
     baseCardValue: 0
+  premiumCardID: 
   initialEquipment: []

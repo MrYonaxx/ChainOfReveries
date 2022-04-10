@@ -24,7 +24,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 17da94fd5279ae64faa9d06a29b0072c, type: 3}
   cardName: Ice Staff
   cardType: 0
-  cardDescription: 'Increase Ice damage by 50%.
+  cardDescription: 'Increase Ice damage dealt by 50%.
 
     (1 Reload)'
   statsModifier: []

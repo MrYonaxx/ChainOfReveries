@@ -131,7 +131,7 @@ namespace Menu
             optionDatas[indexResolution].Options = new string[resolutions.Length];
             for (int i = 0; i < resolutions.Length; i++)
             {
-                optionDatas[indexResolution].Options[i] = resolutions[i].width + "x" + resolutions[i].height;
+                optionDatas[indexResolution].Options[i] = resolutions[i].width + "x" + resolutions[i].height + " - " + resolutions[i].refreshRate;
             }
         }
 
@@ -269,7 +269,7 @@ namespace Menu
         private void LoadPlayerOptionData()
         {
             indexOptions[indexFullscreen] = PlayerPrefs.GetInt("Fullscreen", 1);
-            indexOptions[indexResolution] = PlayerPrefs.GetInt("Resolution");
+            indexOptions[indexResolution] = PlayerPrefs.GetInt("Resolution", resolutions.Length-1);
 
             indexOptions[indexMusic] = PlayerPrefs.GetInt("MusicVolume", 10);
             indexOptions[indexSound] = PlayerPrefs.GetInt("SoundVolume", 10);
@@ -279,7 +279,7 @@ namespace Menu
             indexOptions[indexShowComboCount] = PlayerPrefs.GetInt("ComboCount", 1);
 
             // 0 = hide, 1 = Hide player only, 2 = Hide boss, 3 = show
-            indexOptions[indexShowCardValue] = PlayerPrefs.GetInt("CardValue", 1);
+            indexOptions[indexShowCardValue] = PlayerPrefs.GetInt("CardValue", 3);
 
             // 0 = fast, 1 = fast player only, 2 = long
             indexOptions[indexEquipmentTime] = PlayerPrefs.GetInt("EquipmentTime", 1);

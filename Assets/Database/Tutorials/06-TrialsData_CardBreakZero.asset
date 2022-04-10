@@ -96,7 +96,6 @@ MonoBehaviour:
   - When a Card with a value of 0 is played, you automatically Card Break the current
     action.
   - But when the 0 card become the current card, it can be Card Break by any card.
-  - Try to Card Break the opponent Card with a 0.
   textboxEnd:
   - A card with a value of 0 is strong for defense but not for offense.
   - They are best used when the opponent play a Sleight.

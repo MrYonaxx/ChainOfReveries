@@ -17,10 +17,10 @@ MonoBehaviour:
   characterDescription: Wolves do not pose a serious threat. As long as you use a
     card with a good value to start your combo, they will not be able to attack.
   characterStat:
-    hp: 1000
+    hp: 1600
     HPMax:
-      baseValue: 2200
-      finalValue: 2200
+      baseValue: 1600
+      finalValue: 1600
     Attack:
       baseValue: 1
       finalValue: 1

@@ -17,10 +17,10 @@ MonoBehaviour:
   characterDescription: Be careful when you Card Break Mushrooms, because they release
     confusion spores around them.
   characterStat:
-    hp: 2100
+    hp: 1499
     HPMax:
-      baseValue: 2100
-      finalValue: 2100
+      baseValue: 1499
+      finalValue: 1499
     Attack:
       baseValue: 1
       finalValue: 1
@@ -36,6 +36,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 0
       finalValue: 0
+    RevengeValueRate:
+      baseValue: 0
+      finalValue: 0
     KnockbackTime:
       baseValue: 1
       finalValue: 1
@@ -45,9 +48,6 @@ MonoBehaviour:
     CardBreakTime:
       baseValue: 1.5
       finalValue: 1.5
-    CardBreakKnockback:
-      baseValue: 1
-      finalValue: 1
     Speed:
       baseValue: 1.4
       finalValue: 1.4

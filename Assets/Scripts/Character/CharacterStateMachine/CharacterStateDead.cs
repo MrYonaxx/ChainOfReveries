@@ -49,7 +49,6 @@ namespace VoiceActing
             knockbackX = character.CharacterMovement.SpeedX;
             character.CharacterKnockback.IsInvulnerable = true;
             character.CharacterAction.CancelSleight();
-            reflection.Disappear();
         }
 
         /// <summary>
@@ -77,6 +76,7 @@ namespace VoiceActing
                 {
                     character.CharacterRigidbody.transform.gameObject.layer = 0;
                     character.FeedbacksComponents.GetComponent<BlinkScript>().Fade(timeFade);
+                    reflection.Disappear();
                 }
             }
 

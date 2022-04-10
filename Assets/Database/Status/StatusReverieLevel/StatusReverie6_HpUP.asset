@@ -61,7 +61,7 @@ MonoBehaviour:
       Data: 1
     - Name: value
       Entry: 4
-      Data: 0.2
+      Data: 0.25
     - Name: 
       Entry: 8
       Data: 
@@ -76,7 +76,7 @@ MonoBehaviour:
       Data: 
   statusIconSprite: {fileID: 0}
   statusName: 
-  statusDescription: HP +20%
+  statusDescription: HP +25%
   hideStatus: 1
   statusShowLabel: 0
   statusConditionLabel: 

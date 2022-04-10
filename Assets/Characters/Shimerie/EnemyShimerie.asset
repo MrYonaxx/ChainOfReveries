@@ -21,8 +21,8 @@ MonoBehaviour:
   characterStat:
     hp: 8999
     HPMax:
-      baseValue: 8999
-      finalValue: 8999
+      baseValue: 8000
+      finalValue: 8000
     Attack:
       baseValue: 1
       finalValue: 1

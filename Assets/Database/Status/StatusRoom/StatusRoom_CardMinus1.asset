@@ -59,6 +59,12 @@ MonoBehaviour:
     - Name: CardType
       Entry: 3
       Data: 0
+    - Name: ClampValue
+      Entry: 5
+      Data: true
+    - Name: IgnoreZero
+      Entry: 5
+      Data: false
     - Name: 
       Entry: 8
       Data: 

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateID: 0
   evadeAction: {fileID: 0}
-  flyHeight: {x: 0.6, y: 0.7}
-  speedZ: 0.4
+  flyHeight: {x: 0.3, y: 0.5}
+  speedZ: 0.2
 --- !u!1 &3524539374360354612
 GameObject:
   m_ObjectHideFlags: 0

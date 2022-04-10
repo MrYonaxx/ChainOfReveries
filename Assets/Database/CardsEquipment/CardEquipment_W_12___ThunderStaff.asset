@@ -24,7 +24,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 09d985f3e7991e84d8379d234e34dc4f, type: 3}
   cardName: Thunder Staff
   cardType: 0
-  cardDescription: 'Increase thunder damage by 50%.
+  cardDescription: 'Increase thunder damage dealt by 50%.
 
     (1 Reload)'
   statsModifier: []

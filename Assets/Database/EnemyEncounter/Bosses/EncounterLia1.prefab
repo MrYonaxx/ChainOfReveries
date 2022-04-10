@@ -82,7 +82,7 @@ MonoBehaviour:
   - {fileID: 8177986279266250547}
   encounterBackground:
   - {fileID: 21300000, guid: d78eedcd5aab83b49b807e194608e39d, type: 3}
-  BattleTheme: {fileID: 8300000, guid: 515db29dbb197334c9a85ed8d041a0ac, type: 3}
+  BattleTheme: {fileID: 8300000, guid: 3c73790d871cbac4fab09aae7c110646, type: 3}
   HasIntro: 1
   playerPos: {fileID: 1787428157777692792}
   enemyCinematic: {fileID: 1787428157454387185}
@@ -160,7 +160,7 @@ SpriteRenderer:
   m_SortingOrder: 4
   m_Sprite: {fileID: 4983092548810462725, guid: 8e245e2580c97a8438b63264269fa2d2,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.19607843}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

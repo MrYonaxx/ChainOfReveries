@@ -32,7 +32,8 @@ namespace VoiceActing
         [SerializeField]
         TextMeshProUGUI textSleightName = null;
 
-
+        [SerializeField]
+        Animator animatorSleightReady = null;
 
         int index = 0;
 
@@ -47,6 +48,7 @@ namespace VoiceActing
                 }
                 textSleightName.text = "";
                 textSleightTotalValue.text = "";
+                animatorSleightReady.gameObject.SetActive(false);
             }
             else
             {
@@ -65,10 +67,12 @@ namespace VoiceActing
             if (currentSleight != null)
             {
                 textSleightName.text = currentSleight.SleightName;
+                animatorSleightReady.gameObject.SetActive(true);
             }
             else
             {
                 textSleightName.text = "";
+                animatorSleightReady.gameObject.SetActive(false);
             }
         }
 

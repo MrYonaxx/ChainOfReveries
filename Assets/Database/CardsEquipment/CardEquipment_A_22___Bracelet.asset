@@ -24,7 +24,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 4abcc3c7d1cb00047a43de63913bd40e, type: 3}
   cardName: Bracelet
   cardType: 1
-  cardDescription: Increase physical damage by 10%.
+  cardDescription: Increase physical damage dealt by 10%.
   statsModifier:
   - charStat: 1
     modifierType: 0

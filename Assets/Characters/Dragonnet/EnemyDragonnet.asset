@@ -23,8 +23,8 @@ MonoBehaviour:
   characterStat:
     hp: 2200
     HPMax:
-      baseValue: 2200
-      finalValue: 2200
+      baseValue: 1760
+      finalValue: 1760
     Attack:
       baseValue: 1
       finalValue: 1
@@ -72,17 +72,17 @@ MonoBehaviour:
   salut: 
   initialDeck:
   - cardData: {fileID: 11400000, guid: 6b1523d79325c65419e4786089c22cd4, type: 2}
-    baseCardValue: 5
-  - cardData: {fileID: 11400000, guid: 6b1523d79325c65419e4786089c22cd4, type: 2}
-    baseCardValue: 7
-  - cardData: {fileID: 11400000, guid: 6b1523d79325c65419e4786089c22cd4, type: 2}
     baseCardValue: 4
   - cardData: {fileID: 11400000, guid: 6b1523d79325c65419e4786089c22cd4, type: 2}
     baseCardValue: 6
   - cardData: {fileID: 11400000, guid: 6b1523d79325c65419e4786089c22cd4, type: 2}
-    baseCardValue: 8
+    baseCardValue: 3
   - cardData: {fileID: 11400000, guid: 6b1523d79325c65419e4786089c22cd4, type: 2}
-    baseCardValue: 2
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: 6b1523d79325c65419e4786089c22cd4, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: 6b1523d79325c65419e4786089c22cd4, type: 2}
+    baseCardValue: 1
   sleightDatabase: []
   initialEquipment: []
   loreDescription: Dragons are hostile creature living around the city of Mynsa.

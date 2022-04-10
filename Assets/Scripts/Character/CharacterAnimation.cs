@@ -129,6 +129,7 @@ namespace VoiceActing
         private void DeathAnimation(CharacterBase character,  DamageMessage dmgMsg)
         {
             BattleFeedbackManager.Instance.AnimationDeath(character);
+            blink.Blink(6f, Color.white);
         }
 
         private void ReloadAnimation()

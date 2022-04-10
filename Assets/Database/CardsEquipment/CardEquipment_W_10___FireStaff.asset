@@ -24,7 +24,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: e464a7630c5d9d94aae3d716ec186417, type: 3}
   cardName: Fire Staff
   cardType: 0
-  cardDescription: 'Increase Fire damage by 50%.
+  cardDescription: 'Increase Fire damage dealt by 50%.
 
     (1 Reload)'
   statsModifier: []

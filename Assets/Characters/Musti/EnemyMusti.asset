@@ -25,14 +25,14 @@ MonoBehaviour:
       baseValue: 1
       finalValue: 1
     Defense:
-      baseValue: 1.5
-      finalValue: 1.5
+      baseValue: 1
+      finalValue: 1
     Magic:
       baseValue: 1
       finalValue: 1
     MagicDefense:
-      baseValue: 1.5
-      finalValue: 1.5
+      baseValue: 1
+      finalValue: 1
     RevengeValue:
       baseValue: 0
       finalValue: 0

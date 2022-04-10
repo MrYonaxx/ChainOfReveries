@@ -83,6 +83,10 @@ namespace VoiceActing
 
         protected bool autoCombo = false;
         protected bool canMoveCancel = false;
+        public bool CanMoveCancel
+        {
+            get { return canMoveCancel; }
+        }
         private bool canMoveCancelItself; public bool CanMoveCancelItself
         {
             get { return canMoveCancelItself; }

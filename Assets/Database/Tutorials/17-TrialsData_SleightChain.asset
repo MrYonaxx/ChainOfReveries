@@ -132,8 +132,7 @@ MonoBehaviour:
   - A Sleight can be chained by any other Sleight as long as it have a different
     name.
   textboxEnd:
-  - Each time you cancel a action during a combo, the enemy stay more time in hit
-    stun.
+  - Each time you cancel a action during a combo, the enemy stay longer in hit stun.
   - This means that attack with a long startup like Midnight Mowing, can combo if
     used after multiple Sleight.
   - Lia basic chain is easy with a good deck, but more complicated combo will require

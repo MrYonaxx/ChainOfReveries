@@ -84,6 +84,7 @@ namespace VoiceActing
             }
             return false;
         }
+
         private bool InputDpad(CharacterBase character)
         {
             if (character.MotionSpeed == 0)

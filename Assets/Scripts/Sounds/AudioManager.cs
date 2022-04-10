@@ -160,15 +160,11 @@ namespace VoiceActing
             audioVoice.PlayOneShot(sound, voiceVolumeMax * volumeMultiplier);
         }*/
 
-
-
         public void SetMusicVolume(int value)
         {
             musicVolumeMax = (value / 10f);
 
             audioMusic.volume = musicVolumeMax;
-            /*if (audioMusic.volume != 0)
-                audioMusic.volume = musicVolumeMax;*/
         }
 
         public void SetSoundVolume(int value)
@@ -176,6 +172,7 @@ namespace VoiceActing
             soundVolumeMax = (value / 10f);
             audioSound.volume = soundVolumeMax;
         }
+
     } // AudioManager class
 
 } // #PROJECTNAME# namespace

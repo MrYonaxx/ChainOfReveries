@@ -28,6 +28,12 @@ namespace VoiceActing
         [SerializeField]
         Color colorHand;
 
+        [Header("Cards")]
+        [SerializeField]
+        SpriteRenderer cardOutline;
+        [SerializeField]
+        SpriteRenderer cardSprite;
+
         private void Start()
         {
             character.OnBattleStart += Initialize;
@@ -67,6 +73,7 @@ namespace VoiceActing
         {
             textMesh.enabled = false;
             this.enabled = false;
+            cardOutline.gameObject.SetActive(false);
         }
 
         // Update is called once per frame
@@ -74,8 +81,7 @@ namespace VoiceActing
         {
             if (character.CharacterKnockback.IsDead)
             {
-                textMesh.enabled = false;
-                this.enabled = false;
+                Hide();
                 return;
             }
 
@@ -96,10 +102,16 @@ namespace VoiceActing
                 textMesh.enabled = true;
                 textMesh.text = character.DeckController.Deck[character.DeckController.CurrentIndex].GetCardValue().ToString();
                 textMesh.color = colorHand;
+
+
+                cardOutline.gameObject.SetActive(true);
+                cardOutline.color = character.CharacterAction.CardTypes.GetColorType(character.DeckController.GetCurrentCard().GetCardType());
+                cardSprite.sprite = character.DeckController.GetCurrentCard().GetCardIcon();
             }
             else
             {
                 textMesh.enabled = false;
+                cardOutline.gameObject.SetActive(false);
             }
             textMesh.gameObject.transform.localScale = new Vector3(character.CharacterMovement.Direction, 1, 1);
         }

@@ -122,6 +122,7 @@ namespace VoiceActing
         {
             explorationManager.AddCardLayout(); // Appel la fonction pour ajouter de manière random des cartes support au layout du level 1
             explorationManager.AutoCreateRoom(runData.FloorLayout.FirstRoom, 1f);
+            inputController.SetControllable(explorationManager, true);
         }
 
 

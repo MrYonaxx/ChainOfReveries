@@ -24,7 +24,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 3a4d039acc2220143972ba8c4a1f7a40, type: 3}
   cardName: Plate Armor
   cardType: 1
-  cardDescription: 'Reduce physical damage by 30%.
+  cardDescription: 'Reduce physical damage received by 30%.
 
 '
   statsModifier:
