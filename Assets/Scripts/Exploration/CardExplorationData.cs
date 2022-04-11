@@ -66,6 +66,13 @@ namespace VoiceActing
         }
 
         [SerializeField]
+        int reverieColor;
+        public int ReverieColor
+        {
+            get { return reverieColor; }
+        }
+
+        [SerializeField]
         ExplorationEvent explorationEvent = null;
         public ExplorationEvent ExplorationEvent
         {

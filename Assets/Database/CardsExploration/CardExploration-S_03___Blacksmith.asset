@@ -17,6 +17,7 @@ MonoBehaviour:
   cardDescription: Travel to a Dream of Horn, where you can fortify your Cards.
   cardType: 1
   nbCardReward: 0
+  reverieColor: 2
   explorationEvent: {fileID: 6310875253515177516, guid: d2cd0efbee416144caa499ec53286a4b,
     type: 3}
   battleModifiers: []

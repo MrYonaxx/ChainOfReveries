@@ -17,6 +17,7 @@ MonoBehaviour:
   cardDescription: Travel to a Dream of Ivory, where enemies are much stronger.
   cardType: 0
   nbCardReward: 2
+  reverieColor: 5
   explorationEvent: {fileID: 8236675884287493958, guid: 7af8913c4d5614c4a8a6cda89a05c0ad,
     type: 3}
   battleModifiers:

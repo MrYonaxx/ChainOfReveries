@@ -29,17 +29,25 @@ namespace VoiceActing
         [SerializeField]
         TextMeshProUGUI textCharacterName = null;
 
+
+
         [Title("Health")]
         [SerializeField]
-        GaugeDrawer healthGauge = null;
+        TMPro.TextMeshProUGUI textHealthValue = null;
+        [SerializeField]
+        RectTransform healthGaugeOutline = null;
+        [SerializeField]
+        RectTransform healthGauge = null;
+
         [SerializeField]
         RectTransform transformBarNumber = null;
         [SerializeField]
         Image transformBar = null;
-        [SerializeField]
-        RectTransform firstHealthBar = null;
+
         [SerializeField]
         RectTransform healthBarHidden = null;
+
+
 
         [Title("RevengeValue")]
         [SerializeField]
@@ -56,6 +64,9 @@ namespace VoiceActing
         int healthBarAmount = 1000;
         [SerializeField]
         float rVAmount = 30;
+
+        [SerializeField]
+        float sizeHealthBar = 1000;
         [SerializeField]
         Vector2 sizeRVGauge = new Vector2(100, 400);
 
@@ -138,23 +149,15 @@ namespace VoiceActing
             }
             if (healthBarList.Count == 0)
                 transformBarNumber.gameObject.SetActive(false);
-            previousHealth = (int)hp;
 
+            // décale le nom si il y a trop de barre de vie
             if (healthBarList.Count > 8)
                 textCharacterName.rectTransform.anchoredPosition += new Vector2(0, 20);
 
             // Affiche la première barre de vie un peu différemment
-            healthBarHidden.gameObject.SetActive(false);
-            firstHealthBar.gameObject.SetActive(false);
+            healthBarHidden.gameObject.SetActive(maxHp >= healthBarAmount);
 
-            int firstBarAmount = (int)maxHp % healthBarAmount;
-            if (previousHealth >= maxHp - firstBarAmount && previousHealth >= firstBarAmount)
-            {
-                healthBarHidden.gameObject.SetActive(true);
-                firstHealthBar.gameObject.SetActive(true);
-                firstHealthBar.transform.localScale = new Vector3(firstBarAmount / (float)healthBarAmount, 1, 1);
-
-            }        
+            previousHealth = (int)hp;
         }
 
 
@@ -170,15 +173,14 @@ namespace VoiceActing
         public void DrawHealth(int hp, int maxHp)
         {
             maxHp = Mathf.Max(1, maxHp);
-            // Pour que ça s'affiche bien quand on a un multiple de healthBar PV
-            if(hp > 0 && hp % healthBarAmount == 0)
-                healthGauge.DrawGauge(healthBarAmount, healthBarAmount);
-            else
-                healthGauge.DrawGauge(hp % healthBarAmount, Mathf.Min(maxHp, healthBarAmount));
-            healthGauge.DrawGaugeText(hp.ToString());
 
+            // Dessine le texte hp
+            if (textHealthValue != null)
+                textHealthValue.text = hp.ToString();
+
+            // Affiche le bon nombre de barre de vie
             int currentHealth = 0;
-            for (int i = healthBarList.Count-1; i >= 0; i--)
+            for (int i = healthBarList.Count - 1; i >= 0; i--)
             {
                 currentHealth += healthBarAmount;
                 if (hp >= currentHealth)
@@ -187,22 +189,34 @@ namespace VoiceActing
                     healthBarList[i].enabled = false;
             }
 
-            animatorHealthLost.transform.localScale = new Vector3((float)(previousHealth % healthBarAmount) / (float)healthBarAmount, 1, 1);
-            animatorHealthLost.SetTrigger("Feedback");
-            previousHealth = hp;
-
-            // Affiche la première barre de vie un peu différemment
-            int firstBarAmount = maxHp % healthBarAmount;
-            if (previousHealth >= maxHp - firstBarAmount && previousHealth >= firstBarAmount)
+            if (maxHp < healthBarAmount)
+            { 
+                // Il n'y a qu'une seule barre de vie
+                healthGaugeOutline.sizeDelta = new Vector2((maxHp / (float)healthBarAmount) * sizeHealthBar, healthGaugeOutline.sizeDelta.y);
+                healthGauge.transform.localScale = new Vector3(hp / (float)maxHp, 1, 1);
+                animatorHealthLost.transform.localScale = new Vector3(previousHealth / (float)maxHp, 1, 1);
+            }
+            else if (hp >= currentHealth)
             {
-                healthBarHidden.gameObject.SetActive(true);
-                firstHealthBar.gameObject.SetActive(true);
+                // C'est la première barre de vie
+                healthGaugeOutline.sizeDelta = new Vector2(((maxHp - currentHealth) / (float)healthBarAmount) * sizeHealthBar, healthGaugeOutline.sizeDelta.y);
+                healthGauge.transform.localScale = new Vector3((hp % healthBarAmount) / (float)Mathf.Max(maxHp - currentHealth, 1), 1, 1);
+                animatorHealthLost.transform.localScale = new Vector3((previousHealth % healthBarAmount) / (float)Mathf.Max(maxHp - currentHealth, 1), 1, 1);
             }
             else
             {
-                firstHealthBar.gameObject.SetActive(false);
-                healthBarHidden.gameObject.SetActive(false);
+                // Barre de vie du milieu
+                healthGaugeOutline.sizeDelta = new Vector2(sizeHealthBar, healthGaugeOutline.sizeDelta.y);
+                healthGauge.transform.localScale = new Vector3((hp % healthBarAmount) / (float)healthBarAmount, 1, 1);
+
+                if ((hp % healthBarAmount) > (previousHealth % healthBarAmount))
+                    animatorHealthLost.transform.localScale = new Vector3(1, 1, 1);
+                else
+                    animatorHealthLost.transform.localScale = new Vector3((previousHealth % healthBarAmount) / (float)healthBarAmount, 1, 1);
             }
+
+            animatorHealthLost.SetTrigger("Feedback");
+            previousHealth = hp;
         }
 
         public void DrawRevengeValue(float rV, float maxRV)
@@ -217,7 +231,8 @@ namespace VoiceActing
                 if (showRV)
                 {
                     showRV = false;
-                    lerpRV.StartLerp(canvasRV.alpha, 1f, (startValue, t) => { canvasRV.alpha = Mathf.Lerp(startValue, 0, t); });
+                    if (rVMaxGauge.gameObject.activeInHierarchy)
+                        lerpRV.StartLerp(canvasRV.alpha, 1f, (startValue, t) => { canvasRV.alpha = Mathf.Lerp(startValue, 0, t); });
                 }
             }
             else

@@ -58,6 +58,13 @@ namespace VoiceActing
         [SerializeField]
         CardExplorationData lastResortCard = null;
 
+
+        [Title("Reverie Color")]
+        [SerializeField]
+        UnityEngine.UI.Image reverieColor = null;
+        [SerializeField]
+        TextMeshProUGUI textReverieColor = null;
+
         [Title("Level Introduction")]
         [SerializeField]
         TextMeshProUGUI textLevelName = null;
@@ -235,10 +242,12 @@ namespace VoiceActing
             // Draw les battle modifiers de la run
             battleModifierDrawerList.DrawBattleModifiers(runData.BattleModifiers, floorID);
             // Draw la preview des battle modifiers de la carte choisi
-            battleModifierDrawerList.DrawBattleModifiersPreview(runData.PlayerExplorationDeck[deckExplorationDrawer.GetCurrentIndex()].BattleModifiers);
+            CardExplorationData card = runData.PlayerExplorationDeck[deckExplorationDrawer.GetCurrentIndex()];
+            battleModifierDrawerList.DrawBattleModifiersPreview(card.BattleModifiers);
+            runData.AddReverieColor(card.CardType, card.ReverieColor);
+            DrawReverieColor();
 
-
-            if(floorID == 0) // Draw Floor Name
+            if (floorID == 0) // Draw Floor Name
             {
                 DrawFloorName(runData.FloorLayout.FloorName);
             }
@@ -300,15 +309,21 @@ namespace VoiceActing
             if (timeMoveCard <= 0)
             {
                 soundSelect.PlaySound();
-                battleModifierDrawerList.HideBattleModifiersPreview(runData.PlayerExplorationDeck[deckExplorationDrawer.GetCurrentIndex()].BattleModifiers);
+
+                // Revert la preview
+                CardExplorationData card = runData.PlayerExplorationDeck[deckExplorationDrawer.GetCurrentIndex()];
+                battleModifierDrawerList.HideBattleModifiersPreview(card.BattleModifiers);
+                runData.AddReverieColor(card.CardType, -card.ReverieColor);
 
                 timeMoveCard = timeMoveCardInterval;
                 deckExplorationDrawer.MoveCursor(1);
                 textFeedback.SetTrigger("Feedback");
 
                 // On dessine une preview des battle modifiers
-                battleModifierDrawerList.DrawBattleModifiersPreview(runData.PlayerExplorationDeck[deckExplorationDrawer.GetCurrentIndex()].BattleModifiers);
-
+                card = runData.PlayerExplorationDeck[deckExplorationDrawer.GetCurrentIndex()];
+                battleModifierDrawerList.DrawBattleModifiersPreview(card.BattleModifiers);
+                runData.AddReverieColor(card.CardType, card.ReverieColor);
+                DrawReverieColor();
             }
         }
 
@@ -317,15 +332,21 @@ namespace VoiceActing
             if (timeMoveCard <= 0)
             {
                 soundSelect.PlaySound();
-                battleModifierDrawerList.HideBattleModifiersPreview(runData.PlayerExplorationDeck[deckExplorationDrawer.GetCurrentIndex()].BattleModifiers);
+
+                // Revert la preview
+                CardExplorationData card = runData.PlayerExplorationDeck[deckExplorationDrawer.GetCurrentIndex()];
+                battleModifierDrawerList.HideBattleModifiersPreview(card.BattleModifiers);
+                runData.AddReverieColor(card.CardType, -card.ReverieColor);
 
                 timeMoveCard = timeMoveCardInterval;
                 deckExplorationDrawer.MoveCursor(-1);
                 textFeedback.SetTrigger("Feedback");
 
                 // On dessine une preview des battle modifiers
-                battleModifierDrawerList.DrawBattleModifiersPreview(runData.PlayerExplorationDeck[deckExplorationDrawer.GetCurrentIndex()].BattleModifiers);
-
+                card = runData.PlayerExplorationDeck[deckExplorationDrawer.GetCurrentIndex()];
+                battleModifierDrawerList.DrawBattleModifiersPreview(card.BattleModifiers);
+                runData.AddReverieColor(card.CardType, card.ReverieColor);
+                DrawReverieColor();
             }
         }
 
@@ -337,6 +358,9 @@ namespace VoiceActing
         {
             active = false;
             floorID += 1;
+
+            // buttonHud
+            buttonHud.gameObject.SetActive(false);
 
             animatorSelection.SetTrigger("Validate");
             animatorDeckExploration.SetBool("Appear", false);
@@ -358,11 +382,14 @@ namespace VoiceActing
 
             AddCardExploration(cardExplorationData.NbCardReward);
 
+            // Ajout de la carte au layout
             runData.AddRoomToLayout(cardExplorationData);
+            // Ajout de la couleur de la Reverie
+            /*runData.AddReverieColor(cardExplorationData.CardType, cardExplorationData.ReverieColor);
+            DrawReverieColor();*/
+
             StartCoroutine(RoomCreatorCoroutine(cardExplorationData));
 
-            // buttonHud
-            buttonHud.gameObject.SetActive(false);
         }
 
         public void HideExplorationMenu()
@@ -462,6 +489,20 @@ namespace VoiceActing
                 animatorGetNewCard[i].SetTrigger("Feedback");
             }
             newCardGet.Clear();
+        }
+
+        private void DrawReverieColor()
+        {
+            int color = runData.GetReverieColor();
+            reverieColor.color = deckExplorationDrawer.CardType.GetColorType(color);
+
+            // Hard codé mais oups
+            if (color == 0)
+                textReverieColor.text = "Red";
+            else if (color == 1)
+                textReverieColor.text = "Blue";
+            else
+                textReverieColor.text = "Green";
         }
 
         public void ChangeLevelBackground()

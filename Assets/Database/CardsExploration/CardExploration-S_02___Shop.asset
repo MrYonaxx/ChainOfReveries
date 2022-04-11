@@ -17,6 +17,7 @@ MonoBehaviour:
   cardDescription: Travel to a Dream of Horn, where you can exchange your Cards.
   cardType: 1
   nbCardReward: 0
+  reverieColor: 1
   explorationEvent: {fileID: 5550693477255747566, guid: 4df141a1b5d598e49b94845d40b0ba95,
     type: 3}
   battleModifiers: []

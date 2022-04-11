@@ -84,6 +84,14 @@ namespace VoiceActing
             set { reverieLevel = value; }
         }
 
+        [SerializeField] // Couleur de la reverie, dépend des cartes
+        int[] reverieColor = null;
+        public int[] ReverieColor
+        {
+            get { return reverieColor; }
+            set { reverieColor = value; }
+        }
+
 
         // Info de la run en cours
         [Space]
@@ -203,6 +211,7 @@ namespace VoiceActing
                     weaponCardCount += 1;
             }
 
+            reverieColor = new int[3] { 1, 0, 0 };
             roomExplored = 0;
             killCount = 0;
             floor = floorLayout.FloorLevel;
@@ -346,6 +355,25 @@ namespace VoiceActing
                 return 1;
         }
 
+        public void AddReverieColor(int color, int amount)
+        {
+            reverieColor[color] += amount;
+        }
+
+        public int GetReverieColor()
+        {
+            int bestIndex = 0;
+            int bestValue = 0;
+            for (int i = 0; i < reverieColor.Length; i++)
+            {
+                if(reverieColor[i]>=bestValue)
+                {
+                    bestValue = reverieColor[i];
+                    bestIndex = i;
+                }
+            }
+            return bestIndex;
+        }
 
 
         #endregion

@@ -17,6 +17,7 @@ MonoBehaviour:
   cardDescription: Travel to a Dream of Ivoirin, where the rewards are superior.
   cardType: 2
   nbCardReward: 1
+  reverieColor: 3
   explorationEvent: {fileID: 3513814409438483324, guid: cb42da33217e138459d886262ce7bca6,
     type: 3}
   battleModifiers:

@@ -17,6 +17,7 @@ MonoBehaviour:
   cardDescription: Travel to a Dream of Ivory, where Cards value cannot be seen.
   cardType: 0
   nbCardReward: 2
+  reverieColor: 2
   explorationEvent: {fileID: 3513814409438483324, guid: ecaf036fbd3e36f43a7909fde1b2fa4d,
     type: 3}
   battleModifiers:

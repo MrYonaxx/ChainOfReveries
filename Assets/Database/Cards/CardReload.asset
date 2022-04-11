@@ -12,32 +12,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 317806353b7288b4cb30da061d383f0e, type: 3}
   m_Name: CardReload
   m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: cardController
+      Entry: 6
+      Data: 
+    - Name: cardBreakComponent
+      Entry: 6
+      Data: 
   cardSprite: {fileID: 0}
   cardName: CardReload
-  cardType: 
-  animationName: 
-  element: 
+  cardType: 5
+  cardDescription: 
+  attackManager: {fileID: 0}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
-  cardDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
-  canComboTo: {fileID: 0}
-  attackBehavior:
-    attackSprite: {fileID: 0}
-    speedX: 0
-    speedY: 0
-    isActive: 1
-    isPiercing: 0
-    isMultiHit: 0
-    noDirection: 0
-    linkToCharacter: 0
-    knockbackPower: 1
-    lifetime: 0
-    collisionOffset: {x: 0, y: 0}
-    collisionSize: {x: 0, y: 0}
-    shakeScreen: 0
-    shakeTarget: 0
-    blinkTarget: 0
-    blinkTargetColor: 0
-    hitStop: 0
-    zoom: 0
-    onHitAnimation: {fileID: 0}
+  maxProbability: 0

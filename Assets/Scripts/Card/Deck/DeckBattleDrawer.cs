@@ -10,6 +10,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using Sirenix.OdinInspector;
+using UnityEngine.UI;
 
 namespace VoiceActing
 {
@@ -54,6 +55,17 @@ namespace VoiceActing
         RectTransform cardCountScale = null;
         [SerializeField]
         TextMeshProUGUI textCardNumber = null;
+
+        [Title("Deck Thumbnail")]
+        [SerializeField]
+        RectTransform transformDeckThumbnail = null;
+        [SerializeField]
+        RectTransform cursorDeckThumbnail = null;
+        [SerializeField]
+        Image elementDeckThumbnailPrefab = null;
+
+        List<Image> elementsDeckThumbnail = new List<Image>();
+
 
         [Space]
         public int handLimitMin = 0;
@@ -139,6 +151,8 @@ namespace VoiceActing
 
             if (maxCard == -1)
                 maxCard = deck.Count;
+
+            DrawThumbnail(index, deck);
         }
 
 
@@ -195,6 +209,7 @@ namespace VoiceActing
             {
                 MoveHandLeft(index, deck);
             }
+            MoveThumbnail(index, deck);
         }
 
         public void MoveHandLeft(int index, List<Card> deck)
@@ -293,6 +308,9 @@ namespace VoiceActing
                 cardCountScale.localScale = new Vector3(size, size, 1);
                 textCardNumber.text = deck.Count.ToString();
             }
+
+
+            DrawThumbnail(index, deck);
         }
 
         public void HideCards()
@@ -311,7 +329,66 @@ namespace VoiceActing
         }
 
 
+        private void DrawThumbnail(int index, List<Card> deck)
+        {
+            if (deck.Count <= 1 || transformDeckThumbnail == null)
+                return;
 
+            int startIndex = 0;
+            int finalIndex = 0;
+            int type = deck[0].GetCardType();
+            int count = 0;
+            float size = 0;
+
+            for (int i = 1; i < deck.Count; i++)
+            {
+                if(deck[i].GetCardType() != type)
+                {
+                    // Draw element
+                    finalIndex = i;
+                    size = ((finalIndex - startIndex) / (float)deck.Count) * transformDeckThumbnail.sizeDelta.x;
+                    if (elementsDeckThumbnail.Count <= count)
+                        elementsDeckThumbnail.Add(Instantiate(elementDeckThumbnailPrefab, transformDeckThumbnail));
+
+                    elementsDeckThumbnail[count].gameObject.SetActive(true);
+                    elementsDeckThumbnail[count].color = cardTypeDictionary.GetColorType(type);
+                    elementsDeckThumbnail[count].rectTransform.sizeDelta = new Vector2(size, elementsDeckThumbnail[count].rectTransform.sizeDelta.y);
+
+                    // On enchaine
+                    startIndex = i; 
+                    type = deck[i].GetCardType();
+                    count++;
+                }
+            }
+
+            // On dessine le dernier élément
+            finalIndex = deck.Count;
+            size = ((finalIndex - startIndex) / (float)deck.Count) * transformDeckThumbnail.sizeDelta.x;
+            if (elementsDeckThumbnail.Count <= count)
+                elementsDeckThumbnail.Add(Instantiate(elementDeckThumbnailPrefab, transformDeckThumbnail));
+
+            elementsDeckThumbnail[count].gameObject.SetActive(true);
+            elementsDeckThumbnail[count].color = cardTypeDictionary.GetColorType(type);
+            elementsDeckThumbnail[count].rectTransform.sizeDelta = new Vector2(size, elementsDeckThumbnail[count].rectTransform.sizeDelta.y);
+            MoveThumbnail(index, deck);
+
+            count++;
+            for (int i = count; i < elementsDeckThumbnail.Count; i++)
+            {
+                elementsDeckThumbnail[i].gameObject.SetActive(false);
+            }
+        }
+
+        private void MoveThumbnail(int index, List<Card> deck)
+        {
+            if (deck.Count <= 1 || transformDeckThumbnail == null)
+                return;
+
+            float size = (1 / (float)deck.Count) * transformDeckThumbnail.sizeDelta.x; 
+            cursorDeckThumbnail.sizeDelta = new Vector2(size, cursorDeckThumbnail.sizeDelta.y);
+            cursorDeckThumbnail.anchoredPosition = new Vector2((index / (float)deck.Count) * transformDeckThumbnail.sizeDelta.x, cursorDeckThumbnail.anchoredPosition.y);
+            cursorDeckThumbnail.SetAsLastSibling();
+        }
 
 
         #endregion

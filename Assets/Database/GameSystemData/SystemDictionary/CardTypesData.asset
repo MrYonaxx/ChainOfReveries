@@ -18,9 +18,11 @@ MonoBehaviour:
   - Item
   - Special
   - Shimerie
+  - Reload
   cardTypeColor:
   - {r: 1, g: 0, b: 0, a: 1}
   - {r: 0, g: 0, b: 1, a: 1}
   - {r: 0, g: 1, b: 0, a: 1}
   - {r: 0.3773585, g: 0, b: 0, a: 1}
   - {r: 0.83137256, g: 0.7921569, b: 0.6392157, a: 1}
+  - {r: 0, g: 0, b: 0, a: 1}

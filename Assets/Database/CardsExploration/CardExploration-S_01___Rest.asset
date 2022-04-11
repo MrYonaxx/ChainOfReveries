@@ -17,6 +17,7 @@ MonoBehaviour:
   cardDescription: Travel to a Dream of Horn, where you can heal your wounds.
   cardType: 1
   nbCardReward: 0
+  reverieColor: 5
   explorationEvent: {fileID: 4240324989005109662, guid: d445cbd49bcf6c64ab766ba8488ed430,
     type: 3}
   battleModifiers: []

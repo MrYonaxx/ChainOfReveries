@@ -17,6 +17,7 @@ MonoBehaviour:
   cardDescription: Travel to a Dream of Horn, where you can obtain Equipment Cards.
   cardType: 1
   nbCardReward: 0
+  reverieColor: 3
   explorationEvent: {fileID: 6310875253515177516, guid: 09f256c00f1edd746bd1d020d8e2d173,
     type: 3}
   battleModifiers: []

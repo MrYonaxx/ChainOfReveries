@@ -27,6 +27,8 @@ namespace VoiceActing {
 
         public void Blink(float time, Color blinkColor)
         {
+            if (!isActiveAndEnabled)
+                return;
             if (blinkCoroutine != null)
                 StopCoroutine(blinkCoroutine);
             blinkCoroutine = BlinkCoroutine(time, blinkColor);

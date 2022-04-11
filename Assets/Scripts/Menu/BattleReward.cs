@@ -75,6 +75,11 @@ namespace VoiceActing
         [SerializeField]
         TMPro.TextMeshProUGUI textHP = null;
 
+
+        [Title("Deck Drawer")]
+        [SerializeField]
+        Menu.MenuDeckDrawer menuDeckDrawer = null;
+
         [Title("Animator")]
         [SerializeField]
         Canvas canvasReward = null;
@@ -99,6 +104,9 @@ namespace VoiceActing
         public event Action OnEventEnd;
 
         bool active = false;
+        bool activeStick = false;
+        bool focusDeckDrawer = false;
+        bool equipmentActive = false;
         List<Card> cardRewards = new List<Card>();
 
         #endregion
@@ -200,8 +208,9 @@ namespace VoiceActing
             soundVictory.PlaySound();
             yield return new WaitForSeconds(1f);
             animatorCardControllers.gameObject.SetActive(true);
-            //yield return new WaitForSeconds(1f);
             active = true;
+            yield return new WaitForSeconds(1f);
+            activeStick = true;
         }
 
 
@@ -219,8 +228,11 @@ namespace VoiceActing
                 AddReward(0);
             else if (buttonHoldControllerB.HoldButton(input.InputB.InputValue == 1 ? true : false))
                 AddReward(2);
-            else
+            else if (focusDeckDrawer == false)
             {
+                if (activeStick == false)
+                    return;
+
                 // Input pour description
                 if (input.InputLeftStickX.InputValue < -deadzone && Mathf.Abs(input.InputLeftStickY.InputValue) < deadzone)
                     DescriptionReward(1);
@@ -228,7 +240,35 @@ namespace VoiceActing
                     DescriptionReward(2);
                 else if (input.InputLeftStickY.InputValue > deadzone && Mathf.Abs(input.InputLeftStickX.InputValue) < deadzone)
                     DescriptionReward(0);
+
+                if (input.InputRB.Registered)
+                {
+                    DrawDeck();
+                    focusDeckDrawer = true;
+                    input.InputRB.ResetBuffer();
+                }
             }
+            else if (focusDeckDrawer) // le menu deck est ouvert
+            {
+                menuDeckDrawer.UpdateControl(input); 
+                
+                if (input.InputRB.Registered)// && equipmentActive)
+                {
+                    // ferme le menu
+                    menuDeckDrawer.gameObject.SetActive(false);
+                    focusDeckDrawer = false;
+                    input.InputRB.ResetBuffer(); 
+                    equipmentActive = false;
+                }
+                /*else if (input.InputRB.Registered)
+                {
+                    // ouvre le menu equipement
+                    equipmentActive = true;
+                    DrawDeck(true);
+                    input.InputRB.ResetBuffer();
+                }*/
+            }
+                
         }
 
 
@@ -239,6 +279,7 @@ namespace VoiceActing
 
             cursor.gameObject.SetActive(false);
             textbox.HideTextbox();
+            menuDeckDrawer.gameObject.SetActive(false);
 
             if (index > rewardNumber)
             {
@@ -308,6 +349,28 @@ namespace VoiceActing
             animatorBattleWin.gameObject.SetActive(false);
             canvasReward.gameObject.SetActive(false);
             OnEventEnd.Invoke();
+        }
+
+
+        private void DrawDeck(bool equipment = false)
+        {
+            if (!equipment)
+            {
+                cursor.gameObject.SetActive(false);
+                textbox.HideTextbox();
+                menuDeckDrawer.gameObject.SetActive(true);
+                menuDeckDrawer.DrawDeck(gameRunData.PlayerDeck);
+            }
+            else
+            {
+                List<Card> deckEquipment = new List<Card>();
+                for (int i = 0; i < gameRunData.PlayerEquipmentDeck.Count; i++)
+                {
+                    deckEquipment.Add(gameRunData.PlayerEquipmentDeck[i]);
+                }
+                //menuDeckDrawer.CardTypeData
+                menuDeckDrawer.DrawDeck(deckEquipment);
+            }
         }
 
         #endregion
