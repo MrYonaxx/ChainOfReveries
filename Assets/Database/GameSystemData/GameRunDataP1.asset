@@ -28,7 +28,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: ef8e00c5c175d844daebe5dcf2d8b07f, type: 2}
   - {fileID: 11400000, guid: 7bf18b8981b6a4d4dba03fece3197c70, type: 2}
   floorLayout: {fileID: 11400000, guid: 67146230d0b82684f91a3222012c3122, type: 2}
-  reverieLevel: 3
+  reverieLevel: 0
   reverieColor: 010000000000000000000000
   playerDeck:
   - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}

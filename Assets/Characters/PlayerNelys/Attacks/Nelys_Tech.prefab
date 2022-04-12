@@ -181,7 +181,6 @@ GameObject:
   - component: {fileID: 4670453683040411876}
   - component: {fileID: 8481690060637552801}
   - component: {fileID: 7284589822210834423}
-  - component: {fileID: 1043285219058839392}
   - component: {fileID: 2524242894598313049}
   m_Layer: 0
   m_Name: AttackAnimationData
@@ -252,8 +251,6 @@ MonoBehaviour:
     AnimationEvent: {fileID: 3936615074385192267}
   - Frame: 21
     AnimationEvent: {fileID: 7284589822210834423}
-  - Frame: 29
-    AnimationEvent: {fileID: 1043285219058839392}
   - Frame: 30
     AnimationEvent: {fileID: 2524242894598313049}
 --- !u!114 &8481690060637552801
@@ -283,23 +280,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frame: 21
-  frameEnd: 0
-  cancelItself: 0
-  cancelSpecial: 1
-  cancelType: 
---- !u!114 &1043285219058839392
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3720685875369100543}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 30aa148586dde644daf200dde6eea4c7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  frame: 29
   frameEnd: 0
   cancelItself: 0
   cancelSpecial: 1

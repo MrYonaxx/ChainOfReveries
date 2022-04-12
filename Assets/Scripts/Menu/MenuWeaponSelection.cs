@@ -45,12 +45,8 @@ namespace Menu
         Card cardToDiscard = null;
         List<Card> weaponEquipment = new List<Card>();
         List<int> weaponPosition = new List<int>();
+        int indexSelected = -1; 
 
-        // Start is called before the first frame update
-        void Start()
-        {
-
-        }
 
         public void SetCard(CharacterBase chara, CardEquipment card)
         {
@@ -151,7 +147,6 @@ namespace Menu
             cardController[index].transform.position = centerSlot.transform.position;
             cardController[index].MoveCard(cardSlot[index], cardMoveSpeed);
         }
-
 
         private void SelectCard(int index)
         {

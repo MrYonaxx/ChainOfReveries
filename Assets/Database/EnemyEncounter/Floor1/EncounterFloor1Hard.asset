@@ -43,3 +43,6 @@ MonoBehaviour:
   - encounter: {fileID: 8782236304212188354, guid: df99420288e26224d891a0c73d645b5f,
       type: 3}
     probability: 100
+  - encounter: {fileID: 8782236304212188354, guid: 5bc7710ed02dd294aa6c5f526b205950,
+      type: 3}
+    probability: 100

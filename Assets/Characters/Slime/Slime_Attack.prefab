@@ -45,7 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b84027daab854e84c91bd87b8553c72d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 0
+  frame: 20
   frameEnd: 100
   speed: 4
   maxTrackingY: 1
@@ -195,11 +195,11 @@ MonoBehaviour:
   - Frame: 0
     AnimationEvent: {fileID: 9147019452204060746}
   - Frame: 0
-    AnimationEvent: {fileID: 9016493232561798649}
-  - Frame: 0
     AnimationEvent: {fileID: 6904970918663789637}
   - Frame: 0
     AnimationEvent: {fileID: 7401320560100982227}
+  - Frame: 20
+    AnimationEvent: {fileID: 9016493232561798649}
   - Frame: 100
     AnimationEvent: {fileID: 7406093635845558607}
   - Frame: 100

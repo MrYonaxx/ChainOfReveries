@@ -22,6 +22,11 @@ namespace VoiceActing
         TextMeshPro textMesh = null;
 
         [SerializeField]
+        TextMeshPro textMeshFeedback = null;
+        [SerializeField]
+        Animator animatorText = null;
+
+        [SerializeField]
         CardValueHUDType characterType;
         [SerializeField]
         Color colorPlay;
@@ -96,6 +101,9 @@ namespace VoiceActing
                 }
                 textMesh.text = sum.ToString();
                 textMesh.color = colorPlay;
+
+                /*textMeshFeedback.text = textMesh.text;
+                textMeshFeedback.gameObject.SetActive(true);*/
             }
             else if (character.DeckController.Deck[character.DeckController.CurrentIndex].GetCardValue() >= 0)
             {
@@ -103,7 +111,7 @@ namespace VoiceActing
                 textMesh.text = character.DeckController.Deck[character.DeckController.CurrentIndex].GetCardValue().ToString();
                 textMesh.color = colorHand;
 
-
+                //textMeshFeedback.gameObject.SetActive(false);
                 cardOutline.gameObject.SetActive(true);
                 /*cardOutline.color = character.CharacterAction.CardTypes.GetColorType(character.DeckController.GetCurrentCard().GetCardType());
                 cardSprite.sprite = character.DeckController.GetCurrentCard().GetCardIcon();*/
