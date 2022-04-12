@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 2f5605e2593cdc4459bc384c01417124, type: 3}
   cardName: Dream of Ivory - Specter
-  cardDescription: Travel to a Dream of Ivory, a dream that must be eliminated from
+  cardDescription: Travel to an Ivory dream, a dream that must be eliminated from
     the Reverie.
   cardType: 0
   nbCardReward: 2

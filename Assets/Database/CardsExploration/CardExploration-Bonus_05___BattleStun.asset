@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: a5abdbbac26367648968b6645d886e3b, type: 3}
   cardName: Dream of Ivoirin - Astonish
-  cardDescription: Travel to a Dream of Ivoirin, where the enemies are stunned.
+  cardDescription: Travel to an Ivoirin dream, where the enemies are stunned.
   cardType: 2
   nbCardReward: 1
   reverieColor: 2

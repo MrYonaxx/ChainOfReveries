@@ -131,7 +131,6 @@
                     // Si In.texcoord.Y < ratioDisappearence alors on désaffiche
                     float ratioDisappearence = (1 - _Disappear *( _AtlasEndHeight - _AtlasStartHeight)) - _AtlasStartHeight;
                     c.a *= clamp((ratioDisappearence - IN.texcoord.y) * 1000, 0, 1);
-                    //c.a -= ((IN.texcoord.y * _Disappear * _DisappearRange) + ((1 / _DisappearRange) * _Disappear * _DisappearRange));//(_Disappear * (IN.texcoord.y)); IN.texcoord.y + 1 * _Disappear;
                     return c;
                 }
             ENDCG

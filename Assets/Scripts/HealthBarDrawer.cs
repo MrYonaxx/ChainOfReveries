@@ -172,7 +172,6 @@ namespace VoiceActing
 
         public void DrawHealth(int hp, int maxHp)
         {
-            maxHp = Mathf.Max(1, maxHp);
 
             // Dessine le texte hp
             if (textHealthValue != null)
@@ -189,12 +188,23 @@ namespace VoiceActing
                     healthBarList[i].enabled = false;
             }
 
+
+            // encore un cas particulier ; quand on meurt en Reverie 3 et plus, le buff de vie disparait et nique l'affichage
+            if (hp == 0)
+            {
+                animatorHealthLost.transform.localScale = new Vector3(healthGauge.transform.localScale.x, 1, 1);
+                healthGauge.transform.localScale = new Vector3(0, 1, 1);
+                animatorHealthLost.SetTrigger("Feedback");
+                previousHealth = hp;
+                return;
+            }
+
             if (maxHp < healthBarAmount)
-            { 
+            {
                 // Il n'y a qu'une seule barre de vie
                 healthGaugeOutline.sizeDelta = new Vector2((maxHp / (float)healthBarAmount) * sizeHealthBar, healthGaugeOutline.sizeDelta.y);
-                healthGauge.transform.localScale = new Vector3(hp / (float)maxHp, 1, 1);
-                animatorHealthLost.transform.localScale = new Vector3(previousHealth / (float)maxHp, 1, 1);
+                healthGauge.transform.localScale = new Vector3(hp / (float)Mathf.Max(1, maxHp), 1, 1);
+                animatorHealthLost.transform.localScale = new Vector3(previousHealth / (float)Mathf.Max(1, maxHp), 1, 1);
             }
             else if (hp >= currentHealth)
             {

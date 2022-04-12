@@ -64,6 +64,13 @@ MonoBehaviour:
     baseCardValue: 0
   - cardData: {fileID: 11400000, guid: 8f96ebeb73ce975409f895a8921a6cdc, type: 2}
     baseCardValue: 1
+  - cardData: {fileID: 11400000, guid: 51dba9fc2b28f8347a0e45427d1d22c8, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 51dba9fc2b28f8347a0e45427d1d22c8, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 51dba9fc2b28f8347a0e45427d1d22c8, type: 2}
+    baseCardValue: 9
+  premiumCardID: 
   initialEquipment:
   - cardEquipment: {fileID: 11400000, guid: 7aeef4dc5a3668940ab5efa5f808fc2f, type: 2}
     probability: 100

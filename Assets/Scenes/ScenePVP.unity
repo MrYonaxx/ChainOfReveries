@@ -1614,7 +1614,7 @@ PrefabInstance:
     - target: {fileID: 4163783021993937019, guid: 764f4b7cb7637664eb5c6739f67e9ea2,
         type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: -660
+      value: -680
       objectReference: {fileID: 0}
     - target: {fileID: 4163783021993937019, guid: 764f4b7cb7637664eb5c6739f67e9ea2,
         type: 3}
@@ -6697,6 +6697,18 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1987183374689167605, guid: b46ff84b6a41ec94e93c2ad750f66063,
+        type: 3}
+      propertyPath: cardPrefab
+      value: 
+      objectReference: {fileID: 5565495644078996158, guid: 2ff81e3871d64c548b35f1b38604698d,
+        type: 3}
+    - target: {fileID: 1987183374824202222, guid: b46ff84b6a41ec94e93c2ad750f66063,
+        type: 3}
+      propertyPath: cardPrefab
+      value: 
+      objectReference: {fileID: 1742810711, guid: c4bb17fe596194144b3ace2df2751430,
+        type: 3}
     - target: {fileID: 1987183374889975690, guid: b46ff84b6a41ec94e93c2ad750f66063,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -8048,6 +8060,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   battleCenter: {fileID: 1121299213}
+  borderSprites: {fileID: 0}
+  explorationParticle: {fileID: 0}
+  battleParticle: {fileID: 0}
 --- !u!1 &1170570112
 GameObject:
   m_ObjectHideFlags: 0

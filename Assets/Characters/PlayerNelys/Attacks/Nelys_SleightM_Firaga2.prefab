@@ -131,7 +131,7 @@ MonoBehaviour:
     AnimationEvent: {fileID: 1799816652041709306}
   - Frame: 45
     AnimationEvent: {fileID: 7255895901350905834}
-  - Frame: 90
+  - Frame: 100
     AnimationEvent: {fileID: 2524242894598313049}
 --- !u!114 &9123676500928468730
 MonoBehaviour:
@@ -164,7 +164,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620e0e815b2f5174f8b380210d9a19f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 90
+  frame: 100
   frameEnd: 0
 --- !u!1 &4388082830208477171
 GameObject:
@@ -5184,6 +5184,10 @@ MonoBehaviour:
     ignoreStatsMultiplier: 0
   backdamage:
     baseDamage: 100
+    ignoreStatsMultiplier: 0
+  banDamage:
+    damagePerBan: 100
+    attackType: 0
     ignoreStatsMultiplier: 0
 --- !u!1 &6664025316910145470
 GameObject:

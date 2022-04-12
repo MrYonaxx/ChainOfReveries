@@ -59,7 +59,7 @@ namespace VoiceActing
             spriteReflection.sprite = spriteToReflect.sprite;
             spriteReflection.flipX = spriteToReflect.flipX;
 
-            spriteReflection.color = Color.Lerp(finalColor, baseColor, spriteToReflect.color.a);
+            spriteReflection.color = Color.Lerp(finalColor, baseColor, spriteToReflect.enabled ? spriteToReflect.color.a : 0);
         }
 
 

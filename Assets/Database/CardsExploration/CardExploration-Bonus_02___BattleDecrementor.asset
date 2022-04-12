@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 15ccea210010b224989c979ce040917a, type: 3}
   cardName: Dream of Ivoirin - Diminish
-  cardDescription: Travel to a Dream of Ivoirin, where the value of your Cards decrease
+  cardDescription: Travel to an Ivoirin dream, where the value of your cards decreases
     by 1.
   cardType: 2
   nbCardReward: 1

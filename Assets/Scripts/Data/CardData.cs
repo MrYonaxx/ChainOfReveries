@@ -70,6 +70,20 @@ namespace VoiceActing
             get { return attackManager; }
         }
 
+        [SerializeField]
+        Color colorOutline;
+        public Color ColorOutline
+        {
+            get { return colorOutline; }
+        }
+
+        [SerializeField]
+        Color colorCardBackground;
+        public Color ColorCardBackground
+        {
+            get { return colorCardBackground; }
+        }
+
         /* [VerticalGroup("CardBasicInfo/Right")]
          [HorizontalGroup("CardBasicInfo/Right/A")]
          [SerializeField]

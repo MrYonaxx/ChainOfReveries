@@ -24,7 +24,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: ad61be2f4733cc8429b40301b0866ad9, type: 3}
   cardName: Chimera Scythe
   cardType: 0
-  cardDescription: 'Health is restored of 5% of the damage dealt.
+  cardDescription: 'Health is restored by 5% of the damage dealt.
 
     (10 Attacks)'
   statsModifier: []

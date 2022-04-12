@@ -57,6 +57,10 @@ namespace VoiceActing {
             if (!isActiveAndEnabled)
                 return;
 
+           /* if (blinkCoroutine != null)
+                StopCoroutine(blinkCoroutine);
+            spriteRenderer.material.SetFloat("_FlashAmount", 0);
+           */
             if (fadeCoroutine != null)
                 StopCoroutine(fadeCoroutine);
             fadeCoroutine = FadeCoroutine(time);
@@ -65,13 +69,12 @@ namespace VoiceActing {
 
         private IEnumerator FadeCoroutine(float time)
         {
-            flash = 0;
+            float fade = 0;
             float t = 0f;
 
-            //yield return new WaitForSeconds(1f);
             // Pour les spawn particules
             float previousT = 0f;
-            SpriteRenderer spriteRender = spriteRenderer.GetComponent<SpriteRenderer>(); // à opti
+            SpriteRenderer spriteRender = spriteRenderer.GetComponent<SpriteRenderer>(); // à optirr
 
             RenderTexture renderTex = RenderTexture.GetTemporary(
                  (int)spriteRender.sprite.texture.width,
@@ -98,12 +101,12 @@ namespace VoiceActing {
 
             while (t < time)
             {
-                flash = Mathf.Lerp(0, 1, (t / time));
+                fade = Mathf.Lerp(0, 1, (t / time));
                 t += Time.deltaTime;
-                spriteRenderer.material.SetFloat("_Disappear", flash);
-                SpawnParticle(spriteRender, colors, previousT, flash);
+                spriteRenderer.material.SetFloat("_Disappear", fade);
+                SpawnParticle(spriteRender, colors, previousT, fade);
                 yield return null;
-                previousT = flash;
+                previousT = fade;
             }
             spriteRenderer.material.SetFloat("_Disappear", 1);
 

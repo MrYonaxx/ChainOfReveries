@@ -1559,14 +1559,14 @@ MonoBehaviour:
   frameData:
   - Frame: 0
     AnimationEvent: {fileID: 1954747792097681298}
-  - Frame: 0
-    AnimationEvent: {fileID: 8323006924474913636}
   - Frame: 1
     AnimationEvent: {fileID: 4689905395784803237}
   - Frame: 10
     AnimationEvent: {fileID: 1219015461216910717}
   - Frame: 11
     AnimationEvent: {fileID: 8380054669153724987}
+  - Frame: 13
+    AnimationEvent: {fileID: 8323006924474913636}
   - Frame: 35
     AnimationEvent: {fileID: 5726066158223875471}
   - Frame: 52
@@ -1613,7 +1613,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 425345d1891c1c347863e3d1e2ce51f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 0
+  frame: 13
   frameEnd: 55
   canObstacleOther: 0
   newLayer:

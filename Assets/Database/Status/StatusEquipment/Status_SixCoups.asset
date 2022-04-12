@@ -67,7 +67,7 @@ MonoBehaviour:
       Data: 6
     - Name: damageMultiplier
       Entry: 4
-      Data: 1.5
+      Data: 2
     - Name: 
       Entry: 8
       Data: 

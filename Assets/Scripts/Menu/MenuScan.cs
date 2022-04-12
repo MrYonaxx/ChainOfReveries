@@ -138,6 +138,8 @@ namespace Menu
 
         public void DrawCardDescription(int id)
         {
+            if (id >= data.InitialDeck.Count)
+                return;
             textDescription.text = data.InitialDeck[id].GetCardDescription();
         }
 

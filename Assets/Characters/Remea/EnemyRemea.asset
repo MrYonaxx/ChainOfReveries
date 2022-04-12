@@ -110,7 +110,7 @@ MonoBehaviour:
   initialEquipment:
   - cardEquipment: {fileID: 11400000, guid: d27fa7c0e89503a479797fe01e9cf892, type: 2}
     probability: 100
-  loreDescription: 'She was once an elite knight for Altya. She helps the Chancelor
+  loreDescription: 'She was once an royal knight of Altya. She helps the Chancelor
     Valenn during his coup, only to be stopped by Yonax with the help of the Reverie.
 
 

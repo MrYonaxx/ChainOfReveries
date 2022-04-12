@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: a345b4854618aef47a3cf5a8e9be1ed2, type: 3}
   cardName: Dream of Ivory - Apathy
-  cardDescription: Travel to a Dream of Ivory, where everything move slowly.
+  cardDescription: Travel to an Ivory dream, where everything movesslowly.
   cardType: 0
   nbCardReward: 2
   reverieColor: 1

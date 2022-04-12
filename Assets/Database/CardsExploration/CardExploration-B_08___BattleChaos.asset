@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 8aa4f0ed8e1b51c41af2440b1ee4e8f7, type: 3}
   cardName: Dream of Ivory - Chaos
-  cardDescription: Travel to a Dream of Ivory, where Cards value are random.
+  cardDescription: Travel to an Ivory dream, where the value of the cards is random.
   cardType: 0
   nbCardReward: 2
   reverieColor: 2

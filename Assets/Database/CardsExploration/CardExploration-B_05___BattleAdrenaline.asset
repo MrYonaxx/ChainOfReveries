@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: cbebfa4315bb5ec40b4ace43484ca117, type: 3}
   cardName: Dream of Ivory - Trance
-  cardDescription: Travel to a Dream of Ivory, where everything move faster.
+  cardDescription: Travel to an Ivory dream, where everything moves faster.
   cardType: 0
   nbCardReward: 2
   reverieColor: 3

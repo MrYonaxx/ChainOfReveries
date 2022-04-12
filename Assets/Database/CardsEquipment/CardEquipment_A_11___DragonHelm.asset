@@ -24,7 +24,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: f81d40d552f473a47976552822dfb045, type: 3}
   cardName: Dragon Helm
   cardType: 1
-  cardDescription: Reduce Knockback Time.
+  cardDescription: Reduce Stagger time.
   statsModifier:
   - charStat: 9
     modifierType: 0

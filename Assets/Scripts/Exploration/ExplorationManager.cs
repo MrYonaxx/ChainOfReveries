@@ -521,6 +521,7 @@ namespace VoiceActing
         public void QuitMenuStatus()
         {
             inputController.SetControllable(this, true);
+            player.SetState(stateExploration);
         }
 
 

@@ -24,7 +24,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: c3e185672c303bd489f858f3a881753e, type: 3}
   cardName: Six-coups
   cardType: 0
-  cardDescription: 'Increase of 50% damage from card with a value of 6.
+  cardDescription: 'Double damage from cards with a value of 6.
 
     (2 Reload)'
   statsModifier: []

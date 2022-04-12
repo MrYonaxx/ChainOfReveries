@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 5609c5e1307ce9a45bc048f9cc6640aa, type: 3}
   cardName: Dream of Ivory - Nightmare
-  cardDescription: Travel to a Dream of Ivory, where enemies are much stronger.
+  cardDescription: Travel to an Ivory dream, where the enemies are much stronger.
   cardType: 0
   nbCardReward: 2
   reverieColor: 5

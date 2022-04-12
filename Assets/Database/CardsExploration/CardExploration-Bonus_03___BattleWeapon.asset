@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 88d83fa64d5dc3a458ace4c6dcd78865, type: 3}
   cardName: Dream of Ivoirin - Triabulation
-  cardDescription: Travel to a Dream of Ivoirin, where the value of Attack Cards
-    increase by 2.
+  cardDescription: Travel to an Ivoirin dream, where the value of attack cards increases
+    by 2.
   cardType: 2
   nbCardReward: 1
   reverieColor: 1

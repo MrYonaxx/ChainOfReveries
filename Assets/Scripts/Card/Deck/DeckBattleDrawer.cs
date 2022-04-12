@@ -103,6 +103,17 @@ namespace VoiceActing
                 if (i >= cardControllers.Count)
                     cardControllers.Add(Instantiate(cardPrefab, transformsHand[i].transform));
             }
+
+            // Deck thumbnail
+            if (transformDeckThumbnail != null)
+            {
+                int showThumbnail = PlayerPrefs.GetInt("DeckThumbnail", 0);
+                if (showThumbnail == 0)
+                {
+                    transformDeckThumbnail.gameObject.SetActive(false);
+                    transformDeckThumbnail = null;
+                }
+            }
         }
 
         public void SetCardControllers(List<CardController> controllers)
@@ -152,6 +163,8 @@ namespace VoiceActing
             if (maxCard == -1)
                 maxCard = deck.Count;
 
+
+            DrawDeckCount(deck);
             DrawThumbnail(index, deck);
         }
 
@@ -301,15 +314,7 @@ namespace VoiceActing
                 DrawCard(handLimitMax - 1, deck);
             }
 
-            if (cardCountScale)
-            {
-                float size = deck.Count / (float)maxCard;
-                size = Mathf.Min(size, 1);
-                cardCountScale.localScale = new Vector3(size, size, 1);
-                textCardNumber.text = deck.Count.ToString();
-            }
-
-
+            DrawDeckCount(deck);
             DrawThumbnail(index, deck);
         }
 
@@ -328,10 +333,20 @@ namespace VoiceActing
             cardReload.DrawReload(reloadCurrentLevel, reloadCurrentAmount, reloadMaxAmount);
         }
 
+        private void DrawDeckCount(List<Card> deck)
+        {
+            if (cardCountScale)
+            {
+                float size = deck.Count / (float)maxCard;
+                size = Mathf.Min(size, 1);
+                cardCountScale.localScale = new Vector3(size, size, 1);
+                textCardNumber.text = deck.Count.ToString();
+            }
+        }
 
         private void DrawThumbnail(int index, List<Card> deck)
         {
-            if (deck.Count <= 1 || transformDeckThumbnail == null)
+            if (deck.Count < 1 || transformDeckThumbnail == null)
                 return;
 
             int startIndex = 0;
@@ -381,7 +396,7 @@ namespace VoiceActing
 
         private void MoveThumbnail(int index, List<Card> deck)
         {
-            if (deck.Count <= 1 || transformDeckThumbnail == null)
+            if (deck.Count < 1 || transformDeckThumbnail == null)
                 return;
 
             float size = (1 / (float)deck.Count) * transformDeckThumbnail.sizeDelta.x; 

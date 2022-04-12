@@ -47,12 +47,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onHitAnimation: {fileID: 855764348832698739, guid: 734251cd418c42946b79b2586c648edb,
     type: 3}
+  onlyHitStopOpponent: 0
   hitStop: 0.3
   knockbackDurationMultiplier: 1
   knockbackX: 5
   knockbackZ: 5
-  revengeValue: 3
   knockbackInvulnerability: 0.2
+  revengeValue: 3
 --- !u!114 &3048186250255698059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,6 +187,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 375954041255129106}
+  - {fileID: 8979066734718862327}
   m_Father: {fileID: 5842096757366747166}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -221,6 +223,10 @@ MonoBehaviour:
   frameData:
   - Frame: 0
     AnimationEvent: {fileID: 8824712358010700612}
+  - Frame: 3
+    AnimationEvent: {fileID: 8757428435853186396}
+  - Frame: 5
+    AnimationEvent: {fileID: 7242666896009598519}
   - Frame: 7
     AnimationEvent: {fileID: 7534050510038794668}
   - Frame: 8
@@ -360,6 +366,74 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &4431744558414515936
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8979066734718862327}
+  - component: {fileID: 8757428435853186396}
+  - component: {fileID: 7242666896009598519}
+  m_Layer: 0
+  m_Name: Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8979066734718862327
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4431744558414515936}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 248121844606041498}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8757428435853186396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4431744558414515936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 3
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 113e5eb13afc6ac4dbbe4b668edec963, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
+--- !u!114 &7242666896009598519
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4431744558414515936}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 5
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 2accb501d7f2e524994d32a4ce9d3ec5, type: 3}
+    volume: 0.6
+    pitch: {x: 1, y: 1}
 --- !u!1 &4706932325797583664
 GameObject:
   m_ObjectHideFlags: 0
@@ -556,7 +630,7 @@ MonoBehaviour:
   linkToCharacter: 1
   fixToGround: 0
   subActionCardBreakable: 1
-  canPlayerCorrectDirection: 1
+  canPlayerCorrectDirection: 0
   atkControllers:
   - {fileID: 2276608963585731000}
 --- !u!1 &6351351815533892351
@@ -573,7 +647,7 @@ GameObject:
   - component: {fileID: 4064405852819018180}
   - component: {fileID: 1758927910047455637}
   m_Layer: 0
-  m_Name: GameObject
+  m_Name: Movement
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -821,6 +895,13 @@ MonoBehaviour:
     baseDamage: 250
     attackType: 0
     ignoreStatsMultiplier: 0
+  backdamage:
+    baseDamage: 100
+    ignoreStatsMultiplier: 0
+  banDamage:
+    damagePerBan: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
 --- !u!114 &3097095786064024854
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -853,5 +934,12 @@ MonoBehaviour:
     ignoreElementalStat: 0
   damage:
     baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
+  backdamage:
+    baseDamage: 100
+    ignoreStatsMultiplier: 0
+  banDamage:
+    damagePerBan: 100
     attackType: 0
     ignoreStatsMultiplier: 0

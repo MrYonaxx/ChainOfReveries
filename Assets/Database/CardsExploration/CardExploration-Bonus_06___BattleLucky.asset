@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: fc1522bfd04ecf742b719d2249db29cc, type: 3}
   cardName: Dream of Ivoirin - Fantasy
-  cardDescription: Travel to a Dream of Ivoirin, where the rewards are superior.
+  cardDescription: Travel to an Ivoirin dream, where the rewards are higher.
   cardType: 2
   nbCardReward: 1
   reverieColor: 3

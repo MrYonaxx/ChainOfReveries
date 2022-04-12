@@ -44,6 +44,16 @@ namespace VoiceActing
             character.DeckController.MoveHand(character.Inputs.InputLB.InputValue == 1 ? true : false, character.Inputs.InputRB.InputValue == 1 ? true : false);
             character.DeckController.MoveCategory(character.Inputs.InputLT.InputValue == 1 ? true : false, character.Inputs.InputRT.InputValue == 1 ? true : false);
             character.DeckController.UpdateCard(character);
+
+            // Petit bricole pour jouer une sleight durant un reload
+            if (character.Inputs.InputY.Registered && character.DeckController.GetInReload())
+            {
+                if (character.CharacterAction.ForcePlaySleight())
+                {
+                    character.Inputs.InputY.ResetBuffer();
+                    return;
+                }
+            }
         }
 
         private void InputMovement(CharacterBase character)

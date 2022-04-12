@@ -26,11 +26,12 @@ namespace VoiceActing
 
                 if (offset.sqrMagnitude > 0)
                 {
-                    RaycastHit2D hit = Physics2D.Raycast(character.LockController.TargetLocked.transform.position, newOffset, offset.magnitude - (character.CharacterRigidbody.CharacterCollider.size.x * 0.5f), layerMask);
+                    RaycastHit2D hit = Physics2D.Raycast(character.LockController.TargetLocked.transform.position, newOffset, offset.magnitude - (character.CharacterRigidbody.CharacterCollider.size.x * 0.51f), layerMask);
                     if (hit)
                     {
                         character.transform.position = character.LockController.TargetLocked.transform.position;
-                        character.transform.position += new Vector3(hit.distance * Mathf.Sign(newOffset.x), 0, 0);
+                        character.transform.position += new Vector3((hit.distance - (character.CharacterRigidbody.CharacterCollider.size.x * 0.51f)) * Mathf.Sign(newOffset.x), 0, 0);
+                        // le xO.51 prend en compte le body skin
                     }
                     else
                     {

@@ -335,7 +335,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimatorDebug: {fileID: 677981557941761528}
-  AnimationClipDebug: {fileID: 7400000, guid: 02870facd884c2242836dc075479844f, type: 2}
+  AnimationClipDebug: {fileID: 7400000, guid: 5110b362ed35a3347910a911b0ab6209, type: 2}
   frameData: []
 --- !u!1 &4114098666737907609
 GameObject:

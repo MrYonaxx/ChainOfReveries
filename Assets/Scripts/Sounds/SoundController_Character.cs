@@ -18,6 +18,8 @@ namespace VoiceActing
         [SerializeField]
         SoundParameter soundPrepareSleight;
         [SerializeField]
+        SoundParameter soundSleightReady;
+        [SerializeField]
         SoundParameter soundSleightPlay;
         [SerializeField]
         SoundParameter soundSleightPhysicalPlay;
@@ -96,7 +98,10 @@ namespace VoiceActing
         {
             if (previousCardsCount < character.SleightController.GetIndexSleightCard())
             {
-                soundPrepareSleight.PlaySound();
+                if (character.SleightController.GetCurrentSleight() != null)
+                    soundSleightReady.PlaySound();
+                else
+                    soundPrepareSleight.PlaySound();
             }
             previousCardsCount = character.SleightController.GetIndexSleightCard();
         }

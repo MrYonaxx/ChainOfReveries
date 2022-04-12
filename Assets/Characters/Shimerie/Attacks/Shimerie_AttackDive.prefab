@@ -285,25 +285,25 @@ MonoBehaviour:
     AnimationEvent: {fileID: 5372169655405766964}
   - Frame: 1
     AnimationEvent: {fileID: 5453298177183909288}
-  - Frame: 40
-    AnimationEvent: {fileID: 7221453887426774844}
-  - Frame: 40
-    AnimationEvent: {fileID: 4144399931941144708}
-  - Frame: 40
-    AnimationEvent: {fileID: 687128274500227643}
   - Frame: 50
+    AnimationEvent: {fileID: 7221453887426774844}
+  - Frame: 50
+    AnimationEvent: {fileID: 4144399931941144708}
+  - Frame: 50
+    AnimationEvent: {fileID: 687128274500227643}
+  - Frame: 60
     AnimationEvent: {fileID: 6219387168321125437}
-  - Frame: 68
+  - Frame: 78
     AnimationEvent: {fileID: 6638173519902859740}
-  - Frame: 69
+  - Frame: 79
     AnimationEvent: {fileID: 8531723001897682561}
-  - Frame: 70
+  - Frame: 80
     AnimationEvent: {fileID: 4461643240352555985}
-  - Frame: 70
+  - Frame: 80
     AnimationEvent: {fileID: 5067598322443150899}
-  - Frame: 75
+  - Frame: 85
     AnimationEvent: {fileID: 8887682538261238336}
-  - Frame: 105
+  - Frame: 115
     AnimationEvent: {fileID: 2169248498995759471}
 --- !u!114 &1207110519311360454
 MonoBehaviour:
@@ -318,7 +318,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frame: 0
-  frameEnd: 65
+  frameEnd: 75
 --- !u!114 &3467270024188063017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -332,7 +332,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frame: 0
-  frameEnd: 65
+  frameEnd: 75
   canObstacleOther: 0
   newLayer:
     serializedVersion: 2
@@ -385,7 +385,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4f6a358ed9a7e144a09bd7df2c0bb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 40
+  frame: 50
   frameEnd: 0
 --- !u!114 &4461643240352555985
 MonoBehaviour:
@@ -399,8 +399,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de0fc71d353b8ef479aa0db3b846d0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 70
-  frameEnd: 75
+  frame: 80
+  frameEnd: 85
   attack: {fileID: 4733904636063077261}
 --- !u!114 &8887682538261238336
 MonoBehaviour:
@@ -414,8 +414,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64e664de8a33e3148a6eb4ece24dd8a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 75
-  frameEnd: 75
+  frame: 85
+  frameEnd: 85
   action: {fileID: 818057835518184039, guid: 9ae6dd2cfbbbd9a43b52d297ae66764d, type: 3}
   spawnPoint: {fileID: 6564657705716620793}
   number: 4
@@ -432,7 +432,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b23116954a1e2d45b5b1f5baf42a4c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 105
+  frame: 115
   frameEnd: 0
   action: {fileID: 818057835518184039, guid: def3a8fc8d0774846ac3854457520b0c, type: 3}
 --- !u!114 &8531723001897682561
@@ -447,7 +447,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7422bd0df691814ebc1968b1cc149fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 69
+  frame: 79
   frameEnd: 0
   fx: {fileID: 4554981723260969316}
   appear: 1
@@ -569,8 +569,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4388082830208477171}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.28325915, z: 0}
-  m_LocalScale: {x: 2.078125, y: 1.84375, z: 2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 6202298799396831511}
   m_RootOrder: 0
@@ -614,7 +614,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2438777124099814891, guid: 14902f27c99767746bc32a7c80c2b1f0,
+  m_Sprite: {fileID: 3714799738951818548, guid: 85ce3d0ef4a8fec4ba6e1fd54b3ba4b7,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1098,7 +1098,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d1c901175e061bb41b734568db473a79, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 40
+  frame: 50
   frameEnd: 0
   offset: {x: 0, y: 0, z: 0}
   useCharacterDirection: 0
@@ -1117,7 +1117,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1aad1bc68944b9944bec049d8439d341, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 40
+  frame: 50
   frameEnd: 0
   attackController: {fileID: 4733904636063077261}
   turnBack: 0
@@ -1134,7 +1134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 94a792dcea942cb439beb5838016192f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 70
+  frame: 80
   frameEnd: 0
   power: 0.1
   time: 10
@@ -1182,7 +1182,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 50
+  frame: 60
   frameEnd: 0
   sound:
     sound: {fileID: 8300000, guid: e3446ef31256a3f47acc1ae6b3ebc0d0, type: 3}
@@ -1200,7 +1200,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 68
+  frame: 78
   frameEnd: 0
   sound:
     sound: {fileID: 8300000, guid: 61db1953fed932d4da28a7bab79e269a, type: 3}

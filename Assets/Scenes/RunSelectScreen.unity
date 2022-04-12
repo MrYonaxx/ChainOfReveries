@@ -1133,8 +1133,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<color=yellow>Advanced tutorials</color> unlocked. \nThose advanced mechanics
-    are not required to beat the game, but learning <color=yellow>Sleight Chaining</color>
+  m_text: "<color=yellow>Advanced tutorials</color> unlocked. \nThese advanced mechanics
+    aren't required to beat the game, but learning <color=yellow>Sleight Chaining</color>
     can really make your runs easier."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d766882924f3793499220aacb7870ad8, type: 2}
@@ -15538,8 +15538,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'If it''s your first time, we really recommend you to check the <color=yellow>Training
-    </color> section from the Main Menu.
+  m_text: 'If this is your first time, we definitely recommend you to check the <color=yellow>Training
+    </color> section from the main menu.
 
     Good luck and never give up !'
   m_isRightToLeft: 0
@@ -33988,7 +33988,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_text: "<color=yellow>Intermediate tutorials</color> unlocked. \nThe game system
-    is tough so do not hesitate to go in training to learn more."
+    is tough, so don't hesitate to go in Training to learn more."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: d766882924f3793499220aacb7870ad8, type: 2}
   m_sharedMaterial: {fileID: -2639490557411765785, guid: d766882924f3793499220aacb7870ad8,

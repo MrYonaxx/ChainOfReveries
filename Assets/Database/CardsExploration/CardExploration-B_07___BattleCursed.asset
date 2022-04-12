@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 585c5d48f87da1a46ac85ea25e2b78a7, type: 3}
   cardName: Dream of Ivory - Illusion
-  cardDescription: Travel to a Dream of Ivory, where Cards value cannot be seen.
+  cardDescription: Travel to an Ivory dream, where the value of the cards cannot
+    be seen.
   cardType: 0
   nbCardReward: 2
   reverieColor: 2

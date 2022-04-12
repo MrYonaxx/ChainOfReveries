@@ -24,7 +24,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 683c4fb8a389a3d4ebe37c5bf087127e, type: 3}
   cardName: Double-barreled
   cardType: 0
-  cardDescription: 'Double damage from card with a value of 2.
+  cardDescription: 'Triple damage from cards with a value of 2.
 
     (2 Reload)'
   statsModifier: []

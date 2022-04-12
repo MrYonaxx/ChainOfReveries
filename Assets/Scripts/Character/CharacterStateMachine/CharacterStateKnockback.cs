@@ -100,6 +100,7 @@ namespace VoiceActing
             character.DeckController.MoveHand(character.Inputs.InputLB.InputValue == 1 ? true : false, character.Inputs.InputRB.InputValue == 1 ? true : false);
             character.DeckController.MoveCategory(character.Inputs.InputLT.InputValue == 1 ? true : false, character.Inputs.InputRT.InputValue == 1 ? true : false);
             InputSleight(character);
+            InputCancelSleight(character);
 
             // Update Knockback Time
             character.CharacterKnockback.KnockbackTime -= Time.deltaTime * character.MotionSpeed;
@@ -194,6 +195,15 @@ namespace VoiceActing
             {
                 character.Inputs.InputY.ResetBuffer();
                 character.CharacterAction.PlaySleight(false); // On stock une carte mais en aucun cas on joue une sleight
+            }
+        }
+
+        private void InputCancelSleight(CharacterBase character)
+        {
+            if (character.Inputs.InputB.Registered)
+            {
+                character.Inputs.InputB.ResetBuffer();
+                character.CharacterAction.CancelSleight();
             }
         }
 

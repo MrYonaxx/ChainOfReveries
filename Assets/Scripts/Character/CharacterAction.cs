@@ -535,6 +535,8 @@ namespace VoiceActing
         public void AttackHit(AttackController attack, CharacterBase target)
         {
             OnAttackHit?.Invoke(attack, target);
+            if (target.CharacterKnockback.IsDead) // jsp
+                character.LockController.Targeting = true;
         }
 
         public void CardBreak(CharacterBase breaker)

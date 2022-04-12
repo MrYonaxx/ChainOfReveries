@@ -24,7 +24,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: d556a14af3f5dc1439337872b26b414f, type: 3}
   cardName: Orichalcum Armor
   cardType: 1
-  cardDescription: Increase max health by 1000.
+  cardDescription: Increase maximum HP by 1000.
   statsModifier:
   - charStat: 0
     modifierType: 0

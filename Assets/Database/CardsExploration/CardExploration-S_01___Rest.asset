@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 248b764f4706d4642942acfadcd80c69, type: 3}
   cardName: Dream of Horn - Wonder
-  cardDescription: Travel to a Dream of Horn, where you can heal your wounds.
+  cardDescription: Travel to a Horn dream, where you can heal your wounds.
   cardType: 1
   nbCardReward: 0
   reverieColor: 5

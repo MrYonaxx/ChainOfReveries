@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: ebe6721a27273854d941a13dc10b4eed, type: 3}
   cardName: Dream of Ivory - Verrerie
-  cardDescription: Travel to a Dream of Ivory, where every damage is doubled.
+  cardDescription: Travel to an Ivory dream, where every damage is doubled.
   cardType: 0
   nbCardReward: 2
   reverieColor: 3

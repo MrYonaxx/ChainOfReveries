@@ -116,7 +116,6 @@ namespace VoiceActing
             player.CharacterEquipment.SetWeaponDeck(runData.PlayerEquipmentDeck);
 
 
-
             // Initialize enemies
             enemiesController = new List<CharacterBase>(enemies.Length);
             for (int i = 0; i < enemies.Length; i++)
@@ -127,6 +126,7 @@ namespace VoiceActing
                 enemiesController[i].CharacterStatusController.OnStatusChanged += enemyStatusDrawer.DrawStatus;
                 enemiesController[i].CharacterEquipment.OnEquipWeapon += enemyEquipmentDrawer.DrawEquipments;
                 enemiesController[i].SetCharacter();
+
                 SetReverieStatus(enemiesController[i]);
             }
 
@@ -159,6 +159,9 @@ namespace VoiceActing
                 SetTarget(null);
                 player.LockController.OnTargetLock -= SetTarget;
             }
+
+            if (enemiesController == null)
+                return;
 
             for (int i = 0; i < enemiesController.Count; i++)
             {
@@ -312,7 +315,6 @@ namespace VoiceActing
             canvasBattle.SetActive(false);
             OnEventBattleEnd?.Invoke();
             player.CanPlay(true);
-
 
         }
 

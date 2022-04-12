@@ -25,7 +25,7 @@ MonoBehaviour:
   cardName: Gravity Staff
   cardType: 0
   cardDescription: 'Add percentage damage bonus to gravity attack, up to the number
-    of magic card in the deck.
+    of magic cards in the deck.
 
     (10 Magic)'
   statsModifier: []

@@ -25,7 +25,7 @@ MonoBehaviour:
   cardName: Lemina
   cardType: 0
   cardDescription: 'Create an armor granting immunities against all attacks. Each
-    Card Break reduce your armor. '
+    Card Break reduces your armor. '
   statsModifier: []
   statusEffectPassive: {fileID: 0}
   equipmentAction: {fileID: 0}

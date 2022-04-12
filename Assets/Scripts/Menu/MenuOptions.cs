@@ -68,6 +68,7 @@ namespace Menu
         [SerializeField]
         int indexResolution = 1;
 
+        [Space]
         [SerializeField]
         int indexMusic = 2;
         [SerializeField]
@@ -75,18 +76,23 @@ namespace Menu
         [SerializeField]
         int indexSoundShuffle = 4;
 
-
+        [Space]
         [SerializeField]
         int indexShowSleightName = 5;
         [SerializeField]
         int indexShowComboCount = 6;
         [SerializeField]
-        int indexShowCardValue = 7;
-        [SerializeField]
-        int indexEquipmentTime = 8;
+        int indexDeckThumbnail = 7;
 
+        [Space]
         [SerializeField]
-        int indexConfig = 9;
+        int indexShowCardValue = 8;
+        [SerializeField]
+        int indexEquipmentTime = 9;
+
+        [Space]
+        [SerializeField]
+        int indexConfig = 10;
 
 
         [SerializeField]
@@ -104,7 +110,7 @@ namespace Menu
 
         bool inConfig = false;
         Resolution[] resolutions;
-        private int[] indexOptions = { 0, 0, 10, 10, 0, 0, 0, 1, 1};
+        private int[] indexOptions = { 0, 0, 10, 10, 0, 0, 0, 0, 1, 1};
 
         #endregion
 
@@ -277,6 +283,7 @@ namespace Menu
 
             indexOptions[indexShowSleightName] = PlayerPrefs.GetInt("SleightName", 1);
             indexOptions[indexShowComboCount] = PlayerPrefs.GetInt("ComboCount", 1);
+            indexOptions[indexDeckThumbnail] = PlayerPrefs.GetInt("DeckThumbnail", 0);
 
             // 0 = hide, 1 = Hide player only, 2 = Hide boss, 3 = show
             indexOptions[indexShowCardValue] = PlayerPrefs.GetInt("CardValue", 3);
@@ -286,6 +293,7 @@ namespace Menu
 
         }
 
+        // Faire une classe perso static à la place si le truc d'unity est moins performant
         public void RewritePlayerPrefs()
         {
             PlayerPrefs.SetInt("Fullscreen", indexOptions[indexFullscreen]);
@@ -297,6 +305,8 @@ namespace Menu
 
             PlayerPrefs.SetInt("SleightName", indexOptions[indexShowSleightName]);
             PlayerPrefs.SetInt("ComboCount", indexOptions[indexShowComboCount]);
+            PlayerPrefs.SetInt("DeckThumbnail", indexOptions[indexDeckThumbnail]);
+
             PlayerPrefs.SetInt("CardValue", indexOptions[indexShowCardValue]);
             PlayerPrefs.SetInt("EquipmentTime", indexOptions[indexEquipmentTime]);
         }

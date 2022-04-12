@@ -24,7 +24,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: e21d0aa8597501f40bdbe9a03344ecc4, type: 3}
   cardName: Holy Clothes
   cardType: 1
-  cardDescription: Restore 3% of Health after each battle.
+  cardDescription: Restore 3% of HP after each battle.
   statsModifier: []
   statusEffectPassive: {fileID: 11400000, guid: c586f390546eac548b250a066f2e80ca,
     type: 2}

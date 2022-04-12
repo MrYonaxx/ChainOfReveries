@@ -55,6 +55,8 @@ namespace VoiceActing
         [SerializeField]
         int reloadMaxAmount = 100;
 
+        [SerializeField]
+        float hardReloadMutiplier = 0.1f;
 
 
         bool firstTimeMoveCard = false;
@@ -70,7 +72,11 @@ namespace VoiceActing
             get { return reloadInMovement; }
             set { reloadInMovement = value; }
         }
-
+        private bool hardReload = false; // flag pour le hard Reload (le hard reload restaure les cartes bannies en cas de softlock)
+        public bool HardReload
+        {
+            get { return hardReload; }
+        }
 
         [ReadOnly]
         public int currentIndex = 1;
@@ -159,6 +165,7 @@ namespace VoiceActing
             currentIndex = 0;
             reloadCurrentLevel = 1;
             reloadCurrentMaxLevel = 2;
+            hardReload = false;
 
             // Ajoute la carte reload
             if (addReload)
@@ -432,6 +439,9 @@ namespace VoiceActing
 
         public bool AddReload(float reloadAmount)
         {
+            /*if (hardReload)
+                reloadAmount *= hardReloadMutiplier;*/
+
             reloadCurrentAmount += (reloadAmount * Time.deltaTime);
             OnReloadChanged?.Invoke(reloadCurrentMaxLevel - reloadCurrentLevel, reloadCurrentAmount, reloadMaxAmount);
             if (reloadCurrentAmount >= reloadMaxAmount)
@@ -448,13 +458,10 @@ namespace VoiceActing
                 }
             }
             return false;
-            /*if (deckDrawer != null)
-                deckDrawer.DrawReload(reloadCurrentLevel, reloadCurrentAmount, reloadMaxAmount);*/
         }
 
         public void ReloadDeck()
         {
-
             OnReloadChanged?.Invoke(reloadCurrentMaxLevel - reloadCurrentLevel, reloadCurrentAmount, reloadMaxAmount);
             deck.Clear();
 
@@ -464,13 +471,30 @@ namespace VoiceActing
                 deck.Add(deckData[i]);
             }
 
+            // Check si on hard Reload
+            if(hardReload)
+            {
+                for (int i = 0; i < banned.Count * 0.5f; i++)
+                {
+                    banned.RemoveAt(Random.Range(0, banned.Count));
+                }
+            }
+            // Check si on passe en hard Reload
+            hardReload = (banned.Count >= (deckData.Count - 5) && deckData.Count > 4); // ou en francais si il nous reste 3 cartes (4 en comptant le reload) on passe en hard reload
+            if (hardReload)
+            {
+                reloadCurrentMaxLevel = 10; 
+                AddReload(0);
+            }
+
             // On enlève les cartes bannies
-            for(int i = 0; i < banned.Count; i++)
+            for (int i = 0; i < banned.Count; i++)
             {
                 deck.Remove(banned[i]);
             }
             cemetery.Clear();
             StartCoroutine(ReloadCoroutine());
+
         }
 
         private IEnumerator ReloadCoroutine()

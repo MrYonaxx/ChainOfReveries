@@ -128,17 +128,17 @@ MonoBehaviour:
     AnimationEvent: {fileID: 1207110519311360454}
   - Frame: 0
     AnimationEvent: {fileID: 3467270024188063017}
-  - Frame: 40
+  - Frame: 60
     AnimationEvent: {fileID: 5372169655405766964}
-  - Frame: 40
+  - Frame: 60
     AnimationEvent: {fileID: 789164099390318850}
-  - Frame: 100
+  - Frame: 120
     AnimationEvent: {fileID: 4399833597863534583}
-  - Frame: 160
+  - Frame: 180
     AnimationEvent: {fileID: 7901915431663335110}
-  - Frame: 210
+  - Frame: 230
     AnimationEvent: {fileID: 1956998498540393367}
-  - Frame: 300
+  - Frame: 320
     AnimationEvent: {fileID: 2524242894598313049}
 --- !u!114 &1207110519311360454
 MonoBehaviour:
@@ -153,7 +153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frame: 0
-  frameEnd: 300
+  frameEnd: 320
 --- !u!114 &3467270024188063017
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frame: 0
-  frameEnd: 300
+  frameEnd: 320
   canObstacleOther: 0
   newLayer:
     serializedVersion: 2
@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4f6a358ed9a7e144a09bd7df2c0bb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 40
+  frame: 60
   frameEnd: 0
 --- !u!114 &2524242894598313049
 MonoBehaviour:
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620e0e815b2f5174f8b380210d9a19f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 300
+  frame: 320
   frameEnd: 0
 --- !u!1 &4114098666737907609
 GameObject:
@@ -421,7 +421,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea6e2188cc64ea48aef29aadefc1f15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 40
+  frame: 60
   frameEnd: 0
   action: {fileID: 8274958919831047329, guid: 5a97214ed497dd04486999470830afad, type: 3}
   setTransform: 0
@@ -440,7 +440,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea6e2188cc64ea48aef29aadefc1f15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 100
+  frame: 120
   frameEnd: 0
   action: {fileID: 8274958919831047329, guid: 5a97214ed497dd04486999470830afad, type: 3}
   setTransform: 0
@@ -459,7 +459,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dea6e2188cc64ea48aef29aadefc1f15, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 160
+  frame: 180
   frameEnd: 0
   action: {fileID: 8274958919831047329, guid: 5a97214ed497dd04486999470830afad, type: 3}
   setTransform: 0
@@ -478,7 +478,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b23116954a1e2d45b5b1f5baf42a4c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 210
+  frame: 230
   frameEnd: 0
   action: {fileID: 818057835518184039, guid: def3a8fc8d0774846ac3854457520b0c, type: 3}
 --- !u!1 &5842096757366747167

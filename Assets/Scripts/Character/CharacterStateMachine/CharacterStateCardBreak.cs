@@ -62,6 +62,8 @@ namespace VoiceActing
                 }
             }
 
+            InputCancelSleight(character);
+
             if (character.CharacterMovement.InAir)
             {
                 if (Mathf.Abs(character.CharacterMovement.SpeedX) < (airFriction * Time.deltaTime * character.MotionSpeed) * 2)
@@ -87,10 +89,6 @@ namespace VoiceActing
             {
                 character.ResetToIdle();
             }
-            /*else
-            {
-                Reversal(character);
-            }*/
         }
 
         public override void EndState(CharacterBase character, CharacterState oldState)
@@ -98,33 +96,15 @@ namespace VoiceActing
             character.CharacterKnockback.ReversalTime = 0;
         }
 
-        /*private void Reversal(CharacterBase character)
+
+        private void InputCancelSleight(CharacterBase character)
         {
-            if (character.Inputs.InputA.Registered && character.CharacterKnockback.ReversalTime != 0)
+            if (character.Inputs.InputB.Registered)
             {
-                character.Inputs.InputA.ResetBuffer();
-                character.CharacterKnockback.ReversalTime = -0.5f;
+                character.Inputs.InputB.ResetBuffer();
+                character.CharacterAction.CancelSleight();
             }
-            else if (character.Inputs.InputA.Registered && character.CharacterKnockback.ReversalTime == 0)
-            {
-
-                character.Inputs.InputA.ResetBuffer();
-                character.CharacterKnockback.ReversalTime = 0.2f;
-            }
-
-            if (character.CharacterKnockback.ReversalTime < 0)
-            {
-                character.CharacterKnockback.ReversalTime += Time.deltaTime;
-                if (character.CharacterKnockback.ReversalTime > 0)
-                    character.CharacterKnockback.ReversalTime = 0;
-            }
-            else if (character.CharacterKnockback.ReversalTime > 0)
-            {
-                character.CharacterKnockback.ReversalTime -= Time.deltaTime;
-                if (character.CharacterKnockback.ReversalTime < 0)
-                    character.CharacterKnockback.ReversalTime = 0;
-            }
-        }*/
+        }
 
 
 

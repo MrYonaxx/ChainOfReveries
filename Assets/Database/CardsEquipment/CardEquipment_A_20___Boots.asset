@@ -24,7 +24,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 9bb4ec9dc2c5ec942a1a5a06087e41ce, type: 3}
   cardName: Boots
   cardType: 1
-  cardDescription: Increase speed.
+  cardDescription: Increase movement speed.
   statsModifier:
   - charStat: 10
     modifierType: 0

@@ -107,29 +107,33 @@ namespace VoiceActing
                 for (int i = 0; i < transformsLocked.Count; i++)
                 {
                     float length = Vector3.Magnitude(transformsLocked[i].transform.position - transform.position);
+
+                    if (transformsLocked[i].CharacterStat.HP <= 0)
+                        length += 10; // on sabote le lock pour prioriser les ennemis vivants
+
                     if (bestLength >= length)
                     {
                         bestLength = length;
                         bestIndex = i;
                     }
                 }
-                if (lockMarker)
+                /*if (lockMarker)
                 {
                     lockMarker.gameObject.SetActive(true);
                     lockMarker.transform.SetParent(transformsLocked[bestIndex].transform);
                     lockMarker.transform.localPosition = new Vector3(0, 0.48f, 0);
                     lockMarker.transform.localScale = Vector3.one;
-                }
+                }*/
                 TargetLocked = transformsLocked[bestIndex];
                 yield return null;
             }
             yield return null;
             TargetLocked = null;
-            if (lockMarker)
+            /*if (lockMarker)
             {
                 lockMarker.gameObject.SetActive(false);
                 lockMarker.transform.SetParent(this.transform);
-            }
+            }*/
         }
 
 

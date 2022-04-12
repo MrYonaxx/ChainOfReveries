@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 95b45a113e4c9854da8cda5c6df48586, type: 3}
   cardName: Dream of Horn - Opulence
-  cardDescription: Travel to a Dream of Horn, where you can obtain Equipment Cards.
+  cardDescription: Travel to a Horn dream, where you can obtain an Equipment card.
   cardType: 1
   nbCardReward: 0
   reverieColor: 3

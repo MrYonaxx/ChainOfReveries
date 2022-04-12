@@ -1130,6 +1130,9 @@ MonoBehaviour:
   blink: {fileID: 6448536278243119328}
   intervalBlink: 0.1
   colorBlink: {r: 0, g: 0.78431374, b: 1, a: 1}
+  colorHardReload: {r: 0, g: 0.78431374, b: 0.627451, a: 1}
+  intervalRV: 0.3
+  colorRV: {r: 0, g: 0.15686275, b: 0.39215687, a: 1}
 --- !u!1 &3011987555524996342
 GameObject:
   m_ObjectHideFlags: 0
@@ -1405,6 +1408,10 @@ MonoBehaviour:
     sound: {fileID: 8300000, guid: 4036dda26a85a334f8d7aabd6624aa0b, type: 3}
     volume: 0.8
     pitch: {x: 0.9, y: 1.1}
+  soundSleightReady:
+    sound: {fileID: 0}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
   soundSleightPlay:
     sound: {fileID: 8300000, guid: 8eb24d146b6bbdb42977c4e3b4cc0ea6, type: 3}
     volume: 1
@@ -1853,6 +1860,7 @@ MonoBehaviour:
   reloadAnimationOffset: 7
   reloadMaxLevel: 3
   reloadMaxAmount: 100
+  hardReloadMutiplier: 0.2
   currentIndex: 1
 --- !u!1 &3011987556183274155
 GameObject:
@@ -2091,6 +2099,7 @@ MonoBehaviour:
   reloadAnimationOffset: 7
   reloadMaxLevel: 3
   reloadMaxAmount: 100
+  hardReloadMutiplier: 0.1
   currentIndex: 1
 --- !u!1 &5146647980989250678
 GameObject:
@@ -2393,9 +2402,13 @@ MonoBehaviour:
     volume: 1
     pitch: {x: 1, y: 1}
   soundPrepareSleight:
-    sound: {fileID: 8300000, guid: 4036dda26a85a334f8d7aabd6624aa0b, type: 3}
+    sound: {fileID: 8300000, guid: 0ba8673803ca32f4280dc2d12a136843, type: 3}
     volume: 0.8
-    pitch: {x: 0.9, y: 1.1}
+    pitch: {x: 1, y: 1}
+  soundSleightReady:
+    sound: {fileID: 8300000, guid: f90cbe0d79d9a944f8135c29ed092818, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
   soundSleightPlay:
     sound: {fileID: 8300000, guid: 8eb24d146b6bbdb42977c4e3b4cc0ea6, type: 3}
     volume: 0.8

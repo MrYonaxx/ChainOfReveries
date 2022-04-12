@@ -21,12 +21,20 @@ namespace VoiceActing
         float intervalBlink = 0.1f;
         [SerializeField]
         Color colorBlink = Color.blue;
+        [SerializeField]
+        Color colorHardReload = Color.cyan;
 
+        [Title("RV")]
+        [SerializeField]
+        float intervalRV = 0.1f;
+        [SerializeField]
+        Color colorRV = Color.blue;
 
         int knockbackAnimation = 0;
         bool inReload = false;
         bool inTheAir = false;
-        float tReload = 0f;
+        bool inKnockback = false;
+        float tBlink = 0f;
 
         private void Start()
         {
@@ -48,8 +56,12 @@ namespace VoiceActing
         // Update is called once per frame
         void Update()
         {
-            if (inReload)
-                UpdateReload();
+            if (inReload && characterBase.DeckController.HardReload)
+                LoopBlink(intervalBlink, colorHardReload);
+            else if (inReload)
+                LoopBlink(intervalBlink, colorBlink);
+            else if (inKnockback)
+                UpdateKnockback();
 
             // Set direction
             if (characterBase.MotionSpeed != 0)
@@ -82,6 +94,7 @@ namespace VoiceActing
         private void StateChanged(CharacterState oldState, CharacterState newState)
         {
             inReload = false;
+            inKnockback = false;
             if (newState is CharacterStateIdle)
                 animator.SetTrigger("Idle");
             else if (newState is CharacterStateKnockback)
@@ -113,23 +126,32 @@ namespace VoiceActing
             animator.SetBool("Aerial", characterBase.CharacterMovement.InAir);
             animator.SetTrigger("Hit");
             animator.SetInteger("HitAnimation", knockbackAnimation);
+            inKnockback = true;
 
         }
 
-        private void UpdateReload()
+        private void LoopBlink(float interval, Color color)
         {
-            tReload += Time.deltaTime;
-            if(tReload > intervalBlink)
+            tBlink += Time.deltaTime;
+            if(tBlink > interval)
             {
-                blink.Blink(intervalBlink, colorBlink);
-                tReload = 0f;
+                blink.Blink(interval, color);
+                tBlink = 0f;
+            }
+        }
+
+        private void UpdateKnockback()
+        {
+            if(characterBase.CharacterKnockback.RevengeValue >= characterBase.CharacterStat.RevengeValue.Value && characterBase.CharacterStat.RevengeValue.Value > 0)
+            {
+                LoopBlink(intervalRV, colorRV);
             }
         }
 
         private void DeathAnimation(CharacterBase character,  DamageMessage dmgMsg)
         {
             BattleFeedbackManager.Instance.AnimationDeath(character);
-            blink.Blink(6f, Color.white);
+            blink.Blink(10f, Color.white);
         }
 
         private void ReloadAnimation()

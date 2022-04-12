@@ -105,8 +105,8 @@ namespace VoiceActing
 
 
                 cardOutline.gameObject.SetActive(true);
-                cardOutline.color = character.CharacterAction.CardTypes.GetColorType(character.DeckController.GetCurrentCard().GetCardType());
-                cardSprite.sprite = character.DeckController.GetCurrentCard().GetCardIcon();
+                /*cardOutline.color = character.CharacterAction.CardTypes.GetColorType(character.DeckController.GetCurrentCard().GetCardType());
+                cardSprite.sprite = character.DeckController.GetCurrentCard().GetCardIcon();*/
             }
             else
             {

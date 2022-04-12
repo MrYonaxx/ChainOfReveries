@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cardSprite: {fileID: 21300000, guid: 5cf61dabdcb4c6840a91c5ad58bcca3a, type: 3}
   cardName: Dream of Ivory - Wraith
-  cardDescription: Travel to a Dream of Ivory, where enemies Cards value increase
+  cardDescription: Travel to an Ivory dream, where the value of the enemy cards increases
     by 2.
   cardType: 0
   nbCardReward: 2
