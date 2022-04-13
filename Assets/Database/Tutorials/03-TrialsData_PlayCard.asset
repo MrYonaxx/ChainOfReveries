@@ -64,10 +64,10 @@ MonoBehaviour:
   osef: 
   textboxStart:
   - For your character to act, they need to play a card.
-  - Each card represent an action.
+  - Each card represents an action.
   textboxEnd:
-  - Each action have different properties, so build your deck according to those
-    moves to create combo.
+  - Each action has different properties, understanding your cards is the first step
+    towards victory.
   comboNotes:
   - Play cards
   trialsDisplay:

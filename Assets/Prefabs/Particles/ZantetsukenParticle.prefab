@@ -12,6 +12,8 @@ GameObject:
   - component: {fileID: 855764348832698737}
   - component: {fileID: 855764348832698738}
   - component: {fileID: -628959329838418786}
+  - component: {fileID: 7930020272192036915}
+  - component: {fileID: 4245761585919834212}
   m_Layer: 0
   m_Name: ZantetsukenParticle
   m_TagString: Untagged
@@ -118,6 +120,38 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destroyWithAnimation: 0
+--- !u!114 &7930020272192036915
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855764348832698739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4960093bb8a6c9e4389f5dadcd7dc0b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundStart:
+    sound: {fileID: 8300000, guid: 4bf711c2456d3d2408b81df29947c866, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
+--- !u!114 &4245761585919834212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 855764348832698739}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4960093bb8a6c9e4389f5dadcd7dc0b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  soundStart:
+    sound: {fileID: 8300000, guid: 8536e10845388c5418bbe3afa11d7919, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
 --- !u!1 &5922823410492585355
 GameObject:
   m_ObjectHideFlags: 0

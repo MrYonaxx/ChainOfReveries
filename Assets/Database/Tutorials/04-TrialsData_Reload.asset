@@ -76,10 +76,9 @@ MonoBehaviour:
   osef: 
   textboxStart:
   - The cards you play disappear once used.
-  - To regain them, you need to Reload your Deck.
+  - To get them back, you need to Reload your deck.
   textboxEnd:
-  - After each Reload, your next Reload will take more time, leaving you vulnerable
-    longer.
+  - After each Reload, the next one will take more time, leaving you vulnerable longer.
   - Also the more you have cards, the longer the Reload.
   comboNotes:
   - Play all your cards

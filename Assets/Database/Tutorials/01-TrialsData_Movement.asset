@@ -84,8 +84,8 @@ MonoBehaviour:
   textboxStart:
   - You can move your character around and perform an evasive movement.
   textboxEnd:
-  - Note that the evasive movement is different for each character.
-  - Lia evasive movement will always make her dash away from her opponent.
+  - The evasive movement is different for each character.
+  - Lia's evasive movement will always make her dash away from her opponent.
   comboNotes:
   - Move
   - Evade

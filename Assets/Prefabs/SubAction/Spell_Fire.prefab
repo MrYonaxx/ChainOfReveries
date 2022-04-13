@@ -203,7 +203,7 @@ MonoBehaviour:
   sound:
     sound: {fileID: 8300000, guid: 4d3bb1d765cb2ec44b92ecf565866805, type: 3}
     volume: 1
-    pitch: {x: 0.9, y: 1.1}
+    pitch: {x: 0.95, y: 1.05}
 --- !u!1 &3720685875369100543
 GameObject:
   m_ObjectHideFlags: 0

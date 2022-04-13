@@ -81,24 +81,19 @@ MonoBehaviour:
   osef: 
   textboxStart:
   - Sleights are special attacks using a combination of 3 cards.
-  - The value of the 3 cards you combine is added, meaning you can play a action
-    with a value of more than 9.
-  - The action your character execute is dependant of the 3 cards you combine.
-  - 'If you combine 3 Attack cards you will do a special Attack.
-
-'
-  - If you combine 3 Fire cards you will do a stronger fireball.
+  - The value of the 3 cards you combine is added, which means that you can play
+    an action with a value above 9.
+  - The action your character performs is dependant of the 3 cards you stocked.
+  - For example, if you combine 3 Fire cards you will do a stronger fireball.
   textboxEnd:
-  - Be careful, while Sleight are strong, they have a huge weakness.
+  - Be careful, while Sleights are strong, they have a huge weakness.
   - You lose the first card of the Sleight for the rest of the battle.
-  - So if your opponent Card Break your Sleight, you will have a disadvantage for
-    the rest of the match.
-  - Each character have his own set of Sleight that you will need to learn to master
-    your character.
-  - But you don't need to use all the Sleight your character possess in every battle.
-  - Focus on a few Sleight and create a deck around them.
+  - Each character has his own set of Sleights that you will need to learn in order
+    to master your character.
+  - But you don't need to use all the Sleights your character possess in every battle.
+  - Focus on a few Sleights per run and create a deck around them.
   comboNotes:
-  - Combine 3 Cards
+  - Stock 3 cards
   - 'Sleight : Evening Breeze'
   - 'Sleight : Firaga'
   trialsDisplay:

@@ -71,15 +71,15 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  trialsName: 02 - Move Deck
-  trialsDescription: Learn how to navigate through your Deck.
+  trialsName: 02 - Move deck
+  trialsDescription: Learn how to navigate through your deck.
   deckPlayer: {fileID: 11400000, guid: 2d189fa3043448043975a111c4df4d2d, type: 2}
   deckEnemy: {fileID: 11400000, guid: 2d189fa3043448043975a111c4df4d2d, type: 2}
   dummyBehavior: {fileID: 11400000, guid: 6e731847cb35366439f0539fd1420e80, type: 2}
   osef: 
   textboxStart:
-  - Each character on the battlefield possess a Deck of card.
-  - Before learning to use the cards, try to cycle through them.
+  - Each character on the battlefield has a deck of cards.
+  - Before learning how to use the cards, try to cycle through them.
   textboxEnd:
   - Cards are always sorted by category, then from the highest value to the lowest.
   comboNotes:

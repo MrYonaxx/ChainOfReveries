@@ -88,7 +88,7 @@ MonoBehaviour:
   osef: 
   textboxStart:
   - When a card is played, you may want to Card Break the current card without executing
-    the move from the card you're playing.
+    the animation of your own card.
   - To do this, you can do a Rapid Break.
   textboxEnd:
   - Rapid Break is really good when you want to Card Break projectile.

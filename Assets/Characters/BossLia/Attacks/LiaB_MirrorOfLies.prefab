@@ -29,7 +29,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 248121844606041498}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5709069950431411716
 MonoBehaviour:
@@ -80,6 +80,7 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 8434592594708090333}
   - {fileID: 8850553043880360490}
   m_Father: {fileID: 5842096757366747166}
   m_RootOrder: 0
@@ -116,6 +117,8 @@ MonoBehaviour:
   frameData:
   - Frame: 0
     AnimationEvent: {fileID: 5709069950431411716}
+  - Frame: 125
+    AnimationEvent: {fileID: 9111053644160001916}
   - Frame: 140
     AnimationEvent: {fileID: 6016346815433054081}
   - Frame: 150
@@ -239,7 +242,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 1ac5421b2ea8a064088d576ebcf30a04, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 08381f65a3256494d8ae77e309cca190, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -250,6 +253,55 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &4585009794014413789
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8434592594708090333}
+  - component: {fileID: 9111053644160001916}
+  m_Layer: 0
+  m_Name: Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8434592594708090333
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4585009794014413789}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 248121844606041498}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &9111053644160001916
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4585009794014413789}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 125
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 8b0b28ad82662c04ab96628d75772c64, type: 3}
+    volume: 1
+    pitch: {x: 0.8, y: 0.8}
 --- !u!1 &5842096757366747167
 GameObject:
   m_ObjectHideFlags: 0
@@ -302,6 +354,7 @@ MonoBehaviour:
   linkToCharacter: 1
   fixToGround: 0
   subActionCardBreakable: 0
+  canPlayerCorrectDirection: 1
   atkControllers: []
 --- !u!1 &7345693785975693917
 GameObject:

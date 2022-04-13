@@ -72,7 +72,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   trialsName: 13 - Move Category
-  trialsDescription: Learn some shortcut to optimize you deck traversal.
+  trialsDescription: Learn some shortcut to optimize your deck traversal.
   deckPlayer: {fileID: 11400000, guid: e5ee40d80460fe34ca6b31d06f78f216, type: 2}
   deckEnemy: {fileID: 11400000, guid: 1ab145676a20364469b068469819d2e5, type: 2}
   dummyBehavior: {fileID: 11400000, guid: 6e731847cb35366439f0539fd1420e80, type: 2}
@@ -81,7 +81,7 @@ MonoBehaviour:
   - Cycling through long deck will take some time.
   - That's why you can cycle through category of cards.
   textboxEnd:
-  - Pressing both button at the same time will bring you to the Reload card.
+  - Pressing both buttons at the same time will bring you back to the Reload card.
   comboNotes:
   - Cycle category right
   - Cycle category left

@@ -99,17 +99,16 @@ MonoBehaviour:
   osef: 
   textboxStart:
   - Sometimes the Revenge Value gauge takes too long to fill.
-  - If you really want your opponent to stop his combo as soon as possible, you can
-    perform a Instant Revenge.
-  - To do this, you need to hold the Rapid Break button with a card in hand capable
-    of Card Breaking the card of your opponent.
-  - Try to Instant Revenge right after the enemy Sleight
+  - If you really want to stop your opponent's combo as soon as possible, you can
+    perform an Instant Revenge.
+  - To do this, you need to have a card in hand with a value greater than the card
+    value of your opponent. (0 cards also work).
   textboxEnd:
   - Obviously there is a drawback.
   - The cards used to perform the Instant Revenge is removed from play for the rest
     of the battle.
-  - And while you're opponent is put in a Card Break State, the recovery of you're
-    revenge doesn't allow you to play a card before him.
+  - And while your opponent is put in a Card Break State, the recovery of your revenge
+    doesn't allow you to play a card before him.
   - Use this technique wisely.
   comboNotes:
   - Get hit

@@ -92,20 +92,20 @@ MonoBehaviour:
   textboxStart:
   - The Card Break is the core mechanic of the game, so listen well.
   - Each card has a value from 0 to 9.
-  - When a card is played, the card is placed to the center of the screen during
-    the action.
-  - If the opponent play a card with a value superior than the current card value,
+  - When a card is played, it is placed in the center of the screen, for the entire
+    duration of the attack.
+  - If the opponent plays a card with a value superior than the current card value,
     a Card Break occurs.
-  - Being Card Breaked cancel your attack and put you in a stun state.
+  - Being Card Breaked cancel your action and put you in a stun state.
   - Now try to Card Break your opponent.
   textboxEnd:
-  - Knowing how to Card Break a opponent can prevent him from even attacking during
+  - Knowing how to Card Break an opponent can prevent him from even attacking during
     a battle.
   - But be careful, as you too, will not be able to put a fight if you can't Card
-    Break the opponent cards.
+    Break the opposing cards.
   - Note that some cards have special Card Break rules.
-  - And don't forget that you're not forced to always Card Break a action, you can
-    simply evade the attack.
+  - And don't forget that you're not forced to Card Break every action, you can simply
+    evade the attack.
   comboNotes:
   - Card Break opponent
   - Card Break opponent

@@ -66,18 +66,18 @@ MonoBehaviour:
       Entry: 8
       Data: 
   trialsName: 08 - Equipment
-  trialsDescription: Learn how works the Equipment cards.
+  trialsDescription: Learn how Equipment cards work.
   deckPlayer: {fileID: 11400000, guid: ada882efd2837da4cb03d24ad4761e38, type: 2}
   deckEnemy: {fileID: 11400000, guid: 1ab145676a20364469b068469819d2e5, type: 2}
   dummyBehavior: {fileID: 11400000, guid: 6e731847cb35366439f0539fd1420e80, type: 2}
   osef: 
   textboxStart:
-  - In reality, your character actually possess two decks.
-  - One is for Battle cards, the other is for Equipment card.
-  - There is two type of Equipment card, Armor cards and Weapon cards
+  - In reality, your character has two decks.
+  - One is for Battle cards, the other is for Equipment cards.
+  - There is two types of Equipment cards, Armor cards and Weapon cards
   - Armor cards are passive bonus.
   - Weapon cards are active bonus you need to play during a battle.
-  - You can have up to 4 Weapon cards with you and a weapon card can only be played
+  - You can have up to 4 Weapon cards with you, and a weapon card can only be played
     once per battle.
   textboxEnd:
   - Weapon cards if used at the right time can be devastating.

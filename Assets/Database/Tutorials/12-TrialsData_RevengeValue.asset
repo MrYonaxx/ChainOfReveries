@@ -94,13 +94,14 @@ MonoBehaviour:
   dummyBehavior: {fileID: 11400000, guid: d528b8c4778043e4ab0fa60fa7c3ab2e, type: 2}
   osef: 
   textboxStart:
-  - 'When you get hit, a blue gauge fills itself at the bottom of the screen '
+  - 'When you get hit, a blue gauge fills up at the bottom of the screen '
   - This is the Revenge Value gauge.
   - Once full, and if you are getting hit by a combo, you can burst and cancel the
-    opponent combo.
+    opponent's combo.
   textboxEnd:
-  - Note that when someone stop you mid-combo, you are put in a Card Break state.
-  - This means that the defensive options available to you are the same as a regular
+  - Note that when someone stop you mid-combo with the Revenge Value, you are put
+    in a Card Break state.
+  - This means that you can cancel the stun of the Revenge attack with a Sleight
     Card Break.
   comboNotes:
   - Get Hit

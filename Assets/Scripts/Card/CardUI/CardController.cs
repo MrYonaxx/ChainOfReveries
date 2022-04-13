@@ -26,7 +26,8 @@ namespace VoiceActing
         protected RectTransform rectTransform = null;
         [SerializeField]
         protected Image cardSprite = null;
-
+        [SerializeField]
+        protected Image cardOutlineBackground = null;
 
         [SerializeField]
         protected Image cardOutline = null;
@@ -66,15 +67,6 @@ namespace VoiceActing
         public void DrawCard(Card card, CardType cardTypeDictionary)
         {
             DrawCard(card.GetCardIcon(), cardTypeDictionary.GetColorType(card.GetCardType()), card.GetCardValue(), card.CardPremium);
-            /*gameObject.SetActive(true);
-
-            if (card.CardData == null)
-                return;
-
-            cardSprite.sprite = card.CardData.CardSprite;
-            textCardValue.text = card.GetCardValue().ToString();
-            cardOutline.color = cardTypeDictionary.GetColorType(card.CardData.CardType);
-            cardValueOutline.color = cardOutline.color;*/
 
             if(animator != null && animator.isActiveAndEnabled)
                 animator.SetTrigger("Appear");
@@ -89,7 +81,11 @@ namespace VoiceActing
 
             cardSprite.sprite = card;
             cardOutline.color = colorOutline;
-            if(value != -1)
+            if(cardOutlineBackground != null)
+                cardOutlineBackground.color = new Color(colorOutline.r, colorOutline.g, colorOutline.b, cardOutlineBackground.color.a * 0.5f);
+
+            // Dessine la valeur (on cache l'outline si on a aucune valeur à dessiner
+            if (value != -1)
             {
                 textCardValue.gameObject.SetActive(true);
                 cardValueOutline.gameObject.SetActive(true);
@@ -103,13 +99,9 @@ namespace VoiceActing
             }
 
             if(premium)
-            {
                 textCardValue.color = Color.yellow;
-            }
             else
-            {
                 textCardValue.color = Color.white;
-            }
         }
 
         public void DrawCardValue(int value = -1)
@@ -117,6 +109,11 @@ namespace VoiceActing
             textCardValue.text = value.ToString();
         }
 
+        // déplace le sprite de la carte, utilisé pour créer une illusion avec le deck battle drawer pour toujours voir l'icone de la carte
+        public void MoveCardSprite(float offset)
+        {
+            cardSprite.rectTransform.anchoredPosition = new Vector2(offset, 0);
+        }
 
 
         // Désaffiche les cartes mais avec une anim
@@ -137,7 +134,7 @@ namespace VoiceActing
 
 
 
-
+        // Déplace la Carte
         public void MoveCard(RectTransform newTransform, float time)
         {
             this.transform.SetParent(newTransform);
@@ -216,7 +213,7 @@ namespace VoiceActing
 
 
 
-
+        // Animation spécifique au Card Break
         [ContextMenu("Test")]
         public void DebugCardBreak()
         {

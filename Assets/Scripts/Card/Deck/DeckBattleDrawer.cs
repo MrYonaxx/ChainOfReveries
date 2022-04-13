@@ -41,6 +41,8 @@ namespace VoiceActing
         [SerializeField]
         RectTransform[] transformsHand = null;
         [SerializeField]
+        int[] cardSpriteOffset = null; // offset de l'illustration de la carte en fonction de sa position dans la main
+        [SerializeField]
         Transform deckParent = null;
 
         [SerializeField]
@@ -198,6 +200,9 @@ namespace VoiceActing
                                             cardTypeDictionary.GetColorType(deck[cardID].GetCardType()),
                                             deck[cardID].GetCardValue(), deck[cardID].CardPremium);
 
+            if (cardSpriteOffset.Length > index)
+                cardControllers[index].MoveCardSprite(cardSpriteOffset[index]);
+
             if (cardReload != null)
             {
                 if (currentIndex > transformsHand.Length / 2 && currentIndex < deck.Count - transformsHand.Length / 2)
@@ -234,6 +239,10 @@ namespace VoiceActing
             {
                 cardControllers[i] = cardControllers[i - 1];
                 cardControllers[i - 1].MoveCard(transformsHand[i], cardSpeed);
+
+                // on décale le sprite comme il faut
+                if (cardSpriteOffset.Length > i)
+                    cardControllers[i].MoveCardSprite(cardSpriteOffset[i]);
             }
             // La carte la plus à gauche est remplacé par la carte la plus à droite et on redessine
             cardControllers[handLimitMin] = cardTemp;
@@ -254,7 +263,11 @@ namespace VoiceActing
             for (int i = handLimitMin; i < handLimitMax - 1; i++)
             {
                 cardControllers[i] = cardControllers[i + 1];
-                cardControllers[i + 1].MoveCard(transformsHand[i], cardSpeed);
+                cardControllers[i + 1].MoveCard(transformsHand[i], cardSpeed);    
+                
+                // on décale le sprite comme il faut
+                if (cardSpriteOffset.Length > i)
+                    cardControllers[i].MoveCardSprite(cardSpriteOffset[i]);
             }
 
             // La carte la plus à droite est remplacé par la carte la plus à gauche et on redessine
@@ -308,6 +321,10 @@ namespace VoiceActing
                 {
                     cardControllers[i] = cardControllers[i + 1];
                     cardControllers[i + 1].MoveCard(transformsHand[i], cardSpeed);
+
+                    // on décale le sprite comme il faut
+                    if (cardSpriteOffset.Length > i)
+                        cardControllers[i].MoveCardSprite(cardSpriteOffset[i]);
                 }
                 cardControllers[handLimitMax - 1] = cardTemp;
                 cardControllers[handLimitMax - 1].MoveCard(transformsHand[handLimitMax - 1], 0);

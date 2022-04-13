@@ -90,6 +90,9 @@ namespace VoiceActing
                 return;
             }
 
+            if (character.DeckController.Deck.Count <= 0)
+                return;
+
             if(cardBreakController.GetActiveCharacter() == character)
             {
                 textMesh.enabled = true;

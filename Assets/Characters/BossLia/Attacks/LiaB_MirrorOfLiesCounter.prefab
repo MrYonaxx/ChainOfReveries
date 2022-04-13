@@ -313,6 +313,74 @@ MonoBehaviour:
   moveForward: 1
   speed: {x: 0, y: 0}
   jumpImpulsion: 0
+--- !u!1 &2209110543086335201
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3319146915873029820}
+  - component: {fileID: 1240464248607646034}
+  - component: {fileID: 4566313273046651123}
+  m_Layer: 0
+  m_Name: Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3319146915873029820
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2209110543086335201}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.4, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 248121844606041498}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1240464248607646034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2209110543086335201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 0
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 217224b0e1a20204c8f31657c55a27a8, type: 3}
+    volume: 1
+    pitch: {x: 1, y: 1}
+--- !u!114 &4566313273046651123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2209110543086335201}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 0
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 7953a36b8cd8b7143942863ffc84c6cc, type: 3}
+    volume: 1
+    pitch: {x: 1, y: 1}
 --- !u!1 &3670486369486769878
 GameObject:
   m_ObjectHideFlags: 0
@@ -376,6 +444,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 8850553043880360490}
+  - {fileID: 3319146915873029820}
   m_Father: {fileID: 5842096757366747166}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -413,6 +482,10 @@ MonoBehaviour:
     AnimationEvent: {fileID: 9063508015307564932}
   - Frame: 0
     AnimationEvent: {fileID: 868539667813904001}
+  - Frame: 0
+    AnimationEvent: {fileID: 1240464248607646034}
+  - Frame: 0
+    AnimationEvent: {fileID: 4566313273046651123}
   - Frame: 1
     AnimationEvent: {fileID: 4870427530908454958}
   - Frame: 3

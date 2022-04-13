@@ -126,17 +126,17 @@ MonoBehaviour:
   dummyBehavior: {fileID: 11400000, guid: 6e731847cb35366439f0539fd1420e80, type: 2}
   osef: 
   textboxStart:
-  - A good way to deal damage is by playing single card, and if the action hit the
-    opponent, continue the combo with a Sleight.
+  - A good way to deal damage is playing cards, and if the action hit the opponent,
+    continue the combo with a Sleight.
   - The next step is using another Sleight after the Sleight.
-  - A Sleight can be chained by any other Sleight as long as it have a different
-    name.
+  - A Sleight can be chained by any other Sleight as long as it has a different name.
   textboxEnd:
-  - Each time you cancel a action during a combo, the enemy stay longer in hit stun.
-  - This means that attack with a long startup like Midnight Mowing, can combo if
-    used after multiple Sleight.
-  - Lia basic chain is easy with a good deck, but more complicated combo will require
-    you to search for cards in a limited amount of time.
+  - Each time you cancel an action during a combo, the enemy stays longer in hit
+    stun.
+  - This means that an attack with a long startup like Lia's Midnight Mowing, can
+    combo if used after multiple Sleights.
+  - Lia basic chain is easy, but more complicated combo will require you to search
+    for cards in a limited amount of time.
   comboNotes:
   - Attack
   - Attack 2

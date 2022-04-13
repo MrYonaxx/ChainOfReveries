@@ -98,14 +98,16 @@ MonoBehaviour:
   textboxStart:
   - Since Card Break is determined by the card value, playing low value is risky.
   - However the lower the value, the higher the damage.
-  - For example a card with a value of 1 will do more damage than a value of 2, and
-    a 2 will do more damage than a 3, etc...
-  - A good strategy for capitalizing on this, is to "confirm" that you have hit a
+  - Card with a value of 1 will do more damage than a value of 2, and a 2 will do
+    more damage than a 3, etc...
+  - In general, for the same attack, the damage of a card with a value of 1 is twice
+    the damage of a card with a value of 9.
+  - A good strategy for capitalizing on this, is to "confirm" that you have hit an
     opponent with a high value card before playing low value card.
   textboxEnd:
-  - Mastering this can double your damage with no drawback.
-  - 'But it require a heavier execution during combo for searching the right cards
-    in a limited amount of time. '
+  - 'It requires a heavier execution, as you have to cycle through your deck in-between
+    your attacks. '
+  - So don't worry if you struggle with this, it's only for optimizing your damage.
   comboNotes:
   - Land a hit
   - Play card 1

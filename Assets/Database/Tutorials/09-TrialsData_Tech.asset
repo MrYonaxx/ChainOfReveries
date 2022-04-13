@@ -88,9 +88,8 @@ MonoBehaviour:
   dummyBehavior: {fileID: 11400000, guid: 99175dd61f15b1c4886ae80b197754b6, type: 2}
   osef: 
   textboxStart:
-  - Some attacks will put you in a Knockdown state.
-  - If you press the evade button right before entering a Knockdown state, you can
-    tech out of the combo.
+  - Some attacks will launch you in the air.
+  - If you press the evade button right before touching the ground, you recover faster.
   textboxEnd:
   - Tech can allow you to evade big combo.
   comboNotes:

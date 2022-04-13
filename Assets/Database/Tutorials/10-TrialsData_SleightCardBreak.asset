@@ -103,17 +103,16 @@ MonoBehaviour:
   dummyBehavior: {fileID: 11400000, guid: 16bfa958f62135043ababdce03b32bda, type: 2}
   osef: 
   textboxStart:
-  - If you get Card Break, you're character is stunned for a short amount of time.
+  - If you get Card Break, your character is stunned for a short amount of time.
   - You can cancel this stun time by playing a Sleight.
-  - Ready a Sleight and get Card Break by your opponent.
-  - This will be your moment to Sleight cancel the Card Break
+  - Stock 3 cards and get Card Break by your opponent.
+  - This will be your moment to play your Sleight, in order to avoid getting hit.
   textboxEnd:
-  - If you don't have a Sleight ready the moment you're getting Card Break, you can't
-    cancel the Card Break with your special moves.
-  - So prepare your Sleight in advance if you want to defend yourself.
+  - Your Sleight need to be ready before the Card Break occurs, because you cannot
+    stock cards during a Card Break.
   comboNotes:
-  - Combine 3 cards
-  - Play a Card
+  - Stock 3 cards
+  - Play a card
   - Get Card Break
   - Cancel with a Sleight
   trialsDisplay:
