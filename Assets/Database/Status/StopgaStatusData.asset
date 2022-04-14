@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5e6079dd8a46024986b2b65e7c5e737, type: 3}
-  m_Name: SuperStopSenStatusData
+  m_Name: StopgaStatusData
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: -628959329838418786, guid: 734251cd418c42946b79b2586c648edb, type: 3}
+    - {fileID: 11400000, guid: 8b396af669f60da41b60c9f0322e0d0a, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -37,10 +38,10 @@ MonoBehaviour:
       Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 6
     - Name: 
       Entry: 3
-      Data: 5
+      Data: 6
     - Name: 
       Entry: 8
       Data: 
@@ -65,7 +66,7 @@ MonoBehaviour:
       Data: 3|VoiceActing.StatusEffectStop, Assembly-CSharp
     - Name: timeStop
       Entry: 4
-      Data: 4
+      Data: 5
     - Name: timeDamage
       Entry: 4
       Data: 1
@@ -77,22 +78,10 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 4|VoiceActing.StatusEffectStat, Assembly-CSharp
-    - Name: StatModifier
-      Entry: 7
-      Data: 5|VoiceActing.StatModifier, Assembly-CSharp
-    - Name: charStat
-      Entry: 3
-      Data: 16
-    - Name: modifierType
-      Entry: 3
-      Data: 0
-    - Name: value
-      Entry: 4
+      Data: 4|VoiceActing.StatusEffectAddStatus, Assembly-CSharp
+    - Name: Status
+      Entry: 10
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -103,7 +92,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   statusIconSprite: {fileID: 0}
-  statusName: Super stop Sen
+  statusName: Super stop
   statusDescription: 
   hideStatus: 1
   statusShowLabel: 0

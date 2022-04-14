@@ -61,8 +61,8 @@ MonoBehaviour:
       baseValue: 50
       finalValue: 50
     MotionSpeed:
-      baseValue: 1
-      finalValue: 1
+      baseValue: 0.85
+      finalValue: 0.85
     Mass:
       baseValue: 1
       finalValue: 1

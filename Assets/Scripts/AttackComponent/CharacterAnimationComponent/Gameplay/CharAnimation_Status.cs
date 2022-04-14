@@ -10,10 +10,15 @@ namespace VoiceActing
     {
         [SerializeField]
         StatusEffectData status = null;
+        [SerializeField]
+        bool add = true;
 
         public override void Execute(CharacterBase character)
         {
-            character.CharacterStatusController.ApplyStatus(status, 100);
+            if (add)
+                character.CharacterStatusController.ApplyStatus(status, 100);
+            else
+                character.CharacterStatusController.RemoveStatus(status);
         }
 
 

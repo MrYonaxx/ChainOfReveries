@@ -47,12 +47,12 @@ namespace VoiceActing
                 if (target.tag == "Enemy")
                 {
                     cardControllerEnemy.gameObject.transform.parent.gameObject.SetActive(true);
-                    cardControllerEnemy.DrawCard(c, cardType);
+                    cardControllerEnemy.DrawCard(c, cardType, c.GetCardType());
                 }
                 else
                 {
                     cardController.gameObject.transform.parent.gameObject.SetActive(true);
-                    cardController.DrawCard(c, cardType);
+                    cardController.DrawCard(c, cardType, c.GetCardType());
                 }
 
             }

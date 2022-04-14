@@ -221,9 +221,9 @@ MonoBehaviour:
   AnimationClipDebug: {fileID: 7400000, guid: a0a0d72c91ea856498e4fd70c2a9b9a0, type: 2}
   frameData:
   - Frame: 0
-    AnimationEvent: {fileID: 4461643240352555985}
-  - Frame: 0
     AnimationEvent: {fileID: 4763086591558028447}
+  - Frame: 30
+    AnimationEvent: {fileID: 4461643240352555985}
   - Frame: 120
     AnimationEvent: {fileID: 8812296902967884034}
 --- !u!114 &4461643240352555985
@@ -238,7 +238,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de0fc71d353b8ef479aa0db3b846d0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 0
+  frame: 30
   frameEnd: 120
   attack: {fileID: 4733904636063077261}
 --- !u!114 &8812296902967884034

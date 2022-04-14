@@ -76,27 +76,31 @@ namespace Menu
         [SerializeField]
         int indexSoundShuffle = 4;
 
-        [Space]
+       /* [Space]
         [SerializeField]
         int indexShowSleightName = 5;
         [SerializeField]
         int indexShowComboCount = 6;
         [SerializeField]
-        int indexDeckThumbnail = 7;
+        int indexDeckThumbnail = 7;*/
 
         [Space]
         [SerializeField]
-        int indexShowCardValue = 8;
+        int indexShowCardValue = 5;
         [SerializeField]
-        int indexEquipmentTime = 9;
+        int indexEquipmentTime = 6;
 
         [Space]
         [SerializeField]
-        int indexConfig = 10;
+        int indexConfigHud = 7;
+        [SerializeField]
+        int indexConfigInput = 8;
 
 
         [SerializeField]
         MenuCursor menuCursor = null;
+        [SerializeField]
+        MenuOptionsHUD menuOptionsHUD = null;
         [SerializeField]
         MenuInputConfig menuInputConfig = null;
 
@@ -109,8 +113,9 @@ namespace Menu
         OptionData[] optionDatas;
 
         bool inConfig = false;
+        bool inConfigHud = false;
         Resolution[] resolutions;
-        private int[] indexOptions = { 0, 0, 10, 10, 0, 0, 0, 0, 1, 1};
+        private int[] indexOptions = { 0, 0, 10, 10, 0, 1, 1};
 
         #endregion
 
@@ -148,11 +153,13 @@ namespace Menu
                 LoadPlayerOptionData();
                 ApplyChange();
             }
+            menuOptionsHUD.OnEnd += BackToOptions;
             menuInputConfig.OnEnd += BackToOptions;
         }
 
         void OnDestroy()
         {
+            menuOptionsHUD.OnEnd -= BackToOptions;
             menuInputConfig.OnEnd -= BackToOptions;
         }
 
@@ -169,6 +176,7 @@ namespace Menu
 
         void BackToOptions()
         {
+            inConfigHud = false;
             inConfig = false;
         }
 
@@ -179,7 +187,11 @@ namespace Menu
                 menuInputConfig.UpdateControl(inputs);
                 return;
             }
-
+            if (inConfigHud)
+            {
+                menuOptionsHUD.UpdateControl(inputs);
+                return;
+            }
 
             if (listEntry.InputListVertical(inputs.InputLeftStickY.InputValue))
             {
@@ -192,9 +204,14 @@ namespace Menu
             }
             else if (inputs.InputA.Registered)
             {
-                if(listEntry.IndexSelection == indexConfig)
+                inputs.ResetAllBuffer();
+                if (listEntry.IndexSelection == indexConfigHud)
                 {
-                    inputs.ResetAllBuffer();
+                    menuOptionsHUD.InitializeMenu();
+                    inConfigHud = true;
+                }
+                else if (listEntry.IndexSelection == indexConfigInput)
+                {
                     menuInputConfig.InitializeMenu();
                     inConfig = true;
                 }
@@ -281,9 +298,9 @@ namespace Menu
             indexOptions[indexSound] = PlayerPrefs.GetInt("SoundVolume", 10);
             indexOptions[indexSoundShuffle] = PlayerPrefs.GetInt("SoundShuffle", 1);
 
-            indexOptions[indexShowSleightName] = PlayerPrefs.GetInt("SleightName", 1);
+           /* indexOptions[indexShowSleightName] = PlayerPrefs.GetInt("SleightName", 1);
             indexOptions[indexShowComboCount] = PlayerPrefs.GetInt("ComboCount", 1);
-            indexOptions[indexDeckThumbnail] = PlayerPrefs.GetInt("DeckThumbnail", 0);
+            indexOptions[indexDeckThumbnail] = PlayerPrefs.GetInt("DeckThumbnail", 0);*/
 
             // 0 = hide, 1 = Hide player only, 2 = Hide boss, 3 = show
             indexOptions[indexShowCardValue] = PlayerPrefs.GetInt("CardValue", 3);
@@ -303,9 +320,9 @@ namespace Menu
             PlayerPrefs.SetInt("SoundVolume", indexOptions[indexSound]);
             PlayerPrefs.SetInt("SoundShuffle", indexOptions[indexSoundShuffle]);
 
-            PlayerPrefs.SetInt("SleightName", indexOptions[indexShowSleightName]);
+           /* PlayerPrefs.SetInt("SleightName", indexOptions[indexShowSleightName]);
             PlayerPrefs.SetInt("ComboCount", indexOptions[indexShowComboCount]);
-            PlayerPrefs.SetInt("DeckThumbnail", indexOptions[indexDeckThumbnail]);
+            PlayerPrefs.SetInt("DeckThumbnail", indexOptions[indexDeckThumbnail]);*/
 
             PlayerPrefs.SetInt("CardValue", indexOptions[indexShowCardValue]);
             PlayerPrefs.SetInt("EquipmentTime", indexOptions[indexEquipmentTime]);

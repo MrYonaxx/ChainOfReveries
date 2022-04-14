@@ -75,6 +75,9 @@ namespace VoiceActing
         [SerializeField]
         string sceneWin = "";
 
+        [SerializeField]
+        AudioClip versusMusic = null;
+
         CharacterBase character1;
         CharacterBase character2;
 
@@ -105,7 +108,10 @@ namespace VoiceActing
         {
             SetupCharacter(dataP1.PlayerCharacterData, animatorPlayer1, ref character1, posPlayer1.position);
             SetupCharacter(dataP2.PlayerCharacterData, animatorPlayer2, ref character2, posPlayer2.position);
-            yield return new WaitForSeconds(1.5f);
+
+            yield return new WaitForSeconds(1f);
+            AudioManager.Instance.PlayMusic(versusMusic);
+            yield return new WaitForSeconds(0.5f);
 
             BattleFeedbackManager.Instance.CardBreakParticle(Vector3.zero);
             BattleFeedbackManager.Instance.RippleScreen(0,0);

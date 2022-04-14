@@ -196,9 +196,9 @@ namespace VoiceActing
             }
 
             // Draw the card
-            cardControllers[index].DrawCard(deck[cardID].GetCardIcon(), 
-                                            cardTypeDictionary.GetColorType(deck[cardID].GetCardType()),
-                                            deck[cardID].GetCardValue(), deck[cardID].CardPremium);
+            cardControllers[index].DrawCard(deck[cardID], cardTypeDictionary);
+            /*                                cardTypeDictionary.GetColorType(deck[cardID].GetCardType()),
+                                            deck[cardID].GetCardValue(), deck[cardID].CardPremium, deck[cardID].GetCardType());*/
 
             if (cardSpriteOffset.Length > index)
                 cardControllers[index].MoveCardSprite(cardSpriteOffset[index]);

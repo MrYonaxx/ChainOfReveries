@@ -17,6 +17,7 @@ MonoBehaviour:
     SerializedBytes: 
     ReferencedUnityObjects:
     - {fileID: -628959329838418786, guid: 734251cd418c42946b79b2586c648edb, type: 3}
+    - {fileID: 11400000, guid: 8b396af669f60da41b60c9f0322e0d0a, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -77,22 +78,10 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 4|VoiceActing.StatusEffectStat, Assembly-CSharp
-    - Name: StatModifier
-      Entry: 7
-      Data: 5|VoiceActing.StatModifier, Assembly-CSharp
-    - Name: charStat
-      Entry: 3
-      Data: 16
-    - Name: modifierType
-      Entry: 3
-      Data: 0
-    - Name: value
-      Entry: 4
+      Data: 4|VoiceActing.StatusEffectAddStatus, Assembly-CSharp
+    - Name: Status
+      Entry: 10
       Data: 1
-    - Name: 
-      Entry: 8
-      Data: 
     - Name: 
       Entry: 8
       Data: 

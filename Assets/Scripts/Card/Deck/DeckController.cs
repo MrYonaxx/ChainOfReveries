@@ -79,7 +79,7 @@ namespace VoiceActing
         }
 
         [ReadOnly]
-        public int currentIndex = 1;
+        public int currentIndex = 0;
         bool canPlayCard = true;
         bool inReload = false;
 

@@ -495,7 +495,7 @@ MonoBehaviour:
   healthBarAmount: 1500
   rVAmount: 25
   sizeHealthBar: 494
-  sizeRVGauge: {x: 300, y: 300}
+  sizeRVGauge: {x: 250, y: 250}
   animatorHealthLost: {fileID: 5064113697735056799}
   animatorRevengeValue: {fileID: 4637770938202094122}
 --- !u!114 &1266677212961406960
@@ -552,8 +552,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 480, y: 54}
-  m_SizeDelta: {x: 300, y: 24}
+  m_AnchoredPosition: {x: 550, y: 54}
+  m_SizeDelta: {x: 250, y: 24}
   m_Pivot: {x: 0, y: 0}
 --- !u!222 &1266677213100013577
 CanvasRenderer:

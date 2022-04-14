@@ -10,13 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5e6079dd8a46024986b2b65e7c5e737, type: 3}
-  m_Name: SuperStopStatusData
+  m_Name: StopPreventionStatusData
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: -628959329838418786, guid: 734251cd418c42946b79b2586c648edb, type: 3}
+    - {fileID: 11400000, guid: 181579e53d8e55f48adfc27db7dc1ba3, type: 2}
+    - {fileID: 11400000, guid: eeb8ba873e770aa43b32437476b454d4, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -31,19 +32,7 @@ MonoBehaviour:
       Data: 1
     - Name: 
       Entry: 7
-      Data: 1|VoiceActing.StatusEffectUpdateTime, Assembly-CSharp
-    - Name: timeData
-      Entry: 7
-      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
-    - Name: 
-      Entry: 3
-      Data: 8
-    - Name: 
-      Entry: 3
-      Data: 8
-    - Name: 
-      Entry: 8
-      Data: 
+      Data: 1|VoiceActing.StatusEffectUpdateOnIdle, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -59,37 +48,35 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 1
     - Name: 
       Entry: 7
-      Data: 3|VoiceActing.StatusEffectStop, Assembly-CSharp
-    - Name: timeStop
+      Data: 3|VoiceActing.StatusEffectKnockbackComponent, Assembly-CSharp
+    - Name: knockbackCondition
+      Entry: 7
+      Data: 4|VoiceActing.KnockbackConditionPreventStatus, Assembly-CSharp
+    - Name: priority
       Entry: 4
-      Data: 7
-    - Name: timeDamage
-      Entry: 4
-      Data: 1
-    - Name: stunAnimation
+      Data: 0
+    - Name: statusEffects
+      Entry: 7
+      Data: 5|System.Collections.Generic.List`1[[VoiceActing.StatusEffectData, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
       Entry: 10
       Data: 0
     - Name: 
-      Entry: 8
+      Entry: 10
+      Data: 1
+    - Name: 
+      Entry: 13
       Data: 
     - Name: 
-      Entry: 7
-      Data: 4|VoiceActing.StatusEffectStat, Assembly-CSharp
-    - Name: StatModifier
-      Entry: 7
-      Data: 5|VoiceActing.StatModifier, Assembly-CSharp
-    - Name: charStat
-      Entry: 3
-      Data: 16
-    - Name: modifierType
-      Entry: 3
-      Data: 0
-    - Name: value
-      Entry: 4
-      Data: 1
+      Entry: 8
+      Data: 
     - Name: 
       Entry: 8
       Data: 
@@ -103,8 +90,8 @@ MonoBehaviour:
       Entry: 8
       Data: 
   statusIconSprite: {fileID: 0}
-  statusName: Super stop
-  statusDescription: 
+  statusName: 
+  statusDescription: 1 stun par combo
   hideStatus: 1
   statusShowLabel: 0
   statusConditionLabel: 

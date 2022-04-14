@@ -492,6 +492,7 @@ MonoBehaviour:
   rectTransform: {fileID: 644463203419093693}
   cardSprite: {fileID: 644463202287320006}
   cardOutlineBackground: {fileID: 0}
+  cardBackground: {fileID: 644463203020426787}
   cardOutline: {fileID: 644463203419093694}
   animator: {fileID: 5735260948554235763}
   textCardValue: {fileID: 644463203121633506}

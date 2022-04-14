@@ -3,8 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using System.IO;
 
-
-
+// Settings qui n'utilise pas le player Pref
+public static class GameSettings
+{
+    public static int DeckLayout = 0;
+    public static Color BackgroundAttackCard = Color.white;
+    public static Color BackgroundMagicCard = Color.white;
+}
 
 // Tout ce qu'on doit sauvegarder est là dedans
 [CreateAssetMenu(fileName = "GameData", menuName = "GameSystem/GameData", order = 1)]
@@ -49,6 +54,15 @@ public class GameData : ScriptableObject
     VoiceActing.InputConfig P2InputConfig;
 
 
+    [Header("Game Settings")]
+    [SerializeField]
+    int deckLayout = 0;
+    [SerializeField]
+    Color backgroundAttackCard = Color.white;
+    [SerializeField]
+    Color backgroundMagicCard = Color.white;
+
+
     string saveFileName = "save";
 
     public int GetControllerID(int playerID)
@@ -88,6 +102,12 @@ public class GameData : ScriptableObject
     {
         AddTimer(); // (j'ajoute le temps pour la save puis je l'enlève une fois enregistré pour ne pas qu'on augmente le timer à chaque fois qu'on sauvegarde)
 
+        // Save les GameSettings
+        deckLayout = GameSettings.DeckLayout;
+        backgroundAttackCard = GameSettings.BackgroundAttackCard;
+        backgroundMagicCard = GameSettings.BackgroundMagicCard;
+
+
         string json = JsonUtility.ToJson(this);
         string filePath = string.Format("{0}/saves/{1}{2}.json", Application.persistentDataPath, saveFileName, 0);
         Debug.Log("SAVE : " + filePath);
@@ -110,6 +130,12 @@ public class GameData : ScriptableObject
         {
             string dataAsJson = File.ReadAllText(filePath);
             JsonUtility.FromJsonOverwrite(dataAsJson, this);
+
+            // Load les game settings
+            GameSettings.DeckLayout = deckLayout;
+            GameSettings.BackgroundAttackCard = backgroundAttackCard;
+            GameSettings.BackgroundMagicCard = backgroundMagicCard;
+
             return true;
         }
         return false;

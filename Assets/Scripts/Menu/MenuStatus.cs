@@ -69,6 +69,7 @@ namespace Menu
             sleightDrawer.OnEnd += QuitMenu;
 
             menuOptions.OnEnd += QuitMenu;
+            //MenuOptionsHUD
             menuInput.OnStart += InputDesactivate;
             menuInput.OnEnd += InputActivate;
         }

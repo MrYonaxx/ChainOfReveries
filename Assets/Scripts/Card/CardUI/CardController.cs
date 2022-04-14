@@ -28,7 +28,8 @@ namespace VoiceActing
         protected Image cardSprite = null;
         [SerializeField]
         protected Image cardOutlineBackground = null;
-
+        [SerializeField]
+        protected Image cardBackground = null;
         [SerializeField]
         protected Image cardOutline = null;
         [SerializeField]
@@ -64,15 +65,26 @@ namespace VoiceActing
          *                FUNCTIONS                 *
         \* ======================================== */
 
-        public void DrawCard(Card card, CardType cardTypeDictionary)
+        public void DrawCard(Card card, CardType cardTypeDictionary, int type = -1)
         {
-            DrawCard(card.GetCardIcon(), cardTypeDictionary.GetColorType(card.GetCardType()), card.GetCardValue(), card.CardPremium);
+            DrawCard(card.GetCardIcon(), cardTypeDictionary.GetColorType(card.GetCardType()), card.GetCardValue(), card.CardPremium, type);
 
-            if(animator != null && animator.isActiveAndEnabled)
+            if (animator != null && animator.isActiveAndEnabled)
                 animator.SetTrigger("Appear");
+
+            // dégueulasse mais bon faut finir
+            if (cardTypeDictionary.CardTypeName[card.GetCardType()] == "Attack")
+            {
+                cardBackground.color = GameSettings.BackgroundAttackCard;
+            }
+            else if (cardTypeDictionary.CardTypeName[card.GetCardType()] == "Magic")
+            {
+                    cardBackground.color = GameSettings.BackgroundMagicCard;
+            }
+
         }
 
-        public void DrawCard(Sprite card, Color colorOutline, int value = -1, bool premium = false)
+        public void DrawCard(Sprite card, Color colorOutline, int value = -1, bool premium = false, int type = -1)
         {
             gameObject.SetActive(true);
 
@@ -91,6 +103,12 @@ namespace VoiceActing
                 cardValueOutline.gameObject.SetActive(true);
                 textCardValue.text = value.ToString();
                 cardValueOutline.color = colorOutline;
+
+                /*if(type == 0)
+                    cardBackground.color = GameSettings.BackgroundAttackCard;
+                else if(type == 1)
+                    cardBackground.color = GameSettings.BackgroundMagicCard;*/
+
             }
             else
             {
@@ -102,6 +120,7 @@ namespace VoiceActing
                 textCardValue.color = Color.yellow;
             else
                 textCardValue.color = Color.white;
+
         }
 
         public void DrawCardValue(int value = -1)

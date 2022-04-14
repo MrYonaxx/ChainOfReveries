@@ -43,11 +43,12 @@ namespace VoiceActing
         [SerializeField]
         SleightDrawer playerSleightDrawer = null;
         [SerializeField]
-        DeckBattleDrawer playerDeckDrawer = null;
-        [SerializeField]
         EquipmentDrawer playerEquipmentDrawer = null;
         [SerializeField]
         StatusDrawer playerStatusDrawer = null;
+        [SerializeField]
+        DeckBattleDrawer[] playerDeckDrawers = null;
+
 
         [Title("UI - Enemies")]
         [SerializeField]
@@ -55,11 +56,16 @@ namespace VoiceActing
         [SerializeField]
         SleightDrawer enemySleightDrawer = null;
         [SerializeField]
-        DeckBattleDrawer enemyDeckDrawer = null;
-        [SerializeField]
         EquipmentDrawer enemyEquipmentDrawer = null;
         [SerializeField]
         StatusDrawer enemyStatusDrawer = null;
+        [SerializeField]
+        DeckBattleDrawer[] enemyDeckDrawers = null;
+
+
+
+        DeckBattleDrawer playerDeckDrawer = null;
+        DeckBattleDrawer enemyDeckDrawer = null;
 
 
 
@@ -88,8 +94,20 @@ namespace VoiceActing
          *                FUNCTIONS                 *
         \* ======================================== */
 
+        private void InitializeDeckDrawer()
+        {
+            playerDeckDrawer = playerDeckDrawers[GameSettings.DeckLayout];
+            enemyDeckDrawer = enemyDeckDrawers[GameSettings.DeckLayout];
+
+            playerDeckDrawer.gameObject.SetActive(true);
+            enemyDeckDrawer.gameObject.SetActive(true);
+        }
+
+
         public void InitializeBattle(CharacterBase character, AIController[] enemies)
         {
+            InitializeDeckDrawer();
+
             // Initialize Player
             player = character;
             player.DeckController.SetDeck(runData.PlayerDeck);
@@ -282,6 +300,9 @@ namespace VoiceActing
             yield return new WaitForSeconds(4);
 
             canvasBattle.SetActive(false);
+            playerDeckDrawer.gameObject.SetActive(false);
+            enemyDeckDrawer.gameObject.SetActive(false);
+
             OnEventBattleEnd.Invoke();
             player.CanPlay(true);
             SetTarget(null);
@@ -313,6 +334,9 @@ namespace VoiceActing
             player.LockController.Targeting = true;
             yield return new WaitForSeconds(1);
             canvasBattle.SetActive(false);
+            playerDeckDrawer.gameObject.SetActive(false);
+            enemyDeckDrawer.gameObject.SetActive(false);
+
             OnEventBattleEnd?.Invoke();
             player.CanPlay(true);
 
@@ -321,6 +345,9 @@ namespace VoiceActing
         public void ShowBattleHud()
         {
             canvasBattle.SetActive(true);
+            playerDeckDrawer.gameObject.SetActive(true);
+            enemyDeckDrawer.gameObject.SetActive(true);
+
             GetComponentInChildren<CardBreakDrawer>().DisableCards(); // aïe j'ai si mal, je souffre
             enemyEquipmentDrawer.Hide();
             enemyStatusDrawer.DrawStatus(new List<Status>());

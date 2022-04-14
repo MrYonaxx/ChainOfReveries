@@ -29,8 +29,8 @@ namespace VoiceActing
             character.CharacterAction.RemoveCards();
             character.CharacterAction.CancelAction();
 
-            character.CharacterMovement.ApplyGravity(999);
             character.CharacterMovement.SetSpeed(0, 0);
+            character.CharacterMovement.ApplyGravity(999);
             character.CharacterMovement.InMovement = false;
         }
 

@@ -166,6 +166,10 @@ namespace VoiceActing
             this.player = player;
             inputController = inputs;
             menuStatus.OnEnd += QuitMenuStatus;
+        }
+
+        void Start()
+        {
             AudioManager.Instance.PlayMusic(music);
         }
 

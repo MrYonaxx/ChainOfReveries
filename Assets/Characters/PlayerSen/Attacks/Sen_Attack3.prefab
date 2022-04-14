@@ -176,7 +176,7 @@ MonoBehaviour:
     AnimationEvent: {fileID: 7460283158274403025}
   - Frame: 30
     AnimationEvent: {fileID: 3996707106909900119}
-  - Frame: 65
+  - Frame: 70
     AnimationEvent: {fileID: 2524242894598313049}
 --- !u!114 &4461643240352555985
 MonoBehaviour:
@@ -205,7 +205,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620e0e815b2f5174f8b380210d9a19f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 65
+  frame: 70
   frameEnd: 0
 --- !u!114 &7284589822210834423
 MonoBehaviour:
@@ -396,7 +396,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -9058677587179088944, guid: 12b988945999e36439840ef519a7c88d,
+  m_Sprite: {fileID: 4983092548810462725, guid: 8e245e2580c97a8438b63264269fa2d2,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -38,11 +38,11 @@ namespace VoiceActing
         [SerializeField]
         SleightDrawer playerSleightDrawer = null;
         [SerializeField]
-        DeckBattleDrawer playerDeckDrawer = null;
-        [SerializeField]
         EquipmentDrawer playerEquipmentDrawer = null;
         [SerializeField]
         StatusDrawer playerStatusDrawer = null;
+        [SerializeField]
+        DeckBattleDrawer[] playerDeckDrawers = null;
 
         [Title("UI - Enemy")]
         [SerializeField]
@@ -50,11 +50,15 @@ namespace VoiceActing
         [SerializeField]
         SleightDrawer enemySleightDrawer = null;
         [SerializeField]
-        DeckBattleDrawer enemyDeckDrawer = null;
-        [SerializeField]
         EquipmentDrawer enemyEquipmentDrawer = null;
         [SerializeField]
         StatusDrawer enemyStatusDrawer = null;
+        [SerializeField]
+        DeckBattleDrawer[] enemyDeckDrawers = null;
+
+
+        DeckBattleDrawer playerDeckDrawer = null;
+        DeckBattleDrawer enemyDeckDrawer = null;
 
 
         CharacterBase player = null;
@@ -81,9 +85,19 @@ namespace VoiceActing
         /* ======================================== *\
          *                FUNCTIONS                 *
         \* ======================================== */
+        private void InitializeDeckDrawer()
+        {
+            playerDeckDrawer = playerDeckDrawers[GameSettings.DeckLayout];
+            enemyDeckDrawer = enemyDeckDrawers[GameSettings.DeckLayout];
+
+            playerDeckDrawer.gameObject.SetActive(true);
+            enemyDeckDrawer.gameObject.SetActive(true);
+        }
 
         public void InitializeBattle(CharacterBase p1, CharacterBase p2)
         {
+            InitializeDeckDrawer();
+
             // Initialize Player 1 ==============================================================================
             player = p1;
             player.DeckController.SetDeck(dataP1.PlayerDeck);
