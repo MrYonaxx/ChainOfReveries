@@ -15,8 +15,8 @@ MonoBehaviour:
   characterFace: {fileID: 0}
   characterName: Nelys
   characterDescription: 'Nelys excels in magic, but struggle with her physical attack.
-    But fortunately, if she use Attack Card after a Magic Card, she can execute new
-    powerful moves.
+    But fortunately, if she uses Attack Card after a Magic Card, she can execute
+    new powerful moves.
 
 
     Her deadly Zantetsu Attack can make the opponent afraid
@@ -89,7 +89,8 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 66624e505f9cd5944b6eb9cf8716cab9, type: 2}
   - {fileID: 11400000, guid: d6ba9b70883a3a6459d642babb456aaf, type: 2}
   initialEquipment: []
-  loreDescription: 
+  loreDescription: Nelys objective is to destroy the Reverie created by Oneiros.
+    She only fights for her friends and will follow them no matter their decisions.
   cardProbability:
   - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 600
@@ -106,4 +107,4 @@ MonoBehaviour:
   - cardData: {fileID: 11400000, guid: f10306851a5ccc04ba9813bddd022f14, type: 2}
     baseCardValue: 200
   maxProbability: 1900
-  spriteProfile: {fileID: 21300000, guid: 37794c2051cf4e4459c2d5cc1e0ad339, type: 3}
+  spriteProfile: {fileID: 21300000, guid: 58b3e8a1d06e004408a11b3125e63ba1, type: 3}

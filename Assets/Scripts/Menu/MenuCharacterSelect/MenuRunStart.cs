@@ -54,7 +54,8 @@ namespace Menu
         Animator animatorTransition = null;
         [SerializeField]
         Animator animatorFirstRun = null;
-
+        [SerializeField]
+        SoundParameter soundStartRun = null;
 
         bool active = true;
 
@@ -105,9 +106,9 @@ namespace Menu
                 animatorMenu.gameObject.SetActive(false);
                 StartRun();
             }
-            else if (input.InputB.Registered)
+            else if (input.InputB.Registered || (GameSettings.Keyboard && input.InputY.Registered))
             {
-                input.InputB.ResetBuffer();
+                input.ResetAllBuffer();
                 QuitMenu();
                 ShowMenu(false);
             }
@@ -169,6 +170,8 @@ namespace Menu
         }
         private IEnumerator RunStartCoroutine()
         {
+            soundStartRun.PlaySound();
+            AudioManager.Instance.StopMusic(2f);
             animatorTransition.enabled = true;
             animatorCharacterSelect.SetTrigger("Disappear");
             yield return new WaitForSeconds(1f);

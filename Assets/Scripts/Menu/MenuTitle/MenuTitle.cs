@@ -73,6 +73,8 @@ namespace Menu
         SoundParameter soundSelect;
         [SerializeField]
         SoundParameter soundValidate;
+        [SerializeField]
+        AudioClip music;
 
         bool firstTimePopup = false;
         InputController currentInput = null;
@@ -93,11 +95,12 @@ namespace Menu
             deckBattleDrawer.SetCardControllers(cards);
             deckBattleDrawer.DrawHand(cardSprites.Count / 2, cardSprites);
             deckBattleDrawer.HideCards();
-
+            
             listEntry.SetItemCount(cardSprites.Count);
             listEntry.SelectIndex(cardSprites.Count / 2);
 
             StartCoroutine(ReloadCoroutine());
+            AudioManager.Instance.PlayMusic(music);
         }
 
         // Events
@@ -109,6 +112,8 @@ namespace Menu
             menuOptions.OnEnd += BackToMenu;
             menuCredits.OnEnd += BackToMenu;
             menuCompendium.OnEnd += BackToMenu;
+
+            currentInput = inputController[0];
         }
 
         void OnDestroy()
@@ -130,23 +135,43 @@ namespace Menu
 
         public void UpdateControl(InputController inputs)
         {
-            if (inputs.InputLeftStickY.InputValue != 0)
+            if (inputs.InputLeftStickY.InputValue != 0 || inputs.InputA.Registered || inputs.InputRB.Registered || inputs.InputLB.Registered)
+            {
                 currentInput = inputs;
+
+                if (currentInput == inputController[1]) // Le 1 c'est keyboard, c'est comme ça, il en est ainsi (Je compte sur mon moi du futur pour me punir)
+                    GameSettings.Keyboard = true;
+                else
+                    GameSettings.Keyboard = false;
+            }
 
             if (inputs != currentInput)
                 return;
 
             if (listEntry.InputListVertical(inputs.InputLeftStickY.InputValue))
             {
-                soundSelect.PlaySound();
-                deckBattleDrawer.MoveHand(listEntry.IndexSelection, cardSprites);
-                animatorOptionsName.SetTrigger("Feedback");
+                SelectEntry();
             }
+            /*else if (GameSettings.Keyboard && listEntry.InputListVertical(-inputs.InputRB.InputValue))
+            {
+                SelectEntry();
+            }
+            else if (GameSettings.Keyboard && listEntry.InputListVertical(inputs.InputLB.InputValue))
+            {
+                SelectEntry();
+            }*/
             else if (inputs.InputA.Registered)
             {
                 inputs.ResetAllBuffer();
                 SelectMenu(inputs);
             }
+        }
+
+        private void SelectEntry()
+        {
+            soundSelect.PlaySound();
+            deckBattleDrawer.MoveHand(listEntry.IndexSelection, cardSprites);
+            animatorOptionsName.SetTrigger("Feedback");
         }
 
         private void SelectMenu(InputController input)
@@ -225,6 +250,7 @@ namespace Menu
 
         private IEnumerator ChangeSceneCoroutine()
         {
+            AudioManager.Instance.StopMusic(1f);
             fade.gameObject.SetActive(true);
             yield return new WaitForSeconds(1f);
 
@@ -288,9 +314,16 @@ namespace Menu
                 // Shenanigan pour choper quel controller a appuyé
                 for (int i = 0; i < inputController.Length; i++)
                 {
-                    if(inputController[i].InputA.InputValue == 0)
+                    if (inputController[i].InputA.InputValue == 0)
+                    {
                         gameData.SetControllerID(1, i);
+                        if (inputController[i] != inputController[1])
+                            GameSettings.Keyboard = true;
+                        else
+                            GameSettings.Keyboard = false;
+                    }
                 }
+
                 listEntry.SelectIndex(4);
                 GoToScene();
             }

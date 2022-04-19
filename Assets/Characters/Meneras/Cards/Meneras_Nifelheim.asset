@@ -33,9 +33,11 @@ MonoBehaviour:
   cardSprite: {fileID: 0}
   cardName: Nifelheim
   cardType: 1
-  cardDescription: Step back and shoot multiple icicle in front of you.
+  cardDescription: 
   attackManager: {fileID: 818057835518184039, guid: 29f75c58f62ba244aaef742d4cb6ae66,
     type: 3}
+  colorOutline: {r: 0, g: 0, b: 0, a: 0}
+  colorCardBackground: {r: 0, g: 0, b: 0, a: 0}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   maxProbability: 0

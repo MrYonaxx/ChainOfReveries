@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc0d50e517eba5d4dba18568d80634f5, type: 3}
   m_Name: SleightNelys_Blizzaga
   m_EditorClassIdentifier: 
-  sleightName: Blizzaga
+  sleightName: Blizzard EX
   sleightDescription: A strong but very slow projectile that deals heavy ice damage.
   sleightValue: {x: 0, y: 27}
   sleightRecipe:

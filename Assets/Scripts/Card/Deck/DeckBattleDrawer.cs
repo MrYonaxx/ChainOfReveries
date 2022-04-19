@@ -50,7 +50,9 @@ namespace VoiceActing
         int cardSpeed = 10;
         [SerializeField]
         int transformCenterIndex = 2;
-
+        [SerializeField]
+        int offsethandLimit = 0; // Quand on a moins de carte que de slot dans le deck, on utilise l'offset pour déterminer où est le centre de la main
+                                // C'est surtout une manip pour toujours afficher le plus de cartes à l'écran quand on a une petite main
 
         [Title("Card Count")]
         [SerializeField]
@@ -143,7 +145,7 @@ namespace VoiceActing
                 {
                     sizeLeft = transformCenterIndex - handLimitMin;
                     sizeRight = handLimitMax - transformCenterIndex;
-                    if (sizeRight > sizeLeft)
+                    if (sizeRight > sizeLeft+ offsethandLimit)
                     {
                         cardControllers[handLimitMax - 1].HideCard();
                         handLimitMax -= 1;
@@ -299,7 +301,7 @@ namespace VoiceActing
 
                 int sizeLeft = transformCenterIndex - handLimitMin;
                 int sizeRight = handLimitMax - transformCenterIndex;
-                if (sizeRight > sizeLeft)
+                if (sizeRight > sizeLeft + offsethandLimit)
                 {
                     cardControllers[handLimitMax - 1] = cardTemp;
                     cardControllers[handLimitMax - 1].HideCard();

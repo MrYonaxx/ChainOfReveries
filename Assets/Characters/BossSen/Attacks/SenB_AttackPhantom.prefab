@@ -128,6 +128,8 @@ MonoBehaviour:
   frameData:
   - Frame: 0
     AnimationEvent: {fileID: 714956832288177373}
+  - Frame: 0
+    AnimationEvent: {fileID: 5357897315890453004}
   - Frame: 10
     AnimationEvent: {fileID: 2940309235130492517}
   - Frame: 15
@@ -241,6 +243,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2382314248993634054}
   - component: {fileID: 5154535888004631386}
+  - component: {fileID: 5357897315890453004}
   m_Layer: 0
   m_Name: Sound
   m_TagString: Untagged
@@ -279,6 +282,24 @@ MonoBehaviour:
   sound:
     sound: {fileID: 8300000, guid: 8a9fe1435d756474d907204eb345a6ae, type: 3}
     volume: 0.7
+    pitch: {x: 1, y: 1}
+--- !u!114 &5357897315890453004
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4184098136239429050}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 0
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 231a3b399b17f6841b069a242bf8dcd2, type: 3}
+    volume: 0.8
     pitch: {x: 1, y: 1}
 --- !u!1 &4388082830208477171
 GameObject:

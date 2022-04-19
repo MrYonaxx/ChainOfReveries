@@ -14,12 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterFace: {fileID: 21300000, guid: acd5e7aca1cb3994fa06dc276da38671, type: 3}
   characterName: Sen
-  characterDescription: 'Sen use fast attack to pressure his opponents. Some of his
-    attacks have the [Phantom] property, making it impossible to card break him.
-
-
-    Rather
-    than challenging those moves, try to focus on dodging. '
+  characterDescription: Sen is a fast character who prefers to take the initiative
+    and strike before a Card Break. His [Phantom] attacks can trick the opponent
+    and result in a Counter.
   characterStat:
     hp: 4499
     HPMax:
@@ -112,15 +109,9 @@ MonoBehaviour:
     probability: 100
   - cardEquipment: {fileID: 11400000, guid: 9a364f419e43abf4ba509d89d7cb8e74, type: 2}
     probability: 100
-  loreDescription: Sen was a normal boy from a small town in Mynsa. When Lia was
-    on Oneiros side, she used him to interact directly with the real world. By doing
-    so, Lia has shared a part of her powers with Sen, giving him the ability to break
-    free from the Reverie.
-  initialDeckExploration:
-  - {fileID: 11400000, guid: d15e3b90d2a853d48b4e6968f7d7f5a9, type: 2}
-  - {fileID: 11400000, guid: 44d7b7e69c371684a8bcda8858987fd1, type: 2}
-  - {fileID: 11400000, guid: 428372b4353492a4992435ff672dd230, type: 2}
-  - {fileID: 11400000, guid: ef8e00c5c175d844daebe5dcf2d8b07f, type: 2}
+  loreDescription: "Sen's objective is to destroy the Reverie. Once done, he intends
+    to meet Lennya the dreamer, hoping she will remove the concept of Chim\xE8re,
+    and release once and for all his Reality."
   cardProbability:
   - cardData: {fileID: 11400000, guid: 2e9796802cc52d74e9d955381b7a3b16, type: 2}
     baseCardValue: 600
@@ -139,4 +130,4 @@ MonoBehaviour:
   - cardData: {fileID: 11400000, guid: fe98327cbffa1e647988c16b690275c5, type: 2}
     baseCardValue: 100
   maxProbability: 1500
-  spriteProfile: {fileID: 21300000, guid: ec33210eadf396440879cbe812cd46aa, type: 3}
+  spriteProfile: {fileID: 21300000, guid: 7bfdc955c586cc546a685df24f3b123d, type: 3}

@@ -57,7 +57,7 @@ MonoBehaviour:
       Data: 4|VoiceActing.KnockbackConditionPreventStatus, Assembly-CSharp
     - Name: priority
       Entry: 4
-      Data: 0
+      Data: 999
     - Name: statusEffects
       Entry: 7
       Data: 5|System.Collections.Generic.List`1[[VoiceActing.StatusEffectData, Assembly-CSharp]],

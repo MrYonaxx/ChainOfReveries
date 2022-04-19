@@ -67,7 +67,7 @@ MonoBehaviour:
   frameData:
   - Frame: 0
     AnimationEvent: {fileID: 1819224815477536598}
-  - Frame: 20
+  - Frame: 25
     AnimationEvent: {fileID: 4461643240352555985}
   - Frame: 80
     AnimationEvent: {fileID: 1265136724085775894}
@@ -83,8 +83,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de0fc71d353b8ef479aa0db3b846d0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 20
-  frameEnd: 60
+  frame: 25
+  frameEnd: 35
   attack: {fileID: 4733904636063077261}
 --- !u!114 &1265136724085775894
 MonoBehaviour:
@@ -169,7 +169,7 @@ MonoBehaviour:
   knockbackDurationMultiplier: 0
   knockbackX: 0
   knockbackZ: 0
-  knockbackInvulnerability: 0.1
+  knockbackInvulnerability: 1
   revengeValue: 1
 --- !u!1 &4388082830208477171
 GameObject:

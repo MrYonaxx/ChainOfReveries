@@ -85,5 +85,5 @@ MonoBehaviour:
     baseCardValue: 1
   sleightDatabase: []
   initialEquipment: []
-  loreDescription: Dragons are hostile creature living around the city of Mynsa.
-    Fortunately, the forces of Mynsa manage to drive off their attacks.
+  loreDescription: Dragons are hostile creatures living around the city of Mynsa.
+    Fortunately, the forces of Mynsa can manage to drive off their attacks.

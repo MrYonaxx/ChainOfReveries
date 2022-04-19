@@ -14,9 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterFace: {fileID: 0}
   characterName: Nelys
-  characterDescription: "She has high proficiency in fire magic, and her ability
-    Zantetsu can destroy and banish a card for the rest of the fight.\n\nTry to observe
-    her deck to know when she wants to use Zantetsu.\n "
+  characterDescription: 'She has a high proficiency in fire magic, and her ability
+    Zantetsu can destroy and banish a card for the rest of the fight.
+
+
+    Try to
+    observe her deck to know when she wants to use Zantetsu.'
   characterStat:
     hp: 9999
     HPMax:
@@ -151,5 +154,5 @@ MonoBehaviour:
     probability: 100
   loreDescription: "Ether is a particle linking the Fantasy and the Reality. Ether
     is monitored by the Ether's Chim\xE8re, Nelys. \n\nWhile Ether transfer thought
-    and imagination to the Reality, it also allow people to use a tiny bit of what
+    and imagination to the Reality, it also allows people to use a tiny bit of what
     we call \"Magic\". The same Magic used by the Chim\xE8re."

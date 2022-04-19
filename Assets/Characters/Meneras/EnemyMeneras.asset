@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterFace: {fileID: 0}
   characterName: Meneras
-  characterDescription: "Meneras is really agressive and possess high value card.
-    \n\nHis weakness is that he has no zero card, so use a Sleight to start your
-    combo."
+  characterDescription: "Meneras is really aggressive and possess high value card.
+    \n\nHis weakness is that he has no zero card, so he will struggle against your
+    Sleights."
   characterStat:
     hp: 4499
     HPMax:
@@ -104,10 +104,10 @@ MonoBehaviour:
   initialEquipment:
   - cardEquipment: {fileID: 11400000, guid: d731e8a71fa4ab047a519b271dec6a5f, type: 2}
     probability: 100
-  loreDescription: 'A deserter from Denil. He die not long after meeting Nelys, by
-    trying to protect her. Nelys then decides to abandon her human body to save Meneras.
+  loreDescription: 'A deserter from Denil. He dies not long after meeting Nelys,
+    by trying to protect her. Nelys then decides to abandon her human body to save
+    Meneras.
 
 
-    The
-    consciousness of Meneras now live inside Nelys, and only one person in the Reality
-    still remember his existence.'
+    The consciousness of Meneras now lives inside Nelys, and only
+    one person in the Reality still remembers his existence.'

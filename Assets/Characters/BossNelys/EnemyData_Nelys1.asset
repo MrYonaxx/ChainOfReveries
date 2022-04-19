@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterFace: {fileID: 0}
   characterName: Nelys
-  characterDescription: "She has high proficiency in fire magic, and her ability
+  characterDescription: "She has a high proficiency in fire magic, and her ability
     Zantetsu can destroy and banish a card for the rest of the fight.\n\nTry to observe
     her deck to know when she wants to use Zantetsu.\n "
   characterStat:
@@ -109,7 +109,7 @@ MonoBehaviour:
   sleightDatabase:
   - {fileID: 11400000, guid: 1f263cf9ac3b65a42880c47832287f3b, type: 2}
   initialEquipment: []
-  loreDescription: "Friend of Yonax and L\xE9mina, she abandon them to became the
+  loreDescription: "Friend of Yonax and L\xE9mina, she abandons them to become the
     Ether's Chim\xE8re, in order to save her loved one.\n\nBut because of her selfishness,
-    she feels remorses to her previous friend. That's why she still try to helps
+    she feels remorses to her previous friend. That's why she still tries to help
     them, even if the only way of interacting with them, is with the Reverie."

@@ -46,7 +46,7 @@ namespace Menu
 
         public override void UpdateControl(InputController inputs)
         {
-            if (inputs.InputB.Registered)
+            if (inputs.InputB.Registered || (GameSettings.Keyboard && inputs.InputY.Registered))
             {
                 inputs.ResetAllBuffer();
                 QuitMenu();

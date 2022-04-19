@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SleightValenn_Clone
   m_EditorClassIdentifier: 
   sleightName: After image
-  sleightDescription: Create a clone that shoot arrow in a horizontal line.
+  sleightDescription: Create a clone that shoots arrows in a horizontal line.
   sleightValue: {x: 16, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: 8d559b276eb5fee4b86a47ce2a8f6e18, type: 2}

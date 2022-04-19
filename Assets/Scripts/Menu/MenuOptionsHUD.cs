@@ -64,8 +64,18 @@ namespace Menu
 
         [SerializeField]
         GameObject menuOptions = null;
+
+        [Title("Color")]
         [SerializeField]
         GameObject menuColor = null;
+        [SerializeField]
+        CardController card = null;
+        [SerializeField]
+        CardType cardType = null;
+        [SerializeField]
+        CardData attackCard = null;
+        [SerializeField]
+        CardData magicCard = null;
 
         [SerializeField]
         MenuCursor menuCursor = null;
@@ -152,7 +162,7 @@ namespace Menu
             }
             if (id == indexDeckThumbnail)
             {
-                menuSleightName.gameObject.SetActive(indexOptions[id] > 0 ? true : false);
+                menuDeckThumbnail.gameObject.SetActive(indexOptions[id] > 0 ? true : false);
             }
         }
 
@@ -299,10 +309,12 @@ namespace Menu
             }
             else if (inputs.InputRB.Registered)
             {
+                inputs.ResetAllBuffer();
                 ChangeColor(listColor.IndexSelection, 10, true);
             }
             else if (inputs.InputLB.Registered)
             {
+                inputs.ResetAllBuffer();
                 ChangeColor(listColor.IndexSelection, 10, false);
             }
             else if (inputs.InputB.Registered)
@@ -329,6 +341,17 @@ namespace Menu
             colorCustomize.g = optionsColor[1].SliderOption.value / 255f;
             colorCustomize.b = optionsColor[2].SliderOption.value / 255f;
             colorCustomize.a = 1;
+
+            if (listEntry.IndexSelection == indexColorAttackCard)
+            {
+                GameSettings.BackgroundAttackCard = colorCustomize;
+                card.DrawCard(new Card(attackCard, 0), cardType);
+            }
+            else if (listEntry.IndexSelection == indexColorMagicCard)
+            {
+                GameSettings.BackgroundMagicCard = colorCustomize;
+                card.DrawCard(new Card(magicCard, 0), cardType);
+            }
         }
 
         public void SaveColor()
@@ -345,6 +368,7 @@ namespace Menu
             menuColor.gameObject.SetActive(false);
             menuCursor.transform.SetParent(menuOptions.transform);
             SelectEntry(listEntry.IndexSelection);
+
         }
 
         public void LoadColor()
@@ -353,10 +377,12 @@ namespace Menu
             if (listEntry.IndexSelection == indexColorAttackCard)
             {
                 colorCustomize = GameSettings.BackgroundAttackCard;
+                card.DrawCard(new Card(attackCard, 0), cardType);
             }
             if (listEntry.IndexSelection == indexColorMagicCard)
             {
                 colorCustomize = GameSettings.BackgroundMagicCard;
+                card.DrawCard(new Card(magicCard, 0), cardType);
             }
 
             optionsColor[0].SliderOption.value = colorCustomize.r * 255;

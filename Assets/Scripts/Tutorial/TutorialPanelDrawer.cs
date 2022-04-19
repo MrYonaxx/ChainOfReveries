@@ -12,6 +12,8 @@ namespace VoiceActing
 		GameData gameData = null;
 		[SerializeField]
 		SpriteDictionary buttonSpriteDictionary = null;
+		[SerializeField]
+		SpriteDictionary keyboardSpriteDictionary = null;
 
 		[SerializeField]
 		Image inputButton = null;
@@ -32,7 +34,11 @@ namespace VoiceActing
             {
 				InputConfig config = gameData.GetInputConfig(0);
 				int id = config.GetInput((InputEnum)input);
-				inputButton.sprite = buttonSpriteDictionary.GetSprite(id);
+
+				if (GameSettings.Keyboard)
+					inputButton.sprite = keyboardSpriteDictionary.GetSprite(id);
+				else
+					inputButton.sprite = buttonSpriteDictionary.GetSprite(id);
 			}
 		
 		}

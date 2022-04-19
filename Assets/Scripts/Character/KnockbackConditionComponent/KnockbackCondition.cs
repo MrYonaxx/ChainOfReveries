@@ -22,7 +22,7 @@ namespace VoiceActing
          *               ATTRIBUTES                 *
         \* ======================================== */
         [SerializeField]
-        float priority = 0; // Priorité de la condition
+        public float priority = 0; // Priorité de la condition
 
         #endregion
 

@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterFace: {fileID: 0}
   characterName: Lia
-  characterDescription: 'Lia use Counter card, meaning that if you try to card break
-    her action, she will retaliate with a powerful attack.
+  characterDescription: 'Lia uses [Counter] cards, meaning that if you try to card
+    break her action, she will retaliate with a powerful attack.
 
 
 '

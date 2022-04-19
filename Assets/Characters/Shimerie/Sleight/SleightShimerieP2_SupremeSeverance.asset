@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sleightName: Supreme Severance
   sleightDescription: "Shim\xE9rie's ultimate attack. Create a dome of blade. Each
-    blade need to be Card Break by Reverie Card."
+    blade need to be Card Break by an Ivory Card."
   sleightValue: {x: 0, y: 0}
   sleightRecipe: []
   sleightAttackData: {fileID: 0}

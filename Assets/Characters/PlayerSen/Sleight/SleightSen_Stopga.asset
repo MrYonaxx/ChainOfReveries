@@ -12,8 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc0d50e517eba5d4dba18568d80634f5, type: 3}
   m_Name: SleightSen_Stopga
   m_EditorClassIdentifier: 
-  sleightName: Stopga
-  sleightDescription: Create a enormous bubble, stopping everyone inside it.
+  sleightName: Stop EX
+  sleightDescription: Create an enormous bubble, stopping everyone inside it.
   sleightValue: {x: 0, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: fe98327cbffa1e647988c16b690275c5, type: 2}

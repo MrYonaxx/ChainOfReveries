@@ -30,10 +30,11 @@ MonoBehaviour:
     baseCardValue: 1
   - cardData: {fileID: 11400000, guid: 770608292eee0504c84f95cc7ebe9c71, type: 2}
     baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: 2b2a54f296eccc44d8e722477e548fb1, type: 2}
+    baseCardValue: 4
   - cardData: {fileID: 11400000, guid: fe98327cbffa1e647988c16b690275c5, type: 2}
     baseCardValue: 6
-  - cardData: {fileID: 11400000, guid: fe98327cbffa1e647988c16b690275c5, type: 2}
-    baseCardValue: 4
   - cardData: {fileID: 11400000, guid: 2e9796802cc52d74e9d955381b7a3b16, type: 2}
     baseCardValue: 0
+  premiumCardID: 
   initialEquipment: []

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41d2b8edaaa76d541993df549e6f8edb, type: 3}
+  m_Name: ButtonKeyboardDictionary
+  m_EditorClassIdentifier: 
+  sprites:
+  - {fileID: -8260030006975775199, guid: 82ea2c4a360e87a4da51599ee2411258, type: 3}
+  - {fileID: 5203494143091966313, guid: 82ea2c4a360e87a4da51599ee2411258, type: 3}
+  - {fileID: 21300000, guid: 2297a9914f9ac184596208ff4c435003, type: 3}
+  - {fileID: -5244240886388467039, guid: 82ea2c4a360e87a4da51599ee2411258, type: 3}
+  - {fileID: -8151731408561654562, guid: 82ea2c4a360e87a4da51599ee2411258, type: 3}
+  - {fileID: 21300000, guid: 6bcf0493bb7880244a2fc6805874445d, type: 3}
+  - {fileID: 21300000, guid: 04571494a989f884aab6b017dbc4b5f6, type: 3}
+  - {fileID: 21300000, guid: 04571494a989f884aab6b017dbc4b5f6, type: 3}
+  - {fileID: 5389682428400181973, guid: 82ea2c4a360e87a4da51599ee2411258, type: 3}
+  - {fileID: 113388464715634631, guid: 82ea2c4a360e87a4da51599ee2411258, type: 3}
+  - {fileID: -734458713374619125, guid: 82ea2c4a360e87a4da51599ee2411258, type: 3}
+  - {fileID: 442781259867824236, guid: 82ea2c4a360e87a4da51599ee2411258, type: 3}
+  - {fileID: -734458713374619125, guid: 82ea2c4a360e87a4da51599ee2411258, type: 3}
+  - {fileID: -443737822425078610, guid: 82ea2c4a360e87a4da51599ee2411258, type: 3}
+  - {fileID: 442781259867824236, guid: 82ea2c4a360e87a4da51599ee2411258, type: 3}
+  - {fileID: 7666374956515570104, guid: 82ea2c4a360e87a4da51599ee2411258, type: 3}

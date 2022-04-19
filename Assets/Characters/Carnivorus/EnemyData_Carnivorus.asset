@@ -14,12 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterFace: {fileID: 0}
   characterName: Carnivorus
-  characterDescription: 'Carnivorus do not knockback, meaning it can still play Card
+  characterDescription: Carnivorus do not stagger, meaning it can still play Card
     while getting hit.
-
-
-    She posses high value Poison card, but she only use
-    it if you are near her.'
   characterStat:
     hp: 2000
     HPMax:
@@ -92,5 +88,5 @@ MonoBehaviour:
     baseCardValue: 6
   sleightDatabase: []
   initialEquipment: []
-  loreDescription: Carnivorus are ferocious monster inside the Reality. Their poison
+  loreDescription: Carnivorus are ferocious monsters inside the Reality. Their poison
     thorns can make people hallucinate.

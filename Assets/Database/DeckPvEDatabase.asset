@@ -16,15 +16,19 @@ MonoBehaviour:
   - PlayerData: {fileID: 11400000, guid: 02afca26a085403478824fba51632d71, type: 2}
     DeckDatas:
     - {fileID: 11400000, guid: deff87583ecdda446897e9236b1633ed, type: 2}
+    - {fileID: 11400000, guid: 191d5d1300abb2942aafca13b0f14b20, type: 2}
+    - {fileID: 11400000, guid: c62538e1edbaf62488a0cd67f5d02445, type: 2}
     - {fileID: 11400000, guid: 8c16ed4d6485a3348ac6049f6c5696d2, type: 2}
     - {fileID: 11400000, guid: c2819aa7eb927e8428276b756a7009b0, type: 2}
   - PlayerData: {fileID: 11400000, guid: aba76329a080111419f5cd9df7ffd119, type: 2}
     DeckDatas:
     - {fileID: 11400000, guid: 0f56b8bb0cd208d43a7227169064f4bc, type: 2}
     - {fileID: 11400000, guid: 6290f0e206ba3e14fbda9030f85661fc, type: 2}
+    - {fileID: 11400000, guid: 27024419339b61246948bc48b6d7492e, type: 2}
     - {fileID: 11400000, guid: b91d09ad34a878c47b299b419312187e, type: 2}
   - PlayerData: {fileID: 11400000, guid: b2b36011f1c8ed947aa42203acf2994b, type: 2}
     DeckDatas:
-    - {fileID: 11400000, guid: 89d3c901c50ec60498b902dea99b025f, type: 2}
     - {fileID: 11400000, guid: 08a754fe26b839746bd0f25ff855269d, type: 2}
     - {fileID: 11400000, guid: ab9359c62dc1ded4a8726b49cecbcfe0, type: 2}
+    - {fileID: 11400000, guid: 89d3c901c50ec60498b902dea99b025f, type: 2}
+    - {fileID: 11400000, guid: f1068c6fa7e825c478204ac2db506811, type: 2}

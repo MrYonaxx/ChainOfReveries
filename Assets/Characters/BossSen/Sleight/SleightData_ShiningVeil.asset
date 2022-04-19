@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SleightData_ShiningVeil
   m_EditorClassIdentifier: 
   sleightName: Shining Veil
-  sleightDescription: Jump on one of the edge of the arena and throw a barrage of
+  sleightDescription: Jump on one of the edges of the arena and throw a barrage of
     dagger that can only be dodged by a Card Break.
   sleightValue: {x: 0, y: 27}
   sleightRecipe:

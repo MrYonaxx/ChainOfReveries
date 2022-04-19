@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterFace: {fileID: 0}
   characterName: Golem
-  characterDescription: 'Golem will try to stun you and then use his magic card to
-    deal damage. Card Break everyone one of his move and do not let him play.
+  characterDescription: 'The Golem will try to stun you and then use his magic card
+    to deal damage. Card Break everyone one of his moves and do not let him play.
 
 
 '
@@ -115,5 +115,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 6dc2ef74f0117bc4d92f648a18fe62fc, type: 2}
   - {fileID: 11400000, guid: 599a3295575c564418256002044e206a, type: 2}
   initialEquipment: []
-  loreDescription: Strong creature living in Swamps, Golem are a threat for the inhabitant
-    of Mynsa.
+  loreDescription: Strong creature living in swamps, Golems are a threat for the
+    inhabitant of Mynsa.

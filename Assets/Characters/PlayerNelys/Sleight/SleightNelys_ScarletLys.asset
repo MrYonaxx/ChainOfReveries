@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SleightNelys_ScarletLys
   m_EditorClassIdentifier: 
   sleightName: Scarlet Lys
-  sleightDescription: '[Discard] Nelys signature move, create a Ether Prison. If
+  sleightDescription: '[Discard] Nelys signature move, create an Ether Prison. If
     the opponent get caught, slash rapidly the enemy 6 times.'
   sleightValue: {x: 0, y: 18}
   sleightRecipe:

@@ -111,7 +111,7 @@ namespace Menu
                 activeMenu = sleightDrawer;
                 input.ResetAllBuffer();
             }
-            else if (input.InputB.Registered)
+            else if (input.InputB.Registered || (GameSettings.Keyboard && input.InputY.Registered))
             {
                 activeMenu = null;
                 input.ResetAllBuffer();

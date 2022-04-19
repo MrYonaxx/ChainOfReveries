@@ -331,7 +331,7 @@ MonoBehaviour:
   knockbackDurationMultiplier: 0
   knockbackX: 0
   knockbackZ: 0
-  knockbackInvulnerability: 0.1
+  knockbackInvulnerability: 1
   revengeValue: 1
 --- !u!1 &4388082830208477171
 GameObject:

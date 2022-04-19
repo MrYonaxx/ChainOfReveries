@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SleightSen_HomingDash
   m_EditorClassIdentifier: 
   sleightName: 'Altered Arte : Dash'
-  sleightDescription: Dash in a instant towards the enemy.
+  sleightDescription: Dash in an instant towards the enemy.
   sleightValue: {x: 0, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: 770608292eee0504c84f95cc7ebe9c71, type: 2}

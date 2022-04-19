@@ -360,6 +360,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 3378989616832912651}
   cardSprite: {fileID: 2790971596454365079}
+  cardOutlineBackground: {fileID: 0}
+  cardBackground: {fileID: 0}
   cardOutline: {fileID: 4937245198195897479}
   animator: {fileID: 8857244345203007259}
   textCardValue: {fileID: 1251736856171535181}
@@ -2482,6 +2484,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 5247244238998923746}
   cardSprite: {fileID: 126141161615660541}
+  cardOutlineBackground: {fileID: 0}
+  cardBackground: {fileID: 0}
   cardOutline: {fileID: 1924481513527749360}
   animator: {fileID: 5373400389047481255}
   textCardValue: {fileID: 4041399752264930447}
@@ -3000,6 +3004,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 2303297314233639862}
   cardSprite: {fileID: 4707098445925649662}
+  cardOutlineBackground: {fileID: 0}
+  cardBackground: {fileID: 0}
   cardOutline: {fileID: 1848879741047195268}
   animator: {fileID: 6273006464207516327}
   textCardValue: {fileID: 4532678697696580421}
@@ -3191,6 +3197,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 8448968273346831913}
   cardSprite: {fileID: 9040393567502711765}
+  cardOutlineBackground: {fileID: 0}
+  cardBackground: {fileID: 0}
   cardOutline: {fileID: 3623390081596912922}
   animator: {fileID: 4582161347421786298}
   textCardValue: {fileID: 4850461932814760849}
@@ -3298,6 +3306,7 @@ GameObject:
   m_Component:
   - component: {fileID: 307904404601550061}
   - component: {fileID: 81648504294633405}
+  - component: {fileID: 6183911660545471704}
   m_Layer: 16
   m_Name: ButtonPrompt
   m_TagString: Untagged
@@ -3369,6 +3378,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &6183911660545471704
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2937361833757330580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be1f2cde270683469e725da648ae551, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 81648504294633405}
+  keyboardButtons: {fileID: 21300000, guid: 2297a9914f9ac184596208ff4c435003, type: 3}
 --- !u!1 &3160024164999329786
 GameObject:
   m_ObjectHideFlags: 0
@@ -3944,6 +3967,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 2471574794628750840}
   cardSprite: {fileID: 1045555917807061801}
+  cardOutlineBackground: {fileID: 0}
+  cardBackground: {fileID: 0}
   cardOutline: {fileID: 3933290341132048782}
   animator: {fileID: 4938112705850783904}
   textCardValue: {fileID: 5063933080346366312}
@@ -4757,6 +4782,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 6008127021349194513}
   cardSprite: {fileID: 8286618525757434664}
+  cardOutlineBackground: {fileID: 0}
+  cardBackground: {fileID: 0}
   cardOutline: {fileID: 1847305435708460007}
   animator: {fileID: 2599363558117981748}
   textCardValue: {fileID: 4261761785169489167}
@@ -4947,6 +4974,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 1832470601580566754}
   cardSprite: {fileID: 2783007586917145330}
+  cardOutlineBackground: {fileID: 0}
+  cardBackground: {fileID: 0}
   cardOutline: {fileID: 7956992791621662382}
   animator: {fileID: 2319231983626900766}
   textCardValue: {fileID: 4046101518794925526}
@@ -5243,6 +5272,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 3900732836618680901}
   cardSprite: {fileID: 5877800045535481645}
+  cardOutlineBackground: {fileID: 0}
+  cardBackground: {fileID: 0}
   cardOutline: {fileID: 4291623605789844552}
   animator: {fileID: 728569968555538729}
   textCardValue: {fileID: 1824741589729249886}
@@ -6332,9 +6363,11 @@ MonoBehaviour:
   - {fileID: 2495330465840990662}
   - {fileID: 218245961190098851}
   - {fileID: 5246097934590503456}
+  cardSpriteOffset: 
   deckParent: {fileID: 0}
   cardSpeed: 8
   transformCenterIndex: 5
+  offsethandLimit: 0
   cardCountScale: {fileID: 0}
   textCardNumber: {fileID: 0}
   transformDeckThumbnail: {fileID: 0}
@@ -8639,6 +8672,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 1520483293624153621}
   cardSprite: {fileID: 8036425724637731932}
+  cardOutlineBackground: {fileID: 0}
+  cardBackground: {fileID: 0}
   cardOutline: {fileID: 2634548980509803596}
   animator: {fileID: 6701675725585795224}
   textCardValue: {fileID: 5826555455786464496}
@@ -9036,6 +9071,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 7224022486746017918}
   cardSprite: {fileID: 1075216900310075488}
+  cardOutlineBackground: {fileID: 0}
+  cardBackground: {fileID: 0}
   cardOutline: {fileID: 2051047388854974091}
   animator: {fileID: 5969148483312946452}
   textCardValue: {fileID: 832761329761958243}
@@ -10140,6 +10177,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 2525706570426541911}
   cardSprite: {fileID: 2350457200579904030}
+  cardOutlineBackground: {fileID: 0}
+  cardBackground: {fileID: 0}
   cardOutline: {fileID: 9112105016897109498}
   animator: {fileID: 6145423634389533250}
   textCardValue: {fileID: 3814091741146551215}
@@ -10256,6 +10295,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rectTransform: {fileID: 8200144314288472968}
   cardSprite: {fileID: 4024680539524547865}
+  cardOutlineBackground: {fileID: 0}
+  cardBackground: {fileID: 0}
   cardOutline: {fileID: 9065762138471191632}
   animator: {fileID: 3885188013033375568}
   textCardValue: {fileID: 6125404367144977982}

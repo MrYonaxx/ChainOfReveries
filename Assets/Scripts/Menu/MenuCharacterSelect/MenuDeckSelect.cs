@@ -33,6 +33,9 @@ namespace Menu
         [SerializeField]
         Animator animatorMenu = null;
 
+        [SerializeField]
+        Scrollbar scrollDeck = null;
+
         [Title("")]
         [SerializeField]
         MenuList nextMenu = null;
@@ -97,13 +100,24 @@ namespace Menu
                 input.InputA.ResetBuffer();
                 ValidateEntry(listEntry.IndexSelection);
             }
-            else if (input.InputB.Registered)
+            else if (input.InputB.Registered || (GameSettings.Keyboard && input.InputY.Registered))
             {
-                input.InputB.ResetBuffer();
+                input.ResetAllBuffer();
                 QuitMenu();
                 ShowMenu(false);
             }
 
+            // Scroll du deck
+            if (input.InputPadDown.InputValue == 1 || input.InputRB.InputValue == 1)
+            {
+                // scroll down
+                scrollDeck.value -= Time.deltaTime * 2 * scrollDeck.size;
+            }
+            else if (input.InputPadUp.InputValue == 1 || input.InputLB.InputValue == 1)
+            {
+                // scroll up
+                scrollDeck.value += Time.deltaTime * 2 * scrollDeck.size;
+            }
         }
 
         protected override void ValidateEntry(int id)

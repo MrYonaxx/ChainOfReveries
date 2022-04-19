@@ -112,6 +112,8 @@ namespace VoiceActing
         [SerializeField]
         Animator animatorGround = null;
         [SerializeField]
+        Animator animatorRoomCreated = null;
+        [SerializeField]
         List<Animator> animatorGetNewCard = null;
         [SerializeField]
         GameObject buttonHud = null;
@@ -405,6 +407,7 @@ namespace VoiceActing
 
         private IEnumerator RoomCreatorCoroutine(CardExplorationData cardExplorationData, float roomOffset = 0.5f)
         {
+            animatorRoomCreated.SetTrigger("Feedback");
             previousExplorationEvent = explorationEvent;
             yield return new WaitForSeconds(1f);
             CreateRoom(cardExplorationData, roomOffset);
@@ -488,9 +491,12 @@ namespace VoiceActing
             for (int i = 0; i < newCardGet.Count; i++)
             {
                 int pos = runData.PlayerExplorationDeck.IndexOf(newCardGet[i]);
-                animatorGetNewCard[i].gameObject.SetActive(true);
-                animatorGetNewCard[i].transform.position = deckExplorationDrawer.GetCardController(pos).transform.position;
-                animatorGetNewCard[i].SetTrigger("Feedback");
+                if (pos >= 0)
+                {
+                    animatorGetNewCard[i].gameObject.SetActive(true);
+                    animatorGetNewCard[i].transform.position = deckExplorationDrawer.GetCardController(pos).transform.position;
+                    animatorGetNewCard[i].SetTrigger("Feedback");
+                }
             }
             newCardGet.Clear();
         }

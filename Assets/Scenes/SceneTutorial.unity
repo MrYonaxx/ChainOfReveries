@@ -2398,6 +2398,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0.5
       objectReference: {fileID: 0}
+    - target: {fileID: 7575273494304079363, guid: 9cdf938f132a6104ba52a9b62b70025a,
+        type: 3}
+      propertyPath: timePause
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: 7575273494304079363, guid: 9cdf938f132a6104ba52a9b62b70025a,
+        type: 3}
+      propertyPath: timeInterval
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7575273494632465794, guid: 9cdf938f132a6104ba52a9b62b70025a,
         type: 3}
       propertyPath: m_textInfo.characterCount
@@ -3527,22 +3537,22 @@ MonoBehaviour:
   listEntry: {fileID: 2025009067}
   inputController: {fileID: 338452913}
   textTips:
-  - When using a Sleight, the first card used is removed from play, except if the
-    card is a Premium card.
-  - 'A Combo card is a card that make the character execute a new action if a certain
+  - When you play a Sleight, the first card is removed from play, except if the card
+    is a Premium card.
+  - 'A Combo card is a card that makes the character execute a new action if a certain
     card is used right after. '
-  - A Unbreakable card cannot be Card Break except by another Unbreakable card or
+  - An Unbreakable card cannot be Card Break except by another Unbreakable card or
     a value of 0.
-  - Counter card are cards that cannot be Card Break. If a card try to challenge
-    them, the character will counter with a special action.
+  - Counter cards cannot be Card Break. If a card try to challenge them, the character
+    will counter with a special action.
   - A Phantom card is a card that can only be Card Break for a short amount of time
-    at the start of the action. The move will still continue after the disappearence
+    at the start of the action. The move will still continue after the disappearance
     of the card.
-  - 'The Discard property destroy the card the opponent have in his hands if the
-    attack connect. '
-  - Banish cards remove from play the cards Card Breaked.
-  - The Scatter cards will dispatch cards from the opponent deck on the battlefield.
-    They can be retrieve if the opponent walk to them.
+  - 'The Discard property destroy the card the opponent has in his hands if the attack
+    connect. '
+  - Banish cards remove from play the cards you break. Making them unloadable.
+  - The Scatter cards will dispatch cards from the opponent's deck on the battlefield.
+    They can be retrieve if the opponent walks to them.
   - A Throw card need to be Card Break multiple times.
   cursor: {fileID: 1753542646}
   textDescription: {fileID: 1119177760}
@@ -4660,6 +4670,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 437701919}
   m_CullTransparentMesh: 0
+--- !u!114 &452136227 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1987183374824202222, guid: b46ff84b6a41ec94e93c2ad750f66063,
+    type: 3}
+  m_PrefabInstance: {fileID: 971485376}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45c1249fd77d3c84b97534e8997a5fca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &452708892
 GameObject:
   m_ObjectHideFlags: 0
@@ -6983,6 +7005,50 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3472bc60f5199264da979db230c5d9f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &609016947
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 609016949}
+  - component: {fileID: 609016948}
+  m_Layer: 0
+  m_Name: Music
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &609016948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609016947}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27e79ec739652c241bc0fd0fff395318, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  music: {fileID: 8300000, guid: 025eb69f449150e4ebb1b9e601e4ac1f, type: 3}
+--- !u!4 &609016949
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 609016947}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 30
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &617377230
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7256,6 +7322,7 @@ GameObject:
   - component: {fileID: 652044865}
   - component: {fileID: 652044867}
   - component: {fileID: 652044866}
+  - component: {fileID: 652044868}
   m_Layer: 5
   m_Name: PanelContents
   m_TagString: Untagged
@@ -7320,6 +7387,26 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 652044864}
   m_CullTransparentMesh: 0
+--- !u!114 &652044868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 652044864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aeb6bfd2101daea4cae0b59edee7c55a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  buttons:
+  - {fileID: 915178267}
+  - {fileID: 1606374290}
+  - {fileID: 1793910526}
+  keyboardButtons:
+  - {fileID: 21300000, guid: 04571494a989f884aab6b017dbc4b5f6, type: 3}
+  - {fileID: 21300000, guid: 2297a9914f9ac184596208ff4c435003, type: 3}
+  - {fileID: 21300000, guid: 6bcf0493bb7880244a2fc6805874445d, type: 3}
 --- !u!1 &661501729
 GameObject:
   m_ObjectHideFlags: 0
@@ -10189,6 +10276,18 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6f911aa181a1f054eb32cb650d917897, type: 3}
+--- !u!114 &902778444 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3139752249666482539, guid: b46ff84b6a41ec94e93c2ad750f66063,
+    type: 3}
+  m_PrefabInstance: {fileID: 971485376}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45c1249fd77d3c84b97534e8997a5fca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &910692076
 GameObject:
   m_ObjectHideFlags: 0
@@ -11196,18 +11295,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ec994c772b4e34c97738a9f231fed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &971485381 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1987183374689167605, guid: b46ff84b6a41ec94e93c2ad750f66063,
-    type: 3}
-  m_PrefabInstance: {fileID: 971485376}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45c1249fd77d3c84b97534e8997a5fca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &971485382 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2847843619565363804, guid: b46ff84b6a41ec94e93c2ad750f66063,
@@ -11256,18 +11343,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 90ec994c772b4e34c97738a9f231fed9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &971485386 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 1987183374824202222, guid: b46ff84b6a41ec94e93c2ad750f66063,
-    type: 3}
-  m_PrefabInstance: {fileID: 971485376}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45c1249fd77d3c84b97534e8997a5fca, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &971485387 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 271728776695497019, guid: b46ff84b6a41ec94e93c2ad750f66063,
@@ -11303,14 +11378,18 @@ MonoBehaviour:
   canvasBattle: {fileID: 971485388}
   playerHealthBar: {fileID: 975353051}
   playerSleightDrawer: {fileID: 971485387}
-  playerDeckDrawer: {fileID: 971485386}
   playerEquipmentDrawer: {fileID: 971485385}
   playerStatusDrawer: {fileID: 971485384}
+  playerDeckDrawers:
+  - {fileID: 902778444}
+  - {fileID: 452136227}
   enemyHealthBar: {fileID: 971485383}
   enemySleightDrawer: {fileID: 971485382}
-  enemyDeckDrawer: {fileID: 971485381}
   enemyEquipmentDrawer: {fileID: 971485380}
   enemyStatusDrawer: {fileID: 971485378}
+  enemyDeckDrawers:
+  - {fileID: 1641957959}
+  - {fileID: 1650211780}
 --- !u!1001 &975353050
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13007,6 +13086,11 @@ PrefabInstance:
         type: 3}
       propertyPath: aiEnabled
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8727875182586683601, guid: f2631259f2fab034d9a9d2dcdf2b1369,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f2631259f2fab034d9a9d2dcdf2b1369, type: 3}
@@ -18953,6 +19037,30 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &1641957959 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 745528369786898095, guid: b46ff84b6a41ec94e93c2ad750f66063,
+    type: 3}
+  m_PrefabInstance: {fileID: 971485376}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45c1249fd77d3c84b97534e8997a5fca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1650211780 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4607626204957037280, guid: b46ff84b6a41ec94e93c2ad750f66063,
+    type: 3}
+  m_PrefabInstance: {fileID: 971485376}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45c1249fd77d3c84b97534e8997a5fca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1655930653
 GameObject:
   m_ObjectHideFlags: 0
@@ -35317,6 +35425,8 @@ MonoBehaviour:
   gameData: {fileID: 11400000, guid: b00da105333eaa242b9869e96369fdc9, type: 2}
   buttonSpriteDictionary: {fileID: 11400000, guid: 18b01ad18850ad64eb9e783e6820018d,
     type: 2}
+  keyboardSpriteDictionary: {fileID: 11400000, guid: 7df87aa521c53734fbe0ab7d597640c0,
+    type: 2}
   inputButton: {fileID: 209837178}
   textMain: {fileID: 1394055154458604411}
   imageSleight:
@@ -35762,6 +35872,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3496449268725148034, guid: 984d5f3ec2c984344ae8e924c479757e,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6342756264692271156, guid: 984d5f3ec2c984344ae8e924c479757e,
         type: 3}
       propertyPath: m_Sprite

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: SleightShimerieP2_ChainOfBlades
   m_EditorClassIdentifier: 
   sleightName: Chain of Blades
-  sleightDescription: 
+  sleightDescription: Split the sword into a barrage of blades and throw them from
+    above. The user is vulnerable after the attack.
   sleightValue: {x: 0, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}

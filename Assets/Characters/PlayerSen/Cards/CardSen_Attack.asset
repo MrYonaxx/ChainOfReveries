@@ -36,6 +36,8 @@ MonoBehaviour:
   cardDescription: '[Combo] A basic attack in front of you.'
   attackManager: {fileID: 818057835518184039, guid: 1176ffadce049984196767b3bb9f8ffb,
     type: 3}
+  colorOutline: {r: 0, g: 0, b: 0, a: 0}
+  colorCardBackground: {r: 0, g: 0, b: 0, a: 0}
   cardProbability: 64000000640000006400000064000000640000006400000064000000640000006400000064000000
   breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   maxProbability: 1000

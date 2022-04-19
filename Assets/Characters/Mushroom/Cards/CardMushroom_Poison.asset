@@ -33,9 +33,11 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 3f5ceb77a8981814fa89609fa6867450, type: 3}
   cardName: Miasma
   cardType: 1
-  cardDescription: Create a poison miasma that follow the target.
+  cardDescription: Create a poison miasma that follows the target.
   attackManager: {fileID: 818057835518184039, guid: d10ab1855405bf3468c68aa5f42dd8bb,
     type: 3}
+  colorOutline: {r: 0, g: 0, b: 0, a: 0}
+  colorCardBackground: {r: 0, g: 0, b: 0, a: 0}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   maxProbability: 0

@@ -1,5 +1,73 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &405863603306628066
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6459397485799352020}
+  - component: {fileID: 3954833571927634947}
+  - component: {fileID: 7082401808356023792}
+  m_Layer: 0
+  m_Name: Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6459397485799352020
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405863603306628066}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.8, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 248121844606041498}
+  m_RootOrder: 13
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3954833571927634947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405863603306628066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 40
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: e3446ef31256a3f47acc1ae6b3ebc0d0, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
+--- !u!114 &7082401808356023792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 405863603306628066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 65
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 61db1953fed932d4da28a7bab79e269a, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
 --- !u!1 &1132821938408148408
 GameObject:
   m_ObjectHideFlags: 0
@@ -6060,6 +6128,7 @@ Transform:
   - {fileID: 8423782538750560678}
   - {fileID: 5755812234942954120}
   - {fileID: 967117167151043466}
+  - {fileID: 6459397485799352020}
   m_Father: {fileID: 5842096757366747166}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6107,14 +6176,18 @@ MonoBehaviour:
     AnimationEvent: {fileID: 330022750212540335}
   - Frame: 30
     AnimationEvent: {fileID: 623124004839406375}
+  - Frame: 40
+    AnimationEvent: {fileID: 3954833571927634947}
+  - Frame: 65
+    AnimationEvent: {fileID: 7082401808356023792}
   - Frame: 69
     AnimationEvent: {fileID: 5067598322443150899}
   - Frame: 69
     AnimationEvent: {fileID: 4133233753491180752}
   - Frame: 70
-    AnimationEvent: {fileID: 396756243832997182}
-  - Frame: 70
     AnimationEvent: {fileID: 4591226283293329939}
+  - Frame: 70
+    AnimationEvent: {fileID: 396756243832997182}
   - Frame: 100
     AnimationEvent: {fileID: 3171177942190017703}
   - Frame: 100
@@ -6126,67 +6199,67 @@ MonoBehaviour:
   - Frame: 180
     AnimationEvent: {fileID: 843937601949485558}
   - Frame: 180
-    AnimationEvent: {fileID: 2499841366689843228}
-  - Frame: 180
     AnimationEvent: {fileID: 8139268333728109245}
+  - Frame: 180
+    AnimationEvent: {fileID: 2499841366689843228}
   - Frame: 180
     AnimationEvent: {fileID: 2930304323952465312}
   - Frame: 260
-    AnimationEvent: {fileID: 7154130602746536388}
+    AnimationEvent: {fileID: 3910008298169232873}
   - Frame: 260
     AnimationEvent: {fileID: 5654361849193976865}
   - Frame: 260
-    AnimationEvent: {fileID: 693778892491950707}
+    AnimationEvent: {fileID: 7154130602746536388}
   - Frame: 260
-    AnimationEvent: {fileID: 3910008298169232873}
+    AnimationEvent: {fileID: 693778892491950707}
+  - Frame: 320
+    AnimationEvent: {fileID: 7857745140314768640}
   - Frame: 320
     AnimationEvent: {fileID: 7052765046842792722}
   - Frame: 320
     AnimationEvent: {fileID: 865212832274572020}
   - Frame: 320
     AnimationEvent: {fileID: 8921124325341639220}
-  - Frame: 320
-    AnimationEvent: {fileID: 7857745140314768640}
   - Frame: 340
-    AnimationEvent: {fileID: 7552313358380778630}
+    AnimationEvent: {fileID: 7386078467791562338}
   - Frame: 340
     AnimationEvent: {fileID: 8386506419112349841}
   - Frame: 340
-    AnimationEvent: {fileID: 18083180336240500}
+    AnimationEvent: {fileID: 7552313358380778630}
   - Frame: 340
-    AnimationEvent: {fileID: 7386078467791562338}
-  - Frame: 420
-    AnimationEvent: {fileID: 6970311906603672182}
-  - Frame: 420
-    AnimationEvent: {fileID: 7281899794820521859}
+    AnimationEvent: {fileID: 18083180336240500}
   - Frame: 420
     AnimationEvent: {fileID: 5233361931435695945}
   - Frame: 420
     AnimationEvent: {fileID: 2133249220902192599}
+  - Frame: 420
+    AnimationEvent: {fileID: 6970311906603672182}
+  - Frame: 420
+    AnimationEvent: {fileID: 7281899794820521859}
+  - Frame: 500
+    AnimationEvent: {fileID: 4311768011657750587}
   - Frame: 500
     AnimationEvent: {fileID: 3922058312066963568}
   - Frame: 500
     AnimationEvent: {fileID: 8177356032297171660}
   - Frame: 500
-    AnimationEvent: {fileID: 4311768011657750587}
-  - Frame: 500
     AnimationEvent: {fileID: 6916297518757486811}
   - Frame: 580
-    AnimationEvent: {fileID: 2497213036106912917}
+    AnimationEvent: {fileID: 901574601429992324}
   - Frame: 580
     AnimationEvent: {fileID: 632500013667980825}
   - Frame: 580
     AnimationEvent: {fileID: 193904208069251965}
   - Frame: 580
-    AnimationEvent: {fileID: 901574601429992324}
+    AnimationEvent: {fileID: 2497213036106912917}
+  - Frame: 660
+    AnimationEvent: {fileID: 6881900309782123243}
   - Frame: 660
     AnimationEvent: {fileID: 7102409151094093989}
   - Frame: 660
-    AnimationEvent: {fileID: 1346923210904555045}
-  - Frame: 660
     AnimationEvent: {fileID: 8140599848532319504}
   - Frame: 660
-    AnimationEvent: {fileID: 6881900309782123243}
+    AnimationEvent: {fileID: 1346923210904555045}
   - Frame: 800
     AnimationEvent: {fileID: 971517604602136903}
 --- !u!114 &1207110519311360454
@@ -6645,8 +6718,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4388082830208477171}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.2959999, y: 2.704, z: 2}
+  m_LocalPosition: {x: 0, y: 4, z: 0}
+  m_LocalScale: {x: 0, y: 4, z: 2}
   m_Children: []
   m_Father: {fileID: 6202298799396831511}
   m_RootOrder: 0
@@ -6690,9 +6763,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2033251019011808168, guid: 85ce3d0ef4a8fec4ba6e1fd54b3ba4b7,
+  m_Sprite: {fileID: -2438777124099814891, guid: 14902f27c99767746bc32a7c80c2b1f0,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.64799994}
+  m_Color: {r: 1, g: 1, b: 1, a: 0}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

@@ -1727,8 +1727,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackProcessor: 0
   cardDamage:
-    cardDamage: 64000000640000006400000064000000640000006400000064000000640000006400000064000000
-    debugDamage: {x: 100, y: 100}
+    cardDamage: f4010000f4010000f4010000f4010000f4010000f4010000f4010000f4010000f4010000f4010000
+    debugDamage: {x: 500, y: 500}
     ignoreStatsMultiplier: 0
   cardStatus:
     statusDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -1745,6 +1745,13 @@ MonoBehaviour:
     ignoreElementalStat: 0
   damage:
     baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
+  backdamage:
+    baseDamage: 100
+    ignoreStatsMultiplier: 0
+  banDamage:
+    damagePerBan: 100
     attackType: 0
     ignoreStatsMultiplier: 0
 --- !u!114 &4807458947404038935
@@ -1779,6 +1786,13 @@ MonoBehaviour:
     ignoreElementalStat: 0
   damage:
     baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
+  backdamage:
+    baseDamage: 100
+    ignoreStatsMultiplier: 0
+  banDamage:
+    damagePerBan: 100
     attackType: 0
     ignoreStatsMultiplier: 0
 --- !u!114 &8425361180644515936

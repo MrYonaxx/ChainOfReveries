@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SleightPhoenix_SouthernGust
   m_EditorClassIdentifier: 
   sleightName: Southern Gust
-  sleightDescription: Creates two wind blades. The first one start at the lower part
-    of the arena.
+  sleightDescription: Creates two wind blades. The first one starts at the lower
+    part of the arena.
   sleightValue: {x: 0, y: 18}
   sleightRecipe:
   - {fileID: 11400000, guid: fd45e4db2ec09a04e9ba309af720f5e2, type: 2}

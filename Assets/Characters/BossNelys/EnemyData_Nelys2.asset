@@ -14,9 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterFace: {fileID: 0}
   characterName: Nelys
-  characterDescription: "She has high proficiency in fire magic, and her ability
-    Zantetsu can destroy and banish a card for the rest of the fight.\n\nTry to observe
-    her deck to know when she wants to use Zantetsu.\n "
+  characterDescription: 'She has a high proficiency in fire magic, and her ability
+    Zantetsu can destroy and banish a card for the rest of the fight.
+
+
+    Try to
+    observe her deck to know when she wants to use Zantetsu.'
   characterStat:
     hp: 6700
     HPMax:
@@ -137,6 +140,6 @@ MonoBehaviour:
   - cardEquipment: {fileID: 11400000, guid: b9f7e9038916aa74581026945bb78e0b, type: 2}
     probability: 100
   loreDescription: "When Oneiros and Lia tried to shatter the Reverie, Nelys was
-    the only Chim\xE8re to stand against them. With the help of Sen she eventually
-    manage to defeat Lia.\n\nThe Reverie's goal is to maintain peace inside the Reality,
-    by destroying the Reverie, the Reality could one day disappear"
+    the only Chim\xE8re to stand against them. With the help of Sen, she eventually
+    manages to defeat Lia.\n\nThe Reverie's goal is to maintain peace inside the
+    Reality, by destroying the Reverie, the Reality could one day disappear."

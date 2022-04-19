@@ -33,7 +33,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 00080512410c42c469b406f373079a54, type: 3}
   cardName: Bash
   cardType: 0
-  cardDescription: 
+  cardDescription: Strong charge with a shield, but with a long recovery.
   attackManager: {fileID: 818057835518184039, guid: 805e0514e9419ec48b5719af84ea411d,
     type: 3}
   colorOutline: {r: 0, g: 0, b: 0, a: 0}

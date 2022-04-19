@@ -33,9 +33,11 @@ MonoBehaviour:
   cardSprite: {fileID: 0}
   cardName: Earthga
   cardType: 1
-  cardDescription: Create multiple earth pillars underneath the opponent.
+  cardDescription: 
   attackManager: {fileID: 818057835518184039, guid: 2d398c6e06f4c684c95798e7287a6c9e,
     type: 3}
+  colorOutline: {r: 0, g: 0, b: 0, a: 0}
+  colorCardBackground: {r: 0, g: 0, b: 0, a: 0}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   maxProbability: 0

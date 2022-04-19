@@ -551,6 +551,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7568853239664370527}
   - component: {fileID: 7813182845792532495}
+  - component: {fileID: 8938306624162308604}
   m_Layer: 16
   m_Name: ButtonPrompt
   m_TagString: Untagged
@@ -622,6 +623,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8938306624162308604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5012376098834127654}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8be1f2cde270683469e725da648ae551, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  button: {fileID: 7813182845792532495}
+  keyboardButtons: {fileID: 21300000, guid: 2297a9914f9ac184596208ff4c435003, type: 3}
 --- !u!1 &7295721709371549729
 GameObject:
   m_ObjectHideFlags: 0

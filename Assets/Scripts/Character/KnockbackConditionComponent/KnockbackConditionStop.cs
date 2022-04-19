@@ -43,8 +43,6 @@ namespace VoiceActing
             damageMessages.Clear();
         }
 
-        // Il faut en argument le damage message
-        // Renvois vrai si l'attaque ne connecte pas
         public override bool CheckCondition(CharacterBase user, AttackController attack, DamageMessage damageMessage)
         {
             user.CharacterKnockback.NoKnockback = true;
@@ -52,7 +50,7 @@ namespace VoiceActing
             user.CharacterMovement.SetSpeed(0, 0);
             user.CharacterMovement.SetSpeedZ(0);
             user.CharacterKnockback.Knockdown = false;
-            damageMessages.Add(attack.GetDamageMessage(user));
+            damageMessages.Add(damageMessage);
             return true;
         }
 

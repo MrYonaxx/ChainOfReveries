@@ -365,6 +365,12 @@ namespace VoiceActing
             characterAction.SetAttackMotionSpeed(MotionSpeed);
         }
 
+        // utilisé par stop parce que ce batard de sort nique mon système
+        public void RefreshMotionSpeed()
+        {
+            animator.speed = MotionSpeed;
+            characterAction.SetAttackMotionSpeed(MotionSpeed);
+        }
 
 
 

@@ -34,9 +34,11 @@ MonoBehaviour:
   cardName: Poison
   cardType: 1
   cardDescription: '[Phantom] Create a poison cloud that tracks the enemy. Cannot
-    poison if the target is in combo.'
+    poison if the target is staggering.'
   attackManager: {fileID: 818057835518184039, guid: 1ab48903d7eab23469255eee7b08ca86,
     type: 3}
+  colorOutline: {r: 0, g: 0, b: 0, a: 0}
+  colorCardBackground: {r: 0, g: 0, b: 0, a: 0}
   cardProbability: 64000000640000006400000064000000640000006400000064000000640000006400000064000000
   breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   maxProbability: 1000

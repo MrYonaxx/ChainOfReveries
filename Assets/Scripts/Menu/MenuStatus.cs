@@ -22,6 +22,8 @@ namespace Menu
         [SerializeField]
         MenuSleightDrawer sleightDrawer = null;
         [SerializeField]
+        MenuDeckSort deckSort = null;
+        [SerializeField]
         TextMeshProUGUI textDescription = null;
 
         [Title("Panel Equip")]
@@ -41,6 +43,8 @@ namespace Menu
         MenuOptions menuOptions = null;
         [SerializeField]
         MenuInputConfig menuInput = null;
+        [SerializeField]
+        MenuOptionsHUD menuOptionsHUD = null;
 
         [Title("Quit")]
         [SerializeField]
@@ -69,9 +73,13 @@ namespace Menu
             sleightDrawer.OnEnd += QuitMenu;
 
             menuOptions.OnEnd += QuitMenu;
-            //MenuOptionsHUD
+
+            menuOptionsHUD.OnStart += InputDesactivate;
+            menuOptionsHUD.OnEnd += InputActivate;
             menuInput.OnStart += InputDesactivate;
             menuInput.OnEnd += InputActivate;
+
+            deckSort.OnEnd += QuitSort;
         }
 
         void OnDestroy()
@@ -84,8 +92,13 @@ namespace Menu
             sleightDrawer.OnEnd -= QuitMenu;
 
             menuOptions.OnEnd -= QuitMenu;
+
+            menuOptionsHUD.OnStart -= InputDesactivate;
+            menuOptionsHUD.OnEnd -= InputActivate;
             menuInput.OnStart -= InputDesactivate;
             menuInput.OnEnd -= InputActivate;
+
+            deckSort.OnEnd -= QuitSort;
         }
 
 
@@ -129,7 +142,7 @@ namespace Menu
                 return;
             }
 
-
+            // sélection des panel (Equipement - Deck - Options)
             if (input.InputRB.Registered)
             {
                 input.ResetAllBuffer();
@@ -152,11 +165,12 @@ namespace Menu
             if (activeMenu != null)
                 activeMenu.UpdateControl(input);
 
+
+            // Si on est dans le panel Deck
             if(indexMenu == 1)
             {
-                if(input.InputY.Registered) 
+                if((!GameSettings.Keyboard && input.InputY.Registered) || (GameSettings.Keyboard && input.InputB.Registered)) 
                 {
-
                     input.ResetAllBuffer();
                     if (rightPanel)
                     {
@@ -171,6 +185,16 @@ namespace Menu
                         sleightDrawer.menuCursor.gameObject.SetActive(false);
                     }
                     rightPanel = !rightPanel;
+                }
+                else if (input.InputX.Registered && rightPanel)
+                {
+                    input.ResetAllBuffer(); 
+                    activeMenu = deckSort;
+                    deckSort.InitializeMenu();
+                    deckDrawer.menuCursor.gameObject.SetActive(false);
+                    sleightDrawer.menuCursor.gameObject.SetActive(false);
+                    active = false;
+
                 }
             }
 
@@ -242,6 +266,12 @@ namespace Menu
             active = true;
         }
 
+        private void QuitSort()
+        {
+            active = true;
+            activeMenu = deckDrawer;
+            deckDrawer.menuCursor.gameObject.SetActive(true);
+        }
 
 
 
@@ -253,6 +283,7 @@ namespace Menu
         private IEnumerator GiveUpCoroutine()
         {
             fade.SetActive(true);
+            AudioManager.Instance.StopMusic(2f);
             yield return new WaitForSeconds(2f);
             UnityEngine.SceneManagement.SceneManager.LoadScene(sceneName);
         }

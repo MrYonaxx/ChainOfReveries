@@ -61,7 +61,7 @@ MonoBehaviour:
       Data: 0
     - Name: value
       Entry: 4
-      Data: 0.15
+      Data: 0.25
     - Name: 
       Entry: 8
       Data: 
@@ -82,7 +82,7 @@ MonoBehaviour:
       Data: 0
     - Name: value
       Entry: 4
-      Data: 0.15
+      Data: 0.25
     - Name: 
       Entry: 8
       Data: 
@@ -97,7 +97,7 @@ MonoBehaviour:
       Data: 
   statusIconSprite: {fileID: 0}
   statusName: 
-  statusDescription: Damage +15%
+  statusDescription: Damage +25%
   hideStatus: 1
   statusShowLabel: 0
   statusConditionLabel: 

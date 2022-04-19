@@ -6,6 +6,8 @@ using System.IO;
 // Settings qui n'utilise pas le player Pref
 public static class GameSettings
 {
+    public static bool Keyboard = false;
+
     public static int DeckLayout = 0;
     public static Color BackgroundAttackCard = Color.white;
     public static Color BackgroundMagicCard = Color.white;

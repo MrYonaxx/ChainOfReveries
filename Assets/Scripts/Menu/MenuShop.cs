@@ -249,7 +249,7 @@ namespace Menu
                 oldIndex = listEntry.IndexSelection;
 
             }
-            else if (input.InputB.Registered)
+            else if (input.InputB.Registered || (GameSettings.Keyboard && input.InputY.Registered))
             {
                 input.ResetAllBuffer();
                 QuitMenu();

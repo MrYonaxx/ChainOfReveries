@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sleightName: Doom
   sleightDescription: Create a Card Break Counter on your opponent. Each Card Break
-    decrease the Counter. If your opponent Card Break Counter reach zero, you win.
+    decreases the Counter. If your opponent Card Break Counter reach zero, you win.
   sleightValue: {x: 0, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: 063d9c558da3ee846a630adab660880f, type: 2}

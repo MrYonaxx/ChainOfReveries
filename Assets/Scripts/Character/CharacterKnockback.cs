@@ -143,8 +143,17 @@ namespace VoiceActing
 
         public void AddKnockbackCondition(KnockbackCondition knockbackCondition)
         {
+            for (int i = 0; i < knockbackConditions.Count; i++)
+            {
+                if (knockbackCondition.priority > knockbackConditions[i].priority)
+                {
+                    knockbackConditions.Insert(i, knockbackCondition);
+                    return;
+                }
+            }
             knockbackConditions.Add(knockbackCondition);
         }
+
         public void RemoveKnockbackCondition(KnockbackCondition knockbackCondition)
         {
             knockbackConditions.Remove(knockbackCondition);
@@ -274,6 +283,9 @@ namespace VoiceActing
 
         public void Hit(DamageMessage damageMessage)
         {
+            if (isInvulnerable)
+                return;
+
             noKnockback = false;
             character.CharacterStat.HP -= (int)damageMessage.damage;
             if (character.CharacterStat.HP <= 0)
@@ -333,7 +345,7 @@ namespace VoiceActing
 
         private void UpdateRevengeValue()
         {
-            if(knockbackTime <= 0 && revengeValue > 0)
+            if(knockbackTime <= 0 && revengeValue > 0 && character.MotionSpeed != 0)
             {
                 // Serializer la valeur de reduction
                 AddRevengeValue(-0.8f * Time.deltaTime);

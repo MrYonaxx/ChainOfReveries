@@ -23,7 +23,10 @@ namespace VoiceActing
         void Regen(CharacterState oldState, CharacterState newState)
         {
             if (newState.ID == CharacterStateID.Idle)
+            {
                 character.CharacterStat.HP += 9999;
+                character.CharacterKnockback.AddRevengeValue(-15f);
+            }
         }
 
 

@@ -16,8 +16,8 @@ MonoBehaviour:
   characterName: Shimerie
   characterDescription: "Being the origin of the Chain of Reveries. Shimerie can
     bend the rules of his cards.\n\nHis attacks are tricky to dodge and Card Break.
-    Use everything you've learn and observe calmly his attack to find how to Card
-    break him. \n\nIt's the final battle, shatter the last Reverie."
+    Observe calmly his attacks, to find an opening for a Card Break. \n\nIt's the
+    final battle, shatter the last Reverie."
   characterStat:
     hp: 8999
     HPMax:

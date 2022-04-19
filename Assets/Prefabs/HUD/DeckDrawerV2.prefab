@@ -162,6 +162,11 @@ PrefabInstance:
       propertyPath: handLimitMax
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 963199051096242805, guid: 87c1416216a37e34ebd80aacc18e7643,
+        type: 3}
+      propertyPath: offsethandLimit
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1252673847084076108, guid: 87c1416216a37e34ebd80aacc18e7643,
         type: 3}
       propertyPath: m_IsActive

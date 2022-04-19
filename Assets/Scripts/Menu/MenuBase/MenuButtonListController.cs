@@ -61,7 +61,7 @@ namespace Menu
         [Title("Input")]
 
         [SerializeField]
-        protected bool listLoop = true;
+        public bool listLoop = true;
         [SerializeField]
         protected float stickThreshold = 0.8f;
 

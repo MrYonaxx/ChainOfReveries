@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterFace: {fileID: 0}
   characterName: Ghost
-  characterDescription: 'Ghosts are weak to magic attack but resist physical one.
+  characterDescription: 'Ghosts are weak to magic attack, but resistant to physical
+    one.
 
 
-    Their
-    attack Ghost Touch is tough to challenge so try to avoid it. '
+    Their attack Ghost Touch is tough to challenge so try to avoid it. '
   characterStat:
     hp: 1500
     HPMax:

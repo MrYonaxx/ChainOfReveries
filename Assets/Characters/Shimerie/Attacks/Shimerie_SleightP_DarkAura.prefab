@@ -102,7 +102,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4166811470578154309
 Transform:
   m_ObjectHideFlags: 0
@@ -129,11 +129,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 8
+  frame: 20
   frameEnd: 0
   sound:
-    sound: {fileID: 8300000, guid: 113e5eb13afc6ac4dbbe4b668edec963, type: 3}
-    volume: 0.8
+    sound: {fileID: 8300000, guid: 9065e23491fbe5943829feac7e7a13bd, type: 3}
+    volume: 1
     pitch: {x: 1, y: 1}
 --- !u!114 &4200970828337729809
 MonoBehaviour:
@@ -147,11 +147,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 10
+  frame: 95
   frameEnd: 0
   sound:
-    sound: {fileID: 8300000, guid: 2accb501d7f2e524994d32a4ce9d3ec5, type: 3}
-    volume: 0.6
+    sound: {fileID: 8300000, guid: e3446ef31256a3f47acc1ae6b3ebc0d0, type: 3}
+    volume: 1
     pitch: {x: 1, y: 1}
 --- !u!1 &2469241746260582066
 GameObject:
@@ -292,6 +292,10 @@ MonoBehaviour:
   frameData:
   - Frame: 0
     AnimationEvent: {fileID: 3897879845673952333}
+  - Frame: 20
+    AnimationEvent: {fileID: 6548060126528745650}
+  - Frame: 95
+    AnimationEvent: {fileID: 4200970828337729809}
   - Frame: 120
     AnimationEvent: {fileID: 742110924191139661}
   - Frame: 150
@@ -357,7 +361,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4388082830208477171}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -2.9911444, y: 1, z: 0}
+  m_LocalPosition: {x: 0.8655901, y: 1, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 6202298799396831511}
@@ -402,9 +406,9 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -5725203790748733474, guid: 6a1b644c7343b4e498d162b1896196ef,
+  m_Sprite: {fileID: -7150595977671629874, guid: 895536ee66b168f479c237bf02e73b58,
     type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.017177463}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.93985736}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

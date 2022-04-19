@@ -85,7 +85,7 @@ namespace VoiceActing
             conditionStop = new KnockbackConditionStop();
 
             character.CharacterStat.MotionSpeed.AddStatBonus(-9999, Stats.StatBonusType.Flat);
-            character.SetCharacterMotionSpeed(0, timeStop);
+            character.SetCharacterMotionSpeed(0, 0.001f);
             character.CanPlay(false); // a changer
             character.CharacterKnockback.AddKnockbackCondition(conditionStop);
  
@@ -102,7 +102,7 @@ namespace VoiceActing
                     timeInterval += intervalBetweenAttack;
                     conditionStop.SetDamage(character);
                     if(!character.CharacterKnockback.NoKnockback)
-                        character.CharacterKnockback.Knockback(1, true);
+                        character.CharacterKnockback.Knockback(1f, true);
                     character.CreateAnimation(stunAnimation);
                 }
             }
@@ -118,6 +118,7 @@ namespace VoiceActing
                         character.CanPlay(true);
                         character.CharacterStat.MotionSpeed.AddStatBonus(9999, Stats.StatBonusType.Flat);
                         character.CharacterKnockback.RemoveKnockbackCondition(conditionStop);
+                        character.RefreshMotionSpeed();
                         if (conditionStop.GetDamageRegisterLength() != 0)
                         {
                             intervalBetweenAttack = (timeDamage+0.01f) / conditionStop.GetDamageRegisterLength();
@@ -135,6 +136,7 @@ namespace VoiceActing
             {
                 character.CharacterStat.MotionSpeed.AddStatBonus(9999, Stats.StatBonusType.Flat);
                 character.CharacterKnockback.RemoveKnockbackCondition(conditionStop);
+                character.RefreshMotionSpeed();
             }
         }
 

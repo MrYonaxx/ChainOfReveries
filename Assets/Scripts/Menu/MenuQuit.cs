@@ -40,6 +40,7 @@ namespace Menu
                 inputs[i].enabled = false;
             }
             fade.SetActive(true);
+            AudioManager.Instance.StopMusic(1f);
             yield return new WaitForSeconds(1f);
             UnityEngine.SceneManagement.SceneManager.LoadScene(scene);
         }

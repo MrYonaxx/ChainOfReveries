@@ -12,7 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aaaedca360f0e340996e82e36c3b4a0, type: 3}
   m_Name: CardExploration
   m_EditorClassIdentifier: 
-  cardSprite: {fileID: 21300000, guid: 2ef5b28e6b9cb274cb31461860e91bd4, type: 3}
+  cardSprite: {fileID: 21300000, guid: b9143280473705d419fbcbc6cb6658fc, type: 3}
   cardName: "R\xEAve"
   cardDescription: 
-  cardType: 
+  cardType: 0
+  nbCardReward: 0
+  reverieColor: 0
+  explorationEvent: {fileID: 0}
+  battleModifiers: []

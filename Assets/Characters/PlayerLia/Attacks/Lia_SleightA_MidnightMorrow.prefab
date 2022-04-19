@@ -5190,10 +5190,10 @@ MonoBehaviour:
     AnimationEvent: {fileID: 7397179901052463467}
   - Frame: 160
     AnimationEvent: {fileID: 2786498835590360463}
+  - Frame: 170
+    AnimationEvent: {fileID: 299690073103889238}
   - Frame: 210
     AnimationEvent: {fileID: 3959294366568427519}
-  - Frame: 220
-    AnimationEvent: {fileID: 299690073103889238}
 --- !u!114 &6539683031015164416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5271,9 +5271,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30aa148586dde644daf200dde6eea4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 220
+  frame: 170
   frameEnd: 0
-  cancelItself: 1
+  cancelItself: 0
   cancelSpecial: 1
   cancelType: 
 --- !u!114 &3959294366568427519

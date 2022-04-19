@@ -36,9 +36,11 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 3de577fd699e5234ea506b1555ea251f, type: 3}
   cardName: Mystic song
   cardType: 1
-  cardDescription: A ether wave stunning the opponent.
+  cardDescription: An ether wave stunning the opponent.
   attackManager: {fileID: 818057835518184039, guid: 9177a70212697954a82aaabd4ffd9276,
     type: 3}
+  colorOutline: {r: 0, g: 0, b: 0, a: 0}
+  colorCardBackground: {r: 0, g: 0, b: 0, a: 0}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   maxProbability: 0

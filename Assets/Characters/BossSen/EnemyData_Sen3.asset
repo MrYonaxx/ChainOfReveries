@@ -15,15 +15,12 @@ MonoBehaviour:
   characterFace: {fileID: 21300000, guid: acd5e7aca1cb3994fa06dc276da38671, type: 3}
   characterName: Sen II
   characterDescription: 'Sen is quick so it will be hard to react to his attack and
-    Card Break him.
+    Card Break him. Keep an eye on his hand when he runs to you and use a card with
+    a stronger value.
 
 
-    Keep an eye on his hand when he run to you and use a card
-    with a stronger value.
-
-
-    His Sleight Shining Veil cannot be dodge, so save
-    some zero card.'
+    His Sleight Shining Veil cannot be dodged, so save some
+    zero card.'
   characterStat:
     hp: 9999
     HPMax:
@@ -164,8 +161,8 @@ MonoBehaviour:
   - cardEquipment: {fileID: 11400000, guid: 93c96cf8179666a4cb68c844e8b7c0ba, type: 2}
     probability: 100
   loreDescription: "Once Sen learnt the true intent of Lia, he tried to stop her
-    and Oneiros from breaking the Reverie. He defeat Lia with the help of Nelys and
-    the power that the Reverie's Chim\xE8re herself bestowed upon him.\n\nBut at
-    the time, they didn't know that Lia was trying to destroy the Reverie to free
+    and Oneiros from breaking the Reverie. He defeats Lia with the help of Nelys
+    and the power that the Reverie's Chim\xE8re herself bestowed upon him.\n\nBut
+    at the time, they didn't know that Lia was trying to destroy the Reverie to free
     the Reality from it, and that Oneiros true objective was to destroy the current
     Reverie to create his own."

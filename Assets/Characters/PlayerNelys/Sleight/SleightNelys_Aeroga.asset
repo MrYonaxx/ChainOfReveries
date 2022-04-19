@@ -12,11 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc0d50e517eba5d4dba18568d80634f5, type: 3}
   m_Name: SleightNelys_Aeroga
   m_EditorClassIdentifier: 
-  sleightName: Aeroga
-  sleightDescription: '[Discard] Create a powerfull storm the size of the entire
-    battlefied.
+  sleightName: Aero EX
+  sleightDescription: '[Discard] Create a powerful storm the size of the entire battlefield.
 
-    Discard two cards. The discarded cards are banish.'
+    Discard
+    two cards. The discarded cards are banished.'
   sleightValue: {x: 0, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: 5401ed1ff54670541bbcd13d44a37836, type: 2}

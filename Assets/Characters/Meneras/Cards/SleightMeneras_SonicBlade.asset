@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SleightMeneras_SonicBlade
   m_EditorClassIdentifier: 
   sleightName: Sonic Blade
-  sleightDescription: 7 successive charge assault very fast but with poor vertical
+  sleightDescription: 7 successive charge assault very fast, but with a poor vertical
     range.
   sleightValue: {x: 0, y: 27}
   sleightRecipe:

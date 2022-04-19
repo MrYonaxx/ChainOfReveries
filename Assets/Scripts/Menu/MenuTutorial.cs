@@ -112,9 +112,9 @@ namespace Menu
                 input.InputA.ResetBuffer();
                 ValidateEntry(listEntry.IndexSelection);
             }
-            else if (input.InputB.Registered)
+            else if (input.InputB.Registered || (GameSettings.Keyboard && input.InputY.Registered))
             {
-                input.InputB.ResetBuffer();
+                input.ResetAllBuffer();
                 QuitMenu(); 
                 StartCoroutine(QuitCoroutine());
             }
@@ -162,6 +162,7 @@ namespace Menu
 
         private IEnumerator QuitCoroutine()
         {
+            AudioManager.Instance.StopMusic(1f);
             inputController.enabled = false;
             fade.gameObject.SetActive(true);
             yield return new WaitForSeconds(1f);

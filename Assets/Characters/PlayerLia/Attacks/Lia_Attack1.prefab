@@ -383,7 +383,7 @@ MonoBehaviour:
     type: 3}
   onlyHitStopOpponent: 0
   hitStop: 0.15
-  knockbackDurationMultiplier: 0.5
+  knockbackDurationMultiplier: 0.6
   knockbackX: 2
   knockbackZ: 5
   knockbackInvulnerability: 0.1

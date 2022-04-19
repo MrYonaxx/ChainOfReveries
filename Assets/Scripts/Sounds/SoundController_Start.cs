@@ -16,5 +16,10 @@ namespace VoiceActing
             soundStart.PlaySound();
         }
 
+        public void PlaySound()
+        {
+            soundStart.PlaySound();
+        }
+
     }
 }

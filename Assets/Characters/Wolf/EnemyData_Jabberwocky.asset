@@ -19,7 +19,7 @@ MonoBehaviour:
 
     The
     phantom wolves can attack without using a card, so keep an eye on them even if
-    the jabberwock is in your combo.'
+    the Jabberwock is in your combo.'
   characterStat:
     hp: 2700
     HPMax:
@@ -93,5 +93,5 @@ MonoBehaviour:
     baseCardValue: 0
   sleightDatabase: []
   initialEquipment: []
-  loreDescription: "Jabberwocky are mythical creatures created by Phob\xE9ta. The
-    legend say that they eat people's worst memories to lift them from their burdens."
+  loreDescription: "Jabberwocky is a mythical creature created by Phob\xE9ta. The
+    legend says that he eats people's worst memories to lift them from their burdens."

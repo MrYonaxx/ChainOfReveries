@@ -126,9 +126,9 @@ namespace Menu
 				input.InputA.ResetBuffer();
 				ValidateEntry(listEntry.IndexSelection * columnMax + listEntryHorizontal.IndexSelection);
 			}
-			else if (input.InputB.Registered)
+			else if (input.InputB.Registered || (GameSettings.Keyboard && input.InputY.Registered))
 			{
-				input.InputB.ResetBuffer();
+				input.ResetAllBuffer();
 				QuitMenu();
 			}
 		}

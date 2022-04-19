@@ -12,9 +12,75 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 178eb1b213c518446b61a1240e1f7051, type: 3}
   m_Name: DeckLiaPvP-Gravity
   m_EditorClassIdentifier: 
-  deckName: PVP
+  deckName: Sun
   initialDeck:
-  - cardData: {fileID: 11400000, guid: b791867dff9a415489bdc1158e05c612, type: 2}
+  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+    baseCardValue: 6
+  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+    baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+    baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+    baseCardValue: 3
+  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+    baseCardValue: 2
+  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+    baseCardValue: 1
+  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+    baseCardValue: 1
+  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+    baseCardValue: 1
+  - cardData: {fileID: 11400000, guid: 51dba9fc2b28f8347a0e45427d1d22c8, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: 51dba9fc2b28f8347a0e45427d1d22c8, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: 51dba9fc2b28f8347a0e45427d1d22c8, type: 2}
+    baseCardValue: 3
+  - cardData: {fileID: 11400000, guid: c8c0b6a797a9c2d47a3290e52c4e3c2f, type: 2}
+    baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: c8c0b6a797a9c2d47a3290e52c4e3c2f, type: 2}
+    baseCardValue: 3
+  - cardData: {fileID: 11400000, guid: c8c0b6a797a9c2d47a3290e52c4e3c2f, type: 2}
+    baseCardValue: 2
+  - cardData: {fileID: 11400000, guid: c8c0b6a797a9c2d47a3290e52c4e3c2f, type: 2}
+    baseCardValue: 1
+  - cardData: {fileID: 11400000, guid: 4315a76c1c846b547808fcf93ff8a247, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: 4315a76c1c846b547808fcf93ff8a247, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: 4315a76c1c846b547808fcf93ff8a247, type: 2}
+    baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: 3452fe8437a72fd4f8a2c76779779134, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: 3452fe8437a72fd4f8a2c76779779134, type: 2}
+    baseCardValue: 3
+  - cardData: {fileID: 11400000, guid: 3452fe8437a72fd4f8a2c76779779134, type: 2}
+    baseCardValue: 1
+  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
     baseCardValue: 0
   premiumCardID: 
-  initialEquipment: []
+  initialEquipment:
+  - cardEquipment: {fileID: 11400000, guid: 9a364f419e43abf4ba509d89d7cb8e74, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: be3c3bc1437ed45468ec623e75dc7c43, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: d27fa7c0e89503a479797fe01e9cf892, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: a257d6fb9b290a04cb5bfa9d75acff1b, type: 2}
+    probability: 100

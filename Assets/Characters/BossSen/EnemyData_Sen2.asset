@@ -15,15 +15,12 @@ MonoBehaviour:
   characterFace: {fileID: 21300000, guid: acd5e7aca1cb3994fa06dc276da38671, type: 3}
   characterName: Sen II
   characterDescription: 'Sen is quick so it will be hard to react to his attack and
-    Card Break him.
+    Card Break him. Keep an eye on his hand when he runs to you and use a card with
+    a stronger value.
 
 
-    Keep an eye on his hand when he run to you and use a card
-    with a stronger value.
-
-
-    His Sleight Shining Veil cannot be dodge, so save
-    some zero card.'
+    His Sleight Shining Veil cannot be dodged, so save some
+    zero card.'
   characterStat:
     hp: 7200
     HPMax:

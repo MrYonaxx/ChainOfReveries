@@ -33,10 +33,12 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 5a7e1c28a7318144fa0c70f3949c499a, type: 3}
   cardName: Attack
   cardType: 0
-  cardDescription: '[Combo] A basic attack in front of you. Can combo with certain
-    Magic Card.'
+  cardDescription: '[Combo] A basic attack in front of you. Modified if play after
+    certain Magic cards or Sleights.'
   attackManager: {fileID: 818057835518184039, guid: 185b9235ae38c664a857ff0c7351f93d,
     type: 3}
+  colorOutline: {r: 0, g: 0, b: 0, a: 0}
+  colorCardBackground: {r: 0, g: 0, b: 0, a: 0}
   cardProbability: 00000000640000006400000064000000640000006400000064000000640000006400000064000000
   breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   maxProbability: 900

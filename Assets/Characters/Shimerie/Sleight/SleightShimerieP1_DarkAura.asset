@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sleightName: Dark Aura
   sleightDescription: A deadly assault on a target from all 4 directions. The value
-    of the attack weaken before the final hit.
+    of the attack weakens before the final hit.
   sleightValue: {x: 0, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: a858ba144080f6e48976897b31959d29, type: 2}

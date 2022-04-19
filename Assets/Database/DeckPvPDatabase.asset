@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8d6b0afa31f68e342a71f15ce9bc5e41, type: 3}
+  m_Name: DeckPvPDatabase
+  m_EditorClassIdentifier: 
+  deckProfiles:
+  - PlayerData: {fileID: 11400000, guid: 02afca26a085403478824fba51632d71, type: 2}
+    DeckDatas:
+    - {fileID: 11400000, guid: b9f9e09d4fb5bae4cb2a530477ca1054, type: 2}
+    - {fileID: 11400000, guid: a857c5911c583fb4da66fe784e87d330, type: 2}
+  - PlayerData: {fileID: 11400000, guid: aba76329a080111419f5cd9df7ffd119, type: 2}
+    DeckDatas:
+    - {fileID: 11400000, guid: b9fb0986f1a192d449fd4f916e5846b0, type: 2}
+    - {fileID: 11400000, guid: e524efb350d382647a5ba1e1cb7c4443, type: 2}
+  - PlayerData: {fileID: 11400000, guid: b2b36011f1c8ed947aa42203acf2994b, type: 2}
+    DeckDatas:
+    - {fileID: 11400000, guid: de844336a4a4a0346b16cb181caa0894, type: 2}
+    - {fileID: 11400000, guid: 993c07499af59dc4bb90b4c4701fc214, type: 2}

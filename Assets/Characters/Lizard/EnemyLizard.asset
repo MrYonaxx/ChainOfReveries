@@ -18,8 +18,7 @@ MonoBehaviour:
 
 
     Wait
-    for them to approach before Card breaking their attacks or use attacks with huge
-    range.'
+    for them to approach and Card Break their attacks, or use attacks with huge range.'
   characterStat:
     hp: 1000
     HPMax:
@@ -97,4 +96,4 @@ MonoBehaviour:
   sleightDatabase: []
   initialEquipment: []
   loreDescription: Creatures roaming all around Mynsa, Lizards are not really dangerous.
-    They only attacks people when they feel threatened.
+    They only attack people when they feel threatened.

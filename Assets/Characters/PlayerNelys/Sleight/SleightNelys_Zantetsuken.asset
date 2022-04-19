@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sleightName: Zantetsuken
   sleightDescription: '[Banish] A slash attack banishing the cards of a Card Break.
-    Damage are proportional to the opponents cards banished.'
+    Damage are proportional to the opponent''s cards banished.'
   sleightValue: {x: 0, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: 01329ed212cb45f4bbadd2cabd790778, type: 2}

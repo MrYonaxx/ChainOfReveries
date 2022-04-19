@@ -33,10 +33,12 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 790a5caaa3e047745b4c43ee271da194, type: 3}
   cardName: Holy
   cardType: 1
-  cardDescription: '[Discard] A projectile of Ether that tracks and predict the opponent
-    movement unless he doesn''t move.'
+  cardDescription: '[Discard] A projectile of Ether that tracks and predict the opponent''s
+    movement, unless he doesn''t move.'
   attackManager: {fileID: 818057835518184039, guid: 0ac43e9453018a946ab3ad91ac1bfe51,
     type: 3}
+  colorOutline: {r: 0, g: 0, b: 0, a: 0}
+  colorCardBackground: {r: 0, g: 0, b: 0, a: 0}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   maxProbability: 0

@@ -107,6 +107,7 @@ namespace VoiceActing
         bool activeStick = false;
         bool focusDeckDrawer = false;
         bool equipmentActive = false;
+        int keyboardSelection = 0;
         List<Card> cardRewards = new List<Card>();
 
         #endregion
@@ -147,6 +148,8 @@ namespace VoiceActing
                 textHP.text = "+" + hpRestore + " HP";
             else
                 textHP.text = "Skip";
+
+            keyboardSelection = 99;
 
             StartCoroutine(BattleRewardCoroutine());
         }
@@ -220,26 +223,41 @@ namespace VoiceActing
                 return;
 
             // Input pour valider
-            if (buttonHoldControllerA.HoldButton(input.InputA.InputValue == 1 ? true : false)) 
-                AddReward(99); // Skip
-            else if (buttonHoldControllerX.HoldButton(input.InputX.InputValue == 1 ? true : false))
-                AddReward(1);
-            else if (buttonHoldControllerY.HoldButton(input.InputY.InputValue == 1 ? true : false))
-                AddReward(0);
-            else if (buttonHoldControllerB.HoldButton(input.InputB.InputValue == 1 ? true : false))
-                AddReward(2);
-            else if (focusDeckDrawer == false)
+            if (!GameSettings.Keyboard)
+            {
+                if (buttonHoldControllerA.HoldButton(input.InputA.InputValue == 1 ? true : false))
+                    AddReward(99); // Skip
+                else if (buttonHoldControllerX.HoldButton(input.InputX.InputValue == 1 ? true : false))
+                    AddReward(1);
+                else if (buttonHoldControllerY.HoldButton(input.InputY.InputValue == 1 ? true : false))
+                    AddReward(0);
+                else if (buttonHoldControllerB.HoldButton(input.InputB.InputValue == 1 ? true : false))
+                    AddReward(2);
+            }
+
+            if (focusDeckDrawer == false)
             {
                 if (activeStick == false)
                     return;
 
+                UpdateKeyboard(input);
+
                 // Input pour description
                 if (input.InputLeftStickX.InputValue < -deadzone && Mathf.Abs(input.InputLeftStickY.InputValue) < deadzone)
-                    DescriptionReward(1);
+                {
+                    KeyboardSelec(1);
+                    DescriptionReward(1); 
+                }
                 else if (input.InputLeftStickX.InputValue > deadzone && Mathf.Abs(input.InputLeftStickY.InputValue) < deadzone)
+                {
                     DescriptionReward(2);
+                    KeyboardSelec(2);
+                }
                 else if (input.InputLeftStickY.InputValue > deadzone && Mathf.Abs(input.InputLeftStickX.InputValue) < deadzone)
+                {
                     DescriptionReward(0);
+                    KeyboardSelec(0);
+                }
 
                 if (input.InputRB.Registered)
                 {
@@ -250,14 +268,14 @@ namespace VoiceActing
             }
             else if (focusDeckDrawer) // le menu deck est ouvert
             {
-                menuDeckDrawer.UpdateControl(input); 
-                
+                menuDeckDrawer.UpdateControl(input);
+
                 if (input.InputRB.Registered)// && equipmentActive)
                 {
                     // ferme le menu
                     menuDeckDrawer.gameObject.SetActive(false);
                     focusDeckDrawer = false;
-                    input.InputRB.ResetBuffer(); 
+                    input.InputRB.ResetBuffer();
                     equipmentActive = false;
                 }
                 /*else if (input.InputRB.Registered)
@@ -345,7 +363,7 @@ namespace VoiceActing
 
         private IEnumerator BattleRewardEndCoroutine()
         {
-            yield return new WaitForSeconds(1f);
+            yield return new WaitForSeconds(0.5f);
             animatorBattleWin.gameObject.SetActive(false);
             canvasReward.gameObject.SetActive(false);
             OnEventEnd.Invoke();
@@ -370,6 +388,33 @@ namespace VoiceActing
                 }
                 //menuDeckDrawer.CardTypeData
                 menuDeckDrawer.DrawDeck(deckEquipment);
+            }
+        }
+
+        private void KeyboardSelec(int index)
+        {
+            keyboardSelection = index;
+        }
+
+        private void UpdateKeyboard(InputController input)
+        {
+            if(GameSettings.Keyboard)
+            {
+                if(input.InputA.InputValue == 1)
+                {
+                    /*if (keyboardSelection == 3)
+                        AddReward(99); // Skip*/
+                    if (keyboardSelection == 1)
+                        AddReward(1);
+                    else if (keyboardSelection == 0)
+                        AddReward(0);
+                    else if (keyboardSelection == 2)
+                        AddReward(2);
+                }
+                else if (input.InputB.Registered)
+                {
+                    AddReward(99);  
+                }
             }
         }
 

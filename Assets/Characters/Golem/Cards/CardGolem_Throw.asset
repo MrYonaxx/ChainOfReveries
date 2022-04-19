@@ -33,10 +33,11 @@ MonoBehaviour:
   cardSprite: {fileID: 0}
   cardName: Throw
   cardType: 0
-  cardDescription: '[Throw] Grab the opponent and slam him on the ground before throwing
-    him away.'
+  cardDescription: 
   attackManager: {fileID: 818057835518184039, guid: 4baf362299687384e85adddc9355eb90,
     type: 3}
+  colorOutline: {r: 0, g: 0, b: 0, a: 0}
+  colorCardBackground: {r: 0, g: 0, b: 0, a: 0}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   maxProbability: 0

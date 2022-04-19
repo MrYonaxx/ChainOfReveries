@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterFace: {fileID: 0}
   characterName: Jitte
-  characterDescription: The role of the Jitte is not to kill, but neutralize. Their
-    counter card need to be card breaked by playing a card with a value inferior
-    to their counter.
+  characterDescription: The role of the Jitte is not to kill, but neutralize. So
+    retain yourself from playing a Card when they use their [Counter] or you will
+    get stunned.
   characterStat:
-    hp: 2700
+    hp: 0.6579439
     HPMax:
       baseValue: 2200
       finalValue: 2200
@@ -91,5 +91,5 @@ MonoBehaviour:
   sleightDatabase: []
   initialEquipment: []
   loreDescription: Peacekeepers of Mynsa, the role of the Jittes (named after their
-    weapon), is to maintain order in the city of Mynsa. Since they need to assured
+    weapon), is to maintain order in the city of Mynsa. Since they need to assure
     the security of citizens, they are the ones the most monitored by the Reverie.

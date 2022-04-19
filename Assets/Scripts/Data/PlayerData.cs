@@ -82,7 +82,7 @@ namespace VoiceActing
             // Check si c'est premium 
             bool isPremium = false;
             r = Random.Range(0, 100);
-            if (r < 2) // 2% de chance de gacha une carte premium
+            if (r < 1) // 1% de chance de gacha une carte premium
                 isPremium = true;
 
             return new Card(cardProbability[i].CardData, cardProbability[i].CardData.GetRandomCardValue(), isPremium);

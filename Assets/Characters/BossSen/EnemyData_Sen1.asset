@@ -15,15 +15,12 @@ MonoBehaviour:
   characterFace: {fileID: 21300000, guid: acd5e7aca1cb3994fa06dc276da38671, type: 3}
   characterName: Sen
   characterDescription: 'Sen is quick so it will be hard to react to his attack and
-    Card Break him.
+    Card Break him. Keep an eye on his hand when he runs to you and use a card with
+    a stronger value.
 
 
-    Keep an eye on his hand when he run to you and use a card
-    with a stronger value.
-
-
-    His Sleight Shining Veil cannot be dodge, so save
-    some zero card.'
+    His Sleight Shining Veil cannot be dodged, so save some
+    zero card.'
   characterStat:
     hp: 4499
     HPMax:
@@ -114,5 +111,5 @@ MonoBehaviour:
   initialEquipment: []
   loreDescription: Sen was a normal boy from a small town in Mynsa. When Lia was
     on Oneiros side, she used him to interact directly with the Reality without passing
-    by the Reverie. By doing so, Lia has shared a part of her powers with Sen, giving
+    by the Reverie. By doing so, Lia has shared a part of her power with Sen, giving
     him the ability to break free from the Reverie.

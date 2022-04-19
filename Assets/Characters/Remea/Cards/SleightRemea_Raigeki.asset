@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SleightRemea_Raigeki
   m_EditorClassIdentifier: 
   sleightName: Raigeki
-  sleightDescription: Remea jump in the air, unleashing lightning strike on the arena.
-    She then falls to the ground creating a massive thunder.
+  sleightDescription: Jump in the air, unleashing lightning strikes on the arena.
+    Then falls to the ground, creating a massive thunder.
   sleightValue: {x: 0, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: b920cadb90aa92f428c5c33ac54f6dfc, type: 2}

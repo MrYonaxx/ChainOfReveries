@@ -33,9 +33,11 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 574f24afab935054eb0b5b81aa3fb139, type: 3}
   cardName: Explosion
   cardType: 1
-  cardDescription: Auto destroy yourself and deal massive damage.
+  cardDescription: Auto destroys yourself and deal massive damage.
   attackManager: {fileID: 818057835518184039, guid: 9a88b3ba2a2b1d6408e8d482aa5a015d,
     type: 3}
+  colorOutline: {r: 0, g: 0, b: 0, a: 0}
+  colorCardBackground: {r: 0, g: 0, b: 0, a: 0}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   maxProbability: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SleightShimerieP2_StormDream
   m_EditorClassIdentifier: 
   sleightName: Storm Dream
-  sleightDescription: Create a devastating barrage of blade.  This attack can only
+  sleightDescription: Create a devastating barrage of blades.  This attack can only
     be Card Break by a Ivory Star card.
   sleightValue: {x: 0, y: 27}
   sleightRecipe:

@@ -216,7 +216,7 @@ namespace Menu
                     inConfig = true;
                 }
             }
-            else if (inputs.InputB.Registered)
+            else if (inputs.InputB.Registered || (GameSettings.Keyboard && inputs.InputY.Registered))
             {
                 inputs.ResetAllBuffer();
                 QuitMenu();
@@ -303,7 +303,7 @@ namespace Menu
             indexOptions[indexDeckThumbnail] = PlayerPrefs.GetInt("DeckThumbnail", 0);*/
 
             // 0 = hide, 1 = Hide player only, 2 = Hide boss, 3 = show
-            indexOptions[indexShowCardValue] = PlayerPrefs.GetInt("CardValue", 3);
+            indexOptions[indexShowCardValue] = PlayerPrefs.GetInt("CardValue", 2);
 
             // 0 = fast, 1 = fast player only, 2 = long
             indexOptions[indexEquipmentTime] = PlayerPrefs.GetInt("EquipmentTime", 1);

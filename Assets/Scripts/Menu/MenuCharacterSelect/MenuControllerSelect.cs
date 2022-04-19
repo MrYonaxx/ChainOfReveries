@@ -41,6 +41,8 @@ namespace VoiceActing
 
         [SerializeField]
         Animator animatorMenu = null;
+        [SerializeField]
+        Sprite keyboardSprite = null;
 
         [Title("Sounds")]
         [SerializeField]
@@ -76,6 +78,11 @@ namespace VoiceActing
                     inputControllers[i].SetID(i);
                     inputControllers[i].SetControllable(this, true);
                     joystickInput.Add(false);
+
+                    if(ReInput.players.Players[i].controllers.hasKeyboard)
+                    {
+                        cardControllers[i].DrawCard(keyboardSprite, Color.black, i+1);
+                    }
                 }
                 else
                 {
@@ -143,9 +150,22 @@ namespace VoiceActing
                 gameData.SetControllerID(1, player1ID);
                 gameData.SetControllerID(2, player2ID);
 
+                GameSettings.Keyboard = false;
+                // Ici on reset la config manette si on est au clavier pour ne pas désorienter le joueur clavier 
+                if (ReInput.players.Players[player1ID].controllers.hasKeyboard)
+                {
+                    gameData.GetInputConfig(1).Reset();
+                    GameSettings.Keyboard = true;
+                }
+                if (player2ID != -1)
+                {
+                    if (ReInput.players.Players[player2ID].controllers.hasKeyboard)
+                        gameData.GetInputConfig(2).Reset();
+                }
+
                 OnStart?.Invoke();
             } 
-            else if (input.InputB.Registered)
+            else if (input.InputB.Registered || (GameSettings.Keyboard && input.InputY.Registered))
             {
                 // Return
                 input.ResetAllBuffer();

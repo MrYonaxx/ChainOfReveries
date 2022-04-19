@@ -36,10 +36,12 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: aea239418ed0fbf4c94edecab1df32e0, type: 3}
   cardName: 
   cardType: 0
-  cardDescription: '[Unbreakable] A dash followed by a powerfull slash. The Unbreakable
-    effect disappear after the dash. '
+  cardDescription: '[Unbreakable] A dash followed by a powerful slash. The Unbreakable
+    effect disappears just before the strike.'
   attackManager: {fileID: 818057835518184039, guid: 658d27d6d72ea794095ab70d01e9b967,
     type: 3}
+  colorOutline: {r: 0, g: 0, b: 0, a: 0}
+  colorCardBackground: {r: 0, g: 0, b: 0, a: 0}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   maxProbability: 0

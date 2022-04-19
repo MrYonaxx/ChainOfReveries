@@ -91,6 +91,131 @@ MonoBehaviour:
   time: 1
   scale: 1.5
   color: {r: 0, g: 1, b: 0, a: 1}
+--- !u!1 &2803819970815498918
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1872453843797340977}
+  - component: {fileID: 5082100016364049109}
+  - component: {fileID: 1671933884223118766}
+  - component: {fileID: 1589446252066526367}
+  - component: {fileID: 7242832644440848249}
+  - component: {fileID: 2005898126767713022}
+  m_Layer: 0
+  m_Name: Sound
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1872453843797340977
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2803819970815498918}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 248121844606041498}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5082100016364049109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2803819970815498918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 20
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 9065e23491fbe5943829feac7e7a13bd, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
+--- !u!114 &1671933884223118766
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2803819970815498918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 110
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 31372907b6b6b104aac3111ec88417bf, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
+--- !u!114 &1589446252066526367
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2803819970815498918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 128
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 3e38345d43720d446a7491d3d2b967e6, type: 3}
+    volume: 1
+    pitch: {x: 1, y: 1}
+--- !u!114 &7242832644440848249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2803819970815498918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 190
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 31372907b6b6b104aac3111ec88417bf, type: 3}
+    volume: 0.8
+    pitch: {x: 1, y: 1}
+--- !u!114 &2005898126767713022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2803819970815498918}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 208
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: 3e38345d43720d446a7491d3d2b967e6, type: 3}
+    volume: 1
+    pitch: {x: 1, y: 1}
 --- !u!1 &3720685875369100543
 GameObject:
   m_ObjectHideFlags: 0
@@ -129,6 +254,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4606112463397650937}
+  - {fileID: 1872453843797340977}
   m_Father: {fileID: 5842096757366747166}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -162,18 +288,24 @@ MonoBehaviour:
   AnimatorDebug: {fileID: 677981557941761528}
   AnimationClipDebug: {fileID: 7400000, guid: da92de6132f0aee4c96bb75100737ada, type: 2}
   frameData:
+  - Frame: 20
+    AnimationEvent: {fileID: 5082100016364049109}
   - Frame: 104
     AnimationEvent: {fileID: 6346854788333110273}
   - Frame: 104
     AnimationEvent: {fileID: 2379276520207160763}
   - Frame: 110
+    AnimationEvent: {fileID: 1671933884223118766}
+  - Frame: 110
     AnimationEvent: {fileID: 5975666561339688349}
   - Frame: 115
     AnimationEvent: {fileID: 8393234715981724393}
-  - Frame: 130
-    AnimationEvent: {fileID: 7841372400918292397}
+  - Frame: 128
+    AnimationEvent: {fileID: 1589446252066526367}
   - Frame: 130
     AnimationEvent: {fileID: 4461643240352555985}
+  - Frame: 130
+    AnimationEvent: {fileID: 7841372400918292397}
   - Frame: 131
     AnimationEvent: {fileID: 3467270024188063017}
   - Frame: 135
@@ -183,25 +315,29 @@ MonoBehaviour:
   - Frame: 160
     AnimationEvent: {fileID: 7121442718285632230}
   - Frame: 184
-    AnimationEvent: {fileID: 1616956830870139672}
-  - Frame: 184
     AnimationEvent: {fileID: 955198340819609998}
+  - Frame: 184
+    AnimationEvent: {fileID: 1616956830870139672}
+  - Frame: 190
+    AnimationEvent: {fileID: 7242832644440848249}
   - Frame: 190
     AnimationEvent: {fileID: 527869907975304807}
   - Frame: 195
     AnimationEvent: {fileID: 6927876209599182740}
-  - Frame: 210
-    AnimationEvent: {fileID: 8682532158764648064}
+  - Frame: 208
+    AnimationEvent: {fileID: 2005898126767713022}
   - Frame: 210
     AnimationEvent: {fileID: 18092868824922393}
+  - Frame: 210
+    AnimationEvent: {fileID: 8682532158764648064}
   - Frame: 215
     AnimationEvent: {fileID: 7023353754995495308}
   - Frame: 225
     AnimationEvent: {fileID: 5516130604845978188}
   - Frame: 240
-    AnimationEvent: {fileID: 2524242894598313049}
-  - Frame: 240
     AnimationEvent: {fileID: 5467208582360629185}
+  - Frame: 240
+    AnimationEvent: {fileID: 2524242894598313049}
 --- !u!114 &4461643240352555985
 MonoBehaviour:
   m_ObjectHideFlags: 0

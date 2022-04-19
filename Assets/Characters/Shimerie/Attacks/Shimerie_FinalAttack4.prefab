@@ -10409,6 +10409,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4447634331033485785}
   - component: {fileID: 5971968484759461143}
+  - component: {fileID: 2550825422180957178}
   m_Layer: 0
   m_Name: Cinematic
   m_TagString: Untagged
@@ -10455,6 +10456,24 @@ MonoBehaviour:
   - 180
   - 900000
   smoothZoom: 1
+--- !u!114 &2550825422180957178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2795367051272228313}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 2500
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: ed27cc37fae16d24f874d67bd2f293c0, type: 3}
+    volume: 1
+    pitch: {x: 1, y: 1}
 --- !u!1 &3720685875369100543
 GameObject:
   m_ObjectHideFlags: 0
@@ -10524,6 +10543,8 @@ MonoBehaviour:
     AnimationEvent: {fileID: 6264479581214944808}
   - Frame: 0
     AnimationEvent: {fileID: 5971968484759461143}
+  - Frame: 2500
+    AnimationEvent: {fileID: 2550825422180957178}
   - Frame: 2800
     AnimationEvent: {fileID: 422043204435950550}
 --- !u!114 &6264479581214944808

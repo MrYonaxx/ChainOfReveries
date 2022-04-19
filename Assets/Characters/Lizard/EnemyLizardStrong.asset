@@ -19,9 +19,9 @@ MonoBehaviour:
 
     Having
     his deck filled with low value cards, you need to hit the Lizard as soon as you
-    card break them, or else they will retaliate with a zero card.'
+    Card Break them, or else they will retaliate with a zero card.'
   characterStat:
-    hp: 2000
+    hp: 0.19626169
     HPMax:
       baseValue: 1600
       finalValue: 1600
@@ -101,4 +101,4 @@ MonoBehaviour:
   sleightDatabase: []
   initialEquipment: []
   loreDescription: Creatures roaming all around Mynsa, Lizards are not really dangerous.
-    They only attacks people when they feel threatened.
+    They only attack people when they feel threatened.

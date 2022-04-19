@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SleightNelys_EmberPetals
   m_EditorClassIdentifier: 
   sleightName: Ember Petals
-  sleightDescription: A fast dash followed by multiple explosion.
+  sleightDescription: A fast dash followed by multiple explosions.
   sleightValue: {x: 0, y: 13}
   sleightRecipe:
   - {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}

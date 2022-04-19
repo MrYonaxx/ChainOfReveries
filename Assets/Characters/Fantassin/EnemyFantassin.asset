@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterFace: {fileID: 0}
   characterName: Fantassin
-  characterDescription: Fantassin have in their deck an Unbreakable card. This means
-    that you cannot Card Break those attacks, except with an Unbreakable Card.
+  characterDescription: Fantassin have in their deck an [Unbreakable] card. This
+    means that you cannot Card Break those attacks, except with an Unbreakable Card.
   characterStat:
     hp: 4000
     HPMax:
@@ -98,5 +98,5 @@ MonoBehaviour:
   sleightDatabase: []
   initialEquipment: []
   loreDescription: Soldier of Mynsa, they are the armed force of the country. They
-    are trained to killed monsters or to be deployed in case of a nation wide crisis,
+    are trained to kill monsters or to be deployed in case of a nationwide crisis,
     like a war.

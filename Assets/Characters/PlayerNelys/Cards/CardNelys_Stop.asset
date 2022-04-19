@@ -33,9 +33,11 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: c46091ab1a499524b8dfbea2af22bba4, type: 3}
   cardName: Stop
   cardType: 1
-  cardDescription: Create a small bubble around you, stopping enemy inside it.
+  cardDescription: Create a small bubble around you, stopping enemies inside it.
   attackManager: {fileID: 818057835518184039, guid: 29a386e3429f77b44a34f7da0e6f3447,
     type: 3}
+  colorOutline: {r: 0, g: 0, b: 0, a: 0}
+  colorCardBackground: {r: 0, g: 0, b: 0, a: 0}
   cardProbability: 64000000640000006400000064000000640000006400000064000000640000006400000064000000
   breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   maxProbability: 1000

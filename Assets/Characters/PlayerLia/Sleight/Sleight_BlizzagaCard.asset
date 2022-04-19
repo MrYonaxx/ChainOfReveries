@@ -28,11 +28,13 @@ MonoBehaviour:
       Entry: 6
       Data: 
   cardSprite: {fileID: 0}
-  cardName: Blizzaga
+  cardName: Blizzard EX
   cardType: 1
   cardDescription: 
   attackManager: {fileID: 818057835518184039, guid: f87020bf7aab4c446b6d28890e0928bb,
     type: 3}
+  colorOutline: {r: 0, g: 0, b: 0, a: 0}
+  colorCardBackground: {r: 0, g: 0, b: 0, a: 0}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   maxProbability: 0

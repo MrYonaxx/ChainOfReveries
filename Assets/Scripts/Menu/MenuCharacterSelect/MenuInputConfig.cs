@@ -5,6 +5,7 @@ using UnityEngine.UI;
 using VoiceActing;
 using TMPro;
 using Sirenix.OdinInspector;
+using Rewired;
 
 namespace Menu
 {
@@ -29,9 +30,12 @@ namespace Menu
         [SerializeField]
         Animator animatorMenu = null;
 
+        [Title("Keyboard")]
+        [SerializeField]
+        GameObject sorry = null;
 
         bool inInput = false;
-
+        bool isKeyboard = false;
 
         public override void InitializeMenu()
         {
@@ -42,6 +46,13 @@ namespace Menu
             animatorMenu.gameObject.SetActive(true);
             animatorMenu.SetBool("Appear", true);
             //listEntry.SetItemCount(buttonModifiable.Length + 2);
+
+            isKeyboard = false;
+            if (ReInput.players.GetPlayer(gameData.GetControllerID(configID)).controllers.hasKeyboard)
+            {
+                sorry.gameObject.SetActive(true);
+                isKeyboard = true;
+            }
         }
 
         private void DrawConfig()
@@ -59,6 +70,17 @@ namespace Menu
 
         public override void UpdateControl(InputController input)
         {
+            if(isKeyboard)
+            {
+                if (input.InputY.Registered || input.InputA.Registered)
+                {
+                    input.ResetAllBuffer();
+                    QuitMenu();
+                }
+                return;
+            }
+
+
             if (inInput) // En input pour changer un bouton
             {
                 if (listEntry.InputListVertical(input.InputLeftStickY.InputValue) == true) // On s'est déplacé dans la liste

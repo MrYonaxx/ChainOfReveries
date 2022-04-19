@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   characterFace: {fileID: 0}
   characterName: Pourpre
-  characterDescription: "Pourpre can create powerful wind blade by flapping his wings
-    making him hard to approach. \n\nHis ultimate attack Gust of Renewal deal no
-    damage but scatter your deck if hit. If you don't card break him afterward, he
-    will restore his health to the maximum."
+  characterDescription: "Pourpre can create powerful wind blades by flapping his
+    wings, making him hard to approach. \n\nHis ultimate attack Gust of Renewal deals
+    no damage, but scatter your deck if hit. If you don't card break him afterward,
+    he will restore his health to the maximum."
   characterStat:
     hp: 4499
     HPMax:
@@ -117,4 +117,4 @@ MonoBehaviour:
   initialEquipment: []
   loreDescription: "Phoenix is a fictional creature created by the Chim\xE8re Phob\xE9ta
     in order to help the manipulation of the Reality's inhabitant. They are used
-    as pretext, for covering the weird scenarios, sometimes caused by the Reverie."
+    as a pretext, for covering the weird scenarios, sometimes caused by the Reverie."

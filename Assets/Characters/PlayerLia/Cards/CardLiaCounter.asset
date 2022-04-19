@@ -37,9 +37,12 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: b35e7cb4761848c4492bf5252ad3c474, type: 3}
   cardName: Counter
   cardType: 0
-  cardDescription: '[Counter]'
+  cardDescription: '[Counter] If the enemy plays a Card, dash towards him and deal
+    a powerful blow.'
   attackManager: {fileID: 5407148728326394564, guid: 7395105477ad9b04da51ccb944f76077,
     type: 3}
+  colorOutline: {r: 0, g: 0, b: 0, a: 0}
+  colorCardBackground: {r: 0, g: 0, b: 0, a: 0}
   cardProbability: 64000000640000006400000064000000640000006400000064000000640000006400000064000000
   breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   maxProbability: 1000

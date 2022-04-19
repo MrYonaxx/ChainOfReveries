@@ -33,9 +33,11 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: aea239418ed0fbf4c94edecab1df32e0, type: 3}
   cardName: Reflet
   cardType: 0
-  cardDescription: '[Heavy]'
+  cardDescription: '[Unbreakable] Jump in the air and slam violently the ground.'
   attackManager: {fileID: 818057835518184039, guid: 56fb8b6c50b75064ba67e8200299432d,
     type: 3}
+  colorOutline: {r: 0, g: 0, b: 0, a: 0}
+  colorCardBackground: {r: 0, g: 0, b: 0, a: 0}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   maxProbability: 0

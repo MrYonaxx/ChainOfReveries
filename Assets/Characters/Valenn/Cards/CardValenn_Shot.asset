@@ -33,9 +33,11 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: b8eb211a18540244191dea0fb5924d6f, type: 3}
   cardName: Shot
   cardType: 0
-  cardDescription: '[Combo] Shoot an arrow. Combo arrow have different speed.'
+  cardDescription: '[Combo] Shoot an arrow. Combo arrow has a different speed.'
   attackManager: {fileID: 818057835518184039, guid: 1460c73e624a3dc4998d80f445ddfa57,
     type: 3}
+  colorOutline: {r: 0, g: 0, b: 0, a: 0}
+  colorCardBackground: {r: 0, g: 0, b: 0, a: 0}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   maxProbability: 0

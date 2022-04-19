@@ -15,11 +15,11 @@ MonoBehaviour:
   characterFace: {fileID: 0}
   characterName: Slime
   characterDescription: 'Slimes are weak to thunder as their body is made of water.
-    But this unique property can make them intangible during a card break.
+    But this unique property can make them intangible during a Card Break.
 
 
     So
-    rather than card breaking them, avoid their movements and counterattack.'
+    avoid their movements and counterattack.'
   characterStat:
     hp: 1500
     HPMax:
@@ -91,5 +91,5 @@ MonoBehaviour:
 
 
     While they can damage people, they
-    are not a serious threat. In fact, childrens consider them like toys and like
+    are not a serious threat. In fact, children consider them like toys and like
     to splash them.'

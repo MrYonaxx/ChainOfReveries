@@ -215,7 +215,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 8
+  frame: 28
   frameEnd: 0
   sound:
     sound: {fileID: 8300000, guid: 113e5eb13afc6ac4dbbe4b668edec963, type: 3}
@@ -233,7 +233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 10
+  frame: 30
   frameEnd: 0
   sound:
     sound: {fileID: 8300000, guid: 2accb501d7f2e524994d32a4ce9d3ec5, type: 3}
@@ -351,9 +351,9 @@ MonoBehaviour:
   AnimatorDebug: {fileID: 677981557941761528}
   AnimationClipDebug: {fileID: 7400000, guid: a4e535d7717fd6c4caaa3126007e61a9, type: 2}
   frameData:
-  - Frame: 8
+  - Frame: 28
     AnimationEvent: {fileID: 6548060126528745650}
-  - Frame: 10
+  - Frame: 30
     AnimationEvent: {fileID: 4200970828337729809}
   - Frame: 33
     AnimationEvent: {fileID: 4461643240352555985}
@@ -515,7 +515,7 @@ Transform:
   m_GameObject: {fileID: 4388082830208477171}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 6202298799396831511}
   m_RootOrder: 0
@@ -559,7 +559,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2668256926799863960, guid: f2e4f95b6e3f7d34aaf6e6680a174220,
+  m_Sprite: {fileID: 7161644265044542691, guid: f2e4f95b6e3f7d34aaf6e6680a174220,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

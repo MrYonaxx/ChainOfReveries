@@ -91,5 +91,5 @@ MonoBehaviour:
     baseCardValue: 8
   sleightDatabase: []
   initialEquipment: []
-  loreDescription: Mushroom's spores create weird hallucination when inhaled. Fortunately,
+  loreDescription: Mushroom spores create weird hallucinations when inhaled. Fortunately,
     those hallucinations can also be modified by the Reverie.

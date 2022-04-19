@@ -169,6 +169,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: 9f62f586e82c77a4697a56d2cb531d0d,
         type: 3}
+    - target: {fileID: 9219024559366097419, guid: 0c8a573567cb81740916761e2d5cca9f,
+        type: 3}
+      propertyPath: BattleTheme
+      value: 
+      objectReference: {fileID: 8300000, guid: 676a3b6412d192c47a8e1b6e99bfb78b, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0c8a573567cb81740916761e2d5cca9f, type: 3}
 --- !u!4 &2952716009354312896 stripped

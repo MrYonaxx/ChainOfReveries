@@ -1038,6 +1038,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8029482437989257776}
+  - component: {fileID: 6426746880353756179}
   - component: {fileID: 8119291673654506173}
   - component: {fileID: 9158596426514695405}
   - component: {fileID: 7999806674907963854}
@@ -1064,6 +1065,18 @@ Transform:
   m_Father: {fileID: 7223938451310515680}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &6426746880353756179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4778746383534956570}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcfd459820a65234fbea7ef7ed5e9918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &8119291673654506173
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1082,9 +1095,9 @@ MonoBehaviour:
   hitStop: 0.3
   knockbackDurationMultiplier: 1.1
   knockbackX: 0
-  knockbackZ: 12
+  knockbackZ: 10
   knockbackInvulnerability: 0.4
-  revengeValue: 5
+  revengeValue: 3
 --- !u!114 &9158596426514695405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1792,6 +1805,7 @@ MonoBehaviour:
   - {fileID: 6419365401153669355}
   attackComponents:
   - {fileID: 8196585805890138008}
+  - {fileID: 6426746880353756179}
   - {fileID: 8119291673654506173}
   - {fileID: 9158596426514695405}
   - {fileID: 7999806674907963854}

@@ -99,7 +99,7 @@ namespace Menu
         {
             if (cardSelected.Count == nbToSelect)
             {
-                if (holdController.HoldButton(input.InputY.InputValue == 1))
+                if (holdController.HoldButton(input.InputY.InputValue == 1 || (GameSettings.Keyboard && input.InputA.Registered)))
                 {
                     soundValidate.PlaySound();
                     buttonSynthesize.gameObject.SetActive(false);
@@ -109,7 +109,7 @@ namespace Menu
                 }
             }
 
-            if (input.InputB.Registered)
+            if (input.InputB.Registered || (GameSettings.Keyboard && input.InputY.Registered))
             {
                 if (cardSelected.Count == 0)
                 {

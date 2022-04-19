@@ -19,6 +19,8 @@ namespace Menu
         [Title("Feedbacks")]
         [SerializeField]
         Animator animatorReady = null;
+        [SerializeField]
+        Animator fade = null;
 
         [Title("")]
         [SerializeField]
@@ -65,7 +67,7 @@ namespace Menu
 
             if(count >= waitCount)
             {
-                if(input.InputStart.Registered)
+                if(input.InputStart.Registered || input.InputA.Registered)
                 {
                     active = false;
                     StartCoroutine(StartGameCoroutine());
@@ -94,6 +96,9 @@ namespace Menu
 
         private IEnumerator StartGameCoroutine()
         {
+
+            fade.gameObject.SetActive(true);
+            AudioManager.Instance.StopMusic(2f);
             yield return new WaitForSeconds(2f);
             UnityEngine.SceneManagement.SceneManager.LoadScene(scene);
         }
