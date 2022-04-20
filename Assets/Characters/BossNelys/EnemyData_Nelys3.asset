@@ -136,7 +136,7 @@ MonoBehaviour:
   - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
     baseCardValue: 9
   - cardData: {fileID: 11400000, guid: 9d3a8e533d6a0f741bc42e9ea9a81429, type: 2}
-    baseCardValue: 7
+    baseCardValue: 0
   - cardData: {fileID: 11400000, guid: d270b5d635b905b4f9d3a33889936c58, type: 2}
     baseCardValue: 3
   - cardData: {fileID: 11400000, guid: f7fd926a0ae25c74593e7315564bc6ad, type: 2}

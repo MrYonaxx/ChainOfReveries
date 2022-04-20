@@ -95,7 +95,7 @@ namespace VoiceActing
             cardBreakManager.OnCardIneffective += CallbackCardIneffective;
             cardBreakManager.OnCardRemove += CallbackHideCard;
 
-            showSleight = PlayerPrefs.GetInt("SleightName");
+            showSleight = PlayerPrefs.GetInt("SleightName", 1);
         }
 
         private void OnDestroy()

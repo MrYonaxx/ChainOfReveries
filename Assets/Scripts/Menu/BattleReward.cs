@@ -163,7 +163,6 @@ namespace VoiceActing
                 cardRewards.Add(gameRunData.PlayerCharacterData.CreateCharacterNewCard());
                 if (rewardPremium)
                     cardRewards[i].CardPremium = true;
-                //cardControllers[i].DrawCard(cardRewards[i], cardBattleType);
             }
 
             // Si 2 cartes ont la même valeur plutot que de refaire un tirage en banissant les cartes qu'on a
@@ -363,7 +362,7 @@ namespace VoiceActing
 
         private IEnumerator BattleRewardEndCoroutine()
         {
-            yield return new WaitForSeconds(0.5f);
+            yield return new WaitForSeconds(1f);
             animatorBattleWin.gameObject.SetActive(false);
             canvasReward.gameObject.SetActive(false);
             OnEventEnd.Invoke();

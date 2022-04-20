@@ -5099,7 +5099,7 @@ MonoBehaviour:
     AnimationEvent: {fileID: 6911136579649486962}
   - Frame: 135
     AnimationEvent: {fileID: 8558702849590395157}
-  - Frame: 155
+  - Frame: 190
     AnimationEvent: {fileID: 3959294366568427519}
 --- !u!114 &5416915307580105885
 MonoBehaviour:
@@ -5174,7 +5174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620e0e815b2f5174f8b380210d9a19f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 155
+  frame: 190
   frameEnd: 0
 --- !u!1 &4114098666737907609
 GameObject:
@@ -5245,7 +5245,7 @@ MonoBehaviour:
   knockbackX: 0
   knockbackZ: 1
   knockbackInvulnerability: 0.5
-  revengeValue: 1
+  revengeValue: 5
 --- !u!114 &4068512414465658664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5384,8 +5384,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4388082830208477171}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.04700029, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 2}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 6202298799396831511}
   m_RootOrder: 0
@@ -5429,7 +5429,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 54bf0836c19e0cc4596ab074c0e8da07, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 72892d98f556c194db65c19f50a5834e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5623,8 +5623,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackProcessor: 0
   cardDamage:
-    cardDamage: b0040000b0040000b0040000b0040000b0040000b0040000b0040000b0040000b0040000b0040000
-    debugDamage: {x: 1200, y: 1200}
+    cardDamage: e8030000e8030000e8030000e8030000e8030000e8030000e8030000e8030000e8030000e8030000
+    debugDamage: {x: 1000, y: 1000}
     ignoreStatsMultiplier: 0
   cardStatus:
     statusDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

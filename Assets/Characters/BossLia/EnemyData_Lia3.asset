@@ -73,7 +73,7 @@ MonoBehaviour:
   salut: 
   initialDeck:
   - cardData: {fileID: 11400000, guid: 74238e063424aac41ba71f65681afab8, type: 2}
-    baseCardValue: 5
+    baseCardValue: 0
   - cardData: {fileID: 11400000, guid: ca470fedd826f0c4f9087d86137df10b, type: 2}
     baseCardValue: 1
   - cardData: {fileID: 11400000, guid: ba00a2b9ad3321d489f066aefec00ffd, type: 2}
@@ -93,7 +93,7 @@ MonoBehaviour:
   - cardData: {fileID: 11400000, guid: ba00a2b9ad3321d489f066aefec00ffd, type: 2}
     baseCardValue: 3
   - cardData: {fileID: 11400000, guid: 74238e063424aac41ba71f65681afab8, type: 2}
-    baseCardValue: 6
+    baseCardValue: 1
   - cardData: {fileID: 11400000, guid: ba00a2b9ad3321d489f066aefec00ffd, type: 2}
     baseCardValue: 0
   - cardData: {fileID: 11400000, guid: bbe2098b083e32747ac41c5e2ff4b6b3, type: 2}
@@ -115,7 +115,7 @@ MonoBehaviour:
   - cardData: {fileID: 11400000, guid: ba00a2b9ad3321d489f066aefec00ffd, type: 2}
     baseCardValue: 1
   - cardData: {fileID: 11400000, guid: ca470fedd826f0c4f9087d86137df10b, type: 2}
-    baseCardValue: 9
+    baseCardValue: 0
   - cardData: {fileID: 11400000, guid: 063d9c558da3ee846a630adab660880f, type: 2}
     baseCardValue: 1
   - cardData: {fileID: 11400000, guid: ba00a2b9ad3321d489f066aefec00ffd, type: 2}
@@ -145,7 +145,7 @@ MonoBehaviour:
   - cardData: {fileID: 11400000, guid: 74238e063424aac41ba71f65681afab8, type: 2}
     baseCardValue: 0
   - cardData: {fileID: 11400000, guid: ca470fedd826f0c4f9087d86137df10b, type: 2}
-    baseCardValue: 8
+    baseCardValue: 9
   - cardData: {fileID: 11400000, guid: 74238e063424aac41ba71f65681afab8, type: 2}
     baseCardValue: 3
   - cardData: {fileID: 11400000, guid: 063d9c558da3ee846a630adab660880f, type: 2}

@@ -2620,11 +2620,11 @@ MonoBehaviour:
   character: {fileID: 3011987555262169760}
   soundFirstDown:
     sound: {fileID: 8300000, guid: 6dd2326599e9c2b4d913e24553443530, type: 3}
-    volume: 0.8
+    volume: 0.7
     pitch: {x: 1.1, y: 1.2}
   soundSecondDown:
     sound: {fileID: 8300000, guid: 6dd2326599e9c2b4d913e24553443530, type: 3}
-    volume: 1
+    volume: 0.8
     pitch: {x: 1, y: 1}
   soundPrepareSleight:
     sound: {fileID: 8300000, guid: 0ba8673803ca32f4280dc2d12a136843, type: 3}

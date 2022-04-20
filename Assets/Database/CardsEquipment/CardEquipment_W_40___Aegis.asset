@@ -26,7 +26,7 @@ MonoBehaviour:
   cardType: 0
   cardDescription: 'Nullify front damage.
 
-    (5 Hit)'
+    (3 Hit)'
   statsModifier: []
   statusEffectPassive: {fileID: 0}
   equipmentAction: {fileID: 818057835518184039, guid: 971d891aa08a3d74baf5f67b6da459b8,

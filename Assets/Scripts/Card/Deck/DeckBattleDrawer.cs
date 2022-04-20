@@ -296,6 +296,10 @@ namespace VoiceActing
                 {
                     cardControllers[i] = cardControllers[i + 1];
                     cardControllers[i + 1].MoveCard(transformsHand[i], cardSpeed);
+
+                    // on décale le sprite comme il faut
+                    if (cardSpriteOffset.Length > i)
+                        cardControllers[i].MoveCardSprite(cardSpriteOffset[i]);
                 }
 
 
@@ -311,6 +315,11 @@ namespace VoiceActing
                 {
                     cardControllers[handLimitMax - 1] = cardControllers[handLimitMin];
                     cardControllers[handLimitMax - 1].MoveCard(transformsHand[handLimitMax - 1], cardSpeed);
+
+                    // on décale le sprite comme il faut
+                    if (cardSpriteOffset.Length > handLimitMax - 1)
+                        cardControllers[handLimitMax - 1].MoveCardSprite(cardSpriteOffset[handLimitMax - 1]);
+
                     cardControllers[handLimitMin] = cardTemp;
                     cardControllers[handLimitMin].HideCard();
                     handLimitMin += 1;

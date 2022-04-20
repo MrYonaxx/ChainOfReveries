@@ -26,7 +26,10 @@ MonoBehaviour:
       Data: 
     - Name: cardBreakComponent
       Entry: 7
-      Data: 0|VoiceActing.CardBreakThrow, Assembly-CSharp
+      Data: 0|VoiceActing.CardBreakUnbreakable, Assembly-CSharp
+    - Name: trueUnbreakable
+      Entry: 5
+      Data: true
     - Name: 
       Entry: 8
       Data: 
@@ -36,6 +39,8 @@ MonoBehaviour:
   cardDescription: 
   attackManager: {fileID: 818057835518184039, guid: b0f115551b9b4e64691271a0fd270e4a,
     type: 3}
+  colorOutline: {r: 0, g: 0, b: 0, a: 0}
+  colorCardBackground: {r: 0, g: 0, b: 0, a: 0}
   cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   maxProbability: 0

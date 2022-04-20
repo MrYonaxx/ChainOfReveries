@@ -4857,12 +4857,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   onHitAnimation: {fileID: 855764348832698739, guid: 0e3579f836ba86e4184709fb09a02100,
     type: 3}
+  onlyHitStopOpponent: 0
   hitStop: 0
   knockbackDurationMultiplier: 1
   knockbackX: 0
   knockbackZ: 0
-  revengeValue: 0
   knockbackInvulnerability: 2
+  revengeValue: 0
 --- !u!1 &1998124599452590865
 GameObject:
   m_ObjectHideFlags: 0
@@ -4956,6 +4957,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   targetAtStart: 1
   targetRandom: 0
+  targetAtUpdate: 0
   randomX: {x: -6, y: 6}
   randomY: {x: -1, y: 2}
 --- !u!114 &1140446846467577204
@@ -4999,6 +5001,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   stateID: 3
   throwTransform: {fileID: 0}
+  canMove: 0
 --- !u!95 &2673946990517881318
 Animator:
   serializedVersion: 3
@@ -5101,9 +5104,9 @@ MonoBehaviour:
     AnimationEvent: {fileID: 4332658517488161004}
   - Frame: 180
     AnimationEvent: {fileID: 661199165771725368}
-  - Frame: 300
+  - Frame: 240
     AnimationEvent: {fileID: 1882561155325605646}
-  - Frame: 300
+  - Frame: 240
     AnimationEvent: {fileID: 3009710401109224338}
 --- !u!114 &1177075195994153726
 MonoBehaviour:
@@ -5176,7 +5179,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7023d36a5a707f54ab43129002da8d03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 300
+  frame: 240
   frameEnd: 0
   attack: {fileID: 818057835518184039}
 --- !u!114 &3009710401109224338
@@ -5191,7 +5194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620e0e815b2f5174f8b380210d9a19f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 300
+  frame: 240
   frameEnd: 0
 --- !u!1 &3969075473762389496
 GameObject:
@@ -5415,6 +5418,13 @@ MonoBehaviour:
     ignoreElementalStat: 0
   damage:
     baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
+  backdamage:
+    baseDamage: 100
+    ignoreStatsMultiplier: 0
+  banDamage:
+    damagePerBan: 100
     attackType: 0
     ignoreStatsMultiplier: 0
 --- !u!1 &5514856180129303472
@@ -5819,7 +5829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frame: 0
-  frameEnd: 300
+  frameEnd: 240
   zoomOnCharacter: 0
   zoomCamera: 1
   zoomValue:
@@ -5830,8 +5840,8 @@ MonoBehaviour:
   zoomTime:
   - 1
   - 120
-  - 80
-  - 80
+  - 60
+  - 40
   smoothZoom: 1
 --- !u!114 &661199165771725368
 MonoBehaviour:

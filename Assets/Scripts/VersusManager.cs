@@ -84,7 +84,18 @@ namespace VoiceActing
         // Start is called before the first frame update
         void Start()
         {
+            dataP1.PlayerEquipmentData.Clear();
+            for (int i = 0; i < dataP1.PlayerDeckData.InitialEquipment.Length; i++)
+            {
+                dataP1.PlayerEquipmentData.Add(dataP1.PlayerDeckData.InitialEquipment[i].cardEquipment);
+            }
             dataP1.CreateRunData();
+
+            dataP2.PlayerEquipmentData.Clear();
+            for (int i = 0; i < dataP2.PlayerDeckData.InitialEquipment.Length; i++)
+            {
+                dataP2.PlayerEquipmentData.Add(dataP2.PlayerDeckData.InitialEquipment[i].cardEquipment);
+            }
             dataP2.CreateRunData();
             StartCoroutine(IntroCoroutine());
         }
@@ -139,6 +150,8 @@ namespace VoiceActing
             comboCount2.SetCharacter(character2);
 
             battleManager.InitializeBattle(character1, character2);
+            character1.CharacterEquipment.SetWeaponDeck(dataP1.PlayerEquipmentDeck);
+            character2.CharacterEquipment.SetWeaponDeck(dataP2.PlayerEquipmentDeck);
 
             battleManager.OnEventBattleEnd += Win;
 
@@ -150,13 +163,13 @@ namespace VoiceActing
             battleManager.OnEventBattleEnd -= Win;
             if (character1 == loser)
             {
-                textPlayer.text += " 1";
+                textPlayer.text += " 2";
                 imageCharacterWinner.sprite = dataP2.PlayerCharacterData.SpriteProfile;
                 character2.Inputs.SetControllable(this, true);
             }
             if (character2 == loser)
             {
-                textPlayer.text += " 2";
+                textPlayer.text += " 1";
                 imageCharacterWinner.sprite = dataP1.PlayerCharacterData.SpriteProfile;
                 character1.Inputs.SetControllable(this, true);
             }
