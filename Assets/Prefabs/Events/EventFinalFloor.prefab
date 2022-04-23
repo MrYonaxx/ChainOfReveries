@@ -2137,7 +2137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameRunData: {fileID: 11400000, guid: 1aae71d6d0b174646afb7b05a8a06b1f, type: 2}
-  hpRecover: 0.4
+  hpRecover: 0.3
   campAnimator: {fileID: 7323639844299401613}
   buttonPrompt: {fileID: 5012376098834127654}
 --- !u!95 &7323639844299401613

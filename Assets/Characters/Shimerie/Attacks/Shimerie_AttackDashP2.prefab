@@ -290,7 +290,7 @@ MonoBehaviour:
   frameData:
   - Frame: 20
     AnimationEvent: {fileID: 5082100016364049109}
-  - Frame: 104
+  - Frame: 103
     AnimationEvent: {fileID: 6346854788333110273}
   - Frame: 104
     AnimationEvent: {fileID: 2379276520207160763}
@@ -314,10 +314,10 @@ MonoBehaviour:
     AnimationEvent: {fileID: 7555094243861549864}
   - Frame: 160
     AnimationEvent: {fileID: 7121442718285632230}
+  - Frame: 183
+    AnimationEvent: {fileID: 1616956830870139672}
   - Frame: 184
     AnimationEvent: {fileID: 955198340819609998}
-  - Frame: 184
-    AnimationEvent: {fileID: 1616956830870139672}
   - Frame: 190
     AnimationEvent: {fileID: 7242832644440848249}
   - Frame: 190
@@ -383,7 +383,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4f6a358ed9a7e144a09bd7df2c0bb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 104
+  frame: 103
   frameEnd: 0
 --- !u!114 &2379276520207160763
 MonoBehaviour:
@@ -419,7 +419,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4f6a358ed9a7e144a09bd7df2c0bb63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 184
+  frame: 183
   frameEnd: 0
 --- !u!114 &955198340819609998
 MonoBehaviour:

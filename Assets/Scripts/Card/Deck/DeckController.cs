@@ -202,6 +202,8 @@ namespace VoiceActing
             {
                 currentIndex = deck.Count-1;
             }
+            if (currentIndex < 0)
+                currentIndex = 0;
             RefreshDeck();
         }
 

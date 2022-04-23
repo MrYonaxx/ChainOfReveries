@@ -5097,7 +5097,7 @@ MonoBehaviour:
     AnimationEvent: {fileID: 788604361356259592}
   - Frame: 75
     AnimationEvent: {fileID: 6911136579649486962}
-  - Frame: 135
+  - Frame: 150
     AnimationEvent: {fileID: 8558702849590395157}
   - Frame: 190
     AnimationEvent: {fileID: 3959294366568427519}
@@ -5972,7 +5972,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf29bae8d6a9743927604b4178c1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 135
+  frame: 150
   frameEnd: 0
   moveForward: 0
   speed: {x: 0, y: 0}

@@ -19,9 +19,9 @@ namespace VoiceActing
         [SerializeField]
         [SuffixLabel("en frames")]
         float timeDown = 60;
-        [SerializeField]
+        /*[SerializeField]
         [SuffixLabel("en frames")]
-        float timeInvulnerable = 30;
+        float timeInvulnerable = 30;*/
 
         [Title("Friction")]
         [SerializeField]
@@ -39,7 +39,7 @@ namespace VoiceActing
         {
             timeFriction /= 60f;
             timeDown /= 60f;
-            timeInvulnerable /= 60f;
+            //timeInvulnerable /= 60f;
         }
 
         public override void StartState(CharacterBase character, CharacterState oldState)

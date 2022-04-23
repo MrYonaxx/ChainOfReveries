@@ -348,7 +348,7 @@ namespace VoiceActing
             if(knockbackTime <= 0 && revengeValue > 0 && character.MotionSpeed != 0)
             {
                 // Serializer la valeur de reduction
-                AddRevengeValue(-0.8f * Time.deltaTime);
+                AddRevengeValue(-0.6f * Time.deltaTime);
             }
         }
 

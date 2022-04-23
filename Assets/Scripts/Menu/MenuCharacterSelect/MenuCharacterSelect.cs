@@ -166,5 +166,10 @@ namespace Menu
             imageCharacterOutline.sprite = imageCharacter.sprite;
             imageCharacterOutline.SetNativeSize();
         }
+
+        public PlayerData GetSelectedData()
+        {
+            return playerDatas[listEntry.IndexSelection];
+        }
     }
 }

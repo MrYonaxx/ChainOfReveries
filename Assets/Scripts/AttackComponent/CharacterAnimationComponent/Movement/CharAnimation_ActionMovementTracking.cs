@@ -38,7 +38,7 @@ namespace VoiceActing
             direction.Normalize();
             direction *= speed;
             direction *= Time.deltaTime;
-            attackController.transform.position += new Vector3(direction.x, direction.y, direction.y);
+            attackController.transform.position += (new Vector3(direction.x, direction.y, direction.y) * character.MotionSpeed);
             if (rotate)
             {
                 attackController.transform.localEulerAngles = new Vector3(0, 0, -Vector2.SignedAngle(direction, Vector2.right * attackController.transform.lossyScale.x));

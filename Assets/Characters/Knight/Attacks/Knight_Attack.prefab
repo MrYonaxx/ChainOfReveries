@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3033484806284040124}
+  - component: {fileID: 7021294849841836280}
   - component: {fileID: 7406093635845558607}
   - component: {fileID: 682005552262368794}
   - component: {fileID: 3442780613631255007}
@@ -33,6 +34,22 @@ Transform:
   m_Father: {fileID: 248121844606041498}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7021294849841836280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 565687993561507469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ca1047c5907ce4c851d7349dcd44a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 0
+  frameEnd: 0
+  direction: 0
+  turnToTarget: 1
 --- !u!114 &7406093635845558607
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -195,6 +212,8 @@ MonoBehaviour:
   AnimatorDebug: {fileID: 677981557941761528}
   AnimationClipDebug: {fileID: 7400000, guid: 8929e6fe242c53c4ca92df41ba4549c4, type: 2}
   frameData:
+  - Frame: 0
+    AnimationEvent: {fileID: 7021294849841836280}
   - Frame: 25
     AnimationEvent: {fileID: 7251924132513439396}
   - Frame: 26

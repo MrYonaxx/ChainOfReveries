@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FirstTime: 1
   Timer: 7671.046
-  NbRun: 6
+  NbRun: 7
   NbRunCompleted: 10
-  MaxReverieLevel: 3
-  NbRunCharacters: 040000000100000003000000
+  MaxReverieLevel: 9
+  NbRunCharacters: 040000000100000004000000
   charactersUnlocked: 
   customDecks: 
   P1ControllerID: 1
@@ -26,3 +26,6 @@ MonoBehaviour:
   P2ControllerID: 0
   P2InputConfig:
     Config: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f00000010000000
+  deckLayout: 0
+  backgroundAttackCard: {r: 1, g: 1, b: 1, a: 1}
+  backgroundMagicCard: {r: 1, g: 1, b: 1, a: 1}

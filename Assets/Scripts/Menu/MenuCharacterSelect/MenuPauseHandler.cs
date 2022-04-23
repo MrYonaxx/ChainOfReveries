@@ -28,7 +28,7 @@ namespace Menu
 
         public void UpdateControl(InputController inputController)
         {
-            if(inputController.InputStart.Registered)
+            if(inputController.InputStart.Registered && inputControllerPrevious.isActiveAndEnabled)
             {
                 inputControllerPrevious.enabled = false;
                 inputController.SetControllable(menuPause, true);

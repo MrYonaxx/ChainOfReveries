@@ -211,7 +211,7 @@ MonoBehaviour:
   knockbackX: 5
   knockbackZ: 0
   knockbackInvulnerability: 0.4
-  revengeValue: 3
+  revengeValue: 4
 --- !u!114 &5485531285977804821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -441,6 +441,13 @@ MonoBehaviour:
     baseDamage: 100
     attackType: 0
     ignoreStatsMultiplier: 0
+  backdamage:
+    baseDamage: 100
+    ignoreStatsMultiplier: 0
+  banDamage:
+    damagePerBan: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
 --- !u!114 &7745417635347741896
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -473,6 +480,13 @@ MonoBehaviour:
     ignoreElementalStat: 0
   damage:
     baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
+  backdamage:
+    baseDamage: 100
+    ignoreStatsMultiplier: 0
+  banDamage:
+    damagePerBan: 100
     attackType: 0
     ignoreStatsMultiplier: 0
 --- !u!1 &6664025316910145470

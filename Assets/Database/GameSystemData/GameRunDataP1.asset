@@ -12,10 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3df769c4e1883ed449dd258f4a7531b6, type: 3}
   m_Name: GameRunDataP1
   m_EditorClassIdentifier: 
-  playerCharacterData: {fileID: 11400000, guid: 02afca26a085403478824fba51632d71,
+  playerCharacterData: {fileID: 11400000, guid: b2b36011f1c8ed947aa42203acf2994b,
     type: 2}
-  playerDeckData: {fileID: 11400000, guid: b9f9e09d4fb5bae4cb2a530477ca1054, type: 2}
-  playerEquipmentData: []
+  playerDeckData: {fileID: 11400000, guid: de844336a4a4a0346b16cb181caa0894, type: 2}
+  playerEquipmentData:
+  - {fileID: 11400000, guid: 1119497543f62ad4086564f7bf93d4f7, type: 2}
   playerExplorationData:
   - {fileID: 11400000, guid: d15e3b90d2a853d48b4e6968f7d7f5a9, type: 2}
   - {fileID: 11400000, guid: d15e3b90d2a853d48b4e6968f7d7f5a9, type: 2}
@@ -23,68 +24,68 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 428372b4353492a4992435ff672dd230, type: 2}
   - {fileID: 11400000, guid: ef8e00c5c175d844daebe5dcf2d8b07f, type: 2}
   floorLayout: {fileID: 11400000, guid: 67146230d0b82684f91a3222012c3122, type: 2}
-  reverieLevel: 0
+  reverieLevel: 8
   reverieColor: 010000000000000000000000
   playerDeck:
-  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 8
-  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 7
-  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
-    baseCardValue: 7
-  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 6
-  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 5
-  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 4
-  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
-    baseCardValue: 4
-  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 3
-  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 2
-  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
-    baseCardValue: 1
-  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
-    baseCardValue: 1
-  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
-    baseCardValue: 1
-  - cardData: {fileID: 11400000, guid: 51dba9fc2b28f8347a0e45427d1d22c8, type: 2}
-    baseCardValue: 8
-  - cardData: {fileID: 11400000, guid: 51dba9fc2b28f8347a0e45427d1d22c8, type: 2}
-    baseCardValue: 5
-  - cardData: {fileID: 11400000, guid: 51dba9fc2b28f8347a0e45427d1d22c8, type: 2}
-    baseCardValue: 3
-  - cardData: {fileID: 11400000, guid: b791867dff9a415489bdc1158e05c612, type: 2}
-    baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: b791867dff9a415489bdc1158e05c612, type: 2}
-    baseCardValue: 8
-  - cardData: {fileID: 11400000, guid: b791867dff9a415489bdc1158e05c612, type: 2}
-    baseCardValue: 5
-  - cardData: {fileID: 11400000, guid: b791867dff9a415489bdc1158e05c612, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
     baseCardValue: 2
-  - cardData: {fileID: 11400000, guid: 6365e3a9920ff124481de91a70f61f00, type: 2}
+  - cardData: {fileID: 11400000, guid: d896cc257b34cc14481883dc4456e481, type: 2}
+    baseCardValue: 1
+  - cardData: {fileID: 11400000, guid: 9dba2c554978cc54cb7f9f02f714327b, type: 2}
     baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: 6365e3a9920ff124481de91a70f61f00, type: 2}
-    baseCardValue: 7
-  - cardData: {fileID: 11400000, guid: 6365e3a9920ff124481de91a70f61f00, type: 2}
+  - cardData: {fileID: 11400000, guid: 9dba2c554978cc54cb7f9f02f714327b, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: 9dba2c554978cc54cb7f9f02f714327b, type: 2}
+    baseCardValue: 6
+  - cardData: {fileID: 11400000, guid: 9dba2c554978cc54cb7f9f02f714327b, type: 2}
     baseCardValue: 4
-  - cardData: {fileID: 11400000, guid: 8f96ebeb73ce975409f895a8921a6cdc, type: 2}
+  - cardData: {fileID: 11400000, guid: 9dba2c554978cc54cb7f9f02f714327b, type: 2}
+    baseCardValue: 3
+  - cardData: {fileID: 11400000, guid: 9dba2c554978cc54cb7f9f02f714327b, type: 2}
+    baseCardValue: 2
+  - cardData: {fileID: 11400000, guid: 9dba2c554978cc54cb7f9f02f714327b, type: 2}
+    baseCardValue: 1
+  - cardData: {fileID: 11400000, guid: 8c69639166f1c244dae55e8837d1036f, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: 8c69639166f1c244dae55e8837d1036f, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: 8c69639166f1c244dae55e8837d1036f, type: 2}
+    baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: 8c69639166f1c244dae55e8837d1036f, type: 2}
+    baseCardValue: 3
+  - cardData: {fileID: 11400000, guid: f10306851a5ccc04ba9813bddd022f14, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: f10306851a5ccc04ba9813bddd022f14, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: f10306851a5ccc04ba9813bddd022f14, type: 2}
+    baseCardValue: 1
+  - cardData: {fileID: 11400000, guid: 01329ed212cb45f4bbadd2cabd790778, type: 2}
     baseCardValue: 0
-  - cardData: {fileID: 11400000, guid: 8f96ebeb73ce975409f895a8921a6cdc, type: 2}
+  - cardData: {fileID: 11400000, guid: 01329ed212cb45f4bbadd2cabd790778, type: 2}
     baseCardValue: 0
-  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
-    baseCardValue: 0
-  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
-    baseCardValue: 0
-  - cardData: {fileID: 11400000, guid: 3f590f65dc67c6c4fb520ae1bcb19d0a, type: 2}
+  - cardData: {fileID: 11400000, guid: 01329ed212cb45f4bbadd2cabd790778, type: 2}
     baseCardValue: 0
   playerExplorationDeck:
   - {fileID: 11400000, guid: d15e3b90d2a853d48b4e6968f7d7f5a9, type: 2}

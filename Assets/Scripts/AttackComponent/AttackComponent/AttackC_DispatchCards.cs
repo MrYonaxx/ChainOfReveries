@@ -43,6 +43,7 @@ namespace VoiceActing
                 fieldCard.Initialize(target, c, cardType.GetColorType(c.GetCardType()), posX, posY);
 
                 target.DeckController.Remove(i);
+                target.DeckController.SetIndex(0);
 
                 target.DeckController.RefreshDeck();
 

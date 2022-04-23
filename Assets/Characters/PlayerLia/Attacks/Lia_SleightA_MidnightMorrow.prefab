@@ -5182,7 +5182,7 @@ MonoBehaviour:
     AnimationEvent: {fileID: 5493015938890063566}
   - Frame: 85
     AnimationEvent: {fileID: 5607636949376872467}
-  - Frame: 100
+  - Frame: 95
     AnimationEvent: {fileID: 5298366154388197012}
   - Frame: 120
     AnimationEvent: {fileID: 7307705326008321406}
@@ -5376,7 +5376,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4388082830208477171}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.046793222, y: 0, z: 0}
+  m_LocalPosition: {x: -0.5212821, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6202298799396831511}
@@ -6240,7 +6240,7 @@ MonoBehaviour:
   hitStop: 0.3
   knockbackDurationMultiplier: 1
   knockbackX: 1
-  knockbackZ: 10
+  knockbackZ: 8
   knockbackInvulnerability: 0.1
   revengeValue: 3
 --- !u!114 &4607447225039643303
@@ -6325,7 +6325,7 @@ MonoBehaviour:
   frame: 85
   frameEnd: 0
   moveForward: 1
-  speed: {x: 12, y: 0}
+  speed: {x: 15, y: 0}
   jumpImpulsion: 0
 --- !u!114 &5298366154388197012
 MonoBehaviour:
@@ -6339,7 +6339,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf29bae8d6a9743927604b4178c1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 100
+  frame: 95
   frameEnd: 0
   moveForward: 1
   speed: {x: 2, y: 0}

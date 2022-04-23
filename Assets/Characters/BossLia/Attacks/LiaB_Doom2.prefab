@@ -4859,7 +4859,7 @@ MonoBehaviour:
     type: 3}
   onlyHitStopOpponent: 0
   hitStop: 0
-  knockbackDurationMultiplier: 1
+  knockbackDurationMultiplier: 2
   knockbackX: 0
   knockbackZ: 0
   knockbackInvulnerability: 2

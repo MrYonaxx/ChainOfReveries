@@ -262,7 +262,7 @@ MonoBehaviour:
   frameEnd: 30
   action: {fileID: 818057835518184039, guid: bd00e285f53f54b4caabfab6a8be4690, type: 3}
   spawnPoint: {fileID: 248121844606041498}
-  number: 3
+  number: 1
   rotationInterval: {x: 0, y: 0}
 --- !u!114 &2524242894598313049
 MonoBehaviour:
