@@ -12,14 +12,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434bf688527fc654fb1aaf31068428ae, type: 3}
   m_Name: PlayerLeminaData
   m_EditorClassIdentifier: 
-  characterFace: {fileID: 21300000, guid: acd5e7aca1cb3994fa06dc276da38671, type: 3}
+  characterFace: {fileID: 0}
   characterName: Lemina
   characterDescription: 
   characterStat:
-    hp: 5000
+    hp: 4200
     HPMax:
-      baseValue: 5000
-      finalValue: 5000
+      baseValue: 4200
+      finalValue: 4200
     Attack:
       baseValue: 1
       finalValue: 1
@@ -33,23 +33,23 @@ MonoBehaviour:
       baseValue: 1
       finalValue: 1
     RevengeValue:
-      baseValue: 0
-      finalValue: 0
+      baseValue: 15
+      finalValue: 15
+    RevengeValueRate:
+      baseValue: 1
+      finalValue: 1
     KnockbackTime:
       baseValue: 0.8
       finalValue: 0.8
     ReloadAmount:
-      baseValue: 100
-      finalValue: 100
+      baseValue: 80
+      finalValue: 80
     CardBreakTime:
       baseValue: 0.8
       finalValue: 0.8
-    CardBreakKnockback:
-      baseValue: 0
-      finalValue: 0
     Speed:
-      baseValue: 3.2
-      finalValue: 3.2
+      baseValue: 2.9
+      finalValue: 2.9
     Gravity:
       baseValue: 25
       finalValue: 25
@@ -69,11 +69,6 @@ MonoBehaviour:
   sleightDatabase: []
   initialEquipment: []
   loreDescription: 
-  initialDeckExploration:
-  - {fileID: 11400000, guid: d15e3b90d2a853d48b4e6968f7d7f5a9, type: 2}
-  - {fileID: 11400000, guid: 44d7b7e69c371684a8bcda8858987fd1, type: 2}
-  - {fileID: 11400000, guid: 428372b4353492a4992435ff672dd230, type: 2}
-  - {fileID: 11400000, guid: ef8e00c5c175d844daebe5dcf2d8b07f, type: 2}
   cardProbability:
   - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
     baseCardValue: 700
