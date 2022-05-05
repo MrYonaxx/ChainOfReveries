@@ -35,6 +35,12 @@ TextureImporter:
   - first:
       213: 8197915085397933523
     second: Lemina_Attack02_5
+  - first:
+      213: 8904779408637196517
+    second: Lemina_Attack02_5
+  - first:
+      213: 5497601018467112946
+    second: Lemina_Attack02_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -263,8 +269,29 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3ddb5f3f558d4c170800000000000000
-      internalID: 8197915085397933523
+      spriteID: 5e8780f41b1249b70800000000000000
+      internalID: 8904779408637196517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Lemina_Attack02_6
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 100
+        height: 100
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f7de8eaff66b4c40800000000000000
+      internalID: 5497601018467112946
       vertices: []
       indices: 
       edges: []

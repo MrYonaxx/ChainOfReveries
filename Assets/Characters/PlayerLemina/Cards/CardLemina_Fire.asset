@@ -34,7 +34,7 @@ MonoBehaviour:
   cardName: Fire
   cardType: 1
   cardDescription: Shoot a fireball in front of you.
-  attackManager: {fileID: 818057835518184039, guid: 2dded249d77fdc14dab8fb8ca6e59826,
+  attackManager: {fileID: 818057835518184039, guid: 38ccd81c91963834eb83eece0697aa95,
     type: 3}
   colorOutline: {r: 0, g: 0, b: 0, a: 0}
   colorCardBackground: {r: 0, g: 0, b: 0, a: 0}

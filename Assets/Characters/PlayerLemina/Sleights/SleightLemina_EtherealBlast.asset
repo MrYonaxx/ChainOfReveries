@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc0d50e517eba5d4dba18568d80634f5, type: 3}
-  m_Name: SleightLemina_RadiantDeliverance
+  m_Name: SleightLemina_EtherealBlast
   m_EditorClassIdentifier: 
-  sleightName: Ethereal Spear
-  sleightDescription: Only in Ether Install. Giga explosion, consume Ether Install.
-  sleightValue: {x: 0, y: 0}
+  sleightName: Ethereal Blast
+  sleightDescription: Only in Ether Install.
+  sleightValue: {x: 10, y: 18}
   sleightRecipe:
-  - {fileID: 11400000, guid: 690777df947d4ea49858cc18969642ac, type: 2}
+  - {fileID: 11400000, guid: f8536f3ca1a5e0b45b94f56e1ef7ff89, type: 2}
+  - {fileID: 11400000, guid: f8536f3ca1a5e0b45b94f56e1ef7ff89, type: 2}
+  - {fileID: 11400000, guid: f8536f3ca1a5e0b45b94f56e1ef7ff89, type: 2}
   sleightAttackData: {fileID: 0}

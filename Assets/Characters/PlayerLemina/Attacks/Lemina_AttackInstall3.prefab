@@ -7,10 +7,40 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 818057835518184039, guid: 6e82b9f19f7ccaa4892f1b6252194b74,
+        type: 3}
+      propertyPath: attackAnimation
+      value: 
+      objectReference: {fileID: 7400000, guid: 113c29574f91d874eabdf8bf17f64525, type: 2}
+    - target: {fileID: 818057835518184039, guid: 6e82b9f19f7ccaa4892f1b6252194b74,
+        type: 3}
+      propertyPath: nameID
+      value: Lemina_AttackInstall3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2524242894598313049, guid: 6e82b9f19f7ccaa4892f1b6252194b74,
+        type: 3}
+      propertyPath: frame
+      value: 59
+      objectReference: {fileID: 0}
+    - target: {fileID: 4670453683040411876, guid: 6e82b9f19f7ccaa4892f1b6252194b74,
+        type: 3}
+      propertyPath: frameData.Array.data[5].Frame
+      value: 59
+      objectReference: {fileID: 0}
     - target: {fileID: 4733904636063077261, guid: 6e82b9f19f7ccaa4892f1b6252194b74,
         type: 3}
       propertyPath: attackComponents.Array.size
-      value: 3
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 4733904636063077261, guid: 6e82b9f19f7ccaa4892f1b6252194b74,
+        type: 3}
+      propertyPath: attackComponents.Array.data[3]
+      value: 
+      objectReference: {fileID: 2614696329859695911}
+    - target: {fileID: 5485531285977804821, guid: 6e82b9f19f7ccaa4892f1b6252194b74,
+        type: 3}
+      propertyPath: shakeTime
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 5842096757366747166, guid: 6e82b9f19f7ccaa4892f1b6252194b74,
         type: 3}
@@ -72,6 +102,12 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lemina_AttackInstall3
       objectReference: {fileID: 0}
+    - target: {fileID: 5989073775763222001, guid: 6e82b9f19f7ccaa4892f1b6252194b74,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 8197915085397933523, guid: 0d6adc02f7937f34bb0bc582e3927a6f,
+        type: 3}
     - target: {fileID: 6024610480447657897, guid: 6e82b9f19f7ccaa4892f1b6252194b74,
         type: 3}
       propertyPath: knockbackX
@@ -82,7 +118,34 @@ PrefabInstance:
       propertyPath: hitStop
       value: 0.1
       objectReference: {fileID: 0}
+    - target: {fileID: 6024610480447657897, guid: 6e82b9f19f7ccaa4892f1b6252194b74,
+        type: 3}
+      propertyPath: knockbackZ
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6024610480447657897, guid: 6e82b9f19f7ccaa4892f1b6252194b74,
+        type: 3}
+      propertyPath: revengeValue
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7284589822210834423, guid: 6e82b9f19f7ccaa4892f1b6252194b74,
+        type: 3}
+      propertyPath: cancelItself
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7124353190535626810, guid: 6e82b9f19f7ccaa4892f1b6252194b74, type: 3}
     - {fileID: 3038956696660573783, guid: 6e82b9f19f7ccaa4892f1b6252194b74, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 6e82b9f19f7ccaa4892f1b6252194b74, type: 3}
+--- !u!114 &2614696329859695911 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 7994571997292071786, guid: 6e82b9f19f7ccaa4892f1b6252194b74,
+    type: 3}
+  m_PrefabInstance: {fileID: 5384942492966653517}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3766ec83f6f11974c87417d967ff9a8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

@@ -59,7 +59,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2520948011644738657}
   - component: {fileID: 3040624544842275496}
-  - component: {fileID: 5519744741247330545}
   m_Layer: 9
   m_Name: AttackMainComponents
   m_TagString: Untagged
@@ -94,22 +93,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   keepMomentum: 0
---- !u!114 &5519744741247330545
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2469241746260582066}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8c6aa37d0e8caab45b8edadde17b4b4b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  previousAttacks:
-  - {fileID: 818057835518184039}
-  attackToCombos:
-  - {fileID: 818057835518184039, guid: 19fdc1c47eb1a1b4e96c9b89f52c46b5, type: 3}
 --- !u!1 &3720685875369100543
 GameObject:
   m_ObjectHideFlags: 0
@@ -289,7 +272,7 @@ MonoBehaviour:
   knockbackX: 4
   knockbackZ: 0
   knockbackInvulnerability: 0.3
-  revengeValue: 3
+  revengeValue: 1
 --- !u!114 &5485531285977804821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -397,7 +380,7 @@ GameObject:
   - component: {fileID: 5842096757366747166}
   - component: {fileID: 818057835518184039}
   m_Layer: 9
-  m_Name: Lemina_Attack2
+  m_Name: Lemina_AttackInstall2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -433,7 +416,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035f334978101924ea5aae883ccf84f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameID: Lemina_Attack2
+  nameID: Lemina_AttackInstall2
   attackAnimation: {fileID: 7400000, guid: 591e8566b08dac3408c404a34fe005d6, type: 2}
   characterAnimationData: {fileID: 4670453683040411876}
   linkToCharacter: 1
@@ -595,7 +578,6 @@ MonoBehaviour:
   - {fileID: 8140847405492643985}
   attackComponents:
   - {fileID: 3040624544842275496}
-  - {fileID: 5519744741247330545}
   - {fileID: 6024610480447657897}
   - {fileID: 5485531285977804821}
 --- !u!1 &7197704365641121891

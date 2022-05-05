@@ -34,7 +34,7 @@ MonoBehaviour:
   cardName: Thunder
   cardType: 1
   cardDescription: A fast lightning strike on an enemy.
-  attackManager: {fileID: 818057835518184039, guid: 9d690c7705a016f47a9d22d1187a9d93,
+  attackManager: {fileID: 818057835518184039, guid: 6770d448569fca744b9fe1eb45e4a78d,
     type: 3}
   colorOutline: {r: 0, g: 0, b: 0, a: 0}
   colorCardBackground: {r: 0, g: 0, b: 0, a: 0}

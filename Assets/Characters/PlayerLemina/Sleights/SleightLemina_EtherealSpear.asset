@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: SleightLemina_EtherealSpear
   m_EditorClassIdentifier: 
   sleightName: Ethereal Spear
-  sleightDescription: Only in Ether Install
+  sleightDescription: Only in Ether Install. Fly up in the air and fall down with
+    a super lightning kick.
   sleightValue: {x: 0, y: 9}
-  sleightRecipe: []
+  sleightRecipe:
+  - {fileID: 11400000, guid: f8536f3ca1a5e0b45b94f56e1ef7ff89, type: 2}
+  - {fileID: 11400000, guid: f8536f3ca1a5e0b45b94f56e1ef7ff89, type: 2}
+  - {fileID: 11400000, guid: f8536f3ca1a5e0b45b94f56e1ef7ff89, type: 2}
   sleightAttackData: {fileID: 0}

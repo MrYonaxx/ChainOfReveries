@@ -60,6 +60,7 @@ GameObject:
   - component: {fileID: 2520948011644738657}
   - component: {fileID: 3040624544842275496}
   - component: {fileID: 5519744741247330545}
+  - component: {fileID: 4317201209464898517}
   m_Layer: 9
   m_Name: AttackMainComponents
   m_TagString: Untagged
@@ -108,9 +109,30 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   previousAttacks:
   - {fileID: 818057835518184039}
-  - {fileID: 818057835518184039, guid: 6e82b9f19f7ccaa4892f1b6252194b74, type: 3}
   attackToCombos:
   - {fileID: 818057835518184039, guid: 6e82b9f19f7ccaa4892f1b6252194b74, type: 3}
+--- !u!114 &4317201209464898517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2469241746260582066}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5281bb7273afcea45937cb1850bdde86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  statusData: {fileID: 11400000, guid: e122da5a8cdb6ac43a0cc66ee6151d34, type: 2}
+  newAction: {fileID: 710721614644446592, guid: 1b48aa054c9f44f469edfb11633c112e,
+    type: 3}
+  previousAttacks:
+  - {fileID: 710721614644446592, guid: 1b48aa054c9f44f469edfb11633c112e, type: 3}
+  - {fileID: 818057835518184039, guid: 5841e8743a919d4439f81e7109e1ff1b, type: 3}
+  - {fileID: 4747211747828843562, guid: 1576bf859eede3c419f28ea69aeb7afd, type: 3}
+  attackToCombos:
+  - {fileID: 818057835518184039, guid: 5841e8743a919d4439f81e7109e1ff1b, type: 3}
+  - {fileID: 4747211747828843562, guid: 1576bf859eede3c419f28ea69aeb7afd, type: 3}
   - {fileID: 818057835518184039, guid: 19fdc1c47eb1a1b4e96c9b89f52c46b5, type: 3}
 --- !u!1 &3720685875369100543
 GameObject:
@@ -206,7 +228,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frame: 11
-  frameEnd: 14
+  frameEnd: 15
   attack: {fileID: 4733904636063077261}
 --- !u!114 &7284589822210834423
 MonoBehaviour:
@@ -376,7 +398,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7900598885675973209, guid: 082305c6616978f4fb29223bad2a5292,
+  m_Sprite: {fileID: -3111173492731741637, guid: 082305c6616978f4fb29223bad2a5292,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -598,6 +620,7 @@ MonoBehaviour:
   attackComponents:
   - {fileID: 3040624544842275496}
   - {fileID: 5519744741247330545}
+  - {fileID: 4317201209464898517}
   - {fileID: 6024610480447657897}
   - {fileID: 5485531285977804821}
 --- !u!1 &7197704365641121891

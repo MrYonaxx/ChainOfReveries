@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerCharacterData: {fileID: 11400000, guid: 707d8eac61f25fe448018999dc4704cf,
     type: 2}
-  playerDeckData: {fileID: 11400000, guid: 6e91b61c65c4bb14aa9c4b9240de9a69, type: 2}
+  playerDeckData: {fileID: 11400000, guid: 9227b05508363c442a58bb520e5353b8, type: 2}
   playerEquipmentData:
   - {fileID: 11400000, guid: 1119497543f62ad4086564f7bf93d4f7, type: 2}
   - {fileID: 11400000, guid: b9f7e9038916aa74581026945bb78e0b, type: 2}
@@ -44,6 +44,24 @@ MonoBehaviour:
     baseCardValue: 1
   - cardData: {fileID: 11400000, guid: f8536f3ca1a5e0b45b94f56e1ef7ff89, type: 2}
     baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: b8dda297be05d3c438b9832f8d1925af, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: b8dda297be05d3c438b9832f8d1925af, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: b8dda297be05d3c438b9832f8d1925af, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 46e950fec49e53c468dd947505c9d062, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 46e950fec49e53c468dd947505c9d062, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 46e950fec49e53c468dd947505c9d062, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 7236a60a2587a1c47813d69bfd98c95e, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 7236a60a2587a1c47813d69bfd98c95e, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 7236a60a2587a1c47813d69bfd98c95e, type: 2}
+    baseCardValue: 9
   playerExplorationDeck:
   - {fileID: 11400000, guid: d15e3b90d2a853d48b4e6968f7d7f5a9, type: 2}
   - {fileID: 11400000, guid: d15e3b90d2a853d48b4e6968f7d7f5a9, type: 2}

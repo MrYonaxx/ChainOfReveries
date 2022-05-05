@@ -27,7 +27,8 @@ namespace VoiceActing
         public GaugeDrawer GaugeInstall = null;
         [SerializeField]
         public CardData AttackInstall = null;
-
+        [SerializeField]
+        public StatusEffectData StatusInstall = null;
 
         int Meter = 99;
         int MaxMeter = 99;
@@ -35,6 +36,7 @@ namespace VoiceActing
         CharacterBase owner = null;
 
         GaugeDrawer gaugeMeter = null;
+        bool etherInstall = false;
         bool action = false;
         bool disappear = false;
         #endregion
@@ -61,6 +63,7 @@ namespace VoiceActing
             CardBreakController = data.CardBreakController;
             GaugeInstall = data.GaugeInstall;
             AttackInstall = data.AttackInstall;
+            StatusInstall = data.StatusInstall;
         }
 
         public override StatusEffect Copy()
@@ -116,6 +119,8 @@ namespace VoiceActing
                     action = true;
                     cardBreaker.Clear();
                     cardBreaker.Add(new Card(AttackInstall, 0));
+                    //characterBreaker.CharacterStatusController.ApplyStatus(StatusInstall, 1000);
+                    etherInstall = true;
                     Meter = 0;
                 }
 
@@ -128,14 +133,9 @@ namespace VoiceActing
         public override void UpdateEffect(CharacterBase character)
         {
             base.UpdateEffect(character);
-            /*if(action)
+            if(etherInstall)
             {
-                enemy.CharacterAction.Action(new Card(AttackDoom, 6));
-                action = false; 
-                CardBreakController.OnCardBreak -= DoomDecrement;
-                GameObject.Destroy(doomCounter.gameObject);
-                disappear = true;
-            }*/
+            }
         }
 
         public override void RemoveEffect(CharacterBase character)

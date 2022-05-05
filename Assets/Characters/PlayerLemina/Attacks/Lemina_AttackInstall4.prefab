@@ -229,6 +229,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6206706469227825445}
+  - component: {fileID: 1380303305690601239}
   - component: {fileID: 6024610480447657897}
   - component: {fileID: 5485531285977804821}
   - component: {fileID: 8659238894792635415}
@@ -254,6 +255,18 @@ Transform:
   m_Father: {fileID: 2917755026358873579}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1380303305690601239
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4114098666737907609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fcfd459820a65234fbea7ef7ed5e9918, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &6024610480447657897
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -271,10 +284,10 @@ MonoBehaviour:
   onlyHitStopOpponent: 0
   hitStop: 0.3
   knockbackDurationMultiplier: 1
-  knockbackX: 4
+  knockbackX: 5
   knockbackZ: 5
   knockbackInvulnerability: 0.3
-  revengeValue: 2
+  revengeValue: 1
 --- !u!114 &5485531285977804821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -415,7 +428,7 @@ GameObject:
   - component: {fileID: 5842096757366747166}
   - component: {fileID: 818057835518184039}
   m_Layer: 9
-  m_Name: Lemina_Attack3
+  m_Name: Lemina_AttackInstall4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -451,7 +464,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035f334978101924ea5aae883ccf84f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameID: Lemina_Attack3
+  nameID: Lemina_AttackInstall4
   attackAnimation: {fileID: 7400000, guid: 00c28386f757792419a6f37ce6786e62, type: 2}
   characterAnimationData: {fileID: 4670453683040411876}
   linkToCharacter: 1
@@ -470,6 +483,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3933365873575352637}
   - component: {fileID: 8140847405492643985}
+  - component: {fileID: 4172145511962248184}
   m_Layer: 0
   m_Name: AttackProcssor
   m_TagString: Untagged
@@ -512,6 +526,47 @@ MonoBehaviour:
     statusDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
     status: {fileID: 0}
     canApplyMultipleTime: 1
+    canApplyOnKnockback: 1
+    debugDamage: {x: 100, y: 200}
+  cardPercentage:
+    percentDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+    debugDamage: {x: 100, y: 200}
+    maxHP: 0
+  element:
+    element: 0
+    ignoreElementalStat: 0
+  damage:
+    baseDamage: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
+  backdamage:
+    baseDamage: 100
+    ignoreStatsMultiplier: 0
+  banDamage:
+    damagePerBan: 100
+    attackType: 0
+    ignoreStatsMultiplier: 0
+--- !u!114 &4172145511962248184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6110435575002120153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e38b2d8b367794490600c90e07eae3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attackProcessor: 1
+  cardDamage:
+    cardDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+    debugDamage: {x: 100, y: 200}
+    ignoreStatsMultiplier: 0
+  cardStatus:
+    statusDamage: 64000000c8000000be000000b4000000aa000000a0000000960000008c0000008200000078000000
+    status: {fileID: 11400000, guid: 67f41f4ce108bc943bf7670831ec5ad4, type: 2}
+    canApplyMultipleTime: 0
     canApplyOnKnockback: 1
     debugDamage: {x: 100, y: 200}
   cardPercentage:
@@ -611,8 +666,10 @@ MonoBehaviour:
   linkHitboxYToAttack: 0
   attackProcessorsComponents:
   - {fileID: 8140847405492643985}
+  - {fileID: 4172145511962248184}
   attackComponents:
   - {fileID: 3040624544842275496}
+  - {fileID: 1380303305690601239}
   - {fileID: 6024610480447657897}
   - {fileID: 5485531285977804821}
   - {fileID: 8659238894792635415}

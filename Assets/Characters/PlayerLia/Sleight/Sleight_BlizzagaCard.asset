@@ -25,7 +25,10 @@ MonoBehaviour:
       Entry: 6
       Data: 
     - Name: cardBreakComponent
-      Entry: 6
+      Entry: 7
+      Data: 0|VoiceActing.CardBreakBestValue, Assembly-CSharp
+    - Name: 
+      Entry: 8
       Data: 
   cardSprite: {fileID: 0}
   cardName: Blizzard EX

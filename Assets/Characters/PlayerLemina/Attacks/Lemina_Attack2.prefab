@@ -187,7 +187,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   frame: 23
-  frameEnd: 25
+  frameEnd: 26
   attack: {fileID: 4733904636063077261}
 --- !u!114 &7284589822210834423
 MonoBehaviour:
@@ -203,7 +203,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame: 30
   frameEnd: 0
-  cancelItself: 1
+  cancelItself: 0
   cancelSpecial: 1
   cancelType: 000000000100000003000000
 --- !u!114 &2524242894598313049
@@ -231,8 +231,8 @@ GameObject:
   - component: {fileID: 6206706469227825445}
   - component: {fileID: 6024610480447657897}
   - component: {fileID: 5485531285977804821}
-  - component: {fileID: 3038956696660573783}
   - component: {fileID: 7124353190535626810}
+  - component: {fileID: 7994571997292071786}
   m_Layer: 0
   m_Name: KnockbackComponents
   m_TagString: Untagged
@@ -289,18 +289,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shakePower: 0.1
   shakeTime: 0.3
---- !u!114 &3038956696660573783
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4114098666737907609}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3766ec83f6f11974c87417d967ff9a8f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &7124353190535626810
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -322,6 +310,18 @@ MonoBehaviour:
   - 12
   - 6
   smoothZoom: 0
+--- !u!114 &7994571997292071786
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4114098666737907609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3766ec83f6f11974c87417d967ff9a8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4388082830208477171
 GameObject:
   m_ObjectHideFlags: 0
@@ -392,7 +392,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -3811173807466110980, guid: 96d77b74bfecc7849874236c7d28020b,
+  m_Sprite: {fileID: 6166890063079802468, guid: 0d6adc02f7937f34bb0bc582e3927a6f,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -615,8 +615,8 @@ MonoBehaviour:
   - {fileID: 3040624544842275496}
   - {fileID: 6024610480447657897}
   - {fileID: 5485531285977804821}
-  - {fileID: 3038956696660573783}
   - {fileID: 7124353190535626810}
+  - {fileID: 7994571997292071786}
 --- !u!1 &7197704365641121891
 GameObject:
   m_ObjectHideFlags: 0

@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc0d50e517eba5d4dba18568d80634f5, type: 3}
   m_Name: SleightLemina_Freeze
   m_EditorClassIdentifier: 
-  sleightName: 
+  sleightName: Freeze
   sleightDescription: 
-  sleightValue: {x: 0, y: 0}
-  sleightRecipe: []
-  sleightAttackData: {fileID: 0}
+  sleightValue: {x: 0, y: 27}
+  sleightRecipe:
+  - {fileID: 11400000, guid: 46e950fec49e53c468dd947505c9d062, type: 2}
+  - {fileID: 11400000, guid: 46e950fec49e53c468dd947505c9d062, type: 2}
+  - {fileID: 11400000, guid: f8536f3ca1a5e0b45b94f56e1ef7ff89, type: 2}
+  sleightAttackData: {fileID: 11400000, guid: 620797c53743bdc4f9bce4f7c3f4c9b0, type: 2}

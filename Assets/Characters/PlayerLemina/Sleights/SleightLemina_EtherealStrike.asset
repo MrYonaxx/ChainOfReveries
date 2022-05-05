@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: SleightLemina_EtherealStrike
   m_EditorClassIdentifier: 
   sleightName: Ethereal Strike
-  sleightDescription: Only in Ether Install
-  sleightValue: {x: 10, y: 18}
-  sleightRecipe: []
+  sleightDescription: Only in Ether Install. Giga explosion, consume the entire Ether
+    gauge.
+  sleightValue: {x: 0, y: 27}
+  sleightRecipe:
+  - {fileID: 11400000, guid: 690777df947d4ea49858cc18969642ac, type: 2}
+  - {fileID: 11400000, guid: 690777df947d4ea49858cc18969642ac, type: 2}
+  - {fileID: 11400000, guid: 690777df947d4ea49858cc18969642ac, type: 2}
   sleightAttackData: {fileID: 0}

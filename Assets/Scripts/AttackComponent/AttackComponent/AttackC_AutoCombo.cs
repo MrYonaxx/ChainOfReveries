@@ -56,6 +56,7 @@ namespace VoiceActing
             {
                 if (character.CharacterAction.PreviousAttackManager.nameID == previousAttacks[i].nameID)
                 {
+                    Debug.Log("Allo");
                     character.CharacterAction.Action(attackToCombos[i], attack.Card);
                     return;
                 }

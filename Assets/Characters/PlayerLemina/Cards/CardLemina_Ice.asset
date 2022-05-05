@@ -34,7 +34,7 @@ MonoBehaviour:
   cardName: Ice
   cardType: 1
   cardDescription: A slow projectile exploding in front of you.
-  attackManager: {fileID: 818057835518184039, guid: a0a4e80d4074896419797519ad6b77ec,
+  attackManager: {fileID: 818057835518184039, guid: 2eaf760f77e4d514197366a9ab00ea35,
     type: 3}
   colorOutline: {r: 0, g: 0, b: 0, a: 0}
   colorCardBackground: {r: 0, g: 0, b: 0, a: 0}

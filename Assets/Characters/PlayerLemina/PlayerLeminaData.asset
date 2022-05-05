@@ -66,7 +66,17 @@ MonoBehaviour:
     StatusResistances: []
   salut: 
   initialDeck: []
-  sleightDatabase: []
+  sleightDatabase:
+  - {fileID: 11400000, guid: 4aad13d01a6da584fa31d76e694043bc, type: 2}
+  - {fileID: 11400000, guid: 534f1e396175d8545aa16004e3522837, type: 2}
+  - {fileID: 11400000, guid: 4e3306da850bb894e970c7c795c595c8, type: 2}
+  - {fileID: 11400000, guid: bccd872cc1f80b94595888440cf228e8, type: 2}
+  - {fileID: 11400000, guid: 247b1ae45b788ff4bb7e31ee3c7b4581, type: 2}
+  - {fileID: 11400000, guid: 0fe84efc6b45ef143adb3f7bea79ba01, type: 2}
+  - {fileID: 11400000, guid: a5654a7b665ab4a479bcb7cab4714238, type: 2}
+  - {fileID: 11400000, guid: 1fee320bb56ab26459215e48b3dd8077, type: 2}
+  - {fileID: 11400000, guid: 2090d5e827507404aaa501e2909eb6cf, type: 2}
+  - {fileID: 11400000, guid: 476427ee5b782fa47be51495813c5c2c, type: 2}
   initialEquipment: []
   loreDescription: 
   cardProbability:

@@ -4945,6 +4945,8 @@ GameObject:
   - component: {fileID: 2260525837532545912}
   - component: {fileID: 4670453683040411876}
   - component: {fileID: 7265478496438446871}
+  - component: {fileID: 3421367675600876454}
+  - component: {fileID: 7256261393675639520}
   - component: {fileID: 9161925311675703307}
   - component: {fileID: 5765558734467980147}
   - component: {fileID: 4769725449169156972}
@@ -5001,6 +5003,10 @@ MonoBehaviour:
   AnimatorDebug: {fileID: 677981557941761528}
   AnimationClipDebug: {fileID: 7400000, guid: d588160e767a3c8488a9d7127b6b4bf4, type: 2}
   frameData:
+  - Frame: 0
+    AnimationEvent: {fileID: 3421367675600876454}
+  - Frame: 0
+    AnimationEvent: {fileID: 7256261393675639520}
   - Frame: 1
     AnimationEvent: {fileID: 9161925311675703307}
   - Frame: 20
@@ -5038,6 +5044,37 @@ MonoBehaviour:
   - 48
   - 12
   smoothZoom: 0
+--- !u!114 &3421367675600876454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3720685875369100543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7fccac822059c343a85893698e6cdb4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 0
+  frameEnd: 0
+  restoreBanishCard: 0
+--- !u!114 &7256261393675639520
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3720685875369100543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae49cdc6772abec4395656915a82cff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 0
+  frameEnd: 0
+  status: {fileID: 11400000, guid: e122da5a8cdb6ac43a0cc66ee6151d34, type: 2}
+  add: 1
 --- !u!114 &9161925311675703307
 MonoBehaviour:
   m_ObjectHideFlags: 0
