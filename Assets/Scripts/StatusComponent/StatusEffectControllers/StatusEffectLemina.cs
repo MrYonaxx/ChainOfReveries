@@ -96,6 +96,13 @@ namespace VoiceActing
 
         }
 
+        public void AddEtherGauge(int amount)
+        {
+            Meter += amount; 
+            // On dessine
+            gaugeMeter.DrawGauge(Meter, MaxMeter);
+        }
+
         public void CardBreakInstall(CharacterBase characterBreaked, List<Card> cardBreaked, CharacterBase characterBreaker, List<Card> cardBreaker)
         {
             if (cardBreaker == null)

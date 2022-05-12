@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02519ca1dddceb742b46951073eda492, type: 3}
+  m_Name: CardEquipment_A_13___JackO
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  cardSprite: {fileID: 21300000, guid: c2fc97a0226b5804294bf667ae2172c8, type: 3}
+  cardName: Jack-o'-lantern
+  cardType: 1
+  cardDescription: 'Reduce damage dealt from the front by 20%.
+
+    Increase damage
+    dealt from the back by 30%.'
+  statsModifier: []
+  statusEffectPassive: {fileID: 11400000, guid: 94b2881deb6eb01498e5f7002699040e,
+    type: 2}
+  equipmentAction: {fileID: 0}
+  statusEffectActive: {fileID: 0}

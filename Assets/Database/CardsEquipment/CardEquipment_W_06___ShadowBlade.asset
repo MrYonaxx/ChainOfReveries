@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 02519ca1dddceb742b46951073eda492, type: 3}
-  m_Name: CardEquipment_W_06___ChimeraScythe
+  m_Name: CardEquipment_W_06___ShadowBlade
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -21,14 +21,17 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  cardSprite: {fileID: 21300000, guid: ad61be2f4733cc8429b40301b0866ad9, type: 3}
-  cardName: Chimera Scythe
+  cardSprite: {fileID: 21300000, guid: 0e9fa40c3465393478ff340f2fa9b71d, type: 3}
+  cardName: Shadow Blade
   cardType: 0
-  cardDescription: 'Health is restored by 5% of the damage dealt.
+  cardDescription: 'Increase damage by 60%.
 
-    (10 Attacks)'
+    Lose HP as long as its active.
+
+    (1
+    Hit)'
   statsModifier: []
   statusEffectPassive: {fileID: 0}
   equipmentAction: {fileID: 818057835518184039, guid: 971d891aa08a3d74baf5f67b6da459b8,
     type: 3}
-  statusEffectActive: {fileID: 11400000, guid: 19e40c7a4f58ec445a19861931202ee0, type: 2}
+  statusEffectActive: {fileID: 11400000, guid: 440b7e15796da9c43b065770005ab79e, type: 2}

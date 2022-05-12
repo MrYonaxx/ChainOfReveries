@@ -15,7 +15,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 5492482477394563898, guid: ae38714b0fadba44c8f4419bee287f12, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -46,7 +47,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 7
       Data: 3|VoiceActing.StatusEffectStat, Assembly-CSharp
@@ -61,7 +62,7 @@ MonoBehaviour:
       Data: 0
     - Name: value
       Entry: 4
-      Data: 0.3
+      Data: 0.5
     - Name: 
       Entry: 8
       Data: 
@@ -71,6 +72,15 @@ MonoBehaviour:
     - Name: 
       Entry: 7
       Data: 5|VoiceActing.StatusEffectAfterImage, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 6|VoiceActing.StatusEffectAnimation, Assembly-CSharp
+    - Name: animationObject
+      Entry: 10
+      Data: 0
     - Name: 
       Entry: 8
       Data: 

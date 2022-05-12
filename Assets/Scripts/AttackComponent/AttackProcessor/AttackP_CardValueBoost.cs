@@ -24,7 +24,7 @@ namespace VoiceActing
         {
             if(cardValue == attack.Card.GetCardValue())
             {
-                damageMessage.damage = damageMessage.damage * damageMultiplier;
+                damageMessage.damage = damageMessage.baseDamage * damageMultiplier;
             }
         }
 

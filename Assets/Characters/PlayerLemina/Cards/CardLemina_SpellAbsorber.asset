@@ -26,7 +26,7 @@ MonoBehaviour:
       Data: 
     - Name: cardBreakComponent
       Entry: 7
-      Data: 0|VoiceActing.CardBreakComponent, Assembly-CSharp
+      Data: 0|VoiceActing.CardBreakBestValue, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -38,7 +38,7 @@ MonoBehaviour:
 
     In
     Ether Install, use the Ether Gauge to unleash a powerful blast of Ether.'
-  attackManager: {fileID: 818057835518184039, guid: 2dded249d77fdc14dab8fb8ca6e59826,
+  attackManager: {fileID: 818057835518184039, guid: f42be7a742ac7c2448bd09573da0ae34,
     type: 3}
   colorOutline: {r: 0, g: 0, b: 0, a: 0}
   colorCardBackground: {r: 0, g: 0, b: 0, a: 0}

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 02519ca1dddceb742b46951073eda492, type: 3}
-  m_Name: CardEquipment_A_06___ShenelyaArmor
+  m_Name: CardEquipment_W_NEW__StaffOfHate
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -21,27 +21,14 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  cardSprite: {fileID: 21300000, guid: d337872d88b3b9f4f9a2a72617681d8b, type: 3}
-  cardName: Shenelya's Armor
-  cardType: 1
-  cardDescription: 'Reduce damage received by 25%.
+  cardSprite: {fileID: 21300000, guid: 5ba249b07a09a314fbc7caa429ab6585, type: 3}
+  cardName: Staff of Hate
+  cardType: 0
+  cardDescription: 'Target gradually lose HP.
 
-    Lower maximum HP by 1000.
-
-'
-  statsModifier:
-  - charStat: 2
-    modifierType: 0
-    value: 0.25
-  - charStat: 4
-    modifierType: 0
-    value: 0.25
-  - charStat: 0
-    modifierType: 0
-    value: -1000
-  - charStat: 10
-    modifierType: 0
-    value: 0.2
+    (1 Hit)'
+  statsModifier: []
   statusEffectPassive: {fileID: 0}
-  equipmentAction: {fileID: 0}
+  equipmentAction: {fileID: 818057835518184039, guid: 971d891aa08a3d74baf5f67b6da459b8,
+    type: 3}
   statusEffectActive: {fileID: 0}

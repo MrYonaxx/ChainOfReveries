@@ -167,6 +167,8 @@ namespace VoiceActing
             {
                 attackProcessors[i].ProcessAttack(user, target, this, ref damageMessage);
             }
+            // Suite à ça, les dégats actuels deviennent les dégats de base de l'attaque, utilisé par les multiplicateurs
+            damageMessage.baseDamage = damageMessage.damage;
 
             // Attack proccessor de l'utilisateur (généralement provenant de status)
             for (int i = 0; i < user.CharacterAction.AdditionalAttackProcessor.Count; i++)

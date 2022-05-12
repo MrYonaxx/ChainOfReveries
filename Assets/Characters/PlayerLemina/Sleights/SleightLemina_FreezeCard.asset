@@ -34,7 +34,7 @@ MonoBehaviour:
   cardName: Freeze
   cardType: 1
   cardDescription: 
-  attackManager: {fileID: 818057835518184039, guid: cf3d7c7c492283b4c90db99a39c6739e,
+  attackManager: {fileID: 818057835518184039, guid: f541a8b63e6b055479b48902864fb1ca,
     type: 3}
   colorOutline: {r: 0, g: 0, b: 0, a: 0}
   colorCardBackground: {r: 0, g: 0, b: 0, a: 0}

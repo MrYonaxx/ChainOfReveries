@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 317806353b7288b4cb30da061d383f0e, type: 3}
+  m_Name: CardLemina_SpellAbsorberOnBreak
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: cardController
+      Entry: 6
+      Data: 
+    - Name: cardBreakComponent
+      Entry: 7
+      Data: 0|VoiceActing.CardBreakBestValue, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+  cardSprite: {fileID: 21300000, guid: 2fbe194229d247644b1c9781f96322a9, type: 3}
+  cardName: Spell Absorber
+  cardType: 1
+  cardDescription: 'Focus and charge the Ether Gauge. The lower the value the higher
+    the charge. If it Card Break a Magic Card, the charge time is intant.
+
+    In
+    Ether Install, use the Ether Gauge to unleash a powerful blast of Ether.'
+  attackManager: {fileID: 818057835518184039, guid: 2dded249d77fdc14dab8fb8ca6e59826,
+    type: 3}
+  colorOutline: {r: 0, g: 0, b: 0, a: 0}
+  colorCardBackground: {r: 0, g: 0, b: 0, a: 0}
+  cardProbability: 64000000640000006400000064000000640000006400000064000000640000006400000064000000
+  breakRecovery: 14000000140000001400000014000000140000001400000014000000140000001400000014000000
+  maxProbability: 1000

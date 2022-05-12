@@ -14,6 +14,7 @@ namespace VoiceActing
 {
     public class DamageMessage
     {
+        public float baseDamage = 0;
         public float damage = 0;
 
         // Si l'attaque knockback, si c'est supérieur a 0 ça knockback

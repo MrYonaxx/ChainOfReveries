@@ -20,7 +20,8 @@ namespace VoiceActing
         /* ======================================== *\
          *               ATTRIBUTES                 *
         \* ======================================== */
-
+        [SerializeField]
+        bool guardCrush = false;
 
         #endregion
 
@@ -47,6 +48,11 @@ namespace VoiceActing
                 {
                     attack.User.CharacterAction.RemoveCards();
                     attack.User.CharacterAction.CardBreak(user);
+                }
+
+                if(guardCrush)
+                {
+                    user.CharacterAction.CardBreak(attack.User);
                 }
             }
             return false;

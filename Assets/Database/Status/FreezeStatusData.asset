@@ -15,40 +15,141 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 6329109260187363157, guid: 698b630019e63e948a0a903d808bcff6, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes:
     - Name: statusUpdates
-      Entry: 6
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[VoiceActing.StatusEffectUpdate,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 1|VoiceActing.StatusEffectUpdateOnHit, Assembly-CSharp
+    - Name: hitTime
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: hitCondition
+      Entry: 5
+      Data: false
+    - Name: cardType
+      Entry: 3
+      Data: -1
+    - Name: attackElement
+      Entry: 3
+      Data: -1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|VoiceActing.StatusEffectUpdateTime, Assembly-CSharp
+    - Name: timeData
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 3
+      Data: 4
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
     - Name: statusController
-      Entry: 6
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[VoiceActing.StatusEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 3
+    - Name: 
+      Entry: 7
+      Data: 4|VoiceActing.StatusEffectStun, Assembly-CSharp
+    - Name: stunTime
+      Entry: 4
+      Data: 4
+    - Name: stunAnimation
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 5|VoiceActing.StatusEffectStat, Assembly-CSharp
+    - Name: StatModifier
+      Entry: 7
+      Data: 6|VoiceActing.StatModifier, Assembly-CSharp
+    - Name: charStat
+      Entry: 3
+      Data: 2
+    - Name: modifierType
+      Entry: 3
+      Data: 1
+    - Name: value
+      Entry: 4
+      Data: -0.5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 7|VoiceActing.StatusEffectStat, Assembly-CSharp
+    - Name: StatModifier
+      Entry: 7
+      Data: 8|VoiceActing.StatModifier, Assembly-CSharp
+    - Name: charStat
+      Entry: 3
+      Data: 4
+    - Name: modifierType
+      Entry: 3
+      Data: 1
+    - Name: value
+      Entry: 4
+      Data: -0.5
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
       Data: 
   statusIconSprite: {fileID: 0}
-  statusName: 
+  statusName: Freeze
   statusDescription: 
-  statusTime: {x: 4, y: 5}
-  canRefresh: 0
-  canStack: 0
-  canAddMultiple: 0
-  statusPercentageBonus: 0
-  characterStatModifier:
-    hp: 0
-    HpMax: 0
-    Attack: 0
-    Magic: 0
-    Defense: 0
-    MotionSpeed: 0
-    ReloadAmount: 0
-    Recovery: 0
-    RecoveryKnockbackPower: 0
-    Speed: 1
-    Gravity: 0
-    GravityMax: 0
-    Mass: 0
-    KnockbackTime: 0
-    ElementalResistances: []
-    StatusResistances: []
+  hideStatus: 1
+  statusShowLabel: 0
+  statusConditionLabel: 

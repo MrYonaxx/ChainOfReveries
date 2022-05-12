@@ -26,15 +26,15 @@ MonoBehaviour:
       Data: 
     - Name: cardBreakComponent
       Entry: 7
-      Data: 0|VoiceActing.CardBreakComponent, Assembly-CSharp
+      Data: 0|VoiceActing.CardBreakBestValue, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
   cardSprite: {fileID: 21300000, guid: edbcf4eefab65ba49a667fd05fa65c2b, type: 3}
-  cardName: Fire
+  cardName: Somersault
   cardType: 0
   cardDescription: Shoot a fireball in front of you.
-  attackManager: {fileID: 818057835518184039, guid: 2dded249d77fdc14dab8fb8ca6e59826,
+  attackManager: {fileID: 818057835518184039, guid: 54a6fd7d2d5efb34fa358a600bccb3a4,
     type: 3}
   colorOutline: {r: 0, g: 0, b: 0, a: 0}
   colorCardBackground: {r: 0, g: 0, b: 0, a: 0}
