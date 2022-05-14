@@ -144,7 +144,7 @@ MonoBehaviour:
     AnimationEvent: {fileID: 4903542334977105178}
   - Frame: 20
     AnimationEvent: {fileID: 8211913546165952009}
-  - Frame: 50
+  - Frame: 60
     AnimationEvent: {fileID: 2524242894598313049}
 --- !u!114 &4903542334977105178
 MonoBehaviour:
@@ -194,7 +194,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620e0e815b2f5174f8b380210d9a19f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 50
+  frame: 60
   frameEnd: 0
 --- !u!1 &4388082830208477171
 GameObject:

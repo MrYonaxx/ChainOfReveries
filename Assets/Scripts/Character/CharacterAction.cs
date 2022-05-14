@@ -199,6 +199,10 @@ namespace VoiceActing
         /// <returns></returns>
         public bool PlaySleight(bool playSleight = true)
         {
+            // Si on ne peut pas stocker de carte, on ne peut pas jouer de Sleight, donc false
+            if (!sleightController.CanStockCard)
+                return false;
+
             // Cooldown QoL pour les spammers fou
             if (sleightActionCooldownT > 0)
             {

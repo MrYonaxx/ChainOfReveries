@@ -36,6 +36,9 @@ namespace VoiceActing
         public delegate void ActionSleight(SleightData currentSleight, List<Card> sleightCards);
         public event ActionSleight OnSleightUpdate;
 
+        public bool CanStockCard = true; // flag pour autoriser autoriser a jouer des sleight
+        public List<SleightData> bonusSleights = new List<SleightData>();
+
         #endregion
 
         #region GettersSetters 
@@ -57,6 +60,7 @@ namespace VoiceActing
             sleightsDatabase = sleightDatas;
         }
 
+      
         public bool CanPlaySleight()
         {
             if (indexSleightCard == 3)
@@ -119,7 +123,18 @@ namespace VoiceActing
 
         private void CheckSleight()
         {
-            for(int i = 0; i < sleightsDatabase.Length; i++)
+            // On check les bonus sleight en priorité
+            for (int i = 0; i < bonusSleights.Count; i++)
+            {
+                if (bonusSleights[i].CheckSleight(sleightCards) == true)
+                {
+                    currentSleight = bonusSleights[i];
+                    return;
+                }
+            }
+
+            // puis on check la database du perso
+            for (int i = 0; i < sleightsDatabase.Length; i++)
             {
                 if(sleightsDatabase[i].CheckSleight(sleightCards) == true)
                 {
@@ -132,6 +147,16 @@ namespace VoiceActing
 
 
 
+
+        public void AddBonusSleight(SleightData newSleight)
+        {
+            bonusSleights.Add(newSleight);
+        }
+
+        public void RemoveBonusSleight(SleightData newSleight)
+        {
+            bonusSleights.Remove(newSleight);
+        }
 
 
 

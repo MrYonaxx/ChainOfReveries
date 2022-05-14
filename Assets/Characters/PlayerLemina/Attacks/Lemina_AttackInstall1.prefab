@@ -143,6 +143,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Lemina_AttackInstall1
       objectReference: {fileID: 0}
+    - target: {fileID: 6024610480447657897, guid: 9c7e7c052bf9dce40aed3a1d055daaa7,
+        type: 3}
+      propertyPath: revengeValue
+      value: 2
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 4317201209464898517, guid: 9c7e7c052bf9dce40aed3a1d055daaa7, type: 3}
     - {fileID: 5519744741247330545, guid: 9c7e7c052bf9dce40aed3a1d055daaa7, type: 3}

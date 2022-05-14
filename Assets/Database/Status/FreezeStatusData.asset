@@ -92,7 +92,7 @@ MonoBehaviour:
       Data: 4|VoiceActing.StatusEffectStun, Assembly-CSharp
     - Name: stunTime
       Entry: 4
-      Data: 4
+      Data: 5
     - Name: stunAnimation
       Entry: 10
       Data: 0
@@ -113,7 +113,7 @@ MonoBehaviour:
       Data: 1
     - Name: value
       Entry: 4
-      Data: -0.5
+      Data: -1
     - Name: 
       Entry: 8
       Data: 
@@ -134,7 +134,7 @@ MonoBehaviour:
       Data: 1
     - Name: value
       Entry: 4
-      Data: -0.5
+      Data: -1
     - Name: 
       Entry: 8
       Data: 

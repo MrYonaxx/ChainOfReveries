@@ -161,7 +161,7 @@ MonoBehaviour:
   AnimatorDebug: {fileID: 677981557941761528}
   AnimationClipDebug: {fileID: 7400000, guid: d3750b8d5fd998444bcdf201292386f6, type: 2}
   frameData:
-  - Frame: 20
+  - Frame: 18
     AnimationEvent: {fileID: 714956832288177373}
   - Frame: 27
     AnimationEvent: {fileID: 2940309235130492517}
@@ -371,7 +371,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4388082830208477171}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.30810353, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 6202298799396831511}
@@ -416,7 +416,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3460995816334445574, guid: 96d77b74bfecc7849874236c7d28020b,
+  m_Sprite: {fileID: -7123216854761796284, guid: 120493a6e52bfac48b78e338b104a0de,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -529,8 +529,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackProcessor: 0
   cardDamage:
-    cardDamage: c80000002c01000022010000180100000e01000004010000fa000000f0000000e6000000dc000000
-    debugDamage: {x: 200, y: 300}
+    cardDamage: 2c0100002c0100002c0100002c0100002c0100002c0100002c0100002c0100002c0100002c010000
+    debugDamage: {x: 300, y: 300}
     ignoreStatsMultiplier: 0
   cardStatus:
     statusDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -688,10 +688,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf29bae8d6a9743927604b4178c1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 20
+  frame: 18
   frameEnd: 0
   moveForward: 1
-  speed: {x: 8, y: 0}
+  speed: {x: 12, y: 0}
   jumpImpulsion: 0
 --- !u!114 &2940309235130492517
 MonoBehaviour:

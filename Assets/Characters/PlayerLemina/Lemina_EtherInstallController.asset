@@ -19,7 +19,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: cf99f13ec9b16ff459f0a38e0953f0d1, type: 2}
     - {fileID: 447568105010908934, guid: 2f6e35b4abddf7e4c8b0c38fe2e007c8, type: 3}
     - {fileID: 11400000, guid: f3312daa2e111fd438271a34ed0b2979, type: 2}
-    - {fileID: 11400000, guid: e122da5a8cdb6ac43a0cc66ee6151d34, type: 2}
+    - {fileID: 818057835518184039, guid: 248b6ae22b5a2af418c53f211a1c1069, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -60,10 +60,10 @@ MonoBehaviour:
     - Name: GaugeInstall
       Entry: 10
       Data: 1
-    - Name: AttackInstall
+    - Name: CardInstall
       Entry: 10
       Data: 2
-    - Name: StatusInstall
+    - Name: AttackUninstall
       Entry: 10
       Data: 3
     - Name: 

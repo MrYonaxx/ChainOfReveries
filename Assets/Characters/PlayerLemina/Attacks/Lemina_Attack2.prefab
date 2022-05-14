@@ -160,17 +160,17 @@ MonoBehaviour:
   AnimatorDebug: {fileID: 677981557941761528}
   AnimationClipDebug: {fileID: 7400000, guid: 113c29574f91d874eabdf8bf17f64525, type: 2}
   frameData:
-  - Frame: 18
+  - Frame: 14
     AnimationEvent: {fileID: 714956832288177373}
-  - Frame: 23
+  - Frame: 19
     AnimationEvent: {fileID: 4461643240352555985}
-  - Frame: 24
+  - Frame: 20
     AnimationEvent: {fileID: 2940309235130492517}
-  - Frame: 30
+  - Frame: 26
     AnimationEvent: {fileID: 7284589822210834423}
-  - Frame: 30
+  - Frame: 26
     AnimationEvent: {fileID: 3996707106909900119}
-  - Frame: 90
+  - Frame: 86
     AnimationEvent: {fileID: 2524242894598313049}
   - Frame: 999
     AnimationEvent: {fileID: 5989349947813197503}
@@ -186,8 +186,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de0fc71d353b8ef479aa0db3b846d0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 23
-  frameEnd: 26
+  frame: 19
+  frameEnd: 22
   attack: {fileID: 4733904636063077261}
 --- !u!114 &7284589822210834423
 MonoBehaviour:
@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30aa148586dde644daf200dde6eea4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 30
+  frame: 26
   frameEnd: 0
   cancelItself: 0
   cancelSpecial: 1
@@ -218,7 +218,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620e0e815b2f5174f8b380210d9a19f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 90
+  frame: 86
   frameEnd: 0
 --- !u!1 &4114098666737907609
 GameObject:
@@ -505,8 +505,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackProcessor: 0
   cardDamage:
-    cardDamage: 64000000c8000000be000000b4000000aa000000a0000000960000008c0000008200000078000000
-    debugDamage: {x: 100, y: 200}
+    cardDamage: c80000002c01000022010000180100000e01000004010000fa000000f0000000e6000000dc000000
+    debugDamage: {x: 200, y: 300}
     ignoreStatsMultiplier: 0
   cardStatus:
     statusDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -662,7 +662,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf29bae8d6a9743927604b4178c1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 18
+  frame: 14
   frameEnd: 0
   moveForward: 1
   speed: {x: 6, y: 0}
@@ -679,7 +679,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf29bae8d6a9743927604b4178c1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 24
+  frame: 20
   frameEnd: 0
   moveForward: 1
   speed: {x: 1, y: 0}
@@ -696,7 +696,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf29bae8d6a9743927604b4178c1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 30
+  frame: 26
   frameEnd: 0
   moveForward: 1
   speed: {x: 0, y: 0}

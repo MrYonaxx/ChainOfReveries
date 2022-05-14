@@ -26,9 +26,9 @@ namespace VoiceActing
         [SerializeField]
         public GaugeDrawer GaugeInstall = null;
         [SerializeField]
-        public CardData AttackInstall = null;
+        public CardData CardInstall = null;
         [SerializeField]
-        public StatusEffectData StatusInstall = null;
+        public AttackManager AttackUninstall = null;
 
         int Meter = 99;
         int MaxMeter = 99;
@@ -36,9 +36,10 @@ namespace VoiceActing
         CharacterBase owner = null;
 
         GaugeDrawer gaugeMeter = null;
-        bool etherInstall = false;
-        bool action = false;
-        bool disappear = false;
+        bool inInstall = false;
+        bool inInstallReady = false;
+        bool inUninstallReady = false;
+        bool firstReload = false;
         #endregion
 
         #region GettersSetters 
@@ -62,8 +63,8 @@ namespace VoiceActing
         {
             CardBreakController = data.CardBreakController;
             GaugeInstall = data.GaugeInstall;
-            AttackInstall = data.AttackInstall;
-            StatusInstall = data.StatusInstall;
+            CardInstall = data.CardInstall;
+            AttackUninstall = data.AttackUninstall;
         }
 
         public override StatusEffect Copy()
@@ -73,41 +74,79 @@ namespace VoiceActing
 
         public override void ApplyEffect(CharacterBase character)
         {
-            disappear = false;
             owner = character;
             character.OnBattleStart += InitializeInstall;
             character.OnBattleEnd += ResetInstall;
+
+            character.DeckController.OnReload += ReloadInstall;
+            character.CharacterAction.OnAction += AttackInstall;
+            character.CharacterAction.OnAttackHit += AttackHitInstall;
+            character.CharacterKnockback.OnHit += HitInstall;
+
             CardBreakController.OnCardBreak += CardBreakInstall;
 
             gaugeMeter = character.CreateAnimation(GaugeInstall.gameObject).GetComponent<GaugeDrawer>();
 
+            Meter = 0;
             InitializeInstall();
         }
 
+
+        // Début du combat
         void InitializeInstall()
         {
-            Meter = 0;
+            Meter = Mathf.Min(Meter, MaxMeter - 1);
             MaxMeter = owner.DeckController.DeckData.Count;
             gaugeMeter.DrawGauge(Meter, MaxMeter);
+            gaugeMeter.gameObject.SetActive(true);
         }
 
+        // Fin du combat
         void ResetInstall()
         {
-
+            inInstall = false;
+            inUninstallReady = false;
+            inInstallReady = false;
+            firstReload = false;
+            gaugeMeter.gameObject.SetActive(false);
         }
 
-        public void AddEtherGauge(int amount)
+
+
+
+
+
+
+        public void HitInstall(DamageMessage damageMsg)
         {
-            Meter += amount; 
-            // On dessine
-            gaugeMeter.DrawGauge(Meter, MaxMeter);
+            if(inInstall)
+                AddEtherGauge(-3);
+            else 
+                AddEtherGauge(1);
+        }
+
+        public void AttackInstall(AttackManager attack, Card cardAction)
+        {
+            if (cardAction!= null && !inInstall)
+            {
+                if(cardAction.GetCardType() == 1) // C'est magie
+                    AddEtherGauge(1);
+            }
+        }
+
+        public void AttackHitInstall(AttackController attack, CharacterBase target)
+        {
+            if (!inInstall)
+                AddEtherGauge(1);
+            else
+                AddEtherGauge(-1);
         }
 
         public void CardBreakInstall(CharacterBase characterBreaked, List<Card> cardBreaked, CharacterBase characterBreaker, List<Card> cardBreaker)
         {
             if (cardBreaker == null)
                 return;
-            if (characterBreaker == owner) // si le perso qui break est le notre
+            if (characterBreaker == owner && !inInstall || characterBreaked == owner && inInstall) // si le perso qui break est le notre
             {
                 int sumActive = 0;
                 int sumNewCards = 0;
@@ -119,37 +158,97 @@ namespace VoiceActing
 
                 int difference = sumNewCards - sumActive;
 
-                Meter += Mathf.Abs(difference);
-
-                if(Meter >= MaxMeter) // On entre en install
+                if (!inInstall)
                 {
-                    action = true;
-                    cardBreaker.Clear();
-                    cardBreaker.Add(new Card(AttackInstall, 0));
-                    //characterBreaker.CharacterStatusController.ApplyStatus(StatusInstall, 1000);
-                    etherInstall = true;
-                    Meter = 0;
-                }
+                    AddEtherGauge(Mathf.Abs(difference));
 
-                // On dessine
-                gaugeMeter.DrawGauge(Meter, MaxMeter);
+                    if (inInstallReady && cardBreaker.Count <= 1) // On entre en install
+                    {
+                        cardBreaker.Clear();
+                        cardBreaker.Add(new Card(CardInstall, 0));
+                        inInstall = true;
+                        inInstallReady = false;
+                    }
+                }
+                else
+                {
+                    difference = Mathf.Clamp(Mathf.Abs(difference), 0, 9);
+                    AddEtherGauge(-difference);
+                }
             }
 
+
+        }
+
+
+        public void ReloadInstall()
+        {
+            if(inInstall)
+            {
+                if(firstReload)
+                {
+                    AddEtherGauge(-(int)(MaxMeter * 0.33f));
+                }
+                firstReload = true;
+            }
         }
 
         public override void UpdateEffect(CharacterBase character)
         {
-            base.UpdateEffect(character);
-            if(etherInstall)
+            base.UpdateEffect(character); 
+
+            if (character.State.ID == CharacterStateID.Idle)
             {
+                if (inInstallReady)  // On entre en install
+                {
+                    owner.CharacterAction.Action(new Card(CardInstall, 0));
+                    inInstall = true;
+                    inInstallReady = false;
+                    inUninstallReady = false;
+                    firstReload = false;
+                }
+                else if (inUninstallReady)  // On sort de l' install
+                {
+                    owner.CharacterAction.Action(AttackUninstall);
+                    inInstall = false;
+                    inInstallReady = false;
+                    inUninstallReady = false; 
+                    firstReload = false;
+                }
             }
         }
+
+        public void AddEtherGauge(int amount)
+        {
+            Meter += amount;
+            Meter = Mathf.Clamp(Meter, 0, MaxMeter);
+
+            // On dessine
+            gaugeMeter.DrawGauge(Meter, MaxMeter);
+
+            if (Meter >= MaxMeter && !inInstall)
+            {
+                inInstallReady = true;
+            }
+            if (Meter <= 0 && inInstall)
+            {
+                inUninstallReady = true;
+            }
+        }
+
+
 
         public override void RemoveEffect(CharacterBase character)
         {
             character.OnBattleStart -= InitializeInstall;
             character.OnBattleEnd -= ResetInstall;
             CardBreakController.OnCardBreak -= CardBreakInstall;
+
+
+            character.DeckController.OnReload -= ReloadInstall;
+            character.CharacterAction.OnAction -= AttackInstall;
+            character.CharacterAction.OnAttackHit -= AttackHitInstall;
+            character.CharacterKnockback.OnHit -= HitInstall;
 
         }
 

@@ -33,7 +33,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 1bf72f983d538034f80bbc86edb00918, type: 3}
   cardName: Enchantment
   cardType: 1
-  cardDescription: Increase by 10% the next magic attack. Stackable.
+  cardDescription: Increase by 10% Magic damage until the next Reload.
   attackManager: {fileID: 818057835518184039, guid: 6770d448569fca744b9fe1eb45e4a78d,
     type: 3}
   colorOutline: {r: 0, g: 0, b: 0, a: 0}

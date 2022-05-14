@@ -32,6 +32,8 @@ MonoBehaviour:
     probability: 50
   - cardExploration: {fileID: 11400000, guid: 0bf057dcf88ee0f42a70aa400d6235ff, type: 2}
     probability: 50
+  - cardExploration: {fileID: 11400000, guid: 1938a73b9f490f14ab7149fc67c0ca46, type: 2}
+    probability: 50
   - cardExploration: {fileID: 11400000, guid: 8b387f445e481ed4a926ae009ec11175, type: 2}
     probability: 100
   - cardExploration: {fileID: 11400000, guid: eaecc4cb77e55834e8a72aba9181cbfb, type: 2}
@@ -54,5 +56,7 @@ MonoBehaviour:
     probability: 100
   - cardExploration: {fileID: 11400000, guid: 473a3c5a2327bbb46a5008ccc0ffd104, type: 2}
     probability: 50
+  - cardExploration: {fileID: 11400000, guid: e7b15ff2992577643bf9d960727007d5, type: 2}
+    probability: 75
   - cardExploration: {fileID: 11400000, guid: aa05097adfc732d4bb75dc77fe28e1a5, type: 2}
     probability: 10

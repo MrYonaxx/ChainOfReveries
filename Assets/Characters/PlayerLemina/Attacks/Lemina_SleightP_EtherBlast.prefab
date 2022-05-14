@@ -338,7 +338,7 @@ MonoBehaviour:
   knockbackX: 4
   knockbackZ: 5
   knockbackInvulnerability: 0.1
-  revengeValue: 5
+  revengeValue: 3
 --- !u!114 &6025014680465541833
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5895,8 +5895,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackProcessor: 0
   cardDamage:
-    cardDamage: 90010000900100009001000090010000900100009001000090010000900100009001000090010000
-    debugDamage: {x: 400, y: 400}
+    cardDamage: 2c0100002c0100002c0100002c0100002c0100002c0100002c0100002c0100002c0100002c010000
+    debugDamage: {x: 300, y: 300}
     ignoreStatsMultiplier: 0
   cardStatus:
     statusDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

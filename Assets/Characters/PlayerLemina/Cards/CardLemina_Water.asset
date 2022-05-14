@@ -15,7 +15,8 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: fecc8cec02dc317419cb5f16b5f89cce, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -26,15 +27,18 @@ MonoBehaviour:
       Data: 
     - Name: cardBreakComponent
       Entry: 7
-      Data: 0|VoiceActing.CardBreakComponent, Assembly-CSharp
+      Data: 0|VoiceActing.CardBreakCounter, Assembly-CSharp
+    - Name: counterAction
+      Entry: 10
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
   cardSprite: {fileID: 21300000, guid: 37d8215a958e03b4591e83fbab42229e, type: 3}
   cardName: Water
   cardType: 1
-  cardDescription: The next attack become a Counter
-  attackManager: {fileID: 818057835518184039, guid: 6770d448569fca744b9fe1eb45e4a78d,
+  cardDescription: '[Counter] Create a bubble absorbing one attack.'
+  attackManager: {fileID: 818057835518184039, guid: 0fd20a660a502114690b33a1ad0a7e11,
     type: 3}
   colorOutline: {r: 0, g: 0, b: 0, a: 0}
   colorCardBackground: {r: 0, g: 0, b: 0, a: 0}

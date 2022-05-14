@@ -72,21 +72,32 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 4e3306da850bb894e970c7c795c595c8, type: 2}
   - {fileID: 11400000, guid: bccd872cc1f80b94595888440cf228e8, type: 2}
   - {fileID: 11400000, guid: 247b1ae45b788ff4bb7e31ee3c7b4581, type: 2}
+  - {fileID: 11400000, guid: 1b439b9c233570343abfc5d570146433, type: 2}
   - {fileID: 11400000, guid: 0fe84efc6b45ef143adb3f7bea79ba01, type: 2}
   - {fileID: 11400000, guid: a5654a7b665ab4a479bcb7cab4714238, type: 2}
+  - {fileID: 11400000, guid: 08f04d37a0bd5c94da94966921283667, type: 2}
   - {fileID: 11400000, guid: 1fee320bb56ab26459215e48b3dd8077, type: 2}
   - {fileID: 11400000, guid: 2090d5e827507404aaa501e2909eb6cf, type: 2}
   - {fileID: 11400000, guid: 476427ee5b782fa47be51495813c5c2c, type: 2}
+  - {fileID: 11400000, guid: 74f5cf6fc0861414f88f3ea3c31d22d2, type: 2}
   initialEquipment: []
   loreDescription: 
   cardProbability:
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
-    baseCardValue: 700
-  - cardData: {fileID: 11400000, guid: f34db74e4e9460740a229a4f75e02ae9, type: 2}
+  - cardData: {fileID: 11400000, guid: f8536f3ca1a5e0b45b94f56e1ef7ff89, type: 2}
+    baseCardValue: 600
+  - cardData: {fileID: 11400000, guid: 144a961af6a29d5489f8b5164deb4b95, type: 2}
+    baseCardValue: 100
+  - cardData: {fileID: 11400000, guid: 690777df947d4ea49858cc18969642ac, type: 2}
     baseCardValue: 200
-  - cardData: {fileID: 11400000, guid: 561056be2f38cec4e963079bc0c1ccca, type: 2}
+  - cardData: {fileID: 11400000, guid: b8dda297be05d3c438b9832f8d1925af, type: 2}
     baseCardValue: 100
-  - cardData: {fileID: 11400000, guid: 55a7dfae1df812b48bdade438ab2e7fa, type: 2}
+  - cardData: {fileID: 11400000, guid: 46e950fec49e53c468dd947505c9d062, type: 2}
     baseCardValue: 100
-  maxProbability: 1100
+  - cardData: {fileID: 11400000, guid: 7236a60a2587a1c47813d69bfd98c95e, type: 2}
+    baseCardValue: 100
+  - cardData: {fileID: 11400000, guid: ac8d44c04713cab4cae1ac3b65953bb3, type: 2}
+    baseCardValue: 100
+  - cardData: {fileID: 11400000, guid: 1675721ac32975444a8836c8ddc8f7e2, type: 2}
+    baseCardValue: 100
+  maxProbability: 1400
   spriteProfile: {fileID: 21300000, guid: 43ff87d398e99114fa07a02c83a22636, type: 3}

@@ -42,6 +42,7 @@ namespace VoiceActing
             {
                 interval = (lastFrame - Frame) / (float)amount;
                 nextTick = Frame + interval;
+                etherGauge.AddEtherGauge(1);
             }
 
         }

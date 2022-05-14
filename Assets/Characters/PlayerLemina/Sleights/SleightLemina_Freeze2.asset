@@ -10,14 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cc0d50e517eba5d4dba18568d80634f5, type: 3}
-  m_Name: SleightLemina_EtherealSpear
+  m_Name: SleightLemina_Freeze2
   m_EditorClassIdentifier: 
-  sleightName: Ethereal Spear
-  sleightDescription: Only in Ether Install. Fly up in the air and fall down with
-    a super lightning kick.
-  sleightValue: {x: 0, y: 9}
+  sleightName: Freeze
+  sleightDescription: 
+  sleightValue: {x: 0, y: 27}
   sleightRecipe:
+  - {fileID: 11400000, guid: ac8d44c04713cab4cae1ac3b65953bb3, type: 2}
+  - {fileID: 11400000, guid: ac8d44c04713cab4cae1ac3b65953bb3, type: 2}
   - {fileID: 11400000, guid: f8536f3ca1a5e0b45b94f56e1ef7ff89, type: 2}
-  - {fileID: 11400000, guid: f8536f3ca1a5e0b45b94f56e1ef7ff89, type: 2}
-  - {fileID: 11400000, guid: f8536f3ca1a5e0b45b94f56e1ef7ff89, type: 2}
-  sleightAttackData: {fileID: 0}
+  sleightAttackData: {fileID: 11400000, guid: 620797c53743bdc4f9bce4f7c3f4c9b0, type: 2}

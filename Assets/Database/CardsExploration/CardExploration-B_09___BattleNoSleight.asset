@@ -17,11 +17,11 @@ MonoBehaviour:
   cardDescription: Travel to an Ivoiry dream, where sleights are not allowed.
   cardType: 0
   nbCardReward: 1
-  reverieColor: 5
+  reverieColor: 4
   explorationEvent: {fileID: 8236675884287493958, guid: 7af8913c4d5614c4a8a6cda89a05c0ad,
     type: 3}
   battleModifiers:
   - label: Chaos
     battleModifierTargets: 2
-    statusEffect: {fileID: 11400000, guid: 1cc3ab3d058a5b24b81b201eba949b9f, type: 2}
+    statusEffect: {fileID: 11400000, guid: 5ecbabb1ad7dead48aecd9b8df4ea44b, type: 2}
     nb: 1

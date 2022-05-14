@@ -20,6 +20,7 @@ namespace VoiceActing
          *               ATTRIBUTES                 *
         \* ======================================== */
         AfterImageEffect afterImageEffect = null;
+        bool afterImageOn = false;
         #endregion
 
         #region GettersSetters 
@@ -56,14 +57,21 @@ namespace VoiceActing
         public override void UpdateEffect(CharacterBase character)
         {
             base.UpdateEffect(character);
-            if(character.CharacterMovement.InMovement)
+            if(character.CharacterMovement.InMovement && !afterImageOn)
             {
-                afterImageEffect.StartAfterImage();
+                afterImageEffect.StartAfterImage(); 
+                afterImageOn = true;
             }
-            else
+            else if (!character.CharacterMovement.InMovement && afterImageOn)
             {
                 afterImageEffect.EndAfterImage();
+                afterImageOn = false;
             }
+        }
+        public override void RemoveEffect(CharacterBase character)
+        {
+            if(afterImageOn)
+                afterImageEffect.EndAfterImage();
         }
 
         #endregion

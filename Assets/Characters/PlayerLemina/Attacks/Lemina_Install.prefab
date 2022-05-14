@@ -4951,6 +4951,7 @@ GameObject:
   - component: {fileID: 5765558734467980147}
   - component: {fileID: 4769725449169156972}
   - component: {fileID: 2524242894598313049}
+  - component: {fileID: 4834281258610389116}
   m_Layer: 0
   m_Name: AttackAnimationData
   m_TagString: Untagged
@@ -5007,6 +5008,8 @@ MonoBehaviour:
     AnimationEvent: {fileID: 3421367675600876454}
   - Frame: 0
     AnimationEvent: {fileID: 7256261393675639520}
+  - Frame: 0
+    AnimationEvent: {fileID: 4834281258610389116}
   - Frame: 1
     AnimationEvent: {fileID: 9161925311675703307}
   - Frame: 20
@@ -5142,6 +5145,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame: 100
   frameEnd: 0
+--- !u!114 &4834281258610389116
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3720685875369100543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4f9d04c6280504b44ba0bce2a46a66c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 0
+  frameEnd: 90
 --- !u!1 &3781042902220100342
 GameObject:
   m_ObjectHideFlags: 0
@@ -5386,7 +5403,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4388082830208477171}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.1, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children: []
   m_Father: {fileID: 6202298799396831511}
@@ -5431,7 +5448,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 3460995816334445574, guid: 96d77b74bfecc7849874236c7d28020b,
+  m_Sprite: {fileID: -3811173807466110980, guid: 96d77b74bfecc7849874236c7d28020b,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

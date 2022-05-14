@@ -409,9 +409,9 @@ MonoBehaviour:
     AnimationEvent: {fileID: 1615796145513952158}
   - Frame: 24
     AnimationEvent: {fileID: 7755931167123876794}
-  - Frame: 50
+  - Frame: 60
     AnimationEvent: {fileID: 2784196241307366526}
-  - Frame: 65
+  - Frame: 80
     AnimationEvent: {fileID: 2524242894598313049}
 --- !u!114 &5606192128952099492
 MonoBehaviour:
@@ -444,7 +444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30aa148586dde644daf200dde6eea4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 50
+  frame: 60
   frameEnd: 0
   cancelItself: 1
   cancelSpecial: 1
@@ -461,7 +461,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620e0e815b2f5174f8b380210d9a19f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 65
+  frame: 80
   frameEnd: 0
 --- !u!1 &4114098666737907609
 GameObject:
