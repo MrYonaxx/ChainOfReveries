@@ -14,10 +14,12 @@ namespace VoiceActing
 {
     public class AttackC_Knockdown: AttackComponent
     {
+        [SerializeField]
+        bool knockdown = true;
         public override void OnHitComponent(CharacterBase character, CharacterBase target)
         {
             base.OnHitComponent(character, target);
-            target.CharacterKnockback.Knockdown = true;
+            target.CharacterKnockback.Knockdown = knockdown;
         }
 
     } 

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EnemyData_Lia2
   m_EditorClassIdentifier: 
   characterFace: {fileID: 0}
-  characterName: Lia
+  characterName: Lia II
   characterDescription: 'Lia uses [Counter] cards, meaning that if you try to card
     break her action, she will retaliate with a powerful attack.
 

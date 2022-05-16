@@ -29,8 +29,6 @@ namespace VoiceActing
                 if (aiController.Value.Character.SleightController.CanPlaySleight() == false)
                 {
                     aiController.Value.PressButton(aiController.Value.InputY);
-                    //Debug.Log("Alloha");
-                    //Debug.Log(aiController.Value.Character.DeckController.GetCurrentCard().CardData.name);
                 }
                 return TaskStatus.Success;
             }

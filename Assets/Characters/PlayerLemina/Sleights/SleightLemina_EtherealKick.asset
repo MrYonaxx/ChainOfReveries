@@ -18,6 +18,6 @@ MonoBehaviour:
   sleightValue: {x: 0, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: 144a961af6a29d5489f8b5164deb4b95, type: 2}
-  - {fileID: 11400000, guid: f8536f3ca1a5e0b45b94f56e1ef7ff89, type: 2}
-  - {fileID: 11400000, guid: f8536f3ca1a5e0b45b94f56e1ef7ff89, type: 2}
+  - {fileID: 11400000, guid: 144a961af6a29d5489f8b5164deb4b95, type: 2}
+  - {fileID: 11400000, guid: 144a961af6a29d5489f8b5164deb4b95, type: 2}
   sleightAttackData: {fileID: 11400000, guid: 1110ea333d1579e438d410061ab5c16b, type: 2}

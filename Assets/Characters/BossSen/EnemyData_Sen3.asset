@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: EnemyData_Sen3
   m_EditorClassIdentifier: 
   characterFace: {fileID: 21300000, guid: acd5e7aca1cb3994fa06dc276da38671, type: 3}
-  characterName: Sen II
+  characterName: Sen III
   characterDescription: 'Sen is quick so it will be hard to react to his attack and
     Card Break him. Keep an eye on his hand when he runs to you and use a card with
     a stronger value.

@@ -7,11 +7,13 @@ namespace VoiceActing
 {
     public class CharAnimation_MoveDirectionTarget : CharacterAnimationEvent
     {
+        [InfoBox("Charge, pour un suivi utilisé MoveToTarget")]
         [Space]
         [SerializeField]
         float speed = 3;
         [SerializeField]
         float maxTrackingY = 0.5f;
+
 
         Vector3 direction;
         bool active = true;

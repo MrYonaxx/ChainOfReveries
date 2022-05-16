@@ -7,6 +7,7 @@ namespace VoiceActing
 {
     public class CharAnimation_MoveToTarget : CharacterAnimationEvent
     {
+        [InfoBox("Suivi, pour une charge utilisé MoveToTarget")]
         [Space]
         [SerializeField]
         float speed = 3;

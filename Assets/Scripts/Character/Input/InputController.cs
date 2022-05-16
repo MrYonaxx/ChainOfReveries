@@ -271,6 +271,10 @@ namespace VoiceActing
         {
             input.BufferDownInput(bufferTime);
         }
+        public void ResetButtonBuffer(InputBuffer input)
+        {
+            input.ResetBuffer();
+        }
         public void HoldButton(InputBuffer input)
         {
             input.InputValue = 1;

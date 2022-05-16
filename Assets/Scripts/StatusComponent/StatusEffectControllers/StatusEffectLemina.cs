@@ -86,6 +86,10 @@ namespace VoiceActing
             CardBreakController.OnCardBreak += CardBreakInstall;
 
             gaugeMeter = character.CreateAnimation(GaugeInstall.gameObject).GetComponent<GaugeDrawer>();
+            if(character.tag == "Enemy")
+            {
+                gaugeMeter.transform.GetChild(0).localScale = new Vector3(-1, 1, 1);
+            }
 
             Meter = 0;
             InitializeInstall();

@@ -16,12 +16,10 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 5492482477394563898, guid: ae38714b0fadba44c8f4419bee287f12, type: 3}
     - {fileID: 11400000, guid: 4e3306da850bb894e970c7c795c595c8, type: 2}
     - {fileID: 11400000, guid: bccd872cc1f80b94595888440cf228e8, type: 2}
     - {fileID: 11400000, guid: 247b1ae45b788ff4bb7e31ee3c7b4581, type: 2}
     - {fileID: 11400000, guid: 1b439b9c233570343abfc5d570146433, type: 2}
-    - {fileID: 11400000, guid: 0fe84efc6b45ef143adb3f7bea79ba01, type: 2}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -52,7 +50,7 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 7
+      Data: 6
     - Name: 
       Entry: 7
       Data: 3|VoiceActing.StatusEffectStat, Assembly-CSharp
@@ -145,23 +143,17 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 12|VoiceActing.StatusEffectAnimation, Assembly-CSharp
-    - Name: animationObject
-      Entry: 10
-      Data: 0
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 13|VoiceActing.StatusEffectBonusSleight, Assembly-CSharp
+      Data: 12|VoiceActing.StatusEffectBonusSleight, Assembly-CSharp
     - Name: BonusSleights
       Entry: 7
-      Data: 14|System.Collections.Generic.List`1[[VoiceActing.SleightData, Assembly-CSharp]],
+      Data: 13|System.Collections.Generic.List`1[[VoiceActing.SleightData, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
-      Data: 5
+      Data: 4
+    - Name: 
+      Entry: 10
+      Data: 0
     - Name: 
       Entry: 10
       Data: 1
@@ -171,12 +163,6 @@ MonoBehaviour:
     - Name: 
       Entry: 10
       Data: 3
-    - Name: 
-      Entry: 10
-      Data: 4
-    - Name: 
-      Entry: 10
-      Data: 5
     - Name: 
       Entry: 13
       Data: 

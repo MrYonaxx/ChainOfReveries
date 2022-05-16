@@ -10,6 +10,14 @@ namespace VoiceActing
     {
         [SerializeField]
         public SharedAIController aiController;
+        float timeout = 0;
+
+
+        public override void OnStart()
+        {
+            base.OnStart(); 
+            timeout = 0;
+        }
 
         public override TaskStatus OnUpdate()
         {
@@ -18,6 +26,14 @@ namespace VoiceActing
             {
                 return TaskStatus.Success;
             }
+
+            // Si le joueur n'est pas dans state acting, le running tourne en boucle donc je rajoute cet sécurité
+            timeout += Time.deltaTime;
+            if (timeout > 0.05f && aiController.Value.Character.State.ID == CharacterStateID.Idle)
+            {
+                return TaskStatus.Success;
+            }
+
             return TaskStatus.Running;
         }
     }

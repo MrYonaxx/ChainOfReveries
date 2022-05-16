@@ -89,7 +89,8 @@ namespace VoiceActing
         }
 
         private void CheckAddSleight(CharacterBase character)
-        {    
+        {
+            aiController.Value.ResetButtonBuffer(aiController.Value.InputY);
             if (deckController.CurrentIndex == cardIndex.Value || checkSleight == false)
                 return;
 

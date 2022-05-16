@@ -19,4 +19,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: f8536f3ca1a5e0b45b94f56e1ef7ff89, type: 2}
   - {fileID: 11400000, guid: f8536f3ca1a5e0b45b94f56e1ef7ff89, type: 2}
   - {fileID: 11400000, guid: f8536f3ca1a5e0b45b94f56e1ef7ff89, type: 2}
-  sleightAttackData: {fileID: 0}
+  sleightAttackData: {fileID: 11400000, guid: b5dd9c6fe1a2abc439aab3dd81dc9ef1, type: 2}

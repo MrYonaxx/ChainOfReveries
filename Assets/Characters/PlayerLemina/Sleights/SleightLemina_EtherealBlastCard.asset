@@ -34,7 +34,7 @@ MonoBehaviour:
   cardName: Ethereal Blast
   cardType: 0
   cardDescription: 
-  attackManager: {fileID: 818057835518184039, guid: f30641c5e610a1f4a8f9b6fe1850e865,
+  attackManager: {fileID: 6973911198937877190, guid: 111afb9f053a90545b0e7ce675d0822f,
     type: 3}
   colorOutline: {r: 0, g: 0, b: 0, a: 0}
   colorCardBackground: {r: 0, g: 0, b: 0, a: 0}

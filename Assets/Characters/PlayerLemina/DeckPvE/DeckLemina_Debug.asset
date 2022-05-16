@@ -15,6 +15,10 @@ MonoBehaviour:
   deckName: Debug
   initialDeck:
   - cardData: {fileID: 11400000, guid: f8536f3ca1a5e0b45b94f56e1ef7ff89, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: f8536f3ca1a5e0b45b94f56e1ef7ff89, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: f8536f3ca1a5e0b45b94f56e1ef7ff89, type: 2}
     baseCardValue: 7
   - cardData: {fileID: 11400000, guid: f8536f3ca1a5e0b45b94f56e1ef7ff89, type: 2}
     baseCardValue: 6
