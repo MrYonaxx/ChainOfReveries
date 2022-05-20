@@ -18,10 +18,10 @@ MonoBehaviour:
 
 '
   characterStat:
-    hp: 6000
+    hp: 5400
     HPMax:
-      baseValue: 6000
-      finalValue: 6000
+      baseValue: 5400
+      finalValue: 5400
     Attack:
       baseValue: 1
       finalValue: 1
@@ -37,6 +37,9 @@ MonoBehaviour:
     RevengeValue:
       baseValue: 0
       finalValue: 0
+    RevengeValueRate:
+      baseValue: 0
+      finalValue: 0
     KnockbackTime:
       baseValue: 0.8
       finalValue: 0.8
@@ -46,12 +49,9 @@ MonoBehaviour:
     CardBreakTime:
       baseValue: 0.8
       finalValue: 0.8
-    CardBreakKnockback:
-      baseValue: 0
-      finalValue: 0
     Speed:
-      baseValue: 2.8
-      finalValue: 2.8
+      baseValue: 2.9
+      finalValue: 2.9
     Gravity:
       baseValue: 25
       finalValue: 25
@@ -71,11 +71,6 @@ MonoBehaviour:
   sleightDatabase: []
   initialEquipment: []
   loreDescription: 
-  initialDeckExploration:
-  - {fileID: 11400000, guid: d15e3b90d2a853d48b4e6968f7d7f5a9, type: 2}
-  - {fileID: 11400000, guid: 44d7b7e69c371684a8bcda8858987fd1, type: 2}
-  - {fileID: 11400000, guid: 428372b4353492a4992435ff672dd230, type: 2}
-  - {fileID: 11400000, guid: ef8e00c5c175d844daebe5dcf2d8b07f, type: 2}
   cardProbability:
   - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
     baseCardValue: 700

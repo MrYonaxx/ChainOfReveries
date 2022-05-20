@@ -24,7 +24,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 5ba249b07a09a314fbc7caa429ab6585, type: 3}
   cardName: Staff of Hate
   cardType: 0
-  cardDescription: 'Target gradually lose HP.
+  cardDescription: 'Both target gradually lose HP.
 
     (1 Hit)'
   statsModifier: []

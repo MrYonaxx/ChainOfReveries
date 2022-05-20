@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 02519ca1dddceb742b46951073eda492, type: 3}
-  m_Name: CardEquipment_A_NEW___Adrenaline
+  m_Name: CardEquipment_A_NEW__NinjaHelm 1
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -21,11 +21,14 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  cardSprite: {fileID: 21300000, guid: 7929d0b54a063b74cb048ca6e0fd8032, type: 3}
-  cardName: Gold Coin
+  cardSprite: {fileID: 21300000, guid: c73ac8273333b924db779ce59905f19d, type: 3}
+  cardName: Ninja Helm
   cardType: 1
-  cardDescription: Increase damage dealt by 100% during a combo of 20 hits.
-  statsModifier: []
+  cardDescription: Reload time reduced by 40%.
+  statsModifier:
+  - charStat: 5
+    modifierType: 0
+    value: 40
   statusEffectPassive: {fileID: 0}
   equipmentAction: {fileID: 0}
   statusEffectActive: {fileID: 0}

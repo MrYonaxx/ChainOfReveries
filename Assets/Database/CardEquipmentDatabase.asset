@@ -102,4 +102,6 @@ MonoBehaviour:
     probability: 0
   - cardEquipment: {fileID: 11400000, guid: 0ae1da5f1baf26443b613d756e34347e, type: 2}
     probability: 0
+  - cardEquipment: {fileID: 11400000, guid: a4a0700e7fc090e4ab160b89df5c8731, type: 2}
+    probability: 100
   pathDatabase: Assets/Database/CardsEquipment

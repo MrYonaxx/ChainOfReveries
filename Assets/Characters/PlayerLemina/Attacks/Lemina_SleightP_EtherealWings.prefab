@@ -894,7 +894,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame: 68
   frameEnd: 0
-  offset: {x: -0.2, y: 0, z: 0}
+  offset: {x: -0.3, y: 0, z: 0}
   useCharacterDirection: 1
   layerMask:
     serializedVersion: 2

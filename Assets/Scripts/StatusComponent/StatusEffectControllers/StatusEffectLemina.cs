@@ -40,6 +40,7 @@ namespace VoiceActing
         bool inInstallReady = false;
         bool inUninstallReady = false;
         bool firstReload = false;
+        bool inBattle = false;
         #endregion
 
         #region GettersSetters 
@@ -103,6 +104,7 @@ namespace VoiceActing
             MaxMeter = owner.DeckController.DeckData.Count;
             gaugeMeter.DrawGauge(Meter, MaxMeter);
             gaugeMeter.gameObject.SetActive(true);
+            inBattle = true;
         }
 
         // Fin du combat
@@ -113,6 +115,7 @@ namespace VoiceActing
             inInstallReady = false;
             firstReload = false;
             gaugeMeter.gameObject.SetActive(false);
+            inBattle = false;
         }
 
 
@@ -199,7 +202,9 @@ namespace VoiceActing
 
         public override void UpdateEffect(CharacterBase character)
         {
-            base.UpdateEffect(character); 
+            base.UpdateEffect(character);
+            if (!inBattle)
+                return;
 
             if (character.State.ID == CharacterStateID.Idle)
             {
@@ -253,6 +258,8 @@ namespace VoiceActing
             character.CharacterAction.OnAction -= AttackInstall;
             character.CharacterAction.OnAttackHit -= AttackHitInstall;
             character.CharacterKnockback.OnHit -= HitInstall;
+
+            GameObject.Destroy(gaugeMeter.gameObject);
 
         }
 

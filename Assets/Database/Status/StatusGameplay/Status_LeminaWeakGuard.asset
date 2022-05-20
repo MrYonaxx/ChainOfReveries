@@ -27,10 +27,37 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
       Data: 1|VoiceActing.StatusEffectUpdateOnIdle, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|VoiceActing.StatusEffectUpdateOnHit, Assembly-CSharp
+    - Name: hitTime
+      Entry: 7
+      Data: UnityEngine.Vector2Int, UnityEngine.CoreModule
+    - Name: 
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: hitCondition
+      Entry: 5
+      Data: false
+    - Name: cardType
+      Entry: 3
+      Data: -1
+    - Name: attackElement
+      Entry: 3
+      Data: -1
     - Name: 
       Entry: 8
       Data: 
@@ -42,17 +69,17 @@ MonoBehaviour:
       Data: 
     - Name: statusController
       Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[VoiceActing.StatusEffect, Assembly-CSharp]],
+      Data: 3|System.Collections.Generic.List`1[[VoiceActing.StatusEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
       Data: 1
     - Name: 
       Entry: 7
-      Data: 3|VoiceActing.StatusEffectKnockbackComponent, Assembly-CSharp
+      Data: 4|VoiceActing.StatusEffectKnockbackComponent, Assembly-CSharp
     - Name: knockbackCondition
       Entry: 7
-      Data: 4|VoiceActing.KnockbackConditionParry, Assembly-CSharp
+      Data: 5|VoiceActing.KnockbackConditionParry, Assembly-CSharp
     - Name: priority
       Entry: 4
       Data: 0
