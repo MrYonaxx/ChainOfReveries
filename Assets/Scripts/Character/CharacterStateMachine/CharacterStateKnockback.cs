@@ -183,6 +183,7 @@ namespace VoiceActing
         {
             character.FeedbacksComponents.GetComponent<Feedbacks.ShakeSprite>().Shake(0.2f, 0.2f);
             character.SetCharacterMotionSpeed(0, 0.1f);
+            character.CharacterKnockback.KnockbackTime += 0.2f;
             character.CharacterMovement.TurnBack();
             knockbackX = -knockbackX;
             character.CharacterMovement.Jump(3f);

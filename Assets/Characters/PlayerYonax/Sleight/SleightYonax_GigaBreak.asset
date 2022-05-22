@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc0d50e517eba5d4dba18568d80634f5, type: 3}
+  m_Name: SleightYonax_GigaBreak
+  m_EditorClassIdentifier: 
+  sleightName: Giga Break
+  sleightDescription: An attack that will pierce through the enemy defense.
+  sleightValue: {x: 10, y: 18}
+  sleightRecipe:
+  - {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}
+  - {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}
+  - {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}
+  sleightAttackData: {fileID: 11400000, guid: 6ed957f5e3b8826408384c907224a99e, type: 2}

@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 317806353b7288b4cb30da061d383f0e, type: 3}
-  m_Name: CardYonax_Grab
+  m_Name: SleightYonaxM_FiragaCard
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -30,14 +30,14 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  cardSprite: {fileID: 21300000, guid: 975f42fc976dbf346a07347803875074, type: 3}
-  cardName: Grab
-  cardType: 0
-  cardDescription: '[Combo] A basic attack in front of you.'
-  attackManager: {fileID: 818057835518184039, guid: 1176ffadce049984196767b3bb9f8ffb,
+  cardSprite: {fileID: 0}
+  cardName: Fire EX
+  cardType: 1
+  cardDescription: 
+  attackManager: {fileID: 818057835518184039, guid: 78a5ef089abdf6147b478ee74fd97be5,
     type: 3}
   colorOutline: {r: 0, g: 0, b: 0, a: 0}
   colorCardBackground: {r: 0, g: 0, b: 0, a: 0}
-  cardProbability: 64000000640000006400000064000000640000006400000064000000640000006400000064000000
+  cardProbability: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
   breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
-  maxProbability: 1000
+  maxProbability: 0

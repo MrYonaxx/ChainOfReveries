@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 434bf688527fc654fb1aaf31068428ae, type: 3}
   m_Name: PlayerYonaxData
   m_EditorClassIdentifier: 
-  characterFace: {fileID: 21300000, guid: acd5e7aca1cb3994fa06dc276da38671, type: 3}
+  characterFace: {fileID: 0}
   characterName: Yonax
   characterDescription: '
 
@@ -68,7 +68,18 @@ MonoBehaviour:
     StatusResistances: []
   salut: 
   initialDeck: []
-  sleightDatabase: []
+  sleightDatabase:
+  - {fileID: 11400000, guid: a919e0091ed80cd4bae7ac35876aa61a, type: 2}
+  - {fileID: 11400000, guid: 25d706d08c236a24e89bec01f31c2e53, type: 2}
+  - {fileID: 11400000, guid: 30d80868ddab6e8499e85c7ee6ddf91a, type: 2}
+  - {fileID: 11400000, guid: 46b65e96a6376704d8d31127a4cada5d, type: 2}
+  - {fileID: 11400000, guid: 1d369b710e9e9e64497916d3581bc2b6, type: 2}
+  - {fileID: 11400000, guid: 957cda4e98e451046ae32b68b25dc7c6, type: 2}
+  - {fileID: 11400000, guid: 981da06c8d347f743891722957396970, type: 2}
+  - {fileID: 11400000, guid: 19c01b248d35aa646b815701f1fa150f, type: 2}
+  - {fileID: 11400000, guid: 62b65b50a8f6b3d4cb440ebe89f19e26, type: 2}
+  - {fileID: 11400000, guid: b3cba7dce79486c4399bd8eedb18e418, type: 2}
+  - {fileID: 11400000, guid: 1d369b710e9e9e64497916d3581bc2b6, type: 2}
   initialEquipment: []
   loreDescription: 
   cardProbability:

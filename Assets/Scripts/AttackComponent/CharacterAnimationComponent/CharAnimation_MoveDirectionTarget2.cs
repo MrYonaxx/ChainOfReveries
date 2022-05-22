@@ -37,9 +37,15 @@ namespace VoiceActing
 
         public override void UpdateComponent(CharacterBase character, int frame)
         {
-            if (frame <= FrameEnd) 
+            if (frame <= FrameEnd)
             {
-                if((character.LockController.TargetLocked.transform.position - character.transform.position).sqrMagnitude > stopDistance) 
+                if (character.LockController.TargetLocked == null)
+                {
+                    character.CharacterMovement.Move(direction.x * speed, direction.y * speed);
+                    return;
+                }
+
+                if ((character.LockController.TargetLocked.transform.position - character.transform.position).sqrMagnitude > stopDistance) 
                 {
                     character.CharacterMovement.Move(direction.x * speed, direction.y * speed);
                 }

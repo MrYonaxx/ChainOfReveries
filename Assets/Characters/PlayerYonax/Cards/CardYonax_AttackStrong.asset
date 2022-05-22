@@ -37,7 +37,7 @@ MonoBehaviour:
   cardName: AttackStrong
   cardType: 0
   cardDescription: '[Combo] A basic attack in front of you.'
-  attackManager: {fileID: 818057835518184039, guid: 1176ffadce049984196767b3bb9f8ffb,
+  attackManager: {fileID: 818057835518184039, guid: 5471a023cae1902439ceda94ee30e4dd,
     type: 3}
   colorOutline: {r: 0, g: 0, b: 0, a: 0}
   colorCardBackground: {r: 0, g: 0, b: 0, a: 0}

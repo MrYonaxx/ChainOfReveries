@@ -40,9 +40,10 @@ namespace VoiceActing
                 {
                     direction = new Vector3((1 - maxTrackingY) * Mathf.Sign(direction.x), maxTrackingY * Mathf.Sign(direction.y));
                 }
+
+                if ((character.LockController.TargetLocked.transform.position - character.transform.position).sqrMagnitude < 0.1f)
+                    direction = Vector3.zero;
             }
-            if ((character.LockController.TargetLocked.transform.position - character.transform.position).sqrMagnitude < 0.1f)
-                direction = Vector3.zero;
             character.CharacterMovement.Move(direction.x * speed, direction.y * speed);
         }
 

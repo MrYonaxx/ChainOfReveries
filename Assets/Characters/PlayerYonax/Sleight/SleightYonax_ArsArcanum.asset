@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc0d50e517eba5d4dba18568d80634f5, type: 3}
   m_Name: SleightYonax_ArsArcanum
   m_EditorClassIdentifier: 
-  sleightName: 
-  sleightDescription: 
-  sleightValue: {x: 0, y: 0}
-  sleightRecipe: []
-  sleightAttackData: {fileID: 0}
+  sleightName: Final Arcanum
+  sleightDescription: Unleash thirteen consecutives slahes.
+  sleightValue: {x: 0, y: 9}
+  sleightRecipe:
+  - {fileID: 11400000, guid: b2fba900e109c1943b1abdc9baf710ff, type: 2}
+  - {fileID: 11400000, guid: b2fba900e109c1943b1abdc9baf710ff, type: 2}
+  - {fileID: 11400000, guid: b2fba900e109c1943b1abdc9baf710ff, type: 2}
+  sleightAttackData: {fileID: 11400000, guid: 604c0164f51a27d4daa37526556cd3a3, type: 2}

@@ -33,7 +33,10 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: edbcf4eefab65ba49a667fd05fa65c2b, type: 3}
   cardName: Somersault
   cardType: 0
-  cardDescription: Shoot a fireball in front of you.
+  cardDescription: 'A powerful kick during a back sommersault.
+
+    [Combo] only
+    in Ether Install.'
   attackManager: {fileID: 818057835518184039, guid: 54a6fd7d2d5efb34fa358a600bccb3a4,
     type: 3}
   colorOutline: {r: 0, g: 0, b: 0, a: 0}

@@ -14,6 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sleightName: 
   sleightDescription: 
-  sleightValue: {x: 0, y: 0}
-  sleightRecipe: []
+  sleightValue: {x: 0, y: 13}
+  sleightRecipe:
+  - {fileID: 11400000, guid: d926d2557e4dce14ab53d8c683fa5cb3, type: 2}
+  - {fileID: 11400000, guid: d926d2557e4dce14ab53d8c683fa5cb3, type: 2}
+  - {fileID: 11400000, guid: d926d2557e4dce14ab53d8c683fa5cb3, type: 2}
   sleightAttackData: {fileID: 0}

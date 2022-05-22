@@ -23,6 +23,24 @@ TextureImporter:
   - first:
       213: -1563457849909024656
     second: Yonax_Attack03_3
+  - first:
+      213: 7075600031652223504
+    second: Yonax_Attack03_3
+  - first:
+      213: -7926371477853093349
+    second: Yonax_Attack03_4
+  - first:
+      213: 5643582494082509860
+    second: Yonax_Attack03_4
+  - first:
+      213: -7419415186142614123
+    second: Yonax_Attack03_5
+  - first:
+      213: -4510708740185141296
+    second: Yonax_Attack03_5
+  - first:
+      213: 380051698075776378
+    second: Yonax_Attack03_6
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -209,8 +227,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 07860ea7e5b7d4ae0800000000000000
-      internalID: -1563457849909024656
+      spriteID: 01a9f5b9db4913260800000000000000
+      internalID: 7075600031652223504
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yonax_Attack03_4
+      rect:
+        serializedVersion: 2
+        x: 400
+        y: 0
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 42ca66c9068025e40800000000000000
+      internalID: 5643582494082509860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yonax_Attack03_5
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 0
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0dfc300bc4eb661c0800000000000000
+      internalID: -4510708740185141296
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Yonax_Attack03_6
+      rect:
+        serializedVersion: 2
+        x: 600
+        y: 0
+        width: 100
+        height: 100
+      alignment: 9
+      pivot: {x: 0.5, y: 0.06}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a75371c7107364500800000000000000
+      internalID: 380051698075776378
       vertices: []
       indices: 
       edges: []

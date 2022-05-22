@@ -12,8 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc0d50e517eba5d4dba18568d80634f5, type: 3}
   m_Name: SleightYonax_TeraBuster
   m_EditorClassIdentifier: 
-  sleightName: 
+  sleightName: Tera Buster
   sleightDescription: Hold Y To charge
   sleightValue: {x: 19, y: 27}
-  sleightRecipe: []
-  sleightAttackData: {fileID: 0}
+  sleightRecipe:
+  - {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}
+  - {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}
+  - {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}
+  sleightAttackData: {fileID: 11400000, guid: 73f6fa3fb7836ec4087391f4e2ce350d, type: 2}
