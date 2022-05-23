@@ -260,7 +260,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035f334978101924ea5aae883ccf84f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameID: Nelys_Magic_Fire
+  nameID: Nelys_Magic_Ice
   attackAnimation: {fileID: 7400000, guid: 8746657c607745f4594256fd3f080055, type: 2}
   characterAnimationData: {fileID: 4670453683040411876}
   linkToCharacter: 1

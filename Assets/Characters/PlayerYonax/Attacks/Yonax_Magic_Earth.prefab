@@ -547,7 +547,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -7715370249130995148, guid: 9ed1c5c0a4c62e7428ce8f596ad73b63,
+  m_Sprite: {fileID: -2382402904197877027, guid: a9e681445061914419ebbaf41c4aeee6,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -892,8 +892,7 @@ Transform:
   - {fileID: 2520948011644738657}
   - {fileID: 6206706469227825445}
   - {fileID: 8909030349568453251}
-  - {fileID: 8515545717953845631}
-  - {fileID: 4968000787191401250}
+  - {fileID: 7601985536538767283}
   m_Father: {fileID: 5842096757366747166}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -959,7 +958,7 @@ GameObject:
   - component: {fileID: 8515545717953845631}
   - component: {fileID: 9220820535932010399}
   m_Layer: 0
-  m_Name: New Sprite
+  m_Name: EarthGround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -972,12 +971,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7291665305183017460}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.1, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
-  m_Father: {fileID: 2917755026358873579}
-  m_RootOrder: 5
+  m_Father: {fileID: 7601985536538767283}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &9220820535932010399
 SpriteRenderer:
@@ -1094,6 +1093,38 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 912d5028f52a473498673d8665a9bbf9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &8469214043202896659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7601985536538767283}
+  m_Layer: 0
+  m_Name: EarthFX
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &7601985536538767283
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8469214043202896659}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8515545717953845631}
+  - {fileID: 4968000787191401250}
+  m_Father: {fileID: 2917755026358873579}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &8770259348178133249
 GameObject:
   m_ObjectHideFlags: 0
@@ -1105,7 +1136,7 @@ GameObject:
   - component: {fileID: 4968000787191401250}
   - component: {fileID: 4384976305390437060}
   m_Layer: 0
-  m_Name: New Sprite (1)
+  m_Name: EarthRock
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1118,12 +1149,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8770259348178133249}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.04, y: 0.28, z: 0}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.04, y: 0.28000003, z: 0}
   m_LocalScale: {x: 0.7, y: 0.7, z: 1}
   m_Children: []
-  m_Father: {fileID: 2917755026358873579}
-  m_RootOrder: 6
+  m_Father: {fileID: 7601985536538767283}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &4384976305390437060
 SpriteRenderer:

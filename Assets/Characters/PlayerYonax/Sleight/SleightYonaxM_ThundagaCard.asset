@@ -34,7 +34,7 @@ MonoBehaviour:
   cardName: Thunder EX
   cardType: 1
   cardDescription: 
-  attackManager: {fileID: 818057835518184039, guid: 00fe538e98e9fb744b26a59b1df7ed8f,
+  attackManager: {fileID: 818057835518184039, guid: 128c649e9d53f624a9390d94ae3853c9,
     type: 3}
   colorOutline: {r: 0, g: 0, b: 0, a: 0}
   colorCardBackground: {r: 0, g: 0, b: 0, a: 0}

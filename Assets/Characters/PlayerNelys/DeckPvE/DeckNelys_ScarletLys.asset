@@ -34,5 +34,7 @@ MonoBehaviour:
     baseCardValue: 2
   - cardData: {fileID: 11400000, guid: 9dba2c554978cc54cb7f9f02f714327b, type: 2}
     baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: c939b66aa5ad0fb4f9fda8dead6c1e83, type: 2}
+    baseCardValue: 1
   premiumCardID: 
   initialEquipment: []

@@ -35,11 +35,11 @@ MonoBehaviour:
       baseValue: 1
       finalValue: 1
     RevengeValue:
-      baseValue: 0
-      finalValue: 0
+      baseValue: 15
+      finalValue: 15
     RevengeValueRate:
-      baseValue: 0
-      finalValue: 0
+      baseValue: 1
+      finalValue: 1
     KnockbackTime:
       baseValue: 0.8
       finalValue: 0.8
@@ -83,13 +83,21 @@ MonoBehaviour:
   initialEquipment: []
   loreDescription: 
   cardProbability:
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
+  - cardData: {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}
     baseCardValue: 700
-  - cardData: {fileID: 11400000, guid: f34db74e4e9460740a229a4f75e02ae9, type: 2}
+  - cardData: {fileID: 11400000, guid: d926d2557e4dce14ab53d8c683fa5cb3, type: 2}
     baseCardValue: 200
-  - cardData: {fileID: 11400000, guid: 561056be2f38cec4e963079bc0c1ccca, type: 2}
+  - cardData: {fileID: 11400000, guid: b2fba900e109c1943b1abdc9baf710ff, type: 2}
+    baseCardValue: 200
+  - cardData: {fileID: 11400000, guid: 13fde57315dbdf8489e41ada3c106d5f, type: 2}
     baseCardValue: 100
-  - cardData: {fileID: 11400000, guid: 55a7dfae1df812b48bdade438ab2e7fa, type: 2}
+  - cardData: {fileID: 11400000, guid: c24207b815562b544b90cc8f5e304f96, type: 2}
     baseCardValue: 100
-  maxProbability: 1100
+  - cardData: {fileID: 11400000, guid: 825a8063485c92d439babaef76b5898e, type: 2}
+    baseCardValue: 100
+  - cardData: {fileID: 11400000, guid: b0ee95d251c04c146b88069334acffd6, type: 2}
+    baseCardValue: 100
+  - cardData: {fileID: 11400000, guid: b2d166c612600494588db3447b3566a1, type: 2}
+    baseCardValue: 100
+  maxProbability: 1600
   spriteProfile: {fileID: 21300000, guid: be2fdab14e5c7174b9767bdececabeed, type: 3}

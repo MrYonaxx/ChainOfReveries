@@ -9,14 +9,23 @@ namespace VoiceActing
     public class CharAnimation_Reload : CharacterAnimationEvent
     {
         [SerializeField]
+        float reloadAmount = -1;
+        [SerializeField]
         bool restoreBanishCard = false;
 
         public override void Execute(CharacterBase character)
         {
-            if(restoreBanishCard)
-                character.DeckController.UnbanishCard();
+            if (reloadAmount == -1)
+            {
+                if (restoreBanishCard)
+                    character.DeckController.UnbanishCard();
 
-            character.DeckController.ReloadDeck();
+                character.DeckController.ReloadDeck();
+            }
+            else
+            {
+                character.DeckController.AddReload(reloadAmount);
+            }
         }
 
 

@@ -24,7 +24,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 08c5254363573d840bba2f151a356471, type: 3}
   cardName: Yonax
   cardType: 0
-  cardDescription: Card Break automatically becomes Perfect Card Break.
+  cardDescription: Win Card Break against equal card value.
   statsModifier: []
   statusEffectPassive: {fileID: 0}
   equipmentAction: {fileID: 0}

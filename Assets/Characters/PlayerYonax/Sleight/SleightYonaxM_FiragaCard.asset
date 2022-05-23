@@ -34,7 +34,7 @@ MonoBehaviour:
   cardName: Fire EX
   cardType: 1
   cardDescription: 
-  attackManager: {fileID: 818057835518184039, guid: 78a5ef089abdf6147b478ee74fd97be5,
+  attackManager: {fileID: 818057835518184039, guid: b9bed55f66f849441bc8d1d86f3bc3c1,
     type: 3}
   colorOutline: {r: 0, g: 0, b: 0, a: 0}
   colorCardBackground: {r: 0, g: 0, b: 0, a: 0}

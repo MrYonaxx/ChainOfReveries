@@ -13,8 +13,7 @@ MonoBehaviour:
   m_Name: SleightLemina_EtherExcel
   m_EditorClassIdentifier: 
   sleightName: Ether Excel
-  sleightDescription: Consume Health into Ether. The health consumed is reduced by
-    33% multiplied by the Sleight Chain number.
+  sleightDescription: 'Consume Health into Ether. '
   sleightValue: {x: 0, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: 690777df947d4ea49858cc18969642ac, type: 2}

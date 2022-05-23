@@ -34,7 +34,7 @@ MonoBehaviour:
   cardName: Final Arcanum
   cardType: 0
   cardDescription: 
-  attackManager: {fileID: 818057835518184039, guid: c7e7d7f9f04710649ab44abef136f348,
+  attackManager: {fileID: 818057835518184039, guid: 3e7513935ee427a4ba18ddbaf5178709,
     type: 3}
   colorOutline: {r: 0, g: 0, b: 0, a: 0}
   colorCardBackground: {r: 0, g: 0, b: 0, a: 0}

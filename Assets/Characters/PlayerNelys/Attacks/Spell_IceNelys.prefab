@@ -208,7 +208,7 @@ MonoBehaviour:
   onlyHitStopOpponent: 1
   hitStop: 0.3
   knockbackDurationMultiplier: 1
-  knockbackX: 5
+  knockbackX: 8
   knockbackZ: 0
   knockbackInvulnerability: 0.4
   revengeValue: 4

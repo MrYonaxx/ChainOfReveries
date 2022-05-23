@@ -133,8 +133,10 @@ MonoBehaviour:
   - {fileID: 818057835518184039, guid: e0d92b983db902c4a9c00c68a4078625, type: 3}
   - {fileID: 818057835518184039, guid: c3c9459aaa2dc5840bc59137e603afbe, type: 3}
   - {fileID: 818057835518184039, guid: 5ff6ea93af7fd12428bef8aa9ff4ccd7, type: 3}
+  - {fileID: 818057835518184039, guid: 4a5cd8b850bcafb489f8d588ee11bf4f, type: 3}
   - {fileID: 818057835518184039, guid: 58c60c5abf0a2ab45924306875095216, type: 3}
   - {fileID: 818057835518184039, guid: e746040f46ec3c54fb261092eab73544, type: 3}
+  - {fileID: 818057835518184039, guid: 95b0e4307db268a448e50f938636162e, type: 3}
   attackToCombos:
   - {fileID: 818057835518184039, guid: 8f7343277119a0c48aad5463fc4b80b4, type: 3}
   - {fileID: 818057835518184039, guid: babeb1930d65f344fb84914e24b6a954, type: 3}
@@ -143,8 +145,10 @@ MonoBehaviour:
   - {fileID: 818057835518184039, guid: babeb1930d65f344fb84914e24b6a954, type: 3}
   - {fileID: 818057835518184039, guid: add5bb62a2745f048aadeb832c0e503d, type: 3}
   - {fileID: 818057835518184039, guid: add5bb62a2745f048aadeb832c0e503d, type: 3}
+  - {fileID: 818057835518184039, guid: 47d60e854a5c49a42ab143c28b574f61, type: 3}
   - {fileID: 818057835518184039, guid: babeb1930d65f344fb84914e24b6a954, type: 3}
   - {fileID: 818057835518184039, guid: add5bb62a2745f048aadeb832c0e503d, type: 3}
+  - {fileID: 818057835518184039, guid: 47d60e854a5c49a42ab143c28b574f61, type: 3}
 --- !u!1 &3720685875369100543
 GameObject:
   m_ObjectHideFlags: 0

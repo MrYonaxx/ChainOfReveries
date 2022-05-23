@@ -5061,6 +5061,7 @@ GameObject:
   - component: {fileID: 166311549856693829}
   - component: {fileID: 5922163397331716930}
   - component: {fileID: 491760560093713933}
+  - component: {fileID: 146612725645162257}
   m_Layer: 0
   m_Name: AttackAnimationData
   m_TagString: Untagged
@@ -5124,6 +5125,8 @@ MonoBehaviour:
     AnimationEvent: {fileID: 3330964843296928840}
   - Frame: 50
     AnimationEvent: {fileID: 166311549856693829}
+  - Frame: 50
+    AnimationEvent: {fileID: 146612725645162257}
   - Frame: 51
     AnimationEvent: {fileID: 5922163397331716930}
   - Frame: 140
@@ -5248,6 +5251,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame: 140
   frameEnd: 0
+--- !u!114 &146612725645162257
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3720685875369100543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 69dbfc809d86c3745a3ae11df3847b2f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 50
+  frameEnd: 0
+  healthRestored: -500
 --- !u!1 &4114098666737907609
 GameObject:
   m_ObjectHideFlags: 0
