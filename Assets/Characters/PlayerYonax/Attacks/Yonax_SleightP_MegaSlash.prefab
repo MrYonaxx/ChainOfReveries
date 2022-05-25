@@ -5314,7 +5314,7 @@ MonoBehaviour:
   knockbackX: 1
   knockbackZ: 2
   knockbackInvulnerability: 0.1
-  revengeValue: 1
+  revengeValue: 0.5
 --- !u!114 &5485531285977804821
 MonoBehaviour:
   m_ObjectHideFlags: 0

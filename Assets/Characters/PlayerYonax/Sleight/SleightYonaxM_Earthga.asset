@@ -16,7 +16,7 @@ MonoBehaviour:
   sleightDescription: '[Unbreakable]'
   sleightValue: {x: 0, y: 27}
   sleightRecipe:
-  - {fileID: 11400000, guid: 825a8063485c92d439babaef76b5898e, type: 2}
-  - {fileID: 11400000, guid: 825a8063485c92d439babaef76b5898e, type: 2}
-  - {fileID: 11400000, guid: 825a8063485c92d439babaef76b5898e, type: 2}
+  - {fileID: 11400000, guid: b2d166c612600494588db3447b3566a1, type: 2}
+  - {fileID: 11400000, guid: b2d166c612600494588db3447b3566a1, type: 2}
+  - {fileID: 11400000, guid: b2d166c612600494588db3447b3566a1, type: 2}
   sleightAttackData: {fileID: 11400000, guid: 898afeb44f089ff4490ace8bb4eb5193, type: 2}

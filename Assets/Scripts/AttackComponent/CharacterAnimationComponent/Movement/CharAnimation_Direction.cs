@@ -11,6 +11,8 @@ namespace VoiceActing
         int direction = 0;
         [SerializeField]
         bool turnToTarget = false;
+        [SerializeField]
+        bool turnBack = false;
 
         public override void Execute(CharacterBase character)
         {
@@ -28,6 +30,11 @@ namespace VoiceActing
                     character.CharacterMovement.SetDirection(1);
                 if (character.LockController.TargetLocked.transform.position.x < this.transform.position.x)
                     character.CharacterMovement.SetDirection(-1);
+            }
+
+            if (turnBack)
+            {
+                character.CharacterMovement.TurnBack();
             }
         }
     }

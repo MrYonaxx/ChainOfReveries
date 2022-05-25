@@ -16,7 +16,7 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 6329109260187363157, guid: 3fe3ac93b7aebd1479629487ccff77e8, type: 3}
+    - {fileID: 6329109260187363157, guid: c55172cb0d29ffe4c91a573965ce3c04, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -83,7 +83,7 @@ MonoBehaviour:
       Data: 5|VoiceActing.KnockbackConditionSuperGuard, Assembly-CSharp
     - Name: priority
       Entry: 4
-      Data: 0
+      Data: 9999
     - Name: 
       Entry: 8
       Data: 

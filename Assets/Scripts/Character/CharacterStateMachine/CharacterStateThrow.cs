@@ -22,6 +22,9 @@ namespace VoiceActing
         [SerializeField]
         bool canMove = false;
 
+        [ShowIf("throwTransform")]
+        [SerializeField]
+        LayerMask throwLayerMask;
 
 
         public override void StartState(CharacterBase character, CharacterState oldState)
@@ -32,6 +35,11 @@ namespace VoiceActing
             character.CharacterMovement.SetSpeed(0, 0);
             character.CharacterMovement.ApplyGravity(999);
             character.CharacterMovement.InMovement = false;
+
+            if (throwTransform != null)
+            {
+                character.CharacterRigidbody.SetNewLayerMask(throwLayerMask);
+            }
         }
 
         /// <summary>
@@ -43,8 +51,9 @@ namespace VoiceActing
         {
             if (throwTransform != null)
             {
-                character.Animator.transform.position = throwTransform.transform.position;
+                character.Animator.transform.position = new Vector3(character.Animator.transform.position.x, throwTransform.transform.position.y, character.Animator.transform.position.z);
                 character.Animator.transform.localRotation = throwTransform.transform.localRotation;
+                character.CharacterMovement.MoveToPointInstant(new Vector3(throwTransform.transform.position.x, character.transform.position.y, character.transform.position.z));
             }
 
             if(canMove)
@@ -103,6 +112,8 @@ namespace VoiceActing
             {
                 character.Animator.transform.localPosition = Vector3.zero;
                 character.Animator.transform.localRotation = Quaternion.identity;
+                character.CharacterRigidbody.ResetLayerMask();
+                //character.CharacterMovement.SetSpeed(0, 0);
             }
         }
 

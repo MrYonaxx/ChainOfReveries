@@ -348,7 +348,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame: 35
   frameEnd: 0
-  cancelItself: 1
+  cancelItself: 0
   cancelSpecial: 1
   cancelType: 000000000100000003000000
 --- !u!114 &2524242894598313049
@@ -419,7 +419,7 @@ MonoBehaviour:
   knockbackX: 5
   knockbackZ: 5
   knockbackInvulnerability: 0.1
-  revengeValue: 2
+  revengeValue: 1
 --- !u!114 &5485531285977804821
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -651,8 +651,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackProcessor: 0
   cardDamage:
-    cardDamage: c8000000900100007c0100006801000054010000400100002c0100001801000004010000f0000000
-    debugDamage: {x: 200, y: 400}
+    cardDamage: c80000002c01000022010000180100000e01000004010000fa000000f0000000e6000000dc000000
+    debugDamage: {x: 200, y: 300}
     ignoreStatsMultiplier: 0
   cardStatus:
     statusDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000

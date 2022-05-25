@@ -34,7 +34,7 @@ MonoBehaviour:
   cardName: Grab
   cardType: 0
   cardDescription: '[Combo] A basic attack in front of you.'
-  attackManager: {fileID: 818057835518184039, guid: 1176ffadce049984196767b3bb9f8ffb,
+  attackManager: {fileID: 818057835518184039, guid: 1167e6155d25ee4488e099cad2f7f7aa,
     type: 3}
   colorOutline: {r: 0, g: 0, b: 0, a: 0}
   colorCardBackground: {r: 0, g: 0, b: 0, a: 0}

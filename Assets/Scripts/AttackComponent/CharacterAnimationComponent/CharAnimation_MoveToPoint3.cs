@@ -16,9 +16,13 @@ namespace VoiceActing
         bool fixY = false;
         [SerializeField]
         bool fixX = false;
+        [SerializeField]
+        bool linearMovement = false;
 
         float t = 0f;
         float tMax = 0f;
+
+        Vector3 startPos;
 
         public override void Execute(CharacterBase character)
         {
@@ -35,6 +39,9 @@ namespace VoiceActing
 
             tMax = (FrameEnd - Frame) / 60f;
             t = 0f;
+
+            if (linearMovement)
+                startPos = character.transform.position;
         }
 
         public override void UpdateComponent(CharacterBase character, int frame)
@@ -42,7 +49,10 @@ namespace VoiceActing
             if (frame < FrameEnd)
             {
                 t += Time.deltaTime * character.MotionSpeed;
-                character.transform.position = Vector3.Lerp(character.transform.position, point, Mathf.Min(1, t / tMax));
+                if (linearMovement)
+                    character.transform.position = Vector3.Lerp(startPos, point, Mathf.Min(1, t / tMax));
+                else 
+                    character.transform.position = Vector3.Lerp(character.transform.position, point, Mathf.Min(1, t / tMax));
             } 
         }
 

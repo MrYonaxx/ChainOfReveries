@@ -67,9 +67,9 @@ MonoBehaviour:
   AnimatorDebug: {fileID: 677981557941761528}
   AnimationClipDebug: {fileID: 7400000, guid: 6af7d0d39e5fea442811ebf5d30b5708, type: 2}
   frameData:
-  - Frame: 1
+  - Frame: 0
     AnimationEvent: {fileID: 7993587927181370176}
-  - Frame: 15
+  - Frame: 20
     AnimationEvent: {fileID: 2891495858929599671}
   - Frame: 21
     AnimationEvent: {fileID: 7284589822210834423}
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae49cdc6772abec4395656915a82cff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 1
+  frame: 0
   frameEnd: 0
   status: {fileID: 11400000, guid: ad7449dbff64b4842b9f3587fe52e464, type: 2}
   add: 1
@@ -105,7 +105,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ae49cdc6772abec4395656915a82cff7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 15
+  frame: 20
   frameEnd: 0
   status: {fileID: 11400000, guid: ad7449dbff64b4842b9f3587fe52e464, type: 2}
   add: 0
@@ -210,7 +210,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -4839498741981085844, guid: af13cc84008285b4aac8ff8979e7d84f,
+  m_Sprite: {fileID: -9170144837567888238, guid: af13cc84008285b4aac8ff8979e7d84f,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

@@ -19,10 +19,9 @@ namespace VoiceActing
 
         public override int CheckCardBreak(CharacterBase currentCharacter, List<Card> cardsActive, CharacterBase challengerCharacter, List<Card> newCards)
         {
-            if (trueUnbreakable == true)
-            {
+            if (trueUnbreakable)
                 return -1;
-            }
+
             else if (newCards[0].CardData.CardBreakComponent is CardBreakUnbreakable)
             {
                 return base.CheckCardBreak(currentCharacter, cardsActive, challengerCharacter, newCards);

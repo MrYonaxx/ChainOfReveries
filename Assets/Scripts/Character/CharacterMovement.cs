@@ -102,7 +102,10 @@ namespace VoiceActing
                 inAir = true;
         }
 
-
+        public void SetAerial(bool b)
+        {
+            inAir = b;
+        }
 
         public void Move(float newSpeedX, float newSpeedY)
         {

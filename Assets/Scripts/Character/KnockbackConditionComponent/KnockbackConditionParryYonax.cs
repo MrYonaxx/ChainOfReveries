@@ -42,7 +42,7 @@ namespace VoiceActing
         {
             // Ajouter un flag pour dire qu'une attack est une Sleight
             // On peut parer que les attaques physiques 
-            if(user.CharacterMovement.Direction != attack.Direction)
+            if(user.CharacterMovement.Direction != attack.Direction && damageMessage.damage > 0 && damageMessage.knockback > 0)
             {
                 damageMessage.damage = 0;
                 damageMessage.knockback = 0;

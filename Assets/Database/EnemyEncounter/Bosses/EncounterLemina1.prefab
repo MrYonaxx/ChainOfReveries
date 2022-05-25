@@ -5661,9 +5661,7 @@ PrefabInstance:
     - target: {fileID: 7197629161916250452, guid: c6a34ab3896df324a97dc83f711fb962,
         type: 3}
       propertyPath: m_text
-      value: 'LIA
-
-'
+      value: LEMINA
       objectReference: {fileID: 0}
     - target: {fileID: 7197629161916250452, guid: c6a34ab3896df324a97dc83f711fb962,
         type: 3}

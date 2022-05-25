@@ -179,7 +179,7 @@ MonoBehaviour:
   frame: 15
   frameEnd: 0
   moveForward: 1
-  speed: {x: 6, y: 0}
+  speed: {x: 8, y: 0}
   jumpImpulsion: 0
 --- !u!114 &3532066655981642385
 MonoBehaviour:

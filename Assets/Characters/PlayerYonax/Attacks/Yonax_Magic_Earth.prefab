@@ -244,7 +244,8 @@ GameObject:
   - component: {fileID: 2260525837532545912}
   - component: {fileID: 4670453683040411876}
   - component: {fileID: 9162807128336310891}
-  - component: {fileID: 4461643240352555985}
+  - component: {fileID: 8161610079041654722}
+  - component: {fileID: 418586106732229730}
   - component: {fileID: 7284589822210834423}
   - component: {fileID: 2524242894598313049}
   m_Layer: 0
@@ -306,11 +307,13 @@ MonoBehaviour:
     AnimationEvent: {fileID: 6548060126528745650}
   - Frame: 19
     AnimationEvent: {fileID: 4200970828337729809}
-  - Frame: 28
-    AnimationEvent: {fileID: 4461643240352555985}
-  - Frame: 35
+  - Frame: 45
+    AnimationEvent: {fileID: 8161610079041654722}
+  - Frame: 100
+    AnimationEvent: {fileID: 418586106732229730}
+  - Frame: 110
     AnimationEvent: {fileID: 7284589822210834423}
-  - Frame: 60
+  - Frame: 130
     AnimationEvent: {fileID: 2524242894598313049}
 --- !u!114 &9162807128336310891
 MonoBehaviour:
@@ -328,7 +331,7 @@ MonoBehaviour:
   frameEnd: 0
   fx: {fileID: 5822415694445556657}
   appear: 1
---- !u!114 &4461643240352555985
+--- !u!114 &8161610079041654722
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -337,12 +340,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 3720685875369100543}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: de0fc71d353b8ef479aa0db3b846d0fb, type: 3}
+  m_Script: {fileID: 11500000, guid: a7422bd0df691814ebc1968b1cc149fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 28
-  frameEnd: 32
-  attack: {fileID: 4733904636063077261}
+  frame: 45
+  frameEnd: 0
+  fx: {fileID: 8469214043202896659}
+  appear: 1
+--- !u!114 &418586106732229730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3720685875369100543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae49cdc6772abec4395656915a82cff7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 100
+  frameEnd: 0
+  status: {fileID: 11400000, guid: b573bd160cc8b204f826f3406e0ef86d, type: 2}
+  add: 1
 --- !u!114 &7284589822210834423
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -355,9 +375,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30aa148586dde644daf200dde6eea4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 35
+  frame: 110
   frameEnd: 0
-  cancelItself: 1
+  cancelItself: 0
   cancelSpecial: 1
   cancelType: 000000000100000003000000
 --- !u!114 &2524242894598313049
@@ -372,7 +392,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620e0e815b2f5174f8b380210d9a19f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 60
+  frame: 130
   frameEnd: 0
 --- !u!1 &4114098666737907609
 GameObject:
@@ -547,7 +567,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -2382402904197877027, guid: a9e681445061914419ebbaf41c4aeee6,
+  m_Sprite: {fileID: -7715370249130995148, guid: 9ed1c5c0a4c62e7428ce8f596ad73b63,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -1102,6 +1122,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7601985536538767283}
+  - component: {fileID: 5257018729690874093}
   m_Layer: 0
   m_Name: EarthFX
   m_TagString: Untagged
@@ -1125,6 +1146,25 @@ Transform:
   m_Father: {fileID: 2917755026358873579}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &5257018729690874093
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8469214043202896659}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: e4d31425bf3430547959bfae1ec23587, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &8770259348178133249
 GameObject:
   m_ObjectHideFlags: 0

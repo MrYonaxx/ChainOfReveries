@@ -444,7 +444,7 @@ PrefabInstance:
     - target: {fileID: 4670453683040411876, guid: ae2d578233ef2014bacc7912753afc34,
         type: 3}
       propertyPath: frameData.Array.size
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4670453683040411876, guid: ae2d578233ef2014bacc7912753afc34,
         type: 3}
@@ -494,23 +494,23 @@ PrefabInstance:
     - target: {fileID: 4670453683040411876, guid: ae2d578233ef2014bacc7912753afc34,
         type: 3}
       propertyPath: frameData.Array.data[5].Frame
-      value: 25
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4670453683040411876, guid: ae2d578233ef2014bacc7912753afc34,
         type: 3}
       propertyPath: frameData.Array.data[5].AnimationEvent
       value: 
-      objectReference: {fileID: 1401180814740921311}
+      objectReference: {fileID: 8324825925767580595}
     - target: {fileID: 4670453683040411876, guid: ae2d578233ef2014bacc7912753afc34,
         type: 3}
       propertyPath: frameData.Array.data[6].Frame
-      value: 30
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 4670453683040411876, guid: ae2d578233ef2014bacc7912753afc34,
         type: 3}
       propertyPath: frameData.Array.data[6].AnimationEvent
       value: 
-      objectReference: {fileID: 7560736409968901472}
+      objectReference: {fileID: 1401180814740921311}
     - target: {fileID: 4670453683040411876, guid: ae2d578233ef2014bacc7912753afc34,
         type: 3}
       propertyPath: frameData.Array.data[7].Frame
@@ -530,17 +530,17 @@ PrefabInstance:
         type: 3}
       propertyPath: frameData.Array.data[8].AnimationEvent
       value: 
-      objectReference: {fileID: 2446197210811479833}
+      objectReference: {fileID: 7560736409968901472}
     - target: {fileID: 4670453683040411876, guid: ae2d578233ef2014bacc7912753afc34,
         type: 3}
       propertyPath: frameData.Array.data[9].Frame
-      value: 80
+      value: 40
       objectReference: {fileID: 0}
     - target: {fileID: 4670453683040411876, guid: ae2d578233ef2014bacc7912753afc34,
         type: 3}
       propertyPath: frameData.Array.data[9].AnimationEvent
       value: 
-      objectReference: {fileID: 3382986053124462286}
+      objectReference: {fileID: 2446197210811479833}
     - target: {fileID: 4670453683040411876, guid: ae2d578233ef2014bacc7912753afc34,
         type: 3}
       propertyPath: frameData.Array.data[10].Frame
@@ -652,6 +652,11 @@ PrefabInstance:
       propertyPath: hitStop
       value: 0.6
       objectReference: {fileID: 0}
+    - target: {fileID: 6024610480447657897, guid: ae2d578233ef2014bacc7912753afc34,
+        type: 3}
+      propertyPath: knockbackInvulnerability
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6094475253169928863, guid: ae2d578233ef2014bacc7912753afc34,
         type: 3}
       propertyPath: m_IsActive
@@ -665,7 +670,7 @@ PrefabInstance:
     - target: {fileID: 8140847405492643985, guid: ae2d578233ef2014bacc7912753afc34,
         type: 3}
       propertyPath: damage.baseDamage
-      value: 1000
+      value: 1500
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae2d578233ef2014bacc7912753afc34, type: 3}
@@ -781,6 +786,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 56bf29bae8d6a9743927604b4178c1b3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &8324825925767580595 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9111511568940878116, guid: ae2d578233ef2014bacc7912753afc34,
+    type: 3}
+  m_PrefabInstance: {fileID: 1005761141160510103}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4dd4a5252f854f24e88e8aa9e77afffa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &2704654366785711996 stripped

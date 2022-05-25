@@ -10,22 +10,21 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 39d1db5c43ecd7a47bfed3f23c297697, type: 3}
-  m_Name: EnemyData_Yonax1
+  m_Name: EnemyData_Yonax3
   m_EditorClassIdentifier: 
   characterFace: {fileID: 0}
-  characterName: Lemina
-  characterDescription: 'Lemina is weak, that''s why she will try to fill her Ether
-    Gauge to enter her Ether Install where she become drastically stronger.
+  characterName: Yonax
+  characterDescription: 'Yonax doesn''t have really dangerous Sleight, but his cards
+    deal great damage and have a high value.
 
 
-    If
-    she enter Ether Install, try to Card Break her attacks and wait for the transformation
-    to wear off.'
+    When getting grab, Card Break
+    his cards to break free.'
   characterStat:
-    hp: 3750
+    hp: 8500
     HPMax:
-      baseValue: 3750
-      finalValue: 3750
+      baseValue: 8500
+      finalValue: 8500
     Attack:
       baseValue: 1
       finalValue: 1
@@ -54,8 +53,8 @@ MonoBehaviour:
       baseValue: 1
       finalValue: 1
     Speed:
-      baseValue: 2.8
-      finalValue: 2.8
+      baseValue: 3.1
+      finalValue: 3.1
     Gravity:
       baseValue: 25
       finalValue: 25
@@ -111,7 +110,7 @@ MonoBehaviour:
   - cardData: {fileID: 11400000, guid: 5641f28865832964bb83289ee2eb2c0a, type: 2}
     baseCardValue: 0
   sleightDatabase:
-  - {fileID: 11400000, guid: 995e81a4243eba54f8e86767468dd0f4, type: 2}
+  - {fileID: 11400000, guid: 92e4eae3cb183624caebdf5be794e36d, type: 2}
   initialEquipment: []
   loreDescription: 'Yonax, also called the strongest man of the Earth. He was the
     man defeating Shedd and initiating the Denil Revolution, and the hero who defended
@@ -119,8 +118,5 @@ MonoBehaviour:
 
 
     Courageous and kind, he never hesitate to
-    help someone in need.
-
-
-    Until that day where he found out that his determination
+    help someone in need. Until the day where he found out that his determination
     was in fact the fruit of the Reverie.'

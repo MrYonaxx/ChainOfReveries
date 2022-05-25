@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 317806353b7288b4cb30da061d383f0e, type: 3}
+  m_Name: CardYonaxB_AttackZantetsu
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 5053a2230cd20fc409eecc7a01d6e10e, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: cardController
+      Entry: 6
+      Data: 
+    - Name: cardBreakComponent
+      Entry: 7
+      Data: 0|VoiceActing.CardBreakNewAttack, Assembly-CSharp
+    - Name: cardBreakAttack
+      Entry: 10
+      Data: 0
+    - Name: 
+      Entry: 8
+      Data: 
+  cardSprite: {fileID: 21300000, guid: 70b47a70dff331d41ab41a473d20f16b, type: 3}
+  cardName: Zantetsu
+  cardType: 0
+  cardDescription: 
+  attackManager: {fileID: 818057835518184039, guid: 3f117b527da87804ea8503a3fe6c8567,
+    type: 3}
+  colorOutline: {r: 0, g: 0, b: 0, a: 0}
+  colorCardBackground: {r: 0, g: 0, b: 0, a: 0}
+  cardProbability: 64000000000000000000000000000000000000000000000000000000000000000000000000000000
+  breakRecovery: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
+  maxProbability: 100

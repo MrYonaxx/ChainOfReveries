@@ -745,7 +745,7 @@ MonoBehaviour:
   frameEnd: 0
   cancelItself: 0
   cancelSpecial: 1
-  cancelType: 0000000001000000
+  cancelType: 
 --- !u!114 &2524242894598313049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -813,7 +813,7 @@ MonoBehaviour:
   knockbackDurationMultiplier: 1
   knockbackX: 7
   knockbackZ: 1
-  knockbackInvulnerability: 0.08
+  knockbackInvulnerability: 1
   revengeValue: 1
 --- !u!114 &5485531285977804821
 MonoBehaviour:
@@ -1119,7 +1119,7 @@ MonoBehaviour:
     element: 0
     ignoreElementalStat: 0
   damage:
-    baseDamage: 500
+    baseDamage: 600
     attackType: 0
     ignoreStatsMultiplier: 0
   backdamage:
@@ -1223,7 +1223,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.6, y: 0.25}
+  m_Offset: {x: 0.7, y: 0.25}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0}

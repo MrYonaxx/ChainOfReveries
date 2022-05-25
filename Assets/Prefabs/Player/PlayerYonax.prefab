@@ -27,6 +27,11 @@ PrefabInstance:
       propertyPath: m_textInfo.pageCount
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3011987554797772281, guid: 5046c71ee7ab2b845917bf77adba9be9,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3011987555238584207, guid: 5046c71ee7ab2b845917bf77adba9be9,
         type: 3}
       propertyPath: evadeAction
@@ -110,6 +115,42 @@ PrefabInstance:
       propertyPath: m_Name
       value: CharacterSprite
       objectReference: {fileID: 0}
+    - target: {fileID: 3011987555776004977, guid: 5046c71ee7ab2b845917bf77adba9be9,
+        type: 3}
+      propertyPath: lockOnSize.x
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3011987555776004977, guid: 5046c71ee7ab2b845917bf77adba9be9,
+        type: 3}
+      propertyPath: lockOnSize.y
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3011987555776004977, guid: 5046c71ee7ab2b845917bf77adba9be9,
+        type: 3}
+      propertyPath: lockOnSize.z
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3011987555776004977, guid: 5046c71ee7ab2b845917bf77adba9be9,
+        type: 3}
+      propertyPath: defaultSize.x
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3011987555776004977, guid: 5046c71ee7ab2b845917bf77adba9be9,
+        type: 3}
+      propertyPath: defaultSize.y
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3011987555776004977, guid: 5046c71ee7ab2b845917bf77adba9be9,
+        type: 3}
+      propertyPath: defaultSize.z
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3011987556073958365, guid: 5046c71ee7ab2b845917bf77adba9be9,
+        type: 3}
+      propertyPath: evadeAction
+      value: 
+      objectReference: {fileID: 6226632210043697417, guid: b477f5bafb342f943bcbfe58045468f0,
+        type: 3}
     - target: {fileID: 3011987556655232326, guid: 5046c71ee7ab2b845917bf77adba9be9,
         type: 3}
       propertyPath: m_Controller

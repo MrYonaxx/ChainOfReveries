@@ -1,0 +1,147 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39d1db5c43ecd7a47bfed3f23c297697, type: 3}
+  m_Name: EnemyData_Yonax2
+  m_EditorClassIdentifier: 
+  characterFace: {fileID: 0}
+  characterName: Yonax
+  characterDescription: 'Yonax doesn''t have really dangerous Sleight, but his cards
+    deal great damage and have a high value.
+
+
+    When getting grab, Card Break
+    his cards to break free.'
+  characterStat:
+    hp: 7200
+    HPMax:
+      baseValue: 6500
+      finalValue: 6500
+    Attack:
+      baseValue: 1
+      finalValue: 1
+    Defense:
+      baseValue: 1
+      finalValue: 1
+    Magic:
+      baseValue: 1
+      finalValue: 1
+    MagicDefense:
+      baseValue: 1
+      finalValue: 1
+    RevengeValue:
+      baseValue: 15
+      finalValue: 15
+    RevengeValueRate:
+      baseValue: 1
+      finalValue: 1
+    KnockbackTime:
+      baseValue: 1
+      finalValue: 1
+    ReloadAmount:
+      baseValue: 100
+      finalValue: 100
+    CardBreakTime:
+      baseValue: 1
+      finalValue: 1
+    Speed:
+      baseValue: 3
+      finalValue: 3
+    Gravity:
+      baseValue: 25
+      finalValue: 25
+    GravityMax:
+      baseValue: 50
+      finalValue: 50
+    MotionSpeed:
+      baseValue: 1
+      finalValue: 1
+    Mass:
+      baseValue: 1
+      finalValue: 1
+    ElementalResistances: []
+    StatusResistances: []
+  salut: 
+  initialDeck:
+  - cardData: {fileID: 11400000, guid: 1b72d9ad08f96ec488626da09c9bd948, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: 3cbbbb1a21ac9d44ba718501bbf14275, type: 2}
+    baseCardValue: 6
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 6
+  - cardData: {fileID: 11400000, guid: 365dffd09d382a84aa686093d42bc8e1, type: 2}
+    baseCardValue: 1
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: 1b72d9ad08f96ec488626da09c9bd948, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: 365dffd09d382a84aa686093d42bc8e1, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 3
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 1b72d9ad08f96ec488626da09c9bd948, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 1b72d9ad08f96ec488626da09c9bd948, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: 3cbbbb1a21ac9d44ba718501bbf14275, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 3
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: 365dffd09d382a84aa686093d42bc8e1, type: 2}
+    baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 2
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: 365dffd09d382a84aa686093d42bc8e1, type: 2}
+    baseCardValue: 2
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 365dffd09d382a84aa686093d42bc8e1, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: 365dffd09d382a84aa686093d42bc8e1, type: 2}
+    baseCardValue: 9
+  sleightDatabase:
+  - {fileID: 11400000, guid: 92e4eae3cb183624caebdf5be794e36d, type: 2}
+  - {fileID: 11400000, guid: b0e2ceed185a50149b2e436e2b4a686f, type: 2}
+  initialEquipment:
+  - cardEquipment: {fileID: 11400000, guid: 20d6752ce5f25a442b5ad4e117aa63e0, type: 2}
+    probability: 100
+  loreDescription: 'Yonax, also called the strongest man of the Earth. He was the
+    man defeating Shedd and initiating the Denil Revolution, and the hero who defended
+    Altya from Chancelor Valenn.
+
+
+    Courageous and kind, he never hesitate to
+    help someone in need. Until the day where he found out that his determination
+    was in fact the fruit of the Reverie.'

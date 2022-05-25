@@ -24,7 +24,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 28eb3ab6c6d944b4abee321c1e713ae3, type: 3}
   cardName: Battleaxe
   cardType: 0
-  cardDescription: 'Reduce attack speed by 40% but add the [Unbreakable] property
+  cardDescription: 'Reduce attack speed by 30% but add the [Unbreakable] property
     to cards.
 
     (1 Reload)'

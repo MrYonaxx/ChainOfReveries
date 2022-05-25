@@ -26,7 +26,10 @@ MonoBehaviour:
       Data: 
     - Name: cardBreakComponent
       Entry: 7
-      Data: 0|VoiceActing.CardBreakBestValue, Assembly-CSharp
+      Data: 0|VoiceActing.CardBreakUnbreakable, Assembly-CSharp
+    - Name: trueUnbreakable
+      Entry: 5
+      Data: false
     - Name: 
       Entry: 8
       Data: 
@@ -34,7 +37,7 @@ MonoBehaviour:
   cardName: Earth EX
   cardType: 1
   cardDescription: 
-  attackManager: {fileID: 818057835518184039, guid: a2cf2f3375c7c0746b754d4d8e206658,
+  attackManager: {fileID: 818057835518184039, guid: 5f7448ccdab35504fb588e22c3b0d85d,
     type: 3}
   colorOutline: {r: 0, g: 0, b: 0, a: 0}
   colorCardBackground: {r: 0, g: 0, b: 0, a: 0}

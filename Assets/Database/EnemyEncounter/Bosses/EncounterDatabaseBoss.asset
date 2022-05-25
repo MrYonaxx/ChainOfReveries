@@ -28,6 +28,10 @@ MonoBehaviour:
     - {fileID: 9219024559366097419, guid: 0c8a573567cb81740916761e2d5cca9f, type: 3}
     - {fileID: 6623165270138681543, guid: 98e8bfee52d53d84c9c7493f3fcc913b, type: 3}
     - {fileID: 2952716009354312899, guid: c7ad6c6455c1c7447b8d52e7b2de66d8, type: 3}
+  - Character: {fileID: 11400000, guid: 795ab51d8922db84f97462d2ee8186df, type: 2}
+    BossEvents:
+    - {fileID: 1053828776339861690, guid: 228258dd429700b42811163627ae6f94, type: 3}
+    - {fileID: 1522222924599390107, guid: 59236ccdcc07b00469d62e940d94511f, type: 3}
   - Character: {fileID: 11400000, guid: 707d8eac61f25fe448018999dc4704cf, type: 2}
     BossEvents:
     - {fileID: 1053828776339861690, guid: b2f85d404b58b864687a199bf397473d, type: 3}
