@@ -393,6 +393,7 @@ MonoBehaviour:
   direction: 0
   turnToTarget: 0
   turnBack: 1
+  turnToCenter: 0
 --- !u!114 &6665758767473761785
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1300,7 +1301,7 @@ MonoBehaviour:
   knockbackX: -1
   knockbackZ: 6
   knockbackInvulnerability: 0.1
-  revengeValue: 3
+  revengeValue: 0
 --- !u!114 &2978460867522996519
 MonoBehaviour:
   m_ObjectHideFlags: 0

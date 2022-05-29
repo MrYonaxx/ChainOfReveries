@@ -13,6 +13,8 @@ namespace VoiceActing
         bool turnToTarget = false;
         [SerializeField]
         bool turnBack = false;
+        [SerializeField]
+        bool turnToCenter = false;
 
         public override void Execute(CharacterBase character)
         {
@@ -35,6 +37,14 @@ namespace VoiceActing
             if (turnBack)
             {
                 character.CharacterMovement.TurnBack();
+            }
+
+            if (turnToCenter)
+            {
+                if (BattleUtils.Instance.BattleCenter.transform.position.x > this.transform.position.x)
+                    character.CharacterMovement.SetDirection(1);
+                if (BattleUtils.Instance.BattleCenter.transform.position.x < this.transform.position.x)
+                    character.CharacterMovement.SetDirection(-1);
             }
         }
     }

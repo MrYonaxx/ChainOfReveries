@@ -209,7 +209,10 @@ namespace VoiceActing
         /* ======================================== *\
          *           GETTERS AND SETTERS            *
         \* ======================================== */
-
+        public Transform GetTransform()
+        {
+            return this.transform;
+        }
         #endregion
 
         #region Functions 

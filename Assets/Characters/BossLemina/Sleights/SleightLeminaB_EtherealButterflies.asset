@@ -13,10 +13,10 @@ MonoBehaviour:
   m_Name: SleightLeminaB_EtherealButterflies
   m_EditorClassIdentifier: 
   sleightName: Ethereal Butterflies
-  sleightDescription: Dash toward the enemy while spinning. Bounce off the walls.
+  sleightDescription: 
   sleightValue: {x: 0, y: 27}
   sleightRecipe:
-  - {fileID: 11400000, guid: ba00a2b9ad3321d489f066aefec00ffd, type: 2}
-  - {fileID: 11400000, guid: ba00a2b9ad3321d489f066aefec00ffd, type: 2}
-  - {fileID: 11400000, guid: ba00a2b9ad3321d489f066aefec00ffd, type: 2}
-  sleightAttackData: {fileID: 11400000, guid: 8c51817d336e8fd4ca43d2620173e413, type: 2}
+  - {fileID: 11400000, guid: 5641f28865832964bb83289ee2eb2c0a, type: 2}
+  - {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
+  - {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
+  sleightAttackData: {fileID: 11400000, guid: 75bad10ec5b54b749b5d60864cf08832, type: 2}

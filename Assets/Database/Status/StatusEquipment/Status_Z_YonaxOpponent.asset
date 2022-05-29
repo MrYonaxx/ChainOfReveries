@@ -1,0 +1,76 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e6079dd8a46024986b2b65e7c5e737, type: 3}
+  m_Name: Status_Z_YonaxOpponent
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: statusUpdates
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[VoiceActing.StatusEffectUpdate,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 1|VoiceActing.StatusEffectUpdateOnEndBattle, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: statusController
+      Entry: 7
+      Data: 2|System.Collections.Generic.List`1[[VoiceActing.StatusEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 3|VoiceActing.StatusEffectCardBreakComponent, Assembly-CSharp
+    - Name: cardBreakComponent
+      Entry: 7
+      Data: 4|VoiceActing.CardBreakBestValueNoEqual2, Assembly-CSharp
+    - Name: winWhenEqual
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  statusIconSprite: {fileID: 21300000, guid: 08c5254363573d840bba2f151a356471, type: 3}
+  statusName: 
+  statusDescription: "Se fait battre par des cartes \xE9gales"
+  hideStatus: 1
+  statusShowLabel: 0
+  statusConditionLabel: Card Played

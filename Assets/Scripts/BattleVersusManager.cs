@@ -173,6 +173,10 @@ namespace VoiceActing
             enemy.CharacterKnockback.OnDeath += CharacterDead;
 
             canvasBattle.SetActive(true);
+
+
+            BattleUtils.Instance.Characters.Add(player);
+            BattleUtils.Instance.Characters.Add(enemy);
         }
 
         // Comme initialize mais sans les subscribe d'event
@@ -249,7 +253,6 @@ namespace VoiceActing
                 enemy.CharacterStatusController.OnStatusChanged -= enemyStatusDrawer.DrawStatus;
             }
 
-
         }
 
         private void OnDestroy()
@@ -284,6 +287,8 @@ namespace VoiceActing
             enemy.EndBattle(); // Appel l'event de fin de combat
             enemy.CharacterKnockback.ResetRevengeValue();
 
+
+            BattleUtils.Instance.Characters.Clear();
             StartCoroutine(EndBossCoroutine(character));
         }
 

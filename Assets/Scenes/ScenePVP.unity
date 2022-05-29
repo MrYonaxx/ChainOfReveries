@@ -8662,14 +8662,20 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 02afca26a085403478824fba51632d71, type: 2}
   - {fileID: 11400000, guid: aba76329a080111419f5cd9df7ffd119, type: 2}
   - {fileID: 11400000, guid: b2b36011f1c8ed947aa42203acf2994b, type: 2}
+  - {fileID: 11400000, guid: 795ab51d8922db84f97462d2ee8186df, type: 2}
+  - {fileID: 11400000, guid: 707d8eac61f25fe448018999dc4704cf, type: 2}
   characterDatabase:
   - {fileID: 6342756264885544082, guid: 984d5f3ec2c984344ae8e924c479757e, type: 3}
   - {fileID: 6173055405251875956, guid: e455158499c870d439dc47a5e668f00e, type: 3}
   - {fileID: 2460197724648010429, guid: 338180242269f1f41a1eefd36a9844f7, type: 3}
+  - {fileID: 3130979472902040332, guid: 75f68f99a9627584bb5f23cc4a4f261b, type: 3}
+  - {fileID: 8642445490523625519, guid: 587fdf046ce5ae24390cc02dbbca473d, type: 3}
   animationIntroDatabase:
   - {fileID: 7400000, guid: 2c0f83166528ef8408af2815c1100b73, type: 2}
   - {fileID: 7400000, guid: a944c767e2eb55543ba970f415b05ae3, type: 2}
   - {fileID: 7400000, guid: e4d0fa368f9f9b24c8b6bdf8a7b041e4, type: 2}
+  - {fileID: 7400000, guid: b5d1b7337b1b7d54bb7fd7249e60e141, type: 2}
+  - {fileID: 7400000, guid: f25cb358d4b54d54ba2267678e404f73, type: 2}
   imageCharacterWinner: {fileID: 1270987662}
   textPlayer: {fileID: 1852312237}
   animatorWin: {fileID: 1663952290}

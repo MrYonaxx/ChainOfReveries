@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1143755e476c13b4691405d1af62e3bf, type: 3}
   m_Name: CardEquipmentDatabase
   m_EditorClassIdentifier: 
-  maxProbability: 3800
+  maxProbability: 4516
   equipmentDatabase:
   - cardEquipment: {fileID: 11400000, guid: d4787e042130f2544a2e1e7a5a32a0be, type: 2}
     probability: 100
@@ -51,7 +51,7 @@ MonoBehaviour:
   - cardEquipment: {fileID: 11400000, guid: f8d031cf7343af844bd1da37f9a58a5b, type: 2}
     probability: 100
   - cardEquipment: {fileID: 11400000, guid: 1119497543f62ad4086564f7bf93d4f7, type: 2}
-    probability: 0
+    probability: 10
   - cardEquipment: {fileID: 11400000, guid: 49bcfe4e76eadc94289a6179c96de79c, type: 2}
     probability: 100
   - cardEquipment: {fileID: 11400000, guid: 9a364f419e43abf4ba509d89d7cb8e74, type: 2}
@@ -93,15 +93,29 @@ MonoBehaviour:
   - cardEquipment: {fileID: 11400000, guid: 79c28c775b43368428074d41212fff8b, type: 2}
     probability: 100
   - cardEquipment: {fileID: 11400000, guid: 9e076760a1b048848bb51d96d5c57806, type: 2}
-    probability: 0
+    probability: 1
   - cardEquipment: {fileID: 11400000, guid: 93c96cf8179666a4cb68c844e8b7c0ba, type: 2}
-    probability: 0
+    probability: 1
   - cardEquipment: {fileID: 11400000, guid: 71df775cf044f724590c9fd860c75335, type: 2}
-    probability: 0
+    probability: 1
   - cardEquipment: {fileID: 11400000, guid: 9d0503cbfe22f8740a385e8e49452552, type: 2}
-    probability: 0
+    probability: 1
   - cardEquipment: {fileID: 11400000, guid: 0ae1da5f1baf26443b613d756e34347e, type: 2}
-    probability: 0
+    probability: 1
+  - cardEquipment: {fileID: 11400000, guid: c79639027aa698648bf311e87f246722, type: 2}
+    probability: 1
   - cardEquipment: {fileID: 11400000, guid: a4a0700e7fc090e4ab160b89df5c8731, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 2362970e2ec75df428c95f7e853976b6, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 288e2c902d71eaf47a637a8a8bdcb672, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 189809f86c52760459b504bebafb297c, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 56baeffd0822a6f45a3b9aee2275e10b, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 00c3b05bab2f99142aeb6df8c6fae12c, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: f57ca1c6fc2ffbc4b94b802b1187d50b, type: 2}
     probability: 100
   pathDatabase: Assets/Database/CardsEquipment

@@ -40,6 +40,13 @@ public class BattleUtils : MonoBehaviour
         get { return battleParticle; }
     }
 
+    private List<VoiceActing.CharacterBase> characters = new List<VoiceActing.CharacterBase>();
+    public List<VoiceActing.CharacterBase> Characters
+    {
+        get { return characters; }
+        set { characters = value; }
+    }
+
     public void Awake()
     {
         if (instance == null)
@@ -47,4 +54,7 @@ public class BattleUtils : MonoBehaviour
         else
             Destroy(this.gameObject);
     }
+
+
+
 }

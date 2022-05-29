@@ -24,9 +24,12 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 2dbfd78337d955a47907856357b8637a, type: 3}
   cardName: Lemina
   cardType: 0
-  cardDescription: 'Create an armor granting immunities against all attacks. Each
-    Card Break reduces your armor. '
+  cardDescription: 'Create an armor protecting from stagger.
+
+    Each Card Break
+    reduce your armor. '
   statsModifier: []
   statusEffectPassive: {fileID: 0}
-  equipmentAction: {fileID: 0}
-  statusEffectActive: {fileID: 0}
+  equipmentAction: {fileID: 199252371479164363, guid: 2780e50522925b64abe56a6f2f1a5ce2,
+    type: 3}
+  statusEffectActive: {fileID: 11400000, guid: f305f0fe7ba1ded45849a16ddc7c8b78, type: 2}

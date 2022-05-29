@@ -24,8 +24,11 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 08c5254363573d840bba2f151a356471, type: 3}
   cardName: Yonax
   cardType: 0
-  cardDescription: Win Card Break against equal card value.
+  cardDescription: 'Win Card Break against equal card value.
+
+    (3 Reload)'
   statsModifier: []
   statusEffectPassive: {fileID: 0}
-  equipmentAction: {fileID: 0}
-  statusEffectActive: {fileID: 0}
+  equipmentAction: {fileID: 199252371479164363, guid: 262b6c523eb2f53428a7e0183633f151,
+    type: 3}
+  statusEffectActive: {fileID: 11400000, guid: a8f6f2ae7fce45a46b531fc9dd55534d, type: 2}

@@ -34,7 +34,7 @@ MonoBehaviour:
   cardName: Somersault
   cardType: 0
   cardDescription: Shoot a fireball in front of you.
-  attackManager: {fileID: 818057835518184039, guid: 54a6fd7d2d5efb34fa358a600bccb3a4,
+  attackManager: {fileID: 818057835518184039, guid: b10c37dbfd23533438470ba249d13b68,
     type: 3}
   colorOutline: {r: 0, g: 0, b: 0, a: 0}
   colorCardBackground: {r: 0, g: 0, b: 0, a: 0}

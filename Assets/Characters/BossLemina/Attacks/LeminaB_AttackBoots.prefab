@@ -106,13 +106,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5281bb7273afcea45937cb1850bdde86, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  statusData: {fileID: 11400000, guid: e122da5a8cdb6ac43a0cc66ee6151d34, type: 2}
-  newAction: {fileID: 818057835518184039, guid: 855b3eb76991f1f45a690246befea5b3,
+  statusData: {fileID: 11400000, guid: 3fdccd2796eb289438b4c5272ce83b0d, type: 2}
+  newAction: {fileID: 818057835518184039, guid: c8e3bd5d0fd588d4bbd384e373297595,
     type: 3}
-  previousAttacks:
-  - {fileID: 818057835518184039, guid: 855b3eb76991f1f45a690246befea5b3, type: 3}
-  attackToCombos:
-  - {fileID: 818057835518184039, guid: afb7480980cbb544fa378194bb1be654, type: 3}
+  previousAttacks: []
+  attackToCombos: []
 --- !u!1 &2789627007764303899
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,23 +258,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AnimatorDebug: {fileID: 677981557941761528}
-  AnimationClipDebug: {fileID: 7400000, guid: d3750b8d5fd998444bcdf201292386f6, type: 2}
+  AnimationClipDebug: {fileID: 7400000, guid: f65a2b643f19ed34bb84410cc454fc8c, type: 2}
   frameData:
-  - Frame: 20
+  - Frame: 60
     AnimationEvent: {fileID: 1941726531380206424}
-  - Frame: 27
+  - Frame: 67
     AnimationEvent: {fileID: 5144523684627028879}
-  - Frame: 29
+  - Frame: 69
     AnimationEvent: {fileID: 4461643240352555985}
-  - Frame: 32
+  - Frame: 72
     AnimationEvent: {fileID: 7050530965235389478}
-  - Frame: 40
+  - Frame: 80
     AnimationEvent: {fileID: 1308976876271602282}
-  - Frame: 65
+  - Frame: 105
     AnimationEvent: {fileID: 7284589822210834423}
-  - Frame: 65
+  - Frame: 105
     AnimationEvent: {fileID: 290365882249506041}
-  - Frame: 90
+  - Frame: 130
     AnimationEvent: {fileID: 2524242894598313049}
   - Frame: 999
     AnimationEvent: {fileID: 5989349947813197503}
@@ -292,8 +290,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de0fc71d353b8ef479aa0db3b846d0fb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 29
-  frameEnd: 33
+  frame: 69
+  frameEnd: 73
   attack: {fileID: 4733904636063077261}
 --- !u!114 &7284589822210834423
 MonoBehaviour:
@@ -307,7 +305,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30aa148586dde644daf200dde6eea4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 65
+  frame: 105
   frameEnd: 0
   cancelItself: 0
   cancelSpecial: 1
@@ -324,7 +322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620e0e815b2f5174f8b380210d9a19f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 90
+  frame: 130
   frameEnd: 0
 --- !u!1 &4114098666737907609
 GameObject:
@@ -454,7 +452,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4388082830208477171}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.0020482838, z: 0}
+  m_LocalPosition: {x: 0, y: 0.11387736, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
   - {fileID: 720212461293649733}
@@ -500,7 +498,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 146000209040152586, guid: 96d77b74bfecc7849874236c7d28020b, type: 3}
+  m_Sprite: {fileID: 8496724358630984607, guid: 120493a6e52bfac48b78e338b104a0de,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -534,14 +533,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5305307627600386025}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.09897586, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.86602545, w: 0.49999994}
+  m_LocalPosition: {x: 0.217, y: 0.561, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4145906645988767171}
   m_Father: {fileID: 8104942711355242910}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 120}
 --- !u!1 &5842096757366747167
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,7 +552,7 @@ GameObject:
   - component: {fileID: 5842096757366747166}
   - component: {fileID: 818057835518184039}
   m_Layer: 9
-  m_Name: Lemina_AttackBoots
+  m_Name: LeminaB_AttackBoots
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -589,8 +588,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 035f334978101924ea5aae883ccf84f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameID: Lemina_AttackBoots
-  attackAnimation: {fileID: 7400000, guid: d3750b8d5fd998444bcdf201292386f6, type: 2}
+  nameID: LeminaB_AttackBoots
+  attackAnimation: {fileID: 7400000, guid: f65a2b643f19ed34bb84410cc454fc8c, type: 2}
   characterAnimationData: {fileID: 4670453683040411876}
   linkToCharacter: 1
   fixToGround: 0
@@ -643,8 +642,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackProcessor: 0
   cardDamage:
-    cardDamage: 2c0100002c0100002c0100002c0100002c0100002c0100002c0100002c0100002c0100002c010000
-    debugDamage: {x: 300, y: 300}
+    cardDamage: c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000c8000000
+    debugDamage: {x: 200, y: 200}
     ignoreStatsMultiplier: 0
   cardStatus:
     statusDamage: 00000000000000000000000000000000000000000000000000000000000000000000000000000000
@@ -803,8 +802,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b83ff82dc3aaf174f843bc2ca6339632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 20
-  frameEnd: 26
+  frame: 60
+  frameEnd: 66
   speed: 8
   maxTrackingY: 0.5
   stopDistance: 0.5
@@ -820,8 +819,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b83ff82dc3aaf174f843bc2ca6339632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 27
-  frameEnd: 31
+  frame: 67
+  frameEnd: 71
   speed: 1
   maxTrackingY: 0.5
   stopDistance: 0.5
@@ -837,7 +836,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf29bae8d6a9743927604b4178c1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 32
+  frame: 72
   frameEnd: 0
   moveForward: 1
   speed: {x: -2, y: 0}
@@ -854,7 +853,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf29bae8d6a9743927604b4178c1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 40
+  frame: 80
   frameEnd: 0
   moveForward: 1
   speed: {x: -1, y: 0}
@@ -871,7 +870,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56bf29bae8d6a9743927604b4178c1b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 65
+  frame: 105
   frameEnd: 0
   moveForward: 0
   speed: {x: 0, y: 0}
@@ -903,7 +902,7 @@ Transform:
   m_GameObject: {fileID: 7345693785975693917}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children:
   - {fileID: 8104942711355242910}
   m_Father: {fileID: 5842096757366747166}
@@ -919,7 +918,7 @@ Animator:
   m_GameObject: {fileID: 7345693785975693917}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: b14f41c3db580314c931005394c8d46e, type: 2}
+  m_Controller: {fileID: 9100000, guid: b92d4192a068ad6489e8b157ebf02275, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0

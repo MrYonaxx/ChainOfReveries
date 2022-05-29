@@ -5147,6 +5147,7 @@ GameObject:
   - component: {fileID: 2456724131890698495}
   - component: {fileID: 5141338803741937774}
   - component: {fileID: 281788355437983303}
+  - component: {fileID: 5439388428280817569}
   - component: {fileID: 2524242894598313049}
   m_Layer: 0
   m_Name: AttackAnimationData
@@ -5213,6 +5214,8 @@ MonoBehaviour:
     AnimationEvent: {fileID: 5141338803741937774}
   - Frame: 105
     AnimationEvent: {fileID: 281788355437983303}
+  - Frame: 130
+    AnimationEvent: {fileID: 5439388428280817569}
   - Frame: 170
     AnimationEvent: {fileID: 2524242894598313049}
 --- !u!114 &2456724131890698495
@@ -5272,6 +5275,20 @@ MonoBehaviour:
   setRotation: 1
   spawnPoint: {fileID: 169440993373742051}
   rotationZ: 55
+--- !u!114 &5439388428280817569
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3720685875369100543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4f6a358ed9a7e144a09bd7df2c0bb63, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 130
+  frameEnd: 0
 --- !u!114 &2524242894598313049
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5423,7 +5440,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: -3018295551354840245, guid: 7995d1ab4330cf743849f685fe55a12b,
+  m_Sprite: {fileID: -7538516531540198778, guid: 602359690b0e7d54f8f1ce5a6a0fa24a,
     type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0

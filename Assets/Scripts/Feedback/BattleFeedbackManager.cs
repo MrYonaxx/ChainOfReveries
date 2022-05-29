@@ -79,6 +79,7 @@ namespace VoiceActing
 
         int indexAnimationDeath = 0;
         private IEnumerator motionSpeedCoroutine;
+        private IEnumerator tiltScreenCoroutine;
 
         public bool DesactivateCardBreakFeedback = false;
 
@@ -110,7 +111,6 @@ namespace VoiceActing
             // Rien à foutre là mais ok
             renderTexture.width = Screen.width;
             renderTexture.height = Screen.height;
-
         }
 
         // Ajoute un IMotionSpeed à la liste de ceux qui subissent le hitstop global
@@ -320,6 +320,54 @@ namespace VoiceActing
         {
             cameraShake.ShakeEffect();
         }*/
+
+        public void Tiltscreen(float angle, float time, float timeTilt = 0.2f)
+        {
+
+            if (tiltScreenCoroutine != null)
+                StopCoroutine(tiltScreenCoroutine);
+            tiltScreenCoroutine = TiltScreenCoroutine(angle, time, timeTilt);
+            StartCoroutine(tiltScreenCoroutine);
+        }
+
+        private IEnumerator TiltScreenCoroutine(float angle, float time, float timeTilt)
+        {
+            cameraShake.transform.localEulerAngles = Vector3.zero;
+            Vector3 startRot = cameraShake.transform.localEulerAngles;
+            Vector3 targetRot = new Vector3(0, 0, angle);
+            Vector3 inverseRot;
+
+            float t = 0f;
+            while (t <= timeTilt) // arbitraire c'est comme ça
+            {
+                t += Time.deltaTime;
+                cameraShake.transform.localEulerAngles = Vector3.Lerp(startRot, targetRot, t / timeTilt);
+
+                inverseRot = new Vector3(0, 0, -cameraShake.transform.localEulerAngles.z);
+                for (int i = 0; i < listMotionSpeed.Count; i++)
+                {
+                    listMotionSpeed[i].GetTransform().localEulerAngles = cameraShake.transform.localEulerAngles;
+                }
+                yield return null;
+
+            }
+            yield return new WaitForSeconds(1f);
+
+            t = time;
+            while (t > 0)
+            {
+                t -= Time.deltaTime;
+                cameraShake.transform.localEulerAngles = Vector3.Lerp(startRot, targetRot, t / time);
+
+                inverseRot = new Vector3(0, 0, -cameraShake.transform.localEulerAngles.z);
+                for (int i = 0; i < listMotionSpeed.Count; i++)
+                {
+                    listMotionSpeed[i].GetTransform().localEulerAngles = cameraShake.transform.localEulerAngles;
+                }
+                yield return null;
+
+            }
+        }
 
         #endregion
 

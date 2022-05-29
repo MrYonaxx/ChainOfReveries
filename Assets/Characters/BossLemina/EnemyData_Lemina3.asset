@@ -72,88 +72,87 @@ MonoBehaviour:
     StatusResistances: []
   salut: 
   initialDeck:
-  - cardData: {fileID: 11400000, guid: f34db74e4e9460740a229a4f75e02ae9, type: 2}
+  - cardData: {fileID: 11400000, guid: 5641f28865832964bb83289ee2eb2c0a, type: 2}
     baseCardValue: 1
-  - cardData: {fileID: 11400000, guid: f34db74e4e9460740a229a4f75e02ae9, type: 2}
-    baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
-    baseCardValue: 8
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
-    baseCardValue: 7
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
-    baseCardValue: 6
-  - cardData: {fileID: 11400000, guid: 55a7dfae1df812b48bdade438ab2e7fa, type: 2}
-    baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: 212f871f769bdcc40af74024b22f7935, type: 2}
-    baseCardValue: 7
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
+  - cardData: {fileID: 11400000, guid: 5641f28865832964bb83289ee2eb2c0a, type: 2}
     baseCardValue: 5
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
+  - cardData: {fileID: 11400000, guid: 5641f28865832964bb83289ee2eb2c0a, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: afbfe3d2da105944ba110dadcfff286e, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: 01ffb44f16785cf489ab0412bc44231c, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
     baseCardValue: 4
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
+  - cardData: {fileID: 11400000, guid: 6de30173fc465a040bfe29074e4232e3, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: 5641f28865832964bb83289ee2eb2c0a, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
+    baseCardValue: 6
+  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
     baseCardValue: 3
-  - cardData: {fileID: 11400000, guid: 55a7dfae1df812b48bdade438ab2e7fa, type: 2}
-    baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: f34db74e4e9460740a229a4f75e02ae9, type: 2}
-    baseCardValue: 1
-  - cardData: {fileID: 11400000, guid: 561056be2f38cec4e963079bc0c1ccca, type: 2}
-    baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
-    baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
-    baseCardValue: 4
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
-    baseCardValue: 6
-  - cardData: {fileID: 11400000, guid: 561056be2f38cec4e963079bc0c1ccca, type: 2}
+  - cardData: {fileID: 11400000, guid: 01ffb44f16785cf489ab0412bc44231c, type: 2}
     baseCardValue: 8
-  - cardData: {fileID: 11400000, guid: 212f871f769bdcc40af74024b22f7935, type: 2}
-    baseCardValue: 8
-  - cardData: {fileID: 11400000, guid: f34db74e4e9460740a229a4f75e02ae9, type: 2}
-    baseCardValue: 1
-  - cardData: {fileID: 11400000, guid: f34db74e4e9460740a229a4f75e02ae9, type: 2}
+  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
     baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
-    baseCardValue: 7
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
-    baseCardValue: 6
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
+  - cardData: {fileID: 11400000, guid: 6de30173fc465a040bfe29074e4232e3, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: afbfe3d2da105944ba110dadcfff286e, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 5641f28865832964bb83289ee2eb2c0a, type: 2}
     baseCardValue: 5
-  - cardData: {fileID: 11400000, guid: 212f871f769bdcc40af74024b22f7935, type: 2}
-    baseCardValue: 7
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
+  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
     baseCardValue: 1
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
-    baseCardValue: 0
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
-    baseCardValue: 0
-  - cardData: {fileID: 11400000, guid: 212f871f769bdcc40af74024b22f7935, type: 2}
-    baseCardValue: 0
-  - cardData: {fileID: 11400000, guid: 55a7dfae1df812b48bdade438ab2e7fa, type: 2}
-    baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
-    baseCardValue: 0
-  - cardData: {fileID: 11400000, guid: f34db74e4e9460740a229a4f75e02ae9, type: 2}
-    baseCardValue: 1
-  - cardData: {fileID: 11400000, guid: f34db74e4e9460740a229a4f75e02ae9, type: 2}
-    baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: 561056be2f38cec4e963079bc0c1ccca, type: 2}
+  - cardData: {fileID: 11400000, guid: 6de30173fc465a040bfe29074e4232e3, type: 2}
     baseCardValue: 8
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
+  - cardData: {fileID: 11400000, guid: 5641f28865832964bb83289ee2eb2c0a, type: 2}
     baseCardValue: 7
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
+  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
+    baseCardValue: 2
+  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 5641f28865832964bb83289ee2eb2c0a, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: 6de30173fc465a040bfe29074e4232e3, type: 2}
+    baseCardValue: 6
+  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
     baseCardValue: 8
-  - cardData: {fileID: 11400000, guid: 66514a787c5cbdd4280b48af81b7e755, type: 2}
+  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
     baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: 212f871f769bdcc40af74024b22f7935, type: 2}
+  - cardData: {fileID: 11400000, guid: 01ffb44f16785cf489ab0412bc44231c, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 5641f28865832964bb83289ee2eb2c0a, type: 2}
+    baseCardValue: 3
+  - cardData: {fileID: 11400000, guid: 6de30173fc465a040bfe29074e4232e3, type: 2}
     baseCardValue: 5
-  - cardData: {fileID: 11400000, guid: 55a7dfae1df812b48bdade438ab2e7fa, type: 2}
+  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
     baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: f34db74e4e9460740a229a4f75e02ae9, type: 2}
-    baseCardValue: 0
-  - cardData: {fileID: 11400000, guid: f34db74e4e9460740a229a4f75e02ae9, type: 2}
-    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
+    baseCardValue: 3
+  - cardData: {fileID: 11400000, guid: 5641f28865832964bb83289ee2eb2c0a, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 6de30173fc465a040bfe29074e4232e3, type: 2}
+    baseCardValue: 7
   sleightDatabase:
   - {fileID: 11400000, guid: 995e81a4243eba54f8e86767468dd0f4, type: 2}
+  - {fileID: 11400000, guid: b4aa612a54568d74cbb5d079261a7d25, type: 2}
   - {fileID: 11400000, guid: 6c3ed5a56c09ca74fb7841a0dc7bd02b, type: 2}
   - {fileID: 11400000, guid: 50b569e9c5c109f47ab9c013fadb40f2, type: 2}
   initialEquipment:

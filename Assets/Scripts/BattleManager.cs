@@ -146,6 +146,8 @@ namespace VoiceActing
                 enemiesController[i].SetCharacter();
 
                 SetReverieStatus(enemiesController[i]);
+
+                BattleUtils.Instance.Characters.Add(enemies[i].Character);
             }
 
             enemyDeckDrawer.ShowDeck(false);
@@ -155,6 +157,8 @@ namespace VoiceActing
             player.ResetToIdle();
             player.DeckController.ReloadDeck();
             player.StartBattle();
+
+            BattleUtils.Instance.Characters.Add(player);
 
             canvasBattle.SetActive(true);
         }
@@ -279,6 +283,9 @@ namespace VoiceActing
             player.CanPlay(false);
             player.EndBattle(); // Appel l'event de fin de combat
             player.CharacterKnockback.ResetRevengeValue();
+
+
+            BattleUtils.Instance.Characters.Clear();
 
             if (boss)
                 StartCoroutine(EndBossCoroutine());

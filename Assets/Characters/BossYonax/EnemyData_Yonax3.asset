@@ -71,47 +71,96 @@ MonoBehaviour:
     StatusResistances: []
   salut: 
   initialDeck:
-  - cardData: {fileID: 11400000, guid: 5641f28865832964bb83289ee2eb2c0a, type: 2}
-    baseCardValue: 1
-  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
+  - cardData: {fileID: 11400000, guid: 3cbbbb1a21ac9d44ba718501bbf14275, type: 2}
     baseCardValue: 8
-  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
-    baseCardValue: 7
-  - cardData: {fileID: 11400000, guid: 6de30173fc465a040bfe29074e4232e3, type: 2}
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
     baseCardValue: 8
-  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
-    baseCardValue: 5
-  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
-    baseCardValue: 4
-  - cardData: {fileID: 11400000, guid: 5641f28865832964bb83289ee2eb2c0a, type: 2}
+  - cardData: {fileID: 11400000, guid: 365dffd09d382a84aa686093d42bc8e1, type: 2}
     baseCardValue: 0
-  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
-    baseCardValue: 6
-  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
     baseCardValue: 3
-  - cardData: {fileID: 11400000, guid: 6de30173fc465a040bfe29074e4232e3, type: 2}
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
     baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
+  - cardData: {fileID: 11400000, guid: 1b72d9ad08f96ec488626da09c9bd948, type: 2}
+    baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: 1ac5b09d007772b4180bb37ab2ed688e, type: 2}
     baseCardValue: 0
-  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
-    baseCardValue: 8
-  - cardData: {fileID: 11400000, guid: 5641f28865832964bb83289ee2eb2c0a, type: 2}
+  - cardData: {fileID: 11400000, guid: 3cbbbb1a21ac9d44ba718501bbf14275, type: 2}
+    baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 6
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: 365dffd09d382a84aa686093d42bc8e1, type: 2}
+    baseCardValue: 3
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
     baseCardValue: 5
-  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
+  - cardData: {fileID: 11400000, guid: 1b72d9ad08f96ec488626da09c9bd948, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: 365dffd09d382a84aa686093d42bc8e1, type: 2}
+    baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 3
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
     baseCardValue: 9
-  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
-    baseCardValue: 1
-  - cardData: {fileID: 11400000, guid: 6de30173fc465a040bfe29074e4232e3, type: 2}
+  - cardData: {fileID: 11400000, guid: 1b72d9ad08f96ec488626da09c9bd948, type: 2}
     baseCardValue: 8
-  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
+  - cardData: {fileID: 11400000, guid: 3cbbbb1a21ac9d44ba718501bbf14275, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 3
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: 1ac5b09d007772b4180bb37ab2ed688e, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: 365dffd09d382a84aa686093d42bc8e1, type: 2}
+    baseCardValue: 6
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
     baseCardValue: 2
-  - cardData: {fileID: 11400000, guid: 0b39e758f6a91504c90b932a7f28efba, type: 2}
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: 1b72d9ad08f96ec488626da09c9bd948, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: 365dffd09d382a84aa686093d42bc8e1, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 2
+  - cardData: {fileID: 11400000, guid: 3cbbbb1a21ac9d44ba718501bbf14275, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: 365dffd09d382a84aa686093d42bc8e1, type: 2}
+    baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: 1ac5b09d007772b4180bb37ab2ed688e, type: 2}
     baseCardValue: 0
-  - cardData: {fileID: 11400000, guid: 5641f28865832964bb83289ee2eb2c0a, type: 2}
+  - cardData: {fileID: 11400000, guid: 3cbbbb1a21ac9d44ba718501bbf14275, type: 2}
+    baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 1
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 2
+  - cardData: {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: 1ac5b09d007772b4180bb37ab2ed688e, type: 2}
     baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 3cbbbb1a21ac9d44ba718501bbf14275, type: 2}
+    baseCardValue: 6
   sleightDatabase:
   - {fileID: 11400000, guid: 92e4eae3cb183624caebdf5be794e36d, type: 2}
-  initialEquipment: []
+  - {fileID: 11400000, guid: b0e2ceed185a50149b2e436e2b4a686f, type: 2}
+  - {fileID: 11400000, guid: adf8623b61cb2dc44a1e6b1433ca39a1, type: 2}
+  - {fileID: 11400000, guid: e581208b097a79b47872341df50f1f75, type: 2}
+  initialEquipment:
+  - cardEquipment: {fileID: 11400000, guid: 9d0503cbfe22f8740a385e8e49452552, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 20d6752ce5f25a442b5ad4e117aa63e0, type: 2}
+    probability: 100
   loreDescription: 'Yonax, also called the strongest man of the Earth. He was the
     man defeating Shedd and initiating the Denil Revolution, and the hero who defended
     Altya from Chancelor Valenn.

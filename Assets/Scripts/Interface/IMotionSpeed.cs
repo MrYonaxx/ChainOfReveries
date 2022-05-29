@@ -14,6 +14,7 @@ namespace VoiceActing
 {
     public interface IMotionSpeed
     {
+        Transform GetTransform();
         void SetCharacterMotionSpeed(float newSpeed, float time = 0);
 
     } 

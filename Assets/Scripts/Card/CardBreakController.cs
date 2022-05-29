@@ -58,7 +58,6 @@ namespace VoiceActing
         public event Action OnCardRemove;
 
 
-
         #endregion
 
         #region GettersSetters 

@@ -32,8 +32,12 @@ MonoBehaviour:
     - {fileID: 11400000, guid: ab9359c62dc1ded4a8726b49cecbcfe0, type: 2}
     - {fileID: 11400000, guid: 89d3c901c50ec60498b902dea99b025f, type: 2}
     - {fileID: 11400000, guid: f1068c6fa7e825c478204ac2db506811, type: 2}
-  - PlayerData: {fileID: 0}
-    DeckDatas: []
+  - PlayerData: {fileID: 11400000, guid: 795ab51d8922db84f97462d2ee8186df, type: 2}
+    DeckDatas:
+    - {fileID: 11400000, guid: f17d1446f53b3aa488979067ed53f291, type: 2}
+    - {fileID: 11400000, guid: e0417ac25bf5e7c42b235a2f47da3100, type: 2}
+    - {fileID: 11400000, guid: 3fd9486c7719a1f4d9bb3e858f7971c2, type: 2}
+    - {fileID: 11400000, guid: 9cd23c7e7856fe74c931376f51492768, type: 2}
   - PlayerData: {fileID: 11400000, guid: 707d8eac61f25fe448018999dc4704cf, type: 2}
     DeckDatas:
     - {fileID: 11400000, guid: 6e91b61c65c4bb14aa9c4b9240de9a69, type: 2}

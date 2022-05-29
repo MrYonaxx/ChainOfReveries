@@ -32,8 +32,10 @@ MonoBehaviour:
     BossEvents:
     - {fileID: 1053828776339861690, guid: 228258dd429700b42811163627ae6f94, type: 3}
     - {fileID: 1522222924599390107, guid: 59236ccdcc07b00469d62e940d94511f, type: 3}
+    - {fileID: 1522222924599390107, guid: 8c0b1af1ec93fc04387867929c002c0c, type: 3}
   - Character: {fileID: 11400000, guid: 707d8eac61f25fe448018999dc4704cf, type: 2}
     BossEvents:
     - {fileID: 1053828776339861690, guid: b2f85d404b58b864687a199bf397473d, type: 3}
     - {fileID: 5875352640888214154, guid: 8236337c296682146a91d829dccf72a3, type: 3}
+    - {fileID: 5875352640888214154, guid: dacdd5b18b958c9409b6b49e060d747a, type: 3}
   LastBossSelected: {fileID: 11400000, guid: 02afca26a085403478824fba51632d71, type: 2}

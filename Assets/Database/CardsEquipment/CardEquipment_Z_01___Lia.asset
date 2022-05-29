@@ -24,7 +24,9 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 9698100b9759ef14b988a2f183a72247, type: 3}
   cardName: Lia
   cardType: 0
-  cardDescription: "Reverse the Card Break rule. \n(2 Reload)"
+  cardDescription: 'Reverse the Card Break rule.
+
+    (2 Reload)'
   statsModifier: []
   statusEffectPassive: {fileID: 0}
   equipmentAction: {fileID: 199252371479164363, guid: 580d0d1dd61524641bc78c2dd19b21b5,

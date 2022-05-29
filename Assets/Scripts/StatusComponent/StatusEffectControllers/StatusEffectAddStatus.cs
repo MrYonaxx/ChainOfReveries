@@ -21,6 +21,12 @@ namespace VoiceActing
         \* ======================================== */
         [SerializeField]
         public StatusEffectData Status;
+        [SerializeField]
+        public bool ManualRemove = false;
+        [SerializeField]
+        public bool AddToTargets = false;
+
+        CharacterBase target = null;
         #endregion
 
         #region GettersSetters 
@@ -43,6 +49,8 @@ namespace VoiceActing
         public StatusEffectAddStatus(StatusEffectAddStatus data)
         {
             Status = data.Status;
+            ManualRemove = data.ManualRemove;
+            AddToTargets = data.AddToTargets;
         }
 
         public override StatusEffect Copy()
@@ -52,10 +60,63 @@ namespace VoiceActing
 
         public override void ApplyEffect(CharacterBase character)
         {
-            character.CharacterStatusController.ApplyStatus(Status, 100);
+            if (AddToTargets)
+            {
+                if(character.tag == "Player") // On ajoute sur les ennemis 
+                {
+                    AddStatusToTag("Enemy", true);
+                }
+                else if (character.tag == "Enemy")
+                {
+                    AddStatusToTag("Player", true);
+                }
+            }
+            else
+            {
+                character.CharacterStatusController.ApplyStatus(Status, 100);
+            }
+        }
+
+        public override void RemoveEffect(CharacterBase character)
+        {
+            if(ManualRemove)
+            {
+                if (AddToTargets)
+                {
+                    if (character.tag == "Player") // On ajoute sur les ennemis 
+                    {
+                        AddStatusToTag("Enemy", false);
+                    }
+                    else if (character.tag == "Enemy")
+                    {
+                        AddStatusToTag("Player", false);
+                    }
+                }
+                else
+                {
+                    character.CharacterStatusController.RemoveStatus(Status);
+                }
+            }
         }
 
 
+        private void AddStatusToTag(string tag, bool add)
+        {
+            for (int i = 0; i < BattleUtils.Instance.Characters.Count; i++)
+            {
+                if(BattleUtils.Instance.Characters[i].tag == tag)
+                {
+                    if(add)
+                    {
+                        BattleUtils.Instance.Characters[i].CharacterStatusController.ApplyStatus(Status, 100);
+                    }
+                    else
+                    {
+                        BattleUtils.Instance.Characters[i].CharacterStatusController.RemoveStatus(Status);
+                    }
+                }
+            }
+        }
 
         #endregion
 

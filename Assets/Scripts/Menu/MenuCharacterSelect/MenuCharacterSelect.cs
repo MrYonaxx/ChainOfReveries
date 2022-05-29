@@ -134,8 +134,6 @@ namespace Menu
         protected override void ValidateEntry(int id)
         {
             // placeholder
-            if (id >= 3)
-                return;
             // On set le perso
             gameRunData.PlayerCharacterData = playerDatas[id];
             gameRunData.CharacterID = id;
