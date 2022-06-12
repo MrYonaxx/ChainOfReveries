@@ -74,16 +74,16 @@ MonoBehaviour:
         mscorlib
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 4
     - Name: 
       Entry: 7
       Data: 4|VoiceActing.StatusEffectKnockbackComponent, Assembly-CSharp
     - Name: knockbackCondition
       Entry: 7
-      Data: 5|VoiceActing.KnockbackConditionSuperGuard, Assembly-CSharp
+      Data: 5|VoiceActing.KnockbackConditionArmor, Assembly-CSharp
     - Name: priority
       Entry: 4
-      Data: 9999
+      Data: 1
     - Name: 
       Entry: 8
       Data: 
@@ -92,7 +92,49 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 7
-      Data: 6|VoiceActing.StatusEffectAnimation, Assembly-CSharp
+      Data: 6|VoiceActing.StatusEffectStat, Assembly-CSharp
+    - Name: StatModifier
+      Entry: 7
+      Data: 7|VoiceActing.StatModifier, Assembly-CSharp
+    - Name: charStat
+      Entry: 3
+      Data: 2
+    - Name: modifierType
+      Entry: 3
+      Data: 0
+    - Name: value
+      Entry: 4
+      Data: 0.75
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 8|VoiceActing.StatusEffectStat, Assembly-CSharp
+    - Name: StatModifier
+      Entry: 7
+      Data: 9|VoiceActing.StatModifier, Assembly-CSharp
+    - Name: charStat
+      Entry: 3
+      Data: 4
+    - Name: modifierType
+      Entry: 3
+      Data: 0
+    - Name: value
+      Entry: 4
+      Data: 0.75
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 10|VoiceActing.StatusEffectAnimation, Assembly-CSharp
     - Name: animationObject
       Entry: 10
       Data: 0

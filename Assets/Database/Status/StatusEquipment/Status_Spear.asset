@@ -1,0 +1,92 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f5e6079dd8a46024986b2b65e7c5e737, type: 3}
+  m_Name: Status_Spear
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects:
+    - {fileID: 11400000, guid: 1e9d7fbd66d155f4da2a56acf2f499dc, type: 2}
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: statusUpdates
+      Entry: 7
+      Data: 0|System.Collections.Generic.List`1[[VoiceActing.StatusEffectUpdate,
+        Assembly-CSharp]], mscorlib
+    - Name: 
+      Entry: 12
+      Data: 2
+    - Name: 
+      Entry: 7
+      Data: 1|VoiceActing.StatusEffectUpdateOnCardPlayed, Assembly-CSharp
+    - Name: playTime
+      Entry: 3
+      Data: 10
+    - Name: playCondition
+      Entry: 5
+      Data: false
+    - Name: cardType
+      Entry: 3
+      Data: -1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|VoiceActing.StatusEffectUpdateOnEndBattle, Assembly-CSharp
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: statusController
+      Entry: 7
+      Data: 3|System.Collections.Generic.List`1[[VoiceActing.StatusEffect, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 1
+    - Name: 
+      Entry: 7
+      Data: 4|VoiceActing.StatusEffectAddStatus, Assembly-CSharp
+    - Name: Status
+      Entry: 10
+      Data: 0
+    - Name: ManualRemove
+      Entry: 5
+      Data: true
+    - Name: AddToTargets
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  statusIconSprite: {fileID: 21300000, guid: 9c9c464ecc7c86c41a7ec4eabafa577f, type: 3}
+  statusName: No Revenge
+  statusDescription: Reduce all attacks cards by 1.
+  hideStatus: 0
+  statusShowLabel: 1
+  statusConditionLabel: Cards

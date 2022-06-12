@@ -115,6 +115,8 @@ namespace VoiceActing
             set { canCardBreak = value; }
         }
 
+        public int ComboCount = 0; // /!\spaghetti, appelé depuis le combo count drawer et c'est ici pour que les status ou quoi puisse utiliser cet info
+
         public delegate void ActionCharacterAttack(AttackManager attack, Card card);
         public event ActionCharacterAttack OnAction;
 

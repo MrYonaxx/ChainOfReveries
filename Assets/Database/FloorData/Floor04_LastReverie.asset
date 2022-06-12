@@ -17,7 +17,7 @@ MonoBehaviour:
   firstRoom: {fileID: 11400000, guid: 7b09ded4c4b835a4aadb692a528265a4, type: 2}
   floorLayout:
   - {fileID: 11400000, guid: c701f688fc82e22438d1f67ca6cd552c, type: 2}
-  nextLevel: {fileID: 0}
+  nextLevel: {fileID: 11400000, guid: 4048b8984da6a334b873f1a9cd2b6fa0, type: 2}
   cardBanlist: []
   cardExplorationBanlist: []
   bgm: {fileID: 0}

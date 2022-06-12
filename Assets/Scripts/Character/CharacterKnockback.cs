@@ -359,6 +359,7 @@ namespace VoiceActing
 
             if ((canRevenge && revengeValue >= character.CharacterStat.RevengeValue.Value) || canInstantRevenge)
             {
+                knockbackTime = 0;
                 ResetRevengeValue();
                 characterToReversal = attackManager.User;
 

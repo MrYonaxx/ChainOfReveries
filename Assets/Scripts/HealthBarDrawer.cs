@@ -59,6 +59,12 @@ namespace VoiceActing
         [SerializeField]
         CanvasGroup canvasRV = null;
 
+        [Title("Armors")]
+        [SerializeField]
+        RectTransform armorsList = null;
+        [SerializeField]
+        Image armorIcon = null;
+
         [Title("Parameter")]
         [SerializeField]
         int healthBarAmount = 1000;
@@ -80,6 +86,7 @@ namespace VoiceActing
         int previousHealth = 0;
         int previousHealthMax = 0;
         List<Image> healthBarList = new List<Image>();
+        List<Image> armorIconsList = new List<Image>();
 
 
         #endregion
@@ -129,6 +136,7 @@ namespace VoiceActing
             }
             rVMaxGauge.gameObject.SetActive(true);
             DrawRevengeValue(0, characterStat.RevengeValue.Value);
+
         }
 
 
@@ -151,8 +159,8 @@ namespace VoiceActing
                 transformBarNumber.gameObject.SetActive(false);
 
             // décale le nom si il y a trop de barre de vie
-            if (healthBarList.Count > 8)
-                textCharacterName.rectTransform.anchoredPosition += new Vector2(0, 20);
+            //if (healthBarList.Count > 8)
+            textCharacterName.gameObject.SetActive(!(healthBarList.Count > 8));//.rectTransform.anchoredPosition += new Vector2(0, 20);
 
             // Affiche la première barre de vie un peu différemment
             healthBarHidden.gameObject.SetActive(maxHp >= healthBarAmount);
@@ -257,6 +265,27 @@ namespace VoiceActing
                 animatorRevengeValue.SetBool("Appear", rV == maxRV); 
             }
 
+        }
+
+        public void DrawArmors(List<CardEquipment> equipments)
+        {
+            // Draw Armors
+            int index = 0;
+            for (int i = 0; i < equipments.Count; i++)
+            {
+                if (equipments[i].GetCardType() == 1)
+                {
+                    if (index <= armorIconsList.Count)
+                        armorIconsList.Add(Instantiate(armorIcon, armorsList));
+                    armorIconsList[index].sprite = equipments[i].GetCardIcon();
+                    armorIconsList[index].gameObject.SetActive(true);
+                    index++;
+                }
+            }
+            for (int i = index; i < armorIconsList.Count; i++)
+            {
+                armorIconsList[i].gameObject.SetActive(false);
+            }
         }
 
 

@@ -147,8 +147,8 @@ namespace VoiceActing
             this.tag = cUser.tag;
 
             // Direction
-            this.transform.localScale = new Vector3(this.transform.localScale.x * Mathf.Abs(user.SpriteRenderer.transform.localScale.x) * user.CharacterMovement.Direction,
-                                                    this.transform.localScale.y * user.SpriteRenderer.transform.localScale.y,
+            this.transform.localScale = new Vector3(this.transform.localScale.x * Mathf.Abs(user.SpriteRenderer.transform.localScale.x) * Mathf.Abs(user.transform.localScale.x) * user.CharacterMovement.Direction,
+                                                    this.transform.localScale.y * user.SpriteRenderer.transform.localScale.y * user.transform.localScale.y,
                                                     user.SpriteRenderer.transform.localScale.z);
 
             if (linkToCharacter)

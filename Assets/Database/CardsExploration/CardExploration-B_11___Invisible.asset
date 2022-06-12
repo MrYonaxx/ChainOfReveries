@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aaaedca360f0e340996e82e36c3b4a0, type: 3}
+  m_Name: CardExploration-B_11___Invisible
+  m_EditorClassIdentifier: 
+  cardSprite: {fileID: 21300000, guid: fcc90e99ec964af4897f1e9616134858, type: 3}
+  cardName: Dream of Ivory - Fleeting
+  cardDescription: Travel to an Ivory dream, where the enemies are invisible.
+  cardType: 0
+  nbCardReward: 2
+  reverieColor: 3
+  explorationEvent: {fileID: 1011887057224725693, guid: 2a49dd43c36b4f0499346b21eb108ac8,
+    type: 3}
+  battleModifiers:
+  - label: Invisible
+    battleModifierTargets: 1
+    statusEffect: {fileID: 11400000, guid: 66bc06af869ab9945b794ec95fec2061, type: 2}
+    nb: 1

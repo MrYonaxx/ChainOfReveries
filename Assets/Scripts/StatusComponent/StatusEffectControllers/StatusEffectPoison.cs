@@ -87,8 +87,12 @@ namespace VoiceActing
                 t = 0f;
                 if(character.CharacterStat.HP > damagePoison)
                     character.CharacterStat.HP -= damagePoison;
-                AnimationParticle poisonObject = character.CreateAnimation(poisonAnimation);
-                poisonObject.transform.SetParent(character.ParticlePoint);
+
+                if (poisonAnimation != null)
+                {
+                    AnimationParticle poisonObject = character.CreateAnimation(poisonAnimation);
+                    poisonObject.transform.SetParent(character.ParticlePoint);
+                }
             }
         }
 

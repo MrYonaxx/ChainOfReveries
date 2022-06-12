@@ -22,6 +22,8 @@ namespace VoiceActing
         // Calcule des dommages
         public override void ProcessAttack(CharacterBase user, CharacterBase target, AttackController attack, ref DamageMessage damageMessage)
         {
+            if (attack.Card == null)
+                return;
             if(attack.Card.CardPremium)
             {
                 damageMessage.damage += damageMessage.baseDamage * multiplier;

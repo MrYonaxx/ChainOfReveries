@@ -20,6 +20,10 @@ namespace VoiceActing
         [SerializeField]
         float multiplierMagic = 1;
 
+        [SerializeField]
+        bool buffFullAttackDeck = false;
+        [SerializeField]
+        bool buffFullMagicDeck = false;
 
         // Calcule des dommages
         public override void ProcessAttack(CharacterBase user, CharacterBase target, AttackController attack, ref DamageMessage damageMessage)
@@ -34,10 +38,23 @@ namespace VoiceActing
                     nbMagic++;
             }
 
-            if (attack.Card.GetCardType() == 0)
-                damageMessage.damage += damageMessage.baseDamage * (multiplierAttack * nbAttack);
-            if (attack.Card.GetCardType() == 1)
-                damageMessage.damage += damageMessage.baseDamage * (multiplierAttack * nbMagic);
+            if(buffFullAttackDeck)
+            {
+                if (attack.Card.GetCardType() == 0 && user.DeckController.Deck.Count == nbAttack+1)
+                    damageMessage.damage += damageMessage.baseDamage * (multiplierAttack);
+            }
+            else if (buffFullMagicDeck)
+            {
+                if (attack.Card.GetCardType() == 1 && user.DeckController.Deck.Count == nbMagic+1)
+                    damageMessage.damage += damageMessage.baseDamage * (multiplierAttack);
+            }
+            else
+            {
+                if (attack.Card.GetCardType() == 0)
+                    damageMessage.damage += damageMessage.baseDamage * (multiplierAttack * nbAttack);
+                if (attack.Card.GetCardType() == 1)
+                    damageMessage.damage += damageMessage.baseDamage * (multiplierAttack * nbMagic);
+            }
 
 
         }

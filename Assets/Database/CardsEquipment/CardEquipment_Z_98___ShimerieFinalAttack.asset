@@ -21,7 +21,7 @@ MonoBehaviour:
     PrefabModificationsReferencedUnityObjects: []
     PrefabModifications: []
     SerializationNodes: []
-  cardSprite: {fileID: 21300000, guid: 43cc66572006bb54cb6f3f46a6020bf4, type: 3}
+  cardSprite: {fileID: 21300000, guid: 88746330f9abccb4a94d2cd42895c996, type: 3}
   cardName: Full Premium
   cardType: 1
   cardDescription: All cards become premium

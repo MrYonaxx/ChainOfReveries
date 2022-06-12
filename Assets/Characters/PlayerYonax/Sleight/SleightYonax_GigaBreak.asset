@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SleightYonax_GigaBreak
   m_EditorClassIdentifier: 
   sleightName: Giga Break
-  sleightDescription: An attack that will pierce through the enemy defense.
+  sleightDescription: An attack that will pierce through the enemy's defense.
   sleightValue: {x: 10, y: 18}
   sleightRecipe:
   - {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}

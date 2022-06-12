@@ -35,8 +35,8 @@ MonoBehaviour:
   cardType: 0
   cardDescription: 'A powerful kick during a back sommersault.
 
-    [Combo] only
-    in Ether Install.'
+    Can [Combo] in
+    Ether Install.'
   attackManager: {fileID: 818057835518184039, guid: 54a6fd7d2d5efb34fa358a600bccb3a4,
     type: 3}
   colorOutline: {r: 0, g: 0, b: 0, a: 0}

@@ -37,6 +37,9 @@ namespace VoiceActing
 
         public override void ProcessAttack(CharacterBase user, CharacterBase target, AttackController attack, ref DamageMessage damageMessage)
         {
+            if (attack.Card == null)
+                return;
+
             int cardValue = Mathf.Clamp(attack.Card.GetCardValue(), 0, 9);
             if(Random.Range(0, 100) < criticalChance[cardValue])
             {

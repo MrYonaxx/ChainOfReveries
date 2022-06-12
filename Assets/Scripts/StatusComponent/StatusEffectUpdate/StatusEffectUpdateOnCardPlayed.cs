@@ -33,6 +33,7 @@ namespace VoiceActing
 
 
         int play = 0;
+        bool sameFrame = false;
 
         #endregion
 
@@ -76,6 +77,7 @@ namespace VoiceActing
 
         public override bool Update()
         {
+            sameFrame = false;
             if (play <= 0)
             {
                 return false;
@@ -98,6 +100,8 @@ namespace VoiceActing
         public void UpdateCall(AttackManager attack, Card card)
         {
             if (card == null)
+                return; 
+            if (sameFrame) // petit pansement
                 return;
             if (playCondition == true)
             {
@@ -108,6 +112,7 @@ namespace VoiceActing
             }
             play -= 1;
             c.CharacterStatusController.RefreshStatus();
+            sameFrame = true;
         }
 
 

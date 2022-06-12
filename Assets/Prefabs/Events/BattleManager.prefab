@@ -19570,12 +19570,12 @@ MonoBehaviour:
   runData: {fileID: 11400000, guid: 1aae71d6d0b174646afb7b05a8a06b1f, type: 2}
   boss: 0
   reverieStatus:
-  - {fileID: 11400000, guid: eb5b13156706c6c4f8778bcb8ae813a6, type: 2}
+  - {fileID: 11400000, guid: 445596dcf75e5c44d9fd64f13c2435d0, type: 2}
+  - {fileID: 11400000, guid: a22504a5b94ac3740b942944761d710b, type: 2}
   - {fileID: 11400000, guid: 08e2a245e2bb61a4590b59f42200da49, type: 2}
   - {fileID: 11400000, guid: 0413822156859e743b15a2a5d75a5777, type: 2}
-  - {fileID: 11400000, guid: 445596dcf75e5c44d9fd64f13c2435d0, type: 2}
+  - {fileID: 11400000, guid: eb5b13156706c6c4f8778bcb8ae813a6, type: 2}
   - {fileID: 11400000, guid: 46a8b5d35b6c7114bb1ad8d00d25db54, type: 2}
-  - {fileID: 11400000, guid: 8e050ff92acec374ab32b513943d4da9, type: 2}
   - {fileID: 11400000, guid: bc005566624b6284794ea594fdf6197c, type: 2}
   - {fileID: 11400000, guid: c3baa081e9994d242a41fa4839f2a08a, type: 2}
   - {fileID: 11400000, guid: 938401ee5b3d76e489ed916b89a0916b, type: 2}

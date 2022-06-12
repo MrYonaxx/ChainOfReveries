@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: SleightYonax_TeraBuster
   m_EditorClassIdentifier: 
   sleightName: Tera Buster
-  sleightDescription: Hold Y To charge
+  sleightDescription: 'Focus your energy on a single devastating blow.
+
+    Hold
+    the button to charge longer.'
   sleightValue: {x: 19, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}

@@ -18,6 +18,11 @@ namespace VoiceActing
         CharacterStatusController characterStatusController = null;
 
         List<CardEquipment> cardsEquipment = null; // Liste comprenant tout les équipements
+        public List<CardEquipment> CardsEquipment
+        {
+            get { return cardsEquipment; }
+        }
+
         CardEquipment[] cardsEquipmentWeapon; // Liste comprenant uniquement les equipements weapon
         public CardEquipment[] CardsEquipmentWeapon
         {
@@ -141,7 +146,11 @@ namespace VoiceActing
 
 
 
-
+        public void AddEquipCard(CardEquipmentData cardEquipment)
+        {
+            cardsEquipment.Add(new CardEquipment(cardEquipment));
+            EquipCard(cardEquipment);
+        }
 
 
 

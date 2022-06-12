@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: SleightYonax_DomeImpact
   m_EditorClassIdentifier: 
   sleightName: Dome Impact
-  sleightDescription: 
+  sleightDescription: Create a dome of Ether around you stunning everyone inside
+    it.
   sleightValue: {x: 0, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: b2d166c612600494588db3447b3566a1, type: 2}

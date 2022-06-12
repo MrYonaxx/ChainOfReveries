@@ -43,7 +43,8 @@ namespace VoiceActing
             characterBase.DeckController.OnReload += ReloadAnimation;
 
             // Set direction
-            characterBase.transform.localScale = new Vector3(characterBase.CharacterMovement.Direction, 1, 1);
+            characterBase.transform.localScale = new Vector3(Mathf.Abs(characterBase.transform.localScale.x) * characterBase.CharacterMovement.Direction,
+                                                                       characterBase.transform.localScale.y, characterBase.transform.localScale.z);
         }
         private void OnDestroy()
         {
@@ -66,7 +67,8 @@ namespace VoiceActing
             // Set direction
             if (characterBase.MotionSpeed != 0)
             {
-                characterBase.transform.localScale = new Vector3(characterBase.CharacterMovement.Direction, 1, 1);
+                characterBase.transform.localScale = new Vector3(Mathf.Abs(characterBase.transform.localScale.x) * characterBase.CharacterMovement.Direction, 
+                                                                           characterBase.transform.localScale.y, characterBase.transform.localScale.z);
                 animator.SetBool("Moving", characterBase.CharacterMovement.InMovement);
             }
 

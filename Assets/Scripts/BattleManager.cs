@@ -248,6 +248,7 @@ namespace VoiceActing
 
                 enemyHealthBar.gameObject.SetActive(true);
                 enemyHealthBar.DrawCharacter(character.CharacterData, character.CharacterStat);
+                enemyHealthBar.DrawArmors(character.CharacterEquipment.CardsEquipment);
 
                 character.DeckController.OnDeckChanged += enemyDeckDrawer.DrawHand;
                 character.DeckController.OnCardMoved += enemyDeckDrawer.MoveHand;

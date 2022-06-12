@@ -24,6 +24,8 @@ namespace VoiceActing
         [SerializeField]
         public bool ManualRemove = false;
         [SerializeField]
+        public bool AddOnRemove = false;
+        [SerializeField]
         public bool AddToTargets = false;
 
         CharacterBase target = null;
@@ -51,6 +53,7 @@ namespace VoiceActing
             Status = data.Status;
             ManualRemove = data.ManualRemove;
             AddToTargets = data.AddToTargets;
+            AddOnRemove = data.AddOnRemove;
         }
 
         public override StatusEffect Copy()
@@ -60,7 +63,9 @@ namespace VoiceActing
 
         public override void ApplyEffect(CharacterBase character)
         {
-            if (AddToTargets)
+            if (AddOnRemove)
+                return;
+            else if (AddToTargets)
             {
                 if(character.tag == "Player") // On ajoute sur les ennemis 
                 {
@@ -96,6 +101,10 @@ namespace VoiceActing
                 {
                     character.CharacterStatusController.RemoveStatus(Status);
                 }
+            }
+            else if (AddOnRemove)
+            {
+                character.CharacterStatusController.ApplyStatus(Status, 100);
             }
         }
 

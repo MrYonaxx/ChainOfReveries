@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SleightYonax_MegaSlash
   m_EditorClassIdentifier: 
   sleightName: Mega Slash
-  sleightDescription: 
+  sleightDescription: A big energy wave with poor range.
   sleightValue: {x: 0, y: 9}
   sleightRecipe:
   - {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}

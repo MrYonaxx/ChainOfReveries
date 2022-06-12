@@ -99,7 +99,7 @@ MonoBehaviour:
       Entry: 8
       Data: 
   statusIconSprite: {fileID: 21300000, guid: 28eb3ab6c6d944b4abee321c1e713ae3, type: 3}
-  statusName: Battleaxe
+  statusName: Unbreakable
   statusDescription: 
   hideStatus: 0
   statusShowLabel: 1

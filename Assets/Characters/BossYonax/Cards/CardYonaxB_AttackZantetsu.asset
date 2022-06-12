@@ -37,7 +37,10 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 70b47a70dff331d41ab41a473d20f16b, type: 3}
   cardName: Zantetsu
   cardType: 0
-  cardDescription: 
+  cardDescription: 'A strong but slow attack.
+
+    If used to Card Break, draw your
+    sword in a flash.'
   attackManager: {fileID: 818057835518184039, guid: 3f117b527da87804ea8503a3fe6c8567,
     type: 3}
   colorOutline: {r: 0, g: 0, b: 0, a: 0}

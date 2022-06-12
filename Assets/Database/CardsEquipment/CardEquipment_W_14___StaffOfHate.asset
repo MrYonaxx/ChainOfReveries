@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 02519ca1dddceb742b46951073eda492, type: 3}
+  m_Name: CardEquipment_W_14___StaffOfHate
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  cardSprite: {fileID: 21300000, guid: 5ba249b07a09a314fbc7caa429ab6585, type: 3}
+  cardName: Staff of Hate
+  cardType: 0
+  cardDescription: 'Everyone gradually lose HP.
+
+    (1 Hit)'
+  statsModifier: []
+  statusEffectPassive: {fileID: 0}
+  equipmentAction: {fileID: 818057835518184039, guid: 971d891aa08a3d74baf5f67b6da459b8,
+    type: 3}
+  statusEffectActive: {fileID: 11400000, guid: dfcbf53bf86b33b47b79b63c97c1ad22, type: 2}

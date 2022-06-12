@@ -190,6 +190,8 @@ MonoBehaviour:
   frameData:
   - Frame: 0
     AnimationEvent: {fileID: 2351726631139350688}
+  - Frame: 26
+    AnimationEvent: {fileID: 4974550631601846375}
   - Frame: 30
     AnimationEvent: {fileID: 4538641789321098129}
   - Frame: 30
@@ -411,7 +413,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4388082830208477171}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6202298799396831511}
@@ -456,15 +458,16 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8e245e2580c97a8438b63264269fa2d2, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Sprite: {fileID: 7089637894367661320, guid: a659e7e6636aebf4ba441074806a844a,
+    type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.014577091}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 0
+  m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &5400106548399681323
@@ -958,6 +961,7 @@ GameObject:
   - component: {fileID: 449969345270580251}
   - component: {fileID: 4538641789321098129}
   - component: {fileID: 2368046769015944396}
+  - component: {fileID: 4974550631601846375}
   m_Layer: 0
   m_Name: SubAction30
   m_TagString: Untagged
@@ -1017,6 +1021,24 @@ MonoBehaviour:
   setRotation: 0
   spawnPoint: {fileID: 0}
   rotationZ: 0
+--- !u!114 &4974550631601846375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7310039792099126746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c6ca1047c5907ce4c851d7349dcd44a0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 26
+  frameEnd: 0
+  direction: 0
+  turnToTarget: 0
+  turnBack: 1
+  turnToCenter: 0
 --- !u!1 &7345693785975693917
 GameObject:
   m_ObjectHideFlags: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SleightYonax_AtomicCharge
   m_EditorClassIdentifier: 
   sleightName: Atomic Charge
-  sleightDescription: Fast long range grab corner carry but low damage
+  sleightDescription: '[Throw] A long range grab, driving the opponent to a corner.'
   sleightValue: {x: 14, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: d926d2557e4dce14ab53d8c683fa5cb3, type: 2}

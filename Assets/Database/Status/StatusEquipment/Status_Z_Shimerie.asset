@@ -98,8 +98,7 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  statusIconSprite: {fileID: -2481666271808755880, guid: 7061239f78fd75d4599808d286325f86,
-    type: 3}
+  statusIconSprite: {fileID: 21300000, guid: 55166c2b9cd2c2f4e84ea6e3b710e026, type: 3}
   statusName: Weak to Card Break
   statusDescription: 
   hideStatus: 0

@@ -89,7 +89,9 @@ namespace VoiceActing
             string[] files = Directory.GetFiles(pathDatabase, "*.asset", SearchOption.TopDirectoryOnly);
             foreach (var file in files)
             {
+                Debug.Log(file);
                 CardEquipmentData equipment = (CardEquipmentData)AssetDatabase.LoadAssetAtPath(file, typeof(CardEquipmentData));
+                Debug.Log(equipment.name);
                 if (!Contains(equipment.name))
                 {            
                     equipmentDatabase.Add(new CardEquipmentProba());

@@ -138,7 +138,7 @@ namespace VoiceActing
             get { return player; }
         }
 
-        int floorID = 0;
+        //int floorID = 0;
         float timeMoveCard = 0f;
         bool active = false;
         ExplorationEvent explorationEvent;
@@ -193,13 +193,17 @@ namespace VoiceActing
             if (runData.Room >= runData.LevelLayout.Count)
             {
                 // End Level
-                floorID = 0;
+                //floorID = 0;
                 runData.NextZone();
-                if(runData.Floor >= 4 && runData.ReverieLevel == 0)
+                if(runData.Floor >= 4 && runData.GetReverieColor() == 1) // Fin bleu
                 {
                     // Fin normal du jeu
                     EndGame();
                     return;
+                }
+                else if (runData.Floor >= 4 && runData.GetReverieColor() == 2) // Fin verte
+                {
+                    runData.NextZone();
                 }
                 AddCardLayout();
                 AutoCreateRoom(runData.FloorLayout.FirstRoom);
@@ -214,9 +218,9 @@ namespace VoiceActing
 
                 if (runData.Room < runData.LevelLayout.Count-1) // Ce n'est pas une room de boss donc on dessine
                 {
-                    floorID += 1;
+                    //floorID += 1;
                     animatorDeckProgress.SetBool("Appear", true);
-                    battleModifierDrawerList.DrawBattleModifiers(runData.BattleModifiers, floorID);
+                    battleModifierDrawerList.DrawBattleModifiers(runData.BattleModifiers, runData.Room);
                     deckExplorationLayout.CreateDeckExploration(runData.LevelLayout);
                 }
                 return;
@@ -246,14 +250,14 @@ namespace VoiceActing
 
 
             // Draw les battle modifiers de la run
-            battleModifierDrawerList.DrawBattleModifiers(runData.BattleModifiers, floorID);
+            battleModifierDrawerList.DrawBattleModifiers(runData.BattleModifiers, runData.Room);
             // Draw la preview des battle modifiers de la carte choisi
             CardExplorationData card = runData.PlayerExplorationDeck[deckExplorationDrawer.GetCurrentIndex()];
             battleModifierDrawerList.DrawBattleModifiersPreview(card.BattleModifiers);
             runData.AddReverieColor(card.CardType, card.ReverieColor);
             DrawReverieColor();
 
-            if (floorID == 0) // Draw Floor Name
+            if (runData.Room == 0) // Draw Floor Name
             {
                 DrawFloorName(runData.FloorLayout.FloorName);
             }
@@ -363,7 +367,7 @@ namespace VoiceActing
         public void UseCard()
         {
             active = false;
-            floorID += 1;
+            //floorID += 1;
 
             // buttonHud
             buttonHud.gameObject.SetActive(false);

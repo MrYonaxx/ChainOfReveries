@@ -238,6 +238,12 @@ namespace VoiceActing
             roomExplored += 1;
         }
 
+        public void RemoveLastRoom(CardExplorationData emptyRoom)
+        {
+            room -= 1;
+            levelLayout[room] = emptyRoom;
+        }
+
         public void NextZone()
         {
             floor += 1;
@@ -498,6 +504,10 @@ namespace VoiceActing
             reverieColor[color] += amount;
         }
 
+        /// <summary>
+        /// Red = 0, Blue = 1, Vert = 2
+        /// </summary>
+        /// <returns></returns>
         public int GetReverieColor()
         {
             int bestIndex = 0;

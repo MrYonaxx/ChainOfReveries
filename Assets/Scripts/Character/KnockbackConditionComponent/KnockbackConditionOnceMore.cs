@@ -24,11 +24,12 @@ namespace VoiceActing
         \* ======================================== */
         public override bool CheckCondition(CharacterBase user, AttackController attack, DamageMessage damageMessage)
         {
-            if(user.CharacterStat.HP > 1)
+            int hp = (int) user.CharacterStat.HP;
+            if (hp > 1)
             {
-                if (damageMessage.damage >= user.CharacterStat.HP)
+                if (damageMessage.damage >= hp)
                 {
-                    damageMessage.damage = (user.CharacterStat.HP - 1);
+                    damageMessage.damage = (hp - 1);
                 }
             }
             else if (user.CharacterKnockback.KnockbackTime > 0)

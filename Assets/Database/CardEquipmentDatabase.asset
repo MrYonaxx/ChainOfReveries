@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1143755e476c13b4691405d1af62e3bf, type: 3}
   m_Name: CardEquipmentDatabase
   m_EditorClassIdentifier: 
-  maxProbability: 4516
+  maxProbability: 6427
   equipmentDatabase:
   - cardEquipment: {fileID: 11400000, guid: d4787e042130f2544a2e1e7a5a32a0be, type: 2}
     probability: 100
@@ -22,17 +22,35 @@ MonoBehaviour:
     probability: 100
   - cardEquipment: {fileID: 11400000, guid: 1d5ce885681ef7546948331a0134c6d6, type: 2}
     probability: 100
-  - cardEquipment: {fileID: 11400000, guid: db293d51953081a4e8edf165dbc162c3, type: 2}
+  - cardEquipment: {fileID: 11400000, guid: a4a0700e7fc090e4ab160b89df5c8731, type: 2}
     probability: 100
-  - cardEquipment: {fileID: 11400000, guid: a2e658173bf0212449655d303ba05505, type: 2}
+  - cardEquipment: {fileID: 11400000, guid: db293d51953081a4e8edf165dbc162c3, type: 2}
     probability: 100
   - cardEquipment: {fileID: 11400000, guid: 34da0b7be3540f4429a39a0ebe98d399, type: 2}
     probability: 100
   - cardEquipment: {fileID: 11400000, guid: b7358207cd748de4fb4cf2128ea1edb2, type: 2}
     probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 4ed2d44213e41f94082e09537810953d, type: 2}
+    probability: 100
   - cardEquipment: {fileID: 11400000, guid: b0c2e16b5e4ba5946af80ca49a6644d6, type: 2}
     probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 2362970e2ec75df428c95f7e853976b6, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 288e2c902d71eaf47a637a8a8bdcb672, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 189809f86c52760459b504bebafb297c, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 56baeffd0822a6f45a3b9aee2275e10b, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 0661850a08dec374493af2b82be2cf5b, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 6c6a6d5e13289a549b3df579872eb260, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: f57ca1c6fc2ffbc4b94b802b1187d50b, type: 2}
+    probability: 100
   - cardEquipment: {fileID: 11400000, guid: f9d806330b8b52b4c8fafa8071aefc6c, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 2f4864ba56c8167468dc048aba70cd7b, type: 2}
     probability: 100
   - cardEquipment: {fileID: 11400000, guid: 37318f718c9bd3b40a3614be030d83fa, type: 2}
     probability: 100
@@ -46,21 +64,45 @@ MonoBehaviour:
     probability: 100
   - cardEquipment: {fileID: 11400000, guid: 63408f5447f22f149a0e9421b0a28ef5, type: 2}
     probability: 100
+  - cardEquipment: {fileID: 11400000, guid: e6dffba179b973a42b5b04f5d7e288af, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: d6ffe42f200f8a048b06ebb5932c5043, type: 2}
+    probability: 100
   - cardEquipment: {fileID: 11400000, guid: 7979a3c4544c586419249a682308e5ca, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 00c3b05bab2f99142aeb6df8c6fae12c, type: 2}
     probability: 100
   - cardEquipment: {fileID: 11400000, guid: f8d031cf7343af844bd1da37f9a58a5b, type: 2}
     probability: 100
+  - cardEquipment: {fileID: 11400000, guid: a2e658173bf0212449655d303ba05505, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: cdb3865021312174d86a1e226ae12b29, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: ecd0b49f65a28b74d9d1559083dde6ad, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: d0f114daa1d53924f92413d8559edc5d, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 8c3ba9c6ce76c114fbd7c10031824d4d, type: 2}
+    probability: 100
   - cardEquipment: {fileID: 11400000, guid: 1119497543f62ad4086564f7bf93d4f7, type: 2}
-    probability: 10
+    probability: 20
   - cardEquipment: {fileID: 11400000, guid: 49bcfe4e76eadc94289a6179c96de79c, type: 2}
     probability: 100
   - cardEquipment: {fileID: 11400000, guid: 9a364f419e43abf4ba509d89d7cb8e74, type: 2}
     probability: 100
   - cardEquipment: {fileID: 11400000, guid: be3c3bc1437ed45468ec623e75dc7c43, type: 2}
     probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 533334149c30368488c4682d4e151f6c, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 1515ee5489bd5a848acea550f734dc10, type: 2}
+    probability: 100
   - cardEquipment: {fileID: 11400000, guid: f510f131a53f3ed42b200526fcf7bfb8, type: 2}
     probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 20d6752ce5f25a442b5ad4e117aa63e0, type: 2}
+    probability: 100
   - cardEquipment: {fileID: 11400000, guid: a257d6fb9b290a04cb5bfa9d75acff1b, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 91b802107b066564bb71103e7221ed53, type: 2}
     probability: 100
   - cardEquipment: {fileID: 11400000, guid: b9f7e9038916aa74581026945bb78e0b, type: 2}
     probability: 100
@@ -68,11 +110,19 @@ MonoBehaviour:
     probability: 100
   - cardEquipment: {fileID: 11400000, guid: c05ba778d698ba243ba3d48c9f2cfbf8, type: 2}
     probability: 100
-  - cardEquipment: {fileID: 11400000, guid: 058c7df810f3bd248b16e2830a48ee43, type: 2}
+  - cardEquipment: {fileID: 11400000, guid: 7b60b9a50a8b8ee40b73334b8512fca5, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 35b714b3b4c6cb041b209fe1e94defa6, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: a10b6a5c1f285f643bc0c22994e47ce5, type: 2}
     probability: 100
   - cardEquipment: {fileID: 11400000, guid: 6b4ffd30656ebad4fbe5d0471699cf7b, type: 2}
     probability: 100
   - cardEquipment: {fileID: 11400000, guid: 4e296eb6386fac24a904ada7c37bfddb, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 74afaffcbe885814cb5cbefe2d4b2647, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 69d6aa35122e4234c8df1a9c50c0bac2, type: 2}
     probability: 100
   - cardEquipment: {fileID: 11400000, guid: d731e8a71fa4ab047a519b271dec6a5f, type: 2}
     probability: 100
@@ -81,6 +131,8 @@ MonoBehaviour:
   - cardEquipment: {fileID: 11400000, guid: f65d285594aa6ee4e85af4e90f60afa1, type: 2}
     probability: 100
   - cardEquipment: {fileID: 11400000, guid: 9c5e6d2cdec20d04380cdfe43d54b5e9, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 2951cd3a61f0c044b87c527f8978afb3, type: 2}
     probability: 100
   - cardEquipment: {fileID: 11400000, guid: 9741a73407518db44b09c5357a9eb862, type: 2}
     probability: 100
@@ -104,18 +156,6 @@ MonoBehaviour:
     probability: 1
   - cardEquipment: {fileID: 11400000, guid: c79639027aa698648bf311e87f246722, type: 2}
     probability: 1
-  - cardEquipment: {fileID: 11400000, guid: a4a0700e7fc090e4ab160b89df5c8731, type: 2}
-    probability: 100
-  - cardEquipment: {fileID: 11400000, guid: 2362970e2ec75df428c95f7e853976b6, type: 2}
-    probability: 100
-  - cardEquipment: {fileID: 11400000, guid: 288e2c902d71eaf47a637a8a8bdcb672, type: 2}
-    probability: 100
-  - cardEquipment: {fileID: 11400000, guid: 189809f86c52760459b504bebafb297c, type: 2}
-    probability: 100
-  - cardEquipment: {fileID: 11400000, guid: 56baeffd0822a6f45a3b9aee2275e10b, type: 2}
-    probability: 100
-  - cardEquipment: {fileID: 11400000, guid: 00c3b05bab2f99142aeb6df8c6fae12c, type: 2}
-    probability: 100
-  - cardEquipment: {fileID: 11400000, guid: f57ca1c6fc2ffbc4b94b802b1187d50b, type: 2}
-    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 8b6765ee5518eda4681b87558f96fceb, type: 2}
+    probability: 1
   pathDatabase: Assets/Database/CardsEquipment

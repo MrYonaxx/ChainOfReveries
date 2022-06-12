@@ -13,8 +13,8 @@ MonoBehaviour:
   m_Name: SleightLeminaB_Freeze
   m_EditorClassIdentifier: 
   sleightName: Freeze
-  sleightDescription: Lia goes into a counter stance. If a card try to card break
-    this attack, she will instantly retaliate.
+  sleightDescription: Freeze the opponent. Attacking a frozen enemy deals greater
+    damage.
   sleightValue: {x: 0, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: 6de30173fc465a040bfe29074e4232e3, type: 2}

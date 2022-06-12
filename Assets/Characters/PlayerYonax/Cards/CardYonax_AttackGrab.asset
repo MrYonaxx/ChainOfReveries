@@ -33,7 +33,8 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 975f42fc976dbf346a07347803875074, type: 3}
   cardName: Grab
   cardType: 0
-  cardDescription: '[Combo] A basic attack in front of you.'
+  cardDescription: '[Throw] Grab an opponent near you. Opponent can escape the throw
+    with a Card Break.'
   attackManager: {fileID: 818057835518184039, guid: 1167e6155d25ee4488e099cad2f7f7aa,
     type: 3}
   colorOutline: {r: 0, g: 0, b: 0, a: 0}

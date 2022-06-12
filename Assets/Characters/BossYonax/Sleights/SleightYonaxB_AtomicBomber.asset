@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: SleightYonaxB_AtomicBomber
   m_EditorClassIdentifier: 
   sleightName: Atomic Bomber
-  sleightDescription: Lexaeus
+  sleightDescription: '[Throw] Dash towards the opponent to catch him, then jump
+    high in the air before slamming the enemy  on the ground.'
   sleightValue: {x: 0, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: 365dffd09d382a84aa686093d42bc8e1, type: 2}

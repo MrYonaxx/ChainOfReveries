@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7aaaedca360f0e340996e82e36c3b4a0, type: 3}
+  m_Name: CardExploration-Bonus_08___BattleUnbreakable
+  m_EditorClassIdentifier: 
+  cardSprite: {fileID: 21300000, guid: 97fad6e6181dc95448dd37d276e1fa12, type: 3}
+  cardName: 'Dream of Ivoirin - '
+  cardDescription: Travel to an Ivoirin dream, where all cards are Unbreakable.
+  cardType: 2
+  nbCardReward: 1
+  reverieColor: 2
+  explorationEvent: {fileID: 8236675884287493958, guid: 7af8913c4d5614c4a8a6cda89a05c0ad,
+    type: 3}
+  battleModifiers:
+  - label: Unbreakable
+    battleModifierTargets: 2
+    statusEffect: {fileID: 11400000, guid: caeb5452edac69340a4d6076af250e6e, type: 2}
+    nb: 1

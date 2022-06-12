@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SleightYonaxB_MultiSlash
   m_EditorClassIdentifier: 
   sleightName: Multi Slash
-  sleightDescription: 
+  sleightDescription: Create multiple energy waves.
   sleightValue: {x: 0, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: 5cd794ed58471b7478de76ca0701e766, type: 2}

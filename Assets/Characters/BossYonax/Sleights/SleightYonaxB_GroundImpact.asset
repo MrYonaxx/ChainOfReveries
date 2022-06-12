@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: SleightYonaxB_GroundImpact
   m_EditorClassIdentifier: 
   sleightName: Ground Impact
-  sleightDescription: Slam the ground leaning the Reverie itself. Alter the movement.
+  sleightDescription: Slam the ground leaning the Reverie itself.
   sleightValue: {x: 0, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: 3cbbbb1a21ac9d44ba718501bbf14275, type: 2}

@@ -22,6 +22,8 @@ MonoBehaviour:
     probability: 100
   - cardExploration: {fileID: 11400000, guid: af3f7a0ad05ec1540822aafddaa834f9, type: 2}
     probability: 50
+  - cardExploration: {fileID: 11400000, guid: 04c13042c64597248a728026012535f5, type: 2}
+    probability: 10
   - cardExploration: {fileID: 11400000, guid: 7bf18b8981b6a4d4dba03fece3197c70, type: 2}
     probability: 50
   - cardExploration: {fileID: 11400000, guid: 9fe4caa26c9c3844bac46c1ca3678b08, type: 2}
@@ -32,20 +34,40 @@ MonoBehaviour:
     probability: 50
   - cardExploration: {fileID: 11400000, guid: 0bf057dcf88ee0f42a70aa400d6235ff, type: 2}
     probability: 50
+  - cardExploration: {fileID: 11400000, guid: 1301eaa9102b08d48a0716ef172821fa, type: 2}
+    probability: 50
+  - cardExploration: {fileID: 11400000, guid: cdddbbfbca12a8b42ae7a56f80b08d1c, type: 2}
+    probability: 50
+  - cardExploration: {fileID: 11400000, guid: 2d3034aa6b5dd3845a32078771446139, type: 2}
+    probability: 50
   - cardExploration: {fileID: 11400000, guid: 1938a73b9f490f14ab7149fc67c0ca46, type: 2}
     probability: 50
   - cardExploration: {fileID: 11400000, guid: 8b387f445e481ed4a926ae009ec11175, type: 2}
-    probability: 100
+    probability: 75
   - cardExploration: {fileID: 11400000, guid: eaecc4cb77e55834e8a72aba9181cbfb, type: 2}
-    probability: 100
+    probability: 75
   - cardExploration: {fileID: 11400000, guid: 44d7b7e69c371684a8bcda8858987fd1, type: 2}
-    probability: 100
+    probability: 75
   - cardExploration: {fileID: 11400000, guid: 23abbd3569efad04dbc1cd6f0c8742f8, type: 2}
-    probability: 100
+    probability: 75
   - cardExploration: {fileID: 11400000, guid: 73183a75d614d6e4a903685eeb459734, type: 2}
     probability: 50
   - cardExploration: {fileID: 11400000, guid: 65eddfaefefa63e4485c829f2ca8fdaa, type: 2}
     probability: 25
+  - cardExploration: {fileID: 11400000, guid: d1ec8cb42ed0dff44ac7238b968c21e3, type: 2}
+    probability: 75
+  - cardExploration: {fileID: 11400000, guid: 237f016d89f60af49a25705ce94fad74, type: 2}
+    probability: 75
+  - cardExploration: {fileID: 11400000, guid: 76cea9cf0a4d53e4ca26987ff8aa0f4e, type: 2}
+    probability: 75
+  - cardExploration: {fileID: 11400000, guid: 88823c5c4f0daa9489a7e35c80d4b64f, type: 2}
+    probability: 50
+  - cardExploration: {fileID: 11400000, guid: 6bd24266fb6878c4c972dc18a8b4ab40, type: 2}
+    probability: 50
+  - cardExploration: {fileID: 11400000, guid: 95b2409de5686274384c01d50475ec62, type: 2}
+    probability: 10
+  - cardExploration: {fileID: 11400000, guid: aa05097adfc732d4bb75dc77fe28e1a5, type: 2}
+    probability: 10
   - cardExploration: {fileID: 11400000, guid: 428372b4353492a4992435ff672dd230, type: 2}
     probability: 50
   - cardExploration: {fileID: 11400000, guid: ef8e00c5c175d844daebe5dcf2d8b07f, type: 2}
@@ -58,5 +80,3 @@ MonoBehaviour:
     probability: 50
   - cardExploration: {fileID: 11400000, guid: e7b15ff2992577643bf9d960727007d5, type: 2}
     probability: 75
-  - cardExploration: {fileID: 11400000, guid: aa05097adfc732d4bb75dc77fe28e1a5, type: 2}
-    probability: 10

@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1143755e476c13b4691405d1af62e3bf, type: 3}
+  m_Name: CardEquipmentCharaDatabase
+  m_EditorClassIdentifier: 
+  maxProbability: 7
+  equipmentDatabase:
+  - cardEquipment: {fileID: 11400000, guid: 9e076760a1b048848bb51d96d5c57806, type: 2}
+    probability: 1
+  - cardEquipment: {fileID: 11400000, guid: 93c96cf8179666a4cb68c844e8b7c0ba, type: 2}
+    probability: 1
+  - cardEquipment: {fileID: 11400000, guid: 71df775cf044f724590c9fd860c75335, type: 2}
+    probability: 1
+  - cardEquipment: {fileID: 11400000, guid: 9d0503cbfe22f8740a385e8e49452552, type: 2}
+    probability: 1
+  - cardEquipment: {fileID: 11400000, guid: 0ae1da5f1baf26443b613d756e34347e, type: 2}
+    probability: 1
+  - cardEquipment: {fileID: 11400000, guid: c79639027aa698648bf311e87f246722, type: 2}
+    probability: 1
+  - cardEquipment: {fileID: 11400000, guid: 8b6765ee5518eda4681b87558f96fceb, type: 2}
+    probability: 1
+  pathDatabase: Assets/Database/CardsEquipment

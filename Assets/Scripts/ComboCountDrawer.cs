@@ -34,8 +34,9 @@ namespace VoiceActing
         Feedbacks.GenericLerp lerpCounter = null;
 
         int comboCount = 0;
-       // int sleightChain = 0;
         CharacterBase characterComboed = null;
+
+        bool hide = false;
 
         // Start is called before the first frame update
         public void SetCharacter(CharacterBase character)
@@ -43,7 +44,7 @@ namespace VoiceActing
             // si y'a un problème de perf, go stocker ça ailleurs
             int option = PlayerPrefs.GetInt("ComboCount", 1);
             if (option == 0)
-                return;
+                hide = true;
 
             player = character;
             player.CharacterAction.OnAttackHit += UpdateCombo;
@@ -75,6 +76,7 @@ namespace VoiceActing
                 comboCount += 1;
                 if (comboCount >= 2)
                     DrawCombo();
+                player.CharacterAction.ComboCount = comboCount;
             }
 
             // Counter hit
@@ -86,7 +88,9 @@ namespace VoiceActing
         }
 
         void DrawCombo()
-        {            
+        {
+            if (hide)
+                return;
             if (comboCount == 2)
                 lerpCombo.StartLerp(0, 0.4f, (start, t) => { canvasCombo.alpha = Mathf.Lerp(start, 1, t); });
             textComboDigit.text = comboCount.ToString();
@@ -94,6 +98,8 @@ namespace VoiceActing
 
         void HideCombo()
         {
+            if (hide)
+                return;
             lerpCombo.StartLerp(1, 3f, (start, t) => { canvasCombo.alpha = Mathf.Lerp(start, 0, t); });
         }
 
@@ -105,6 +111,7 @@ namespace VoiceActing
             {
                 characterComboed.OnStateChanged -= CharacterChangeState;
                 comboCount = 0;
+                player.CharacterAction.ComboCount = comboCount;
                 characterComboed = null;
                 HideCombo();
             }
