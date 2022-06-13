@@ -32,6 +32,8 @@ namespace VoiceActing
         AudioClip transitionTheme;
         [SerializeField]
         AudioClip p2Theme;
+        [SerializeField]
+        AudioClip creditTheme;
 
         [Title("Intro")]
         [SerializeField]
@@ -268,7 +270,25 @@ namespace VoiceActing
             explorationManager.Player.Inputs.enabled = false;
             explorationManager.Player.CanPlay(false);
             yield return new WaitForSeconds(27f);
+
+
+            explorationManager.Player.CanPlay(true);
+            explorationManager.Player.SetCharacterMotionSpeed(0, 100000);
             explorationManager.Player.Inputs.enabled = true;
+
+            AudioManager.Instance.PlayMusic(creditTheme, 3);
+            float t = 48f;
+            while (t>0)
+            {
+                t -= Time.deltaTime;
+                if(explorationManager.Player.Inputs.InputA.InputValue == 1)
+                {
+                    explorationManager.Player.Inputs.InputA.ResetBuffer();
+                    t = 0f;
+                }
+                yield return null;
+            }
+
             explorationManager.GameOver.InitializeMenu();
         }
 

@@ -30548,6 +30548,7 @@ MonoBehaviour:
   cardTypes: {fileID: 11400000, guid: 29c52ed7a9ac9bf4ea85839e3048d2e9, type: 2}
   sleightActionCooldown: 0.2
   cardBreakComponents: []
+  ComboCount: 0
 --- !u!114 &2767251310475584863
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30763,7 +30764,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &7646621544240889433
 Transform:
   m_ObjectHideFlags: 0

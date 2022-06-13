@@ -26,6 +26,10 @@ MonoBehaviour:
     - {fileID: 11400000, guid: de844336a4a4a0346b16cb181caa0894, type: 2}
     - {fileID: 11400000, guid: 993c07499af59dc4bb90b4c4701fc214, type: 2}
   - PlayerData: {fileID: 11400000, guid: 795ab51d8922db84f97462d2ee8186df, type: 2}
-    DeckDatas: []
+    DeckDatas:
+    - {fileID: 11400000, guid: ffd4c2a44bc9ffe4c848a5d61a37cd75, type: 2}
+    - {fileID: 11400000, guid: d6e328ce6dcdc0048b63a321200ff4fe, type: 2}
   - PlayerData: {fileID: 11400000, guid: 707d8eac61f25fe448018999dc4704cf, type: 2}
-    DeckDatas: []
+    DeckDatas:
+    - {fileID: 11400000, guid: e58d4ec066a2e564293f52ad9b5b9deb, type: 2}
+    - {fileID: 11400000, guid: 31a16bbed3ff5b747ad28431bd419eef, type: 2}

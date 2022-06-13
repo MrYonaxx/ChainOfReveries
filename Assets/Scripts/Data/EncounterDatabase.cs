@@ -85,7 +85,6 @@ namespace VoiceActing
             {
                 checkInitialize = new CheckInitialize();
                 Reset();
-                Debug.Log("I reset");
             }
 
             // Si on fait suffisament de combat, on pioche au level au dessus

@@ -1,0 +1,86 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 178eb1b213c518446b61a1240e1f7051, type: 3}
+  m_Name: DeckYonaxPvP-Grab
+  m_EditorClassIdentifier: 
+  deckName: Sun
+  initialDeck:
+  - cardData: {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}
+    baseCardValue: 8
+  - cardData: {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}
+    baseCardValue: 6
+  - cardData: {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}
+    baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}
+    baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}
+    baseCardValue: 3
+  - cardData: {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}
+    baseCardValue: 3
+  - cardData: {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}
+    baseCardValue: 2
+  - cardData: {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}
+    baseCardValue: 1
+  - cardData: {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}
+    baseCardValue: 1
+  - cardData: {fileID: 11400000, guid: b2fba900e109c1943b1abdc9baf710ff, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: b2fba900e109c1943b1abdc9baf710ff, type: 2}
+    baseCardValue: 6
+  - cardData: {fileID: 11400000, guid: d926d2557e4dce14ab53d8c683fa5cb3, type: 2}
+    baseCardValue: 9
+  - cardData: {fileID: 11400000, guid: d926d2557e4dce14ab53d8c683fa5cb3, type: 2}
+    baseCardValue: 7
+  - cardData: {fileID: 11400000, guid: d926d2557e4dce14ab53d8c683fa5cb3, type: 2}
+    baseCardValue: 6
+  - cardData: {fileID: 11400000, guid: d926d2557e4dce14ab53d8c683fa5cb3, type: 2}
+    baseCardValue: 5
+  - cardData: {fileID: 11400000, guid: d926d2557e4dce14ab53d8c683fa5cb3, type: 2}
+    baseCardValue: 4
+  - cardData: {fileID: 11400000, guid: d926d2557e4dce14ab53d8c683fa5cb3, type: 2}
+    baseCardValue: 2
+  - cardData: {fileID: 11400000, guid: d926d2557e4dce14ab53d8c683fa5cb3, type: 2}
+    baseCardValue: 1
+  - cardData: {fileID: 11400000, guid: 13fde57315dbdf8489e41ada3c106d5f, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 13fde57315dbdf8489e41ada3c106d5f, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 13fde57315dbdf8489e41ada3c106d5f, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}
+    baseCardValue: 0
+  - cardData: {fileID: 11400000, guid: 422f06b70341c2042b6549d72c335956, type: 2}
+    baseCardValue: 0
+  premiumCardID: 
+  initialEquipment:
+  - cardEquipment: {fileID: 11400000, guid: f02b5b7aefcc7134a8e48f6c2b4cceb1, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 9a364f419e43abf4ba509d89d7cb8e74, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: 91b802107b066564bb71103e7221ed53, type: 2}
+    probability: 100
+  - cardEquipment: {fileID: 11400000, guid: b42b08df2eb1bde408a831eca5b2d010, type: 2}
+    probability: 100

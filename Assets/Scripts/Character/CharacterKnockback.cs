@@ -308,6 +308,16 @@ namespace VoiceActing
             OnHit?.Invoke(damageMessage);
         }
 
+        public void Death()
+        {
+            Knockback(1, true);
+            if (isDead == false)
+            {
+                isDead = true;
+                ResetRevengeValue();
+                OnDeath?.Invoke(character, new DamageMessage());
+            }
+        }
 
 
         public void Knockback(float multiplier = 1, bool setState = false)

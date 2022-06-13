@@ -18,7 +18,7 @@ MonoBehaviour:
   cardType: 0
   nbCardReward: 2
   reverieColor: 3
-  explorationEvent: {fileID: 8236675884287493958, guid: 7af8913c4d5614c4a8a6cda89a05c0ad,
+  explorationEvent: {fileID: 8464889400256999512, guid: 9a1c853b9b9a12e45885945d16ff48be,
     type: 3}
   battleModifiers:
   - label: Countdown
