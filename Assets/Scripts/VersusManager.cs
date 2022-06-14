@@ -121,7 +121,7 @@ namespace VoiceActing
             SetupCharacter(dataP2.PlayerCharacterData, animatorPlayer2, ref character2, posPlayer2.position);
 
             yield return new WaitForSeconds(1f);
-            AudioManager.Instance.PlayMusic(versusMusic);
+            //AudioManager.Instance.PlayMusic(versusMusic);
             yield return new WaitForSeconds(0.5f);
 
             BattleFeedbackManager.Instance.CardBreakParticle(Vector3.zero);

@@ -8,6 +8,8 @@ using Sirenix.OdinInspector;
 
 namespace Menu
 {
+
+
     public class MenuPlayerReady : MenuList, IControllable
     {
         [Space]
@@ -15,6 +17,10 @@ namespace Menu
         MenuPlayerReady[] menuOtherPlayers;
         [SerializeField]
         InputController inputControllerPause = null;
+
+        [Title("Stage Selection")]
+        [SerializeField]
+        MenuStageSelect menuStageSelect = null;
 
         [Title("Feedbacks")]
         [SerializeField]
@@ -28,7 +34,9 @@ namespace Menu
 
         int count = 0;
         int waitCount = 0;
-        bool active = true; 
+        bool active = true;
+
+        public bool SetArena = false;
 
         void Awake()
         {
@@ -72,6 +80,16 @@ namespace Menu
                     active = false;
                     StartCoroutine(StartGameCoroutine());
                 }
+
+                // Set settings battle
+                if (SetArena) 
+                {
+                    menuStageSelect.UpdateStageSelection(input.InputLeftStickX.InputValue);
+                }
+                else
+                {
+                    menuStageSelect.UpdateThemeSelection(input.InputLeftStickX.InputValue);
+                }
             }
 
             if(input.InputB.Registered)
@@ -92,6 +110,18 @@ namespace Menu
             }
             else
                 animatorReady.SetBool("Appear", false);
+
+            VersusSettings.Stage = 1;
+            menuStageSelect.DrawStageName();
+            Random.Range(0, 1);
+            if(Random.Range(0, 1) == 0)
+            {
+                SetArena = true;
+                foreach (var item in menuOtherPlayers)
+                {
+                    item.SetArena = false;
+                }
+            }
         }
 
         private IEnumerator StartGameCoroutine()

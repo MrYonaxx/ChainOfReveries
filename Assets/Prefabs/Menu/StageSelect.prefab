@@ -1,0 +1,221 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &8222572701263877955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8222572701263877953}
+  - component: {fileID: 8222572701263877952}
+  m_Layer: 5
+  m_Name: ListOstSelect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8222572701263877953
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8222572701263877955}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8222572702952403966}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8222572701263877952
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8222572701263877955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd7057e1d9d9d841902e936896a2e6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDataList: 1
+  listTransform: {fileID: 0}
+  prefabItem: {fileID: 0}
+  listItem: []
+  listLoop: 1
+  stickThreshold: 0.8
+  timeBeforeRepeat: 20
+  repeatInterval: 6
+  scrollSize: 3
+  scrollSpeed: 1
+--- !u!1 &8222572701425787659
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8222572701425787657}
+  - component: {fileID: 8222572701425787656}
+  m_Layer: 5
+  m_Name: ListStageSelect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8222572701425787657
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8222572701425787659}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 8222572702952403966}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8222572701425787656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8222572701425787659}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd7057e1d9d9d841902e936896a2e6e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isDataList: 1
+  listTransform: {fileID: 0}
+  prefabItem: {fileID: 0}
+  listItem: []
+  listLoop: 1
+  stickThreshold: 0.8
+  timeBeforeRepeat: 20
+  repeatInterval: 6
+  scrollSize: 3
+  scrollSpeed: 1
+--- !u!1 &8222572702952403952
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8222572702952403966}
+  - component: {fileID: 8222572702952403953}
+  m_Layer: 0
+  m_Name: StageSelect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8222572702952403966
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8222572702952403952}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8222572701425787657}
+  - {fileID: 8222572701263877953}
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &8222572702952403953
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8222572702952403952}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0b8284d9d4c6e7e409417094601e9503, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  drawOnstart: 0
+  stages:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  stagesNames:
+  - Corridor of the Reverie
+  - Phantasm of the Reverie
+  - Horizon of the Reverie
+  - Last Reverie
+  - Alaya
+  - Desert of Denil
+  - Menel's Manor
+  - Ship
+  - Altya
+  - Altya Castle
+  - Altya Ruins
+  - Illned Marsh
+  - Alaya
+  - Vurlannis
+  - Vurlannis Depth
+  - Golned
+  - Ether well
+  - Meyuu
+  - Plain of Mynsa
+  - Anastelonyx
+  - Previous Fantasy
+  - Previous Reverie
+  textStageName: {fileID: 0}
+  listStage: {fileID: 8222572701425787656}
+  playOnStart: 0
+  themes:
+  - {fileID: 8300000, guid: fecac612c04c6484e95dab52793652ba, type: 3}
+  - {fileID: 8300000, guid: f403cc8c4fff3d9439f95de70cf287d8, type: 3}
+  - {fileID: 8300000, guid: dfaae2c3d25964c469fe3e3254d3704f, type: 3}
+  - {fileID: 8300000, guid: 3c73790d871cbac4fab09aae7c110646, type: 3}
+  - {fileID: 8300000, guid: 47436b12e5f93b3438bb32f57bb85da4, type: 3}
+  - {fileID: 8300000, guid: 8a5b16cde02e5224db7f87f08027ee2d, type: 3}
+  - {fileID: 8300000, guid: 642b951d2a2f6254e89449029164ff2c, type: 3}
+  themesNames:
+  - Celluloid (by Rengoku Teien)
+  - Dark a Liar (by Rengoku Teien)
+  - Now in My Sepia (by Rengoku Teien)
+  - dark Engel (by ISAo.)
+  - fadescape (by ISAo.)
+  - Vampire Being (by ISAo.)
+  - Rainy Overdoes (by ISAo.)
+  textThemeName: {fileID: 0}
+  listTheme: {fileID: 8222572701263877952}
