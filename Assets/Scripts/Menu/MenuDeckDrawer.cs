@@ -37,11 +37,21 @@ namespace Menu
 		List<CardController> cardsList = new List<CardController>();
 
 
-
 		public void DrawDeck(List<Card> deck)
 		{
-			cardsListSize = deck.Count;
-			for (int i = 0; i < deck.Count; i++)
+			DrawDeck(deck, deck.Count);
+		}
+
+		// Utilisé pour les deck custom pour "optimiser" mais je sais plus en fait
+		public void DrawDeck(int size)
+		{
+			DrawDeck(null, size);
+		}
+
+		public void DrawDeck(List<Card> deck, int size)
+		{
+			cardsListSize = size;
+			for (int i = 0; i < size; i++)
 			{
 				// On créer les cartes classiques
 				if (cardsList.Count > i)
@@ -52,7 +62,9 @@ namespace Menu
 				{
 					cardsList.Add(Instantiate(cardPrefab, deckTransform));
 				}
-				cardsList[i].DrawCard(deck[i], cardTypeData);
+
+				if(deck != null)
+					cardsList[i].DrawCard(deck[i], cardTypeData);
 
 				// ça se gâte, on calcule le nombre de ligne du deck et on set une liste de ce nombre de ligne
 				if (i % columnMax == 0)
@@ -66,7 +78,7 @@ namespace Menu
 						listEntry.ListItem[i / columnMax].gameObject.SetActive(false);
 				}
 			}
-			listEntry.SetItemCount(Mathf.CeilToInt(deck.Count / (float)columnMax));
+			listEntry.SetItemCount(Mathf.CeilToInt(size / (float)columnMax));
 
 			for (int i = 0; i <= columnMax; i++)
 			{
@@ -80,7 +92,7 @@ namespace Menu
 			}
 
 			// On désaffiche certaines cartes
-			for (int i = deck.Count; i < cardsList.Count; i++)
+			for (int i = size; i < cardsList.Count; i++)
 			{
 				cardsList[i].gameObject.SetActive(false);
 			}
@@ -93,6 +105,11 @@ namespace Menu
 				if (isActiveAndEnabled)
 					StartCoroutine(OneFrameStart());
             }
+		}
+
+		public void DrawCard(int id, CardData card, int value)
+		{
+			cardsList[id].DrawCard(card.CardSprite, cardTypeData.CardTypeColor[card.CardType], value);
 		}
 
 		void Start()
@@ -149,6 +166,7 @@ namespace Menu
 
 		public void Select(int id)
 		{
+			StopAllCoroutines();
 			listEntryHorizontal.SelectIndex(id % columnMax);
 			listEntry.SelectIndex(id / columnMax);
 			SelectEntry(id);

@@ -190,6 +190,7 @@ namespace Menu
                 {
                     input.ResetAllBuffer(); 
                     activeMenu = deckSort;
+                    deckSort.SetDeck(runData.PlayerDeck);
                     deckSort.InitializeMenu();
                     deckDrawer.menuCursor.gameObject.SetActive(false);
                     sleightDrawer.menuCursor.gameObject.SetActive(false);
@@ -271,6 +272,7 @@ namespace Menu
             active = true;
             activeMenu = deckDrawer;
             deckDrawer.menuCursor.gameObject.SetActive(true);
+            runData.PlayerDeck = deckSort.GetSortedDeck();
         }
 
 

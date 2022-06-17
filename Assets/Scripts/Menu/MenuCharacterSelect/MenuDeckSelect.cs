@@ -23,6 +23,14 @@ namespace Menu
         DeckDatabase deckDatabase = null;
 
 
+        [Title("Custom Decks")]
+        [SerializeField]
+        bool showCustomDeck = false;
+        [SerializeField]
+        MenuDeckCreator menuDeckCreator = null;
+        [SerializeField]
+        DeckData customProfile = null;
+
         [Title("UI")]
         [SerializeField]
         MenuCursor cursor = null;
@@ -46,10 +54,14 @@ namespace Menu
 
         void Awake()
         {
+            if(showCustomDeck)
+                menuDeckCreator.OnEnd += InitializeMenu;
             nextMenu.OnEnd += InitializeMenu;
         }
         void OnDestroy()
         {
+            if (showCustomDeck)
+                menuDeckCreator.OnEnd -= InitializeMenu;
             nextMenu.OnEnd -= InitializeMenu;
         }
 
@@ -84,6 +96,16 @@ namespace Menu
             }
             listEntry.SetItemCount(decks.Count);
 
+            if(showCustomDeck) // On rajoute les deck customs
+            {
+                int offset = decks.Count;
+                for (int i = 0; i < gameData.CustomDecks[gameRunData.CharacterID].Decks.Count; i++)
+                {
+                    listEntry.DrawItemList(offset + i, "- " + "Custom Deck " + i);
+                }
+                listEntry.SetItemCount(offset + gameData.CustomDecks[gameRunData.CharacterID].Decks.Count);
+            }
+
             textDeckName.text = "";
         }
 
@@ -99,6 +121,12 @@ namespace Menu
             {
                 input.InputA.ResetBuffer();
                 ValidateEntry(listEntry.IndexSelection);
+            }
+            else if (input.InputX.Registered && showCustomDeck && listEntry.IndexSelection >= decks.Count)
+            {
+                input.InputX.ResetBuffer();
+                menuDeckCreator.SetupDeck(gameRunData.PlayerCharacterData, gameData.CustomDecks[gameRunData.CharacterID].Decks[listEntry.IndexSelection - decks.Count]);
+                menuDeckCreator.InitializeMenu();
             }
             else if (input.InputB.Registered || (GameSettings.Keyboard && input.InputY.Registered))
             {
@@ -122,9 +150,19 @@ namespace Menu
 
         protected override void ValidateEntry(int id)
         {
-            // On set le deck
-            gameRunData.PlayerDeckData = decks[id];
-            textDeckName.text = "DECK : " + decks[id].DeckName;
+            if (showCustomDeck && id >= decks.Count)
+            {
+                id -= decks.Count;
+                customProfile.SetDeck(gameData.CustomDecks[gameRunData.CharacterID].Decks[id].LoadDeck(gameRunData.PlayerCharacterData));
+                gameRunData.PlayerDeckData = customProfile;
+                textDeckName.text = "DECK : " + "CUSTOM " + id;
+            }
+            else
+            {
+                // On set le deck
+                gameRunData.PlayerDeckData = decks[id];
+                textDeckName.text = "DECK : " + decks[id].DeckName;
+            }
             ShowMenu(false);
 
             cursor.GetComponent<Animator>().SetTrigger("Validate");
@@ -139,9 +177,29 @@ namespace Menu
         protected override void SelectEntry(int id)
         {
             base.SelectEntry(id);
-            decks[id].SetValue();
-            deckDrawer.DrawDeck(decks[id].InitialDeck);
-            cursor.MoveCursor(listEntry.ListItem[id].RectTransform.anchoredPosition);
+
+            if(showCustomDeck && id >= decks.Count) // On draw un custom deck
+            {
+                cursor.MoveCursor(listEntry.ListItem[id].RectTransform.anchoredPosition);
+
+                id -= decks.Count;
+                int size = gameData.CustomDecks[gameRunData.CharacterID].Decks[id].cardID.Count;
+                int cardID = 0;
+                int cardValue = 0;
+                deckDrawer.DrawDeck(size);
+                for (int i = 0; i < size; i++)
+                {
+                    cardID = gameData.CustomDecks[gameRunData.CharacterID].Decks[id].cardID[i];
+                    cardValue = gameData.CustomDecks[gameRunData.CharacterID].Decks[id].cardValue[i];
+                    deckDrawer.DrawCard(i, gameRunData.PlayerCharacterData.CardProbability[cardID].CardData, cardValue);
+                }
+            }
+            else                                    // On draw un deck normal
+            { 
+                decks[id].SetValue();
+                deckDrawer.DrawDeck(decks[id].InitialDeck);
+                cursor.MoveCursor(listEntry.ListItem[id].RectTransform.anchoredPosition);
+            }
         }
 
         private void ShowMenu(bool b)

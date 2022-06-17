@@ -24,12 +24,12 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 0e9fa40c3465393478ff340f2fa9b71d, type: 3}
   cardName: Shadow Blade
   cardType: 0
-  cardDescription: 'Increase damage by 60%.
+  cardDescription: 'Increase damage by 50%.
 
     Lose HP as long as its active.
 
-    (1
-    Hit)'
+    (15
+    Cards)'
   statsModifier: []
   statusEffectPassive: {fileID: 0}
   equipmentAction: {fileID: 818057835518184039, guid: 971d891aa08a3d74baf5f67b6da459b8,

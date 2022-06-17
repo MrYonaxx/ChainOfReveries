@@ -76,6 +76,11 @@ namespace VoiceActing
             }
         }
 
+        public void SetDeck(List<Card> deck)
+        {
+            initialDeck = deck;
+        }
+
     } 
 
 } // #PROJECTNAME# namespace

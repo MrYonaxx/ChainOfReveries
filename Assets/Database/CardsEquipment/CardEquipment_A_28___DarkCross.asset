@@ -24,7 +24,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 0baa721c74388b34bbc60b2044a2fa40, type: 3}
   cardName: Dark Cross
   cardType: 1
-  cardDescription: 'Increase damage dealt by 100%
+  cardDescription: 'Increase damage dealt by 60%
 
     Cannot use Sleights.'
   statsModifier: []

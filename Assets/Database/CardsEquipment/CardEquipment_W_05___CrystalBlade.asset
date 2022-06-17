@@ -24,12 +24,12 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: a8fb29238d1f99343b5d3fd35236e91c, type: 3}
   cardName: Crystal Blade
   cardType: 0
-  cardDescription: 'Increase damage dealt by 80%
+  cardDescription: 'Increase damage dealt by 50%
 
     Next blow received is fatal.
 
-    (1
-    Hit)'
+    (15
+    Cards)'
   statsModifier: []
   statusEffectPassive: {fileID: 0}
   equipmentAction: {fileID: 818057835518184039, guid: 971d891aa08a3d74baf5f67b6da459b8,

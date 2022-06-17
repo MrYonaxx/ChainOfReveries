@@ -110,6 +110,15 @@ namespace VoiceActing
             return res;
         }
 
+        public int GetCardID(CardData data)
+        {
+            for (int i = 0; i < cardProbability.Count; i++)
+            {
+                if (data == cardProbability[i].CardData)
+                    return i;
+            }
+            return -1;
+        }
 
         #endregion
 

@@ -709,6 +709,7 @@ GameObject:
   - component: {fileID: 6024610480447657897}
   - component: {fileID: 5485531285977804821}
   - component: {fileID: 1173345888088810345}
+  - component: {fileID: 1140257225005430780}
   m_Layer: 0
   m_Name: KnockbackComponents
   m_TagString: Untagged
@@ -778,6 +779,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   knockdown: 0
+--- !u!114 &1140257225005430780
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4114098666737907609}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89d5558c9213e0f4d8651f676c8ed858, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4388082830208477171
 GameObject:
   m_ObjectHideFlags: 0
@@ -1259,6 +1272,7 @@ MonoBehaviour:
   - {fileID: 6024610480447657897}
   - {fileID: 5485531285977804821}
   - {fileID: 1173345888088810345}
+  - {fileID: 1140257225005430780}
 --- !u!1 &6741843572999873287
 GameObject:
   m_ObjectHideFlags: 0

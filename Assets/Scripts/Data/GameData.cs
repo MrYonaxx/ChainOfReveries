@@ -13,6 +13,12 @@ public static class GameSettings
     public static Color BackgroundMagicCard = Color.white;
 }
 
+[System.Serializable]
+public class CustomDeckList
+{
+    [SerializeField]
+    public List<Menu.CustomDeck> Decks;
+}
 // Tout ce qu'on doit sauvegarder est là dedans
 [CreateAssetMenu(fileName = "GameData", menuName = "GameSystem/GameData", order = 1)]
 public class GameData : ScriptableObject
@@ -37,11 +43,7 @@ public class GameData : ScriptableObject
 
 
     [SerializeField]
-    List<int> customDecks;
-    // int characterID
-    // List string cardID
-    // List int cardValue
-    // List string cardEquipmentID
+    public List<CustomDeckList> CustomDecks;
 
 
     [Header("Player Config")]
@@ -98,6 +100,18 @@ public class GameData : ScriptableObject
         NbRunCompleted = 0;
         MaxReverieLevel = 0;
         NbRunCharacters = new int[]{ 0, 0, 0, 0, 0 };
+
+        CustomDecks = new List<CustomDeckList>(NbRunCharacters.Length);
+        for (int i = 0; i < NbRunCharacters.Length; i++)
+        {
+            CustomDecks.Add(new CustomDeckList());
+            CustomDecks[i].Decks = new List<Menu.CustomDeck>(8);
+            for (int j = 0; j < 8; j++)
+            {
+                CustomDecks[i].Decks[j].cardID.Add(0);
+                CustomDecks[i].Decks[j].cardValue.Add(9);
+            }
+        }
     }
 
     public void Save()

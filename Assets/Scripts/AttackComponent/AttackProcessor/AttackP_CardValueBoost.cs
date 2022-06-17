@@ -22,6 +22,9 @@ namespace VoiceActing
 
         public override void ProcessAttack(CharacterBase user, CharacterBase target, AttackController attack, ref DamageMessage damageMessage)
         {
+            if (attack.Card == null)
+                return;
+
             if(cardValue == attack.Card.GetCardValue())
             {
                 damageMessage.damage = damageMessage.baseDamage * damageMultiplier;

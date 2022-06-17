@@ -23648,6 +23648,9 @@ MonoBehaviour:
   gameData: {fileID: 11400000, guid: b00da105333eaa242b9869e96369fdc9, type: 2}
   gameRunData: {fileID: 11400000, guid: 1aae71d6d0b174646afb7b05a8a06b1f, type: 2}
   deckDatabase: {fileID: 11400000, guid: 5f084c472d217cb4e96eef08167f4d7f, type: 2}
+  showCustomDeck: 0
+  menuDeckCreator: {fileID: 0}
+  customProfile: {fileID: 0}
   cursor: {fileID: 24369051}
   deckDrawer: {fileID: 81557416}
   textDeckName: {fileID: 326772518}
@@ -33629,9 +33632,11 @@ MonoBehaviour:
   menuOtherPlayers:
   - {fileID: 0}
   inputControllerPause: {fileID: 1198843443}
+  menuStageSelect: {fileID: 0}
   animatorReady: {fileID: 97695119}
   fade: {fileID: 0}
   scene: 
+  SetArena: 0
 --- !u!4 &1896191881
 Transform:
   m_ObjectHideFlags: 0

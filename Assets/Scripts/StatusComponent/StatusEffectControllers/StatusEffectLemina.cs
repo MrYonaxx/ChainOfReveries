@@ -173,6 +173,7 @@ namespace VoiceActing
                     {
                         cardBreaker.Clear();
                         cardBreaker.Add(new Card(CardInstall, 0));
+                        owner.CharacterAction.CancelSleight();
                         inInstall = true;
                         inInstallReady = false;
                     }
@@ -211,6 +212,7 @@ namespace VoiceActing
                 if (inInstallReady)  // On entre en install
                 {
                     owner.CharacterAction.Action(new Card(CardInstall, 0));
+                    owner.CharacterAction.CancelSleight();
                     inInstall = true;
                     inInstallReady = false;
                     inUninstallReady = false;
@@ -219,6 +221,7 @@ namespace VoiceActing
                 else if (inUninstallReady)  // On sort de l' install
                 {
                     owner.CharacterAction.Action(AttackUninstall);
+                    owner.CharacterAction.CancelSleight();
                     inInstall = false;
                     inInstallReady = false;
                     inUninstallReady = false; 

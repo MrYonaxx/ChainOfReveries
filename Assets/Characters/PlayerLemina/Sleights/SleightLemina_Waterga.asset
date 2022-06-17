@@ -17,7 +17,7 @@ MonoBehaviour:
     is active, add the Phantom property to attacks.
   sleightValue: {x: 0, y: 27}
   sleightRecipe:
-  - {fileID: 11400000, guid: 7236a60a2587a1c47813d69bfd98c95e, type: 2}
-  - {fileID: 11400000, guid: 7236a60a2587a1c47813d69bfd98c95e, type: 2}
-  - {fileID: 11400000, guid: 7236a60a2587a1c47813d69bfd98c95e, type: 2}
+  - {fileID: 11400000, guid: ac8d44c04713cab4cae1ac3b65953bb3, type: 2}
+  - {fileID: 11400000, guid: ac8d44c04713cab4cae1ac3b65953bb3, type: 2}
+  - {fileID: 11400000, guid: ac8d44c04713cab4cae1ac3b65953bb3, type: 2}
   sleightAttackData: {fileID: 11400000, guid: c418abfd8a5707e429a6db7346e76a98, type: 2}

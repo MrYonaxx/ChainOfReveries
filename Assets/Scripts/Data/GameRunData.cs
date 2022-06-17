@@ -101,6 +101,7 @@ namespace VoiceActing
         public List<Card> PlayerDeck
         {
             get { return playerDeck; }
+            set { playerDeck = value; }
         }
 
         [SerializeField]
@@ -253,7 +254,8 @@ namespace VoiceActing
 
         public void AddCard(Card c)
         {
-            bool addCard = false;
+            AddCard(playerDeck, c);
+           /* bool addCard = false;
             bool addCategory = false;
 
             // On ajoute les cartes 0 tout à la fin
@@ -272,44 +274,6 @@ namespace VoiceActing
                 playerDeck.Add(c);
                 return;
             }
-
-            // OLD VERSION
-            // On ajoute la carte 
-            /* for (int i = 0; i < playerDeck.Count; i++)
-             {
-                 // On a détecté qu'on possédé déjà cette carte dans le deck
-                 if (addCard == false && c.CardData == playerDeck[i].CardData && playerDeck[i].baseCardValue != 0)
-                 {
-                     addCard = true;
-                 }
-                 // On a détecté qu'on possède déjà cette catégorie de carte (attack / magie) dans le deck
-                 else if (addCategory == false && c.CardData.CardType == playerDeck[i].CardData.CardType)
-                 {
-                     addCategory = true;
-                 }
-
-                 // On ajoute à la suite des cartes et avec une valeur décroissante
-                 if (addCard && playerDeck[i].CardData != c.CardData)
-                 {
-                     playerDeck.Insert(i, c);
-                     return;
-                 }
-                 else if (addCard && playerDeck[i].baseCardValue < c.baseCardValue) 
-                 {
-                     playerDeck.Insert(i, c);
-                     return;
-                 }
-
-
-                 if (addCategory && playerDeck[i].CardData.CardType != c.CardData.CardType)
-                 {
-                     playerDeck.Insert(i, c);
-                     return;
-                 }
-             }
-
-             playerDeck.Add(c);*/
-
 
             // On parcoure le deck à la recherche d'une carte similaire
             for (int i = 0; i < playerDeck.Count; i++)
@@ -348,47 +312,81 @@ namespace VoiceActing
             }
 
             // Et si vraiment on arrive là on ajoute simplement la carte
-            playerDeck.Add(c);
+            playerDeck.Add(c);*/
         }
+
+        public void AddCard(List<Card> deck, Card c)
+        {
+            bool addCard = false;
+            bool addCategory = false;
+
+            // On ajoute les cartes 0 tout à la fin
+            if (c.baseCardValue == 0)
+            {
+                // on cherche les cartes zero, opti en parcourant à l'envers puisque généralement on ajoute en fin de deck les zéro
+                for (int i = deck.Count - 1; i >= 0; i--)
+                {
+                    if (c.CardData == deck[i].CardData && deck[i].baseCardValue == 0)
+                    {
+                        deck.Insert(i, c);
+                        return;
+                    }
+                }
+                // Si on arrive là on a rien trouvé donc on ajoute le zero à la fin
+                deck.Add(c);
+                return;
+            }
+
+            // On parcoure le deck à la recherche d'une carte similaire
+            for (int i = 0; i < deck.Count; i++)
+            {
+                // On a détecté qu'on possédé déjà cette carte dans le deck
+                if (c.CardData == deck[i].CardData && deck[i].baseCardValue != 0)
+                {
+                    addCard = true;
+                    if (deck[i].baseCardValue < c.baseCardValue)
+                    {
+                        deck.Insert(i, c);
+                        return;
+                    }
+                }
+                else if (addCard)
+                {
+                    deck.Insert(i, c);
+                    return;
+                }
+            }
+
+            // Si on a pas trouvé la carte dans le deck, on cherche cette fois la categorie à laquelle la carte appartient
+            // et on ajoute la carte à la suite de cette catégorie
+            for (int i = 0; i < deck.Count; i++)
+            {
+                // On a détecté qu'on possède déjà cette catégorie de carte (attack / magie) dans le deck
+                if (c.CardData.CardType == deck[i].CardData.CardType)
+                {
+                    addCategory = true;
+                }
+                else if (addCategory)
+                {
+                    deck.Insert(i, c);
+                    return;
+                }
+            }
+
+            // Et si vraiment on arrive là on ajoute simplement la carte
+            deck.Add(c);
+        }
+
 
         // Sort du sheitan, pardon les cours d'algo
         public void SortDeck(List<Card> category)
         {
-            int index = 0;
+            SortDeck(ref playerDeck, category);
+            /*int index = 0;
             bool categoryFound = false; // petite opti pour tenter de parcourir le deck le moins de fois possible
             List<Card> sortedList = new List<Card>(playerDeck.Count);
 
-             /* 
-             while(index < category.Count)
-             {
-                 categoryFound = false;
-                 for (int i = 0; i < playerDeck.Count; i++)
-                 {
-                     if (categoryFound && (playerDeck[i].CardData != category[index].CardData || playerDeck[i].baseCardValue == 0))
-                     {
-                         categoryFound = false;
-                         index += 1;
-                     }
-                     if (playerDeck[i].CardData == category[index].CardData && playerDeck[i].baseCardValue != 0) 
-                     {
-                         categoryFound = true;
-                         sortedList.Add(playerDeck[i]);
-                     }
-                 }
-                 if(categoryFound)
-                     index += 1;
-             }
 
-             // On fait un dernier tour pour ajouter ce qu'il reste (normalement c'est les cartes 0)
-             for (int i = 0; i < playerDeck.Count; i++)
-             {
-                 sortedList.Add(playerDeck[i]);
-             }
-             
-            // On réassigne le deck trié
-            playerDeck = sortedList;*/
-
-            // Pour samedi gérer le tri avec les zéros
             for (int j = 0; j < category.Count; j++)
             {
                 categoryFound = false;
@@ -421,18 +419,50 @@ namespace VoiceActing
                 }
             }
 
-            // on rajoute les zéro
-            /*for (int i = 0; i < playerDeck.Count; i++)
-            {
-                if (playerDeck[i].baseCardValue == 0)
-                {
-                    sortedList.Add(playerDeck[i]);
-                }
-            }*/
-
-            playerDeck = sortedList;
+            playerDeck = sortedList;*/
 
         }
+
+        public void SortDeck(ref List<Card> deck, List<Card> category)
+        {
+            bool categoryFound = false; // petite opti pour tenter de parcourir le deck le moins de fois possible
+            List<Card> sortedList = new List<Card>(deck.Count);
+
+
+            for (int j = 0; j < category.Count; j++)
+            {
+                categoryFound = false;
+                for (int i = 0; i < deck.Count; i++)
+                {
+                    if (category[j].baseCardValue == 0)
+                    {
+                        if (categoryFound && (deck[i].CardData != category[j].CardData || deck[i].baseCardValue != 0))
+                        {
+                            break;
+                        }
+                        if (deck[i].CardData == category[j].CardData && deck[i].baseCardValue == 0)
+                        {
+                            categoryFound = true;
+                            sortedList.Add(deck[i]);
+                        }
+                    }
+                    else
+                    {
+                        if (categoryFound && (deck[i].CardData != category[j].CardData || deck[i].baseCardValue == 0))
+                        {
+                            break;
+                        }
+                        if (deck[i].CardData == category[j].CardData && deck[i].baseCardValue != 0)
+                        {
+                            categoryFound = true;
+                            sortedList.Add(deck[i]);
+                        }
+                    }
+                }
+            }
+            deck = sortedList;
+        }
+
 
         public void AddExplorationCard(CardExplorationData c)
         {

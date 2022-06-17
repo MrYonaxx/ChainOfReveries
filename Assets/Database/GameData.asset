@@ -13,13 +13,41 @@ MonoBehaviour:
   m_Name: GameData
   m_EditorClassIdentifier: 
   FirstTime: 1
-  Timer: 10639.415
+  Timer: 10704.058
   NbRun: 11
   NbRunCompleted: 11
   MaxReverieLevel: 9
   NbRunCharacters: 0600000001000000040000000100000000000000
   charactersUnlocked: 
-  customDecks: 
+  CustomDecks:
+  - Decks:
+    - cardID: 00000000
+      cardValue: 01000000
+      cardEquipment: []
+    - cardID: 
+      cardValue: 
+      cardEquipment: []
+    - cardID: 
+      cardValue: 
+      cardEquipment: []
+    - cardID: 
+      cardValue: 
+      cardEquipment: []
+    - cardID: 
+      cardValue: 
+      cardEquipment: []
+    - cardID: 
+      cardValue: 
+      cardEquipment: []
+    - cardID: 
+      cardValue: 
+      cardEquipment: []
+    - cardID: 
+      cardValue: 
+      cardEquipment: []
+    - cardID: 
+      cardValue: 
+      cardEquipment: []
   P1ControllerID: 1
   P1InputConfig:
     Config: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f00000010000000

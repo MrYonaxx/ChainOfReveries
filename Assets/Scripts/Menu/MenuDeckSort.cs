@@ -33,11 +33,24 @@ namespace Menu
         bool movingOrder = false;
         List<Card> cardCategory = new List<Card>();
         List<Image> cardImages = new List<Image>();
+        List<Card> deck = new List<Card>();
 
+        // Comment le système il pue à cause du deck creator, trop de démarche pour trier un deck
+        public void SetDeck(List<Card> deckToSort)
+        {
+            deck = deckToSort;
+        }
+
+        public List<Card> GetSortedDeck()
+        {
+            return deck;
+        }
 
         public override void InitializeMenu()
         {
             base.InitializeMenu();
+            if (deck.Count == 0) 
+                deck = runData.PlayerDeck;
             DrawList();
             ShowMenu(true);
         }
@@ -49,9 +62,9 @@ namespace Menu
             Card currentCard = AddCategory(0); // on ajoute la catégorie de la première carte
 
             int value = 0;
-            for (int i = 1; i < runData.PlayerDeck.Count; i++)
+            for (int i = 1; i < deck.Count; i++)
             {
-                if (currentCard.CardData != runData.PlayerDeck[i].CardData)
+                if (currentCard.CardData != deck[i].CardData)
                 {
                     // Nouvelle category
                     currentCard = AddCategory(i);
@@ -59,7 +72,7 @@ namespace Menu
                 else
                 {
                     // Ici on prend en charge le cas ou on a une category normal, suivi d'une category zero, alors :
-                    if (runData.PlayerDeck[i].baseCardValue == 0)
+                    if (deck[i].baseCardValue == 0)
                         value = 0;
                     else
                         value = 1;
@@ -92,14 +105,14 @@ namespace Menu
         private Card AddCategory(int i)
         {
             Card c;
-            if (runData.PlayerDeck[i].baseCardValue == 0) // On ajoute une category zero
+            if (deck[i].baseCardValue == 0) // On ajoute une category zero
             {
-                c = new Card(runData.PlayerDeck[i].CardData, 0);
+                c = new Card(deck[i].CardData, 0);
                 cardCategory.Add(c);
             }
             else // On ajoute une category normal
             {
-                c = new Card(runData.PlayerDeck[i].CardData, 1);
+                c = new Card(deck[i].CardData, 1);
                 cardCategory.Add(c);
             }
             return c;
@@ -152,8 +165,8 @@ namespace Menu
 
                 previousIndex = id;
 
-                runData.SortDeck(cardCategory);
-                deckDrawer.DrawDeck(runData.PlayerDeck);
+                runData.SortDeck(ref deck, cardCategory);
+                deckDrawer.DrawDeck(deck);
             }
             else // on se déplace dans la liste
             {
