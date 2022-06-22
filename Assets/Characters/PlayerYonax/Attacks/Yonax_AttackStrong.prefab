@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 16
+  frame: 45
   frameEnd: 0
   sound:
     sound: {fileID: 8300000, guid: 113e5eb13afc6ac4dbbe4b668edec963, type: 3}
@@ -62,11 +62,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 19
+  frame: 48
   frameEnd: 0
   sound:
-    sound: {fileID: 8300000, guid: 2accb501d7f2e524994d32a4ce9d3ec5, type: 3}
-    volume: 0.6
+    sound: {fileID: 8300000, guid: 3e38345d43720d446a7491d3d2b967e6, type: 3}
+    volume: 0.8
     pitch: {x: 1, y: 1}
 --- !u!1 &2469241746260582066
 GameObject:
@@ -299,14 +299,14 @@ MonoBehaviour:
   AnimatorDebug: {fileID: 677981557941761528}
   AnimationClipDebug: {fileID: 7400000, guid: b05330cc651e8ca45ad1a47bd272e602, type: 2}
   frameData:
-  - Frame: 16
-    AnimationEvent: {fileID: 6548060126528745650}
-  - Frame: 19
-    AnimationEvent: {fileID: 4200970828337729809}
   - Frame: 25
     AnimationEvent: {fileID: 9038350318972364907}
+  - Frame: 45
+    AnimationEvent: {fileID: 6548060126528745650}
   - Frame: 46
     AnimationEvent: {fileID: 3452605927747644591}
+  - Frame: 48
+    AnimationEvent: {fileID: 4200970828337729809}
   - Frame: 50
     AnimationEvent: {fileID: 4461643240352555985}
   - Frame: 50

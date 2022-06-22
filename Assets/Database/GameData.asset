@@ -13,45 +13,157 @@ MonoBehaviour:
   m_Name: GameData
   m_EditorClassIdentifier: 
   FirstTime: 1
-  Timer: 10704.058
-  NbRun: 11
-  NbRunCompleted: 11
+  Timer: 18209.543
+  NbRun: 14
+  NbRunCompleted: 13
   MaxReverieLevel: 9
-  NbRunCharacters: 0600000001000000040000000100000000000000
+  NbRunCharacters: 0600000002000000040000000200000001000000
   charactersUnlocked: 
   CustomDecks:
   - Decks:
     - cardID: 00000000
-      cardValue: 01000000
+      cardValue: 09000000
       cardEquipment: []
-    - cardID: 
-      cardValue: 
+    - cardID: 00000000
+      cardValue: 09000000
       cardEquipment: []
-    - cardID: 
-      cardValue: 
+    - cardID: 00000000
+      cardValue: 09000000
       cardEquipment: []
-    - cardID: 
-      cardValue: 
+    - cardID: 00000000
+      cardValue: 09000000
       cardEquipment: []
-    - cardID: 
-      cardValue: 
+    - cardID: 00000000
+      cardValue: 09000000
       cardEquipment: []
-    - cardID: 
-      cardValue: 
+    - cardID: 00000000
+      cardValue: 09000000
       cardEquipment: []
-    - cardID: 
-      cardValue: 
+    - cardID: 00000000
+      cardValue: 09000000
       cardEquipment: []
-    - cardID: 
-      cardValue: 
+    - cardID: 00000000
+      cardValue: 09000000
       cardEquipment: []
-    - cardID: 
-      cardValue: 
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+  - Decks:
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+  - Decks:
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+  - Decks:
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+  - Decks:
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
+      cardEquipment: []
+    - cardID: 00000000
+      cardValue: 09000000
       cardEquipment: []
   P1ControllerID: 1
   P1InputConfig:
     Config: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f00000010000000
-  P2ControllerID: 0
+  P2ControllerID: 2
   P2InputConfig:
     Config: 000000000100000002000000030000000400000005000000060000000700000008000000090000000a0000000b0000000c0000000d0000000e0000000f00000010000000
   deckLayout: 0

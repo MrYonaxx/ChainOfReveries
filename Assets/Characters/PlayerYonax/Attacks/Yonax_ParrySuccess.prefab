@@ -79,6 +79,8 @@ MonoBehaviour:
     AnimationEvent: {fileID: 2879575883076571525}
   - Frame: 0
     AnimationEvent: {fileID: 5753603794439721809}
+  - Frame: 0
+    AnimationEvent: {fileID: 594320155988736084}
   - Frame: 12
     AnimationEvent: {fileID: 7228557529110548710}
   - Frame: 18
@@ -91,8 +93,6 @@ MonoBehaviour:
     AnimationEvent: {fileID: 7712645333305685174}
   - Frame: 42
     AnimationEvent: {fileID: 2524242894598313049}
-  - Frame: 999
-    AnimationEvent: {fileID: 594320155988736084}
 --- !u!114 &2891495858929599671
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -794,10 +794,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 999
+  frame: 0
   frameEnd: 0
   sound:
-    sound: {fileID: 8300000, guid: eefa57bcde22d2647ad85c804cd003b6, type: 3}
+    sound: {fileID: 8300000, guid: 1e675847f40c3744ea73fe19658c9183, type: 3}
     volume: 1
     pitch: {x: 1, y: 1}
 --- !u!1 &9067015742152356998

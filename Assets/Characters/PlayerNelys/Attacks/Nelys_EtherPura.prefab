@@ -51,6 +51,8 @@ MonoBehaviour:
   frameEnd: 0
   direction: 0
   turnToTarget: 1
+  turnBack: 0
+  turnToCenter: 0
 --- !u!114 &380860615542647902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -187,13 +189,13 @@ MonoBehaviour:
   AnimatorDebug: {fileID: 677981557941761528}
   AnimationClipDebug: {fileID: 7400000, guid: fb1d37de63dac614f85b93beb0d6c85a, type: 2}
   frameData:
-  - Frame: 30
+  - Frame: 20
     AnimationEvent: {fileID: 6934203321311718388}
-  - Frame: 35
+  - Frame: 25
     AnimationEvent: {fileID: 2541912029025513838}
-  - Frame: 40
+  - Frame: 30
     AnimationEvent: {fileID: 7284589822210834423}
-  - Frame: 80
+  - Frame: 70
     AnimationEvent: {fileID: 2524242894598313049}
 --- !u!114 &6934203321311718388
 MonoBehaviour:
@@ -207,7 +209,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7422bd0df691814ebc1968b1cc149fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 30
+  frame: 20
   frameEnd: 0
   fx: {fileID: 7867846299566322463}
   appear: 1
@@ -223,7 +225,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7fccac822059c343a85893698e6cdb4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 35
+  frame: 25
   frameEnd: 0
   reloadAmount: 8000
   restoreBanishCard: 0
@@ -239,7 +241,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 30aa148586dde644daf200dde6eea4c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 40
+  frame: 30
   frameEnd: 0
   cancelItself: 0
   cancelSpecial: 1
@@ -256,7 +258,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 620e0e815b2f5174f8b380210d9a19f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 80
+  frame: 70
   frameEnd: 0
 --- !u!1 &4388082830208477171
 GameObject:
@@ -328,7 +330,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 19398300903445325, guid: 27dd64adc56883747b901c85f2b36dbc, type: 3}
+  m_Sprite: {fileID: 7208905876119116369, guid: dfcb91a1b8c29f04aa555e1b421fa49c,
+    type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

@@ -11,13 +11,14 @@ GameObject:
   - component: {fileID: 4166811470578154309}
   - component: {fileID: 6548060126528745650}
   - component: {fileID: 4200970828337729809}
+  - component: {fileID: 7897569645953176983}
   m_Layer: 0
   m_Name: Sound
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4166811470578154309
 Transform:
   m_ObjectHideFlags: 0
@@ -44,12 +45,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 16
+  frame: 57
   frameEnd: 0
   sound:
-    sound: {fileID: 8300000, guid: 113e5eb13afc6ac4dbbe4b668edec963, type: 3}
-    volume: 0.8
-    pitch: {x: 1, y: 1}
+    sound: {fileID: 8300000, guid: a4726d5e19287fb4ba353e26908560db, type: 3}
+    volume: 0.6
+    pitch: {x: 0.9, y: 1.1}
 --- !u!114 &4200970828337729809
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62,12 +63,30 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 19
+  frame: 117
   frameEnd: 0
   sound:
-    sound: {fileID: 8300000, guid: 2accb501d7f2e524994d32a4ce9d3ec5, type: 3}
+    sound: {fileID: 8300000, guid: a4726d5e19287fb4ba353e26908560db, type: 3}
     volume: 0.6
-    pitch: {x: 1, y: 1}
+    pitch: {x: 0.9, y: 1.1}
+--- !u!114 &7897569645953176983
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1276642471486333604}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frame: 177
+  frameEnd: 0
+  sound:
+    sound: {fileID: 8300000, guid: a4726d5e19287fb4ba353e26908560db, type: 3}
+    volume: 0.6
+    pitch: {x: 0.9, y: 1.1}
 --- !u!1 &2469241746260582066
 GameObject:
   m_ObjectHideFlags: 0
@@ -303,14 +322,20 @@ MonoBehaviour:
   AnimatorDebug: {fileID: 677981557941761528}
   AnimationClipDebug: {fileID: 7400000, guid: da67fa4a26861f84ea77c28a3e8cf8d0, type: 2}
   frameData:
+  - Frame: 57
+    AnimationEvent: {fileID: 6548060126528745650}
   - Frame: 58
     AnimationEvent: {fileID: 4461643240352555985}
   - Frame: 60
     AnimationEvent: {fileID: 5163726180997813102}
+  - Frame: 117
+    AnimationEvent: {fileID: 4200970828337729809}
   - Frame: 118
     AnimationEvent: {fileID: 566391203537360676}
   - Frame: 120
     AnimationEvent: {fileID: 2425832236505711244}
+  - Frame: 177
+    AnimationEvent: {fileID: 7897569645953176983}
   - Frame: 178
     AnimationEvent: {fileID: 6082993372163476632}
   - Frame: 180

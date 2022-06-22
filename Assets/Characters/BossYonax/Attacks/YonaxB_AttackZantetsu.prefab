@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4166811470578154309}
   - component: {fileID: 6548060126528745650}
-  - component: {fileID: 4200970828337729809}
   m_Layer: 0
   m_Name: Sound
   m_TagString: Untagged
@@ -44,29 +43,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  frame: 16
+  frame: 0
   frameEnd: 0
   sound:
-    sound: {fileID: 8300000, guid: 113e5eb13afc6ac4dbbe4b668edec963, type: 3}
+    sound: {fileID: 8300000, guid: 905279e4ee7d4f54c8b1daa0fd004c8f, type: 3}
     volume: 0.8
-    pitch: {x: 1, y: 1}
---- !u!114 &4200970828337729809
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1276642471486333604}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b1aea8e6bf221454e838593badb14985, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  frame: 19
-  frameEnd: 0
-  sound:
-    sound: {fileID: 8300000, guid: 2accb501d7f2e524994d32a4ce9d3ec5, type: 3}
-    volume: 0.6
     pitch: {x: 1, y: 1}
 --- !u!1 &1721584598529627343
 GameObject:
@@ -426,14 +407,12 @@ MonoBehaviour:
   frameData:
   - Frame: 0
     AnimationEvent: {fileID: 6006524240636823596}
+  - Frame: 0
+    AnimationEvent: {fileID: 6548060126528745650}
   - Frame: 4
     AnimationEvent: {fileID: 4461643240352555985}
   - Frame: 6
     AnimationEvent: {fileID: 1381827254248010690}
-  - Frame: 16
-    AnimationEvent: {fileID: 6548060126528745650}
-  - Frame: 19
-    AnimationEvent: {fileID: 4200970828337729809}
   - Frame: 21
     AnimationEvent: {fileID: 2660082990756690015}
   - Frame: 45
@@ -694,7 +673,7 @@ GameObject:
   - component: {fileID: 5842096757366747166}
   - component: {fileID: 818057835518184039}
   m_Layer: 9
-  m_Name: Yonax_AttackZantetsu
+  m_Name: YonaxB_AttackZantetsu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

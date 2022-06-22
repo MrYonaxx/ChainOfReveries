@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: SleightLemina_Freeze
   m_EditorClassIdentifier: 
   sleightName: Freeze
-  sleightDescription: 
+  sleightDescription: Freeze the opponent. Attacking a frozen enemy deals greater
+    damage.
   sleightValue: {x: 0, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: 46e950fec49e53c468dd947505c9d062, type: 2}

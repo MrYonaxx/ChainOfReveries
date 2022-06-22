@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: SleightLemina_EtherealDisolver
   m_EditorClassIdentifier: 
   sleightName: Ethereal Disolver
-  sleightDescription: 'Only in Ether Install. '
+  sleightDescription: Only in Ether Install. Absorb the Ether in front of you in
+    order to create a thin disturbance in the air.
   sleightValue: {x: 0, y: 9}
   sleightRecipe:
   - {fileID: 11400000, guid: f8536f3ca1a5e0b45b94f56e1ef7ff89, type: 2}

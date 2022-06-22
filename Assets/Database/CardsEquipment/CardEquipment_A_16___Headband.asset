@@ -27,7 +27,7 @@ MonoBehaviour:
   cardDescription: 'Reduce Attack damage by 30%.
 
     During battle, as soon as you
-    no longer have Magic Cards, increase Attack damage by 70%.'
+    no longer have Magic Cards, increase Attack damage by 50%.'
   statsModifier:
   - charStat: 1
     modifierType: 0

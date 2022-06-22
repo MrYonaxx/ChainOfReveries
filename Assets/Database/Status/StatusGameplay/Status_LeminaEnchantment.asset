@@ -10,12 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f5e6079dd8a46024986b2b65e7c5e737, type: 3}
-  m_Name: Status_A_Headband
+  m_Name: Status_LeminaEnchantment
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 6329109260187363157, guid: 6e938f0f399c34049a8ecb477f4f2158, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -27,10 +28,19 @@ MonoBehaviour:
         Assembly-CSharp]], mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
-      Data: 1|VoiceActing.StatusEffectUpdateOnDeath, Assembly-CSharp
+      Data: 1|VoiceActing.StatusEffectUpdateOnReload, Assembly-CSharp
+    - Name: NumberOfReload
+      Entry: 3
+      Data: 1
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 2|VoiceActing.StatusEffectUpdateOnEndBattle, Assembly-CSharp
     - Name: 
       Entry: 8
       Data: 
@@ -42,32 +52,38 @@ MonoBehaviour:
       Data: 
     - Name: statusController
       Entry: 7
-      Data: 2|System.Collections.Generic.List`1[[VoiceActing.StatusEffect, Assembly-CSharp]],
+      Data: 3|System.Collections.Generic.List`1[[VoiceActing.StatusEffect, Assembly-CSharp]],
         mscorlib
     - Name: 
       Entry: 12
-      Data: 1
+      Data: 2
     - Name: 
       Entry: 7
-      Data: 3|VoiceActing.StatusEffectAttackProcessor, Assembly-CSharp
-    - Name: attackProcessor
+      Data: 4|VoiceActing.StatusEffectStat, Assembly-CSharp
+    - Name: StatModifier
       Entry: 7
-      Data: 4|VoiceActing.AttackP_DeckConditionMultiplier, Assembly-CSharp
-    - Name: multiplierAttack
-      Entry: 4
-      Data: 0.72
-    - Name: multiplierMagic
-      Entry: 4
+      Data: 5|VoiceActing.StatModifier, Assembly-CSharp
+    - Name: charStat
+      Entry: 3
       Data: 1
-    - Name: buffFullAttackDeck
-      Entry: 5
-      Data: true
-    - Name: buffFullMagicDeck
-      Entry: 5
-      Data: false
+    - Name: modifierType
+      Entry: 3
+      Data: 0
+    - Name: value
+      Entry: 4
+      Data: 0.1
     - Name: 
       Entry: 8
       Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 6|VoiceActing.StatusEffectAnimation, Assembly-CSharp
+    - Name: animationObject
+      Entry: 10
+      Data: 0
     - Name: 
       Entry: 8
       Data: 
@@ -77,9 +93,9 @@ MonoBehaviour:
     - Name: 
       Entry: 8
       Data: 
-  statusIconSprite: {fileID: 21300000, guid: 5ff0311ec2c195d42a03cde7783df785, type: 3}
-  statusName: Headband
+  statusIconSprite: {fileID: 21300000, guid: 8eb396ca0521fdc408628485a2d5679d, type: 3}
+  statusName: 
   statusDescription: 
-  hideStatus: 0
+  hideStatus: 1
   statusShowLabel: 0
-  statusConditionLabel: Hit
+  statusConditionLabel: 

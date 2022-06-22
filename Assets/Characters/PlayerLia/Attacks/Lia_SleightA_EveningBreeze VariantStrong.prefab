@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 172360096393312151}
   - component: {fileID: 1187560030802457529}
   - component: {fileID: 8786101298778391857}
+  - component: {fileID: 1113332982044841679}
   m_Layer: 0
   m_Name: KnockbackComponents
   m_TagString: Untagged
@@ -67,6 +68,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   shakePower: 0.1
   shakeTime: 0.2
+--- !u!114 &1113332982044841679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 862080096382362186}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89d5558c9213e0f4d8651f676c8ed858, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &4924259291512831588
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -98,6 +111,18 @@ MonoBehaviour:
   frame: 70
   frameEnd: 105
   attack: {fileID: 5350920871510461557}
+--- !u!114 &8113696084150411196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3155422922465284733}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89d5558c9213e0f4d8651f676c8ed858, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4762899727305582475
 GameObject:
   m_ObjectHideFlags: 0
@@ -292,6 +317,7 @@ MonoBehaviour:
   - {fileID: 1408016013612572223}
   - {fileID: 1187560030802457529}
   - {fileID: 8786101298778391857}
+  - {fileID: 1113332982044841679}
 --- !u!1 &7239488832248650699
 GameObject:
   m_ObjectHideFlags: 0
@@ -736,9 +762,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4733904636063077261, guid: 735b98d3e701b3b4db7f2eb8ba52bd6d,
         type: 3}
+      propertyPath: attackComponents.Array.size
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 4733904636063077261, guid: 735b98d3e701b3b4db7f2eb8ba52bd6d,
+        type: 3}
       propertyPath: attackProcessorsComponents.Array.data[1]
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4733904636063077261, guid: 735b98d3e701b3b4db7f2eb8ba52bd6d,
+        type: 3}
+      propertyPath: attackComponents.Array.data[8]
+      value: 
+      objectReference: {fileID: 8113696084150411196}
     - target: {fileID: 5485531285977804821, guid: 735b98d3e701b3b4db7f2eb8ba52bd6d,
         type: 3}
       propertyPath: shakeTime
@@ -853,6 +889,12 @@ MonoBehaviour:
 --- !u!1 &2409688075409645851 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3720685875369100543, guid: 735b98d3e701b3b4db7f2eb8ba52bd6d,
+    type: 3}
+  m_PrefabInstance: {fileID: 1356259269409318372}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &3155422922465284733 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4114098666737907609, guid: 735b98d3e701b3b4db7f2eb8ba52bd6d,
     type: 3}
   m_PrefabInstance: {fileID: 1356259269409318372}
   m_PrefabAsset: {fileID: 0}

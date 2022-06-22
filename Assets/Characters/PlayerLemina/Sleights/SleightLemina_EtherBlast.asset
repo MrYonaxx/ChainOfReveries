@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: SleightLemina_EtherBlast
   m_EditorClassIdentifier: 
   sleightName: Ether Blast
-  sleightDescription: 
+  sleightDescription: Dash and grab an opponent in front of you and release a powerful
+    energy.
   sleightValue: {x: 0, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: f8536f3ca1a5e0b45b94f56e1ef7ff89, type: 2}

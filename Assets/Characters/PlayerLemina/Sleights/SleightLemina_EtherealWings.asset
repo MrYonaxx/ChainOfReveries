@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: SleightLemina_EtherealWings
   m_EditorClassIdentifier: 
   sleightName: Ethereal Wings
-  sleightDescription: Only in Ether Install.
+  sleightDescription: Only in Ether Install. Create an Ice blade and use the wings
+    to fly at high speed.
   sleightValue: {x: 19, y: 27}
   sleightRecipe:
   - {fileID: 11400000, guid: f8536f3ca1a5e0b45b94f56e1ef7ff89, type: 2}
