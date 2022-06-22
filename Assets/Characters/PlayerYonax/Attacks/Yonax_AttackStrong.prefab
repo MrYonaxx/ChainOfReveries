@@ -179,7 +179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   frame: 25
   frameEnd: 45
-  speed: 4.2
+  speed: 5
   maxTrackingY: 0.5
 --- !u!114 &3452605927747644591
 MonoBehaviour:

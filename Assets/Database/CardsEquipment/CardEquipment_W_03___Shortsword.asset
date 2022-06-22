@@ -24,7 +24,7 @@ MonoBehaviour:
   cardSprite: {fileID: 21300000, guid: 82a61ca349fc2f245a6a2bf2e270ec4d, type: 3}
   cardName: Shortsword
   cardType: 0
-  cardDescription: 'Increase attack speed by 40%.
+  cardDescription: 'Increase attack speed by 30%.
 
     (1 Reload)'
   statsModifier: []

@@ -18,6 +18,8 @@ namespace VoiceActing
         bool fixX = false;
         [SerializeField]
         bool linearMovement = false;
+        [SerializeField]
+        LayerMask layerMask;
 
         float t = 0f;
         float tMax = 0f;
@@ -42,6 +44,13 @@ namespace VoiceActing
 
             if (linearMovement)
                 startPos = character.transform.position;
+
+            RaycastHit2D hit = Physics2D.Raycast(startPos, point - startPos, (startPos - point).magnitude, layerMask);
+            if (hit)
+            {
+                point = hit.point;
+                point.x -= character.CharacterRigidbody.CharacterCollider.size.x * 0.51f * character.CharacterMovement.Direction;
+            }
         }
 
         public override void UpdateComponent(CharacterBase character, int frame)

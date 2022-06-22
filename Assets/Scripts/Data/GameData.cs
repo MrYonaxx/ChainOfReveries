@@ -155,19 +155,21 @@ public class GameData : ScriptableObject
             GameSettings.BackgroundAttackCard = backgroundAttackCard;
             GameSettings.BackgroundMagicCard = backgroundMagicCard;
 
-
-            CustomDecks = new List<CustomDeckList>(NbRunCharacters.Length);
-            for (int i = 0; i < NbRunCharacters.Length; i++)
+            if (CustomDecks.Count < (NbRunCharacters.Length))
             {
-                CustomDecks.Add(new CustomDeckList());
-                CustomDecks[i].Decks = new List<Menu.CustomDeck>(9);
-                for (int j = 0; j < 9; j++)
+                CustomDecks = new List<CustomDeckList>(NbRunCharacters.Length);
+                for (int i = 0; i < NbRunCharacters.Length; i++)
                 {
-                    CustomDecks[i].Decks.Add(new Menu.CustomDeck());
-                    CustomDecks[i].Decks[j].cardID = new List<int>();
-                    CustomDecks[i].Decks[j].cardID.Add(0);
-                    CustomDecks[i].Decks[j].cardValue = new List<int>();
-                    CustomDecks[i].Decks[j].cardValue.Add(9);
+                    CustomDecks.Add(new CustomDeckList());
+                    CustomDecks[i].Decks = new List<Menu.CustomDeck>(9);
+                    for (int j = 0; j < 9; j++)
+                    {
+                        CustomDecks[i].Decks.Add(new Menu.CustomDeck());
+                        CustomDecks[i].Decks[j].cardID = new List<int>();
+                        CustomDecks[i].Decks[j].cardID.Add(0);
+                        CustomDecks[i].Decks[j].cardValue = new List<int>();
+                        CustomDecks[i].Decks[j].cardValue.Add(9);
+                    }
                 }
             }
 
