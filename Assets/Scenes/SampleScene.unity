@@ -32442,7 +32442,7 @@ PrefabInstance:
     - target: {fileID: 1987183374652999224, guid: b46ff84b6a41ec94e93c2ad750f66063,
         type: 3}
       propertyPath: m_Enabled
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1987183374656592550, guid: b46ff84b6a41ec94e93c2ad750f66063,
         type: 3}
@@ -32497,7 +32497,7 @@ PrefabInstance:
     - target: {fileID: 1987183374915182385, guid: b46ff84b6a41ec94e93c2ad750f66063,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1987183374915182385, guid: b46ff84b6a41ec94e93c2ad750f66063,
         type: 3}
@@ -32587,7 +32587,7 @@ PrefabInstance:
     - target: {fileID: 1987183375011796842, guid: b46ff84b6a41ec94e93c2ad750f66063,
         type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1987183375659644446, guid: b46ff84b6a41ec94e93c2ad750f66063,
         type: 3}
@@ -32617,7 +32617,7 @@ PrefabInstance:
     - target: {fileID: 1987183375821700441, guid: b46ff84b6a41ec94e93c2ad750f66063,
         type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 1987183376017051379, guid: b46ff84b6a41ec94e93c2ad750f66063,
         type: 3}
@@ -32757,7 +32757,7 @@ PrefabInstance:
     - target: {fileID: 4472839922139544053, guid: b46ff84b6a41ec94e93c2ad750f66063,
         type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 4663209973824297936, guid: b46ff84b6a41ec94e93c2ad750f66063,
         type: 3}
@@ -32852,7 +32852,7 @@ PrefabInstance:
     - target: {fileID: 5311475527737372126, guid: b46ff84b6a41ec94e93c2ad750f66063,
         type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 5467369377280455880, guid: b46ff84b6a41ec94e93c2ad750f66063,
         type: 3}
@@ -32997,7 +32997,7 @@ PrefabInstance:
     - target: {fileID: 6567010865846535504, guid: b46ff84b6a41ec94e93c2ad750f66063,
         type: 3}
       propertyPath: m_SizeDelta.x
-      value: 32
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6592169485196773418, guid: b46ff84b6a41ec94e93c2ad750f66063,
         type: 3}
@@ -36645,7 +36645,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &727038143
 Transform:
   m_ObjectHideFlags: 0
